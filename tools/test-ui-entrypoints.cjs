@@ -30,7 +30,7 @@ for (const folder of ['public', 'docs']) {
   assert.equal($('#budgetRp').length, 1);
   assert.equal($('#budgetSl').length, 1);
   const scripts = $('script[src]').map((_, node) => $(node).attr('src').replace(/^\//, '').split('?')[0]).get();
-  for (const script of ['vehicle-long-press.js', 'roster.js', 'modifications.js', 'tree-navigation.js', 'header-layout.js']) {
+  for (const script of ['research-progress.js', 'vehicle-long-press.js', 'roster.js', 'modifications.js', 'tree-navigation.js', 'header-layout.js']) {
     assert(scripts.includes(script), `${folder}: missing ${script}`);
     assert(scripts.indexOf(script) < scripts.indexOf('app.js'));
   }

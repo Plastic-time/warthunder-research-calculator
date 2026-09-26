@@ -1,8 +1,8 @@
 (function (root, factory) {
-  const planner = factory();
+  const planner = factory(typeof module === "object" && module.exports ? require("./research-progress.js") : root.ResearchProgress);
   if (typeof module === "object" && module.exports) module.exports = planner;
   if (root) root.LocalPlanner = planner;
-})(typeof window !== "undefined" ? window : globalThis, function () {
+})(typeof window !== "undefined" ? window : globalThis, function (progress) {
   const SPECIAL_CLASSES = new Set(["prem", "premium", "squad", "event", "gift"]);
 
   function number(value) {
@@ -82,6 +82,7 @@
     const waypoints = new Set(input.waypointIds || []);
     const hidden = new Set(input.hiddenIds || []);
     const avoidFolded = input.avoidFolded === true;
+    const progressRp = progress.cleanMap(input.progressRp);
     const warnings = [];
     const warningMessages = [];
     const warn = (source, params = {}) => {
@@ -208,7 +209,7 @@
         if (!unit || unit.section !== "researchable" || isInitialLike(unit)) continue;
         const className = String(unit.class_name || "").trim().toLowerCase();
         if (SPECIAL_CLASSES.has(className) || unit.is_squadron === true) continue;
-        rp += number(unit.rp);
+        rp += progress.remaining(number(unit.rp), progressRp[id]);
         sp += number(unit.sp);
         count += 1;
         ids.push(id);

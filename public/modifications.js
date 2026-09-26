@@ -9,7 +9,7 @@
   const rpOutput = document.getElementById("modificationRp");
   const slOutput = document.getElementById("modificationSl");
   const status = document.getElementById("modificationStatus");
-  const ui = { data: null, selected: new Set(), researched: new Set(), unlocked: new Set(), result: null };
+  const ui = { data: null, selected: new Set(), researched: new Set(), unlocked: new Set(), result: null, progressRp: Object.create(null), editProgress: false };
   let catalog = null;
   let catalogPromise = null;
   const chunkCache = new Map();
@@ -137,6 +137,7 @@
     if (!ui.data) return;
     localStorage.setItem(storageKey(ui.data.vehicleId), JSON.stringify({
       selected: [...ui.selected], researched: [...ui.researched],
+      progressRp: ui.progressRp,
     }));
   }
 
@@ -147,9 +148,14 @@
       const restoreIds = values => new Set((values || []).map(id => Object.hasOwn(ui.data.aliases, id) ? ui.data.aliases[id] : id).filter(id => ids.has(id)));
       ui.selected = restoreIds(saved.selected);
       ui.researched = restoreIds(saved.researched);
+      ui.progressRp = window.ResearchProgress.cleanMap(saved.progressRp);
+      for (const [oldId, newId] of Object.entries(ui.data.aliases)) {
+        if (Object.hasOwn(ui.progressRp, oldId) && !Object.hasOwn(ui.progressRp, newId)) ui.progressRp[newId] = ui.progressRp[oldId];
+      }
     } catch {
       ui.selected.clear();
       ui.researched.clear();
+      ui.progressRp = Object.create(null);
     }
   }
 
@@ -165,7 +171,7 @@
   function manualBudget() {
     return ui.data.mods.reduce((budget, mod) => {
       if (ui.selected.has(mod.id) && !ui.researched.has(mod.id) && !ui.unlocked.has(mod.id)) {
-        budget.rp += mod.rp;
+        budget.rp += window.ResearchProgress.remaining(mod.rp, ui.progressRp[mod.id]);
         budget.sl += mod.sl;
       }
       return budget;
@@ -193,6 +199,10 @@
   }
 
   function translateControls() {
+    dialog.querySelectorAll("[data-modification-mode]").forEach(button => {
+      button.textContent = t(button.dataset.modificationMode === "progress" ? "研发进度" : "选择目标");
+      button.setAttribute("aria-pressed", String((button.dataset.modificationMode === "progress") === ui.editProgress));
+    });
     const text = (selector, source) => {
       const element = dialog.querySelector(selector);
       if (element) element.textContent = t(source);
@@ -210,7 +220,7 @@
       }
       else if (icon) icon.parentElement.replaceChildren(icon, document.createTextNode(t(source)));
     }
-    text(".modification-toolbar > p", "左键选择目标 · 右键标记已研发 · 等级门槛按游戏数据计算");
+    text(".modification-toolbar > p", ui.editProgress ? "已投入 RP" : "左键选择目标 · 右键标记已研发 · 等级门槛按游戏数据计算");
     text(".modification-budget > span", "配件预算");
     for (const [action, source] of Object.entries({ "clear-owned": "清除已研发", clear: "清空目标", all: "全部配件", calculate: "计算配件研发" })) {
       text(`[data-modification-action="${action}"]`, source);
@@ -255,17 +265,19 @@
       const stateName = tileState(mod);
       const isPlanned = plannedSet.has(mod.id);
       const unlocked = ui.unlocked.has(mod.id);
+      const invested = ui.researched.has(mod.id) ? 0 : window.ResearchProgress.amount(ui.progressRp[mod.id], mod.rp);
+      const remainingRp = window.ResearchProgress.remaining(mod.rp, invested);
       const names = localizedNames[mod.id] || {};
       const usable = value => typeof value === "string" && value.trim() && value !== mod.id ? value : "";
       const fallback = nameFallbacks[mod.id] || {};
       const englishName = (fallback.en ? mod.name.en : usable(names.en)) || mod.name.en;
       const name = (fallback[lang] ? mod.name[lang] || mod.name.en : usable(names[lang])) || mod.name[lang] || englishName;
-      const titleText = `${name} / ${englishName}\n${unlocked ? t("已解锁") : `${format(mod.rp)} RP · ${format(mod.sl)} SL\n${t("左键：目标 · 右键：已研发")}`}`;
+      const titleText = `${name} / ${englishName}\n${unlocked ? t("已解锁") : `${t("总计 {count} RP", { count: format(mod.rp) })} · ${format(mod.sl)} SL\n${t("剩余 {count} RP", { count: format(remainingRp) })}\n${t(ui.editProgress ? "研发进度" : "左键：目标 · 右键：已研发")}`}`;
       return `
-        <button class="modification-tile ${stateName}${isPlanned ? " is-planned" : ""}" type="button"
-          data-mod-id="${escape(mod.id)}" style="grid-column:${column};grid-row:${mod.tier + 1}" title="${escape(titleText)}"${unlocked ? " disabled" : ""}>
+        <button class="modification-tile ${stateName}${isPlanned ? " is-planned" : ""}${invested ? " has-progress" : ""}" type="button"
+          data-mod-id="${escape(mod.id)}" style="grid-column:${column};grid-row:${mod.tier + 1}" title="${escape(titleText)}"${unlocked || (ui.editProgress && (mod.rp <= 0 || ui.researched.has(mod.id))) ? " disabled" : ""}>
           ${renderIcon(mod)}
-          <span class="modification-tile-copy"><b>${escape(name)}</b><small>${unlocked ? `✓ ${escape(t("已解锁"))}` : `${format(mod.rp)} RP · ${format(mod.sl)} SL`}</small></span>
+          <span class="modification-tile-copy"><b>${escape(name)}</b><small>${unlocked ? `✓ ${escape(t("已解锁"))}` : `${format(remainingRp)} RP · ${format(mod.sl)} SL`}</small>${invested && !ui.researched.has(mod.id) ? `<small class="modification-rp-progress" title="${escape(t("已投入 RP"))}">${format(invested)} / ${format(mod.rp)} RP</small>` : ""}</span>
           ${stateName && !unlocked ? `<span class="modification-state">${stateName === "researched" ? "✓ " : ""}${escape(stateLabel(mod))}</span>` : ""}
         </button>`;
     });
@@ -325,7 +337,7 @@
   }
 
   function calculate() {
-    ui.result = window.ModificationPlanner.plan(ui.data, [...ui.selected], [...ui.researched]);
+    ui.result = window.ModificationPlanner.plan(ui.data, [...ui.selected], [...ui.researched], ui.progressRp);
     save();
     render();
   }
@@ -339,6 +351,7 @@
         restore();
       }
       vehicleImage.src = ui.data.vehicleIcon;
+      ui.editProgress = false;
       translateControls();
       render();
       dialog.showModal();
@@ -364,6 +377,20 @@
     if (!tile) return;
     const id = tile.dataset.modId;
     if (ui.unlocked.has(id)) return;
+    if (ui.editProgress) {
+      const mod = ui.data.mods.find(item => item.id === id);
+      if (!mod || ui.researched.has(id)) return;
+      const vehicleId = ui.data.vehicleId;
+      window.ResearchProgress.edit({
+        title: tile.querySelector("b").textContent, total: mod.rp, value: ui.progressRp[id],
+        onSave(value) {
+          if (ui.data.vehicleId !== vehicleId) return;
+          if (value) ui.progressRp[id] = value; else delete ui.progressRp[id];
+          if (ui.result) calculate(); else { save(); render(); }
+        },
+      });
+      return;
+    }
     if (ui.researched.has(id)) ui.researched.delete(id);
     if (ui.selected.has(id)) ui.selected.delete(id); else ui.selected.add(id);
     ui.result = null;
@@ -394,6 +421,13 @@
   });
 
   dialog.addEventListener("click", event => {
+    const mode = event.target.closest("[data-modification-mode]");
+    if (mode) {
+      ui.editProgress = mode.dataset.modificationMode === "progress";
+      translateControls();
+      render();
+      return;
+    }
     const action = event.target.closest("[data-modification-action]")?.dataset.modificationAction;
     if (!action) return;
     if (action === "calculate") calculate();
@@ -417,6 +451,10 @@
     viewport.scrollTop = scrollTop;
     if (focused) tree.querySelector(`[data-mod-id="${CSS.escape(focused)}"]`)?.focus({ preventScroll: true });
   });
+  const editMode = document.createElement("div");
+  editMode.className = "modification-edit-mode";
+  editMode.innerHTML = '<button type="button" data-modification-mode="select" aria-pressed="true"></button><button type="button" data-modification-mode="progress" aria-pressed="false"></button>';
+  dialog.querySelector(".modification-toolbar").append(editMode);
   title.removeAttribute("data-i18n");
   status.removeAttribute("data-i18n");
   translateControls();

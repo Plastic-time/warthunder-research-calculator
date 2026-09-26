@@ -42,6 +42,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Desktop snapshot regression failed" }
           node tools/test-planner.cjs
           if ($LASTEXITCODE -ne 0) { throw "Planner regression failed" }
+          node --test tools/test-research-progress.cjs
+          if ($LASTEXITCODE -ne 0) { throw "Research progress regression failed" }
           node tools/test-modifications.cjs
           if ($LASTEXITCODE -ne 0) { throw "Modification regression failed" }
           node tools/test-ui-entrypoints.cjs
@@ -73,7 +75,7 @@ jobs:
             $zipPath = Join-Path $PWD "WarThunderResearchCalculator-v$version$suffix.zip"
             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath)
             try {
-              foreach ($file in @("public/i18n.js", "public/app-translations.js", "public/static-translations.js", "public/module-translations.js", "public/vehicle-names.json", "public/modification-names.json", "public/budget-glass.css", "public/press-feedback.css", "public/press-feedback.js", "public/vehicle-updates-data.js", "package.json", "package-lock.json", "public/index.html", "public/styles.css", "public/app.js", "public/ui-dark.css", "public/tree-navigation.css", "public/tree-navigation.js", "public/header-layout.js", "public/header-layout.css", "public/assets/navigation/ellipsis.svg", "public/assets/navigation/search.svg", "public/assets/navigation/sliders-horizontal.svg", "public/assets/flags/su.svg", "public/assets/navigation/plane.svg", "public/wiki-viewer.js", "public/wiki-viewer.css", "public/assets/wiki/book-open.svg", "public/assets/wiki/external-link.svg", "public/assets/wiki/rotate-cw.svg", "public/assets/wiki/x.svg", "public/assets/wiki/LICENSE", "public/vehicle-long-press.js", "public/roster.js", "public/roster.css", "public/modifications.js", "public/modification-planner.js", "public/tree-scroll.css", "public/tree-scroll.js", "main.js", "README.md", "README.en.md")) {
+              foreach ($file in @("public/research-progress.js", "public/planner.js", "public/i18n.js", "public/app-translations.js", "public/static-translations.js", "public/module-translations.js", "public/vehicle-names.json", "public/modification-names.json", "public/budget-glass.css", "public/press-feedback.css", "public/press-feedback.js", "public/vehicle-updates-data.js", "package.json", "package-lock.json", "public/index.html", "public/styles.css", "public/app.js", "public/ui-dark.css", "public/tree-navigation.css", "public/tree-navigation.js", "public/header-layout.js", "public/header-layout.css", "public/assets/navigation/ellipsis.svg", "public/assets/navigation/search.svg", "public/assets/navigation/sliders-horizontal.svg", "public/assets/flags/su.svg", "public/assets/navigation/plane.svg", "public/wiki-viewer.js", "public/wiki-viewer.css", "public/assets/wiki/book-open.svg", "public/assets/wiki/external-link.svg", "public/assets/wiki/rotate-cw.svg", "public/assets/wiki/x.svg", "public/assets/wiki/LICENSE", "public/vehicle-long-press.js", "public/roster.js", "public/roster.css", "public/modifications.js", "public/modification-planner.js", "public/tree-scroll.css", "public/tree-scroll.js", "main.js", "README.md", "README.en.md")) {
                 $entry = $archive.Entries | Where-Object { $_.FullName.Replace('\', '/') -eq $file }
                 if (-not $entry) { throw "Missing $file in $zipPath" }
                 $reader = [System.IO.StreamReader]::new($entry.Open())

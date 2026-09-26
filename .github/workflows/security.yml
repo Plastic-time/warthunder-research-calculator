@@ -24,6 +24,7 @@ jobs:
       - run: node tools/test-wiki.cjs
       - run: node tools/test-desktop-snapshot.cjs
       - run: node tools/test-planner.cjs
+      - run: node --test tools/test-research-progress.cjs
       - run: node tools/test-modifications.cjs
       - run: node --test tools/test-modification-icons.cjs
       - run: node tools/test-ui-entrypoints.cjs

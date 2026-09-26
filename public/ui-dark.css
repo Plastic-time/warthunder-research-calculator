@@ -101,6 +101,28 @@ body,
 .bulk-owned-dialog ul { max-height: 35dvh; overflow: auto; padding: 0 0 0 20px; margin: 12px 0 20px; }
 .bulk-owned-dialog li { padding: 4px 0; font-size: 13px; line-height: 1.4; overflow-wrap: anywhere; }
 .bulk-owned-rank { color: #debd76; font-size: 11px; margin-right: 6px; }
+.research-progress-dialog {
+  width: min(420px, calc(100% - 24px)); max-height: calc(100dvh - 24px);
+  margin: auto; padding: 20px; box-sizing: border-box; overflow: auto;
+  border: 1px solid #65756e; border-radius: 8px; background: #262d2a; color: #eceeeb;
+}
+.research-progress-dialog::backdrop { background: #0009; }
+.research-progress-dialog h2 { margin: 0 0 12px; font-size: 18px; }
+.research-progress-dialog p { margin: 10px 0; font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.research-progress-dialog label { display: block; margin: 18px 0 8px; font-size: 13px; }
+.research-progress-dialog input { width: 100%; box-sizing: border-box; min-height: 44px; padding: 10px; border: 1px solid #82958b; border-radius: 4px; background: #17211c; color: #fff; font-size: 16px; }
+.research-progress-dialog output { display: block; color: #dfc683; font-size: 16px; font-weight: 600; }
+.research-progress-dialog [data-progress-note] { color: #b7c3bb; font-size: 12px; }
+.research-progress-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.research-progress-actions button { min-height: 44px; padding: 8px 12px; border: 1px solid #82958b; border-radius: 4px; background: #334b3e; color: #edf4ef; font-size: 13px; white-space: normal; cursor: pointer; }
+.tree-canvas .unit-meta > .unit-rp-progress, .unit-rp-progress { color: #debd76; font-size: 9px; line-height: 13px; }
+.modification-edit-mode { display: flex; gap: 2px; border: 1px solid #627368; border-radius: 4px; max-width: 100%; }
+.modification-edit-mode button { min-height: 44px; min-width: 0; padding: 6px 10px; border: 0; border-radius: 2px; background: transparent; color: #bdc9c2; font-size: 12px; white-space: normal; cursor: pointer; }
+.modification-edit-mode button[aria-pressed="true"] { background: #41564a; color: #f0e1b5; }
+.modification-toolbar { flex-wrap: wrap; }
+.modification-tile.has-progress .modification-tile-copy { gap: 3px; }
+.modification-tile.has-progress .modification-tile-copy b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.modification-tile-copy .modification-rp-progress { color: #debd76; }
 .bulk-owned-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
 .bulk-owned-actions button, .bulk-owned-notice button {
   min-height: 44px; max-width: 100%; padding: 8px 12px; border-radius: 4px;
@@ -212,6 +234,7 @@ body,
 .floating-planner-copy { background: #2e3934; border-color: #667a6c; color: #ecf1e9; }
 .floating-planner-copy small { color: #becdc4; }
 .unit-context-menu { background: #282f30; border-color: #657475; border-radius: 4px; color: #edf0e9; }
+.unit-context-menu > button[data-edit-unit-progress] { min-height: 44px; }
 .unit-context-menu > button:hover,
 .unit-context-menu > button:focus-visible { background: #3b4843; }
 .unit-context-menu > button.is-active { background: #405d49; color: #e0f1e3; }

@@ -10,6 +10,7 @@
   function controlFor(target) {
     const control = target.closest?.(selector);
     if (!control || control.matches(':disabled, [aria-disabled="true"]') || control.closest('[inert]')) return null;
+    if (!control.getClientRects().length || control.closest('[hidden], dialog:not([open])')) return null;
     if (control.matches('label') && control.querySelector('input:disabled')) return null;
     return control;
   }

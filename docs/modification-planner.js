@@ -1,13 +1,15 @@
 (function exposeModificationPlanner(root, factory) {
-  const api = factory();
+  const api = factory(typeof module === "object" && module.exports ? require("./research-progress.js") : root.ResearchProgress);
   if (typeof module === "object" && module.exports) module.exports = api;
   else root.ModificationPlanner = api;
-})(typeof globalThis === "object" ? globalThis : this, function createModificationPlanner() {
+})(typeof globalThis === "object" ? globalThis : this, function createModificationPlanner(progress) {
   function isAutomaticallyUnlocked(mod) {
     return mod.rp === 0 && mod.sl === 0;
   }
 
-  function plan(data, selectedIds, researchedIds) {
+  function plan(data, selectedIds, researchedIds, savedProgress = {}) {
+    const progressRp = progress.cleanMap(savedProgress);
+    const remaining = mod => progress.remaining(mod.rp, progressRp[mod.id]);
     const byId = new Map(data.mods.map(mod => [mod.id, mod]));
     const unlocked = new Set(data.mods.filter(isAutomaticallyUnlocked).map(mod => mod.id));
     const selected = new Set(selectedIds.filter(id => byId.has(id) && !unlocked.has(id)));
@@ -43,7 +45,7 @@
         for (const required of mod.requires || []) visit(required);
       }
       visit(id);
-      const cost = [...extra].reduce((sum, candidateId) => sum + byId.get(candidateId).rp, 0);
+      const cost = [...extra].reduce((sum, candidateId) => sum + remaining(byId.get(candidateId)), 0);
       return { extra, cost };
     }
 
@@ -80,7 +82,7 @@
       dependencyIds: [...dependencies],
       fillerIds: [...fillers],
       tierCounts,
-      rp: plannedMods.reduce((sum, mod) => sum + mod.rp, 0),
+      rp: plannedMods.reduce((sum, mod) => sum + remaining(mod), 0),
       sl: plannedMods.reduce((sum, mod) => sum + mod.sl, 0),
     };
   }

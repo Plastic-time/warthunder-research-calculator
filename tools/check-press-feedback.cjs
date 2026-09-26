@@ -25,10 +25,17 @@ async function main() {
       await page.waitForFunction(() => document.querySelector('.unit-tile') && !document.querySelector('.country-trigger').disabled);
       await page.evaluate(() => document.fonts.ready);
       await page.waitForTimeout(500);
+      const openMore = async () => {
+        if (width < 720) await page.locator('#mobileMoreButton').click();
+      };
+      const closeSheet = async id => {
+        await page.locator('#' + id + ' .mobile-sheet-heading button').click();
+      };
       const probe = async selector => page.evaluate(async selector => {
         const control = document.querySelector(selector);
         if (!control) throw Error('Missing control: ' + selector);
         const rect = control.getBoundingClientRect();
+        if (!rect.width || !rect.height || control.closest('dialog:not([open])')) throw Error('Hidden control: ' + selector);
         const point = {clientX: rect.x + rect.width / 2, clientY: rect.y + rect.height / 2};
         const before = [rect.width, rect.height];
         control.dispatchEvent(new PointerEvent('pointerdown', {bubbles: true, pointerId: 31, isPrimary: true, button: 0, pointerType: 'mouse', ...point}));
@@ -43,9 +50,24 @@ async function main() {
         await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
         if (!surfaces.some(el => el.dataset.pressFeedback === 'release')) throw Error('No spring: ' + selector);
       }, selector);
-      for (const selector of ['#guideButton', '#clearButton', '#routeExportButton', '.country-trigger', '.branch-tab', '.planner-option',
+      if (width < 720) {
+        await page.locator('#guideButton').dispatchEvent('pointerdown', {pointerId: 31, isPrimary: true, button: 0});
+        assert.equal(await page.locator('[data-press-feedback="pressed"]').count(), 0, 'Hidden menu items must not animate');
+        for (const selector of ['#mobileMoreButton', '#mobileSearchButton', '#mobileFiltersButton']) await probe(selector);
+      }
+      await openMore();
+      for (const selector of ['#guideButton', '#clearButton', '#routeExportButton']) await probe(selector);
+      if (width < 720) {
+        await closeSheet('mobileMore');
+        await page.locator('#mobileFiltersButton').click();
+      }
+      await probe('.planner-option');
+      if (width < 720) await closeSheet('mobileFilters');
+      for (const selector of ['.country-trigger', '.branch-tab',
         '.tree-canvas .unit-tile', '[data-wiki-id]', '[data-modifications-id]', '[data-folder-key]']) await probe(selector);
+      await openMore();
       await page.locator('#guideButton').click();
+      if (width < 720) assert(!(await page.locator('#mobileMore').evaluate(el => el.open)));
       await probe('[data-guide-close]');
       await page.locator('[data-guide-close]').first().click();
       await page.locator('.country-trigger').click();
@@ -72,6 +94,7 @@ async function main() {
       await page.screenshot({path: path.join(output, `${mode}-${width}-modifications.png`)});
       await page.locator('[data-modification-close]').click();
       await page.waitForTimeout(450);
+      await openMore();
       await page.locator('#clearButton').click();
       await page.waitForTimeout(450);
       assert(await page.evaluate(() => !state.planned.size));
@@ -93,6 +116,7 @@ async function main() {
       }
       await page.waitForTimeout(450);
       await page.emulateMedia({reducedMotion: 'reduce'});
+      await openMore();
       await page.locator('#guideButton').dispatchEvent('pointerdown', {pointerId: 34, isPrimary: true, button: 0});
       assert.equal(await page.locator('[data-press-feedback="pressed"]').count(), 0);
       await page.locator('#guideButton').dispatchEvent('pointercancel', {pointerId: 34});

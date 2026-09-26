@@ -47,6 +47,7 @@ const state = {
   initialUnlocked: new Set(),
   planned: new Set(),
   owned: new Set(),
+  progressRp: Object.create(null),
   waypoints: new Set(),
   missing: [],
   planResult: null,
@@ -334,6 +335,7 @@ function loadSavedState() {
   const saved = JSON.parse(localStorage.getItem(storageKey()) || "{}");
   state.planned = new Set(saved.planned || []);
   state.owned = new Set(saved.owned || []);
+  state.progressRp = window.ResearchProgress.cleanMap(saved.progressRp);
   state.waypoints = new Set(saved.waypoints || []);
   state.avoidFolded = saved.avoidFolded === true;
   state.planResult = Array.isArray(saved.route?.selectedIds) ? {
@@ -355,6 +357,7 @@ function saveState() {
     JSON.stringify({
       planned: [...state.planned],
       owned: [...state.owned],
+      progressRp: state.progressRp,
       waypoints: [...state.waypoints],
       avoidFolded: state.avoidFolded,
       dependencyMode: state.dependencyMode,
@@ -506,6 +509,36 @@ function getModeSet(mode) {
   return state.planned;
 }
 
+function unitProgress(unit) {
+  return window.ResearchProgress.amount(state.progressRp[unit.data_unit_id], unit.rp == null ? null : parseNumber(unit.rp));
+}
+
+function remainingUnitRp(unit) {
+  return window.ResearchProgress.remaining(unit.rp == null ? null : parseNumber(unit.rp), unitProgress(unit));
+}
+
+function canEditUnitProgress(unit) {
+  return unit && unit.section === "researchable" && unit.rp != null && parseNumber(unit.rp) > 0
+    && !state.owned.has(unit.data_unit_id) && !state.initialUnlocked.has(unit.data_unit_id)
+    && !isSquadronUnit(unit) && !["prem", "premium", "event", "gift"].includes(cleanText(unit.class_name).toLowerCase());
+}
+
+function editUnitProgress(id) {
+  const unit = state.unitMap.get(id);
+  if (!canEditUnitProgress(unit) || els.planButton.disabled) return;
+  const key = storageKey();
+  window.ResearchProgress.edit({
+    title: displayTitle(unit), total: parseNumber(unit.rp), value: unitProgress(unit),
+    onSave(value) {
+      if (storageKey() !== key) return;
+      if (value) state.progressRp[id] = value; else delete state.progressRp[id];
+      invalidateExactPlan();
+      saveState();
+      calculatePlan();
+    },
+  });
+}
+
 function getRankOwnedCandidates(rank) {
   const rankIndex = state.tree.findIndex(item => String(item.rank) === String(rank));
   if (rankIndex < 0) return [];
@@ -638,6 +671,7 @@ function openUnitContextMenu(id, clientX, clientY) {
   const initial = state.initialUnlocked.has(id);
   els.unitContextMenu.dataset.unitId = id;
   els.unitContextTitle.textContent = displayTitle(unit);
+  els.unitContextMenu.querySelector("[data-edit-unit-progress]").disabled = !canEditUnitProgress(unit) || els.planButton.disabled;
   els.unitContextHint.textContent = tr(initial ? "初始载具已经自动计入，无需设置" : "再次选择当前状态即可取消");
   els.unitContextMenu.querySelectorAll("[data-context-action]").forEach((button) => {
     const mode = button.dataset.contextAction;
@@ -706,6 +740,7 @@ function runExactPlan() {
         ranks: state.tree.map(rank => ({ rank: rank.rank, unlockQuantity: getRankUnlockQuantity(rank) })),
         initialIds: [...state.initialUnlocked],
         ownedIds: [...state.owned],
+        progressRp: state.progressRp,
         targetIds: [...state.planned],
         waypointIds: [...state.waypoints],
         hiddenIds,
@@ -732,7 +767,7 @@ function setPlanButtonsDisabled(disabled) {
 
 function renderSummary() {
   const plannedUnits = [...state.planned].map((id) => state.unitMap.get(id)).filter(Boolean).sort(compareUnitsByProgression);
-  const rawRp = state.missing.reduce((sum, unit) => sum + parseNumber(unit.rp), 0);
+  const rawRp = state.missing.reduce((sum, unit) => sum + (remainingUnitRp(unit) || 0), 0);
   const totalSp = state.missing.reduce((sum, unit) => sum + parseNumber(unit.sp), 0);
 
   els.totalRp.textContent = formatNumber(rawRp);
@@ -784,7 +819,7 @@ function getRouteKind(unit) {
 function buildRouteExportPayload() {
   const hasUnknownRp = state.missing.some((unit) => unit.rp == null);
   const hasUnknownSl = state.missing.some((unit) => unit.sp == null);
-  const totalRp = state.missing.reduce((sum, unit) => sum + parseNumber(unit.rp), 0);
+  const totalRp = state.missing.reduce((sum, unit) => sum + (remainingUnitRp(unit) || 0), 0);
   const totalSl = state.missing.reduce((sum, unit) => sum + parseNumber(unit.sp), 0);
   const date = new Date();
   const stamp = date.toISOString().slice(0, 10);
@@ -804,7 +839,7 @@ function buildRouteExportPayload() {
       title: displayTitle(unit),
       rank: displayRank(unit.rank || "-"),
       br: cleanText(unit.br) || "-",
-      rp: unit.rp == null ? tr("未提供") : formatNumber(unit.rp),
+      rp: unit.rp == null ? tr("未提供") : formatNumber(remainingUnitRp(unit)),
       sl: unit.sp == null ? tr("未提供") : formatNumber(unit.sp),
       kind: getRouteKind(unit),
     })),
@@ -850,7 +885,7 @@ function renderListItem(unit, removable) {
       ${unit.vehicle_icon ? `<img src="${escapeHtml(unit.vehicle_icon)}" alt="">` : `<span></span>`}
       <div>
         <div class="list-title">${escapeHtml(displayTitle(unit))}</div>
-        <div class="list-meta">BR ${escapeHtml(unit.br || "-")} · RP ${formatCost(unit.rp)} · SL ${formatCost(unit.sp)}${role ? ` · ${escapeHtml(role)}` : ""}${routeLabel}</div>
+        <div class="list-meta">BR ${escapeHtml(unit.br || "-")} · RP ${formatCost(remainingUnitRp(unit))} · SL ${formatCost(unit.sp)}${role ? ` · ${escapeHtml(role)}` : ""}${routeLabel}</div>
       </div>
       ${removeButton}
     </div>
@@ -889,6 +924,7 @@ function renderUnit(unit, inFolder = false) {
   if (unit.section === "premium" || className === "prem" || className === "premium") classes.push("premium");
   const role = translateRole(unit.main_role);
   const unlocked = isInitialUnlockedUnit(unit);
+  const cardRp = state.owned.has(id) ? unit.rp : remainingUnitRp(unit);
 
   const modificationButton = window.ModificationWorkbench?.hasVehicle(id)
     ? `<button class="unit-modifications-launch" type="button" data-modifications-id="${escapeHtml(id)}" aria-label="${escapeHtml(tr("打开 {name} 配件研发", { name: displayTitle(unit) }))}" title="${tr("配件研发")}"><span aria-hidden="true">⚙</span><b>${tr("配件")}</b></button>`
@@ -903,7 +939,8 @@ function renderUnit(unit, inFolder = false) {
         <span class="unit-meta">
           ${window.RosterAudit?.badges(state.country, state.type, unit, displayTitle(unit)) || ""}
           <span class="pill">BR ${escapeHtml(unit.br || "-")}</span>
-          ${squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp">RP ${formatCost(unit.rp)}</span><span class="pill sp">SL ${formatCost(unit.sp)}</span>`}
+          ${squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp">RP ${formatCost(cardRp)}</span><span class="pill sp">SL ${formatCost(unit.sp)}</span>`}
+          ${unitProgress(unit) && !state.owned.has(id) ? `<span class="pill unit-rp-progress" title="${tr("已投入 RP")}">${formatNumber(unitProgress(unit))} / ${formatCost(unit.rp)} RP</span>` : ""}
           ${unlocked ? `<span class="pill unlocked">${tr("初始载具")}</span>` : ""}
           ${state.planned.has(id) ? `<span class="pill target-label">${tr("目标")}</span>` : ""}
           ${state.owned.has(id) ? `<span class="pill owned-label">${tr("已拥有")}</span>` : ""}
@@ -1399,6 +1436,13 @@ function wireEvents() {
   });
 
   els.unitContextMenu.addEventListener("click", (event) => {
+    const progressButton = event.target.closest("[data-edit-unit-progress]");
+    if (progressButton && !progressButton.disabled) {
+      const id = els.unitContextMenu.dataset.unitId;
+      closeUnitContextMenu();
+      editUnitProgress(id);
+      return;
+    }
     const action = event.target.closest("[data-context-action]");
     const id = els.unitContextMenu.dataset.unitId;
     if (!action || !id || action.disabled) return;
