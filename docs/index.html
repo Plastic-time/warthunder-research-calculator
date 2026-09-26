@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="assets/research-emblem.png" />
     <script src="i18n.js?v=1.0.13"></script>
-    <script src="app-translations.js?v=1.0.13-bulk-owned-1"></script>
-    <script src="static-translations.js?v=1.0.13"></script>
+    <script src="app-translations.js?v=1.0.13-guide-rank-2"></script>
+    <script src="static-translations.js?v=1.0.13-guide-rank-2"></script>
     <script src="module-translations.js?v=1.0.13"></script>
     <title data-i18n="战争雷霆研发计算器">战争雷霆研发计算器</title>
     <link rel="stylesheet" href="styles.css?v=1.0.13">
@@ -191,11 +191,11 @@
         <button class="secondary-button usage-guide-close" type="button" data-guide-close data-i18n="关闭">关闭</button>
       </header>
       <div class="usage-guide-body">
-        <div class="usage-guide-version">
-          <strong data-i18n="快速上手">快速上手</strong>
-          <time datetime="2026-09-24">2026.09.24</time>
+        <div class="usage-guide-tabs" role="tablist" aria-label="使用指南" data-i18n-aria-label="使用指南">
+          <button type="button" id="usageGuideQuickTab" role="tab" aria-controls="usageGuideQuickStart" aria-selected="true" data-guide-tab="usageGuideQuickStart" data-i18n="快速上手">快速上手</button>
+          <button type="button" id="usageGuideLogTab" role="tab" aria-controls="usageGuideChangelog" aria-selected="false" tabindex="-1" data-guide-tab="usageGuideChangelog" data-i18n="更新日志">更新日志</button>
         </div>
-        <p data-game-correction-scope data-i18n="局部修正仅涉及英国、日本 CA-27 Mk.32 的 GLBC mk.3 银狮费用，不代表全量数据升级。">局部修正仅涉及英国、日本 CA-27 Mk.32 的 GLBC mk.3 银狮费用，不代表全量数据升级。</p>
+        <section id="usageGuideQuickStart" role="tabpanel" aria-labelledby="usageGuideQuickTab" tabindex="0">
         <p class="usage-guide-intro" data-i18n="从选择目标到生成路线，只需要完成下面几步。所有标记仅保存在当前浏览器中。">从选择目标到生成路线，只需要完成下面几步。所有标记仅保存在当前浏览器中。</p>
         <ol class="usage-guide-steps">
           <li>
@@ -223,12 +223,34 @@
             <div><strong data-i18n="查看预算与分享">查看预算与分享</strong><p data-i18n="底部浮动条显示当前待研发数量、RP 和银狮。点击“导出科技树截图”可保存完整科技树长图，包含屏幕外的载具、前置连线和规划标记。">底部浮动条显示当前待研发数量、RP 和银狮。点击“导出科技树截图”可保存完整科技树长图，包含屏幕外的载具、前置连线和规划标记。</p></div>
           </li>
         </ol>
-        <section class="usage-guide-update" aria-labelledby="usageGuideUpdateTitle">
-          <div class="usage-guide-update-meta"><span data-i18n="本次交互更新">本次交互更新</span><time datetime="2026-09-21">09 / 21</time></div>
-          <h3 id="usageGuideUpdateTitle" data-i18n="电脑右键，手机长按">电脑右键，手机长按</h3>
-          <p data-i18n="目标、已拥有和途经点统一在载具菜单中设置。长按只打开菜单，不会自动改变载具状态；松手后再轻点需要的选项，轻点菜单外即可关闭。">目标、已拥有和途经点统一在载具菜单中设置。长按只打开菜单，不会自动改变载具状态；松手后再轻点需要的选项，轻点菜单外即可关闭。</p>
-        </section>
         <p class="usage-guide-warning"><strong data-i18n="测试提醒：">测试提醒：</strong><span data-i18n="精确规划结果仅供参考。开始实际研发前，请在游戏内手动核对载具前置关系、等级数量和费用。">精确规划结果仅供参考。开始实际研发前，请在游戏内手动核对载具前置关系、等级数量和费用。</span></p>
+        </section>
+        <section id="usageGuideChangelog" role="tabpanel" aria-labelledby="usageGuideLogTab" tabindex="0" hidden>
+          <article class="usage-guide-update">
+            <div class="usage-guide-update-meta"><span data-i18n="网页更新（未打包）">网页更新（未打包）</span><time datetime="2026-09-26">2026.09.26</time></div>
+            <h3 data-i18n="批量拥有范围修正">批量拥有范围修正</h3>
+            <p data-i18n="批量标记包含所选等级及以下普通载具，后续规划不再重复计入这些已拥有载具。">批量标记包含所选等级及以下普通载具，后续规划不再重复计入这些已拥有载具。</p>
+            <p data-i18n="一级提示仅指本级；快速上手与更新日志分开显示。">一级提示仅指本级；快速上手与更新日志分开显示。</p>
+          </article>
+          <article class="usage-guide-update">
+            <div class="usage-guide-update-meta"><span data-i18n="网页更新（未打包）">网页更新（未打包）</span><time datetime="2026-09-26">2026.09.26</time></div>
+            <h3 data-i18n="批量标记已拥有">批量标记已拥有</h3>
+            <p data-i18n="新增按等级批量标记普通载具，支持确认列表和撤销；特殊、隐藏及分类不明的载具不计入。">新增按等级批量标记普通载具，支持确认列表和撤销；特殊、隐藏及分类不明的载具不计入。</p>
+            <p data-i18n="本次仅更新网页和代码；Windows 安装包仍为 v1.0.13。">本次仅更新网页和代码；Windows 安装包仍为 v1.0.13。</p>
+          </article>
+          <article class="usage-guide-update">
+            <div class="usage-guide-update-meta"><span>v1.0.13</span><time datetime="2026-09-25">2026.09.25</time></div>
+            <h3 data-i18n="分类条与手机缩放">分类条与手机缩放</h3>
+            <p data-i18n="恢复科技树分类条，修正手机缩放后的滚动条错位。">恢复科技树分类条，修正手机缩放后的滚动条错位。</p>
+          </article>
+          <article class="usage-guide-update">
+            <div class="usage-guide-update-meta"><span>v1.0.11 · <span data-i18n="局部修正">局部修正</span></span><time datetime="2026-09-24">2026.09.24</time></div>
+            <h3>CA-27 Mk.32 · GLBC mk.3</h3>
+            <p>9,000 RP · 14,000 SL</p>
+            <p data-game-correction-scope data-i18n="局部修正仅涉及英国、日本 CA-27 Mk.32 的 GLBC mk.3 银狮费用，不代表全量数据升级。">局部修正仅涉及英国、日本 CA-27 Mk.32 的 GLBC mk.3 银狮费用，不代表全量数据升级。</p>
+          </article>
+          <p class="usage-guide-history"><a href="https://github.com/Plastic-time/warthunder-research-calculator/releases" target="_blank" rel="noopener noreferrer" data-i18n="完整发布记录">完整发布记录</a></p>
+        </section>
       </div>
       <footer class="usage-guide-footer">
         <button class="primary-button" type="button" data-guide-close data-i18n="开始使用">开始使用</button>
@@ -276,7 +298,7 @@
     <link rel="stylesheet" href="vehicle-folders.css?v=1.0.13">
     <script src="vehicle-folders.js?v=1.0.13"></script>
     <script src="vehicle-long-press.js?v=1.0.13"></script>
-    <link rel="stylesheet" href="ui-dark.css?v=1.0.13-bulk-owned-1">
+    <link rel="stylesheet" href="ui-dark.css?v=1.0.13-guide-rank-2">
     <link rel="stylesheet" href="tree-navigation.css?v=1.0.13">
     <script src="tree-navigation.js?v=1.0.13"></script>
     <link rel="stylesheet" href="wiki-viewer.css?v=1.0.13">
@@ -286,7 +308,7 @@
     <script src="press-feedback.js?v=1.0.13"></script>
     <link rel="stylesheet" href="header-layout.css?v=1.0.13">
     <script src="header-layout.js?v=1.0.13"></script>
-    <script src="app.js?v=1.0.13-bulk-owned-1"></script>
+    <script src="app.js?v=1.0.13-guide-rank-2"></script>
     <script src="online-count.js?v=1.0.13" defer data-endpoint="https://k13shot-online.k13shot-tools.workers.dev/heartbeat"></script>
   </body>
 </html>

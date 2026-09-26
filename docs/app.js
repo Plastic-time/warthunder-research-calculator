@@ -545,10 +545,13 @@ function getModeSet(mode) {
 }
 
 function getRankOwnedCandidates(rank) {
+  const rankIndex = state.tree.findIndex(item => String(item.rank) === String(rank));
+  if (rankIndex < 0) return [];
+  const includedRanks = new Set(state.tree.slice(0, rankIndex + 1).map(item => String(item.rank)));
   return state.units.filter(unit => {
     const id = unit.data_unit_id;
     const info = window.RosterAudit?.info(state.country, state.type, id);
-    return String(unit.rank) === String(rank) && unit.section === "researchable"
+    return includedRanks.has(String(unit.rank)) && unit.section === "researchable"
       && !state.initialUnlocked.has(id) && !state.owned.has(id)
       && !isSquadronUnit(unit)
       && !["prem", "premium", "squad", "event", "gift"].includes(cleanText(unit.class_name).toLowerCase())
@@ -609,9 +612,9 @@ function openRankOwnedDialog(rank) {
   bulkOwnedDialog.dataset.rank = rank;
   bulkOwnedDialog.innerHTML = `
     <h2 id="bulkOwnedTitle">${escapeHtml(displayRank(rank))} · ${tr("批量标记已拥有")}</h2>
-    <p>${tr("本级普通载具（含折叠载具，不含特殊及隐藏载具）")}</p>
+    <p data-bulk-scope>${tr(isFirstRankValue(rank) ? "本级普通载具（含折叠载具，不含特殊及隐藏载具）" : "本级及以下普通载具（含折叠载具，不含特殊及隐藏载具）")}</p>
     <p class="bulk-owned-count">${tr("新增标记：{count} 辆", { count: units.length })}</p>
-    <ul>${units.map(unit => `<li>${escapeHtml(displayTitle(unit))}</li>`).join("")}</ul>
+    <ul>${units.map(unit => `<li><span class="bulk-owned-rank">${escapeHtml(displayRank(unit.rank))}</span> ${escapeHtml(displayTitle(unit))}</li>`).join("")}</ul>
     <div class="bulk-owned-actions">
       <button type="button" data-bulk-cancel>${tr("取消")}</button>
       <button type="button" data-bulk-confirm ${units.length ? "" : "disabled"}>${tr("标记为已拥有")}</button>
@@ -647,7 +650,20 @@ function closeUnitContextMenu() {
 
 function openUsageGuide() {
   closeUnitContextMenu();
+  setUsageGuideTab("usageGuideQuickStart");
   if (els.usageGuideDialog && !els.usageGuideDialog.open) els.usageGuideDialog.showModal();
+}
+
+function setUsageGuideTab(panelId, focus = false) {
+  const tabs = [...els.usageGuideDialog.querySelectorAll("[data-guide-tab]")];
+  if (!tabs.some(tab => tab.dataset.guideTab === panelId)) return;
+  tabs.forEach(tab => {
+    const selected = tab.dataset.guideTab === panelId;
+    tab.setAttribute("aria-selected", String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+    document.getElementById(tab.dataset.guideTab).hidden = !selected;
+    if (selected && focus) tab.focus();
+  });
 }
 
 function closeUsageGuide() {
@@ -1156,10 +1172,11 @@ function renderRankRail(rank) {
   const quantity = getRankUnlockQuantity(rank);
   const selected = getSelectedVehicleCount(rank.rank);
   const complete = quantity > 0 && selected >= quantity;
+  const ownedLabel = tr(isFirstRankValue(rank.rank) ? "标记本级已拥有" : "标记本级及以下已拥有");
 
   return `
     <div class="rank-rail ${complete ? "is-complete" : ""}">
-      <button type="button" class="rank-owned-trigger" data-owned-rank="${escapeHtml(rank.rank)}" aria-haspopup="dialog" title="${tr("批量标记已拥有")}" aria-label="${escapeHtml(displayRank(rank.rank))} · ${tr("批量标记已拥有")}">
+      <button type="button" class="rank-owned-trigger" data-owned-rank="${escapeHtml(rank.rank)}" aria-haspopup="dialog" title="${escapeHtml(ownedLabel)}" aria-label="${escapeHtml(displayRank(rank.rank))} · ${escapeHtml(ownedLabel)}">
         <span class="rank-name">${escapeHtml(displayRank(rank.rank))}</span>
         <img src="assets/navigation/check.svg" width="16" height="16" alt="">
       </button>
@@ -1348,7 +1365,20 @@ function wireEvents() {
   els.routeExportButton.addEventListener("click", exportRouteImage);
 
   els.usageGuideDialog.addEventListener("click", (event) => {
+    const tab = event.target.closest("[data-guide-tab]");
+    if (tab) setUsageGuideTab(tab.dataset.guideTab);
     if (event.target === els.usageGuideDialog || event.target.closest("[data-guide-close]")) closeUsageGuide();
+  });
+
+  els.usageGuideDialog.addEventListener("keydown", event => {
+    const tab = event.target.closest("[data-guide-tab]");
+    if (!tab || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const tabs = [...els.usageGuideDialog.querySelectorAll("[data-guide-tab]")];
+    const index = tabs.indexOf(tab);
+    const next = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1
+      : (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+    setUsageGuideTab(tabs[next].dataset.guideTab, true);
   });
 
   els.clearButton.addEventListener("click", () => {

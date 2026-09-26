@@ -100,6 +100,7 @@ body,
 .bulk-owned-dialog .bulk-owned-count { color: #debd76; font-weight: 600; }
 .bulk-owned-dialog ul { max-height: 35dvh; overflow: auto; padding: 0 0 0 20px; margin: 12px 0 20px; }
 .bulk-owned-dialog li { padding: 4px 0; font-size: 13px; line-height: 1.4; overflow-wrap: anywhere; }
+.bulk-owned-rank { color: #debd76; font-size: 11px; margin-right: 6px; }
 .bulk-owned-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
 .bulk-owned-actions button, .bulk-owned-notice button {
   min-height: 44px; max-width: 100%; padding: 8px 12px; border-radius: 4px;
@@ -239,6 +240,17 @@ body,
 .usage-guide-dialog,
 .usage-guide-header { background: #282e2f; color: #e5eae5; }
 .usage-guide-close { background: #384543; border-color: #6e8478; color: #e7eee7; }
+.usage-guide-tabs { display: flex; gap: 16px; margin-bottom: 16px; border-bottom: 1px solid #505958; }
+.usage-guide-tabs button { flex: 1 1 0; min-width: 0; min-height: 44px; padding: 10px 4px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: transparent; color: #b9c5bf; font-size: 14px; line-height: 1.4; white-space: normal; overflow-wrap: anywhere; cursor: pointer; box-shadow: none; }
+.usage-guide-tabs button[aria-selected="true"] { color: #e5d29c; border-bottom-color: #d3bd87; }
+.usage-guide-tabs button:focus-visible { outline: 2px solid #8fb8a2; outline-offset: -2px; }
+.usage-guide-body [role="tabpanel"][hidden] { display: none; }
+.usage-guide-body [role="tabpanel"] { outline-offset: 3px; }
+#usageGuideChangelog .usage-guide-update { margin-top: 0; border-top: 0; }
+.usage-guide-update-meta { flex-wrap: wrap; row-gap: 4px; }
+.usage-guide-update-meta time { white-space: nowrap; }
+.usage-guide-history { margin: 16px 0 8px; font-size: 13px; }
+.usage-guide-history a { color: #a4d0b5; text-underline-offset: 3px; }
 .roster-help-dialog { background: #2d2b31; color: #ede7f0; border-color: #8c7499; }
 .roster-help-heading span,
 .roster-help-dialog code { color: #d7b8e8; }

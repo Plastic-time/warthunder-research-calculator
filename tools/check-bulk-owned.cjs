@@ -26,6 +26,8 @@ async function main() {
       await page.waitForFunction(() => state.planResult && !els.planButton.disabled);
       const candidates = await page.evaluate(() => getRankOwnedCandidates('II').map(unit => unit.data_unit_id));
       assert(candidates.length > 3);
+      assert.deepEqual(await page.evaluate(() => [...new Set(getRankOwnedCandidates('II').map(unit => unit.rank))]), ['I', 'II']);
+      assert.equal(await page.evaluate(() => getRankOwnedCandidates('not-a-rank').length), 0);
       assert(await page.evaluate(() => getRankOwnedCandidates('II').some(unit => unit.parent_group_id)));
       // Start with a target and waypoint in the affected rank, plus an existing owned unit.
       await page.evaluate(ids => {
@@ -87,6 +89,43 @@ async function main() {
       const firstBatch = await snapshot();
       await page.evaluate(() => { markRankOwned('II'); undoBulkOwned(); });
       assert.deepEqual(await snapshot(), firstBatch);
+      // Reapplying rank VII upgrades old rank-only ownership without altering special vehicles.
+      const highRank = await page.evaluate(() => {
+        els.clearButton.click();
+        const all = getRankOwnedCandidates('VII');
+        const seventh = all.filter(unit => unit.rank === 'VII');
+        seventh.forEach(unit => state.owned.add(unit.data_unit_id));
+        saveState();
+        calculatePlan();
+        const target = state.units.find(unit => unit.rank === 'VIII' && unit.section === 'researchable'
+          && RosterAudit.info(state.country, state.type, unit.data_unit_id)?.category === 'standard');
+        if (!target || !seventh.length) throw Error('Missing high-rank fixture');
+        toggleUnitMode(target.data_unit_id, 'owned');
+        const singleOwned = [...state.owned];
+        toggleUnitMode(target.data_unit_id, 'target');
+        return { all: all.map(unit => unit.data_unit_id), seventh: seventh.map(unit => unit.data_unit_id), target: target.data_unit_id, singleOwned };
+      });
+      assert.deepEqual(highRank.singleOwned.sort(), [...highRank.seventh, highRank.target].sort());
+      const oldHighRank = await snapshot();
+      await activate(page.locator('[data-owned-rank="VII"]'));
+      assert((await page.locator('.bulk-owned-dialog').innerText()).includes('本级及以下'));
+      assert.equal(await page.locator('.bulk-owned-dialog li').count(), highRank.all.length - highRank.seventh.length);
+      await page.screenshot({ path: path.join(output, mode + '-' + width + '-rank-vii-confirm.png') });
+      await activate(page.locator('[data-bulk-confirm]'));
+      assert.deepEqual((await snapshot()).owned.sort(), highRank.all.sort());
+      assert(!(await snapshot()).owned.includes(highRank.target));
+      await activate(page.locator('.bulk-owned-notice button'));
+      assert.deepEqual(await snapshot(), oldHighRank);
+      await activate(page.locator('[data-owned-rank="VII"]'));
+      await activate(page.locator('[data-bulk-confirm]'));
+      await page.reload();
+      await page.waitForFunction(() => state.units.length && document.querySelector('.unit-tile'));
+      await page.locator('#planButton').click();
+      await page.waitForFunction(() => state.planResult && !state.planResult.dirty && !els.planButton.disabled);
+      assert(await page.evaluate(() => state.planResult.feasible));
+      assert.deepEqual(await page.evaluate(() => [...new Set(state.missing.map(unit => unit.rank))]), ['VIII']);
+      assert((await snapshot()).missing.includes(highRank.target));
+      assert(!(await snapshot()).route.selectedIds.some(id => highRank.all.includes(id)));
       await page.evaluate(() => { els.clearButton.click(); });
       await page.evaluate(() => { markRankOwned('II'); });
       await page.evaluate(async () => { els.countrySelect.value = 'germany'; await loadTree(); undoBulkOwned(); });
@@ -99,7 +138,26 @@ async function main() {
         finally { RosterAudit.info = original; }
       }));
       for (const locale of ['zh', 'en', 'ru', 'de', 'fr', 'ja', 'es']) {
-        await page.evaluate(locale => { setLanguage(locale); openRankOwnedDialog('II'); }, locale);
+        await page.evaluate(locale => { setLanguage(locale); WTI18n.missing.clear(); openRankOwnedDialog('I'); }, locale);
+        assert.deepEqual(await page.evaluate(() => [...WTI18n.missing]), []);
+        const firstRank = await page.evaluate(() => ({
+          scope: document.querySelector('[data-bulk-scope]').textContent,
+          expected: tr('本级普通载具（含折叠载具，不含特殊及隐藏载具）'),
+          title: document.querySelector('[data-owned-rank="I"]').title,
+          expectedTitle: tr('标记本级已拥有'),
+          ranks: [...new Set(getRankOwnedCandidates('I').map(unit => unit.rank))],
+        }));
+        assert.equal(firstRank.scope, firstRank.expected);
+        assert.equal(firstRank.title, firstRank.expectedTitle);
+        assert(!/lower|предыдущ|niedrig|inférieur|以下|inferior/i.test(firstRank.scope + firstRank.title));
+        assert(firstRank.ranks.every(rank => rank === 'I'));
+        if (locale !== 'zh' && locale !== 'ja') assert(!/[\u4e00-\u9fff]/.test(await page.locator('.bulk-owned-dialog').innerText()));
+        if (locale === 'zh' || locale === 'en') {
+          await page.screenshot({ path: path.join(output, mode + '-' + width + '-rank-i-' + locale + '.png') });
+        }
+        await page.locator('[data-bulk-cancel]').click();
+        await page.evaluate(() => openRankOwnedDialog('II'));
+        assert(await page.evaluate(() => document.querySelector('[data-bulk-scope]').textContent === tr('本级及以下普通载具（含折叠载具，不含特殊及隐藏载具）')));
         assert(await page.evaluate(() => {
           const dialog = bulkOwnedDialog.getBoundingClientRect();
           return dialog.left >= 0 && dialog.right <= innerWidth && bulkOwnedDialog.scrollWidth <= bulkOwnedDialog.clientWidth;
