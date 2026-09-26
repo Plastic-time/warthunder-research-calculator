@@ -436,7 +436,13 @@
       calculate();
     }
     if (action === "clear") { ui.selected.clear(); ui.result = null; save(); render(); }
-    if (action === "clear-owned") { ui.researched.clear(); ui.result = null; save(); render(); }
+    if (action === "clear-owned") {
+      ui.researched.clear();
+      ui.progressRp = Object.create(null);
+      ui.result = null;
+      save();
+      render();
+    }
   });
 
   viewport.addEventListener("scroll", drawConnections, { passive: true });

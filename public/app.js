@@ -1377,6 +1377,7 @@ function wireEvents() {
   els.clearButton.addEventListener("click", () => {
     state.planned.clear();
     state.owned.clear();
+    state.progressRp = Object.create(null);
     state.waypoints.clear();
     state.planResult = null;
     invalidateExactPlan();

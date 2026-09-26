@@ -67,7 +67,13 @@ async function main() {
       await page.locator('#planButton').click();
       await page.waitForFunction(() => state.planResult && !state.planResult.dirty && !els.planButton.disabled);
       assert(await page.evaluate(() => state.planResult.totalRp === state.missing.reduce((sum, unit) => sum + (remainingUnitRp(unit) || 0), 0)));
-      await page.evaluate(async () => { els.countrySelect.value = 'germany'; await loadTree(); });
+      await page.evaluate(async () => {
+        els.countrySelect.value = 'germany';
+        await loadTree();
+        const other = state.units.find(canEditUnitProgress);
+        state.progressRp[other.data_unit_id] = 1;
+        saveState();
+      });
       assert.equal(await page.evaluate(id => state.progressRp[id] || 0, unit.id), 0);
       await page.evaluate(async () => { els.countrySelect.value = 'usa'; await loadTree(); });
       assert.equal(await page.evaluate(id => state.progressRp[id], unit.id), spent);
@@ -136,9 +142,46 @@ async function main() {
       await page.locator('#researchProgressInput').fill('');
       await page.locator('[data-progress-save]').click();
       assert.equal(await page.locator('#modificationRp').innerText(), mod.total.toLocaleString('zh-CN'));
+      await tile.click();
+      await page.locator('#researchProgressInput').fill(String(invested));
+      await page.locator('[data-progress-save]').click();
+      await page.locator('[data-modification-action="clear"]').click();
+      assert.equal(await page.locator('.modification-rp-progress').count(), 1, 'Clearing targets preserves research progress');
+      await page.locator('[data-modification-mode="select"]').click();
+      await tile.click();
+      await page.locator('[data-modification-action="clear-owned"]').click();
+      assert.equal(await page.locator('.modification-rp-progress').count(), 0);
+      assert.equal(await page.locator('#modificationRp').innerText(), mod.total.toLocaleString('zh-CN'));
+      await page.reload();
+      await page.waitForFunction(() => state.units.length);
+      await page.evaluate(id => ModificationWorkbench.open(id), unit.id);
+      await page.waitForSelector('.modification-tile');
+      assert.equal(await page.locator('.modification-rp-progress').count(), 0, 'Cleared modification progress stays cleared after reload');
+      await page.locator('[data-modification-close]').click();
+      await openUnit();
+      await page.locator('#researchProgressInput').fill(String(spent));
+      await page.locator('[data-progress-save]').click();
+      const untouched = await page.evaluate(() => {
+        const second = state.units.find(unit => canEditUnitProgress(unit) && unit.data_unit_id !== 'us_m18_hellcat');
+        state.progressRp[second.data_unit_id] = 1;
+        state.planned.delete(second.data_unit_id);
+        saveState();
+        return localStorage.getItem('wt-research:germany:ground');
+      });
+      if (width < 720) await page.locator('#mobileMoreButton').tap();
+      await page.locator('#clearButton').click();
+      assert(await page.evaluate(() => !state.planned.size && !state.owned.size && !state.waypoints.size && !Object.keys(state.progressRp).length));
+      assert.equal(await page.locator('.unit-rp-progress').count(), 0);
+      assert.equal(await page.locator('#budgetRp').innerText(), '0');
+      assert.equal(await page.evaluate(() => localStorage.getItem('wt-research:germany:ground')), untouched, 'Other trees are not cleared');
+      await page.reload();
+      await page.waitForFunction(() => state.units.length);
+      assert(await page.evaluate(() => !Object.keys(state.progressRp).length), 'Progress must stay cleared after reload');
+      await page.evaluate(id => toggleUnitMode(id, 'target'), unit.id);
+      assert.equal(await page.locator('#budgetRp').innerText(), unit.total.toLocaleString('zh-CN'));
       assert.deepEqual(errors, []);
       await page.close();
-      console.log(JSON.stringify({ mode, width, persistence: true, budgets: true, export: true, locales: 7, fullRpNotOwnership: true, passed: true }));
+      console.log(JSON.stringify({ mode, width, persistence: true, budgets: true, export: true, locales: 7, fullRpNotOwnership: true, clearProgress: true, passed: true }));
     }
   } finally {
     await browser?.close();

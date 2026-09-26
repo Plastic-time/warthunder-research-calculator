@@ -53,9 +53,11 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 
 On mobile, open More at the top to find the guide and export controls. Search and filters have separate buttons. Open the guide's Changelog tab to see past updates.
 
-Open the web app to start. No game account is required. On Windows, download the [v1.0.14 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.14/WarThunderResearchCalculator-v1.0.14-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed. Downloaded packages do not automatically receive later web updates.
+Open the web app to start. No game account is required. On Windows, download the [v1.0.15 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.15/WarThunderResearchCalculator-v1.0.15-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed. Downloaded packages do not automatically receive later web updates.
 
 RP progress does not mark a vehicle as owned or an upgrade as researched. Set those states separately, even at full progress. Silver Lion costs stay unchanged.
+
+Clear Plan also clears vehicle RP progress for the current nation and vehicle category. In the modification window, Clear Researched clears researched marks and RP progress for that vehicle. Clear Targets only removes targets.
 
 Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fleets. The interface and vehicle names support Chinese, English, Russian, German, French, Japanese, and Spanish. This project does not translate third-party Wiki articles.
 
@@ -74,7 +76,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - [Online counter rules](doc/online-counter.md) (Chinese)
 - [Modification artwork sources](doc/ammunition-artwork.md) (Chinese)
 - [Vehicle snapshot manifest](docs/database/manifest.json) · [Modification audit](tools/modifications-audit.json)
-- [v1.0.14 notes](doc/release-v1.0.14.md) (Chinese) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.15 notes](doc/release-v1.0.15.md) (Chinese) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 
