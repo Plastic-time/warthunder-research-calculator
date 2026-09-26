@@ -64,6 +64,9 @@ const connectionMediaQuery = window.matchMedia("(min-width: 960px) and (pointer:
 let connectionTaskId = null;
 let connectionMarkerSequence = 0;
 const connectionMarkerIds = new WeakMap();
+let bulkOwnedUndo = null;
+let bulkOwnedDialog;
+let bulkOwnedNotice;
 
 
 const zh = {
@@ -189,6 +192,8 @@ function setLanguage(language) {
   if (state.units.length) setStatus(tr("{count} 个载具", { count: formatNumber(state.units.length) }));
   setPlanButtonsDisabled(els.planButton.disabled);
   closeUnitContextMenu();
+  bulkOwnedDialog?.close();
+  renderBulkOwnedNotice();
 }
 
 async function loadLocalizedNames() {
@@ -324,6 +329,8 @@ function isSquadronUnit(unit) {
 }
 
 function loadSavedState() {
+  discardBulkOwnedUndo();
+  bulkOwnedDialog?.close();
   const saved = JSON.parse(localStorage.getItem(storageKey()) || "{}");
   state.planned = new Set(saved.planned || []);
   state.owned = new Set(saved.owned || []);
@@ -342,6 +349,7 @@ function loadSavedState() {
 }
 
 function saveState() {
+  discardBulkOwnedUndo();
   localStorage.setItem(
     storageKey(),
     JSON.stringify({
@@ -498,6 +506,101 @@ function getModeSet(mode) {
   return state.planned;
 }
 
+function getRankOwnedCandidates(rank) {
+  return state.units.filter(unit => {
+    const id = unit.data_unit_id;
+    const info = window.RosterAudit?.info(state.country, state.type, id);
+    return String(unit.rank) === String(rank) && unit.section === "researchable"
+      && !state.initialUnlocked.has(id) && !state.owned.has(id)
+      && !isSquadronUnit(unit)
+      && !["prem", "premium", "squad", "event", "gift"].includes(cleanText(unit.class_name).toLowerCase())
+      && info?.category === "standard" && !info.hidden;
+  });
+}
+
+function discardBulkOwnedUndo() {
+  bulkOwnedUndo = null;
+  if (bulkOwnedNotice) bulkOwnedNotice.hidden = true;
+}
+
+function renderBulkOwnedNotice() {
+  if (!bulkOwnedNotice) return;
+  bulkOwnedNotice.hidden = !bulkOwnedUndo;
+  if (!bulkOwnedUndo) return;
+  bulkOwnedNotice.querySelector("[role=status]").textContent = tr("已标记 {count} 辆为已拥有", { count: bulkOwnedUndo.count });
+  bulkOwnedNotice.querySelector("button").textContent = tr("撤销本次标记");
+}
+
+function undoBulkOwned() {
+  if (!bulkOwnedUndo || bulkOwnedUndo.key !== storageKey() || els.planButton.disabled) return;
+  const before = bulkOwnedUndo.before;
+  state.owned = new Set(before.owned);
+  state.planned = new Set(before.planned);
+  state.waypoints = new Set(before.waypoints);
+  state.planResult = before.planResult;
+  saveState();
+  calculatePlan();
+}
+
+function markRankOwned(rank) {
+  if (els.planButton.disabled) return;
+  const units = getRankOwnedCandidates(rank);
+  if (!units.length) return;
+  const before = {
+    owned: [...state.owned], planned: [...state.planned], waypoints: [...state.waypoints],
+    planResult: state.planResult ? JSON.parse(JSON.stringify(state.planResult)) : null,
+  };
+  units.forEach(unit => {
+    const id = unit.data_unit_id;
+    state.owned.add(id);
+    state.planned.delete(id);
+    state.waypoints.delete(id);
+    if (state.planResult?.removedAutoRoles) delete state.planResult.removedAutoRoles[id];
+  });
+  invalidateExactPlan();
+  saveState();
+  calculatePlan();
+  bulkOwnedUndo = { key: storageKey(), before, count: units.length };
+  renderBulkOwnedNotice();
+}
+
+function openRankOwnedDialog(rank) {
+  if (els.planButton.disabled) return;
+  closeUnitContextMenu();
+  const units = getRankOwnedCandidates(rank);
+  bulkOwnedDialog.dataset.rank = rank;
+  bulkOwnedDialog.innerHTML = `
+    <h2 id="bulkOwnedTitle">${escapeHtml(displayRank(rank))} · ${tr("批量标记已拥有")}</h2>
+    <p>${tr("本级普通载具（含折叠载具，不含特殊及隐藏载具）")}</p>
+    <p class="bulk-owned-count">${tr("新增标记：{count} 辆", { count: units.length })}</p>
+    <ul>${units.map(unit => `<li>${escapeHtml(displayTitle(unit))}</li>`).join("")}</ul>
+    <div class="bulk-owned-actions">
+      <button type="button" data-bulk-cancel>${tr("取消")}</button>
+      <button type="button" data-bulk-confirm ${units.length ? "" : "disabled"}>${tr("标记为已拥有")}</button>
+    </div>`;
+  bulkOwnedDialog.showModal();
+  bulkOwnedDialog.querySelector("[data-bulk-cancel]").focus();
+}
+
+function setupBulkOwned() {
+  bulkOwnedDialog = document.createElement("dialog");
+  bulkOwnedDialog.className = "bulk-owned-dialog";
+  bulkOwnedDialog.setAttribute("aria-labelledby", "bulkOwnedTitle");
+  bulkOwnedDialog.addEventListener("click", event => {
+    if (event.target.closest("[data-bulk-confirm]")) {
+      const rank = bulkOwnedDialog.dataset.rank;
+      bulkOwnedDialog.close();
+      markRankOwned(rank);
+    } else if (event.target.closest("[data-bulk-cancel]")) bulkOwnedDialog.close();
+  });
+  bulkOwnedNotice = document.createElement("div");
+  bulkOwnedNotice.className = "bulk-owned-notice";
+  bulkOwnedNotice.hidden = true;
+  bulkOwnedNotice.innerHTML = '<span role="status"></span><button type="button"></button>';
+  bulkOwnedNotice.querySelector("button").addEventListener("click", undoBulkOwned);
+  document.body.append(bulkOwnedDialog, bulkOwnedNotice);
+}
+
 function closeUnitContextMenu() {
   if (!els.unitContextMenu) return;
   els.unitContextMenu.hidden = true;
@@ -574,6 +677,7 @@ function runExactPlan() {
     els.plannerStatus.textContent = tr("本地规划器未能载入");
     return;
   }
+  discardBulkOwnedUndo();
   setPlanButtonsDisabled(true);
   els.plannerStatus.textContent = tr("正在本机搜索最低 RP 路线");
   window.setTimeout(() => {
@@ -1020,7 +1124,10 @@ function renderRankRail(rank) {
 
   return `
     <div class="rank-rail ${complete ? "is-complete" : ""}">
-      <span class="rank-name">${escapeHtml(displayRank(rank.rank))}</span>
+      <button type="button" class="rank-owned-trigger" data-owned-rank="${escapeHtml(rank.rank)}" aria-haspopup="dialog" title="${tr("批量标记已拥有")}" aria-label="${escapeHtml(displayRank(rank.rank))} · ${tr("批量标记已拥有")}">
+        <span class="rank-name">${escapeHtml(displayRank(rank.rank))}</span>
+        <img src="assets/navigation/check.svg" width="16" height="16" alt="">
+      </button>
     </div>
   `;
 }
@@ -1144,6 +1251,8 @@ function toggleUnit(id) {
 }
 
 async function refreshCurrentTree() {
+  discardBulkOwnedUndo();
+  bulkOwnedDialog?.close();
   setStatus(tr("正在从官方 Wiki 更新当前树"));
   els.refreshDataButton.disabled = true;
   try {
@@ -1165,6 +1274,7 @@ async function refreshCurrentTree() {
 }
 
 function wireEvents() {
+  setupBulkOwned();
   window.VehicleLongPress?.configure({ open: openUnitContextMenu, close: closeUnitContextMenu });
   els.countrySelect.addEventListener("change", loadTree);
   els.typeSelect.addEventListener("change", loadTree);
@@ -1233,6 +1343,11 @@ function wireEvents() {
   });
 
   els.treeContainer.addEventListener("click", (event) => {
+    const rankButton = event.target.closest("[data-owned-rank]");
+    if (rankButton) {
+      openRankOwnedDialog(rankButton.dataset.ownedRank);
+      return;
+    }
     const button = event.target.closest("[data-unit-id]");
     if (!button) return;
     toggleUnit(button.dataset.unitId);

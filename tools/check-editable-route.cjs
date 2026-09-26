@@ -104,6 +104,7 @@ async function main() {
       await page.waitForFunction(() => !els.planButton.disabled);
       assert.deepEqual((await snapshot()).selected, beforeFailure);
       await page.evaluate(() => {LocalPlanner.plan = window.savedPlanner; delete window.savedPlanner;});
+      if (width < 720) await page.locator('#mobileMoreButton').click();
       await page.locator('#clearButton').click();
       assert(await page.evaluate(() => !state.planResult && !state.planned.size && !state.owned.size && !state.waypoints.size && !state.missing.length));
       await page.reload({waitUntil: 'domcontentloaded'});

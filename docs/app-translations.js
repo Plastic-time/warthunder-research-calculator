@@ -1,5 +1,10 @@
 // Main application catalog: zh, en, ru, de, fr, ja, es.
 window.WTI18n.register([
+  ["批量标记已拥有", "Mark rank as owned", "Отметить технику ранга как имеющуюся", "Fahrzeuge des Rangs als im Besitz markieren", "Marquer les véhicules du rang comme possédés", "このランクを一括で所有済みにする", "Marcar vehículos del rango como adquiridos"],
+  ["本级普通载具（含折叠载具，不含特殊及隐藏载具）", "Regular vehicles in this rank, including folders; special and hidden vehicles excluded", "Обычная техника этого ранга, включая группы; особая и скрытая техника исключена", "Reguläre Fahrzeuge dieses Rangs einschließlich Gruppen; Spezial- und versteckte Fahrzeuge ausgenommen", "Véhicules standards de ce rang, dossiers inclus ; véhicules spéciaux et cachés exclus", "このランクの通常兵器（グループ内を含む・特殊および非表示の兵器を除く）", "Vehículos normales de este rango, incluidas las carpetas; se excluyen los especiales y ocultos"],
+  ["新增标记：{count} 辆", "Newly marked: {count}", "Будет отмечено: {count}", "Neue Markierungen: {count}", "Nouveaux véhicules marqués : {count}", "新たに所有済みにする兵器：{count}", "Nuevas marcas: {count}"],
+  ["已标记 {count} 辆为已拥有", "Marked {count} vehicles as owned", "Отмечено как имеющиеся: {count}", "{count} Fahrzeuge als im Besitz markiert", "{count} véhicules marqués comme possédés", "{count} 個の兵器を所有済みにしました", "{count} vehículos marcados como adquiridos"],
+  ["撤销本次标记", "Undo these marks", "Отменить эти отметки", "Markierungen rückgängig machen", "Annuler ces marques", "今回の設定を元に戻す", "Deshacer estas marcas"],
   ["美国", "USA", "США", "USA", "États-Unis", "アメリカ", "EE. UU."],
   ["德国", "Germany", "Германия", "Deutschland", "Allemagne", "ドイツ", "Alemania"],
   ["苏联", "USSR", "СССР", "UdSSR", "URSS", "ソ連", "URSS"],
