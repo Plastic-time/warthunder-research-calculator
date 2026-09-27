@@ -9,7 +9,7 @@
   const rpOutput = document.getElementById("modificationRp");
   const slOutput = document.getElementById("modificationSl");
   const status = document.getElementById("modificationStatus");
-  const ui = { data: null, selected: new Set(), researched: new Set(), unlocked: new Set(), result: null, progressRp: Object.create(null), editProgress: false };
+  const ui = { data: null, selected: new Set(), researched: new Set(), unlocked: new Set(), result: null, progressRp: Object.create(null), editProgress: false, airCombat: true };
   let catalog = null;
   let catalogPromise = null;
   const chunkCache = new Map();
@@ -70,10 +70,11 @@
     return Boolean(catalog?.vehicles?.[vehicleId]);
   }
 
-  function normalizeVehicle(raw) {
+  function normalizeVehicle(raw, chunkKey) {
     const iconPrefix = "https://static.encyclopedia.warthunder.com/gui_skin/";
     return {
       vehicleId: raw.i,
+      branch: chunkKey.endsWith("_aviation") ? "aviation" : "other",
       aliases: raw.aliases || {},
       vehicleName: { zh: raw.n[0], en: raw.n[1] },
       vehicleIcon: raw.v,
@@ -93,7 +94,9 @@
   }
 
   function renderIcon(mod) {
-    const art = mod.artwork;
+    // A belt research unlock is not a selected ammunition loadout.
+    const originalAircraftBelt = ui.data.branch === "aviation" && mod.icon.endsWith("/ammo.png");
+    const art = originalAircraftBelt ? null : mod.artwork;
     const valid = files => Array.isArray(files) && files.every(file => /^[a-z0-9_-]+\.png$/i.test(file));
     if (!art || !valid(art.b) || !art.b.length || !valid(art.d)) {
       return `<img src="${escape(mod.icon)}" alt="" loading="eager">`;
@@ -130,7 +133,7 @@
     const chunk = await chunkCache.get(chunkKey);
     const raw = chunk.v?.[vehicleId];
     if (!raw) throw failure("配件数据中找不到这辆载具");
-    return normalizeVehicle(raw);
+    return normalizeVehicle(raw, chunkKey);
   }
 
   function save() {
@@ -138,12 +141,15 @@
     localStorage.setItem(storageKey(ui.data.vehicleId), JSON.stringify({
       selected: [...ui.selected], researched: [...ui.researched],
       progressRp: ui.progressRp,
+      airCombat: ui.airCombat,
     }));
   }
 
   function restore() {
+    ui.airCombat = true;
     try {
       const saved = JSON.parse(localStorage.getItem(storageKey(ui.data.vehicleId)) || "{}");
+      ui.airCombat = saved.airCombat !== false;
       const ids = new Set(ui.data.mods.filter(mod => !ui.unlocked.has(mod.id)).map(mod => mod.id));
       const restoreIds = values => new Set((values || []).map(id => Object.hasOwn(ui.data.aliases, id) ? ui.data.aliases[id] : id).filter(id => ids.has(id)));
       ui.selected = restoreIds(saved.selected);
@@ -182,13 +188,14 @@
     if (ui.unlocked.has(mod.id)) return "unlocked";
     if (ui.researched.has(mod.id)) return "researched";
     if (ui.selected.has(mod.id)) return "target";
+    if (ui.result?.priorityIds.includes(mod.id)) return "priority";
     if (ui.result?.dependencyIds.includes(mod.id)) return "dependency";
     if (ui.result?.fillerIds.includes(mod.id)) return "filler";
     return "";
   }
 
   function stateLabel(mod) {
-    const labels = { researched: "已研发", target: "目标", dependency: "必经", filler: "补足" };
+    const labels = { researched: "已研发", target: "目标", dependency: "必经", filler: "补足", priority: "优先" };
     return labels[tileState(mod)] ? t(labels[tileState(mod)]) : "";
   }
 
@@ -199,6 +206,14 @@
   }
 
   function translateControls() {
+    const preference = dialog.querySelector(".modification-air-combat");
+    if (preference) {
+      preference.hidden = ui.data?.branch !== "aviation";
+      preference.querySelector("input").checked = ui.airCombat;
+      preference.querySelector("span").textContent = t("空战优先");
+    }
+    const priorityLegend = dialog.querySelector("[data-air-combat-legend]");
+    if (priorityLegend) priorityLegend.hidden = ui.data?.branch !== "aviation";
     dialog.querySelectorAll("[data-modification-mode]").forEach(button => {
       button.textContent = t(button.dataset.modificationMode === "progress" ? "研发进度" : "选择目标");
       button.setAttribute("aria-pressed", String((button.dataset.modificationMode === "progress") === ui.editProgress));
@@ -212,7 +227,7 @@
     close?.setAttribute("aria-label", t("关闭配件研发"));
     close?.setAttribute("title", t("关闭"));
     dialog.querySelector(".modification-legend")?.setAttribute("aria-label", t("配件状态图例"));
-    for (const [kind, source] of Object.entries({ target: "目标", dependency: "必经配件", filler: "等级补足", researched: "已研发" })) {
+    for (const [kind, source] of Object.entries({ target: "目标", dependency: "必经配件", filler: "等级补足", researched: "已研发", priority: "空战优先" })) {
       const icon = dialog.querySelector(`.modification-legend i.${kind}`);
       if (icon?.nextElementSibling) {
         icon.nextElementSibling.dataset.i18nContext = 'modifications';
@@ -294,7 +309,7 @@
     if (ui.unlocked.size === ui.data.mods.length) {
       status.textContent = t("全部配件已解锁");
     } else if (ui.result) {
-      const autoCount = ui.result.dependencyIds.length + ui.result.fillerIds.length;
+      const autoCount = ui.result.dependencyIds.length + ui.result.fillerIds.length + ui.result.priorityIds.length;
       status.textContent = t("目标 {selected} · 自动加入 {auto} · 尚需研发 {remaining}", { selected: selectedCount, auto: autoCount, remaining: ui.result.includedIds.length });
     } else {
       status.textContent = selectedCount
@@ -337,7 +352,7 @@
   }
 
   function calculate() {
-    ui.result = window.ModificationPlanner.plan(ui.data, [...ui.selected], [...ui.researched], ui.progressRp);
+    ui.result = window.ModificationPlanner.plan(ui.data, [...ui.selected], [...ui.researched], ui.progressRp, { airCombat: ui.airCombat });
     save();
     render();
   }
@@ -460,7 +475,21 @@
   const editMode = document.createElement("div");
   editMode.className = "modification-edit-mode";
   editMode.innerHTML = '<button type="button" data-modification-mode="select" aria-pressed="true"></button><button type="button" data-modification-mode="progress" aria-pressed="false"></button>';
-  dialog.querySelector(".modification-toolbar").append(editMode);
+  const optionsBar = document.createElement("div");
+  optionsBar.className = "modification-options";
+  dialog.querySelector(".modification-toolbar").append(optionsBar);
+  const preference = document.createElement("label");
+  preference.className = "modification-air-combat";
+  preference.innerHTML = '<input type="checkbox" data-modification-air-combat checked><span></span>';
+  optionsBar.append(preference, editMode);
+  preference.querySelector("input").addEventListener("change", event => {
+    ui.airCombat = event.target.checked;
+    if (ui.result) calculate(); else { save(); render(); }
+  });
+  const priorityLegend = document.createElement("span");
+  priorityLegend.dataset.airCombatLegend = "";
+  priorityLegend.innerHTML = '<i class="priority"></i><span></span>';
+  dialog.querySelector(".modification-legend").append(priorityLegend);
   title.removeAttribute("data-i18n");
   status.removeAttribute("data-i18n");
   translateControls();

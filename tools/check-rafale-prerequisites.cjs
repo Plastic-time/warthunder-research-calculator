@@ -34,7 +34,7 @@ async function main() {
       for (const id of vehicleIds) {
         await page.evaluate(async id => {
           localStorage.setItem('wt-research:modifications:' + id, JSON.stringify({
-            selected: [], researched: [],
+            selected: [], researched: [], airCombat: false,
           }));
           await ModificationWorkbench.open(id);
         }, id);

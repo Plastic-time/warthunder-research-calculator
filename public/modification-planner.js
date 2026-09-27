@@ -7,7 +7,31 @@
     return mod.rp === 0 && mod.sl === 0;
   }
 
-  function plan(data, selectedIds, researchedIds, savedProgress = {}) {
+  // Explicit module IDs, not translated warning-system names or artwork.
+  // Basic dispensers precede optional capacity / warning-system upgrades.
+  const countermeasureGroups = [
+    ["countermeasures_belt_pack", "MAW_system_heli_false_thermal_targets_large"],
+    ["swd_ltc_bol", "uk_ltc_bol"],
+    ["PIDS_false_thermal_targets", "uk_terma_mcp_false_thermal_targets", "boz_false_thermal_targets"],
+    ["chaff_pods", "saab_f35_alq_162"],
+  ];
+
+  function countermeasureCandidates(data) {
+    if (data.branch !== "aviation") return [];
+    for (const ids of countermeasureGroups) {
+      const mods = data.mods.filter(mod => ids.includes(mod.id));
+      if (mods.length) return mods;
+    }
+    return [];
+  }
+
+  function plan(data, selectedIds, researchedIds, savedProgress = {}, options = {}) {
+    const airCombat = options.airCombat === true && data.branch === "aviation";
+    const airframeCategories = new Set((data.categories || [])
+      .filter(category => ["Flight performance", "Survivability"].includes(category.name.en))
+      .map(category => category.id));
+    const combatIds = new Set(["hydravlic_power", "g_suit", "f_4c_g_suit", ...countermeasureGroups.flat()]);
+    const fillerPriority = mod => !airCombat ? 0 : combatIds.has(mod.id) ? 0 : airframeCategories.has(mod.category) ? 1 : 2;
     const progressRp = progress.cleanMap(savedProgress);
     const remaining = mod => progress.remaining(mod.rp, progressRp[mod.id]);
     const byId = new Map(data.mods.map(mod => [mod.id, mod]));
@@ -18,6 +42,7 @@
     const included = new Set();
     const dependencies = new Set();
     const fillers = new Set();
+    const priorities = new Set();
 
     function includeWithDependencies(id, reason) {
       if (researched.has(id) || included.has(id)) return;
@@ -26,6 +51,7 @@
       included.add(id);
       if (reason === "dependency" && !selected.has(id)) dependencies.add(id);
       if (reason === "filler" && !selected.has(id)) fillers.add(id);
+      if (reason === "priority" && !selected.has(id)) priorities.add(id);
       for (const required of mod.requires || []) includeWithDependencies(required, "dependency");
     }
 
@@ -49,6 +75,14 @@
       return { extra, cost };
     }
 
+    if (airCombat && included.size) {
+      const candidates = countermeasureCandidates(data);
+      if (!candidates.some(mod => researched.has(mod.id) || included.has(mod.id))) {
+        candidates.sort((a, b) => a.tier - b.tier || expansionFor(a.id).cost - expansionFor(b.id).cost || a.order - b.order);
+        if (candidates.length) includeWithDependencies(candidates[0].id, "priority");
+      }
+    }
+
     for (let tier = 1; tier <= 3; tier += 1) {
       const higherPlanned = [...included].some(id => byId.get(id).tier > tier);
       // A free high-tier module alone does not prove that earlier tiers were completed.
@@ -59,7 +93,8 @@
         const candidates = data.mods
           .filter(mod => mod.tier === tier && !researched.has(mod.id) && !included.has(mod.id))
           .map(mod => ({ mod, expansion: expansionFor(mod.id) }))
-          .sort((a, b) => a.expansion.cost - b.expansion.cost || a.mod.order - b.mod.order);
+          .sort((a, b) => fillerPriority(a.mod) - fillerPriority(b.mod)
+            || a.expansion.cost - b.expansion.cost || a.mod.order - b.mod.order);
         if (!candidates.length) break;
         includeWithDependencies(candidates[0].mod.id, "filler");
       }
@@ -70,6 +105,10 @@
       fillers.delete(id);
     }
     for (const id of dependencies) fillers.delete(id);
+    for (const id of priorities) {
+      dependencies.delete(id);
+      fillers.delete(id);
+    }
 
     const plannedMods = [...included].map(id => byId.get(id)).sort((a, b) => a.order - b.order);
     const tierCounts = {};
@@ -81,11 +120,12 @@
       includedIds: plannedMods.map(mod => mod.id),
       dependencyIds: [...dependencies],
       fillerIds: [...fillers],
+      priorityIds: [...priorities],
       tierCounts,
       rp: plannedMods.reduce((sum, mod) => sum + remaining(mod), 0),
       sl: plannedMods.reduce((sum, mod) => sum + mod.sl, 0),
     };
   }
 
-  return { plan, isAutomaticallyUnlocked };
+  return { plan, isAutomaticallyUnlocked, countermeasureCandidates };
 });

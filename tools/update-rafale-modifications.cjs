@@ -25,7 +25,7 @@ function correctRafale(vehicle) {
   return result;
 }
 
-function main() {
+function updatePrerequisiteChunks({ vehicleIds, correctVehicle, correction }) {
   const root = path.resolve(__dirname, '..');
   const catalogPath = 'database/modifications/catalog.json';
   const raw = fs.readFileSync(path.join(root, 'docs', catalogPath));
@@ -39,7 +39,7 @@ function main() {
       assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), meta.sha256);
       chunks.set(meta.path, JSON.parse(bytes));
     }
-    const chunk = chunks.get(meta.path), before = chunk.v[id], after = correctRafale(before);
+    const chunk = chunks.get(meta.path), before = chunk.v[id], after = correctVehicle(before);
     for (let i = 0; i < before.m.length; i++) {
       for (const req of before.m[i][10]) if (!after.m[i][10].includes(req)) removed.push(id + ':' + req + '->' + before.m[i][0]);
     }
@@ -57,5 +57,5 @@ function main() {
   for (const folder of ['docs', 'public']) for (const [file, content] of writes) fs.writeFileSync(path.join(root, folder, file), content);
   console.log(JSON.stringify({ vehicles: vehicleIds, removedEdges: removed.length, removed }));
 }
-if (require.main === module) main();
-module.exports = { correctRafale, correction, vehicleIds };
+if (require.main === module) updatePrerequisiteChunks({ vehicleIds, correctVehicle: correctRafale, correction });
+module.exports = { correctRafale, correction, vehicleIds, updatePrerequisiteChunks };

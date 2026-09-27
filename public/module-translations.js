@@ -10,6 +10,8 @@
     ["目标","Target","Цель","Ziel","Objectif","目標","Objetivo"],
     ["必经","Required","Обязательно","Benötigt","Requis","必須","Necesario"],
     ["补足","Filler","Добор","Ergänzung","Complément","補完","Complemento"],
+    ["空战优先","Air combat priority","Приоритет воздушного боя","Luftkampf priorisieren","Priorité au combat aérien","空戦優先","Prioridad al combate aéreo"],
+    ["优先","Priority","Приоритет","Vorrang","Priorité","優先","Prioridad"],
     ["必经配件","Prerequisites","Предшествующие модификации","Voraussetzungen","Prérequis","前提となる改造","Requisitos previos"],
     ["已研发","Researched","Исследовано","Erforscht","Recherché","研究済み","Investigado"],
     ["已解锁","Unlocked","Открыто","Freigeschaltet","Débloqué","解放済み","Desbloqueado"],

@@ -53,7 +53,7 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 
 On mobile, open More at the top to find the guide and export controls. Search and filters have separate buttons. Open the guide's Changelog tab to see past updates.
 
-Open the web app to start. No game account is required. On Windows, download the [v1.0.16 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.16/WarThunderResearchCalculator-v1.0.16-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed. Downloaded packages do not automatically receive later web updates.
+Open the web app to start. No game account is required. On Windows, download the [v1.0.17 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.17/WarThunderResearchCalculator-v1.0.17-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed. Downloaded packages do not automatically receive later web updates.
 
 RP progress does not mark a vehicle as owned or an upgrade as researched. Set those states separately, even at full progress. Silver Lion costs stay unchanged.
 
@@ -76,7 +76,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - [Online counter rules](doc/online-counter.md) (Chinese)
 - [Modification artwork sources](doc/ammunition-artwork.md) (Chinese)
 - [Vehicle snapshot manifest](docs/database/manifest.json) · [Modification audit](tools/modifications-audit.json)
-- [v1.0.16 notes](doc/release-v1.0.16.md) (Chinese) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.17 notes](doc/release-v1.0.17.md) (Chinese) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 

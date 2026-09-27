@@ -1,0 +1,31 @@
+{
+  "gameVersion": "2.59.0.17",
+  "datamineCommit": "510a793c2bdb01c51475118199c7b66b72935ff1",
+  "sourcePath": "char.vromfs.bin_u/config/wpcost.blkx",
+  "vehicleId": "f_15c_golden_eagle",
+  "mods": {
+    "new_compressor_jet": { "tier": 1 },
+    "f_4c_CdMin_Fuse": { "tier": 1 },
+    "hydravlic_power": { "tier": 2, "prevModification": "new_compressor_jet" },
+    "structure_str": { "tier": 2 },
+    "cd_98": { "tier": 3, "prevModification": "hydravlic_power" },
+    "new_cover": { "tier": 3 },
+    "hp_105_jet": { "tier": 4, "prevModification": "cd_98" },
+    "countermeasures_belt_pack": { "tier": 1 },
+    "uk_ltc_bol": { "tier": 2, "prevModification": "countermeasures_belt_pack" },
+    "f_4c_g_suit": { "tier": 3, "prevModification": "uk_ltc_bol" },
+    "air_extinguisher": { "tier": 4, "prevModification": "f_4c_g_suit" },
+    "M60_belt_pack": { "tier": 1 },
+    "us_aim_9m": { "tier": 1 },
+    "us_jdam": { "tier": 1 },
+    "us_sniper_pod": { "tier": 1 },
+    "M60_new_gun": { "tier": 2, "reqModification": "M60_belt_pack" },
+    "us_gbu_laser": { "tier": 2, "reqModification": "us_sniper_pod" },
+    "us_aim_120c": { "tier": 3, "reqModification": "us_aim_9m" },
+    "us_gbu_8": { "tier": 3, "prevModification": "us_jdam" },
+    "us_apkws": { "tier": 3, "reqModification": "us_gbu_laser" },
+    "us_gbu39": { "tier": 4, "prevModification": "M60_new_gun" },
+    "us_aim_120d": { "tier": 4, "reqModification": "us_aim_120c" },
+    "us_gbu_53": { "tier": 4, "prevModification": "us_gbu_8" }
+  }
+}

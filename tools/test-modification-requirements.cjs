@@ -42,3 +42,25 @@ for (const id of vehicleIds) {
   assert(bomb.dependencyIds.includes(pod) && bomb.dependencyIds.includes('us_gbu_laser'));
 }
 console.log(JSON.stringify({ rafalePrerequisites: true, variants: vehicleIds.length, layoutNotDependency: true, realPrerequisitesPreserved: true }));
+
+const goldenSource = require('./fixtures/golden-eagle-modification-requirements.json');
+const { correctGoldenEagle } = require('./update-golden-eagle-modifications.cjs');
+const goldenRaw = JSON.parse(fs.readFileSync(path.join(root, 'docs', catalog.chunks[catalog.vehicles[goldenSource.vehicleId]].path))).v[goldenSource.vehicleId];
+const goldenIds = new Set(goldenRaw.m.map(m => m[0]));
+for (const mod of goldenRaw.m) {
+  assert.deepEqual(mod[10], gameRequirements(goldenSource.mods[mod[0]], goldenIds), mod[0]);
+}
+assert.equal(goldenRaw.m.reduce((sum, m) => sum + m[10].length, 0), 5);
+assert.deepEqual(correctGoldenEagle(goldenRaw), goldenRaw);
+const brokenGolden = structuredClone(goldenRaw);
+for (const mod of brokenGolden.m) {
+  const previous = goldenSource.mods[mod[0]].prevModification;
+  if (previous) mod[10] = [previous];
+}
+assert.deepEqual(correctGoldenEagle(brokenGolden), goldenRaw, 'Remove layout edges without altering any other fields');
+const badTier = structuredClone(goldenRaw);
+badTier.m.find(m => m[0] === 'f_4c_g_suit')[2] = 2;
+assert.throws(() => correctGoldenEagle(badTier), /tier changed/);
+assert.deepEqual(goldenRaw.m.find(m => m[0] === 'us_aim_120d')[10], ['us_aim_120c']);
+assert.deepEqual(goldenRaw.m.find(m => m[0] === 'us_aim_120c')[10], ['us_aim_9m']);
+console.log(JSON.stringify({ goldenEaglePrerequisites: true, actualArrows: 5, gSuitTier: 3 }));

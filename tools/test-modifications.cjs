@@ -4,6 +4,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const planner = require("../docs/modification-planner.js");
 require("./test-modification-requirements.cjs");
+require("./test-air-combat-planning.cjs");
+require("./test-prerequisite-audit.cjs");
 
 const root = path.resolve(__dirname, "..");
 const docsRoot = path.join(root, "docs", "database", "modifications");
@@ -160,7 +162,9 @@ assert.equal(j16.mods.length, 25);
 assert.deepEqual(j16.tierRequirements, { 1: 1, 2: 3, 3: 3 });
 assert.deepEqual(j16.totals, { rp: 315000, sl: 482000 });
 const pl12a = planner.plan(j16, ["cn_pl12a"], []);
-assert.deepEqual({ rp: pl12a.rp, sl: pl12a.sl }, { rp: 110000, sl: 168000 });
+assert.deepEqual({ rp: pl12a.rp, sl: pl12a.sl }, { rp: 101000, sl: 154000 });
+assert.deepEqual(pl12a.dependencyIds, ['cn_pl12', 'cn_pl8b']);
+assert(!pl12a.includedIds.includes('new_compressor_jet'), 'Boosters have no compressor prerequisite');
 
 for (const file of ["modification-planner.js", "modifications.js", "modifications.css"]) {
   assert.deepEqual(fs.readFileSync(path.join(root, "public", file)), fs.readFileSync(path.join(root, "docs", file)), `${file}: copies differ`);
