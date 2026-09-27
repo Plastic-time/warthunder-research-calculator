@@ -3,6 +3,7 @@ const crypto = require("node:crypto");
 const fs = require("node:fs");
 const path = require("node:path");
 const planner = require("../docs/modification-planner.js");
+require("./test-modification-requirements.cjs");
 
 const root = path.resolve(__dirname, "..");
 const docsRoot = path.join(root, "docs", "database", "modifications");

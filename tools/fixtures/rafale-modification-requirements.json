@@ -1,0 +1,205 @@
+{
+  "gameVersion": "2.59.0.17",
+  "datamineCommit": "510a793c2bdb01c51475118199c7b66b72935ff1",
+  "sourcePath": "char.vromfs.bin_u/config/wpcost.blkx",
+  "vehicles": {
+    "rafale_c_f3": {
+      "new_compressor_jet": {
+        "tier": 1
+      },
+      "f_4c_CdMin_Fuse": {
+        "tier": 1
+      },
+      "hydravlic_power": {
+        "tier": 2,
+        "prevModification": "new_compressor_jet"
+      },
+      "structure_str": {
+        "tier": 2
+      },
+      "cd_98": {
+        "tier": 3,
+        "prevModification": "hydravlic_power"
+      },
+      "new_cover": {
+        "tier": 3
+      },
+      "hp_105_jet": {
+        "tier": 4,
+        "prevModification": "cd_98"
+      },
+      "MAW_system_heli_false_thermal_targets_large": {
+        "tier": 1
+      },
+      "f_4c_g_suit": {
+        "tier": 2,
+        "prevModification": "MAW_system_heli_false_thermal_targets_large"
+      },
+      "air_extinguisher": {
+        "tier": 4,
+        "prevModification": "f_4c_g_suit"
+      },
+      "fr_damocles_pod": {
+        "tier": 1
+      },
+      "asm": {
+        "tier": 1
+      },
+      "aden_new_gun": {
+        "tier": 2
+      },
+      "us_gbu_laser": {
+        "tier": 2,
+        "reqModification": "fr_damocles_pod"
+      },
+      "fr_aasm_250_sbu_38": {
+        "tier": 2,
+        "prevModification": "asm"
+      },
+      "fr_mica_em": {
+        "tier": 3,
+        "prevModification": "aden_new_gun"
+      },
+      "fr_aasm_250_sbu_54": {
+        "tier": 3,
+        "reqModification": "us_gbu_laser"
+      },
+      "fr_aasm_250_sbu_64": {
+        "tier": 3,
+        "prevModification": "fr_aasm_250_sbu_38"
+      }
+    },
+    "rafale_m_f3r": {
+      "new_compressor_jet": {
+        "tier": 1
+      },
+      "f_4c_CdMin_Fuse": {
+        "tier": 1
+      },
+      "hydravlic_power": {
+        "tier": 2,
+        "prevModification": "new_compressor_jet"
+      },
+      "structure_str": {
+        "tier": 2
+      },
+      "cd_98": {
+        "tier": 3,
+        "prevModification": "hydravlic_power"
+      },
+      "new_cover": {
+        "tier": 3
+      },
+      "hp_105_jet": {
+        "tier": 4,
+        "prevModification": "cd_98"
+      },
+      "MAW_system_heli_false_thermal_targets_large": {
+        "tier": 1
+      },
+      "f_4c_g_suit": {
+        "tier": 2,
+        "prevModification": "MAW_system_heli_false_thermal_targets_large"
+      },
+      "air_extinguisher": {
+        "tier": 4,
+        "prevModification": "f_4c_g_suit"
+      },
+      "fr_talios_pod": {
+        "tier": 1
+      },
+      "asm": {
+        "tier": 1
+      },
+      "aden_new_gun": {
+        "tier": 2
+      },
+      "us_gbu_laser": {
+        "tier": 2,
+        "reqModification": "fr_talios_pod"
+      },
+      "fr_aasm_250_sbu_38": {
+        "tier": 2,
+        "prevModification": "asm"
+      },
+      "fr_mica_em": {
+        "tier": 3,
+        "prevModification": "aden_new_gun"
+      },
+      "fr_aasm_250_sbu_54": {
+        "tier": 3,
+        "reqModification": "us_gbu_laser"
+      },
+      "fr_aasm_250_sbu_64": {
+        "tier": 3,
+        "prevModification": "fr_aasm_250_sbu_38"
+      }
+    },
+    "rafale_eg_greece": {
+      "new_compressor_jet": {
+        "tier": 1
+      },
+      "f_4c_CdMin_Fuse": {
+        "tier": 1
+      },
+      "hydravlic_power": {
+        "tier": 2,
+        "prevModification": "new_compressor_jet"
+      },
+      "structure_str": {
+        "tier": 2
+      },
+      "cd_98": {
+        "tier": 3,
+        "prevModification": "hydravlic_power"
+      },
+      "new_cover": {
+        "tier": 3
+      },
+      "hp_105_jet": {
+        "tier": 4,
+        "prevModification": "cd_98"
+      },
+      "MAW_system_heli_false_thermal_targets_large": {
+        "tier": 1
+      },
+      "f_4c_g_suit": {
+        "tier": 2,
+        "prevModification": "MAW_system_heli_false_thermal_targets_large"
+      },
+      "air_extinguisher": {
+        "tier": 4,
+        "prevModification": "f_4c_g_suit"
+      },
+      "fr_damocles_pod": {
+        "tier": 1
+      },
+      "asm": {
+        "tier": 1
+      },
+      "aden_new_gun": {
+        "tier": 2
+      },
+      "us_gbu_laser": {
+        "tier": 2,
+        "reqModification": "fr_damocles_pod"
+      },
+      "fr_aasm_250_sbu_38": {
+        "tier": 2,
+        "prevModification": "asm"
+      },
+      "fr_mica_em": {
+        "tier": 3,
+        "prevModification": "aden_new_gun"
+      },
+      "fr_aasm_250_sbu_54": {
+        "tier": 3,
+        "reqModification": "us_gbu_laser"
+      },
+      "fr_aasm_250_sbu_64": {
+        "tier": 3,
+        "prevModification": "fr_aasm_250_sbu_38"
+      }
+    }
+  }
+}

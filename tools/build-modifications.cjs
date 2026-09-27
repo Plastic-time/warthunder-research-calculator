@@ -6,6 +6,8 @@ const { modificationIcon, ammunitionArt } = require("./modification-icons.cjs");
 const { correctKa29, correction: ka29Correction } = require("./update-ka29-modifications.cjs");
 const { correctDo217, isRemovedDo217Modification, correction: do217Correction } = require("./update-do217-modifications.cjs");
 const { correctCa27, vehicleIds: ca27Ids, correction: ca27Correction } = require("./update-ca27-modifications.cjs");
+const { gameRequirements } = require("./modification-requirements.cjs");
+const { correctRafale, vehicleIds: rafaleIds, correction: rafaleCorrection } = require("./update-rafale-modifications.cjs");
 
 const root = path.resolve(__dirname, "..");
 const datamineRoot = path.join(root, "logs", "datamine");
@@ -87,13 +89,6 @@ function collectTreeUnits(tree, chunk, output) {
   }
 }
 
-function normalizeRequirements(value) {
-  if (!value) return [];
-  if (Array.isArray(value)) return value.flatMap(normalizeRequirements);
-  if (typeof value === "string") return [value];
-  return [];
-}
-
 function numberNearIcon(popover, alt) {
   const node = popover(`img[alt="${alt}"]`).first().parent();
   const match = node.text().replaceAll(",", "").match(/\d+/);
@@ -148,7 +143,6 @@ function parseVehicle(vehicleId, meta, modificationNames, report) {
             rp: numberNearIcon(popover, "RP"),
             sl: numberNearIcon(popover, "SL"),
             ge: numberNearIcon(popover, "GE"),
-            wikiRequired: button.attr("data-mod-req-id") || "",
           });
           maxColumn = Math.max(maxColumn, logicalColumn + buttonIndex + 1);
         });
@@ -160,7 +154,6 @@ function parseVehicle(vehicleId, meta, modificationNames, report) {
   }
 
   const visibleIds = new Set(wikiMods.map(mod => mod.id));
-  const visibleIdsByLower = new Map([...visibleIds].map(id => [id.toLowerCase(), id]));
   const gameMods = economy?.modifications || {};
   const gameModKeys = new Map(Object.keys(gameMods).map(key => [key.toLowerCase(), key]));
   const mods = [];
@@ -179,12 +172,7 @@ function parseVehicle(vehicleId, meta, modificationNames, report) {
     if (Number.isFinite(gameMod?.value) && gameMod.value !== wikiMod.sl) {
       report.costMismatches.push(`${vehicleId}:${wikiMod.id}:SL:${wikiMod.sl}->${gameMod.value}`);
     }
-    const requirements = [
-      ...normalizeRequirements(gameMod?.reqModification),
-      ...normalizeRequirements(gameMod?.prevModification),
-      wikiMod.wikiRequired,
-    ].map(id => visibleIdsByLower.get(String(id).toLowerCase()))
-      .filter(Boolean);
+    const requirements = gameRequirements(gameMod, visibleIds);
     const rp = Number.isFinite(gameMod?.reqExp) ? gameMod.reqExp : wikiMod.rp;
     const sl = Number.isFinite(gameMod?.value) ? gameMod.value : wikiMod.sl;
     mods.push([
@@ -236,7 +224,7 @@ let modificationCount = 0;
 let processed = 0;
 for (const [vehicleId, meta] of units) {
   const parsed = parseVehicle(vehicleId, meta, modificationNames, report);
-  const vehicle = parsed ? correctCa27(correctDo217(correctKa29(parsed))) : null;
+  const vehicle = parsed ? correctRafale(correctCa27(correctDo217(correctKa29(parsed)))) : null;
   processed += 1;
   if (processed % 250 === 0) process.stdout.write(`\rParsed ${processed}/${units.size}`);
   if (!vehicle) continue;
@@ -268,7 +256,7 @@ for (const outputRoot of ["docs", "public"]) {
 
 const catalog = {
   schema: 2,
-  corrections: { ka_29: ka29Correction, do_217j_2: do217Correction, ...Object.fromEntries(ca27Ids.map(id => [id, ca27Correction])) },
+  corrections: { ka_29: ka29Correction, do_217j_2: do217Correction, ...Object.fromEntries(ca27Ids.map(id => [id, ca27Correction])), ...Object.fromEntries(rafaleIds.map(id => [id, rafaleCorrection])) },
   version: "2.59.0.17",
   generatedAt: new Date().toISOString(),
   sources: {
