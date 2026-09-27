@@ -34,7 +34,7 @@ async function main() {
       for (const id of vehicleIds) {
         await page.evaluate(async id => {
           localStorage.setItem('wt-research:modifications:' + id, JSON.stringify({
-            selected: [], researched: ['hydravlic_power', 'structure_str', 'f_4c_g_suit'],
+            selected: [], researched: [],
           }));
           await ModificationWorkbench.open(id);
         }, id);
@@ -43,12 +43,26 @@ async function main() {
         await mica.scrollIntoViewIfNeeded();
         await mica.click();
         await page.locator('[data-modification-action="calculate"]').click();
+        const stock = await page.evaluate(() => testModResult);
+        assert.equal(stock.tierCounts[1], 1, 'A stock vehicle must satisfy tier I');
+        assert.equal(stock.tierCounts[2], 3, 'A stock vehicle must satisfy tier II');
+        assert.equal(stock.rp, 63000);
+        assert.equal(stock.sl, 95000);
+        assert.deepEqual(stock.dependencyIds, []);
+        assert(!stock.includedIds.includes('aden_new_gun'));
+        await page.screenshot({ path: path.join(output, mode + '-' + width + '-' + id + '-stock.png') });
+        for (const researched of ['new_compressor_jet', 'hydravlic_power', 'structure_str', 'f_4c_g_suit']) {
+          const tile = page.locator('[data-mod-id="' + researched + '"]');
+          await tile.scrollIntoViewIfNeeded();
+          await tile.click({ button: 'right' });
+        }
+        await page.locator('[data-modification-action="calculate"]').click();
         assert.deepEqual(await page.evaluate(() => testModResult.includedIds), ['fr_mica_em']);
         assert.deepEqual(await page.evaluate(() => testModResult.dependencyIds), []);
         assert.equal(await page.locator('#modificationRp').innerText(), '15,000');
         assert.equal(await page.locator('#modificationSl').innerText(), '23,000');
         assert.equal(await page.locator('.modification-link').count(), 2);
-        await page.screenshot({ path: path.join(output, mode + '-' + width + '-' + id + '.png') });
+        await page.screenshot({ path: path.join(output, mode + '-' + width + '-' + id + '-researched.png') });
         await page.locator('[data-modification-action="clear"]').click();
         const bomb = page.locator('[data-mod-id="fr_aasm_250_sbu_54"]');
         await bomb.scrollIntoViewIfNeeded();
@@ -60,7 +74,7 @@ async function main() {
         await page.locator('[data-modification-close]').click();
       }
       assert.deepEqual(errors, []);
-      console.log(JSON.stringify({ mode, width, variants: vehicleIds.length, micaWithoutCannon: true, realArrows: 2, laserPrerequisites: true, passed: true }));
+      console.log(JSON.stringify({ mode, width, variants: vehicleIds.length, stockRp: 63000, stockSl: 95000, stockTierI: 1, stockTierII: 3, micaWithoutCannon: true, realArrows: 2, laserPrerequisites: true, passed: true }));
       await page.close();
     }
   } finally {
