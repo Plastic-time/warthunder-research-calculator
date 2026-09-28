@@ -26,6 +26,8 @@ jobs:
       - run: node tools/test-planner.cjs
       - run: node --test tools/test-research-progress.cjs
       - run: node tools/test-modifications.cjs
+      - run: node tools/test-f4u7-modifications.cjs
+      - run: node tools/test-prerequisite-audit.cjs
       - run: node --test tools/test-modification-icons.cjs
       - run: node tools/test-ui-entrypoints.cjs
       - run: node tools/test-tree-scroll.cjs

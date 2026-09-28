@@ -53,7 +53,7 @@
 
 手机版的使用指南和导出功能位于顶部“更多”菜单，搜索和筛选有各自的入口。使用指南内的“更新日志”可查看每次改动。
 
-网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.17 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.17/WarThunderResearchCalculator-v1.0.17-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js。下载包不会自动获得之后的网页更新。
+网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.18 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.18/WarThunderResearchCalculator-v1.0.18-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js。下载包不会自动获得之后的网页更新。
 
 已投入 RP 不等于已拥有或已研发。即使进度填满，也仍需单独设置完成状态；进度只影响剩余研发点，不扣减购买所需的银狮。
 
@@ -65,6 +65,7 @@
 
 - **固定快照**：整体载具费用基准为游戏 **2.59.0.17**，不是与游戏实时同步。游戏配置是后续费用和前置核对的主要依据，Wiki 用于补充名称、图片和布局；现有导入流程仍有历史数据来源，不能视为全量纯游戏配置。
 - **局部修正单独记录**：Ka-29、Do 217 J-2 保留已确认修正；v1.0.11 按 **2.59.0.34** 配置将两架 CA-27 的 GLBC mk.3 调整为 **9,000 RP / 14,000 SL**，不代表整体快照升级。
+- **最新修正**：v1.0.18 按 **2.59.0.38** 更新 F4U-7 配件费用、机炮翻新层级和解锁数量；全配件合计 **47,800 RP / 86,900 SL**，其他载具不变。
 - **未知不是免费**：缺失费用显示“未提供”，不当作 0。等级解锁数量还使用项目独立规则表，规划结果需结合游戏核对。
 - **计划留在浏览器**：选择、规划和已投入 RP 保存在当前浏览器，不上传、不跨设备同步；清除浏览器站点数据会删除这些记录。图片、Wiki 和网页版在线人数需要联网；在线人数是浏览器估计值，统计异常不影响计算。
 
@@ -76,7 +77,7 @@
 - [在线人数统计规则](doc/online-counter.md)
 - [配件图标来源](doc/ammunition-artwork.md)
 - [载具快照清单](docs/database/manifest.json) · [配件核对记录](tools/modifications-audit.json)
-- [v1.0.17 更新说明](doc/release-v1.0.17.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.18 更新说明](doc/release-v1.0.18.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 

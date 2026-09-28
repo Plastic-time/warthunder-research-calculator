@@ -53,7 +53,7 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 
 On mobile, open More at the top to find the guide and export controls. Search and filters have separate buttons. Open the guide's Changelog tab to see past updates.
 
-Open the web app to start. No game account is required. On Windows, download the [v1.0.17 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.17/WarThunderResearchCalculator-v1.0.17-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed. Downloaded packages do not automatically receive later web updates.
+Open the web app to start. No game account is required. On Windows, download the [v1.0.18 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.18/WarThunderResearchCalculator-v1.0.18-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed. Downloaded packages do not automatically receive later web updates.
 
 RP progress does not mark a vehicle as owned or an upgrade as researched. Set those states separately, even at full progress. Silver Lion costs stay unchanged.
 
@@ -65,6 +65,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 
 - **Versioned snapshots**: the overall vehicle-cost baseline is game version **2.59.0.17**. It is not a live game feed. Future cost and prerequisite checks use game configuration as the primary source. Wiki supplements names, images, and layout. Existing importers still use some legacy sources.
 - **Scoped corrections**: confirmed Ka-29 and Do 217 J-2 corrections remain in place. Version 1.0.11 uses configuration **2.59.0.34** to set GLBC mk.3 on both CA-27 variants to **9,000 RP / 14,000 SL**. This is not a full snapshot upgrade.
+- **Latest correction**: v1.0.18 updates F4U-7 modification costs, the cannon upgrade tier, and unlock counts using **2.59.0.38**. All modifications total **47,800 RP / 86,900 SL**. Other vehicles are unchanged.
 - **Unknown is not free**: missing prices are shown as unavailable, not zero. Rank-unlock counts still use a separate project rules table. Verify your route in the game.
 - **Plans stay in your browser**: selections, routes, and RP progress are saved locally. They are not uploaded or synced between devices. Clearing site data deletes these records. Images, Wiki pages, and the online counter need a connection. The counter estimates active browsers. An outage does not affect calculations.
 
@@ -76,7 +77,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - [Online counter rules](doc/online-counter.md) (Chinese)
 - [Modification artwork sources](doc/ammunition-artwork.md) (Chinese)
 - [Vehicle snapshot manifest](docs/database/manifest.json) · [Modification audit](tools/modifications-audit.json)
-- [v1.0.17 notes](doc/release-v1.0.17.md) (Chinese) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.18 notes](doc/release-v1.0.18.md) (Chinese) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 

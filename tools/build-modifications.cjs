@@ -9,6 +9,7 @@ const { correctCa27, vehicleIds: ca27Ids, correction: ca27Correction } = require
 const { gameRequirements } = require("./modification-requirements.cjs");
 const { correctRafale, vehicleIds: rafaleIds, correction: rafaleCorrection } = require("./update-rafale-modifications.cjs");
 const { correctGoldenEagle, vehicleIds: goldenEagleIds, correction: goldenEagleCorrection } = require("./update-golden-eagle-modifications.cjs");
+const { correctF4u7, correction: f4u7Correction } = require("./update-f4u7-modifications.cjs");
 
 const root = path.resolve(__dirname, "..");
 const datamineRoot = path.join(root, "logs", "datamine");
@@ -225,7 +226,7 @@ let modificationCount = 0;
 let processed = 0;
 for (const [vehicleId, meta] of units) {
   const parsed = parseVehicle(vehicleId, meta, modificationNames, report);
-  const vehicle = parsed ? correctGoldenEagle(correctRafale(correctCa27(correctDo217(correctKa29(parsed))))) : null;
+  const vehicle = parsed ? correctF4u7(correctGoldenEagle(correctRafale(correctCa27(correctDo217(correctKa29(parsed)))))) : null;
   processed += 1;
   if (processed % 250 === 0) process.stdout.write(`\rParsed ${processed}/${units.size}`);
   if (!vehicle) continue;
@@ -257,7 +258,7 @@ for (const outputRoot of ["docs", "public"]) {
 
 const catalog = {
   schema: 2,
-  corrections: { ka_29: ka29Correction, do_217j_2: do217Correction, ...Object.fromEntries(ca27Ids.map(id => [id, ca27Correction])), ...Object.fromEntries(rafaleIds.map(id => [id, rafaleCorrection])), ...Object.fromEntries(goldenEagleIds.map(id => [id, goldenEagleCorrection])) },
+  corrections: { 'f4u-7': f4u7Correction, ka_29: ka29Correction, do_217j_2: do217Correction, ...Object.fromEntries(ca27Ids.map(id => [id, ca27Correction])), ...Object.fromEntries(rafaleIds.map(id => [id, rafaleCorrection])), ...Object.fromEntries(goldenEagleIds.map(id => [id, goldenEagleCorrection])) },
   version: "2.59.0.17",
   generatedAt: new Date().toISOString(),
   sources: {

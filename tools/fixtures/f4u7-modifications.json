@@ -1,0 +1,306 @@
+{
+  "gameVersion": "2.59.0.38",
+  "datamineCommit": "359efba49b035374b225ee6327e889b2a46aaa6b",
+  "sourcePath": "char.vromfs.bin_u/config/wpcost.blkx",
+  "vehicleId": "f4u-7",
+  "tierRequirements": [
+    1,
+    3,
+    3
+  ],
+  "mods": {
+    "CdMin_Fuse": {
+      "tier": 1,
+      "reqExp": 1900,
+      "value": 3500,
+      "openCostGold": 210
+    },
+    "new_radiator": {
+      "tier": 1,
+      "reqExp": 1900,
+      "value": 3500,
+      "openCostGold": 210
+    },
+    "structure_str": {
+      "tier": 2,
+      "reqExp": 1800,
+      "value": 3300,
+      "openCostGold": 200,
+      "prevModification": "CdMin_Fuse"
+    },
+    "new_compressor": {
+      "tier": 2,
+      "reqExp": 1800,
+      "value": 3300,
+      "openCostGold": 200,
+      "prevModification": "new_radiator"
+    },
+    "cd_98": {
+      "tier": 3,
+      "reqExp": 2000,
+      "value": 3600,
+      "openCostGold": 220,
+      "prevModification": "structure_str"
+    },
+    "hp_105": {
+      "tier": 3,
+      "reqExp": 2000,
+      "value": 3600,
+      "openCostGold": 220,
+      "prevModification": "new_compressor"
+    },
+    "new_cover": {
+      "tier": 4,
+      "reqExp": 3100,
+      "value": 5600,
+      "openCostGold": 340,
+      "prevModification": "cd_98"
+    },
+    "new_engine_injection": {
+      "tier": 4,
+      "reqExp": 3100,
+      "value": 5600,
+      "openCostGold": 340,
+      "prevModification": "hp_105"
+    },
+    "g_suit": {
+      "tier": 4,
+      "reqExp": 3100,
+      "value": 5600,
+      "openCostGold": 340
+    },
+    "anm3_belt_pack": {
+      "tier": 1,
+      "reqExp": 1900,
+      "value": 3500,
+      "openCostGold": 210
+    },
+    "fr_100_gp_standart": {
+      "tier": 1,
+      "reqExp": 1900,
+      "value": 3500,
+      "openCostGold": 210
+    },
+    "frc_mk2": {
+      "tier": 1,
+      "reqExp": 1900,
+      "value": 3500,
+      "openCostGold": 210
+    },
+    "fsbc_mk5": {
+      "tier": 2,
+      "reqExp": 1800,
+      "value": 3300,
+      "openCostGold": 200,
+      "reqModification": "fr_100_gp_standart"
+    },
+    "flbc_mk2": {
+      "tier": 2,
+      "reqExp": 1800,
+      "value": 3300,
+      "openCostGold": 200
+    },
+    "fr_matra_t_10": {
+      "tier": 2,
+      "reqExp": 1800,
+      "value": 3300,
+      "openCostGold": 200,
+      "reqModification": "frc_mk2"
+    },
+    "anm3_new_gun": {
+      "tier": 2,
+      "reqExp": 1800,
+      "value": 3300,
+      "openCostGold": 200,
+      "reqModification": "anm3_belt_pack"
+    },
+    "fmbc_mk1": {
+      "tier": 3,
+      "reqExp": 2000,
+      "value": 3600,
+      "openCostGold": 220,
+      "reqModification": "fsbc_mk5"
+    },
+    "an_mk1": {
+      "tier": 3,
+      "reqExp": 2000,
+      "value": 3600,
+      "openCostGold": 220,
+      "reqModification": "flbc_mk2"
+    },
+    "fr_matra_t_10_150": {
+      "tier": 3,
+      "reqExp": 2000,
+      "value": 3600,
+      "openCostGold": 220,
+      "reqModification": "fr_matra_t_10"
+    },
+    "frc_mk3": {
+      "tier": 3,
+      "reqExp": 2000,
+      "value": 3600,
+      "openCostGold": 220,
+      "reqModification": "fr_matra_t_10_150",
+      "prevModification": "anm3_new_gun"
+    },
+    "btd_lbc": {
+      "tier": 4,
+      "reqExp": 3100,
+      "value": 5600,
+      "openCostGold": 340,
+      "reqModification": "an_mk1"
+    },
+    "fr_matra_sneb": {
+      "tier": 4,
+      "reqExp": 3100,
+      "value": 5600,
+      "openCostGold": 340,
+      "reqModification": "fr_matra_t_10_150"
+    }
+  },
+  "previous": {
+    "tierRequirements": [
+      1,
+      2,
+      4
+    ],
+    "totals": [
+      47400,
+      86200
+    ],
+    "mods": {
+      "CdMin_Fuse": [
+        1,
+        1900,
+        3500,
+        210
+      ],
+      "new_radiator": [
+        1,
+        1900,
+        3500,
+        210
+      ],
+      "structure_str": [
+        2,
+        2100,
+        3800,
+        230
+      ],
+      "new_compressor": [
+        2,
+        2100,
+        3800,
+        230
+      ],
+      "cd_98": [
+        3,
+        1700,
+        3100,
+        185
+      ],
+      "hp_105": [
+        3,
+        1700,
+        3100,
+        185
+      ],
+      "new_cover": [
+        4,
+        3100,
+        5600,
+        340
+      ],
+      "new_engine_injection": [
+        4,
+        3100,
+        5600,
+        340
+      ],
+      "g_suit": [
+        4,
+        3100,
+        5600,
+        340
+      ],
+      "anm3_belt_pack": [
+        1,
+        1900,
+        3500,
+        210
+      ],
+      "fr_100_gp_standart": [
+        1,
+        1900,
+        3500,
+        210
+      ],
+      "frc_mk2": [
+        1,
+        1900,
+        3500,
+        210
+      ],
+      "fsbc_mk5": [
+        2,
+        2100,
+        3800,
+        230
+      ],
+      "flbc_mk2": [
+        2,
+        2100,
+        3800,
+        230
+      ],
+      "fr_matra_t_10": [
+        2,
+        2100,
+        3800,
+        230
+      ],
+      "anm3_new_gun": [
+        3,
+        1700,
+        3100,
+        185
+      ],
+      "fmbc_mk1": [
+        3,
+        1700,
+        3100,
+        185
+      ],
+      "an_mk1": [
+        3,
+        1700,
+        3100,
+        185
+      ],
+      "fr_matra_t_10_150": [
+        3,
+        1700,
+        3100,
+        185
+      ],
+      "frc_mk3": [
+        3,
+        1700,
+        3100,
+        185
+      ],
+      "btd_lbc": [
+        4,
+        3100,
+        5600,
+        340
+      ],
+      "fr_matra_sneb": [
+        4,
+        3100,
+        5600,
+        340
+      ]
+    }
+  }
+}

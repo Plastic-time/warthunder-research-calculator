@@ -13,7 +13,20 @@ const vehicles = new Map();
 let vehicleCount = 0, modCount = 0, genuineEdges = 0, plannedTargets = 0;
 for (const [key, meta] of Object.entries(catalog.chunks)) {
   const chunk = JSON.parse(fs.readFileSync(path.join(root, 'public', meta.path)));
-  assert.deepEqual(projections(chunk), proof.chunks[key], key + ': pinned prerequisite or other-field proof differs');
+  // Compare the original audit against its snapshot, before the reviewed F4U-7 cost update.
+  const audited = structuredClone(chunk);
+  if (audited.v['f4u-7']) {
+    const previous = require('./fixtures/f4u7-modifications.json').previous;
+    const v = audited.v['f4u-7'];
+    v.r = previous.tierRequirements;
+    v.t = previous.totals;
+    for (const m of v.m) {
+      const saved = previous.mods[m[0]];
+      [m[2], m[7], m[8], m[9]] = saved;
+    }
+    assert.deepEqual(chunk.v['f4u-7'], require('./update-f4u7-modifications.cjs').correctF4u7(chunk.v['f4u-7']));
+  }
+  assert.deepEqual(projections(audited), proof.chunks[key], key + ': pinned prerequisite or other-field proof differs');
   for (const v of Object.values(chunk.v)) {
     vehicles.set(v.i, v);
     checkGraph(v);

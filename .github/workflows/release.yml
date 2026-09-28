@@ -46,6 +46,10 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Research progress regression failed" }
           node tools/test-modifications.cjs
           if ($LASTEXITCODE -ne 0) { throw "Modification regression failed" }
+          node tools/test-f4u7-modifications.cjs
+          if ($LASTEXITCODE -ne 0) { throw "F4U-7 regression failed" }
+          node tools/test-prerequisite-audit.cjs
+          if ($LASTEXITCODE -ne 0) { throw "Prerequisite audit regression failed" }
           node tools/test-ui-entrypoints.cjs
           if ($LASTEXITCODE -ne 0) { throw "UI entrypoint regression failed" }
           node tools/test-tree-scroll.cjs
