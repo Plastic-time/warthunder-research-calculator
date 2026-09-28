@@ -1,6 +1,6 @@
-# v1.0.18 F4U-7 配件数据更新
+# v1.0.19 F4U-7 配件数据更新
 
-此标签的安装包构建被旧快照校验拦截，未发布正式 Release。请使用 [v1.0.19](release-v1.0.19.md)。以下为原定更新内容。
+包含 v1.0.18 的数据调整，并修复发布校验对单项价格的固定假设。v1.0.18 未发布安装包，旧标签保留。
 
 - 按游戏配置 2.59.0.38 更新法国 F4U-7，共 12 项配件费用发生变化。
 - 20 毫米机炮翻新由第三层移至第二层，费用为 1,800 RP / 3,300 SL。
@@ -13,9 +13,11 @@
 
 ## 下载
 
-Windows 用户下载 `WarThunderResearchCalculator-v1.0.18-portable.zip`。退出旧版，解压后运行 `WarThunderResearchCalculator.exe`，无需另装 Node.js。不带 `portable` 的 ZIP 为源码包。
+Windows 用户下载 `WarThunderResearchCalculator-v1.0.19-portable.zip`。退出旧版，解压后运行 `WarThunderResearchCalculator.exe`，无需另装 Node.js。不带 `portable` 的 ZIP 为源码包。
 
 ## English
+
+This release includes the v1.0.18 data changes and fixes the release validation. No v1.0.18 package was published.
 
 - Updated 12 F4U-7 modification costs using game configuration 2.59.0.38.
 - New 20 mm cannons moved to tier II and cost 1,800 RP / 3,300 SL.

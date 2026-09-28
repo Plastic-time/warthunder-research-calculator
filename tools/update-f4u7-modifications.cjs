@@ -8,7 +8,7 @@ const correction = {
   datamineCommit: source.datamineCommit,
   sourcePath: source.sourcePath,
   scope: 'F4U-7 modification costs, cannon tier and tier unlock counts only; membership and real prerequisites unchanged',
-  provenance: 'doc/release-v1.0.18.md',
+  provenance: 'doc/release-v1.0.19.md',
 };
 function correctF4u7(vehicle) {
   if (vehicle.i !== source.vehicleId) return vehicle;

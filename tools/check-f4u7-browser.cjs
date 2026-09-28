@@ -26,7 +26,7 @@ async function main() {
       page.on('pageerror', e => errors.push(e.message));
       await page.goto(url, { waitUntil: 'domcontentloaded' });
       assert.equal(await page.locator('[data-game-version]').innerText(), '2.59.0.38');
-      assert((await page.locator('#usageGuideChangelog').textContent()).includes('v1.0.18'));
+      assert((await page.locator('#usageGuideChangelog').textContent()).includes('v1.0.19'));
       await page.waitForFunction(() => ModificationWorkbench.hasVehicle('f4u-7'));
       await page.evaluate(async () => {
         const plan = ModificationPlanner.plan;

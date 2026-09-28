@@ -14,14 +14,27 @@ assert.equal(correction.fullSnapshotUpgrade, false);
 assert.notEqual(correction.gameVersion, version.gameVersion);
 assert.equal(catalog.version, version.gameVersion);
 assert.equal(catalog.sources.datamineCommit, version.gameDataCommit);
-for (const id of correction.vehicleIds) {
-  const recorded = catalog.corrections[id];
-  assert.equal(recorded.gameVersion, correction.gameVersion);
-  assert.equal(recorded.datamineCommit, correction.gameDataCommit);
-  assert.equal(recorded.modificationId, correction.modificationId);
-  assert.equal(recorded.sl, correction.silverLions);
+for (const reviewed of [...(version.previousCorrections || []), correction]) {
+  assert.equal(reviewed.fullSnapshotUpgrade, false);
+  for (const id of reviewed.vehicleIds) {
+    const recorded = catalog.corrections[id];
+    assert.equal(recorded.gameVersion, reviewed.gameVersion);
+    assert.equal(recorded.datamineCommit, reviewed.gameDataCommit);
+    const meta = catalog.chunks[catalog.vehicles[id]];
+    const vehicle = read('public/' + meta.path).v[id];
+    if (reviewed.scope === 'modification-purchase-cost') {
+      assert.equal(recorded.modificationId, reviewed.modificationId);
+      assert.equal(recorded.sl, reviewed.silverLions);
+      assert.equal(vehicle.m.find(m => m[0] === reviewed.modificationId)[8], reviewed.silverLions);
+    } else {
+      assert.equal(reviewed.scope, 'modification-costs-tiers-and-unlock-counts');
+      assert.deepEqual(vehicle.t, [reviewed.researchPoints, reviewed.silverLions]);
+      assert.deepEqual(vehicle.t, vehicle.m.reduce((sum, m) => [sum[0] + m[7], sum[1] + m[8]], [0, 0]));
+      assert.equal(recorded.provenance, reviewed.provenance);
+    }
+  }
+  assert(fs.readFileSync(path.join(root, reviewed.provenance), 'utf8').includes(reviewed.gameDataCommit));
 }
-assert(fs.readFileSync(path.join(root, correction.provenance), 'utf8').includes(correction.gameDataCommit));
 const units = new Map();
 for (const entry of manifest.files) {
   const desktop = fs.readFileSync(path.join(root, entry.path));
@@ -54,8 +67,9 @@ for (const folder of ['public', 'docs']) {
   assert.equal($('.game-version [data-i18n="基础"]').length, 0);
   assert.equal($('.game-version [data-i18n="局部修正"]').length, 0);
   assert.equal($('[data-game-correction-scope]').length, 1);
-  assert($('[data-game-correction-scope]').text().includes('CA-27'));
-  assert($('[data-game-correction-scope]').text().includes('不代表全量数据升级'));
+  assert($('[data-game-correction-scope]').text().includes('F4U-7'));
+  assert($('[data-game-correction-scope]').text().includes(correction.gameVersion));
+  assert($('[data-game-correction-scope]').text().includes('不代表全量升级'));
 }
 assert.equal(require('../dict/unlock_quantity').get_unlock_quantity('israel', 'aviation', 'VIII'), 3);
 console.log(JSON.stringify({ trees: manifest.files.length, units: units.size, gameVersion: version.gameVersion,
