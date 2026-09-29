@@ -18,6 +18,24 @@
 .header-icon-button .nav-icon { width: 21px; height: 21px; }
 .header-icon-button .creator-avatar { width: 30px; height: 30px; }
 .header-icon-button.has-value { color: #e7cf8d; background: #d3bd8714; }
+.header-icon-button:disabled { opacity: .45; cursor: default; }
+#selectTreeButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: auto; min-width: 72px; height: var(--tree-option-height); flex: 0 0 auto; padding: 0 7px; font-size: 12px; font-weight: 500; line-height: 20px; white-space: nowrap; color: #e7ece8; background: transparent; }
+#selectTreeButton .select-tree-box { display: grid; place-items: center; width: var(--tree-check-size); height: var(--tree-check-size); flex: 0 0 var(--tree-check-size); box-sizing: border-box; border: 2px solid currentColor; border-radius: 5px; }
+#selectTreeButton .nav-icon { width: calc(var(--tree-check-size) - 6px); height: calc(var(--tree-check-size) - 6px); visibility: hidden; }
+#selectTreeButton.has-value .nav-icon { visibility: visible; }
+#selectTreeButton.has-value { color: #e7cf8d; opacity: 1; }
+#selectTreeButton.is-partial .select-tree-box::after { content: ""; width: 10px; height: 2px; background: currentColor; grid-area: 1 / 1; }
+#selectTreeButton .select-tree-box .nav-icon { grid-area: 1 / 1; }
+#selectTreeButton:hover:not(:disabled) { background: #ffffff0a; }
+.tree-selection-options { --tree-check-size: 17px; --tree-option-height: 38px; display: flex; align-items: center; gap: 12px; min-width: 0; }
+.tree-filters > .tree-selection-options { flex: 0 0 334px; }
+.tree-selection-options .planner-option { flex: 1; min-width: 0; min-height: var(--tree-option-height); gap: 8px; }
+.tree-selection-options .planner-option input { width: var(--tree-check-size); height: var(--tree-check-size); min-height: var(--tree-check-size); flex: 0 0 var(--tree-check-size); margin: 0; }
+.tree-selection-options input[type="checkbox"], #selectTreeButton { box-shadow: none; }
+.tree-selection-options input[type="checkbox"]:focus { outline: none; }
+.tree-selection-options input[type="checkbox"]:focus-visible { outline: 2px solid #d3bd87; outline-offset: 3px; }
+.tree-selection-options .planner-option span, #selectTreeButton .select-tree-label { min-width: 0; font-size: 12px; font-weight: 500; line-height: 20px; overflow-wrap: anywhere; }
+.mobile-sheet-body .tree-selection-options { --tree-check-size: 20px; --tree-option-height: 44px; }
 .mobile-header-sheet { position: fixed; inset: auto 0 0; width: 100%; max-width: 560px; max-height: calc(100dvh - 20px); margin: auto auto 0; padding: 0 0 env(safe-area-inset-bottom, 0px); border: 1px solid #59615c; border-bottom: 0; border-radius: 16px 16px 0 0; background: #242a28; color: #e7ece8; box-shadow: 0 -12px 44px #0005; }
 .mobile-header-sheet::backdrop { background: #08100bb3; backdrop-filter: blur(5px); }
 .mobile-sheet-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 12px 8px 20px; border-bottom: 1px solid #414a44; }
@@ -75,4 +93,6 @@
   .mobile-tree-tools #statusText { display: block; color: #a6b4ac; }
   .mobile-tree-tools #statusText, .mobile-tree-tools .online-count { font-size: 10px; line-height: 1.5; }
   .mobile-tree-actions { display: flex; flex: 0 0 auto; gap: 0; order: 2; }
+  .mobile-tree-tools .header-metadata { flex-wrap: wrap; gap: 0 8px; }
+  .mobile-tree-tools .online-count { white-space: normal; }
 }

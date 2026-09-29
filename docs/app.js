@@ -597,6 +597,64 @@ function discardBulkOwnedUndo() {
   if (bulkOwnedNotice) bulkOwnedNotice.hidden = true;
 }
 
+function getTreeResearchUnits() {
+  return state.units.filter(unit => {
+    const info = window.RosterAudit?.info(state.country, state.type, unit.data_unit_id);
+    return unit.section === "researchable" && !isSquadronUnit(unit)
+      && !["prem", "premium", "squad", "event", "gift"].includes(cleanText(unit.class_name).toLowerCase())
+      && info?.category === "standard" && !info.hidden;
+  });
+}
+
+let treeSelectionLoading = true;
+function treeRosterAvailable() {
+  return state.units.length > 0 && state.units.every(unit => window.RosterAudit?.info(state.country, state.type, unit.data_unit_id));
+}
+function treeSelectionCandidates() {
+  if (!treeRosterAvailable()) return [];
+  return getTreeResearchUnits().filter(unit => !state.owned.has(unit.data_unit_id) && !state.initialUnlocked.has(unit.data_unit_id));
+}
+
+function refreshTreeSelectionButton() {
+  const button = document.getElementById("selectTreeButton");
+  if (!button) return;
+  const candidates = treeSelectionCandidates();
+  const complete = candidates.length > 0 && candidates.every(unit => state.planned.has(unit.data_unit_id) || state.waypoints.has(unit.data_unit_id));
+  button.disabled = treeSelectionLoading || els.planButton.disabled || !candidates.length;
+  button.classList.toggle("has-value", complete);
+  const partial = !complete && candidates.some(unit => state.planned.has(unit.data_unit_id) || state.waypoints.has(unit.data_unit_id));
+  button.classList.toggle("is-partial", partial);
+  button.setAttribute("aria-checked", complete ? "true" : partial ? "mixed" : "false");
+  button.dataset.label = complete ? "取消全选当前科技树" : "全选当前科技树";
+  button.title = tr(button.dataset.label);
+  button.setAttribute("aria-label", button.title);
+}
+
+function selectCurrentTree() {
+  if (treeSelectionLoading || els.planButton.disabled) return;
+  const candidates = treeSelectionCandidates();
+  if (!candidates.length) return;
+  const complete = candidates.every(unit => state.planned.has(unit.data_unit_id) || state.waypoints.has(unit.data_unit_id));
+  discardBulkOwnedUndo();
+  closeUnitContextMenu();
+  for (const unit of candidates) {
+    const id = unit.data_unit_id;
+    if (complete) {
+      state.planned.delete(id);
+      state.waypoints.delete(id);
+    } else if (!state.waypoints.has(id)) state.planned.add(id);
+    if (state.planResult?.removedAutoRoles) delete state.planResult.removedAutoRoles[id];
+  }
+  if (complete && state.planResult) {
+    const removed = new Set(candidates.map(unit => unit.data_unit_id));
+    state.planResult.selectedIds = state.planResult.selectedIds.filter(id => !removed.has(id));
+    state.planResult.fillerIds = state.planResult.fillerIds.filter(id => !removed.has(id));
+  }
+  invalidateExactPlan();
+  saveState();
+  calculatePlan();
+}
+
 function renderBulkOwnedNotice() {
   if (!bulkOwnedNotice) return;
   bulkOwnedNotice.hidden = !bulkOwnedUndo;
@@ -795,10 +853,12 @@ function runExactPlan() {
 function setPlanButtonsDisabled(disabled) {
   els.planButton.disabled = disabled;
   els.planButton.querySelector("[data-plan-button-label]").textContent = tr(disabled ? "规划中" : "精确规划");
+  refreshTreeSelectionButton();
 }
 
 
 function renderSummary() {
+  refreshTreeSelectionButton();
   const plannedUnits = [...state.planned].map((id) => state.unitMap.get(id)).filter(Boolean).sort(compareUnitsByProgression);
   const rawRp = state.missing.reduce((sum, unit) => sum + (remainingUnitRp(unit) || 0), 0);
   const totalSp = state.missing.reduce((sum, unit) => sum + parseNumber(unit.sp), 0);
@@ -852,6 +912,10 @@ function getRouteKind(unit) {
 }
 
 function buildRouteExportPayload() {
+  const fullTree = getTreeResearchUnits();
+  const treeUnavailable = !treeRosterAvailable();
+  const treeUnknownRp = fullTree.filter(unit => unit.rp == null).length;
+  const treeUnknownSl = fullTree.filter(unit => unit.sp == null).length;
   const hasUnknownRp = state.missing.some((unit) => unit.rp == null);
   const hasUnknownSl = state.missing.some((unit) => unit.sp == null);
   const totalRp = state.missing.reduce((sum, unit) => sum + (remainingUnitRp(unit) || 0), 0);
@@ -860,13 +924,21 @@ function buildRouteExportPayload() {
   const stamp = date.toISOString().slice(0, 10);
 
   return {
+    treeUnavailable,
+    treeCount: treeUnavailable ? null : fullTree.length,
+    treeRp: treeUnavailable ? tr("未提供") : formatNumber(fullTree.reduce((sum, unit) => sum + parseNumber(unit.rp), 0)),
+    treeSl: treeUnavailable ? tr("未提供") : formatNumber(fullTree.reduce((sum, unit) => sum + parseNumber(unit.sp), 0)),
+    treeRpLabel: treeUnknownRp ? tr("已知 RP") : "RP",
+    treeSlLabel: treeUnknownSl ? tr("已知 SL") : "SL",
+    treeUnknownCount: fullTree.filter(unit => unit.rp == null || unit.sp == null).length,
+    pendingUnknownCount: state.missing.filter(unit => unit.rp == null || unit.sp == null).length,
     country: translateCountry(state.country),
     type: translateType(state.type),
     generatedAt: new Intl.DateTimeFormat(window.WTI18n.tag, { dateStyle: "medium", timeStyle: "short" }).format(date),
     targetCount: state.planned.size,
     pendingCount: state.missing.length,
-    rpLabel: hasUnknownRp ? tr("已知 RP") : tr("总 RP"),
-    slLabel: hasUnknownSl ? tr("已知 SL") : tr("总 SL"),
+    rpLabel: hasUnknownRp ? tr("已知 RP") : "RP",
+    slLabel: hasUnknownSl ? tr("已知 SL") : "SL",
     totalRp: formatNumber(totalRp),
     totalSl: formatNumber(totalSl),
     filename: `war-thunder-route-${state.country}-${state.type}-${stamp}.png`,
@@ -1288,6 +1360,8 @@ async function loadMeta() {
 
 let treeRequestId = 0;
 async function loadTree() {
+  treeSelectionLoading = true;
+  refreshTreeSelectionButton();
   closeUnitContextMenu();
   const requestId = ++treeRequestId;
   state.country = els.countrySelect.value;
@@ -1319,7 +1393,11 @@ async function loadTree() {
     renderSummary();
     renderTree();
   } finally {
-    if (requestId === treeRequestId) window.TreeNavigation?.sync(false);
+    if (requestId === treeRequestId) {
+      window.TreeNavigation?.sync(false);
+      treeSelectionLoading = false;
+      refreshTreeSelectionButton();
+    }
   }
 }
 
@@ -1371,6 +1449,7 @@ async function refreshCurrentTree() {
 }
 
 function wireEvents() {
+  document.addEventListener("wt-select-tree", selectCurrentTree);
   setupBulkOwned();
   window.VehicleLongPress?.configure({ open: openUnitContextMenu, close: closeUnitContextMenu });
   els.countrySelect.addEventListener("change", loadTree);

@@ -121,6 +121,8 @@
     for (const button of buttons) {
       button.title = t(button.dataset.label);
       button.setAttribute("aria-label", button.title);
+      const caption = button.querySelector(".select-tree-label");
+      if (caption) caption.textContent = t("全选");
     }
     for (const { dialog } of sheets) window.WTI18n.translate(dialog);
   }
@@ -154,11 +156,26 @@
         closeSheets();
       }
     });
+    const selectTree = iconButton("全选当前科技树", "check");
+    selectTree.id = "selectTreeButton";
+    selectTree.setAttribute("role", "checkbox");
+    selectTree.setAttribute("aria-checked", "false");
+    const checkbox = node("span", "select-tree-box");
+    checkbox.setAttribute("aria-hidden", "true");
+    checkbox.append(selectTree.firstElementChild);
+    const caption = node("span", "select-tree-label");
+    selectTree.replaceChildren(checkbox, caption);
+    selectTree.disabled = true;
+    selectTree.addEventListener("click", () => document.dispatchEvent(new Event("wt-select-tree")));
+    const selectionOptions = node("div", "tree-selection-options");
+    const avoidFolded = filters.querySelector(".planner-option");
+    avoidFolded.before(selectionOptions);
+    selectionOptions.append(avoidFolded, selectTree);
     const searchLabel = filters.querySelector(".search-label");
     // Move the original controls: their listeners, selections and planner state stay intact.
     relocate(searchLabel, searchBody);
-    for (const label of [...filters.children]) {
-      if (label !== searchLabel && !label.hidden) relocate(label, filterBody);
+    for (const field of [...filters.children]) {
+      if (field !== searchLabel && !field.hidden) relocate(field, filterBody);
     }
     relocate(metadata, compactTools);
     const actions = node("div", "mobile-tree-actions");

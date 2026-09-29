@@ -1467,6 +1467,17 @@ button:focus-visible {
   font-size: 16px;
 }
 .tree-screenshot-header strong { font-size: 20px; }
+.tree-screenshot-totals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; padding: 20px 24px; border-bottom: 1px solid #53605c; }
+.tree-screenshot-budget { min-width: 0; }
+.tree-screenshot-budget h2 { margin: 0 0 12px; font-size: 18px; line-height: 1.4; font-weight: 500; }
+.tree-screenshot-prices { display: flex; flex-wrap: wrap; gap: 12px 36px; }
+.tree-screenshot-cost { display: grid; gap: 4px; min-width: 0; }
+.tree-screenshot-cost span { font-size: 14px; line-height: 1.4; }
+.tree-screenshot-cost strong { font-size: 28px; line-height: 1.25; font-variant-numeric: tabular-nums; }
+.tree-screenshot-cost.rp { color: #a6ccbc; }
+.tree-screenshot-cost.sl { color: #e2c583; }
+.tree-screenshot-warning { margin: 10px 0 0; color: #e2c583; font-size: 14px; }
+.tree-screenshot-scope { margin: 0; padding: 10px 24px; color: #aebbb5; font-size: 14px; line-height: 1.5; }
 .tree-screenshot .tree-links { display: block !important; }
 .tree-screenshot .rank-rail { position: relative; left: auto; }
 .tree-screenshot * { animation: none !important; transition: none !important; }

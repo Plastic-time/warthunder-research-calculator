@@ -82,10 +82,46 @@
       header.className = "tree-screenshot-header";
       const title = document.createElement("strong");
       title.textContent = t("{country} · {type} 科技树", { country: payload.country, type: payload.type });
-      const budget = document.createElement("span");
-      budget.textContent = t("待研发 {count} 辆 · {rpLabel} {rp} · {slLabel} {sl}", { count: payload.pendingCount, rpLabel: payload.rpLabel, rp: payload.totalRp, slLabel: payload.slLabel, sl: payload.totalSl });
-      header.append(title, budget);
-      sheet.append(header, tree);
+      const meta = document.createElement("span");
+      meta.textContent = payload.generatedAt;
+      header.append(title, meta);
+      const totals = document.createElement("div");
+      totals.className = "tree-screenshot-totals";
+      const groups = [
+        { heading: "科技树总额", count: payload.treeCount, rp: payload.treeRp, sl: payload.treeSl, rpLabel: payload.treeRpLabel, slLabel: payload.treeSlLabel, unknown: payload.treeUnknownCount, unavailable: payload.treeUnavailable },
+        { heading: "当前选择还需", count: payload.pendingCount, rp: payload.totalRp, sl: payload.totalSl, rpLabel: payload.rpLabel, slLabel: payload.slLabel, unknown: payload.pendingUnknownCount },
+      ];
+      for (const group of groups) {
+        const section = document.createElement("section");
+        section.className = "tree-screenshot-budget";
+        const label = document.createElement("h2");
+        label.textContent = t(group.heading) + (group.count == null ? "" : " · " + t("{count} 个载具", { count: group.count }));
+        section.append(label);
+        const prices = document.createElement("div");
+        prices.className = "tree-screenshot-prices";
+        for (const [name, value, kind] of [[group.rpLabel, group.rp, "rp"], [group.slLabel, group.sl, "sl"]]) {
+          const cost = document.createElement("div");
+          cost.className = "tree-screenshot-cost " + kind;
+          const caption = document.createElement("span");
+          caption.textContent = name;
+          const number = document.createElement("strong");
+          number.textContent = value;
+          cost.append(caption, number);
+          prices.append(cost);
+        }
+        section.append(prices);
+        if (group.unknown || group.unavailable) {
+          const warning = document.createElement("p");
+          warning.className = "tree-screenshot-warning";
+          warning.textContent = group.unavailable ? t("载具收录对照暂不可用") : t("{count} 辆费用不完整，仅汇总已知数值", { count: group.unknown });
+          section.append(warning);
+        }
+        totals.append(section);
+      }
+      const scope = document.createElement("p");
+      scope.className = "tree-screenshot-scope";
+      scope.textContent = t("科技树总额含折叠载具，不含金币、联队及隐藏载具；当前选择按未拥有和剩余研发计算。");
+      sheet.append(header, totals, scope, tree, totals.cloneNode(true));
       host.append(sheet);
       document.body.append(host);
       // Draw immediately against the same unit state as the snapshot, including on mobile.
@@ -96,7 +132,7 @@
       // Re-render text and paths at 2x without increasing the existing mobile canvas limits.
       const scale = Math.min(2, 16000 / width, 16000 / height, Math.sqrt(32000000 / (width * height)));
       const canvas = await window.htmlToImage.toCanvas(sheet, {
-        width, height, pixelRatio: scale, backgroundColor: "#edf0ed",
+        width, height, pixelRatio: scale, backgroundColor: getComputedStyle(sheet).backgroundColor,
         skipAutoScale: true,
       });
       if (!canvas.width || !canvas.height) throw failure("科技树截图尺寸无效");

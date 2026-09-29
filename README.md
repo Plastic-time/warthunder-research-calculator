@@ -53,7 +53,9 @@
 
 手机版的使用指南和导出功能位于顶部“更多”菜单，搜索和筛选有各自的入口。使用指南内的“更新日志”可查看每次改动。
 
-网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.19 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.19/WarThunderResearchCalculator-v1.0.19-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js。下载包不会自动获得之后的网页更新。
+网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.20 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.20/WarThunderResearchCalculator-v1.0.20-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js。下载包不会自动获得之后的网页更新。
+
+“全选”可选择或取消当前国家、军种的常规研发载具，包含折叠载具，保留已拥有标记和研发进度。导出截图同时显示科技树原始总额与当前选择还需的 RP、银狮；缺失费用会单独提示。
 
 已投入 RP 不等于已拥有或已研发。即使进度填满，也仍需单独设置完成状态；进度只影响剩余研发点，不扣减购买所需的银狮。
 
@@ -77,7 +79,7 @@
 - [在线人数统计规则](doc/online-counter.md)
 - [配件图标来源](doc/ammunition-artwork.md)
 - [载具快照清单](docs/database/manifest.json) · [配件核对记录](tools/modifications-audit.json)
-- [v1.0.19 更新说明](doc/release-v1.0.19.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.20 更新说明](doc/release-v1.0.20.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 
