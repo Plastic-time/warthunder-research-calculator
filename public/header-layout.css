@@ -27,7 +27,7 @@
 #selectTreeButton.is-partial .select-tree-box::after { content: ""; width: 10px; height: 2px; background: currentColor; grid-area: 1 / 1; }
 #selectTreeButton .select-tree-box .nav-icon { grid-area: 1 / 1; }
 #selectTreeButton:hover:not(:disabled) { background: #ffffff0a; }
-.tree-selection-options { --tree-check-size: 17px; --tree-option-height: 38px; display: flex; align-items: center; gap: 12px; min-width: 0; }
+.tree-selection-options { --tree-check-size: 17px; --tree-option-height: 40px; display: flex; align-items: center; gap: 12px; min-width: 0; }
 .tree-filters > .tree-selection-options { flex: 0 0 334px; }
 .tree-selection-options .planner-option { flex: 1; min-width: 0; min-height: var(--tree-option-height); gap: 8px; }
 .tree-selection-options .planner-option input { width: var(--tree-check-size); height: var(--tree-check-size); min-height: var(--tree-check-size); flex: 0 0 var(--tree-check-size); margin: 0; }
@@ -35,7 +35,7 @@
 .tree-selection-options input[type="checkbox"]:focus { outline: none; }
 .tree-selection-options input[type="checkbox"]:focus-visible { outline: 2px solid #d3bd87; outline-offset: 3px; }
 .tree-selection-options .planner-option span, #selectTreeButton .select-tree-label { min-width: 0; font-size: 12px; font-weight: 500; line-height: 20px; overflow-wrap: anywhere; }
-.mobile-sheet-body .tree-selection-options { --tree-check-size: 20px; --tree-option-height: 44px; }
+.mobile-sheet-body .tree-selection-options { --tree-check-size: 20px; --tree-option-height: 48px; }
 .mobile-header-sheet { position: fixed; inset: auto 0 0; width: 100%; max-width: 560px; max-height: calc(100dvh - 20px); margin: auto auto 0; padding: 0 0 env(safe-area-inset-bottom, 0px); border: 1px solid #59615c; border-bottom: 0; border-radius: 16px 16px 0 0; background: #242a28; color: #e7ece8; box-shadow: 0 -12px 44px #0005; }
 .mobile-header-sheet::backdrop { background: #08100bb3; backdrop-filter: blur(5px); }
 .mobile-sheet-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 12px 8px 20px; border-bottom: 1px solid #414a44; }
@@ -55,6 +55,43 @@
 .mobile-sheet-body .creator-profile strong { font-size: 17px; }
 .mobile-sheet-body .creator-game-id { color: #aebdb3; }
 .mobile-search-done { order: 2; min-height: 44px; }
+
+/* Keep the filter controls together without squeezing the research tree itself. */
+.tree-filters > label, #mobileFilters .mobile-sheet-body > label, #mobileSearch .search-label { gap: 6px; min-width: 0; }
+.tree-filters > label > span, #mobileFilters .mobile-sheet-body > label > span, #mobileSearch .search-label > span { color: #b7c2bc; font-size: 11px; font-weight: 500; line-height: 16px; }
+.tree-filters input[type="search"], .tree-filters select, #mobileFilters select, #mobileSearch input[type="search"] { height: 40px; min-height: 40px; border: 1px solid #58645e; border-radius: 4px; background: #1b211e; color: #eef1ed; font-size: 13px; font-weight: 500; line-height: 20px; padding: 8px 12px; box-shadow: none; }
+.tree-filters input[type="search"]:focus, .tree-filters select:focus, #mobileFilters select:focus, #mobileSearch input[type="search"]:focus { border-color: #b6c8bc; outline: 2px solid #a6c2ae66; outline-offset: 1px; box-shadow: none; }
+.tree-filters .search-label, #mobileSearch .search-label { position: relative; }
+.tree-filters .search-label::after, #mobileSearch .search-label::after { content: ""; position: absolute; width: 16px; height: 16px; left: 12px; bottom: 12px; background: #b5c4ba; -webkit-mask: url("assets/navigation/search.svg") center / contain no-repeat; mask: url("assets/navigation/search.svg") center / contain no-repeat; pointer-events: none; }
+.tree-filters input[type="search"], #mobileSearch input[type="search"] { padding-left: 36px; }
+.tree-filters > .tree-selection-options { border-left: 1px solid #46534b; padding-left: 16px; }
+.tree-selection-options .planner-option { cursor: pointer; }
+.tree-selection-options .planner-option:hover { color: #f1f3ed; }
+.tree-selection-options #selectTreeButton { border-radius: 4px; --press-scale: .98; }
+.tree-selection-options #selectTreeButton.has-value { background: #edcc7a12; }
+#mobileFilters .mobile-sheet-heading, #mobileSearch .mobile-sheet-heading { position: sticky; top: 0; z-index: 1; background: #242a28; }
+#mobileFilters .mobile-sheet-body, #mobileSearch .mobile-sheet-body { gap: 16px; padding: 16px; }
+#mobileFilters .mobile-sheet-body > label { align-content: end; }
+#mobileFilters select, #mobileSearch input[type="search"] { height: 48px; min-height: 48px; padding-top: 12px; padding-bottom: 12px; }
+#mobileSearch .search-label::after { bottom: 16px; }
+#mobileFilters .tree-selection-options { grid-column: 1 / -1; border-top: 1px solid #46534b; padding-top: 12px; gap: 12px; }
+#mobileFilters .tree-selection-options .planner-option { padding-right: 12px; border-right: 1px solid #46534b; }
+#mobileSearch .mobile-search-done { min-height: 48px; border-radius: 4px; font-size: 13px; }
+@media (min-width: 480px) {
+  #mobileFilters .mobile-sheet-body { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; }
+}
+@media (min-width: 721px) {
+  .tree-filters { display: grid; grid-template-columns: minmax(200px, 1fr) 144px 220px minmax(304px, 340px); align-items: end; gap: 12px; padding: 10px 20px 12px; overflow: visible; background: #242b27; }
+  .tree-filters > .language-field { width: auto; }
+}
+@media (min-width: 721px) and (max-width: 1100px) {
+  .tree-filters { grid-template-columns: minmax(200px, 1fr) 144px 220px; row-gap: 10px; }
+  .tree-filters > .tree-selection-options { grid-column: 1 / -1; border-left: 0; border-top: 1px solid #46534b; padding: 8px 0 0; }
+  .tree-filters > .tree-selection-options .planner-option { flex: 0 1 auto; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tree-filters select, .tree-filters input[type="search"], #mobileFilters select, #mobileSearch input[type="search"], .tree-selection-options #selectTreeButton { transition: border-color 120ms ease, background-color 120ms ease, color 120ms ease; }
+}
 @media (min-width: 721px) {
   .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; }
   .topbar > .brand-block { grid-column: 1; grid-row: 1; }

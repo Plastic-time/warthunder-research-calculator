@@ -199,8 +199,9 @@ body,
 .tree-canvas .unit-meta > .roster-premium-special { color: #eed0bd; background: #65493d; padding: 1px 5px; }
 .tree-canvas .unit-meta > .roster-hidden { color: #e0c7ef; background: #534260; padding: 1px 5px; box-shadow: inset 0 0 0 1px #826593; }
 .tree-canvas .unit-meta > .roster-pending { color: #f0b7ad; background: #61433e; padding: 1px 5px; }
-.tree-canvas .unit-meta > .target-label,
 .tree-canvas .unit-meta > .unlocked { color: #c0e4c8; background: #3d5b48; padding: 1px 5px; }
+:is(.tree-canvas, .folder-popup) .unit-meta > .pill.target-label { display: inline-flex; align-items: center; gap: 4px; color: #20291f; background: #edcc7a; padding: 1px 5px; border-radius: 2px; font-weight: 750; line-height: 15px; }
+:is(.tree-canvas, .folder-popup) .unit-meta > .target-label::before { content: ""; flex: 0 0 12px; width: 12px; height: 12px; background: currentColor; -webkit-mask: url("assets/navigation/check.svg") center / contain no-repeat; mask: url("assets/navigation/check.svg") center / contain no-repeat; }
 .tree-canvas .unit-meta > .owned-label { color: #c1dfe9; background: #3d5964; padding: 1px 5px; }
 .tree-canvas .unit-meta > .waypoint-label { color: #f2dda9; background: #635635; padding: 1px 5px; }
 .tree-canvas .unit-meta > .filler-label { color: #decdf0; background: #544768; padding: 1px 5px; }
@@ -209,12 +210,13 @@ body,
 .tree-canvas .unit-tile-shell > .unit-tile.gift { --tile-surface: #303b3f; --tile-border: #6c929d; }
 .tree-canvas .unit-tile-shell > .unit-tile.unlocked,
 .tree-canvas .unit-tile-shell > .unit-tile.squadron { --tile-surface: #2c3932; --tile-border: #698575; }
-.tree-canvas .unit-tile-shell > .unit-tile.missing { box-shadow: inset 3px 0 #c5a56a; }
-.tree-canvas .unit-tile-shell > .unit-tile.planned { --tile-surface: #344b3e; --tile-border: #99c5a5; box-shadow: inset 3px 0 #a2cfaf; }
+.tree-canvas .unit-tile-shell > .unit-tile.missing { --tile-surface: #353c36; --tile-border: #b9a36d; box-shadow: inset 4px 0 #c5a56a; }
+.tree-canvas .unit-tile-shell > .unit-tile.planned { --tile-surface: #344b3e; --tile-border: #edcc7a; box-shadow: inset 4px 0 #edcc7a, inset 0 0 0 1px #edcc7a; }
 .tree-canvas .unit-tile-shell > .unit-tile.owned { --tile-surface: #324851; --tile-border: #8fb6c3; box-shadow: inset 3px 0 #8fb6c3; }
 .tree-canvas .unit-tile-shell > .unit-tile.waypoint { --tile-surface: #484332; --tile-border: #ccb374; box-shadow: inset 3px 0 #ccb374; }
 .tree-canvas .unit-tile-shell > .unit-tile.rank-filler { --tile-surface: #423b4c; --tile-border: #b7a0ce; box-shadow: inset 3px 0 #b7a0ce; }
 .tree-canvas .unit-tile-shell > .unit-tile:hover { transform: none; border-color: #c5d4ce; }
+.tree-canvas .unit-tile-shell > .unit-tile.planned:not(.owned):not(.waypoint):hover { border-color: #f4daa0; background: #3b5546; }
 .tree-canvas .unit-tile-shell > .unit-tile:focus-visible { outline: 2px solid #e5cf95; outline-offset: 2px; }
 .tree-canvas .unit-modifications-launch { top: 12px; right: 8px; width: 44px; height: 44px; border: 1px solid #697475; border-radius: 2px; background: #22292b; color: #ded2aa; box-shadow: none; gap: 3px; }
 .tree-canvas .unit-modifications-launch b { font-size: 10px; font-weight: 500; }
@@ -249,17 +251,17 @@ body,
 .folder-popup .unit-meta > .pill { color: #c0d9cc; }
 .folder-popup .unit-meta > .pill[class="pill"] { color: #c0d9cc; }
 .folder-popup .unit-meta > .sp { color: #e4cc95; }
-.folder-popup .unit-tile.planned,
 .folder-popup .unit-tile.auto-planned { background: #385340; border-color: #a3c4ac; }
 .folder-popup .unit-tile.owned { background: #344d56; border-color: #97b9c6; }
 .folder-popup .unit-tile.waypoint { background: #4e4933; border-color: #c9b47a; }
 .folder-popup .unit-tile.premium { background: #454032; border-color: #c6ac6e; }
 .folder-popup .unit-meta > .auto-planned-label,
-.folder-popup .unit-meta > .target-label,
 .folder-popup .unit-meta > .owned-label,
 .folder-popup .unit-meta > .waypoint-label { color: #d2eacb; }
 .folder-popup .unit-modifications-launch { color: #e0c890; }
 .folder-popup .unit-tile:hover { background: #445551; border-color: #bfcebf; }
+.folder-popup .unit-tile.planned:not(.owned):not(.waypoint) { background: #344b3e; border-color: #edcc7a; box-shadow: inset 4px 0 #edcc7a, inset 0 0 0 1px #edcc7a; }
+.folder-popup .unit-tile.planned:not(.owned):not(.waypoint):hover { border-color: #f4daa0; background: #3b5546; }
 .usage-guide-dialog,
 .usage-guide-header { background: #282e2f; color: #e5eae5; }
 .usage-guide-close { background: #384543; border-color: #6e8478; color: #e7eee7; }

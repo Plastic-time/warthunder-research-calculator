@@ -1,0 +1,27 @@
+[
+  {
+    "id": "us_m3_stuart",
+    "width": 168,
+    "height": 203,
+    "background": "rgb(52, 75, 62)",
+    "badge": { "background": "rgb(61, 91, 72)" }
+  },
+  {
+    "id": "us_m3a1_stuart",
+    "width": 168,
+    "height": 203,
+    "background": "rgb(50, 72, 81)"
+  },
+  {
+    "id": "us_m2_medium",
+    "width": 168,
+    "height": 182,
+    "background": "rgb(48, 54, 56)"
+  },
+  {
+    "id": "us_m22_locust",
+    "width": 168,
+    "height": 203,
+    "background": "rgb(66, 59, 76)"
+  }
+]
