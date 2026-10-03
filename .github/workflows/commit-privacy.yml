@@ -9,12 +9,14 @@ permissions:
   contents: read
 
 jobs:
-  verify:
+  commit-privacy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Reject personal commit emails
-        run: node tools/check-commit-privacy.cjs --all
+      - name: Test privacy safeguards
+        run: node --test tools/test-commit-privacy.cjs
+      - name: Reject personal commit emails in current history
+        run: node tools/check-commit-privacy.cjs --current

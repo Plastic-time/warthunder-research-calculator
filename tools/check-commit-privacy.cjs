@@ -17,18 +17,23 @@ try {
         .filter(Boolean).map(line => line.trim().split(/\s+/)[1])
         .filter(sha => !/^0+$/.test(sha));
     } else {
-      revisions = process.argv.includes('--all') ? ['--all'] : process.argv.slice(2);
+      revisions = process.argv.includes('--all') ? ['--all']
+        : process.argv.includes('--current') ? [git(['rev-parse', 'HEAD'])] : process.argv.slice(2);
     }
     let count = 0;
     for (const revision of revisions) {
       if (revision !== '--all' && !/^[a-f0-9]{40,64}$/i.test(revision)) throw new Error('Expected a commit hash.');
-      const rows = git(['log', '--format=%ae%x09%ce', revision]).split('\n').filter(Boolean);
+      const rows = git(['log', '--format=%ae%x09%ce%x09%cn', revision]).split('\n').filter(Boolean);
       for (const row of rows) {
-        if (!row.split('\t').every(privateEmail)) throw new Error('Privacy check failed: reachable history contains a non-noreply author or committer email. Values are not printed.');
+        const [authorEmail, committerEmail, committerName] = row.split('\t');
+        // This permits GitHub's public no-reply identity, not arbitrary bot addresses.
+        // Email metadata is a privacy check, not proof of commit authenticity.
+        const githubCommitter = committerName === 'GitHub' && committerEmail === 'noreply@github.com';
+        if (!privateEmail(authorEmail) || (!privateEmail(committerEmail) && !githubCommitter)) throw new Error('Privacy check failed: reachable history contains a non-noreply author or committer email. Values are not printed.');
         count++;
       }
     }
-    if (!revisions.length && !process.argv.includes('--pre-push')) throw new Error('Provide --all, --identity, --pre-push or a commit hash.');
+    if (!revisions.length && !process.argv.includes('--pre-push')) throw new Error('Provide --current, --all, --identity, --pre-push or a commit hash.');
     console.log(`Commit privacy check passed (${count} history entries checked).`);
   }
 } catch (error) {
