@@ -41,6 +41,19 @@ async function main() {
         control.dispatchEvent(new PointerEvent('pointerdown', {bubbles: true, pointerId: 31, isPrimary: true, button: 0, pointerType: 'mouse', ...point}));
         await new Promise(resolve => setTimeout(resolve, 110));
         const surfaces = [control, ...control.querySelectorAll('[data-press-feedback]')];
+        const instant = control.matches('.planner-option, #selectTreeButton, .branch-tab, .country-choice');
+        if (instant) {
+          assertNoMotion();
+          control.dispatchEvent(new PointerEvent('pointerup', {bubbles: true, pointerId: 31, isPrimary: true, button: 0, pointerType: 'mouse', ...point}));
+          await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+          assertNoMotion();
+          return;
+        }
+        function assertNoMotion() {
+          if (surfaces.some(el => el.hasAttribute('data-press-feedback'))) throw Error('Selection control should not spring: ' + selector);
+          const current = control.getBoundingClientRect();
+          if (current.width !== before[0] || current.height !== before[1]) throw Error('Selection control bounds changed');
+        }
         if (!surfaces.some(el => el.dataset.pressFeedback === 'pressed' && parseFloat(getComputedStyle(el).scale) < 1)) throw Error('No press: ' + selector + ' ' + JSON.stringify(surfaces.map(el => ({state:el.dataset.pressFeedback, scale:getComputedStyle(el).scale}))));
         if (control.matches('.unit-tile, .modification-tile')) {
           const r = control.getBoundingClientRect();
@@ -49,6 +62,8 @@ async function main() {
         control.dispatchEvent(new PointerEvent('pointerup', {bubbles: true, pointerId: 31, isPrimary: true, button: 0, pointerType: 'mouse', ...point}));
         await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
         if (!surfaces.some(el => el.dataset.pressFeedback === 'release')) throw Error('No spring: ' + selector);
+        const release = surfaces.flatMap(el => el.getAnimations()).filter(a => a.effect?.getKeyframes().some(k => k.scale));
+        if (!release.length || release.some(a => a.effect.getTiming().duration > 220)) throw Error('Feedback should finish within 220ms');
       }, selector);
       if (width < 720) {
         await page.locator('#guideButton').dispatchEvent('pointerdown', {pointerId: 31, isPrimary: true, button: 0});
@@ -62,6 +77,7 @@ async function main() {
         await page.locator('#mobileFiltersButton').click();
       }
       await probe('.planner-option');
+      await probe('#selectTreeButton');
       if (width < 720) await closeSheet('mobileFilters');
       for (const selector of ['.country-trigger', '.branch-tab',
         '.tree-canvas .unit-tile', '[data-wiki-id]', '[data-modifications-id]', '[data-folder-key]']) await probe(selector);
