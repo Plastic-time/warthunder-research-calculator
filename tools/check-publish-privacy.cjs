@@ -1,6 +1,12 @@
 const { execFileSync } = require("node:child_process");
 const staged = process.argv.includes("--staged");
 const git = args => execFileSync("git", args, { maxBuffer: 32 * 1024 * 1024 });
+// Exact, reviewed literals only; these exceptions never apply to other files.
+const reviewedEmails = new Map([
+  ["tools/check-commit-privacy.cjs", new Set(["noreply@github.com"])],
+  ["tools/test-commit-privacy.cjs", new Set(["noreply@github.com", "private@example.test", "noreply@github.com.example.test", "unreviewed@example.test"])],
+  ["tools/check-publish-privacy.cjs", new Set(["noreply@github.com", "private@example.test", "noreply@github.com.example.test", "unreviewed@example.test"])],
+]);
 const patterns = [
   ["private key", /-----BEGIN (?:RSA |EC |OPENSSH |DSA |ENCRYPTED )?PRIVATE KEY-----/],
   ["access token", /\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{24,}|AKIA[A-Z0-9]{16})\b/],
@@ -22,7 +28,7 @@ try {
       if (pattern.test(text)) { console.error(`Possible ${kind} in ${file}; value redacted`); failures++; }
     }
     const emails = text.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) || [];
-    if (emails.some(value => !/@users\.noreply\.github\.com$/i.test(value))) {
+    if (emails.some(value => !/@users\.noreply\.github\.com$/i.test(value) && !reviewedEmails.get(file)?.has(value))) {
       console.error(`Unreviewed email address in ${file}; value redacted`); failures++;
     }
   }

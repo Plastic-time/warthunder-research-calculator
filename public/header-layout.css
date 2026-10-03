@@ -12,10 +12,10 @@
 .header-actions-area { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; min-width: 0; }
 .header-actions-area > .game-version { text-align: right; font-size: 10px; line-height: 1.4; }
 .mobile-header-controls, .mobile-tree-tools { display: none; }
-.header-icon-button { display: inline-grid; place-items: center; padding: 0; width: 44px; height: 44px; flex: 0 0 44px; border: 0; border-radius: 8px; background: transparent; color: #c2cdc7; cursor: pointer; }
+.header-icon-button { display: inline-grid; place-items: center; padding: 0; width: 44px; height: 44px; flex: 0 0 44px; border: 0; border-radius: 4px; background: transparent; color: #c2cdc7; cursor: pointer; }
 .header-icon-button:hover { background: #ffffff0a; color: #fff; }
 .header-icon-button:focus-visible { outline: 2px solid #d3bd87; outline-offset: -2px; }
-.header-icon-button .nav-icon { width: 21px; height: 21px; }
+.header-icon-button .nav-icon { width: 20px; height: 20px; }
 .header-icon-button .creator-avatar { width: 30px; height: 30px; }
 .header-icon-button.has-value { color: #e7cf8d; background: #d3bd8714; }
 .header-icon-button:disabled { opacity: .45; cursor: default; }
@@ -46,7 +46,7 @@
 .mobile-sheet-body > .planner-option { display: flex; align-items: center; gap: 10px; min-height: 44px; width: auto; }
 .mobile-sheet-body .planner-option input { width: 20px; height: 20px; flex: 0 0 20px; }
 .mobile-sheet-body .topbar-actions { display: grid; grid-template-columns: 1fr; gap: 8px; width: 100%; padding: 0; overflow: visible; }
-.mobile-sheet-body .topbar-actions button { min-height: 46px; width: 100%; text-align: left; white-space: normal; }
+.mobile-sheet-body .topbar-actions button { min-height: 48px; width: 100%; text-align: left; white-space: normal; }
 .mobile-sheet-body .topbar-actions button[hidden] { display: none; }
 .mobile-sheet-body .creator-watermark { display: flex; align-items: center; gap: 14px; padding: 4px; color: #dce8de; text-decoration: none; }
 .mobile-sheet-body .creator-avatar { width: 52px; height: 52px; flex-basis: 52px; }
@@ -55,6 +55,37 @@
 .mobile-sheet-body .creator-profile strong { font-size: 17px; }
 .mobile-sheet-body .creator-game-id { color: #aebdb3; }
 .mobile-search-done { order: 2; min-height: 44px; }
+
+/* Match related controls without changing card bounds or the budget material. */
+.topbar-actions button { min-height: 40px; border-radius: 4px; line-height: 20px; }
+.country-trigger { min-height: 40px; border-radius: 4px; line-height: 20px; }
+.wiki-heading button, .wiki-heading a,
+.tree-canvas .unit-modifications-launch,
+.folder-popup .unit-modifications-launch { border-radius: 4px; }
+.tree-canvas .unit-modifications-launch,
+.folder-popup .unit-modifications-launch { min-width: 44px; min-height: 44px; }
+.unit-modifications-launch > span { display: grid; place-items: center; width: 18px; height: 18px; font-size: 18px; line-height: 18px; }
+.topbar-actions button, .country-trigger, .header-icon-button,
+.unit-wiki-launch, .unit-modifications-launch,
+.wiki-heading button, .wiki-heading a { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.topbar-actions button:focus:not(:focus-visible),
+.country-trigger:focus:not(:focus-visible),
+.unit-modifications-launch:focus:not(:focus-visible),
+.unit-wiki-launch:focus:not(:focus-visible) { outline: none; }
+.topbar-actions button:focus-visible,
+.unit-modifications-launch:focus-visible { outline: 2px solid #d3bd87; outline-offset: 2px; }
+.tree-selection-options .planner-option:active,
+#selectTreeButton:active:not(:disabled) { background: #d3bd870d; }
+@media (hover: hover) and (pointer: fine) {
+  .topbar-actions button:hover:not(:disabled),
+  .tree-canvas .unit-modifications-launch:hover,
+  .folder-popup .unit-modifications-launch:hover { background: #35413c; border-color: #95a79b; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .topbar-actions button, .country-trigger, .header-icon-button,
+  .unit-modifications-launch, .wiki-bookmark,
+  .wiki-heading button, .wiki-heading a { transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease; }
+}
 
 /* Keep the filter controls together without squeezing the research tree itself. */
 .tree-filters > label, #mobileFilters .mobile-sheet-body > label, #mobileSearch .search-label { gap: 6px; min-width: 0; }

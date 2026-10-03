@@ -1,6 +1,6 @@
 /* Independent scale leaves existing positioning and hover transforms untouched. */
 [data-press-feedback="pressed"] {
-  scale: var(--press-scale, 0.96);
+  scale: var(--press-scale, 0.98);
 }
 [data-press-feedback] {
   -webkit-tap-highlight-color: transparent;

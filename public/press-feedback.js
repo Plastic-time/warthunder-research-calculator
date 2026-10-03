@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const selector = 'button, [role="button"], a[href], summary, label.planner-option, input[type="button"], input[type="submit"], input[type="reset"]';
+  const instantSelector = 'label.planner-option, #selectTreeButton, [role="checkbox"], [role="switch"], [role="tab"], .branch-tab, .country-choice, .modification-edit-mode button, .usage-guide-tabs button';
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const animations = new Map();
   let active = null;
@@ -10,6 +11,7 @@
   function controlFor(target) {
     const control = target.closest?.(selector);
     if (!control || control.matches(':disabled, [aria-disabled="true"]') || control.closest('[inert]')) return null;
+    if (control.matches(instantSelector) || target.closest?.('input[type="checkbox"], input[type="radio"], select')) return null;
     if (!control.getClientRects().length || control.closest('[hidden], dialog:not([open])')) return null;
     if (control.matches('label') && control.querySelector('input:disabled')) return null;
     return control;
@@ -27,6 +29,12 @@
     animations.delete(surface);
     surface.removeAttribute('data-press-feedback');
     surface.style.removeProperty('--press-scale');
+  }
+
+  function motionFor(control) {
+    if (control.matches('.unit-tile, .modification-tile')) return {scale: 0.99, peak: 1, duration: 160};
+    if (control.matches('.floating-plan-button, [data-modification-action="calculate"]')) return {scale: 0.975, peak: 1.006, duration: 220};
+    return {scale: 0.98, peak: 1, duration: 160};
   }
 
   function clearPress() {
@@ -56,21 +64,21 @@
     if (!surfaces.length) return;
     surfaces.forEach(clean);
     const rect = control.getBoundingClientRect();
-    const large = control.matches('.unit-tile, .modification-tile');
-    const scale = large ? 0.985 : 0.96;
-    active = {control, surfaces, scale, large, rect, ...input};
+    const motion = motionFor(control);
+    const {scale} = motion;
+    active = {control, surfaces, motion, rect, ...input};
     for (const surface of surfaces) {
       surface.style.setProperty('--press-scale', String(scale));
       surface.setAttribute('data-press-feedback', 'pressed');
       if (surface.animate) {
-        const animation = surface.animate([{scale: '1'}, {scale: String(scale)}], {duration: 90, easing: 'ease-out'});
+        const animation = surface.animate([{scale: '1'}, {scale: String(scale)}], {duration: 70, easing: 'ease-out'});
         animations.set(surface, animation);
       }
     }
     disabledObserver.observe(control, {attributes: true, attributeFilter: ['disabled', 'aria-disabled']});
   }
 
-  function rebound(findControl, scale, large, event) {
+  function rebound(findControl, motion, event) {
     const version = epoch;
     requestAnimationFrame(() => {
       if (version !== epoch || reducedMotion.matches || (event?.type === 'pointerup' && event.defaultPrevented)) return;
@@ -80,12 +88,10 @@
         if (!surface.animate) continue;
         clean(surface);
         surface.setAttribute('data-press-feedback', 'release');
-        const animation = surface.animate([
-          {scale: String(scale), offset: 0},
-          {scale: large ? '1.008' : '1.025', offset: 0.48},
-          {scale: large ? '0.998' : '0.996', offset: 0.76},
-          {scale: '1', offset: 1},
-        ], {duration: 380, easing: 'cubic-bezier(.22,.72,.28,1)'});
+        const frames = [{scale: String(motion.scale), offset: 0}];
+        if (motion.peak > 1) frames.push({scale: String(motion.peak), offset: 0.65});
+        frames.push({scale: '1', offset: 1});
+        const animation = surface.animate(frames, {duration: motion.duration, easing: 'cubic-bezier(.2,.7,.3,1)'});
         animations.set(surface, animation);
         animation.onfinish = () => { if (animations.get(surface) === animation) clean(surface); };
       }
@@ -112,10 +118,10 @@
   }, {capture: true, passive: true});
   window.addEventListener('pointerup', event => {
     if (!active || event.pointerId !== active.pointerId) return;
-    const {control, scale, large, rect} = active;
+    const {control, motion, rect} = active;
     const find = resolver(control);
     clearPress();
-    if (event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom) rebound(find, scale, large, event);
+    if (event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom) rebound(find, motion, event);
   }, {capture: true, passive: true});
   window.addEventListener('pointercancel', () => {cancelledPointerAt = performance.now(); reset();}, {capture: true, passive: true});
   window.addEventListener('keydown', event => {
@@ -129,10 +135,9 @@
     if (event.detail !== 0 || !event.isTrusted || performance.now() - cancelledPointerAt < 500) return;
     const control = controlFor(event.target);
     if (!control) return;
-    const large = control.matches('.unit-tile, .modification-tile');
     const find = resolver(control);
     clearPress();
-    rebound(find, large ? 0.985 : 0.96, large);
+    rebound(find, motionFor(control));
   }, true);
   window.addEventListener('blur', reset);
   document.addEventListener('focusout', event => { if (active?.control === event.target) clearPress(); }, true);
