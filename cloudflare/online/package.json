@@ -12,7 +12,7 @@
   },
   "engines": { "node": ">=22.0.0" },
   "devDependencies": {
-    "miniflare": "5.20260921.0-alpha",
-    "wrangler": "4.136.1"
+    "miniflare": "5.20261001.0-alpha",
+    "wrangler": "4.146.0"
   }
 }
