@@ -862,14 +862,16 @@ button:focus-visible {
   contain: paint;
 }
 
-.tree-links path {
+.tree-links > path {
   fill: none;
-  stroke: #657f8a;
-  stroke-width: 12;
+  stroke: #667b7e;
+  stroke-width: 2;
   stroke-linecap: butt;
-  stroke-linejoin: miter;
-  shape-rendering: crispEdges;
+  stroke-linejoin: round;
+  shape-rendering: geometricPrecision;
 }
+
+.tree-canvas > .tree-links > path.is-route { stroke: #e0c17a; stroke-width: 3; }
 
 .rank-block {
   position: relative;

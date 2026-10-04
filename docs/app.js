@@ -1187,7 +1187,7 @@ function renderOrthogonalConnector(from, to, canvasBox) {
   if (fromAbove && folderToggle) start.y = Math.max(start.y, folderToggle.getBoundingClientRect().bottom - canvasBox.top);
   start.y += 4 * direction;
   // The main-tree shaft stops at the arrowhead base, leaving the tip clear of the card.
-  end.y -= (from.closest(".folder-popup") ? 5 : 15) * direction;
+  end.y -= (from.closest(".folder-popup") ? 5 : 12) * direction;
   const sameColumn = Math.abs(start.x - end.x) < 6;
   const gap = Math.abs(end.y - start.y);
   const minStub = 14;
@@ -1239,11 +1239,19 @@ function renderTreeConnections(exportCanvas = null) {
       const from = visibleTiles.get(sourceId) || (sourceGroup && visibleTiles.get(getGroupMainChildId(sourceGroup)));
       if (!from || !to || from === to) continue;
 
-      segments.push(`<path data-from="${escapeHtml(from.dataset.unitId)}" data-to="${escapeHtml(id)}" d="${renderOrthogonalConnector(from, to, canvasBox)}" marker-end="url(#${markerId})" />`);
+      // Read the rendered cards so an exported snapshot keeps its original emphasis.
+      // A folded proxy alone cannot prove that its hidden prerequisite is selected.
+      const route = canvas.classList.contains("tree-canvas") && from.dataset.unitId === sourceId
+        && from.matches(".planned, .waypoint, .missing, .owned, .unlocked")
+        && to.matches(".planned, .waypoint, .missing") && !to.matches(".owned, .unlocked");
+      segments.push(`<path class="${route ? "is-route" : ""}" data-from="${escapeHtml(from.dataset.unitId)}" data-to="${escapeHtml(id)}" d="${renderOrthogonalConnector(from, to, canvasBox)}" marker-end="url(#${markerId}${route ? "-route" : ""})" />`);
     }
   }
 
-  svg.innerHTML = `<defs><marker id="${markerId}" viewBox="0 0 10 20" refX="0" refY="10" markerWidth="10" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto"><polygon points="0,0 10,10 0,20" fill="#657f8a"/></marker></defs>` + segments.join("");
+  const marker = (suffix, color) => `<marker id="${markerId}${suffix}" viewBox="0 0 7 10" refX="0" refY="5" markerWidth="7" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><polygon points="0,0 7,5 0,10" fill="${color}"/></marker>`;
+  svg.innerHTML = `<defs>${marker("", "#667b7e")}${marker("-route", "#e0c17a")}</defs>` + segments.join("");
+  // Keep selected routes readable where existing paths cross.
+  svg.querySelectorAll(":scope > path.is-route").forEach(path => svg.append(path));
 }
 
 function scheduleTreeConnections() {

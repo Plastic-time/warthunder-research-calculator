@@ -38,15 +38,15 @@ async function checkTreeArrows(evaluate) {
     const exportSvg=clone.querySelector('.tree-links');
     const exportId=exportSvg.querySelector('marker').id;
     const exportValid=[...exportSvg.querySelectorAll(':scope > path')].every(p =>
-      p.getAttribute('marker-end') === 'url(#'+exportId+')');
+      p.getAttribute('marker-end') === 'url(#'+exportId+(p.classList.contains('is-route') ? '-route' : '')+')');
     host.remove();
     return {
       paths:paths.length,expected,
       lowRankEdges:lowRankEdges.length,lowRankPlanUnchanged,
       costsUnchanged:costsBefore === JSON.stringify([els.budgetCount.textContent, els.budgetRp.textContent, els.budgetSl.textContent]),
       visible:getComputedStyle(svg).display !== 'none',
-      markers:paths.every(p => p.getAttribute('marker-end') === 'url(#'+id+')' && !p.getAttribute('d').includes('NaN')),
-      width:paths.length ? getComputedStyle(paths[0]).strokeWidth : '',
+      markers:paths.every(p => p.getAttribute('marker-end') === 'url(#'+id+(p.classList.contains('is-route') ? '-route' : '')+')' && !p.getAttribute('d').includes('NaN')),
+      widths:paths.every(p => getComputedStyle(p).strokeWidth === (p.classList.contains('is-route') ? '3px' : '2px')),
       headAtBase:svg.querySelector('marker').getAttribute('refX') === '0',
       headLength:svg.querySelector('marker').getAttribute('markerWidth'),
       headWidth:svg.querySelector('marker').getAttribute('markerHeight'),
@@ -58,10 +58,10 @@ async function checkTreeArrows(evaluate) {
   })()`);
   assert(result.paths > 0 && result.paths === result.expected, 'Same prerequisite relations are drawn');
   assert(result.visible && result.markers && result.noDots && result.noRepeatedTitle && result.hasUnlock);
-  assert.equal(result.width,'12px');
+  assert(result.widths, 'Neutral and selected paths use the intended thin weights');
   assert(result.headAtBase);
-  assert.equal(result.headLength,'10');
-  assert.equal(result.headWidth,'20');
+  assert.equal(result.headLength,'7');
+  assert.equal(result.headWidth,'10');
   assert(result.exportValid && result.uniqueExportId && result.unchanged);
   assert(result.lowRankEdges > 0, 'Rank-I relationships must now be visible');
   assert(result.lowRankPlanUnchanged && result.costsUnchanged, 'Display arrows must not change planning exemptions or costs');
