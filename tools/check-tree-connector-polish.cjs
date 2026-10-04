@@ -52,7 +52,8 @@ async function main() {
       assert.deepEqual(await edges(), original, 'No relationship added or removed');
       if (!baseline) {
         assert.equal(await page.locator(pairSelector).getAttribute('class'), 'is-route');
-        assert.equal(await page.locator(pairSelector).evaluate(p => getComputedStyle(p).strokeWidth), '3px');
+        // Query and read in one browser task: scheduled redraws replace SVG nodes.
+        assert.equal(await page.evaluate(selector => getComputedStyle(document.querySelector(selector)).strokeWidth, pairSelector), '3px');
         await require('./check-tree-arrows.cjs').checkTreeArrows(expression => page.evaluate(expression));
         const stable = await page.evaluate(() => {
           const source = els.treeContainer.querySelector('.tree-canvas');
@@ -87,10 +88,17 @@ async function main() {
         assert(await page.locator('.tree-links > path').evaluateAll(paths => paths.every(p => !p.getAttribute('d').includes('NaN'))));
         await page.evaluate(() => { state.search = ''; renderTree(); renderTreeConnections(); });
         const folder = page.locator('[data-folder-key]').first();
+        await folder.scrollIntoViewIfNeeded();
+        // Let scroll listeners finish: scrolling intentionally dismisses the folder panel.
+        await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
         await folder.click();
         await page.waitForSelector('.folder-popup .tree-links > path', { state: 'attached' });
-        assert.equal(await page.locator('.folder-popup .tree-links > path').first().evaluate(p => getComputedStyle(p).strokeWidth), '3px');
-        assert.equal(await page.locator('.folder-popup .tree-links > path').first().evaluate(p => getComputedStyle(p).stroke), 'rgb(184, 51, 57)');
+        const folderStyle = await page.evaluate(() => {
+          const style = getComputedStyle(document.querySelector('.folder-popup .tree-links > path'));
+          return { width: style.strokeWidth, color: style.stroke };
+        });
+        assert.equal(folderStyle.width, '3px');
+        assert.equal(folderStyle.color, 'rgb(184, 51, 57)');
         await page.locator('.folder-popup-close').click();
         await page.evaluate(() => {
           state.planned = new Set(['us_m18_hellcat']);
