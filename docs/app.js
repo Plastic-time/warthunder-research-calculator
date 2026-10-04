@@ -1044,9 +1044,10 @@ function renderUnit(unit, inFolder = false) {
       <span>
         <span class="unit-title">${updateBadge}${escapeHtml(displayTitle(unit))}</span>
         <span class="unit-meta">
+          <span class="pill" data-unit-br>BR ${escapeHtml(unit.br || "-")}</span>
+          ${role ? `<span class="pill role">${escapeHtml(role)}</span>` : ""}
+          ${squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${formatCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${formatCost(unit.sp)}</span></span>`}
           ${window.RosterAudit?.badges(state.country, state.type, unit, displayTitle(unit)) || ""}
-          <span class="pill">BR ${escapeHtml(unit.br || "-")}</span>
-          ${squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp">RP ${formatCost(cardRp)}</span><span class="pill sp">SL ${formatCost(unit.sp)}</span>`}
           ${unitProgress(unit) && !state.owned.has(id) ? `<span class="pill unit-rp-progress" title="${tr("已投入 RP")}">${formatNumber(unitProgress(unit))} / ${formatCost(unit.rp)} RP</span>` : ""}
           ${unlocked ? `<span class="pill unlocked">${tr("初始载具")}</span>` : ""}
           ${state.planned.has(id) ? `<span class="pill target-label">${tr("目标")}</span>` : ""}
@@ -1054,7 +1055,6 @@ function renderUnit(unit, inFolder = false) {
           ${state.waypoints.has(id) ? `<span class="pill waypoint-label">${tr("途经点")}</span>` : ""}
           ${autoSelected ? `<span class="pill auto-planned-label">${tr("已选")} · ${tr(state.planResult.fillerIds.includes(id) ? "等级补足" : "必经路线")}</span>` : ""}
           ${state.planResult?.fillerIds.includes(id) ? `<span class="pill filler-label">${tr("等级补足")}</span>` : ""}
-          ${role ? `<span class="pill role">${escapeHtml(role)}</span>` : ""}
         </span>
       </span>
       ${isNew ? '<span class="unit-update-edge" aria-hidden="true"></span>' : ""}

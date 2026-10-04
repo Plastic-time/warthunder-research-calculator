@@ -53,7 +53,7 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 
 On mobile, open More at the top to find the guide and export controls. Search and filters have separate buttons. Open the guide's Changelog tab to see past updates.
 
-Open the web app to start. No game account is required. On Windows, download the [v1.0.21 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.21/WarThunderResearchCalculator-v1.0.21-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed. Downloaded packages do not automatically receive later web updates.
+Open the web app to start. No game account is required. On Windows, download the [v1.0.22 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.22/WarThunderResearchCalculator-v1.0.22-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed. Downloaded packages do not automatically receive later web updates.
 
 Select all toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
 
@@ -79,7 +79,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - [Online counter rules](doc/online-counter.md) (Chinese)
 - [Modification artwork sources](doc/ammunition-artwork.md) (Chinese)
 - [Vehicle snapshot manifest](docs/database/manifest.json) · [Modification audit](tools/modifications-audit.json)
-- [v1.0.21 notes](doc/release-v1.0.21.md) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.22 notes](doc/release-v1.0.22.md) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 
