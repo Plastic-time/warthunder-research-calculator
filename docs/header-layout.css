@@ -134,7 +134,7 @@
   .mobile-header-sheet[open] { animation: header-sheet-in 180ms ease-out; }
   @keyframes header-sheet-in { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 }
-@media (max-width: 720px) {
+@media (max-width: 720px), (max-width: 900px) and (max-height: 500px) and (pointer: coarse) {
   .header-creator { display: none; }
   .topbar.compact-header { display: grid; grid-template-columns: minmax(0, 1fr) 88px; align-items: start; column-gap: 8px; row-gap: 0; padding: 12px 12px 10px; }
   .compact-header .brand-block { display: contents; }
@@ -163,4 +163,32 @@
   .mobile-tree-actions { display: flex; flex: 0 0 auto; gap: 0; order: 2; }
   .mobile-tree-tools .header-metadata { flex-wrap: wrap; gap: 0 8px; }
   .mobile-tree-tools .online-count { white-space: normal; }
+
+  .app-shell { height: 100dvh; }
+  .app-shell .rank-block { grid-template-columns: 44px minmax(0, 1fr); }
+  .app-shell .rank-rail { padding: 8px 0; }
+  .app-shell .rank-owned-trigger { width: 44px; min-height: 44px; }
+  .app-shell .rank-name { font-size: 12px; line-height: 16px; }
+  .app-shell .tree-headings.rank-field { margin-left: 44px; }
+  .app-shell .rank-unlock-line { left: 44px; }
+  .app-shell .tree-container {
+    padding-bottom: calc(var(--mobile-budget-height, 88px) + 44px + env(safe-area-inset-bottom, 0px));
+    scroll-padding-bottom: calc(var(--mobile-budget-height, 88px) + 44px + env(safe-area-inset-bottom, 0px));
+    scroll-padding-left: 52px;
+  }
+  .floating-budget {
+    width: min(460px, calc(100% - 24px)); max-width: calc(100% - 24px);
+    grid-template-columns: minmax(0, 1fr) 104px; align-items: stretch;
+    gap: 8px; padding: 8px 10px; border-radius: 16px;
+  }
+  .floating-budget .budget-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: center; gap: 4px 10px; }
+  .floating-budget .budget-count { grid-column: 1 / -1; font-size: 11px; line-height: 16px; }
+  .floating-budget .budget-cost { display: grid; justify-content: stretch; align-content: start; gap: 0; min-width: 0; }
+  .floating-budget .budget-cost > span { font-size: 10px; line-height: 14px; }
+  .floating-budget .budget-cost strong { min-width: 0; font-size: 14px; line-height: 18px; white-space: normal; overflow-wrap: anywhere; }
+  .floating-budget .floating-planner { min-width: 0; padding-left: 8px; }
+  .floating-budget .floating-plan-button {
+    width: 100%; min-width: 0; max-width: none; height: 100%; min-height: 56px;
+    flex-direction: column; gap: 4px; padding: 6px; border-radius: 11px; font-size: 12px; line-height: 16px;
+  }
 }

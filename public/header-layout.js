@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const mobile = matchMedia("(max-width: 720px)");
+  const mobile = matchMedia("(max-width: 720px), (max-width: 900px) and (max-height: 500px) and (pointer: coarse)");
   const topbar = document.querySelector(".topbar");
   const toolbar = document.querySelector(".toolbar");
   const brand = document.querySelector(".brand-title");
@@ -26,6 +26,14 @@
   const buttons = [];
   const placements = [];
   let compactTools;
+  const budget = document.getElementById("floatingBudget");
+  const tree = document.getElementById("treeContainer");
+  // Translations and large totals can make the dock taller; keep the last row reachable.
+  if (budget && tree) {
+    new ResizeObserver(() => {
+      tree.style.setProperty("--mobile-budget-height", Math.ceil(budget.getBoundingClientRect().height) + "px");
+    }).observe(budget);
+  }
 
   function iconButton(label, name) {
     const button = node("button", "header-icon-button");
