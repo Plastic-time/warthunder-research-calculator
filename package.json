@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
@@ -9,7 +9,7 @@
     "package:release": "powershell -NoProfile -ExecutionPolicy Bypass -File ./tools/package-release.ps1",
     "build:modifications": "node ./tools/build-modifications.cjs",
     "test:modifications": "node ./tools/test-modifications.cjs",
-    "test:security": "node --test tools/test-server-security.cjs tools/test-update-security.cjs",
+    "test:security": "node --test tools/test-server-security.cjs tools/test-update-security.cjs tools/test-proxy-addr-security.cjs",
     "pull": "node ./src/4-fill_tree_details.js",
     "pull:usa-ground": "node ./src/4-fill_tree_details.js usa ground"
   },
