@@ -26,6 +26,12 @@ for (const reviewed of [...(version.previousCorrections || []), correction]) {
       assert.equal(recorded.modificationId, reviewed.modificationId);
       assert.equal(recorded.sl, reviewed.silverLions);
       assert.equal(vehicle.m.find(m => m[0] === reviewed.modificationId)[8], reviewed.silverLions);
+    } else if (reviewed.scope === 'reviewed-modification-update') {
+      const fixture = require('./fixtures/october-modifications.json');
+      assert.equal(reviewed.gameDataCommit, fixture.datamineCommit);
+      assert.deepEqual(vehicle, require('./update-october-modifications.cjs').correctOctober(fixture.vehicles[id].previous));
+      assert.deepEqual(vehicle.t, reviewed.vehicleTotals[id]);
+      assert.equal(recorded.provenance, reviewed.provenance);
     } else {
       assert.equal(reviewed.scope, 'modification-costs-tiers-and-unlock-counts');
       assert.deepEqual(vehicle.t, [reviewed.researchPoints, reviewed.silverLions]);
@@ -67,7 +73,7 @@ for (const folder of ['public', 'docs']) {
   assert.equal($('.game-version [data-i18n="基础"]').length, 0);
   assert.equal($('.game-version [data-i18n="局部修正"]').length, 0);
   assert.equal($('[data-game-correction-scope]').length, 1);
-  assert($('[data-game-correction-scope]').text().includes('F4U-7'));
+  for (const name of ['F-86E(M)', '米格-23M', '416 工程']) assert($('[data-game-correction-scope]').text().includes(name));
   assert($('[data-game-correction-scope]').text().includes(correction.gameVersion));
   assert($('[data-game-correction-scope]').text().includes('不代表全量升级'));
 }

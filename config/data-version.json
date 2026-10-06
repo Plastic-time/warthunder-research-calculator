@@ -9,6 +9,20 @@
   "wikiUnpricedVehicleCount": 156,
   "modificationsSnapshotChanged": false,
   "latestCorrection": {
+    "gameVersion": "2.59.0.50",
+    "gameDataCommit": "a5fef60f211c742c48183cf195dab8f603931196",
+    "scope": "reviewed-modification-update",
+    "vehicleIds": ["f_86em_greece", "mig_23m", "ussr_object_416"],
+    "vehicleTotals": {
+      "f_86em_greece": [145800, 226000],
+      "mig_23m": [197800, 311600],
+      "ussr_object_416": [88600, 147600]
+    },
+    "fullSnapshotUpgrade": false,
+    "provenance": "doc/release-v1.0.23.md"
+  },
+  "previousCorrections": [
+    {
     "gameVersion": "2.59.0.38",
     "gameDataCommit": "359efba49b035374b225ee6327e889b2a46aaa6b",
     "scope": "modification-costs-tiers-and-unlock-counts",
@@ -19,8 +33,7 @@
     "silverLions": 86900,
     "fullSnapshotUpgrade": false,
     "provenance": "doc/release-v1.0.19.md"
-  },
-  "previousCorrections": [
+    },
     {
       "gameVersion": "2.59.0.34",
       "gameDataCommit": "2e2b2e050d80802a64dc1e155d16e088cf2cf122",
