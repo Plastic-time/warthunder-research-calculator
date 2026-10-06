@@ -26,6 +26,12 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
     }
     assert.deepEqual(chunk.v['f4u-7'], require('./update-f4u7-modifications.cjs').correctF4u7(chunk.v['f4u-7']));
   }
+  // Validate reviewed updates, then compare the historical audit with its unchanged snapshot.
+  for (const [id, entry] of Object.entries(require('./fixtures/october-modifications.json').vehicles)) {
+    if (!audited.v[id]) continue;
+    assert.deepEqual(chunk.v[id], require('./update-october-modifications.cjs').correctOctober(entry.previous));
+    audited.v[id] = structuredClone(entry.previous);
+  }
   assert.deepEqual(projections(audited), proof.chunks[key], key + ': pinned prerequisite or other-field proof differs');
   for (const v of Object.values(chunk.v)) {
     vehicles.set(v.i, v);

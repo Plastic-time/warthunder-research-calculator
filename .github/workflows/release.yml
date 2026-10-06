@@ -86,7 +86,7 @@ jobs:
                 try { $content = $reader.ReadToEnd() } finally { $reader.Dispose() }
                 if ($content -cne (Get-Content -Raw -LiteralPath $file)) { throw "Stale $file in $zipPath" }
               }
-              foreach ($file in @("public/assets/creator-avatar.jpg", "public/assets/research-emblem.png", "public/assets/navigation/gift.svg", "public/assets/navigation/golden-eagles.svg")) {
+              foreach ($file in @("public/assets/creator-avatar.jpg", "public/assets/research-emblem.png", "public/assets/navigation/gift.svg", "public/assets/navigation/golden-eagles.svg", "public/database/modifications/catalog.json", "public/database/modifications/israel_aviation.json", "public/database/modifications/ussr_aviation.json", "public/database/modifications/ussr_ground.json")) {
                 $entry = $archive.GetEntry($file)
                 if (-not $entry) { $entry = $archive.Entries | Where-Object { $_.FullName.Replace('\', '/') -eq $file } }
                 if (-not $entry) { throw "Missing $file in $zipPath" }

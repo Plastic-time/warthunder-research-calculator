@@ -40,8 +40,9 @@ function updatePrerequisiteChunks({ vehicleIds, correctVehicle, correction }) {
       chunks.set(meta.path, JSON.parse(bytes));
     }
     const chunk = chunks.get(meta.path), before = chunk.v[id], after = correctVehicle(before);
-    for (let i = 0; i < before.m.length; i++) {
-      for (const req of before.m[i][10]) if (!after.m[i][10].includes(req)) removed.push(id + ':' + req + '->' + before.m[i][0]);
+    const afterById = new Map(after.m.map(m => [m[0], m]));
+    for (const mod of before.m) {
+      for (const req of mod[10]) if (!afterById.get(mod[0])?.[10].includes(req)) removed.push(id + ':' + req + '->' + mod[0]);
     }
     chunk.v[id] = after;
     catalog.corrections = { ...catalog.corrections, [id]: correction };
@@ -50,9 +51,11 @@ function updatePrerequisiteChunks({ vehicleIds, correctVehicle, correction }) {
     const content = JSON.stringify(chunk) + '\n';
     const meta = catalog.chunks[chunk.k];
     meta.bytes = Buffer.byteLength(content);
+    meta.modifications = Object.values(chunk.v).reduce((count, v) => count + v.m.length, 0);
     meta.sha256 = crypto.createHash('sha256').update(content).digest('hex');
     writes.set(file, content);
   }
+  catalog.stats.modifications = Object.values(catalog.chunks).reduce((count, c) => count + c.modifications, 0);
   writes.set(catalogPath, JSON.stringify(catalog) + '\n');
   for (const folder of ['docs', 'public']) for (const [file, content] of writes) fs.writeFileSync(path.join(root, folder, file), content);
   console.log(JSON.stringify({ vehicles: vehicleIds, removedEdges: removed.length, removed }));

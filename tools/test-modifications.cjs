@@ -6,6 +6,7 @@ const planner = require("../docs/modification-planner.js");
 require("./test-modification-requirements.cjs");
 require("./test-air-combat-planning.cjs");
 require("./test-prerequisite-audit.cjs");
+require("./test-october-modifications.cjs");
 
 const root = path.resolve(__dirname, "..");
 const docsRoot = path.join(root, "docs", "database", "modifications");
