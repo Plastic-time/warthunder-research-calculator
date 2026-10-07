@@ -14,5 +14,10 @@
   "devDependencies": {
     "miniflare": "5.20261001.0-alpha",
     "wrangler": "4.146.0"
+  },
+  "overrides": {
+    "miniflare": {
+      "sharp": "0.35.5"
+    }
   }
 }

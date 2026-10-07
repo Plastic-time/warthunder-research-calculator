@@ -59,6 +59,14 @@ For temporary diagnostics, enable logs only when necessary and do not add visito
 
 ## Local checks
 
+### Development dependency security
+
+The scoped npm override pins Miniflare's `sharp` dependency to 0.35.5 to address
+[GHSA-wq5f-xc86-pv6w](https://github.com/advisories/GHSA-wq5f-xc86-pv6w).
+Miniflare and Wrangler versions are unchanged. Remove the override only after
+the upstream dependency includes the fix and the checks below pass. This tooling
+dependency is not part of the deployed counter code or the Windows calculator package.
+
 Use Node.js 24 with npm, then run these commands from this directory:
 
 ```sh
