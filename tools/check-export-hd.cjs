@@ -74,9 +74,11 @@ async function main() {
         console.log(JSON.stringify({mode, country, ...d, ...checks}));
       }
       // Exercise the actual download button and inspect the lossless PNG dimensions.
-      const downloaded = page.waitForEvent('download');
-      await page.locator('#routeExportButton').click();
-      const download = await downloaded;
+      if (mobile) await page.locator('#mobileMoreButton').click();
+      const [download] = await Promise.all([
+        page.waitForEvent('download', { timeout: 120000 }),
+        page.locator('#routeExportButton').click(),
+      ]);
       const file = path.join(output, `${mode}-download.png`);
       await download.saveAs(file);
       const png = fs.readFileSync(file);
