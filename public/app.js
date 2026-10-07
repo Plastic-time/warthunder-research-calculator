@@ -973,8 +973,20 @@ function unitMatchesSearch(unit) {
   return haystack.includes(state.search.toLowerCase());
 }
 
+// Presentation only: read the existing plan without promoting automatic picks to targets.
+function getUnitCardStatus(id) {
+  if (state.owned.has(id)) return { kind: "owned", label: "已拥有", detail: "已拥有", css: "owned-label" };
+  if (state.planned.has(id)) return { kind: "target", label: "目标", detail: "目标", css: "target-label" };
+  if (state.waypoints.has(id)) return { kind: "waypoint", label: "途经", detail: "途经点", css: "waypoint-label" };
+  const selected = state.planResult?.selectedIds.includes(id) || state.missing.some(unit => unit.data_unit_id === id);
+  if (!selected) return null;
+  if (state.planResult?.fillerIds.includes(id)) return { kind: "filler", label: "补足", detail: "等级补足", css: "filler-label" };
+  return { kind: "required", label: "必经", detail: "必经路线", css: "required-label" };
+}
+
 function renderUnit(unit, inFolder = false) {
   const id = unit.data_unit_id;
+  const cardStatus = inFolder ? null : getUnitCardStatus(id);
   const autoSelected = inFolder && state.planResult?.selectedIds.includes(id)
     && !state.owned.has(id) && !state.planned.has(id) && !state.waypoints.has(id);
   const update = window.WTVehicleUpdates;
@@ -1004,7 +1016,7 @@ function renderUnit(unit, inFolder = false) {
 
   return `
     <div class="unit-tile-shell has-unit-actions${modificationButton ? " has-modifications" : ""}">
-    <button class="${classes.join(" ")}" type="button" data-unit-id="${escapeHtml(id)}" title="${escapeHtml(id)} · ${tr("右键或长按设置目标、已拥有或途经点")}">
+    <button class="${classes.join(" ")}" type="button" data-unit-id="${escapeHtml(id)}"${cardStatus ? ` data-plan-state="${cardStatus.kind}"` : ""} title="${escapeHtml(id)}${cardStatus ? ` · ${escapeHtml(tr(cardStatus.detail))}` : ""} · ${tr("右键或长按设置目标、已拥有或途经点")}">
       ${unit.vehicle_icon ? `<img src="${escapeHtml(unit.vehicle_icon)}" alt="">` : `<span></span>`}
       <span>
         <span class="unit-title">${updateBadge}${escapeHtml(displayTitle(unit))}</span>
@@ -1015,11 +1027,12 @@ function renderUnit(unit, inFolder = false) {
           ${window.RosterAudit?.badges(state.country, state.type, unit, displayTitle(unit)) || ""}
           ${unitProgress(unit) && !state.owned.has(id) ? `<span class="pill unit-rp-progress" title="${tr("已投入 RP")}">${formatNumber(unitProgress(unit))} / ${formatCost(unit.rp)} RP</span>` : ""}
           ${unlocked ? `<span class="pill unlocked">${tr("初始载具")}</span>` : ""}
-          ${state.planned.has(id) ? `<span class="pill target-label">${tr("目标")}</span>` : ""}
-          ${state.owned.has(id) ? `<span class="pill owned-label">${tr("已拥有")}</span>` : ""}
-          ${state.waypoints.has(id) ? `<span class="pill waypoint-label">${tr("途经点")}</span>` : ""}
+          ${cardStatus ? `<span class="pill plan-status ${cardStatus.css}" aria-label="${escapeHtml(tr(cardStatus.detail))}" title="${escapeHtml(tr(cardStatus.detail))}"><span class="plan-status-icon" aria-hidden="true"></span><span>${tr(cardStatus.label)}</span></span>` : ""}
+          ${inFolder && state.planned.has(id) ? `<span class="pill target-label">${tr("目标")}</span>` : ""}
+          ${inFolder && state.owned.has(id) ? `<span class="pill owned-label">${tr("已拥有")}</span>` : ""}
+          ${inFolder && state.waypoints.has(id) ? `<span class="pill waypoint-label">${tr("途经点")}</span>` : ""}
           ${autoSelected ? `<span class="pill auto-planned-label">${tr("已选")} · ${tr(state.planResult.fillerIds.includes(id) ? "等级补足" : "必经路线")}</span>` : ""}
-          ${state.planResult?.fillerIds.includes(id) ? `<span class="pill filler-label">${tr("等级补足")}</span>` : ""}
+          ${inFolder && state.planResult?.fillerIds.includes(id) ? `<span class="pill filler-label">${tr("等级补足")}</span>` : ""}
         </span>
       </span>
       ${isNew ? '<span class="unit-update-edge" aria-hidden="true"></span>' : ""}

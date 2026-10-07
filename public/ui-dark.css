@@ -237,6 +237,32 @@ body,
 .tree-canvas .unit-tile-shell > .unit-tile.owned { --tile-surface: #324851; --tile-border: #8fb6c3; box-shadow: inset 3px 0 #8fb6c3; }
 .tree-canvas .unit-tile-shell > .unit-tile.waypoint { --tile-surface: #484332; --tile-border: #ccb374; box-shadow: inset 3px 0 #ccb374; }
 .tree-canvas .unit-tile-shell > .unit-tile.rank-filler { --tile-surface: #423b4c; --tile-border: #b7a0ce; box-shadow: inset 3px 0 #b7a0ce; }
+/* A non-interactive edge tab leaves card geometry and action hit areas unchanged. */
+.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state] {
+  --tile-border: var(--plan-accent);
+  box-shadow: inset 3px 0 var(--plan-accent);
+}
+.tree-canvas .unit-tile[data-plan-state="target"] { --plan-accent: #edcc7a; --plan-ink: #20291f; --plan-icon: url("assets/navigation/target.svg"); }
+.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state="required"] { --plan-accent: #9ecbdc; --plan-ink: #182d36; --plan-icon: url("assets/navigation/route.svg"); --tile-surface: #2d3d43; }
+.tree-canvas .unit-tile[data-plan-state="filler"] { --plan-accent: #c4addc; --plan-ink: #30253c; --plan-icon: url("assets/navigation/layers.svg"); }
+.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state="owned"] { --plan-accent: #a1c7ac; --plan-ink: #20382a; --plan-icon: url("assets/navigation/check.svg"); --tile-surface: #2d3c33; }
+.tree-canvas .unit-tile[data-plan-state="waypoint"] { --plan-accent: #d9bb83; --plan-ink: #372d1c; --plan-icon: url("assets/navigation/map-pin.svg"); }
+.tree-canvas .unit-meta > .pill.plan-status {
+  position: absolute; top: -11px; right: 6px;
+  display: flex; align-items: center; gap: 4px;
+  width: max-content; max-width: calc(100% - 52px); height: 20px;
+  box-sizing: border-box; padding: 0 5px; border: 1px solid var(--plan-accent); border-radius: 2px;
+  background: var(--plan-accent); color: var(--plan-ink);
+  font-size: 10px; font-weight: 700; line-height: 18px; white-space: nowrap;
+  pointer-events: none;
+}
+.tree-canvas .unit-meta > .plan-status::before { content: none; }
+.tree-canvas .plan-status-icon {
+  display: block; flex: 0 0 12px; width: 12px; height: 12px; background: currentColor;
+  -webkit-mask: var(--plan-icon) center / contain no-repeat; mask: var(--plan-icon) center / contain no-repeat;
+}
+.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state="target"] { box-shadow: inset 4px 0 var(--plan-accent), inset 0 0 0 1px var(--plan-accent); }
+.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state="filler"] { border-style: dashed; }
 .tree-canvas .unit-tile-shell > .unit-tile:hover { transform: none; border-color: #c5d4ce; }
 .tree-canvas .unit-tile-shell > .unit-tile.planned:not(.owned):not(.waypoint):hover { border-color: #f4daa0; background: #3b5546; }
 .tree-canvas .unit-tile-shell > .unit-tile:focus-visible { outline: 2px solid #e5cf95; outline-offset: 2px; }

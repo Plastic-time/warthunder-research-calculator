@@ -1,5 +1,6 @@
 // Main application catalog: zh, en, ru, de, fr, ja, es.
 window.WTI18n.register([
+  ["途经", "Waypoint", "Через", "Zwischenziel", "Étape", "経由", "Etapa"],
   ["研发进度", "Research progress", "Прогресс исследования", "Forschungsfortschritt", "Progression de recherche", "研究進捗", "Progreso de investigación"],
   ["已投入 RP", "RP already invested", "Уже вложенные ОИ", "Bereits investierte FP", "PR déjà investis", "投入済みRP", "PI ya invertidos"],
   ["总计 {count} RP", "Total: {count} RP", "Всего: {count} ОИ", "Gesamt: {count} FP", "Total : {count} PR", "合計：{count} RP", "Total: {count} PI"],
