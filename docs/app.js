@@ -1060,7 +1060,7 @@ function renderUnit(unit, inFolder = false) {
           ${role ? `<span class="pill role">${escapeHtml(role)}</span>` : ""}
           ${squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${formatCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${formatCost(unit.sp)}</span></span>`}
           ${window.RosterAudit?.badges(state.country, state.type, unit, displayTitle(unit)) || ""}
-          ${unitProgress(unit) && !state.owned.has(id) ? `<span class="pill unit-rp-progress" title="${tr("已投入 RP")}">${formatNumber(unitProgress(unit))} / ${formatCost(unit.rp)} RP</span>` : ""}
+          ${unitProgress(unit) && !state.owned.has(id) ? `<span class="pill unit-rp-progress" title="${tr("总计 {count} RP", { count: formatCost(unit.rp) })}">${tr("剩余 {count} RP", { count: formatNumber(remainingUnitRp(unit)) })}</span>` : ""}
           ${unlocked ? `<span class="pill unlocked">${tr("初始载具")}</span>` : ""}
           ${cardStatus ? `<span class="pill plan-status ${cardStatus.css}" aria-label="${escapeHtml(tr(cardStatus.detail))}" title="${escapeHtml(tr(cardStatus.detail))}"><span class="plan-status-icon" aria-hidden="true"></span><span>${tr(cardStatus.label)}</span></span>` : ""}
           ${inFolder && state.planned.has(id) ? `<span class="pill target-label">${tr("目标")}</span>` : ""}

@@ -123,6 +123,123 @@ body,
 .modification-tile.has-progress .modification-tile-copy { gap: 3px; }
 .modification-tile.has-progress .modification-tile-copy b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .modification-tile-copy .modification-rp-progress { color: #debd76; }
+/* Workbench controls stay separate from the horizontally scrolling modification tree. */
+.modification-dialog .modification-titlebar { gap: 12px; }
+.modification-dialog .modification-vehicle > div { min-width: 0; }
+.modification-dialog .modification-vehicle h2 { font-size: 20px; line-height: 1.3; overflow-wrap: anywhere; }
+.modification-dialog .modification-close { flex: 0 0 44px; width: 44px; height: 44px; }
+.modification-dialog .modification-toolbar {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "mode preference" "legend legend";
+  gap: 8px 16px; padding: 10px 18px 8px; background: #202a2b;
+}
+.modification-dialog .modification-options { display: contents; }
+.modification-dialog .modification-edit-mode {
+  grid-area: mode; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 320px; max-width: 100%; padding: 3px; gap: 3px;
+  border: 1px solid #596763; background: #171e20; border-radius: 5px;
+}
+.modification-dialog .modification-edit-mode button {
+  min-height: 40px; padding: 6px 10px; line-height: 16px; overflow-wrap: anywhere;
+  color: #adbab5; border-radius: 3px;
+}
+.modification-dialog .modification-edit-mode button[aria-pressed="true"] {
+  background: #41594c; color: #f2f4e9; box-shadow: inset 0 0 0 1px #819989;
+}
+.modification-dialog .modification-edit-mode button:focus-visible,
+.modification-dialog .modification-actions button:focus-visible {
+  outline: 2px solid #dfcb92; outline-offset: 2px;
+}
+.modification-dialog .modification-air-combat {
+  grid-area: preference; align-self: center; gap: 8px; margin: 0;
+  min-height: 44px; color: #d8c2b1; font-size: 12px; line-height: 16px;
+}
+.modification-dialog .modification-air-combat input[type="checkbox"] {
+  appearance: none; position: relative; flex: 0 0 32px; width: 32px; height: 20px;
+  min-height: 20px; border: 1px solid #84938c; border-radius: 12px;
+  background: #303b38; cursor: pointer; transition: background-color 120ms ease;
+}
+.modification-dialog .modification-air-combat input[type="checkbox"]::before {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 12px; height: 12px;
+  border-radius: 50%; background: #e3e9e3; transition: transform 120ms ease;
+}
+.modification-dialog .modification-air-combat input[type="checkbox"]:checked { background: #50775e; border-color: #8caf96; }
+.modification-dialog .modification-air-combat input[type="checkbox"]:checked::before { transform: translateX(12px); }
+.modification-dialog .modification-air-combat input[type="checkbox"]:focus-visible { outline: 2px solid #dfcb92; outline-offset: 3px; }
+.modification-dialog .modification-legend {
+  grid-area: legend; min-width: 0; flex-wrap: nowrap; gap: 12px; overflow-x: auto;
+  padding: 3px 0; font-size: 11px; line-height: 16px; font-weight: 500; color: #b5c0bf;
+  scrollbar-width: thin; scrollbar-color: #667774 transparent;
+}
+.modification-dialog .modification-legend > span { flex: 0 0 auto; white-space: nowrap; }
+.modification-dialog .modification-legend i { width: 8px; height: 8px; flex: 0 0 8px; }
+.modification-dialog .modification-footer {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px 20px;
+  padding: 12px 16px; background: #283130; border-top-color: #596862;
+}
+.modification-dialog .modification-budget { gap: 4px 18px; align-content: center; }
+.modification-dialog .modification-budget > span { flex-basis: 100%; color: #a4b1ab; font-size: 10px; font-weight: 500; }
+.modification-dialog .modification-budget strong { display: inline-flex; align-items: baseline; gap: 5px; font-size: 11px; color: #acbbb3; }
+.modification-dialog .modification-budget b { font-size: 18px; line-height: 24px; color: #b4dbc8; }
+.modification-dialog #modificationSl { color: #ecd294; }
+.modification-dialog .modification-budget small { line-height: 15px; color: #b4beba; overflow-wrap: anywhere; }
+.modification-dialog .modification-actions {
+  position: relative; display: grid; grid-template-columns: repeat(2, 44px) minmax(140px, auto);
+  gap: 6px; align-items: center; align-self: center;
+}
+.modification-dialog .modification-actions button {
+  display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 44px;
+  padding: 8px; border: 1px solid #697771; border-radius: 4px; background: #222b29;
+  color: #c4cec8; font-size: 12px; line-height: 16px; white-space: normal;
+}
+.modification-dialog .modification-actions [data-modification-action="clear"] { color: #d6b4aa; }
+.modification-dialog .modification-actions .calculate { background: #79602c; border-color: #bba063; color: #fff1cb; padding-inline: 16px; }
+.modification-dialog .modification-actions button:hover { background: #3b4842; border-color: #a8b8ae; }
+.modification-dialog .modification-actions .calculate:hover { background: #8b713a; border-color: #dcc084; }
+.modification-action-icon {
+  flex: 0 0 18px; width: 18px; height: 18px; background: currentColor;
+  -webkit-mask: var(--modification-action-icon) center / contain no-repeat; mask: var(--modification-action-icon) center / contain no-repeat;
+}
+[data-modification-action="clear"] { --modification-action-icon: url("assets/navigation/rotate-ccw.svg"); }
+[data-modification-action="all"] { --modification-action-icon: url("assets/navigation/list-checks.svg"); }
+.modification-action-label {
+  position: absolute; bottom: calc(100% + 8px); left: 0; z-index: 10;
+  width: max-content; max-width: 100%; padding: 6px 9px; box-sizing: border-box;
+  border: 1px solid #7d8b83; border-radius: 4px; background: #19211e; color: #e7ece8;
+  font-size: 12px; font-weight: 500; line-height: 18px; text-align: left;
+  opacity: 0; visibility: hidden; pointer-events: none;
+}
+.modification-actions button:is(:hover, :focus-visible) .modification-action-label { opacity: 1; visibility: visible; }
+@media (max-width: 720px), (max-height: 540px) and (pointer: coarse) {
+  .modification-dialog .modification-vehicle h2 { font-size: 17px; }
+  .modification-dialog .modification-toolbar {
+    grid-template-areas: "mode mode" "legend preference"; gap: 5px 12px; padding: 7px 10px;
+  }
+  .modification-dialog .modification-edit-mode { width: auto; }
+  .modification-dialog .modification-edit-mode button { min-height: 44px; }
+  .modification-dialog .modification-air-combat { max-width: 120px; font-size: 11px; }
+  .modification-dialog .modification-legend { align-self: center; flex-wrap: wrap; gap: 4px 10px; overflow: visible; }
+  .modification-dialog .modification-legend > span { max-width: 100%; white-space: normal; }
+  .modification-dialog .modification-legend > span > span { min-width: 0; overflow-wrap: anywhere; }
+  .modification-dialog .modification-footer { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 8px 10px; }
+  .modification-dialog .modification-budget { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; }
+  .modification-dialog .modification-budget > span { display: none; }
+  .modification-dialog .modification-budget strong { min-width: 0; }
+  .modification-dialog .modification-budget b { font-size: 16px; overflow-wrap: anywhere; }
+  .modification-dialog .modification-budget small { grid-column: 1 / -1; }
+  .modification-dialog .modification-actions { grid-template-columns: repeat(2, 44px) minmax(0, 1fr); }
+  .modification-dialog .modification-actions .calculate { padding-inline: 8px; }
+}
+@media (max-height: 540px) and (min-width: 721px) and (pointer: coarse) {
+  .modification-dialog .modification-toolbar { grid-template-areas: "mode preference" "legend legend"; padding-block: 5px; }
+  .modification-dialog .modification-edit-mode { width: 320px; }
+  .modification-dialog .modification-footer { grid-template-columns: minmax(0, 1fr) auto; }
+  .modification-dialog .modification-actions { grid-template-columns: repeat(2, 44px) 140px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .modification-dialog .modification-air-combat input[type="checkbox"],
+  .modification-dialog .modification-air-combat input[type="checkbox"]::before { transition: none; }
+}
 .bulk-owned-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
 .bulk-owned-actions button, .bulk-owned-notice button {
   min-height: 44px; max-width: 100%; padding: 8px 12px; border-radius: 4px;

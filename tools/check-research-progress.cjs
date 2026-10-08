@@ -44,16 +44,17 @@ async function main() {
         await page.locator('.research-progress-dialog').waitFor({ state: 'visible' });
       };
       await openUnit();
-      await page.locator('#researchProgressInput').fill(String(spent));
+      assert.equal(await page.locator('#researchProgressInput').inputValue(), String(unit.total));
+      await page.locator('#researchProgressInput').fill(String(unit.total - spent));
       await page.locator('[data-progress-cancel]').click();
       assert.equal(await page.evaluate(id => state.progressRp[id] || 0, unit.id), 0);
       await openUnit();
-      for (const invalid of ['-1', '1.5', String(unit.total + 1)]) {
+      for (const invalid of ['', '-1', '1.5', String(unit.total + 1)]) {
         await page.locator('#researchProgressInput').fill(invalid);
         await page.locator('[data-progress-save]').click();
         assert(await page.locator('.research-progress-dialog').isVisible());
       }
-      await page.locator('#researchProgressInput').fill(String(spent));
+      await page.locator('#researchProgressInput').fill(String(unit.total - spent));
       await page.screenshot({ path: path.join(out, mode + '-' + width + '-vehicle-editor.png') });
       await page.locator('[data-progress-save]').click();
       assert.equal(await page.evaluate(id => state.progressRp[id], unit.id), spent);
@@ -78,11 +79,13 @@ async function main() {
       await page.evaluate(async () => { els.countrySelect.value = 'usa'; await loadTree(); });
       assert.equal(await page.evaluate(id => state.progressRp[id], unit.id), spent);
       await openUnit();
-      await page.locator('#researchProgressInput').fill(String(unit.total));
+      assert.equal(await page.locator('#researchProgressInput').inputValue(), String(unit.total - spent));
+      await page.locator('#researchProgressInput').fill('0');
       await page.locator('[data-progress-save]').click();
+      assert.equal(await page.evaluate(id => remainingUnitRp(state.unitMap.get(id)), unit.id), 0);
       assert(await page.evaluate(id => !state.owned.has(id) && !state.initialUnlocked.has(id) && state.planned.has(id), unit.id));
       await openUnit();
-      await page.locator('#researchProgressInput').fill('0');
+      await page.locator('#researchProgressInput').fill(String(unit.total));
       await page.locator('[data-progress-save]').click();
       assert.equal(await page.evaluate(id => remainingUnitRp(state.unitMap.get(id)), unit.id), unit.total);
       // Editors follow all seven languages; no new dynamic key may silently fall back.
@@ -95,6 +98,8 @@ async function main() {
           const rect = dialog.getBoundingClientRect();
           return rect.left >= 0 && rect.right <= innerWidth && dialog.scrollWidth <= dialog.clientWidth;
         }));
+        assert.equal(await page.locator('.research-progress-dialog label').textContent(), await page.evaluate(() => WTI18n.t('剩余 RP')));
+        await page.screenshot({ path: path.join(out, `${mode}-${width}-${locale}-remaining.png`) });
         await page.locator('[data-progress-cancel]').click();
       }
       await page.evaluate(() => setLanguage('zh'));
@@ -109,8 +114,8 @@ async function main() {
       const sl = await page.locator('#modificationSl').innerText();
       await page.locator('[data-modification-mode="progress"]').click();
       await tile.click();
-      const invested = Math.floor(mod.total / 2);
-      await page.locator('#researchProgressInput').fill(String(invested));
+      const invested = Math.floor(mod.total / 3);
+      await page.locator('#researchProgressInput').fill(String(mod.total - invested));
       await page.locator('[data-progress-save]').click();
       assert.equal(await page.locator('#modificationRp').innerText(), (mod.total - invested).toLocaleString('zh-CN'));
       assert.equal(await page.locator('#modificationSl').innerText(), sl);
@@ -134,22 +139,26 @@ async function main() {
       assert.equal(await page.locator('#modificationRp').innerText(), (mod.total - invested).toLocaleString('zh-CN'));
       await page.locator('[data-modification-mode="progress"]').click();
       await tile.click();
-      await page.locator('#researchProgressInput').fill(String(mod.total));
+      assert.equal(await page.locator('#researchProgressInput').inputValue(), String(mod.total - invested));
+      await page.locator('#researchProgressInput').fill('0');
       await page.locator('[data-progress-save]').click();
       assert.equal(await page.locator('#modificationRp').innerText(), '0');
       assert.equal(await tile.evaluate(el => el.classList.contains('unlocked') || el.classList.contains('researched')), false);
       await tile.click();
       await page.locator('#researchProgressInput').fill('');
       await page.locator('[data-progress-save]').click();
+      assert(await page.locator('.research-progress-dialog').isVisible(), 'Blank must not silently mean zero remaining');
+      await page.locator('#researchProgressInput').fill(String(mod.total));
+      await page.locator('[data-progress-save]').click();
       assert.equal(await page.locator('#modificationRp').innerText(), mod.total.toLocaleString('zh-CN'));
       await tile.click();
-      await page.locator('#researchProgressInput').fill(String(invested));
+      await page.locator('#researchProgressInput').fill(String(mod.total - invested));
       await page.locator('[data-progress-save]').click();
       await page.locator('[data-modification-action="clear"]').click();
-      assert.equal(await page.locator('.modification-rp-progress').count(), 1, 'Clearing targets preserves research progress');
+      assert.equal(await page.locator('.modification-rp-progress').count(), 0, 'Unified clear removes targets and progress');
+      assert.equal(await page.locator('#modificationRp').innerText(), '0');
       await page.locator('[data-modification-mode="select"]').click();
       await tile.click();
-      await page.locator('[data-modification-action="clear-owned"]').click();
       assert.equal(await page.locator('.modification-rp-progress').count(), 0);
       assert.equal(await page.locator('#modificationRp').innerText(), mod.total.toLocaleString('zh-CN'));
       await page.reload();
@@ -159,7 +168,7 @@ async function main() {
       assert.equal(await page.locator('.modification-rp-progress').count(), 0, 'Cleared modification progress stays cleared after reload');
       await page.locator('[data-modification-close]').click();
       await openUnit();
-      await page.locator('#researchProgressInput').fill(String(spent));
+      await page.locator('#researchProgressInput').fill(String(unit.total - spent));
       await page.locator('[data-progress-save]').click();
       const untouched = await page.evaluate(() => {
         const second = state.units.find(unit => canEditUnitProgress(unit) && unit.data_unit_id !== 'us_m18_hellcat');

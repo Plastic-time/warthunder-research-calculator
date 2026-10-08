@@ -3,6 +3,8 @@ window.WTI18n.register([
   ["途经", "Waypoint", "Через", "Zwischenziel", "Étape", "経由", "Etapa"],
   ["研发进度", "Research progress", "Прогресс исследования", "Forschungsfortschritt", "Progression de recherche", "研究進捗", "Progreso de investigación"],
   ["已投入 RP", "RP already invested", "Уже вложенные ОИ", "Bereits investierte FP", "PR déjà investis", "投入済みRP", "PI ya invertidos"],
+  ["剩余 RP", "Remaining RP", "Осталось ОИ", "Verbleibende FP", "PR restants", "残りRP", "PI restantes"],
+  ["仅调整剩余 RP；银狮和已拥有、已研发状态不变。", "Only remaining RP changes. Silver Lions and owned or researched status stay unchanged.", "Меняется только остаток ОИ. Серебряные львы и статусы владения или исследования не меняются.", "Nur die verbleibenden FP ändern sich. Silver Lions sowie Besitz- und Forschungsstatus bleiben unverändert.", "Seuls les PR restants changent. Les Silver Lions et les statuts possédé ou recherché restent inchangés.", "残りRPのみを変更します。SLと所有済み・研究済みの状態は変わりません。", "Solo cambian los PI restantes. Los Silver Lions y los estados adquirido o investigado no cambian."],
   ["总计 {count} RP", "Total: {count} RP", "Всего: {count} ОИ", "Gesamt: {count} FP", "Total : {count} PR", "合計：{count} RP", "Total: {count} PI"],
   ["剩余 {count} RP", "Remaining: {count} RP", "Осталось: {count} ОИ", "Verbleibend: {count} FP", "Restant : {count} PR", "残り：{count} RP", "Restantes: {count} PI"],
   ["保存进度", "Save progress", "Сохранить прогресс", "Fortschritt speichern", "Enregistrer la progression", "進捗を保存", "Guardar progreso"],

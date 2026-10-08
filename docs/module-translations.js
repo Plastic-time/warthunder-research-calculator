@@ -22,6 +22,7 @@
     ["配件预算","Modification cost","Стоимость модификаций","Modifikationskosten","Coût des modifications","改造費用","Coste de modificaciones"],
   ["清除已研发","Clear researched marks","Снять отметки «Исследовано»","Erforscht-Markierungen löschen","Retirer les marques « Recherché »","研究済みの印を解除","Quitar marcas de investigado"],
     ["清空目标","Clear targets","Сбросить цели","Ziele löschen","Effacer les objectifs","目標をクリア","Borrar objetivos"],
+    ["清空配件目标、已研发标记及进度","Clear modification targets, researched marks and progress","Сбросить цели, отметки исследования и прогресс модификаций","Modifikationsziele, Erforscht-Markierungen und Fortschritt löschen","Effacer les objectifs, les marques de recherche et la progression des modifications","改造の目標・研究済みの印・研究進捗をクリア","Borrar objetivos, marcas de investigado y progreso de las modificaciones"],
   ["全部配件","Select all modifications","Выбрать все","Alle auswählen","Tout sélectionner","すべて選択","Seleccionar todo"],
   ["计算配件研发","Calculate costs","Рассчитать затраты","Kosten berechnen","Calculer les coûts","費用を計算","Calcular costes"],
   ["选择配件后点击计算","Select modifications, then choose Calculate costs","Выберите модификации и нажмите «Рассчитать затраты».","Modifikationen wählen, dann „Kosten berechnen“ auswählen.","Sélectionnez les modifications, puis cliquez sur « Calculer les coûts ».","改造を選び、「費用を計算」を押してください。","Selecciona modificaciones y pulsa «Calcular costes»."],

@@ -3,6 +3,7 @@ Snapshot: 951813ce76a859d4d8b145366972cbb237147a4e
 License: LICENSE-lucide.txt
 Pack badge: gift.svg, from the same Lucide snapshot above.
 Plan states: target.svg, route.svg, layers.svg and map-pin.svg, from the same Lucide snapshot above.
+Modification actions: rotate-ccw.svg and list-checks.svg, from the same Lucide snapshot above.
 Golden Eagles badge: golden-eagles.svg, unmodified official War Thunder artwork.
 Source: https://static.encyclopedia.warthunder.com/gui_skin/item_type_eagles.svg
 Golden Eagles artwork belongs to its respective rights holders, not the Lucide license.

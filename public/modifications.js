@@ -215,7 +215,7 @@
     const priorityLegend = dialog.querySelector("[data-air-combat-legend]");
     if (priorityLegend) priorityLegend.hidden = ui.data?.branch !== "aviation";
     dialog.querySelectorAll("[data-modification-mode]").forEach(button => {
-      button.textContent = t(button.dataset.modificationMode === "progress" ? "研发进度" : "选择目标");
+      button.textContent = t(button.dataset.modificationMode === "progress" ? "剩余 RP" : "选择目标");
       button.setAttribute("aria-pressed", String((button.dataset.modificationMode === "progress") === ui.editProgress));
     });
     const text = (selector, source) => {
@@ -235,10 +235,14 @@
       }
       else if (icon) icon.parentElement.replaceChildren(icon, document.createTextNode(t(source)));
     }
-    text(".modification-toolbar > p", ui.editProgress ? "已投入 RP" : "左键选择目标 · 右键标记已研发 · 等级门槛按游戏数据计算");
+    text(".modification-toolbar > p", ui.editProgress ? "剩余 RP" : "左键选择目标 · 右键标记已研发 · 等级门槛按游戏数据计算");
     text(".modification-budget > span", "配件预算");
-    for (const [action, source] of Object.entries({ "clear-owned": "清除已研发", clear: "清空目标", all: "全部配件", calculate: "计算配件研发" })) {
-      text(`[data-modification-action="${action}"]`, source);
+    for (const [action, source] of Object.entries({ clear: "清空配件目标、已研发标记及进度", all: "全部配件", calculate: "计算配件研发" })) {
+      const button = dialog.querySelector(`[data-modification-action="${action}"]`);
+      const label = button?.querySelector(".modification-action-label");
+      if (label) label.textContent = t(source);
+      else text(`[data-modification-action="${action}"]`, source);
+      button?.setAttribute("aria-label", t(source));
     }
     if (!ui.data) {
       title.textContent = t("配件研发");
@@ -292,7 +296,7 @@
         <button class="modification-tile ${stateName}${isPlanned ? " is-planned" : ""}${invested ? " has-progress" : ""}" type="button"
           data-mod-id="${escape(mod.id)}" style="grid-column:${column};grid-row:${mod.tier + 1}" title="${escape(titleText)}"${unlocked || (ui.editProgress && (mod.rp <= 0 || ui.researched.has(mod.id))) ? " disabled" : ""}>
           ${renderIcon(mod)}
-          <span class="modification-tile-copy"><b>${escape(name)}</b><small>${unlocked ? `✓ ${escape(t("已解锁"))}` : `${format(remainingRp)} RP · ${format(mod.sl)} SL`}</small>${invested && !ui.researched.has(mod.id) ? `<small class="modification-rp-progress" title="${escape(t("已投入 RP"))}">${format(invested)} / ${format(mod.rp)} RP</small>` : ""}</span>
+          <span class="modification-tile-copy"><b>${escape(name)}</b><small>${unlocked ? `✓ ${escape(t("已解锁"))}` : `${format(remainingRp)} RP · ${format(mod.sl)} SL`}</small>${invested && !ui.researched.has(mod.id) ? `<small class="modification-rp-progress" title="${escape(t("总计 {count} RP", { count: format(mod.rp) }))}">${escape(t("剩余 {count} RP", { count: format(remainingRp) }))}</small>` : ""}</span>
           ${stateName && !unlocked ? `<span class="modification-state">${stateName === "researched" ? "✓ " : ""}${escape(stateLabel(mod))}</span>` : ""}
         </button>`;
     });
@@ -450,8 +454,8 @@
       ui.selected = new Set(ui.data.mods.filter(mod => !ui.researched.has(mod.id) && !ui.unlocked.has(mod.id)).map(mod => mod.id));
       calculate();
     }
-    if (action === "clear") { ui.selected.clear(); ui.result = null; save(); render(); }
-    if (action === "clear-owned") {
+    if (action === "clear") {
+      ui.selected.clear();
       ui.researched.clear();
       ui.progressRp = Object.create(null);
       ui.result = null;
@@ -480,8 +484,22 @@
   dialog.querySelector(".modification-toolbar").append(optionsBar);
   const preference = document.createElement("label");
   preference.className = "modification-air-combat";
-  preference.innerHTML = '<input type="checkbox" data-modification-air-combat checked><span></span>';
-  optionsBar.append(preference, editMode);
+  preference.innerHTML = '<input type="checkbox" role="switch" data-modification-air-combat checked><span></span>';
+  optionsBar.append(editMode, preference);
+  const toolbar = dialog.querySelector(".modification-toolbar");
+  toolbar.prepend(optionsBar);
+  const instructions = toolbar.querySelector(":scope > p");
+  if (instructions) instructions.hidden = true;
+  dialog.querySelectorAll('[data-modification-action]:not([data-modification-action="calculate"])').forEach(button => {
+    button.removeAttribute("data-i18n");
+    const icon = document.createElement("span");
+    icon.className = "modification-action-icon";
+    icon.setAttribute("aria-hidden", "true");
+    const label = document.createElement("span");
+    label.className = "modification-action-label";
+    label.setAttribute("role", "tooltip");
+    button.replaceChildren(icon, label);
+  });
   preference.querySelector("input").addEventListener("change", event => {
     ui.airCombat = event.target.checked;
     if (ui.result) calculate(); else { save(); render(); }

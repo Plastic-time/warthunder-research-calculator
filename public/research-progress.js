@@ -35,26 +35,28 @@
     dialog.innerHTML = '<form><h2 id="researchProgressTitle"></h2><p data-progress-name></p><label for="researchProgressInput"></label><input id="researchProgressInput" type="number" inputmode="numeric" min="0" step="1"><p data-progress-total></p><output for="researchProgressInput"></output><p data-progress-note></p><div class="research-progress-actions"><button type="button" data-progress-cancel></button><button type="submit" data-progress-save></button></div></form>';
     const input = dialog.querySelector("input");
     input.max = String(total);
-    input.value = String(amount(value, total));
+    input.required = true;
+    input.value = String(remaining(total, value));
     dialog.querySelector("h2").textContent = t("研发进度");
     dialog.querySelector("[data-progress-name]").textContent = title;
-    dialog.querySelector("label").textContent = t("已投入 RP");
+    dialog.querySelector("label").textContent = t("剩余 RP");
     dialog.querySelector("[data-progress-total]").textContent = t("总计 {count} RP", { count: number(total) });
-    dialog.querySelector("[data-progress-note]").textContent = t("仅扣减剩余 RP；银狮和已拥有、已研发状态不变。填 0 可清除进度。");
+    dialog.querySelector("[data-progress-note]").textContent = t("仅调整剩余 RP；银狮和已拥有、已研发状态不变。");
     dialog.querySelector("[data-progress-cancel]").textContent = t("取消");
     dialog.querySelector("[data-progress-save]").textContent = t("保存进度");
     const update = () => {
-      const value = input.value === "" ? 0 : input.valueAsNumber;
+      const value = input.valueAsNumber;
       dialog.querySelector("output").textContent = input.validity.valid && Number.isSafeInteger(value)
-        ? t("剩余 {count} RP", { count: number(remaining(total, value)) }) : t("请输入有效的整数 RP");
+        ? t("剩余 {count} RP", { count: number(value) }) : t("请输入有效的整数 RP");
     };
     input.addEventListener("input", update);
     dialog.querySelector("[data-progress-cancel]").addEventListener("click", () => dialog.close());
     dialog.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
-      const value = input.value === "" ? 0 : input.valueAsNumber;
+      const value = input.valueAsNumber;
       if (!input.reportValidity() || !Number.isSafeInteger(value)) return;
-      onSave(value);
+      // Keep stored invested RP compatible with existing plans and older records.
+      onSave(total - value);
       dialog.close();
     });
     update();
