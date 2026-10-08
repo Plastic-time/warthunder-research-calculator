@@ -249,6 +249,7 @@ body,
 .tree-canvas .unit-tile[data-plan-state="waypoint"] { --plan-accent: #d9bb83; --plan-ink: #372d1c; --plan-icon: url("assets/navigation/map-pin.svg"); }
 .tree-canvas .unit-meta > .pill.plan-status {
   position: absolute; top: -11px; right: 6px;
+  z-index: 1; /* Keep new-vehicle edge decorations behind the status text. */
   display: flex; align-items: center; gap: 4px;
   width: max-content; max-width: calc(100% - 52px); height: 20px;
   box-sizing: border-box; padding: 0 5px; border: 1px solid var(--plan-accent); border-radius: 2px;
