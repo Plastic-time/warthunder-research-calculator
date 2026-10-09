@@ -28,7 +28,7 @@ async function main() {
       assert.equal(await page.locator('.country-choice').count(), 10);
       assert(!/美国|陆战/.test(await page.locator('#statusText').innerText()));
       const saved = await page.evaluate(() => {
-        const target = state.units.find(unit => unit.rp > 0 && unit.section === 'researchable');
+        const target = state.units.find(unit => parseNumber(unit.rp) > 0 && unit.section === 'researchable');
         toggleUnitMode(target.data_unit_id, 'target');
         return {id: target.data_unit_id, rp: els.budgetRp.textContent, sl: els.budgetSl.textContent};
       });

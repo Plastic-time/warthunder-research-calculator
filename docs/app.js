@@ -41,6 +41,7 @@ const state = {
   snapshot: null,
   localizedNames: {},
   tree: [],
+  treeLoadError: false,
   units: [],
   groups: [],
   unitMap: new Map(),
@@ -215,7 +216,7 @@ function setLanguage(language) {
   els.treeContainer.scrollLeft = scroll.left;
   els.treeContainer.scrollTop = scroll.top;
   window.TreeNavigation?.sync(false);
-  if (state.units.length) setStatus(tr("{count} 个载具", { count: formatNumber(state.units.length) }));
+  if (!treeSelectionLoading && !state.treeLoadError) setStatus(tr("{count} 个载具", { count: formatNumber(state.units.length) }));
   setPlanButtonsDisabled(els.planButton.disabled);
   closeUnitContextMenu();
   bulkOwnedDialog?.close();
@@ -1349,8 +1350,12 @@ function renderRankRail(rank) {
 function renderTree() {
   window.VehicleFolders?.beforeTreeRender();
   window.RosterAudit?.render(state.country, state.type);
+  if (state.treeLoadError) {
+    els.treeContainer.innerHTML = `<div class="loading" role="status">${tr("科技树加载失败，请重试")}</div>`;
+    return;
+  }
   if (!state.tree.length) {
-    els.treeContainer.innerHTML = `<div class="loading">${tr("Wiki 暂无该国家的此类科技树")}</div>`;
+    els.treeContainer.innerHTML = `<div class="wiki-empty" role="status"><img src="assets/empty-wiki-tree.png" width="1200" height="1312" alt="" draggable="false"><p>${tr("这只笨蛋萝莉没有相关的Wiki科技树数据")}</p></div>`;
     return;
   }
 
@@ -1413,6 +1418,7 @@ async function loadMeta() {
 
 let treeRequestId = 0;
 async function loadTree() {
+  state.treeLoadError = false;
   treeSelectionLoading = true;
   refreshTreeSelectionButton();
   closeUnitContextMenu();
@@ -1435,6 +1441,7 @@ async function loadTree() {
     calculatePlan();
   } catch (err) {
     if (requestId !== treeRequestId) return;
+    state.treeLoadError = true;
     state.tree = [];
     state.units = [];
     state.groups = [];

@@ -4,6 +4,15 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-09 · 导航与界面细节优化
+
+- 宽屏桌面将军种切换移到左侧，国家、搜索、语言与计算范围集中在上方；手机保留横向军种切换。
+- 保留深色主题和浅金色选中状态，统一筛选控件、菜单、间距与工具图标。
+- 使用指南、截图导出和清空操作改为更轻量的图标配文字入口。
+- 缩短菜单进出动效，统一悬停与选中反馈；尊重系统的减少动态效果设置。
+- 检查桌面与手机尺寸下的七种语言布局，避免控件重叠和长文字截断。手机检查为浏览器模拟，未替代实体手机或 Safari 验收。
+- 不修改计算逻辑、游戏数据或版本号；本次仅更新网页，不发布 Windows 包。
+
 ## 2026-10-09 · 配件清空撤销与提示修复
 
 - 后续修正：复现按下按钮时提示瞬间竖排的原因，是缩放动效改变了提示框的定位参照。改为只缩放图标；保持普通动效开启，逐帧检查鼠标、触屏、键盘按下及松开。
@@ -36,6 +45,15 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-09 · Navigation and UI Polish
+
+- Moved vehicle categories to a left rail on wide screens. Nation, search, language, and calculation scope stay at the top. Mobile keeps horizontal category navigation.
+- Kept the dark theme and soft gold selection accents. Aligned filter controls, menus, spacing, and tool icons.
+- Gave the guide, image export, and clear actions lighter icon-and-text controls.
+- Shortened menu transitions and aligned hover and selection feedback. Reduced-motion preferences are respected.
+- Checked all seven languages at desktop and mobile sizes for overlaps and clipped labels. Mobile checks use browser emulation. Physical phones and Safari were not verified.
+- Calculation logic, game data, and version numbers are unchanged. This is a web update, with no new Windows package.
 
 ### 2026-10-09 · Undo Clear and Tooltip Fix
 
