@@ -68,6 +68,8 @@ const connectionMarkerIds = new WeakMap();
 let bulkOwnedUndo = null;
 let bulkOwnedDialog;
 let bulkOwnedNotice;
+let clearPlanUndoTimer;
+let clearPlanUndoHovered = false;
 
 
 const zh = {
@@ -613,16 +615,33 @@ function selectCurrentTree() {
 }
 
 function discardBulkOwnedUndo() {
+  clearTimeout(clearPlanUndoTimer);
+  clearPlanUndoHovered = false;
   bulkOwnedUndo = null;
   if (bulkOwnedNotice) bulkOwnedNotice.hidden = true;
+}
+
+function scheduleClearPlanUndoExpiry() {
+  clearTimeout(clearPlanUndoTimer);
+  if (bulkOwnedUndo?.kind !== "clear" || clearPlanUndoHovered || bulkOwnedNotice.contains(document.activeElement)) return;
+  clearPlanUndoTimer = setTimeout(discardBulkOwnedUndo, 15000);
+}
+
+function positionClearPlanNotice() {
+  if (!bulkOwnedNotice || bulkOwnedNotice.hidden) return;
+  const budget = document.getElementById("floatingBudget")?.getBoundingClientRect();
+  bulkOwnedNotice.style.bottom = bulkOwnedUndo?.kind === "clear" && budget?.height
+    ? `${Math.max(12, innerHeight - budget.top + 12)}px` : "";
 }
 
 function renderBulkOwnedNotice() {
   if (!bulkOwnedNotice) return;
   bulkOwnedNotice.hidden = !bulkOwnedUndo;
   if (!bulkOwnedUndo) return;
-  bulkOwnedNotice.querySelector("[role=status]").textContent = tr("已标记 {count} 辆为已拥有", { count: bulkOwnedUndo.count });
-  bulkOwnedNotice.querySelector("button").textContent = tr("撤销本次标记");
+  bulkOwnedNotice.querySelector("[role=status]").textContent = bulkOwnedUndo.kind === "clear"
+    ? tr("已清空当前科技树") : tr("已标记 {count} 辆为已拥有", { count: bulkOwnedUndo.count });
+  bulkOwnedNotice.querySelector("button").textContent = tr(bulkOwnedUndo.kind === "clear" ? "撤销清空" : "撤销本次标记");
+  positionClearPlanNotice();
 }
 
 function undoBulkOwned() {
@@ -631,9 +650,11 @@ function undoBulkOwned() {
   state.owned = new Set(before.owned);
   state.planned = new Set(before.planned);
   state.waypoints = new Set(before.waypoints);
+  if (bulkOwnedUndo.kind === "clear") state.progressRp = { ...before.progressRp };
   state.planResult = before.planResult;
   saveState();
   calculatePlan();
+  els.planButton.focus({ preventScroll: true });
 }
 
 function markRankOwned(rank) {
@@ -692,7 +713,18 @@ function setupBulkOwned() {
   bulkOwnedNotice.hidden = true;
   bulkOwnedNotice.innerHTML = '<span role="status"></span><button type="button"></button>';
   bulkOwnedNotice.querySelector("button").addEventListener("click", undoBulkOwned);
+  bulkOwnedNotice.addEventListener("pointerenter", event => {
+    if (event.pointerType !== "mouse") return;
+    clearPlanUndoHovered = true;
+    clearTimeout(clearPlanUndoTimer);
+  });
+  bulkOwnedNotice.addEventListener("pointerleave", () => { clearPlanUndoHovered = false; scheduleClearPlanUndoExpiry(); });
+  bulkOwnedNotice.addEventListener("focusin", () => clearTimeout(clearPlanUndoTimer));
+  bulkOwnedNotice.addEventListener("focusout", scheduleClearPlanUndoExpiry);
   document.body.append(bulkOwnedDialog, bulkOwnedNotice);
+  window.addEventListener("resize", positionClearPlanNotice, { passive: true });
+  const budget = document.getElementById("floatingBudget");
+  if (budget) new ResizeObserver(positionClearPlanNotice).observe(budget);
 }
 
 function closeUnitContextMenu() {
@@ -1473,6 +1505,15 @@ function wireEvents() {
   });
 
   els.clearButton.addEventListener("click", () => {
+    if (els.planButton.disabled || treeSelectionLoading) return;
+    if (!state.planned.size && !state.owned.size && !state.waypoints.size && !state.planResult && !Object.keys(state.progressRp).length) return;
+    const snapshot = {
+      kind: "clear", key: storageKey(),
+      before: {
+        planned: [...state.planned], owned: [...state.owned], waypoints: [...state.waypoints],
+        progressRp: { ...state.progressRp }, planResult: state.planResult ? structuredClone(state.planResult) : null,
+      },
+    };
     state.planned.clear();
     state.owned.clear();
     state.progressRp = Object.create(null);
@@ -1481,6 +1522,9 @@ function wireEvents() {
     invalidateExactPlan();
     saveState();
     calculatePlan();
+    bulkOwnedUndo = snapshot;
+    renderBulkOwnedNotice();
+    scheduleClearPlanUndoExpiry();
   });
 
   els.refreshDataButton.addEventListener("click", refreshCurrentTree);

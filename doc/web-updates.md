@@ -6,6 +6,8 @@
 
 ## 2026-10-09 · 配件清空撤销与提示修复
 
+- 后续修正：复现按下按钮时提示瞬间竖排的原因，是缩放动效改变了提示框的定位参照。改为只缩放图标；保持普通动效开启，逐帧检查鼠标、触屏、键盘按下及松开。
+- 主科技树“清空计划”补充同样的 15 秒撤销，恢复目标、已拥有、途经点、载具 RP 进度及原规划；继续修改或切换科技树后失效，保留其他树和配件记录。
 - 配件清空后提供 15 秒撤销，恢复当前载具的目标、已研发标记、RP 进度和原预算。鼠标停留或键盘聚焦提示时暂停计时。
 - 新操作、关闭窗口和切换载具会取消待撤销记录，不覆盖后续操作或其他载具。
 - 修复清空按钮提示被挤成竖列的问题；桌面提示正常换行，触屏点击不再留下悬浮提示。
@@ -37,6 +39,8 @@ This log covers web updates after the downloadable release. These entries do not
 
 ### 2026-10-09 · Undo Clear and Tooltip Fix
 
+- Follow-up: reproduced the brief vertical tooltip during button presses. Scaling the button changed the tooltip's containing block. Only the icon now scales. Frame-by-frame checks cover mouse, touch, and keyboard presses with animations enabled.
+- Added the same 15-second undo to Clear Plan. It restores targets, owned marks, waypoints, vehicle RP progress, and the original route. Further edits or switching trees dismiss it. Other trees and modification records stay untouched.
 - Added a 15-second undo after clearing modifications. It restores targets, researched marks, RP progress, and the previous budget. Hovering or keyboard focus pauses the timer.
 - Further actions, closing the window, or switching vehicles dismiss undo. Later edits and other vehicles remain untouched.
 - Fixed tooltips wrapping into a narrow vertical column. Desktop hints wrap normally. Touch taps no longer leave a hover hint behind.

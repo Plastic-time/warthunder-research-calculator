@@ -461,6 +461,10 @@
     render();
   });
 
+  dialog.addEventListener("pointerdown", event => {
+    dialog.dataset.modificationPointer = event.pointerType;
+  });
+  dialog.addEventListener("keydown", () => { delete dialog.dataset.modificationPointer; });
   dialog.addEventListener("click", event => {
     const mode = event.target.closest("[data-modification-mode]");
     if (mode) {

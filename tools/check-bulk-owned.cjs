@@ -82,8 +82,14 @@ async function main() {
       // Clearing or editing after a batch cannot leave a destructive stale undo action.
       await page.evaluate(() => { els.clearButton.click(); markRankOwned('II'); toggleUnitMode('us_m18_hellcat', 'target'); });
       assert(!await page.locator('.bulk-owned-notice').isVisible());
-      await page.evaluate(() => { els.clearButton.click(); markRankOwned('II'); els.clearButton.click(); undoBulkOwned(); });
+      await page.evaluate(() => { els.clearButton.click(); markRankOwned('II'); });
+      const beforeClear = await snapshot();
+      await page.evaluate(() => els.clearButton.click());
       assert.equal((await snapshot()).owned.length, 0);
+      assert.equal(await page.evaluate(() => bulkOwnedUndo.kind), 'clear', 'Clear replaces the old rank undo');
+      await page.evaluate(() => undoBulkOwned());
+      assert.deepEqual(await snapshot(), beforeClear);
+      await page.evaluate(() => { els.clearButton.click(); discardBulkOwnedUndo(); });
       // A second batch can be undone without reverting the first batch.
       await page.evaluate(() => { markRankOwned('I'); });
       const firstBatch = await snapshot();

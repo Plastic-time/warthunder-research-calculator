@@ -18,6 +18,8 @@
   }
 
   function surfacesFor(control) {
+    // Scaling a tooltip's ancestor changes its containing block during the press.
+    if (control.querySelector(':scope > .modification-action-label')) return [...control.querySelectorAll(':scope > .modification-action-icon')];
     if (control.matches('.unit-wiki-launch')) return [...control.querySelectorAll('.wiki-bookmark')];
     if (control.matches('.unit-tile')) return [...control.querySelectorAll(':scope > img, .unit-title')];
     if (control.matches('.modification-tile')) return [...control.querySelectorAll(':scope > img, .modification-ammunition, .modification-tile-copy')];

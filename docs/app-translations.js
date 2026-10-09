@@ -1,5 +1,7 @@
 // Main application catalog: zh, en, ru, de, fr, ja, es.
 window.WTI18n.register([
+  ["已清空当前科技树", "Current tree cleared", "Текущее дерево сброшено", "Aktueller Baum zurückgesetzt", "Arbre actuel effacé", "現在のツリーをクリアしました", "Árbol actual borrado"],
+  ["撤销清空", "Undo clear", "Отменить сброс", "Zurücksetzen rückgängig", "Annuler l’effacement", "クリアを取り消す", "Deshacer borrado"],
   ["途经", "Waypoint", "Через", "Zwischenziel", "Étape", "経由", "Etapa"],
   ["研发进度", "Research progress", "Прогресс исследования", "Forschungsfortschritt", "Progression de recherche", "研究進捗", "Progreso de investigación"],
   ["已投入 RP", "RP already invested", "Уже вложенные ОИ", "Bereits investierte FP", "PR déjà investis", "投入済みRP", "PI ya invertidos"],

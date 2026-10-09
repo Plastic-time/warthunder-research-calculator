@@ -70,7 +70,7 @@ Select all toggles the current nation's regular research tree, including foldere
 
 Zero remaining RP does not mark a vehicle as owned or an upgrade as researched. Set those states separately. Silver Lion costs stay unchanged. Enter a whole number from 0 to the full RP cost. Blank input is not accepted.
 
-Clear Plan removes selections, status marks, and vehicle research progress for the current nation and category. The modification window has one clear button. It removes that vehicle's modification targets, researched marks, and progress together.
+Clear Plan removes selections, status marks, and research progress for the current nation and category. Undo restores these records and the original route within 15 seconds. The modification window offers the same undo period. Further edits or switching trees dismiss the old undo. Other trees remain unchanged.
 
 Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fleets. The interface and vehicle names support Chinese, English, Russian, German, French, Japanese, and Spanish. This project does not translate third-party Wiki articles.
 

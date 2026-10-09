@@ -211,6 +211,7 @@ body,
   opacity: 0; visibility: hidden; pointer-events: none;
 }
 .modification-actions button:focus-visible .modification-action-label { opacity: 1; visibility: visible; }
+.modification-dialog[data-modification-pointer="touch"] .modification-actions button .modification-action-label { opacity: 0; visibility: hidden; }
 @media (hover: hover) and (pointer: fine) {
   .modification-actions button:hover .modification-action-label { opacity: 1; visibility: visible; }
 }
