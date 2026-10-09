@@ -188,6 +188,7 @@ body,
   gap: 6px; align-items: center; align-self: center;
 }
 .modification-dialog .modification-actions button {
+  position: static;
   display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 44px;
   padding: 8px; border: 1px solid #697771; border-radius: 4px; background: #222b29;
   color: #c4cec8; font-size: 12px; line-height: 16px; white-space: normal;
@@ -204,12 +205,28 @@ body,
 [data-modification-action="all"] { --modification-action-icon: url("assets/navigation/list-checks.svg"); }
 .modification-action-label {
   position: absolute; bottom: calc(100% + 8px); left: 0; z-index: 10;
-  width: max-content; max-width: 100%; padding: 6px 9px; box-sizing: border-box;
+  width: max-content; max-width: min(280px, 100%); padding: 6px 9px; box-sizing: border-box;
   border: 1px solid #7d8b83; border-radius: 4px; background: #19211e; color: #e7ece8;
-  font-size: 12px; font-weight: 500; line-height: 18px; text-align: left;
+  font-size: 12px; font-weight: 500; line-height: 18px; text-align: left; white-space: normal; overflow-wrap: anywhere;
   opacity: 0; visibility: hidden; pointer-events: none;
 }
-.modification-actions button:is(:hover, :focus-visible) .modification-action-label { opacity: 1; visibility: visible; }
+.modification-actions button:focus-visible .modification-action-label { opacity: 1; visibility: visible; }
+@media (hover: hover) and (pointer: fine) {
+  .modification-actions button:hover .modification-action-label { opacity: 1; visibility: visible; }
+}
+.modification-undo-notice {
+  flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 4px 12px; border-top: 1px solid #657d70; background: #293c32; color: #e7efe9;
+  font-size: 12px; line-height: 18px;
+}
+.modification-undo-notice[hidden] { display: none; }
+.modification-undo-notice:not([hidden]) + .modification-footer .modification-action-label { opacity: 0; visibility: hidden; }
+.modification-undo-notice > span { min-width: 0; overflow-wrap: anywhere; }
+.modification-undo-notice button {
+  flex-shrink: 0; max-width: 45%; min-width: 44px; min-height: 44px; padding: 6px 10px;
+  border: 1px solid #82978a; border-radius: 4px; background: #354c3e; color: #f0f5ef;
+  font-size: 12px; line-height: 18px; white-space: normal; overflow-wrap: anywhere; cursor: pointer;
+}
 @media (max-width: 720px), (max-height: 540px) and (pointer: coarse) {
   .modification-dialog .modification-vehicle h2 { font-size: 17px; }
   .modification-dialog .modification-toolbar {

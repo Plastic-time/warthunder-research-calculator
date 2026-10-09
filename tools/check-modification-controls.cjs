@@ -52,6 +52,8 @@ async function main() {
         await page.locator('[data-mod-id]:not([data-mod-id="us_aim_9b"]):not([disabled])').first().click({ button: 'right' });
         await toggle.uncheck();
         const otherRecords = await page.evaluate(() => Object.fromEntries(Object.entries(localStorage).filter(([key]) => key !== 'wt-research:modifications:f_86em_greece')));
+        await action('calculate').click();
+        const populatedBudget = await page.locator('.modification-budget').innerText();
         const populated = await page.evaluate(() => JSON.parse(localStorage.getItem('wt-research:modifications:f_86em_greece')));
         assert(populated.selected.length > 0 && populated.researched.length > 0 && Object.keys(populated.progressRp).length > 0);
         assert.equal(await page.locator('[data-modification-action="clear-owned"]').count(), 0);
@@ -65,6 +67,16 @@ async function main() {
         assert.deepEqual(cleared.progressRp, {});
         assert.equal(cleared.airCombat, false);
         assert.deepEqual(await page.evaluate(() => Object.fromEntries(Object.entries(localStorage).filter(([key]) => key !== 'wt-research:modifications:f_86em_greece'))), otherRecords);
+        const undo = page.locator('[data-modification-undo]');
+        const notice = page.locator('.modification-undo-notice');
+        assert(await notice.isVisible());
+        await action('clear').click();
+        await undo.click();
+        assert(!(await notice.isVisible()));
+        assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('wt-research:modifications:f_86em_greece'))), populated);
+        assert.equal(await page.locator('.modification-budget').innerText(), populatedBudget);
+        assert.equal(await target.locator('.modification-rp-progress').count(), 1);
+        await action('clear').click();
         await page.reload({ waitUntil: 'domcontentloaded' });
         await page.waitForFunction(() => ModificationWorkbench.hasVehicle('f_86em_greece'));
         await page.evaluate(() => {
@@ -75,11 +87,13 @@ async function main() {
         assert(!(await toggle.isChecked()));
         assert.equal(await page.locator('#modificationRp').innerText(), '0');
         assert.equal(await page.locator('.modification-rp-progress').count(), 0);
+        assert(!(await notice.isVisible()));
         await toggle.check();
         await action('all').click();
         assert.deepEqual(await page.evaluate(() => [controlResult.rp, controlResult.sl]), [145800, 226000]);
         await action('clear').click();
         await target.click();
+        assert(!(await notice.isVisible()), 'A new selection must invalidate stale undo');
         await action('calculate').click();
         await page.waitForFunction(() => [...document.querySelectorAll('[data-mod-id] img')].every(i => i.complete && i.naturalWidth > 0));
         for (const locale of ['zh', 'en', 'ru', 'de', 'fr', 'ja', 'es']) {
@@ -112,7 +126,30 @@ async function main() {
             assert.equal(await action(name).locator('.modification-action-icon').count(), 1);
             assert((await action(name).getAttribute('aria-label')).length > 0);
             assert.equal(await action(name).getAttribute('aria-label'), await action(name).locator('.modification-action-label').textContent());
+            await page.keyboard.press('Tab');
+            await action(name).focus();
+            const tip = action(name).locator('.modification-action-label');
+            assert(await tip.isVisible());
+            const tipBox = await tip.boundingBox();
+            assert(tipBox.width >= (name === 'clear' ? 120 : 60) && tipBox.height <= 110, `${mode} ${width} ${locale} ${name}: tooltip squeezed into a column ${JSON.stringify(tipBox)}`);
+            assert(tipBox.x >= 0 && tipBox.x + tipBox.width <= width && tipBox.y >= 0, `${locale}: tooltip offscreen`);
           }
+          await action('clear').focus();
+          await page.screenshot({ path: path.join(output, `${mode}-${width}-${locale}-tooltip.png`) });
+          await action('clear').click();
+          assert(await notice.isVisible());
+          if (mobile) assert(!(await action('clear').locator('.modification-action-label').isVisible()), 'No sticky touch tooltip');
+          const undoLayout = await notice.evaluate(el => {
+            const r = el.getBoundingClientRect();
+            const footer = el.nextElementSibling.getBoundingClientRect();
+            const tree = document.getElementById('modificationViewport').getBoundingClientRect();
+            return { left: r.left, right: r.right, top: r.top, bottom: r.bottom, footerTop: footer.top, treeBottom: tree.bottom, treeHeight: tree.height, clipped: el.scrollWidth > el.clientWidth };
+          });
+          assert(undoLayout.treeBottom <= undoLayout.top + 1 && undoLayout.bottom <= undoLayout.footerTop + 1 && undoLayout.treeHeight > 80, `${locale}: undo overlaps the tree or footer`);
+          assert(!undoLayout.clipped && undoLayout.left >= 0 && undoLayout.right <= width, `${locale}: undo clipped`);
+          await page.screenshot({ path: path.join(output, `${mode}-${width}-${locale}-undo.png`) });
+          await undo.click();
+          await page.locator('[data-modification-mode="select"]').click();
           const iconUrls = await page.locator('.modification-action-icon').evaluateAll(icons => icons.map(el => getComputedStyle(el).maskImage.match(/url\("?([^"\)]+)/)?.[1]));
           for (const url of iconUrls) {
             assert(url);
@@ -128,8 +165,33 @@ async function main() {
           await action('clear').focus();
           await page.keyboard.press('Tab');
           assert(await action('all').evaluate(el => el.matches(':focus-visible')));
+          await page.clock.install();
+          await action('clear').click();
+          await page.mouse.move(0, 0);
+          await page.clock.fastForward(15001);
+          assert(!(await notice.isVisible()), 'Undo expires after 15 seconds');
+          await target.click();
+          await action('clear').click();
+          await undo.focus();
+          await page.clock.fastForward(20000);
+          assert(await notice.isVisible(), 'Keyboard focus must pause expiry');
+          await action('calculate').focus();
+          await page.clock.fastForward(15001);
+          assert(!(await notice.isVisible()), 'Expiry resumes after focus leaves');
+          await target.click();
+          await action('clear').click();
+          await toggle.uncheck();
+          assert(!(await notice.isVisible()), 'Changing preference invalidates stale undo');
+          await action('all').click();
+          await action('clear').click();
+          await page.evaluate(() => ModificationWorkbench.open('ussr_object_416'));
+          assert(!(await notice.isVisible()), 'Switching vehicle invalidates stale undo');
+          await page.evaluate(() => ModificationWorkbench.open('f_86em_greece'));
+          await action('all').click();
+          await action('clear').click();
         }
         await page.locator('[data-modification-close]').click();
+        assert(!(await notice.isVisible()), 'Closing the dialog invalidates undo');
         await page.evaluate(() => ModificationWorkbench.open('ussr_object_416'));
         assert(!(await toggle.isVisible()));
         await action('all').click();

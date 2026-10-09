@@ -24,6 +24,22 @@
   let localizedNames = {};
   let nameFallbacks = {};
   const storageKey = id => `wt-research:modifications:${id}`;
+  let clearedSnapshot = null;
+  let undoTimer = null;
+
+  function dismissUndo() {
+    clearTimeout(undoTimer);
+    undoHovered = false;
+    clearedSnapshot = null;
+    undoNotice.hidden = true;
+    undoNotice.querySelector('[role="status"]').textContent = "";
+  }
+
+  function scheduleUndoExpiry() {
+    clearTimeout(undoTimer);
+    if (!clearedSnapshot || undoNotice.contains(document.activeElement) || undoHovered) return;
+    undoTimer = setTimeout(dismissUndo, 15000);
+  }
 
   async function sha256(content) {
     const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(content));
@@ -237,6 +253,8 @@
     }
     text(".modification-toolbar > p", ui.editProgress ? "剩余 RP" : "左键选择目标 · 右键标记已研发 · 等级门槛按游戏数据计算");
     text(".modification-budget > span", "配件预算");
+    text("[data-modification-undo]", "撤销清空");
+    if (clearedSnapshot) text('.modification-undo-notice [role="status"]', "已清空当前载具的配件记录");
     for (const [action, source] of Object.entries({ clear: "清空配件目标、已研发标记及进度", all: "全部配件", calculate: "计算配件研发" })) {
       const button = dialog.querySelector(`[data-modification-action="${action}"]`);
       const label = button?.querySelector(".modification-action-label");
@@ -362,6 +380,7 @@
   }
 
   async function open(vehicleId) {
+    dismissUndo();
     try {
       if (ui.data?.vehicleId !== vehicleId) {
         ui.data = await loadVehicle(vehicleId);
@@ -404,12 +423,14 @@
         title: tile.querySelector("b").textContent, total: mod.rp, value: ui.progressRp[id],
         onSave(value) {
           if (ui.data.vehicleId !== vehicleId) return;
+          dismissUndo();
           if (value) ui.progressRp[id] = value; else delete ui.progressRp[id];
           if (ui.result) calculate(); else { save(); render(); }
         },
       });
       return;
     }
+    dismissUndo();
     if (ui.researched.has(id)) ui.researched.delete(id);
     if (ui.selected.has(id)) ui.selected.delete(id); else ui.selected.add(id);
     ui.result = null;
@@ -432,6 +453,7 @@
     event.preventDefault();
     const id = tile.dataset.modId;
     if (ui.unlocked.has(id)) return;
+    dismissUndo();
     if (ui.researched.has(id)) ui.researched.delete(id);
     else { ui.researched.add(id); ui.selected.delete(id); }
     ui.result = null;
@@ -449,18 +471,28 @@
     }
     const action = event.target.closest("[data-modification-action]")?.dataset.modificationAction;
     if (!action) return;
-    if (action === "calculate") calculate();
+    if (action === "calculate") { dismissUndo(); calculate(); }
     if (action === "all") {
+      dismissUndo();
       ui.selected = new Set(ui.data.mods.filter(mod => !ui.researched.has(mod.id) && !ui.unlocked.has(mod.id)).map(mod => mod.id));
       calculate();
     }
     if (action === "clear") {
+      if (!ui.selected.size && !ui.researched.size && !Object.keys(ui.progressRp).length) return;
+      dismissUndo();
+      clearedSnapshot = {
+        vehicleId: ui.data.vehicleId, selected: new Set(ui.selected), researched: new Set(ui.researched),
+        progressRp: { ...ui.progressRp }, result: ui.result,
+      };
       ui.selected.clear();
       ui.researched.clear();
       ui.progressRp = Object.create(null);
       ui.result = null;
       save();
       render();
+      undoNotice.hidden = false;
+      undoNotice.querySelector('[role="status"]').textContent = t("已清空当前载具的配件记录");
+      scheduleUndoExpiry();
     }
   });
 
@@ -501,6 +533,7 @@
     button.replaceChildren(icon, label);
   });
   preference.querySelector("input").addEventListener("change", event => {
+    dismissUndo();
     ui.airCombat = event.target.checked;
     if (ui.result) calculate(); else { save(); render(); }
   });
@@ -510,6 +543,33 @@
   dialog.querySelector(".modification-legend").append(priorityLegend);
   title.removeAttribute("data-i18n");
   status.removeAttribute("data-i18n");
+  const undoNotice = document.createElement("div");
+  undoNotice.className = "modification-undo-notice";
+  undoNotice.hidden = true;
+  undoNotice.innerHTML = '<span role="status" aria-live="polite"></span><button type="button" data-modification-undo></button>';
+  dialog.querySelector(".modification-footer").before(undoNotice);
+  let undoHovered = false;
+  undoNotice.addEventListener("pointerenter", event => {
+    if (event.pointerType !== "mouse") return;
+    undoHovered = true;
+    clearTimeout(undoTimer);
+  });
+  undoNotice.addEventListener("pointerleave", () => { undoHovered = false; scheduleUndoExpiry(); });
+  undoNotice.addEventListener("focusin", () => clearTimeout(undoTimer));
+  undoNotice.addEventListener("focusout", scheduleUndoExpiry);
+  undoNotice.querySelector("button").addEventListener("click", () => {
+    const snapshot = clearedSnapshot;
+    if (!snapshot || snapshot.vehicleId !== ui.data?.vehicleId) { dismissUndo(); return; }
+    ui.selected = snapshot.selected;
+    ui.researched = snapshot.researched;
+    ui.progressRp = snapshot.progressRp;
+    ui.result = snapshot.result;
+    dismissUndo();
+    save();
+    render();
+    dialog.querySelector('[data-modification-action="clear"]').focus({ preventScroll: true });
+  });
+  dialog.addEventListener("close", dismissUndo);
   translateControls();
 
   window.ModificationWorkbench = { loadCatalog, hasVehicle, open };

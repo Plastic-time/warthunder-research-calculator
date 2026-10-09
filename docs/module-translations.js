@@ -22,6 +22,8 @@
     ["配件预算","Modification cost","Стоимость модификаций","Modifikationskosten","Coût des modifications","改造費用","Coste de modificaciones"],
   ["清除已研发","Clear researched marks","Снять отметки «Исследовано»","Erforscht-Markierungen löschen","Retirer les marques « Recherché »","研究済みの印を解除","Quitar marcas de investigado"],
     ["清空目标","Clear targets","Сбросить цели","Ziele löschen","Effacer les objectifs","目標をクリア","Borrar objetivos"],
+    ["撤销清空","Undo clear","Отменить сброс","Zurücksetzen rückgängig","Annuler l’effacement","クリアを取り消す","Deshacer borrado"],
+    ["已清空当前载具的配件记录","Modifications cleared for this vehicle","Записи модификаций этой техники сброшены","Modifikationsdaten dieses Fahrzeugs zurückgesetzt","Modifications effacées pour ce véhicule","この車両の改造記録をクリアしました","Se han borrado las modificaciones de este vehículo"],
     ["清空配件目标、已研发标记及进度","Clear modification targets, researched marks and progress","Сбросить цели, отметки исследования и прогресс модификаций","Modifikationsziele, Erforscht-Markierungen und Fortschritt löschen","Effacer les objectifs, les marques de recherche et la progression des modifications","改造の目標・研究済みの印・研究進捗をクリア","Borrar objetivos, marcas de investigado y progreso de las modificaciones"],
   ["全部配件","Select all modifications","Выбрать все","Alle auswählen","Tout sélectionner","すべて選択","Seleccionar todo"],
   ["计算配件研发","Calculate costs","Рассчитать затраты","Kosten berechnen","Calculer les coûts","費用を計算","Calcular costes"],

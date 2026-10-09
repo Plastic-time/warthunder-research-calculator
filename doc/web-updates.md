@@ -4,6 +4,13 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-09 · 配件清空撤销与提示修复
+
+- 配件清空后提供 15 秒撤销，恢复当前载具的目标、已研发标记、RP 进度和原预算。鼠标停留或键盘聚焦提示时暂停计时。
+- 新操作、关闭窗口和切换载具会取消待撤销记录，不覆盖后续操作或其他载具。
+- 修复清空按钮提示被挤成竖列的问题；桌面提示正常换行，触屏点击不再留下悬浮提示。
+- 同步七种语言，不修改计算逻辑、游戏数据或版本号，不打包。
+
 ## 2026-10-08 · 介绍与截图更新
 
 - 中英文 README 改为说明“剩余 RP”输入和合并后的清空操作。
@@ -27,6 +34,13 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-09 · Undo Clear and Tooltip Fix
+
+- Added a 15-second undo after clearing modifications. It restores targets, researched marks, RP progress, and the previous budget. Hovering or keyboard focus pauses the timer.
+- Further actions, closing the window, or switching vehicles dismiss undo. Later edits and other vehicles remain untouched.
+- Fixed tooltips wrapping into a narrow vertical column. Desktop hints wrap normally. Touch taps no longer leave a hover hint behind.
+- Updated all seven languages. No calculation, game data, or version changes. No new Windows package.
 
 ### 2026-10-08 · Documentation and Screenshots
 

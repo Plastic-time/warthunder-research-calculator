@@ -40,7 +40,7 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 - **Complete the requirements**: Calculate costs adds prerequisites and tier fillers. Researched items are not charged again.
 - **Enter remaining RP**: switch to Remaining RP and select an upgrade. Enter the amount shown in the game. Enter 0 when no RP remains. Enter the full cost to clear that progress record. Existing records are converted for display. No re-entry is needed.
 - **Prioritize air combat**: this option is on by default. You can turn it off. It favors countermeasures and air combat upgrades. Missile research follows your chosen targets and their actual prerequisites.
-- **Clear in one action**: the curved-arrow button clears targets, researched marks, and progress for the current vehicle's modifications. It keeps the air combat setting. Other vehicles are not affected.
+- **Clear and undo**: the curved-arrow button clears targets, researched marks, and progress for this vehicle. It keeps the air combat setting and leaves other vehicles unchanged. Undo is available for 15 seconds. Further edits, closing the window, or switching vehicles dismiss it.
 - **Keep costs separate**: modification costs do not enter the vehicle research total. Upgrades explicitly priced at 0 RP and 0 SL are marked as unlocked.
 
 <details>
