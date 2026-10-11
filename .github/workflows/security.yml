@@ -25,6 +25,7 @@ jobs:
       - run: node tools/test-desktop-snapshot.cjs
       - run: node tools/test-planner.cjs
       - run: node --test tools/test-research-progress.cjs
+      - run: node --test tools/test-plan-backup.cjs
       - run: node tools/test-modifications.cjs
       - run: node tools/test-f4u7-modifications.cjs
       - run: node tools/test-prerequisite-audit.cjs

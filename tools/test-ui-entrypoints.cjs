@@ -22,6 +22,7 @@ for (const folder of ['public', 'docs']) {
   assert.equal(avatar.attr('src'), (folder === 'public' ? '/' : '') + 'assets/creator-avatar.jpg');
   assert(fs.existsSync(path.join(root, folder, 'assets/creator-avatar.jpg')));
   assert.equal($('#planButton').length, 1);
+  assert.equal($('#planBackupButton').length, 1);
   assert.equal($('#planButton').closest('#floatingBudget').length, 1);
   assert.equal($('#floatingPlanButton').length, 0);
   assert.equal($('.topbar-actions #planButton').length, 0);
@@ -30,7 +31,7 @@ for (const folder of ['public', 'docs']) {
   assert.equal($('#budgetRp').length, 1);
   assert.equal($('#budgetSl').length, 1);
   const scripts = $('script[src]').map((_, node) => $(node).attr('src').replace(/^\//, '').split('?')[0]).get();
-  for (const script of ['research-progress.js', 'vehicle-long-press.js', 'roster.js', 'modifications.js', 'tree-navigation.js', 'header-layout.js']) {
+  for (const script of ['plan-storage.js', 'plan-backup.js', 'research-progress.js', 'vehicle-long-press.js', 'roster.js', 'modifications.js', 'tree-navigation.js', 'header-layout.js']) {
     assert(scripts.includes(script), `${folder}: missing ${script}`);
     assert(scripts.indexOf(script) < scripts.indexOf('app.js'));
   }
@@ -39,6 +40,8 @@ for (const folder of ['public', 'docs']) {
   assert(styles.includes('ui-dark.css'));
   assert(styles.includes('tree-navigation.css'));
   assert(styles.includes('header-layout.css'));
+  assert(styles.includes('plan-backup.css'));
+  assert(scripts.indexOf('plan-storage.js') < scripts.indexOf('modifications.js'));
   for (const file of ['assets/research-emblem.png', 'assets/navigation/search.svg', 'assets/navigation/ellipsis.svg', 'assets/navigation/sliders-horizontal.svg']) {
     assert(fs.existsSync(path.join(root, folder, file)), file);
   }
@@ -54,6 +57,9 @@ for (const file of ['styles.css', 'tree-scroll.css', 'vehicle-long-press.js', 'm
   assert(fs.readFileSync(path.join(root, 'public', file)).equals(fs.readFileSync(path.join(root, 'docs', file))), `${file}: copies differ`);
 }
 const pkg = require('../package.json');
+for (const file of ['plan-storage.js', 'plan-backup.js', 'plan-backup.css', 'module-translations.js', 'assets/navigation/download.svg', 'assets/navigation/upload.svg']) {
+  assert(fs.readFileSync(path.join(root, 'public', file)).equals(fs.readFileSync(path.join(root, 'docs', file))), `${file}: copies differ`);
+}
 assert(fs.readFileSync(path.join(root, 'public/assets/creator-avatar.jpg')).equals(fs.readFileSync(path.join(root, 'docs/assets/creator-avatar.jpg'))));
 for (const file of ['README.md', 'README.en.md']) {
   const text = fs.readFileSync(path.join(root, file), 'utf8');

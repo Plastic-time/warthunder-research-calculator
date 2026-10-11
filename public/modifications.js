@@ -154,17 +154,17 @@
 
   function save() {
     if (!ui.data) return;
-    localStorage.setItem(storageKey(ui.data.vehicleId), JSON.stringify({
+    window.PlanStorage.write(storageKey(ui.data.vehicleId), {
       selected: [...ui.selected], researched: [...ui.researched],
       progressRp: ui.progressRp,
       airCombat: ui.airCombat,
-    }));
+    });
   }
 
   function restore() {
     ui.airCombat = true;
     try {
-      const saved = JSON.parse(localStorage.getItem(storageKey(ui.data.vehicleId)) || "{}");
+      const saved = window.PlanStorage.read(storageKey(ui.data.vehicleId));
       ui.airCombat = saved.airCombat !== false;
       const ids = new Set(ui.data.mods.filter(mod => !ui.unlocked.has(mod.id)).map(mod => mod.id));
       const restoreIds = values => new Set((values || []).map(id => Object.hasOwn(ui.data.aliases, id) ? ui.data.aliases[id] : id).filter(id => ids.has(id)));
@@ -574,6 +574,12 @@
     dialog.querySelector('[data-modification-action="clear"]').focus({ preventScroll: true });
   });
   dialog.addEventListener("close", dismissUndo);
+  document.addEventListener("wt-plans-restored", () => {
+    dismissUndo();
+    if (dialog.open) dialog.close();
+    ui.data = null;
+    ui.result = null;
+  });
   translateControls();
 
   window.ModificationWorkbench = { loadCatalog, hasVehicle, open };

@@ -4,6 +4,14 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-10 · 计划备份与恢复
+
+- 新增备份与恢复入口，支持导出所有科技树的目标、已拥有标记、途经点、RP 进度、规划记录及各载具的配件记录。
+- 导入 JSON 文件后先展示摘要和覆盖数量，确认后仅替换备份中包含的记录；其他计划和界面语言保留。
+- 拒绝无效、重复记录、未知版本和超过 5 MB 的备份；预览后本地记录发生变化时要求重新确认。
+- 加入存储异常保护。读取失败保留原记录并提示；写入失败暂存本次修改，存储仍可读取时可导出备份。恢复中断时尝试回滚，回滚失败会明确警告。
+- 文件只在本机处理，不上传服务器。同步七种语言与中英文介绍，不修改计算逻辑或游戏数据，不发布 Windows 包。
+
 ## 2026-10-09 · 导航与界面细节优化
 
 - 宽屏桌面将军种切换移到左侧，国家、搜索、语言与计算范围集中在上方；手机保留横向军种切换。
@@ -45,6 +53,14 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-10 · Plan Backup and Restore
+
+- Added JSON backups for all trees in the current browser. Backups include targets, owned marks, waypoints, RP progress, routes, and vehicle modification records.
+- Import shows a summary and the number of existing records to replace. Changes require confirmation. Other plans and the interface language stay unchanged.
+- Invalid files, duplicate records, unknown versions, and files over 5 MB are rejected. If local records change after preview, choose the file again before restoring.
+- Added storage error handling. Unreadable records are preserved. Failed saves remain in memory and can be exported while storage remains readable. Interrupted restores attempt rollback. Rollback failures show an explicit warning.
+- Files stay on your device. Updated all seven languages and both READMEs. Calculation logic and game data are unchanged. No Windows package was released.
 
 ### 2026-10-09 · Navigation and UI Polish
 

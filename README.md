@@ -62,6 +62,8 @@
 
 手机版的使用指南和导出功能位于顶部“更多”菜单，搜索和筛选有各自的入口。最新网页改动见[独立更新日志](doc/web-updates.md)，使用指南中保留历史版本记录。
 
+**备份与恢复**：电脑端点击右上角的备份图标，手机端打开“更多 → 备份与恢复”。导出 JSON 文件可保存当前浏览器中所有科技树的目标、已拥有标记、途经点、RP 进度和配件记录。导入前会显示记录数量与覆盖数量，确认后只替换文件中包含的记录，其他计划保留。文件在本机处理，不上传服务器；这不是自动跨设备同步。
+
 网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.26 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.26/WarThunderResearchCalculator-v1.0.26-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js。
 
 > 本页说明和截图对应最新版网页。v1.0.26 下载包尚未包含本轮配件窗口、合并清空和“剩余 RP”输入改进，也不会自动获得网页更新。

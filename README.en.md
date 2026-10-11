@@ -62,6 +62,8 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 
 On mobile, open More at the top to find the guide and export controls. Search and filters have separate buttons. See the [web changelog](doc/web-updates.md#english) for recent changes. The in-app guide keeps earlier release notes.
 
+**Backup and restore**: select the backup icon at the top right. On mobile, open More, then Backup and restore. Export a JSON file to save targets, owned marks, waypoints, RP progress, and modification records across all trees in this browser. Import shows a summary before confirmation. Only records in the file are replaced. Other plans stay unchanged. Files are processed locally and are not uploaded. This is a manual transfer, not automatic device sync.
+
 Open the web app to start. No game account is required. On Windows, download the [v1.0.26 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.26/WarThunderResearchCalculator-v1.0.26-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed.
 
 > This guide and its screenshots show the current web app. The v1.0.26 download does not include the latest modification layout, combined clear button, or remaining-RP input. It does not receive web updates automatically.

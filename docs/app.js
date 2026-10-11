@@ -360,7 +360,7 @@ function isSquadronUnit(unit) {
 function loadSavedState() {
   discardBulkOwnedUndo();
   bulkOwnedDialog?.close();
-  const saved = JSON.parse(localStorage.getItem(storageKey()) || "{}");
+  const saved = window.PlanStorage.read(storageKey());
   state.planned = new Set(saved.planned || []);
   state.owned = new Set(saved.owned || []);
   state.progressRp = window.ResearchProgress.cleanMap(saved.progressRp);
@@ -380,9 +380,9 @@ function loadSavedState() {
 
 function saveState() {
   discardBulkOwnedUndo();
-  localStorage.setItem(
+  window.PlanStorage.write(
     storageKey(),
-    JSON.stringify({
+    {
       planned: [...state.planned],
       owned: [...state.owned],
       progressRp: state.progressRp,
@@ -394,7 +394,7 @@ function saveState() {
         fillerIds: state.planResult.fillerIds,
         removedAutoRoles: state.planResult.removedAutoRoles || {},
       } : null,
-    })
+    }
   );
 }
 
@@ -1509,6 +1509,10 @@ async function refreshCurrentTree() {
 }
 
 function wireEvents() {
+  window.PlanBackup.configure({
+    busy: () => treeSelectionLoading || els.planButton.disabled,
+    restored: async () => { discardBulkOwnedUndo(); await loadTree(); },
+  });
   document.addEventListener("wt-select-tree", selectCurrentTree);
   setupBulkOwned();
   window.VehicleLongPress?.configure({ open: openUnitContextMenu, close: closeUnitContextMenu });
