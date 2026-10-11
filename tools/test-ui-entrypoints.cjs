@@ -41,6 +41,9 @@ for (const folder of ['public', 'docs']) {
   assert(styles.includes('tree-navigation.css'));
   assert(styles.includes('header-layout.css'));
   assert(styles.includes('plan-backup.css'));
+  assert(styles.includes('tree-search.css'));
+  assert(scripts.includes('tree-search.js'));
+  assert(scripts.indexOf('tree-search.js') < scripts.indexOf('app.js'));
   assert(scripts.indexOf('plan-storage.js') < scripts.indexOf('modifications.js'));
   for (const file of ['assets/research-emblem.png', 'assets/navigation/search.svg', 'assets/navigation/ellipsis.svg', 'assets/navigation/sliders-horizontal.svg']) {
     assert(fs.existsSync(path.join(root, folder, file)), file);
@@ -57,7 +60,7 @@ for (const file of ['styles.css', 'tree-scroll.css', 'vehicle-long-press.js', 'm
   assert(fs.readFileSync(path.join(root, 'public', file)).equals(fs.readFileSync(path.join(root, 'docs', file))), `${file}: copies differ`);
 }
 const pkg = require('../package.json');
-for (const file of ['plan-storage.js', 'plan-backup.js', 'plan-backup.css', 'module-translations.js', 'assets/navigation/download.svg', 'assets/navigation/upload.svg']) {
+for (const file of ['tree-search.js', 'tree-search.css', 'plan-storage.js', 'plan-backup.js', 'plan-backup.css', 'module-translations.js', 'assets/navigation/download.svg', 'assets/navigation/upload.svg']) {
   assert(fs.readFileSync(path.join(root, 'public', file)).equals(fs.readFileSync(path.join(root, 'docs', file))), `${file}: copies differ`);
 }
 assert(fs.readFileSync(path.join(root, 'public/assets/creator-avatar.jpg')).equals(fs.readFileSync(path.join(root, 'docs/assets/creator-avatar.jpg'))));

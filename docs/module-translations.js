@@ -2,6 +2,8 @@
   "use strict";
   // Load after the shared WTI18n runtime and before the auxiliary modules.
   window.WTI18n.register([
+    ["清除搜索","Clear search","Очистить поиск","Suche löschen","Effacer la recherche","検索をクリア","Borrar búsqueda"],
+    ["匹配 {count} 辆","Matches: {count}","Найдено: {count}","Treffer: {count}","Résultats : {count}","検索結果：{count}件","Resultados: {count}"],
     ["备份与恢复","Backup and restore","Резервная копия","Sichern und wiederherstellen","Sauvegarde et restauration","バックアップと復元","Copia y restauración"],
     ["导出备份","Export backup","Экспорт копии","Sicherung exportieren","Exporter la sauvegarde","バックアップを保存","Exportar copia"],
     ["选择备份文件","Choose backup file","Выбрать файл копии","Sicherungsdatei wählen","Choisir une sauvegarde","バックアップを選択","Elegir archivo de copia"],

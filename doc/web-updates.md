@@ -4,6 +4,14 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-11 · 科技树搜索优化
+
+- 载具名称和 ID 搜索兼容空格、连字符、大小写及全角输入，例如 F15、F-15 和 F 15。
+- 中文输入法组词时保留当前科技树，确认文字后再筛选；连续输入合并刷新，减少重绘。
+- 显示匹配载具数量，包含折叠组内成员；手机点击“查看结果”或按回车可定位首个匹配载具，必要时展开折叠组。
+- 新增清除搜索按钮，清除后恢复搜索前的科技树位置，不改动计划、已拥有标记或研发进度。
+- 同步七种语言；不修改计算逻辑、游戏数据或版本号，本次仅更新网页，不发布 Windows 包。
+
 ## 2026-10-10 · 计划备份与恢复
 
 - 新增备份与恢复入口，支持导出所有科技树的目标、已拥有标记、途经点、RP 进度、规划记录及各载具的配件记录。
@@ -53,6 +61,14 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-11 · Tech Tree Search
+
+- Search accepts spaces, hyphens, letter case, and full-width characters. F15, F-15, and F 15 find the same vehicles.
+- Chinese IME composition no longer redraws the tree. Rapid typing is grouped into one refresh.
+- Show the match count, including foldered vehicles. View results on mobile or press Enter to locate the first match. Its folder opens when needed.
+- Clear search restores the previous tree position. Targets, owned marks, and RP progress stay unchanged.
+- Updated all seven languages. No changes to calculations, game data, or version numbers. Web update only; no Windows package.
 
 ### 2026-10-10 · Plan Backup and Restore
 

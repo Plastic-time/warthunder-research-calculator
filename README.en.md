@@ -18,6 +18,8 @@
 
 ## Plan Your Research Route
 
+Search accepts names such as F15, F-15, and F 15 and shows the match count. On mobile, View results locates the first match, including foldered vehicles. Clear search returns to your previous tree position. Your plan and RP progress stay unchanged.
+
 Set your targets and mark the vehicles you own. The calculator searches for a low-RP route. It checks prerequisites and rank unlock requirements, then totals the RP and Silver Lions.
 
 [![US ground tech tree after automatic planning, showing an M18 target and the research budget](doc/assets/research-tree-en.png)](doc/assets/research-tree-en.png)

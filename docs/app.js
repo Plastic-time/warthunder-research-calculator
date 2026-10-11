@@ -612,6 +612,7 @@ function getTreeResearchUnits() {
 }
 
 let treeSelectionLoading = true;
+let treeSearch;
 function treeRosterAvailable() {
   return state.units.length > 0 && state.units.every(unit => window.RosterAudit?.info(state.country, state.type, unit.data_unit_id));
 }
@@ -1038,7 +1039,7 @@ function unitMatchesSearch(unit) {
   const parentTitles = state.localizedNames[cleanText(unit.parent_group_id).toLowerCase()] || {};
   const haystack =
     `${Object.values(titles).join(" ")} ${unit.title || ""} ${unit.data_unit_id || ""} ${Object.values(parentTitles).join(" ")} ${unit.parent_group_title || ""} ${translateRole(unit.main_role)}`.toLowerCase();
-  return haystack.includes(state.search.toLowerCase());
+  return window.TreeSearch.matches(haystack, state.search);
 }
 
 // Presentation only: read the existing plan without promoting automatic picks to targets.
@@ -1348,6 +1349,7 @@ function renderRankRail(rank) {
 }
 
 function renderTree() {
+  treeSearch?.refresh();
   window.VehicleFolders?.beforeTreeRender();
   window.RosterAudit?.render(state.country, state.type);
   if (state.treeLoadError) {
@@ -1425,6 +1427,7 @@ async function loadTree() {
   const requestId = ++treeRequestId;
   state.country = els.countrySelect.value;
   state.type = els.typeSelect.value;
+  treeSearch?.treeChanged();
   window.TreeNavigation?.sync(true);
   setStatus(tr("正在读取静态科技树数据"));
   els.treeContainer.innerHTML = `<div class="loading">${tr("正在载入科技树")}</div>`;
@@ -1456,6 +1459,7 @@ async function loadTree() {
     if (requestId === treeRequestId) {
       window.TreeNavigation?.sync(false);
       treeSelectionLoading = false;
+      treeSearch?.refresh();
       refreshTreeSelectionButton();
     }
   }
@@ -1519,9 +1523,13 @@ function wireEvents() {
   els.countrySelect.addEventListener("change", loadTree);
   els.typeSelect.addEventListener("change", loadTree);
 
-  els.searchInput.addEventListener("input", () => {
-    state.search = els.searchInput.value.trim();
-    renderTree();
+  treeSearch = window.TreeSearch.create({
+    input: els.searchInput, tree: els.treeContainer,
+    query: () => state.search, setQuery: value => { state.search = value; },
+    scope: () => `${state.country}/${state.type}`,
+    units: () => state.units, matches: unitMatchesSearch,
+    busy: () => treeSelectionLoading, failed: () => state.treeLoadError,
+    render: renderTree,
   });
 
   els.languageSelect.addEventListener("change", event => setLanguage(event.target.value));

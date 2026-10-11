@@ -156,14 +156,9 @@
     const done = node("button", "secondary-button mobile-search-done");
     done.type = "button";
     done.dataset.i18n = "查看结果";
-    done.addEventListener("click", closeSheets);
+    done.addEventListener("click", () => document.dispatchEvent(new Event("wt-search-results")));
     searchBody.append(done);
-    searchBody.addEventListener("keydown", event => {
-      if (event.key === "Enter" && event.target.id === "searchInput") {
-        event.preventDefault();
-        closeSheets();
-      }
-    });
+    document.addEventListener("wt-search-results", closeSheets);
     const selectTree = iconButton("全选当前科技树", "check");
     selectTree.id = "selectTreeButton";
     selectTree.setAttribute("role", "checkbox");
