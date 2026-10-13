@@ -26,6 +26,7 @@
   const buttons = [];
   const placements = [];
   let compactTools;
+  let layout;
   const budget = document.getElementById("floatingBudget");
   const tree = document.getElementById("treeContainer");
   // Translations and large totals can make the dock taller; keep the last row reachable.
@@ -83,10 +84,11 @@
     sheets.push({ dialog, trigger });
     return body;
   }
-  function relocate(element, target) {
-    const placeholder = document.createComment("Desktop position");
+  // when is the layout in which the element lives in its sheet: "mobile", "desktop" or "always".
+  function relocate(element, target, when = "mobile") {
+    const placeholder = document.createComment("Home position");
     element.before(placeholder);
-    placements.push({ element, target, placeholder });
+    placements.push({ element, target, placeholder, when });
   }
   const authorButton = iconButton("作者", "");
   authorButton.id = "mobileAuthorButton";
@@ -97,15 +99,13 @@
   moreButton.id = "mobileMoreButton";
   controls.append(authorButton, moreButton);
   const creator = document.querySelector(".creator-watermark");
-  const creatorSlot = node("div", "header-creator");
-  topbar.insertBefore(creatorSlot, controls);
-  creatorSlot.append(creator);
-  relocate(creator, sheet("mobileAuthor", "作者", authorButton));
+  relocate(creator, sheet("mobileAuthor", "作者", authorButton), "always");
   const actions = document.querySelector(".topbar-actions");
   const actionArea = node("div", "header-actions-area");
   actions.before(actionArea);
   actionArea.append(version, actions);
-  relocate(actions, sheet("mobileMore", "更多", moreButton));
+  const moreBody = sheet("mobileMore", "更多", moreButton);
+  relocate(actions, moreBody);
   actions.addEventListener("click", event => {
     const button = event.target.closest("button");
     if (mobile.matches && button && !button.disabled) closeSheets();
@@ -126,6 +126,8 @@
     const subtitle = node("span", "brand-subtitle");
     subtitle.textContent = full.replace(/战争雷霆|Warthunder\s*/i, "").trim();
     heading.replaceChildren(name, document.createTextNode(window.WTI18n.locale === "zh" ? "" : " "), subtitle);
+    // Desktop shows these as icons only, so the label doubles as the tooltip.
+    for (const button of actions.querySelectorAll("button[data-i18n]")) button.title = t(button.dataset.i18n);
     for (const button of buttons) {
       button.title = t(button.dataset.label);
       button.setAttribute("aria-label", button.title);
@@ -137,9 +139,11 @@
   function respond() {
     closeSheets();
     topbar.classList.toggle("compact-header", mobile.matches);
-    for (const { element, target, placeholder } of placements) {
-      if (mobile.matches) target.append(element);
-      else placeholder.after(element);
+    layout = mobile.matches ? "mobile" : "desktop";
+    // Send everything home first: a control can have a different sheet in each layout.
+    for (const { element, placeholder } of placements) placeholder.after(element);
+    for (const { element, target, when } of placements) {
+      if (when === "always" || when === layout) target.append(element);
     }
     window.dispatchEvent(new Event("resize"));
   }
@@ -177,10 +181,15 @@
     const searchLabel = filters.querySelector(".search-label");
     // Move the original controls: their listeners, selections and planner state stay intact.
     relocate(searchLabel, searchBody);
+    const languageField = filters.querySelector(".language-field");
     for (const field of [...filters.children]) {
-      if (field !== searchLabel && !field.hidden) relocate(field, filterBody);
+      if (field === searchLabel || field.hidden) continue;
+      if (field === languageField) relocate(field, filterBody);
+      else relocate(field, filterBody, "always");
     }
     relocate(metadata, compactTools);
+    // On desktop the More sheet holds what is set once or rarely needed.
+    for (const element of [languageField, version]) relocate(element, moreBody, "desktop");
     const actions = node("div", "mobile-tree-actions");
     actions.append(search, options);
     compactTools.append(actions);
@@ -196,6 +205,8 @@
     return true;
   }
   mobile.addEventListener("change", respond);
+  // Some embedded browsers resize without reporting the media query change.
+  window.addEventListener("resize", () => { if ((mobile.matches ? "mobile" : "desktop") !== layout) respond(); });
   document.addEventListener("wt-language-change", refreshText);
   document.addEventListener("DOMContentLoaded", refreshText, { once: true });
   refreshText();
