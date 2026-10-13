@@ -22,7 +22,10 @@ async function main() {
       const mods = shell.locator('.unit-modifications-launch');
       await wiki.scrollIntoViewIfNeeded();
       const a = await wiki.boundingBox(), b = await mods.boundingBox();
-      for (const box of [a, b]) assert(box.width >= 44 && box.height >= 44, '44px card action target');
+      // Wiki keeps a 44px target everywhere; modifications is a compact corner icon for mouse users.
+      const minModTarget = mobile ? 44 : 24;
+      assert(a.width >= 44 && a.height >= 44, '44px card action target');
+      assert(b.width >= minModTarget && b.height >= minModTarget, 'Modifications action target');
       assert(a.x + a.width <= b.x || b.x + b.width <= a.x || a.y + a.height <= b.y || b.y + b.height <= a.y, 'Wiki and modifications do not overlap');
       assert.equal(await wiki.locator('.wiki-bookmark').evaluate(el => el.getBoundingClientRect().width), 22, 'Bookmark stays small');
       for (const button of [wiki, mods]) {
@@ -61,7 +64,8 @@ async function main() {
         if (mobile) await page.locator('#mobileMore .mobile-sheet-heading button').click();
       }
       await page.evaluate(() => WTI18n.setLocale('zh'));
-      if (mobile) await page.locator('#mobileFiltersButton').click();
+      // Planning options live in the Filters sheet at every width.
+      await page.locator('#mobileFiltersButton').click();
       const checkbox = page.locator('#avoidFoldedInput');
       await checkbox.click();
       assert.equal(await checkbox.evaluate(el => getComputedStyle(el).boxShadow), 'none');
@@ -71,7 +75,7 @@ async function main() {
       assert.equal(await page.locator('#selectTreeButton').getAttribute('aria-checked'), 'true');
       await page.locator('#selectTreeButton').click();
       assert.equal(await page.locator('#selectTreeButton').getAttribute('aria-checked'), 'false');
-      if (mobile) await page.locator('#mobileFilters .mobile-sheet-heading button').click();
+      await page.locator('#mobileFilters .mobile-sheet-heading button').click();
       await page.keyboard.press('Tab');
       await mods.focus();
       assert.equal(await mods.evaluate(el => getComputedStyle(el).outlineStyle), 'solid', 'Keyboard focus remains visible');

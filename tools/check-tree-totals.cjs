@@ -41,7 +41,8 @@ async function main() {
           rp: sum(candidates, 'rp') - 500, sl: sum(candidates, 'sp'),
           folded: candidates.filter(u => u.parent_group_id).map(u => u.data_unit_id) };
       });
-      if (width < 720) await page.locator('#mobileFiltersButton').click();
+      // Planning options live in the Filters sheet at every width.
+      await page.locator('#mobileFiltersButton').click();
       const autofill = page.locator('#avoidFoldedInput');
       const originalAutofill = await autofill.isChecked();
       for (let click = 0; click < 2; click++) {

@@ -339,7 +339,7 @@ body,
 .tree-canvas .unit-meta > .roster-hidden { color: var(--purple-7); background: var(--purple-2); padding: 1px 5px; box-shadow: inset 0 0 0 1px var(--purple-4); }
 .tree-canvas .unit-meta > .roster-pending { color: var(--red-5); background: var(--gold-2); padding: 1px 5px; }
 /* Specs and cost columns precede acquisition and planning status. */
-.tree-canvas .unit-meta > [data-unit-br] { grid-column: 3; grid-row: 1; padding-left: 6px; margin-top: 4px; color: var(--gray-13); font-size: var(--fs-xs); line-height: 16px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.tree-canvas .unit-meta > [data-unit-br] { grid-column: 3; grid-row: 1; padding-left: 6px; margin-top: 8px; color: var(--gray-13); font-size: var(--fs-xs); line-height: 16px; font-weight: 650; font-variant-numeric: tabular-nums; }
 .tree-canvas .unit-meta > .role { grid-column: 3; grid-row: 2; justify-self: stretch; padding-left: 6px; color: var(--gray-11); font-size: var(--fs-3xs); line-height: 12px; }
 .tree-canvas .unit-meta > .rp,
 .tree-canvas .unit-meta > .sp { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 4px; min-width: 0; }
@@ -409,15 +409,16 @@ body,
 /* Once a target is set, vehicles and links off the route recede. */
 .tree-canvas:has(.unit-tile[data-plan-state="target"]) .unit-tile-shell:not(:hover, :focus-within) > .unit-tile:not([data-plan-state], .planned) { opacity: 0.6; }
 .tree-canvas:has(.unit-tile[data-plan-state="target"]) > .tree-links > path:not(.is-route) { opacity: 0.4; }
-/* The modifications entry is a quiet corner icon until the card is hovered or focused. */
-.tree-canvas .unit-modifications-launch { top: 6px; right: 2px; width: 28px; height: 28px; place-items: center; border: 0; border-radius: 2px; background: transparent; color: var(--gray-10); box-shadow: none; }
+/* The modifications entry is a quiet corner icon until the card is hovered or focused.
+   It starts below the status tab that hangs over the card's top edge. */
+.tree-canvas .unit-modifications-launch { top: 10px; right: 2px; width: 28px; height: 28px; place-items: center; border: 0; border-radius: 2px; background: transparent; color: var(--gray-10); box-shadow: none; }
 .tree-canvas .unit-modifications-launch > span { width: 16px; height: 16px; font-size: var(--fs-lg); line-height: 16px; }
 .tree-canvas .unit-modifications-launch b { display: none; }
 .tree-canvas .unit-tile-shell:hover > .unit-actions > .unit-modifications-launch,
 .tree-canvas .unit-modifications-launch:focus-visible { color: var(--gold-14); }
 .tree-canvas .unit-modifications-launch:hover { background: var(--gray-7); }
 @media (pointer: coarse) {
-  .tree-canvas .unit-modifications-launch { top: 0; right: 0; width: 44px; height: 44px; place-content: start end; padding: 12px 8px 0 0; color: var(--gold-14); }
+  .tree-canvas .unit-modifications-launch { top: 10px; right: 0; width: 44px; height: 44px; place-content: start end; padding: 6px 8px 0 0; color: var(--gold-14); }
 }
 .tree-canvas .folder-toggle { background: var(--gray-5); border-color: var(--green-4); color: var(--gray-12); box-shadow: 0 2px 0 var(--gray-1); border-radius: 1px; }
 .tree-canvas .folder-toggle:hover { background: var(--gray-8); }

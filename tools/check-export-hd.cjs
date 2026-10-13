@@ -31,7 +31,9 @@ async function main() {
           els.treeContainer.scrollTo(120, 600);
         }, country);
         const result = await page.evaluate(async () => {
-          const before = JSON.stringify(WTRouteExport.buildPayload());
+          // generatedAt has minute resolution, so a render that crosses a minute boundary must not count as a state change.
+          const snapshot = () => JSON.stringify({ ...WTRouteExport.buildPayload(), generatedAt: null });
+          const before = snapshot();
           const scroll = [els.treeContainer.scrollLeft, els.treeContainer.scrollTop];
           let dimensions;
           const toCanvas = htmlToImage.toCanvas;
@@ -53,7 +55,7 @@ async function main() {
             preview.height = 900;
             preview.getContext('2d').drawImage(canvas, 0, 0);
             const output = {dimensions, width: canvas.width, height: canvas.height, bands,
-              stateUnchanged: before === JSON.stringify(WTRouteExport.buildPayload()),
+              stateUnchanged: before === snapshot(),
               scrollUnchanged: scroll[0] === els.treeContainer.scrollLeft && scroll[1] === els.treeContainer.scrollTop,
               cleaned: !document.querySelector('.tree-screenshot') && !RouteExporter.isBusy(),
               preview: preview.toDataURL('image/png')};

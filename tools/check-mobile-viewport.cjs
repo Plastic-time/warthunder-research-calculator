@@ -89,7 +89,10 @@ async function metrics(page) {
           for (const [w, h] of [[844,390], [1440,940], [390,844]]) {
             await page.setViewportSize({width:w, height:h});
             await page.waitForTimeout(150);
-            assert.equal(await page.locator('#mobileFiltersButton').isVisible(), w !== 1440);
+            // Filters is available at every width; the separate search button exists only in the mobile header.
+            assert(await page.locator('#mobileFiltersButton').isVisible());
+            assert.equal(await page.locator('#mobileSearchButton').isVisible(), w !== 1440);
+            assert.equal(await page.locator('.tree-filters #searchInput').count(), w === 1440 ? 1 : 0, 'Search returns to the header on desktop');
             assert.equal((await metrics(page)).rail.width, w === 1440 ? 68 : 44);
             assert.deepEqual(await page.evaluate(() => [...state.planned]), selected);
           }

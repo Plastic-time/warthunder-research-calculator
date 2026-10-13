@@ -72,13 +72,14 @@ async function main() {
       }
       await openMore();
       for (const selector of ['#guideButton', '#clearButton', '#routeExportButton']) await probe(selector);
-      if (width < 720) {
-        await closeSheet('mobileMore');
-        await page.locator('#mobileFiltersButton').click();
-      }
+      if (width < 720) await closeSheet('mobileMore');
+      // Planning options live in the Filters sheet at every width.
+      await page.locator('#mobileFiltersButton').click();
+      // Let the sheet finish sliding in so its motion is not mistaken for press feedback.
+      await page.locator('#mobileFilters').evaluate(async sheet => { for (const animation of sheet.getAnimations()) await animation.finished; });
       await probe('.planner-option');
       await probe('#selectTreeButton');
-      if (width < 720) await closeSheet('mobileFilters');
+      await closeSheet('mobileFilters');
       for (const selector of ['.country-trigger', '.branch-tab',
         '.tree-canvas .unit-tile', '[data-wiki-id]', '[data-modifications-id]', '[data-folder-key]']) await probe(selector);
       await openMore();

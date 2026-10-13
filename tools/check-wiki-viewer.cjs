@@ -34,7 +34,9 @@ async function main() {
       const bookmark = await wiki.locator('.wiki-bookmark').boundingBox();
       const icon = await wiki.locator('img').boundingBox();
       assert.deepEqual([bookmark.width, bookmark.height, icon.width, icon.height], [22, 24, 14, 14]);
-      assert(w.width >= 44 && w.height >= 44 && m.width >= 44 && m.height >= 44);
+      // The modifications entry is a compact corner icon for mouse users and a full touch target on phones.
+      const minModTarget = width < 720 ? 44 : 24;
+      assert(w.width >= 44 && w.height >= 44 && m.width >= minModTarget && m.height >= minModTarget);
       assert(m.x - (w.x + w.width) >= 40);
       assert(w.y < t.y && w.x >= t.x && w.x + w.width <= t.x + t.width);
       const shellBox = await shell.boundingBox();

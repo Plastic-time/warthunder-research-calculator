@@ -33,7 +33,11 @@ async function main() {
         waypoints: [...state.waypoints], selected: state.planResult.selectedIds,
         fillers: state.planResult.fillerIds, rp: state.planResult.totalRp, sl: state.planResult.totalSp }));
       for (const language of ['zh', 'en', 'ru', 'de', 'fr', 'ja', 'es']) {
-        await page.selectOption('#languageSelect', language);
+        // The select lives in a sheet (More on desktop, Filters on mobile), so drive it without opening one.
+        await page.locator('#languageSelect').evaluate((select, value) => {
+          select.value = value;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+        }, language);
         await page.evaluate(() => document.fonts.ready);
         const main = await page.evaluate(() => ({ locale: state.language, html: document.documentElement.lang,
           guide: els.guideButton.textContent, expectedGuide: tr('使用指南'),

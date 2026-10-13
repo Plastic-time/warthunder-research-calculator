@@ -76,7 +76,8 @@ async function main() {
       await page.waitForFunction(() => state.planResult && !els.planButton.disabled);
       const snapshot = await page.evaluate(() => ({ saved: JSON.parse(localStorage.getItem(storageKey())), route: structuredClone(state.planResult) }));
       const clearTree = async () => {
-        if (await page.locator('#mobileMoreButton').isVisible()) await page.locator('#mobileMoreButton').click();
+        // Clear plan sits in the header on desktop and inside the More sheet on mobile.
+        if (!(await page.locator('#clearButton').isVisible())) await page.locator('#mobileMoreButton').click();
         await page.locator('#clearButton').click();
       };
       const notice = page.locator('.bulk-owned-notice');

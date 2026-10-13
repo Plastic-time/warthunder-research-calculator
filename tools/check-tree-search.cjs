@@ -78,7 +78,7 @@ const { chromium } = require('playwright');
       for (const locale of ['zh','en','ru','de','fr','ja','es']) {
         await page.evaluate(locale => setLanguage(locale), locale);
         assert.equal(await page.locator('#searchResultCount').textContent(), await page.evaluate(count => tr('匹配 {count} 辆', { count }), ids.length));
-        const layout = await page.evaluate(() => {
+        const layout = await page.evaluate(inField => {
           const label = els.searchInput.closest('.search-label');
           const count = document.getElementById('searchResultCount');
           const button = document.getElementById('clearSearchButton');
@@ -86,9 +86,11 @@ const { chromium } = require('playwright');
           const input = els.searchInput.getBoundingClientRect();
           return { overflow: document.documentElement.scrollWidth > innerWidth || label.scrollWidth > label.clientWidth + 1,
             clearFits: b.left >= input.left && b.right <= input.right + 1 && b.bottom <= input.bottom + 1,
-            countFits: c.right <= a.right + 1 && c.bottom <= input.top + 1,
+            // Desktop shows the count inside the field, left of the clear button; the mobile sheet keeps it above.
+            countFits: inField ? c.left >= input.left && c.right <= b.left + 1 && c.top >= input.top - 1 && c.bottom <= input.bottom + 1
+              : c.right <= a.right + 1 && c.bottom <= input.top + 1,
             hitSize: b.width >= 38 && b.height >= 38 };
-        });
+        }, !mobile);
         assert(!layout.overflow && layout.clearFits && layout.countFits && layout.hitSize, JSON.stringify({ mode, width, locale, layout }));
         if (['zh', 'de'].includes(locale)) await page.screenshot({ path: path.join(output, `${mode}-${width}-${locale}-search.png`) });
       }

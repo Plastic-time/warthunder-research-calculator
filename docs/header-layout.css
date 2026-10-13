@@ -87,10 +87,10 @@
 }
 
 /* Keep the filter controls together without squeezing the research tree itself. */
-.tree-filters > label, #mobileFilters .mobile-sheet-body > label, #mobileSearch .search-label { gap: 6px; min-width: 0; }
-.tree-filters > label > span, #mobileFilters .mobile-sheet-body > label > span, #mobileSearch .search-label > span { color: var(--gray-11); font-size: var(--fs-2xs); font-weight: 500; line-height: 16px; }
-.tree-filters input[type="search"], .tree-filters select, #mobileFilters select, #mobileSearch input[type="search"] { height: 40px; min-height: 40px; border: 1px solid var(--gray-8); border-radius: 4px; background: var(--gray-2); color: var(--gray-13); font-size: var(--fs-sm); font-weight: 500; line-height: 20px; padding: 8px 12px; box-shadow: none; }
-.tree-filters input[type="search"]:focus, .tree-filters select:focus, #mobileFilters select:focus, #mobileSearch input[type="search"]:focus { border-color: var(--gray-11); outline: 2px solid var(--green-6-a32); outline-offset: 1px; box-shadow: none; }
+.tree-filters > label, #mobileFilters .mobile-sheet-body > label, #mobileMore .mobile-sheet-body > label, #mobileSearch .search-label { gap: 6px; min-width: 0; }
+.tree-filters > label > span, #mobileFilters .mobile-sheet-body > label > span, #mobileMore .mobile-sheet-body > label > span, #mobileSearch .search-label > span { color: var(--gray-11); font-size: var(--fs-2xs); font-weight: 500; line-height: 16px; }
+.tree-filters input[type="search"], .tree-filters select, #mobileFilters select, #mobileMore select, #mobileSearch input[type="search"] { height: 40px; min-height: 40px; border: 1px solid var(--gray-8); border-radius: 4px; background: var(--gray-2); color: var(--gray-13); font-size: var(--fs-sm); font-weight: 500; line-height: 20px; padding: 8px 12px; box-shadow: none; }
+.tree-filters input[type="search"]:focus, .tree-filters select:focus, #mobileFilters select:focus, #mobileMore select:focus, #mobileSearch input[type="search"]:focus { border-color: var(--gray-11); outline: 2px solid var(--green-6-a32); outline-offset: 1px; box-shadow: none; }
 .tree-filters .search-label, #mobileSearch .search-label { position: relative; }
 .tree-filters .search-label::after, #mobileSearch .search-label::after { content: ""; position: absolute; width: 16px; height: 16px; left: 12px; bottom: 12px; background: var(--gray-11); -webkit-mask: url("assets/navigation/search.svg") center / contain no-repeat; mask: url("assets/navigation/search.svg") center / contain no-repeat; pointer-events: none; }
 .tree-filters input[type="search"], #mobileSearch input[type="search"] { padding-left: 36px; }
@@ -102,7 +102,7 @@
 #mobileFilters .mobile-sheet-heading, #mobileSearch .mobile-sheet-heading { position: sticky; top: 0; z-index: 1; background: var(--gray-3); }
 #mobileFilters .mobile-sheet-body, #mobileSearch .mobile-sheet-body { gap: 16px; padding: 16px; }
 #mobileFilters .mobile-sheet-body > label { align-content: end; }
-#mobileFilters select, #mobileSearch input[type="search"] { height: 48px; min-height: 48px; padding-top: 12px; padding-bottom: 12px; }
+#mobileFilters select, #mobileMore select, #mobileSearch input[type="search"] { height: 48px; min-height: 48px; padding-top: 12px; padding-bottom: 12px; }
 #mobileSearch .search-label::after { bottom: 16px; }
 #mobileFilters .tree-selection-options { grid-column: 1 / -1; border-top: 1px solid var(--green-1); padding-top: 12px; gap: 12px; }
 #mobileFilters .tree-selection-options .planner-option { padding-right: 12px; border-right: 1px solid var(--green-1); }
@@ -120,11 +120,12 @@
   .tree-filters > .tree-selection-options .planner-option { flex: 0 1 auto; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .tree-filters select, .tree-filters input[type="search"], #mobileFilters select, #mobileSearch input[type="search"], .tree-selection-options #selectTreeButton { transition: border-color 120ms ease, background-color 120ms ease, color 120ms ease; }
+  .tree-filters select, .tree-filters input[type="search"], #mobileFilters select, #mobileMore select, #mobileSearch input[type="search"], .tree-selection-options #selectTreeButton { transition: border-color 120ms ease, background-color 120ms ease, color 120ms ease; }
 }
 /* Slim desktop header: brand with the status line under it, icon actions, author and More.
-   Language and version live in the More sheet; planning options live in the Filters sheet. */
-@media (min-width: 721px) {
+   Language and version live in the More sheet; planning options live in the Filters sheet.
+   The query is the exact complement of the script's mobile query, so landscape phones keep the mobile header. */
+@media (min-width: 901px), (min-width: 721px) and (min-height: 501px), (min-width: 721px) and (pointer: fine), (min-width: 721px) and (pointer: none) {
   .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; column-gap: 4px; padding: 6px 8px 6px 16px; }
   .topbar > .brand-block { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 0 10px; grid-column: 1; grid-row: 1; min-width: 0; }
   /* Emblem, title and status line become cells of the brand grid. */
@@ -149,9 +150,6 @@
   }
   #mobileMore::backdrop, #mobileAuthor::backdrop, #mobileFilters::backdrop { background: transparent; backdrop-filter: none; }
   #mobileFilters .mobile-sheet-body { grid-template-columns: minmax(0, 1fr); }
-  #mobileFilters .tree-selection-options { flex-direction: column; align-items: stretch; gap: 4px; }
-  #mobileFilters .tree-selection-options .planner-option { padding-right: 0; border-right: 0; }
-  #mobileFilters #selectTreeButton { justify-content: flex-start; padding: 0; }
   .mobile-sheet-body > .game-version { color: var(--gray-11); font-size: var(--fs-xs); line-height: 1.5; }
 
   /* Search is the only filter left in the bar; its label and result count sit inside the field. */
@@ -269,15 +267,15 @@
 }
 .branch-tab[aria-pressed="true"] .nav-icon { color: var(--nav-accent); }
 .tree-filters { background: var(--gray-3); }
-.tree-filters > label > span, #mobileFilters .mobile-sheet-body > label > span,
+.tree-filters > label > span, #mobileFilters .mobile-sheet-body > label > span, #mobileMore .mobile-sheet-body > label > span,
 #mobileSearch .search-label > span { color: var(--gray-11); font-weight: 500; }
 .tree-filters input[type="search"], .tree-filters select,
-#mobileFilters select, #mobileSearch input[type="search"] {
+#mobileFilters select, #mobileMore select, #mobileSearch input[type="search"] {
   background: var(--gray-2); border-color: var(--gray-7); border-radius: 6px; color: var(--gray-13);
 }
 .tree-filters input[type="search"]::placeholder { color: var(--gray-10); }
 .tree-filters input[type="search"]:focus, .tree-filters select:focus,
-#mobileFilters select:focus, #mobileSearch input[type="search"]:focus {
+#mobileFilters select:focus, #mobileMore select:focus, #mobileSearch input[type="search"]:focus {
   outline: 2px solid var(--gold-14-a32); border-color: var(--nav-accent); outline-offset: 1px;
 }
 .tree-filters > .tree-selection-options { border-left-color: var(--gray-7); }

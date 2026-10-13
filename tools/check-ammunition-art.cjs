@@ -53,7 +53,8 @@ async function main() {
         if (width === 390) await page.locator(originalBeltIcon ? '.modification-tile > img[src$="/ammo.png"]' : '.modification-ammunition').first().scrollIntoViewIfNeeded();
         assert(await page.locator('.modification-ammunition').evaluateAll(nodes => nodes.every(node => {
           const box = node.getBoundingClientRect();
-          return box.width === 52 && box.height === 52 && [...node.querySelectorAll('img')].every(image => {
+          // Icons scale with the dialog between 52 and 68 px and stay square.
+          return Math.abs(box.width - box.height) < 0.5 && box.width >= 52 && box.width <= 68.5 && [...node.querySelectorAll('img')].every(image => {
             const r = image.getBoundingClientRect();
             return r.left >= box.left - 1 && r.right <= box.right + 1 && r.bottom <= box.bottom + 1;
           });
