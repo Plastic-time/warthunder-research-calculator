@@ -62,7 +62,6 @@
 .wiki-heading button, .wiki-heading a,
 .tree-canvas .unit-modifications-launch,
 .folder-popup .unit-modifications-launch { border-radius: 4px; }
-.tree-canvas .unit-modifications-launch,
 .folder-popup .unit-modifications-launch { min-width: 44px; min-height: 44px; }
 .unit-modifications-launch > span { display: grid; place-items: center; width: 18px; height: 18px; font-size: var(--fs-xl); line-height: 18px; }
 .topbar-actions button, .country-trigger, .header-icon-button,
