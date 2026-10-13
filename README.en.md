@@ -61,6 +61,9 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 | Enter remaining RP for a vehicle | Right-click → Research Progress | Press and hold → Research Progress |
 | Calculate a route | Select Optimize route in the bottom bar | Same |
 | View vehicle information | Select the Wiki bookmark on the card | Same |
+| Open modification research | Select the gear at the top right of the card | Same |
+
+On desktop, the header is a single row: nation, search, and icon buttons for Filters, Guide, Export, Clear Plan, and Backup. Hover over an icon to see its name. Calculation scope, the foldered-vehicle option, and Select all are in Filters. Language and game version are in More at the top right. Select the avatar for author details. In narrower windows, nation and category share one row and search takes the next.
 
 On mobile, open More at the top to find the guide and export controls. Search and filters have separate buttons. See the [web changelog](doc/web-updates.md#english) for recent changes. The in-app guide keeps earlier release notes.
 
@@ -68,9 +71,9 @@ On mobile, open More at the top to find the guide and export controls. Search an
 
 Open the web app to start. No game account is required. On Windows, download the [v1.0.26 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.26/WarThunderResearchCalculator-v1.0.26-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed.
 
-> This guide and its screenshots show the current web app. The v1.0.26 download does not include the latest modification layout, combined clear button, or remaining-RP input. It does not receive web updates automatically.
+> This guide and its screenshots show the current web app. The v1.0.26 download does not include the redesigned interface (single-row header, compact vehicle cards, new modification layout), the combined clear button, or remaining-RP input. It does not receive web updates automatically.
 
-Select all toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
+Select all, in Filters, toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
 
 Zero remaining RP does not mark a vehicle as owned or an upgrade as researched. Set those states separately. Silver Lion costs stay unchanged. Enter a whole number from 0 to the full RP cost. Blank input is not accepted.
 

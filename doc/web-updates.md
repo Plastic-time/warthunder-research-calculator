@@ -4,6 +4,16 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-13 · 界面改版
+
+- 宽屏桌面的标题栏和筛选栏合并为一行，高度从约 184 像素降到 56 像素，科技树多显示约一行载具。使用指南、导出截图、清空计划和备份改为图标按钮，悬停显示名称。
+- 计算范围、“自动补位时避开折叠载具”和“全选”移入“筛选”菜单；语言和游戏版本移入“更多”菜单；作者信息点击头像查看。手机布局不变。
+- 载具卡片改为紧凑布局，标准卡片从 174 像素降到 109 像素。“配件”入口改为卡片右上角的齿轮，触屏保留 44 像素点击区域。
+- 设定目标后，路线之外的载具和连线变暗；必经载具改用偏蓝底色。
+- 配件窗口改用与主界面一致的深灰色系，配件格随窗口大小放大，不再留出大片空白。
+- 样式中的颜色和字号收拢为一套共用变量，个别颜色和字号有细微变化。
+- 不修改计算逻辑、游戏数据或版本号；本次仅更新网页，不发布 Windows 包。浏览器检查覆盖桌面与手机模拟尺寸，未替代实体手机验收。
+
 ## 2026-10-11 · 科技树搜索优化
 
 - 载具名称和 ID 搜索兼容空格、连字符、大小写及全角输入，例如 F15、F-15 和 F 15。
@@ -61,6 +71,16 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-13 · Interface Redesign
+
+- On wide desktops the title bar and filter bar are now one row, down from about 184 px to 56 px, so roughly one more row of vehicles fits. Guide, Export, Clear Plan, and Backup are icon buttons with tooltips.
+- Calculation scope, the foldered-vehicle option, and Select all moved to Filters. Language and game version moved to More. Select the avatar for author details. The mobile layout is unchanged.
+- Vehicle cards are more compact: a standard card is 109 px tall instead of 174 px. Modifications open from a gear at the top right of the card, with a 44 px touch target on touchscreens.
+- Once a target is set, vehicles and links off the route are dimmed. Required vehicles use a blue-tinted surface.
+- The modification window uses the same graphite colors as the main view. Its cells grow with the window instead of leaving it half empty.
+- Stylesheet colors and font sizes now come from one shared set of variables. A few colors and sizes changed slightly.
+- No changes to calculations, game data, or version numbers. Web update only; no Windows package. Browser checks covered desktop and emulated mobile sizes, not physical phones.
 
 ### 2026-10-11 · Tech Tree Search
 
