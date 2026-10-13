@@ -194,9 +194,9 @@ body,
   color: var(--gray-12); font-size: var(--fs-xs); line-height: 16px; white-space: normal;
 }
 .modification-dialog .modification-actions [data-modification-action="clear"] { color: var(--red-5); }
-.modification-dialog .modification-actions .calculate { background: var(--gold-4); border-color: var(--gold-7); color: var(--gold-16); padding-inline: 16px; }
+.modification-dialog .modification-actions .calculate { background: var(--green-3); border-color: var(--green-6); color: var(--white); padding-inline: 16px; }
 .modification-dialog .modification-actions button:hover { background: var(--gray-6); border-color: var(--gray-11); }
-.modification-dialog .modification-actions .calculate:hover { background: var(--gold-5); border-color: var(--gold-9); }
+.modification-dialog .modification-actions .calculate:hover { background: var(--green-4); border-color: var(--green-7); }
 .modification-action-icon {
   flex: 0 0 18px; width: 18px; height: 18px; background: currentColor;
   -webkit-mask: var(--modification-action-icon) center / contain no-repeat; mask: var(--modification-action-icon) center / contain no-repeat;

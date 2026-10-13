@@ -320,7 +320,7 @@
     });
 
     tree.innerHTML = `
-      <div class="modification-board" style="grid-template-columns:54px repeat(${totalColumns}, 178px)">
+      <div class="modification-board" style="--modification-columns:${totalColumns}">
         <svg class="modification-links" aria-hidden="true"><defs><marker id="mod-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z"></path></marker></defs></svg>
         <div class="modification-tier-title">${escape(t("等级"))}</div>${headers.join("")}${cells.join("")}${tiers.join("")}${tiles.join("")}
       </div>`;

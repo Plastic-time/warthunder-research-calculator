@@ -53,7 +53,7 @@
   margin: auto;
   border: 1px solid var(--gray-8);
   border-radius: 2px;
-  background: var(--gray-1);
+  background: var(--gray-2);
   color: var(--gray-12);
   padding: 0;
   box-shadow: 0 22px 70px var(--black-a60);
@@ -75,7 +75,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--gray-7);
-  background: var(--gray-5);
+  background: var(--gray-3);
   padding: 7px 12px 7px 18px;
 }
 
@@ -207,7 +207,9 @@
   min-height: 0;
   flex: 1;
   overflow: auto;
-  background: var(--gray-1);
+  /* Size container: the board's cells are sized from the space this viewport has. */
+  container-type: size;
+  background: var(--gray-2);
   scrollbar-color: var(--gray-9) var(--gray-3);
   scrollbar-width: thin;
 }
@@ -219,11 +221,17 @@
 
 .modification-board {
   position: relative;
+  /* Cells grow to use the dialog, within limits, rather than leaving it half empty.
+     The script sets --modification-columns; 36px and 30px are the tree's own padding,
+     and 4px of slack keeps rounding from adding a scrollbar. */
+  --modification-column-width: clamp(178px, calc((100cqw - 54px - 36px - var(--modification-columns) * 8px) / var(--modification-columns)), 236px);
+  --modification-row-height: clamp(82px, calc((100cqh - 34px - 30px - 32px - 4px) / 4), 128px);
+  --modification-icon-size: clamp(52px, calc(var(--modification-row-height) * 0.56), 68px);
   display: grid;
-  grid-template-rows: 34px repeat(4, 82px);
+  grid-template-columns: 54px repeat(var(--modification-columns), var(--modification-column-width));
+  grid-template-rows: 34px repeat(4, var(--modification-row-height));
   gap: 8px;
   width: max-content;
-  min-height: 394px;
 }
 
 .modification-links {
@@ -275,7 +283,7 @@
   place-content: center;
   gap: 4px;
   border: 1px solid var(--gray-7);
-  background: var(--gray-2);
+  background: var(--gray-3);
   text-align: center;
 }
 
@@ -287,7 +295,7 @@
 .modification-tier small {
   min-width: 28px;
   border: 1px solid var(--gray-9);
-  background: var(--gray-1);
+  background: var(--gray-2);
   color: var(--gray-11);
   padding: 2px 4px;
   font-size: var(--fs-3xs);
@@ -301,7 +309,7 @@
 .modification-grid-cell {
   z-index: 0;
   border: 1px solid var(--gray-7-a32);
-  background: var(--gray-1);
+  background: transparent;
 }
 
 .modification-tile {
@@ -310,27 +318,29 @@
   min-width: 0;
   min-height: 0;
   display: grid;
-  grid-template-columns: 54px minmax(0, 1fr);
+  grid-template-columns: var(--modification-icon-size) minmax(0, 1fr);
   align-items: center;
-  gap: 7px;
-  border: 1px solid var(--gray-7);
-  border-radius: 1px;
-  background: var(--gray-2);
-  color: var(--gray-12);
-  padding: 7px;
+  gap: 8px;
+  /* Inline-size container, so the text can step up once a cell is wide enough. */
+  container-type: inline-size;
+  border: 1px solid var(--gray-8);
+  border-radius: 2px;
+  background: var(--gray-5);
+  color: var(--gray-13);
+  padding: 7px 8px;
   text-align: left;
   box-shadow: inset 0 1px var(--green-4-a08);
 }
 
 .modification-tile:hover,
 .modification-tile:focus-visible {
-  border-color: var(--gray-10);
-  background: var(--gray-3);
+  border-color: var(--gray-12);
+  background: var(--gray-6);
 }
 
 .modification-tile img {
-  width: 52px;
-  height: 52px;
+  width: var(--modification-icon-size);
+  height: var(--modification-icon-size);
   object-fit: contain;
 }
 
@@ -343,8 +353,8 @@
 .modification-ammunition {
   position: relative;
   display: block;
-  width: 52px;
-  height: 52px;
+  width: var(--modification-icon-size);
+  height: var(--modification-icon-size);
 }
 
 .modification-ammunition-decor,
@@ -381,9 +391,14 @@
 }
 
 .modification-tile-copy small {
-  color: var(--gray-10);
+  color: var(--gray-11);
   font-size: var(--fs-3xs);
   white-space: nowrap;
+}
+
+@container (min-width: 180px) {
+  .modification-tile-copy b { font-size: var(--fs-md); }
+  .modification-tile-copy small { font-size: var(--fs-xs); }
 }
 
 .modification-state {
@@ -391,7 +406,7 @@
   top: 3px;
   right: 4px;
   border: 1px solid currentColor;
-  background: var(--gray-1);
+  background: var(--gray-2);
   padding: 1px 3px;
   font-size: var(--fs-3xs);
   font-weight: 800;
@@ -406,7 +421,7 @@
 .modification-tile.priority { border-color: var(--red-4); box-shadow: inset 0 -3px var(--red-3); }
 .modification-tile.priority .modification-state { color: var(--red-5); }
 .modification-tile.researched,
-.modification-tile.unlocked { border-color: var(--green-5); background: var(--gray-3); box-shadow: inset 0 -3px var(--green-3); }
+.modification-tile.unlocked { border-color: var(--green-5); background: color-mix(in srgb, var(--green-1) 45%, var(--gray-5)); box-shadow: inset 0 -3px var(--green-3); }
 .modification-tile.researched .modification-state { color: var(--green-7); }
 
 .modification-tile.unlocked:disabled {

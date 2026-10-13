@@ -424,7 +424,7 @@ async function main() {
               activeLinks: dialog.querySelectorAll('.modification-link.active').length,
               tiers,
               flatTile: parseFloat(getComputedStyle(freshTarget).borderRadius) <= 2,
-              darkPanel: getComputedStyle(viewport).backgroundColor === 'rgb(16, 24, 32)',
+              darkPanel: getComputedStyle(viewport).backgroundColor === 'rgb(29, 34, 36)',
               horizontalAtSmallWidth: ${width} > 720 || viewport.scrollWidth > viewport.clientWidth,
               footerVisible: footer.bottom <= ${900} && footer.top >= 0,
               didNotSelectVehicle: !state.planned.has('j_16'),
