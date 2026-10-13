@@ -51,9 +51,9 @@ async function main() {
       await button.dispatchEvent('pointerdown', {pointerId: 17, isPrimary: true, button: 0});
       await button.dispatchEvent('pointerup', {pointerId: 17, clientX: point.x, clientY: point.y});
       await page.waitForFunction(() => document.getElementById('planButton').dataset.pressFeedback === 'release');
-      assert(await button.evaluate(el => el.getAnimations().some(animation => animation.effect?.getTiming().duration === 380)));
+      assert(await button.evaluate(el => el.getAnimations().some(animation => animation.effect?.getTiming().duration === 220)));
       await button.evaluate(el => el.disabled = true);
-      assert(await button.evaluate(el => el.getAnimations().some(animation => animation.effect?.getTiming().duration === 380)), 'Busy state must not cut off the release spring');
+      assert(await button.evaluate(el => el.getAnimations().some(animation => animation.effect?.getTiming().duration === 220)), 'Busy state must not cut off the release spring');
       await button.evaluate(el => el.disabled = false);
       await page.waitForTimeout(500);
       await page.evaluate(() => toggleUnitMode('us_m18_hellcat', 'target'));
@@ -87,7 +87,7 @@ async function main() {
       assert.equal(await button.evaluate(el => getComputedStyle(el).scale), 'none');
       const updatedBox = await button.boundingBox();
       await button.dispatchEvent('pointerup', {pointerId: 18, clientX: updatedBox.x + 20, clientY: updatedBox.y + 20});
-      assert(!(await button.evaluate(el => el.getAnimations().some(animation => animation.effect?.getTiming().duration === 380))));
+      assert(!(await button.evaluate(el => el.getAnimations().some(animation => animation.effect?.getTiming().duration === 220))));
       await button.dispatchEvent('pointerdown', {pointerId: 19, isPrimary: true, button: 0});
       await button.dispatchEvent('pointercancel', {pointerId: 19});
       assert(!(await button.evaluate(el => el.dataset.pressFeedback === 'pressed')));

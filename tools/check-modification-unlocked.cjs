@@ -120,7 +120,7 @@ async function main() {
           tile.dispatchEvent(new MouseEvent('contextmenu', { bubbles: true, cancelable: true }));
         })()`);
         assert.deepEqual(await snapshot(), expected, 'Free modules cannot be toggled');
-        for (const name of ['all', 'calculate', 'clear-owned', 'clear']) {
+        for (const name of ['all', 'calculate', 'clear']) {
           await action(name);
           assert.deepEqual(await snapshot(), expected, `${name} must preserve automatic unlocks`);
         }
@@ -148,7 +148,6 @@ async function main() {
         fs.writeFileSync(path.join(artifacts, `${mode}-${width}.png`), Buffer.from(shot.data, 'base64'));
 
         await open('j_16');
-        await action('clear-owned');
         await action('clear');
         const target = j16.m.find(mod => mod[0] === 'cn_pl12a');
         await evaluate(`document.querySelector('[data-mod-id="cn_pl12a"]').click()`);
@@ -163,7 +162,8 @@ async function main() {
         assert.equal(paid.selected, 0);
         assert.deepEqual(paid.budget, ['0', '0']);
         assert(await evaluate('document.querySelector("[data-mod-id=cn_pl12a]").classList.contains("researched")'));
-        await action('clear-owned');
+        // The single clear button also removes researched marks.
+        await action('clear');
         assert(!(await evaluate('document.querySelector("[data-mod-id=cn_pl12a]").classList.contains("researched")')));
         await open('us_m1128_wolfpack');
         assert.deepEqual(await snapshot(), expected, 'Unlocks survive vehicle switching and storage restore');

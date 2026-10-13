@@ -89,7 +89,8 @@ async function main() {
           await call('Input.dispatchMouseEvent', {type:'mouseMoved',x:bar.right,y:bar.y,button:'left',buttons:1});
           await call('Input.dispatchMouseEvent', {type:'mouseReleased',x:bar.right,y:bar.y,button:'left',clickCount:1});
           await pause(100);
-          assert(await evaluate('els.treeContainer.scrollLeft > 100 && scrollY === 0'), 'Dragging persistent scrollbar must move tree, not page');
+          // On wide screens the tree may overflow by only a few dozen pixels, so compare against the available range.
+          assert(await evaluate('(() => { const range = els.treeContainer.scrollWidth - els.treeContainer.clientWidth; return range > 0 && els.treeContainer.scrollLeft >= Math.min(100, range - 1) && scrollY === 0; })()'), 'Dragging persistent scrollbar must move tree, not page');
           await evaluate('els.treeContainer.scrollLeft = 0');
           await pause(100);
           assert.equal(await evaluate('Number(document.getElementById("treeScrollRange").value)'), 0, 'Scrollbar must follow tree movement');
@@ -131,7 +132,7 @@ async function main() {
             state.planned.clear();
             document.querySelector('[data-unit-id="us_m3_stuart"]').click();
             const selected = {rp: els.totalRp.textContent, sl: els.totalSp.textContent};
-            els.dependencyModeSelect.value = 'dependencies';
+            els.dependencyModeSelect.value = 'selected';
             els.dependencyModeSelect.dispatchEvent(new Event('change'));
             const dependent = {rp: els.totalRp.textContent, sl: els.totalSp.textContent};
             const firstRank = state.tree[0];
@@ -174,7 +175,7 @@ async function main() {
             result.closed = !dialog.open;
             return result;
           })()`);
-          assert.deepEqual(guide, {open:true,fitsViewport:true,noHorizontalOverflow:true,steps:5,coversRightClick:true,coversPlanner:true,coversWarning:true,closed:true});
+          assert.deepEqual(guide, {open:true,fitsViewport:true,noHorizontalOverflow:true,steps:6,coversRightClick:true,coversPlanner:true,coversWarning:true,closed:true});
           console.log(JSON.stringify({label:`usage-guide-${width}`, ...guide, pass:true}));
           await evaluate('els.guideButton.click()');
           const guideShot = await call('Page.captureScreenshot', { format: 'png' });

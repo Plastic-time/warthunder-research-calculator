@@ -62,7 +62,7 @@ async function main() {
         height: input.getBoundingClientRect().height,
       }));
       assert.equal(pointerFocus.shadow, 'none', 'No green focus shadow after clicking');
-      assert.equal(pointerFocus.height, 18, 'Checkbox must not inherit the text input height');
+      assert.equal(pointerFocus.height, 20, 'The switch keeps its own height, not the text input height');
       await page.keyboard.press('Tab');
       await page.keyboard.press('Shift+Tab');
       assert(await toggle.evaluate(input => document.activeElement === input && input.matches(':focus-visible')

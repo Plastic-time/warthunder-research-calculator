@@ -92,6 +92,8 @@ async function main() {
           workspaceWidth: workspace.width,
           treeLeft: treeRect.left,
           treeRight: treeRect.right,
+          // Right edge of the desktop branch rail; 0 when the branches sit in a horizontal row.
+          railRight: (() => { const r = document.querySelector('.branch-tabs')?.getBoundingClientRect(); return r && r.height > r.width ? r.right : 0; })(),
           treeHeight: treeRect.height,
           treeScrollable: tree.scrollHeight > tree.clientHeight,
           toolbarBottom: toolbar.bottom,
@@ -104,8 +106,8 @@ async function main() {
         };
       })()`);
       assert(layout.summaryHidden, 'Summary panel must not occupy the main UI');
-      assert(layout.workspaceLeft <= 1 && layout.workspaceWidth >= width - 2, `Workspace must span viewport: ${JSON.stringify(layout)}`);
-      assert(layout.treeLeft <= 1 && layout.treeRight >= width - (width <= 720 ? 2 : 78), `Tree must be full canvas: ${JSON.stringify(layout)}`);
+      assert(layout.workspaceLeft <= layout.railRight + 1 && layout.workspaceWidth >= width - layout.railRight - 2, `Workspace must span viewport: ${JSON.stringify(layout)}`);
+      assert(layout.treeLeft <= layout.railRight + 1 && layout.treeRight >= width - (width <= 720 ? 2 : 78), `Tree must be full canvas: ${JSON.stringify(layout)}`);
       assert(layout.treeHeight >= 430, `Tree viewport is too short: ${JSON.stringify(layout)}`);
       assert(layout.treeScrollable, `Tree must own vertical scrolling: ${JSON.stringify(layout)}`);
       assert(layout.treeTop >= layout.toolbarBottom - 1, `Toolbar overlaps tree content: ${JSON.stringify(layout)}`);

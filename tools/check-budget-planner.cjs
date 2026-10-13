@@ -20,6 +20,13 @@ async function checkBudgetPlanner({ evaluate, call, artifacts, suffix }) {
       clickable: document.elementFromPoint(point.x, point.y)?.closest('button') === button,
       testTag: button.querySelector('.floating-plan-test').textContent,
       treeWidth: els.treeContainer.getBoundingClientRect().width,
+      // Free space beside the tree, ignoring the desktop branch rail on its left.
+      treeGutter: (() => {
+        const tree = els.treeContainer.getBoundingClientRect();
+        const rail = document.querySelector('.branch-tabs')?.getBoundingClientRect();
+        const railRight = rail && rail.height > rail.width ? rail.right : 0;
+        return Math.max(tree.left - railRight, innerWidth - tree.right);
+      })(),
       viewportWidth: innerWidth,
       point,
     };
@@ -27,7 +34,7 @@ async function checkBudgetPlanner({ evaluate, call, artifacts, suffix }) {
   const initial = await layout();
   assert(initial.oneButton && initial.fixed && initial.contained && initial.aligned && initial.textFits && initial.translucent && initial.clickable, JSON.stringify(initial));
   assert.equal(initial.testTag, '\u6d4b\u8bd5');
-  assert(initial.treeWidth >= initial.viewportWidth - 2, 'Retired side button must not leave an empty gutter');
+  assert(initial.treeGutter <= 2, 'Retired side button must not leave an empty gutter');
   await evaluate(`(() => {
     window.__budgetTexts = ['budgetCount','budgetRp','budgetSl'].map(id => document.getElementById(id).textContent);
     document.getElementById('budgetCount').textContent = '3235';
@@ -54,6 +61,8 @@ async function checkBudgetPlanner({ evaluate, call, artifacts, suffix }) {
   assert(await evaluate('!!state.planResult?.feasible && !els.planButton.disabled'), 'Bottom button must run the actual planner');
   const budget = await evaluate('[els.budgetRp.textContent, els.budgetSl.textContent]');
   assert(budget.every(value => Number(value.replaceAll(',', '')) > 0));
+  // The click above starts the press-release spring; measure only once it has settled.
+  await evaluate('Promise.all(els.planButton.getAnimations().map(animation => animation.finished)).then(() => true)');
   const ready = await layout();
   await evaluate('setPlanButtonsDisabled(true)');
   const busy = await layout();

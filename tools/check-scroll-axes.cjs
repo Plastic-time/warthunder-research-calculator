@@ -148,7 +148,7 @@ async function main() {
           await pause(1000);
           assert(await evaluate('Number(document.getElementById("treeVerticalScrollRange").max) === els.treeContainer.scrollHeight-els.treeContainer.clientHeight'), 'Changing trees must update vertical range');
           await evaluate('els.searchInput.value="no-vehicle-matches-this";els.searchInput.dispatchEvent(new Event("input"))');
-          await pause(100);
+          await pause(400); // search input is debounced by 180 ms
           assert(await evaluate('document.getElementById("treeScrollBar").hidden && document.getElementById("treeVerticalScrollBar").hidden'), 'No stale scrollbar after empty search');
           await evaluate('els.searchInput.value="";els.searchInput.dispatchEvent(new Event("input"))');
           await pause(100);

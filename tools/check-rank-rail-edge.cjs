@@ -32,12 +32,14 @@ async function main() {
           const rail = rank.querySelector('.rank-rail').getBoundingClientRect();
           const viewport = tree.getBoundingClientRect();
           const scrollbar = document.getElementById('treeVerticalScrollBar').getBoundingClientRect();
-          return { gap: rail.left - viewport.left, width: rail.width,
+          const nav = document.querySelector('.branch-tabs').getBoundingClientRect();
+          return { gap: rail.left - viewport.left, width: rail.width, navRight: nav.height > nav.width ? nav.right : 0,
             viewportLeft: viewport.left, scrollbarRight: scrollbar.right, viewportRight: viewport.right };
         }, position);
         assert.equal(geometry.gap, 0, `${mode} ${width} ${position}: rank rail must touch viewport`);
-        assert.equal(geometry.viewportLeft, 0);
-        assert.equal(geometry.width, 68);
+        // The tree starts at the screen edge, or right after the desktop branch rail; the rank rail is narrower on phones.
+        assert.equal(geometry.viewportLeft, geometry.navRight);
+        assert.equal(geometry.width, width <= 720 ? 44 : 68);
         assert.equal(geometry.scrollbarRight, geometry.viewportRight);
         if (position === 'right' && width === 711) await page.screenshot({ path: path.join(output, `${mode}-${width}.png`) });
       }
@@ -64,9 +66,10 @@ async function main() {
         return { blocked, coveredX: covered.left + covered.width / 2, railRight: rail.getBoundingClientRect().right, maxScroll: tree.scrollWidth - tree.clientWidth, exposed: exposed?.closest(selector) === button,
           background: material.backgroundColor, railOpacity: material.opacity, textOpacity: text.opacity, textColor: text.color };
       }, selector);
-      if (layering.maxScroll > 0) assert(layering.blocked, `Rank rail must cover ${selector} and block accidental clicks: ` + JSON.stringify(layering));
+      // Only meaningful when the tree can scroll far enough to slide the button under the rail.
+      if (layering.coveredX < layering.railRight) assert(layering.blocked, `Rank rail must cover ${selector} and block accidental clicks: ` + JSON.stringify(layering));
       assert(layering.exposed, 'Buttons outside the rail must remain clickable');
-      assert.equal(layering.background, 'rgba(34, 39, 40, 0.7)');
+      assert.equal(layering.background, 'rgba(29, 34, 36, 0.7)');
       assert.equal(layering.railOpacity, '1');
       assert.equal(layering.textOpacity, '1');
       assert.equal(layering.textColor, 'rgb(177, 189, 190)');

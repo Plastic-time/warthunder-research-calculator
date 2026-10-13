@@ -57,7 +57,11 @@ async function main() {
       await page.goto(`http://127.0.0.1:${server.address().port}/${mode === 'pages' ? 'pages/' : ''}`, {waitUntil: 'domcontentloaded'});
       await page.waitForFunction(() => Boolean(window.ModificationWorkbench));
       for (const language of ['zh', 'en']) {
-        await page.locator(`[data-language="${language}"]`).click();
+        // The language picker is a select inside a sheet, so set it directly.
+        await page.locator('#languageSelect').evaluate((select, value) => {
+          select.value = value;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+        }, language);
         for (const vehicle of ['us_halftrack_m15', 'us_m1128_wolfpack', 'us_m1a2_sep2_abrams_trophy']) {
           await page.evaluate(id => ModificationWorkbench.open(id), vehicle);
           await page.waitForFunction(() => {

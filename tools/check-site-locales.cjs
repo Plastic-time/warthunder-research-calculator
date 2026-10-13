@@ -67,6 +67,7 @@ async function main() {
         }, selection);
         assert.equal(search.shown, search.expected, 'Vehicle names must use the chosen game locale');
         assert(search.found, 'Search must find localized names');
+        if (width < 720) await page.locator('#mobileMoreButton').click();
         await page.locator('#guideButton').click();
         assert(await page.locator('#usageGuideDialog').evaluate(dialog => dialog.open));
         const guideCopy = await page.locator('#usageGuideDialog').innerText();
@@ -84,12 +85,15 @@ async function main() {
         const tierFiller = await page.evaluate(() => WTI18n.t('等级补足', {}, 'modifications'));
         assert((await page.locator('.modification-legend').innerText()).includes(tierFiller));
         const clipped = await page.locator('.modification-actions button').evaluateAll(buttons => buttons.flatMap(button => {
-          const range = document.createRange();
-          range.selectNodeContents(button);
+          // Icon buttons carry their name in a tooltip that is positioned outside the button on purpose.
           const bounds = button.getBoundingClientRect();
-          const text = range.getBoundingClientRect();
-          return text.left < bounds.left - 1 || text.right > bounds.right + 1 || text.bottom > bounds.bottom + 1
-            ? [button.textContent.trim()] : [];
+          const clippedNode = [...button.childNodes].filter(node => !(node.nodeType === 1 && node.classList.contains('modification-action-label'))).some(node => {
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            const text = range.getBoundingClientRect();
+            return text.width > 0 && (text.left < bounds.left - 1 || text.right > bounds.right + 1 || text.bottom > bounds.bottom + 1);
+          });
+          return clippedNode ? [button.textContent.trim()] : [];
         }));
         assert.deepEqual(clipped, [], `${mode}/${width}/${language}: modification button text must fit`);
         await page.screenshot({ path: path.join(output, `${mode}-${width}-${language}-modifications.png`) });

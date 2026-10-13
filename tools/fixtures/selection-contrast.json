@@ -2,26 +2,28 @@
   {
     "id": "us_m3_stuart",
     "width": 168,
-    "height": 203,
-    "background": "rgb(52, 75, 62)",
-    "badge": { "background": "rgb(61, 91, 72)" }
+    "height": 110,
+    "background": "rgb(56, 81, 65)",
+    "badge": {
+      "background": "rgb(61, 91, 72)"
+    }
   },
   {
     "id": "us_m3a1_stuart",
     "width": 168,
-    "height": 203,
-    "background": "rgb(50, 72, 81)"
+    "height": 110,
+    "background": "rgb(47, 55, 47)"
   },
   {
     "id": "us_m2_medium",
     "width": 168,
-    "height": 182,
-    "background": "rgb(48, 54, 56)"
+    "height": 110,
+    "background": "color(srgb 0.17051 0.245804 0.285176)"
   },
   {
     "id": "us_m22_locust",
     "width": 168,
-    "height": 203,
-    "background": "rgb(66, 59, 76)"
+    "height": 110,
+    "background": "rgb(75, 63, 86)"
   }
 ]
