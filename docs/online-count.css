@@ -4,8 +4,8 @@
   gap: 6px;
   min-inline-size: 132px;
   max-inline-size: 100%;
-  color: #50635f;
-  font-size: 11px;
+  color: var(--gray-8);
+  font-size: var(--fs-2xs);
   line-height: 1.4;
   letter-spacing: 0;
   white-space: nowrap;
@@ -18,9 +18,9 @@
   height: 6px;
   flex: 0 0 6px;
   border-radius: 50%;
-  background: #85928c;
+  background: var(--green-4);
 }
 
 .online-count[data-state="online"]::before {
-  background: #247348;
+  background: var(--green-2);
 }

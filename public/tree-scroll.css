@@ -1,9 +1,9 @@
 :root {
   --tree-scroll-size: 17px;
-  --tree-scroll-track: #d9e1e4;
-  --tree-scroll-thumb: #607e8b;
-  --tree-scroll-hover: #45606a;
-  --tree-scroll-border: #aebdc2;
+  --tree-scroll-track: var(--gray-12);
+  --tree-scroll-thumb: var(--blue-2);
+  --tree-scroll-hover: var(--gray-7);
+  --tree-scroll-border: var(--gray-11);
 }
 
 /* Both visible axes are controls below; hide only their native counterparts. */
@@ -97,4 +97,4 @@
   box-shadow: 0 0 0 1px var(--tree-scroll-hover);
 }
 .tree-scroll-range::-moz-range-thumb:hover { background: var(--tree-scroll-hover); }
-.tree-scroll-range:focus-visible { outline: 2px solid #187963; outline-offset: 1px; }
+.tree-scroll-range:focus-visible { outline: 2px solid var(--green-2); outline-offset: 1px; }

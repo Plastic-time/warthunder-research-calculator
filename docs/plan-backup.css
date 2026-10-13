@@ -3,34 +3,34 @@
 .mobile-sheet-body #planBackupButton > span { display: inline; }
 .plan-backup-dialog {
   width: min(560px, calc(100% - 24px)); max-height: calc(100dvh - 24px);
-  padding: 0; border: 1px solid #59645f; border-radius: 8px;
-  background: #242a28; color: #e7ece8; overflow: hidden;
+  padding: 0; border: 1px solid var(--gray-8); border-radius: 8px;
+  background: var(--gray-3); color: var(--gray-13); overflow: hidden;
 }
 .plan-backup-dialog[open] { display: flex; flex-direction: column; }
-.plan-backup-dialog::backdrop { background: #0009; }
-.plan-backup-dialog header { display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #414b46; }
-.plan-backup-dialog h2 { margin: 0; font-size: 20px; line-height: 1.4; }
-.plan-backup-dialog button { min-height: 44px; padding: 10px 14px; border: 1px solid #647269; border-radius: 6px; background: #303b35; color: #eef2ed; font: inherit; line-height: 1.5; white-space: normal; }
-.plan-backup-dialog button:hover:not(:disabled) { background: #3b4940; }
-.plan-backup-dialog button:focus-visible { outline: 2px solid #d3bd87; outline-offset: 2px; }
+.plan-backup-dialog::backdrop { background: var(--black-a60); }
+.plan-backup-dialog header { display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--gray-6); }
+.plan-backup-dialog h2 { margin: 0; font-size: var(--fs-2xl); line-height: 1.4; }
+.plan-backup-dialog button { min-height: 44px; padding: 10px 14px; border: 1px solid var(--gray-9); border-radius: 6px; background: var(--gray-4); color: var(--gray-13); font: inherit; line-height: 1.5; white-space: normal; }
+.plan-backup-dialog button:hover:not(:disabled) { background: var(--gray-6); }
+.plan-backup-dialog button:focus-visible { outline: 2px solid var(--gold-9); outline-offset: 2px; }
 .plan-backup-dialog button:disabled { opacity: .55; }
 .plan-backup-dialog [data-backup-close] { flex: 0 0 44px; width: 44px; padding: 10px; border-color: transparent; background: transparent; }
 .plan-backup-dialog .nav-icon { width: 20px; height: 20px; flex: 0 0 20px; }
 .plan-backup-body { padding: 18px; min-height: 0; overflow: auto; }
 .plan-backup-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .plan-backup-actions button { display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 0; }
-.plan-backup-preview { margin-top: 18px; padding-top: 14px; border-top: 1px solid #414b46; }
-.plan-backup-preview h3 { font-size: 15px; margin: 0 0 12px; overflow-wrap: anywhere; }
-.plan-backup-preview p, [data-backup-status] { margin: 8px 0 0; font-size: 14px; line-height: 1.65; overflow-wrap: anywhere; }
-[data-backup-date], [data-backup-details] { color: #b1bfb5; }
-[data-backup-overwrite] { color: #e7cb8f; }
+.plan-backup-preview { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--gray-6); }
+.plan-backup-preview h3 { font-size: var(--fs-lg); margin: 0 0 12px; overflow-wrap: anywhere; }
+.plan-backup-preview p, [data-backup-status] { margin: 8px 0 0; font-size: var(--fs-md); line-height: 1.65; overflow-wrap: anywhere; }
+[data-backup-date], [data-backup-details] { color: var(--gray-11); }
+[data-backup-overwrite] { color: var(--gold-14); }
 [data-backup-status]:empty { display: none; }
-.plan-backup-dialog footer { display: flex; flex-shrink: 0; justify-content: flex-end; gap: 10px; padding: 14px 18px; border-top: 1px solid #414b46; }
+.plan-backup-dialog footer { display: flex; flex-shrink: 0; justify-content: flex-end; gap: 10px; padding: 14px 18px; border-top: 1px solid var(--gray-6); }
 .plan-backup-dialog [hidden] { display: none; }
-.plan-backup-dialog [data-backup-confirm] { background: #45583d; border-color: #829276; }
-.plan-storage-warning { position: fixed; z-index: 80; left: 12px; right: 12px; bottom: calc(120px + env(safe-area-inset-bottom, 0px)); margin: auto; max-width: 660px; padding: 12px; background: #323028; border: 1px solid #b99e5b; border-radius: 6px; color: #f2e7c6; display: flex; align-items: center; gap: 12px; font-size: 14px; line-height: 1.6; }
+.plan-backup-dialog [data-backup-confirm] { background: var(--green-1); border-color: var(--green-4); }
+.plan-storage-warning { position: fixed; z-index: 80; left: 12px; right: 12px; bottom: calc(120px + env(safe-area-inset-bottom, 0px)); margin: auto; max-width: 660px; padding: 12px; background: var(--gray-4); border: 1px solid var(--gold-7); border-radius: 6px; color: var(--gold-15); display: flex; align-items: center; gap: 12px; font-size: var(--fs-md); line-height: 1.6; }
 .plan-storage-warning[hidden] { display: none; }
-.plan-storage-warning button { flex-shrink: 0; min-height: 44px; padding: 8px; border: 1px solid #b99e5b; border-radius: 4px; color: inherit; background: transparent; }
+.plan-storage-warning button { flex-shrink: 0; min-height: 44px; padding: 8px; border: 1px solid var(--gold-7); border-radius: 4px; color: inherit; background: transparent; }
 @media (max-width: 380px) {
   .plan-backup-actions { grid-template-columns: 1fr; }
   .plan-storage-warning { flex-direction: column; align-items: stretch; }

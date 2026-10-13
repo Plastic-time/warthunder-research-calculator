@@ -5,7 +5,7 @@
   right: 7px;
   height: 4px;
   border-radius: 0 0 3px 3px;
-  background: linear-gradient(90deg, #af7718, #f5d47b 48%, #b17c20);
+  background: linear-gradient(90deg, var(--gold-6), var(--gold-13) 48%, var(--gold-6));
   pointer-events: none;
 }
 
@@ -13,11 +13,11 @@
   display: inline-block;
   vertical-align: 2px;
   padding: 1px 4px;
-  border: 1px solid #b47b18;
+  border: 1px solid var(--gold-6);
   border-radius: 3px;
-  background: #ffedb4;
-  color: #573900;
-  font-size: 10px;
+  background: var(--gold-16);
+  color: var(--gold-1);
+  font-size: var(--fs-3xs);
   font-weight: 800;
   line-height: 15px;
   white-space: nowrap;

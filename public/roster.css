@@ -1,38 +1,38 @@
-.roster-audit { margin: 12px 0; border-block: 1px solid #b9c3c6; padding: 12px 24px; font-size: 13px; }
+.roster-audit { margin: 12px 0; border-block: 1px solid var(--gray-11); padding: 12px 24px; font-size: var(--fs-sm); }
 .roster-audit summary { cursor: pointer; font-weight: 700; line-height: 1.7; }
-.roster-audit p { color: #465459; line-height: 1.6; }
+.roster-audit p { color: var(--gray-7); line-height: 1.6; }
 .roster-legend { display: flex; flex-wrap: wrap; gap: 6px; }
 .roster-badge { border-radius: 4px; line-height: 1.3; white-space: normal; }
-.roster-standard { background: #e5ecef; color: #344b56; }
-.roster-premium-golden-eagles { background: #fff0ae; color: #644500; }
-.roster-premium-pack { background: #d9ecf7; color: #234e69; }
-.roster-premium-special { background: #f7dfd8; color: #7d392a; }
-.roster-squadron { background: #d4efdd; color: #205536; }
-.roster-hidden { background: #ece3f2; color: #64377d; }
-.roster-hidden[data-roster-hidden-help] { cursor: pointer; box-shadow: inset 0 0 0 1px rgba(100, 55, 125, 0.2); }
-.roster-hidden[data-roster-hidden-help]:hover { background: #dfd1e8; }
-.roster-hidden[data-roster-hidden-help]:focus-visible { outline: 2px solid #64377d; outline-offset: 2px; }
-.roster-component { background: #d9ecf7; color: #234e69; }
-.roster-pending { background: #ffe0db; color: #8b3026; }
+.roster-standard { background: var(--gray-13); color: var(--gray-7); }
+.roster-premium-golden-eagles { background: var(--gold-16); color: var(--gold-1); }
+.roster-premium-pack { background: var(--gray-13); color: var(--blue-1); }
+.roster-premium-special { background: var(--gold-15); color: var(--red-1); }
+.roster-squadron { background: var(--green-8); color: var(--green-1); }
+.roster-hidden { background: var(--gray-13); color: var(--purple-3); }
+.roster-hidden[data-roster-hidden-help] { cursor: pointer; box-shadow: inset 0 0 0 1px var(--gray-1-a16); }
+.roster-hidden[data-roster-hidden-help]:hover { background: var(--purple-7); }
+.roster-hidden[data-roster-hidden-help]:focus-visible { outline: 2px solid var(--purple-3); outline-offset: 2px; }
+.roster-component { background: var(--gray-13); color: var(--blue-1); }
+.roster-pending { background: var(--gold-15); color: var(--red-1); }
 .roster-candidates { padding: 0; list-style: none; max-height: 280px; overflow: auto; overscroll-behavior: auto; }
-.roster-candidates li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid #d4dcde; }
+.roster-candidates li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--gray-12); }
 .roster-candidates code { overflow-wrap: anywhere; min-width: 0; }
 
 .roster-help-dialog {
   width: min(500px, calc(100vw - 32px));
-  border: 1px solid #cfc6d5;
+  border: 1px solid var(--gray-12);
   border-radius: 8px;
-  background: #fffdf8;
-  color: #202321;
+  background: var(--white);
+  color: var(--gray-2);
   padding: 22px;
-  box-shadow: 0 20px 60px rgba(24, 27, 25, 0.24);
+  box-shadow: 0 20px 60px var(--gray-1-a16);
 }
-.roster-help-dialog::backdrop { background: rgba(24, 27, 25, 0.48); }
+.roster-help-dialog::backdrop { background: var(--black-a32); }
 .roster-help-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
-.roster-help-heading span { color: #64377d; font-size: 12px; font-weight: 800; }
-.roster-help-heading h2 { margin: 3px 0 0; font-size: 20px; line-height: 1.3; }
-.roster-help-heading button { flex: 0 0 auto; min-height: 34px; border: 1px solid #cfc6d5; border-radius: 6px; background: #fff; color: #4c4450; padding: 6px 11px; font-weight: 700; }
-.roster-help-dialog p { margin: 0 0 12px; color: #4b514d; font-size: 14px; line-height: 1.7; }
+.roster-help-heading span { color: var(--purple-3); font-size: var(--fs-xs); font-weight: 800; }
+.roster-help-heading h2 { margin: 3px 0 0; font-size: var(--fs-2xl); line-height: 1.3; }
+.roster-help-heading button { flex: 0 0 auto; min-height: 34px; border: 1px solid var(--gray-12); border-radius: 6px; background: var(--white); color: var(--purple-2); padding: 6px 11px; font-weight: 700; }
+.roster-help-dialog p { margin: 0 0 12px; color: var(--gray-7); font-size: var(--fs-md); line-height: 1.7; }
 .roster-help-dialog [data-roster-hidden-name] { font-family: "WTSymbols", Inter, "Segoe UI", "Microsoft YaHei", system-ui, sans-serif; }
-.roster-help-dialog code { overflow-wrap: anywhere; color: #64377d; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
-.roster-help-dialog .roster-help-note { margin: 4px 0 0; border-left: 3px solid #64377d; background: #f3edf6; color: #3d3342; padding: 9px 11px; font-weight: 700; }
+.roster-help-dialog code { overflow-wrap: anywhere; color: var(--purple-3); font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+.roster-help-dialog .roster-help-note { margin: 4px 0 0; border-left: 3px solid var(--purple-3); background: var(--gray-13); color: var(--purple-1); padding: 9px 11px; font-weight: 700; }

@@ -1,20 +1,20 @@
 /* Material-only treatment: the existing budget layout and hit targets stay intact. */
 .floating-budget {
-  border: 1px solid rgba(170, 204, 191, 0.2);
+  border: 1px solid var(--green-8-a16);
   border-radius: 26px;
-  background: #17231f;
+  background: var(--gray-2);
   box-shadow:
-    0 12px 32px rgba(0, 0, 0, 0.28),
-    0 2px 6px rgba(0, 0, 0, 0.16),
-    inset 0 1px 0 rgba(209, 235, 224, 0.14),
-    inset 0 -1px 0 rgba(163, 202, 185, 0.05);
+    0 12px 32px var(--black-a32),
+    0 2px 6px var(--gray-1-a16),
+    inset 0 1px 0 var(--green-8-a16),
+    inset 0 -1px 0 var(--green-4-a08);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
 
 @supports ((backdrop-filter: blur(24px)) or (-webkit-backdrop-filter: blur(24px))) {
   .floating-budget {
-    background: rgba(17, 30, 25, 0.8);
+    background: var(--gray-2-a80);
     -webkit-backdrop-filter: blur(24px) saturate(145%);
     backdrop-filter: blur(24px) saturate(145%);
   }
@@ -25,24 +25,24 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(125deg, rgba(186, 222, 204, 0.055), transparent 30%, transparent 74%, rgba(137, 183, 165, 0.025));
+  background: linear-gradient(125deg, var(--green-4-a08), transparent 30%, transparent 74%, var(--green-4-a08));
   pointer-events: none;
 }
 .floating-budget > * { position: relative; }
-.floating-budget .budget-count { color: #d1ded8; }
-.floating-budget .budget-cost > span { color: #b8ddcf; }
-.floating-budget .budget-sl > span { color: #f0d5a1; }
-.floating-budget .budget-cost strong { color: #ffffff; text-shadow: 0 1px 4px #0d1b19a6; }
-.floating-budget .floating-planner { border-left-color: rgba(218, 238, 228, 0.18); }
+.floating-budget .budget-count { color: var(--gray-12); }
+.floating-budget .budget-cost > span { color: var(--green-8); }
+.floating-budget .budget-sl > span { color: var(--gold-14); }
+.floating-budget .budget-cost strong { color: var(--white); text-shadow: 0 1px 4px var(--gray-2-a70); }
+.floating-budget .floating-planner { border-left-color: var(--green-8-a16); }
 
 .floating-budget .floating-plan-button {
   position: relative;
   isolation: isolate;
   overflow: hidden;
   border-radius: 17px;
-  border: 1px solid rgba(159, 204, 180, 0.3);
-  background: linear-gradient(145deg, rgba(114, 178, 146, 0.13), rgba(69, 124, 96, 0.05)), rgba(29, 66, 47, 0.86);
-  box-shadow: inset 0 1px 0 rgba(192, 227, 207, 0.15), inset 0 -1px 0 rgba(9, 29, 22, 0.22), 0 3px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--green-6-a32);
+  background: linear-gradient(145deg, var(--green-6-a12), var(--green-4-a08)), var(--green-1-a88);
+  box-shadow: inset 0 1px 0 var(--green-8-a16), inset 0 -1px 0 var(--gray-1-a16), 0 3px 8px var(--gray-1-a16);
   transform: translateY(0) scale(1);
   transform-origin: center;
   transition: transform 360ms cubic-bezier(.2, .8, .2, 1), border-color 200ms ease, box-shadow 200ms ease;
@@ -54,7 +54,7 @@
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(115deg, transparent 15%, rgba(180, 225, 198, 0.1) 44%, transparent 75%);
+  background: linear-gradient(115deg, transparent 15%, var(--green-6-a12) 44%, transparent 75%);
   transform: translateX(-45%);
   opacity: 0.25;
   transition: transform 500ms cubic-bezier(.16, 1, .3, 1), opacity 250ms ease;
@@ -63,30 +63,30 @@
 @media (hover: hover) and (pointer: fine) {
   .floating-budget .floating-plan-button:hover:not(:disabled) {
     transform: translateY(-1px);
-    border-color: rgba(182, 224, 200, 0.42);
-    box-shadow: inset 0 1px 0 rgba(202, 235, 216, 0.22), 0 5px 14px rgba(5, 21, 16, 0.3);
+    border-color: var(--green-6-a60);
+    box-shadow: inset 0 1px 0 var(--green-6-a32), 0 5px 14px var(--black-a32);
   }
   .floating-budget .floating-plan-button:hover:not(:disabled)::before { transform: translateX(20%); opacity: 0.45; }
 }
 .floating-budget .floating-plan-button:active:not(:disabled),
 .floating-budget .floating-plan-button[data-press-feedback="pressed"]:not(:disabled) {
   transition-duration: 90ms;
-  box-shadow: inset 0 1px 5px rgba(9, 29, 22, 0.26), inset 0 1px 0 rgba(192, 227, 207, 0.1);
+  box-shadow: inset 0 1px 5px var(--gray-1-a16), inset 0 1px 0 var(--green-6-a12);
 }
-.floating-budget .floating-plan-button:focus-visible { outline: 2px solid #f4dfad; outline-offset: 4px; }
+.floating-budget .floating-plan-button:focus-visible { outline: 2px solid var(--gold-16); outline-offset: 4px; }
 .floating-budget .floating-plan-button:disabled { opacity: 0.64; transform: none; cursor: wait; }
 .floating-budget .floating-plan-test {
-  border-color: rgba(241, 219, 168, 0.3);
+  border-color: var(--gold-14-a32);
   border-radius: 5px;
-  background: rgba(27, 49, 38, 0.52);
-  color: #f8e5b8;
-  box-shadow: inset 0 1px 0 rgba(255, 245, 211, 0.08);
+  background: var(--gray-4-a50);
+  color: var(--gold-16);
+  box-shadow: inset 0 1px 0 var(--green-6-a12);
 }
 .floating-budget .floating-planner-copy {
-  border-color: #718d80;
+  border-color: var(--green-4);
   border-radius: 8px;
-  background: #293831;
-  box-shadow: 0 8px 24px #00000038, inset 0 1px 0 #eafff014;
+  background: var(--gray-4);
+  box-shadow: 0 8px 24px var(--black-a32), inset 0 1px 0 var(--green-6-a12);
 }
 @media (max-width: 720px) {
   .floating-budget { border-radius: 23px; }
@@ -97,9 +97,9 @@
   .floating-budget .floating-planner:has(:focus-visible) .floating-planner-copy { opacity: 1; visibility: visible; }
 }
 @media (prefers-reduced-transparency: reduce) {
-  .floating-budget { background: #17231f; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .floating-budget { background: var(--gray-2); -webkit-backdrop-filter: none; backdrop-filter: none; }
   .floating-budget::before { display: none; }
-  .floating-budget .floating-plan-button { background: #294b37; }
+  .floating-budget .floating-plan-button { background: var(--green-1); }
 }
 @media (prefers-reduced-motion: reduce) {
   .floating-budget .floating-plan-button,

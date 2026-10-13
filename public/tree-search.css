@@ -5,9 +5,9 @@
   gap: 8px;
   min-width: 0;
   min-height: 16px;
-  font-size: 11px;
+  font-size: var(--fs-2xs);
   line-height: 16px;
-  color: #b1bcbd;
+  color: var(--gray-11);
 }
 .search-heading > span { flex: 0 0 auto; }
 #searchResultCount { text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
@@ -27,19 +27,19 @@
   border: 0;
   border-radius: 4px;
   background: transparent;
-  color: #b1bcbd;
+  color: var(--gray-11);
   box-shadow: none;
 }
 .search-clear .nav-icon { width: 16px; height: 16px; --nav-icon: url("assets/navigation/x.svg"); }
-.search-label .search-clear:hover { background: #d3bd8714; color: #edf1f2; }
-.search-label .search-clear:focus-visible { outline: 2px solid #d3bd87; outline-offset: -3px; }
+.search-label .search-clear:hover { background: var(--green-4-a08); color: var(--gray-13); }
+.search-label .search-clear:focus-visible { outline: 2px solid var(--gold-9); outline-offset: -3px; }
 #mobileSearch .search-clear { width: 46px; height: 46px; }
 #mobileSearch #searchInput { padding-right: 52px; }
 #mobileSearch .mobile-search-done {
-  background: #d3bd87;
-  border: 1px solid #d3bd87;
-  color: #202426;
+  background: var(--gold-9);
+  border: 1px solid var(--gold-9);
+  color: var(--gray-2);
   font-weight: 600;
 }
-#mobileSearch .mobile-search-done:hover { background: #e3d1a9; border-color: #e3d1a9; }
-#mobileSearch .mobile-search-done:focus-visible { outline: 2px solid #edf1f2; outline-offset: 2px; }
+#mobileSearch .mobile-search-done:hover { background: var(--gold-14); border-color: var(--gold-14); }
+#mobileSearch .mobile-search-done:focus-visible { outline: 2px solid var(--gray-13); outline-offset: 2px; }

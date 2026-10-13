@@ -23,13 +23,13 @@
   padding-top: 3px;
   width: 22px;
   height: 24px;
-  background: #345b66;
-  border-top: 1px solid #87b4bd;
+  background: var(--gray-7);
+  border-top: 1px solid var(--blue-4);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
 }
 .unit-wiki-launch:hover { background: transparent; }
-.unit-wiki-launch:hover .wiki-bookmark { background: #467986; }
-.unit-wiki-launch:focus-visible { outline: 2px solid #d8c993; outline-offset: 1px; }
+.unit-wiki-launch:hover .wiki-bookmark { background: var(--blue-2); }
+.unit-wiki-launch:focus-visible { outline: 2px solid var(--gold-14); outline-offset: 1px; }
 .unit-wiki-launch img,
 .folder-popup .unit-wiki-launch img { width: 14px; height: 14px; filter: invert(90%); }
 .folder-popup .unit-modifications-launch { width: 44px; height: 44px; bottom: 4px; right: 4px; }
@@ -42,32 +42,32 @@
   max-width: none;
   max-height: none;
   padding: 0;
-  border: 1px solid #697c78;
+  border: 1px solid var(--gray-9);
   border-radius: 6px;
-  background: #20282b;
-  color: #eef2ee;
-  box-shadow: 0 24px 80px #0008;
+  background: var(--gray-3);
+  color: var(--gray-13);
+  box-shadow: 0 24px 80px var(--black-a60);
 }
-.wiki-dialog::backdrop { background: #080e12a6; backdrop-filter: blur(4px); }
+.wiki-dialog::backdrop { background: var(--black-a60); backdrop-filter: blur(4px); }
 .wiki-window { height: 100%; display: flex; flex-direction: column; }
-.wiki-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; border-bottom: 1px solid #52605e; }
+.wiki-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; border-bottom: 1px solid var(--gray-8); }
 .wiki-heading > div { min-width: 0; }
-.wiki-heading small { color: #a7b6b1; font-size: 10px; letter-spacing: 0; }
-.wiki-heading h2 { margin: 3px 0 0; font-size: 18px; line-height: 24px; overflow-wrap: anywhere; }
+.wiki-heading small { color: var(--gray-11); font-size: var(--fs-3xs); letter-spacing: 0; }
+.wiki-heading h2 { margin: 3px 0 0; font-size: var(--fs-xl); line-height: 24px; overflow-wrap: anywhere; }
 .wiki-heading nav { display: flex; flex-shrink: 0; gap: 8px; }
-.wiki-heading button, .wiki-heading a { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #62716e; border-radius: 3px; background: #303b3d; cursor: pointer; }
+.wiki-heading button, .wiki-heading a { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--gray-9); border-radius: 3px; background: var(--gray-5); cursor: pointer; }
 .wiki-heading img { width: 20px; height: 20px; filter: invert(90%); }
-.wiki-heading button:hover, .wiki-heading a:hover { background: #465653; }
-.wiki-heading button:focus-visible, .wiki-heading a:focus-visible { outline: 2px solid #d8c993; outline-offset: 2px; }
-.wiki-load-status { margin: 0; padding: 8px 16px; color: #d9cba4; font-size: 13px; }
+.wiki-heading button:hover, .wiki-heading a:hover { background: var(--gray-7); }
+.wiki-heading button:focus-visible, .wiki-heading a:focus-visible { outline: 2px solid var(--gold-14); outline-offset: 2px; }
+.wiki-load-status { margin: 0; padding: 8px 16px; color: var(--gold-14); font-size: var(--fs-sm); }
 .wiki-load-status[hidden], .wiki-load-status a[hidden] { display: none; }
-.wiki-load-status a { color: #b8dbe8; text-underline-offset: 3px; }
+.wiki-load-status a { color: var(--blue-5); text-underline-offset: 3px; }
 .wiki-frame-host { flex: 1; min-height: 0; }
-.wiki-frame-host iframe { width: 100%; height: 100%; display: block; border: 0; background: #252d31; }
+.wiki-frame-host iframe { width: 100%; height: 100%; display: block; border: 0; background: var(--gray-3); }
 @media (max-width: 600px) {
   .wiki-dialog { width: calc(100vw - 12px); height: calc(100dvh - 12px); }
   .wiki-heading { padding: 8px; gap: 8px; flex-wrap: wrap; }
-  .wiki-heading h2 { font-size: 16px; line-height: 22px; }
+  .wiki-heading h2 { font-size: var(--fs-lg); line-height: 22px; }
   .wiki-heading > div { flex: 1 1 130px; }
   .wiki-heading nav { margin-left: auto; }
 }
