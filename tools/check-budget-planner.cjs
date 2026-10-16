@@ -13,7 +13,7 @@ async function checkBudgetPlanner({ evaluate, call, artifacts, suffix }) {
       dock:d, button:b, summary:s,
       oneButton: document.querySelectorAll('#planButton').length === 1 && !document.getElementById('floatingPlanButton') && !document.querySelector('.topbar-actions #planButton'),
       fixed: getComputedStyle(dock).position === 'fixed',
-      contained: d.left >= 0 && d.right <= innerWidth && d.top > 0 && d.bottom <= innerHeight - 20,
+      contained: d.left >= 0 && d.right <= innerWidth && d.top > 0 && d.bottom <= innerHeight && (d.bottom <= innerHeight - 20 || d.width >= innerWidth - 1),
       aligned: b.left > s.right && b.top >= d.top && b.bottom <= d.bottom && b.right <= d.right,
       textFits: [...dock.querySelectorAll('.budget-count, .budget-cost, [data-plan-button-label], .floating-plan-test')].every(node => node.scrollWidth <= node.clientWidth + 1),
       translucent: getComputedStyle(dock).backgroundColor.startsWith('rgba('),

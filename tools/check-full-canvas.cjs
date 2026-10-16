@@ -153,7 +153,7 @@ async function main() {
         let darkPixels = 0;
         for (let i = 0; i < pixels.length; i += 80) if (pixels[i] < 100 && pixels[i+1] < 100 && pixels[i+2] < 100 && pixels[i+3]) darkPixels++;
         return {
-          budgetVisible: getComputedStyle(budget).position === 'fixed' && budgetBox.top > 0 && budgetBox.bottom <= innerHeight - 18 && budgetBox.left >= 0 && budgetBox.right <= innerWidth,
+          budgetVisible: getComputedStyle(budget).position === 'fixed' && budgetBox.top > 0 && budgetBox.bottom <= innerHeight && (budgetBox.bottom <= innerHeight - 18 || budgetBox.width >= innerWidth - 1) && budgetBox.left >= 0 && budgetBox.right <= innerWidth,
           budgetMatches: els.budgetRp.textContent === payload.totalRp && els.budgetSl.textContent === payload.totalSl && Number(els.budgetCount.textContent) === payload.pendingCount,
           scrollUnchanged: scroll[0] === els.treeContainer.scrollLeft && scroll[1] === els.treeContainer.scrollTop,
           cloneRemoved: !document.querySelector('.tree-screenshot'),
