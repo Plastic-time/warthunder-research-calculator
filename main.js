@@ -435,11 +435,17 @@ app.post("/api/update/:country/:type", security.authorizeUpdate, async (req, res
       return res.status(429).json({ success: false, error: "An update is running or cooling down; try again later" });
     }
     started = true;
-    const data = await updateTree(country, type, { limit });
+    let review;
+    const data = await updateTree(country, type, { limit, onReview: report => {
+      review = { policy: report.policy, requiresReview: report.requiresReview,
+        conflicts: report.conflicts.length, added: report.added.length, missing: report.missing.length,
+        presentationChanges: report.updated.length };
+    } });
     res.json({
       success: true,
       country,
       type,
+      review,
       data: normalizeSpecialVehicleCosts(enrichTreeRanks(applyShopDependencies(data, country, type), country, type)),
     });
   } catch (err) {

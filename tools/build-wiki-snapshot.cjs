@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const cheerio = require('cheerio');
 const {root,cache,sha,readTrees} = require('./refresh-wiki.cjs');
 const {parseWikiDetail} = require('../src/wiki-snapshot');
-const {syncRankUnlocks} = require('./sync-rank-unlocks.cjs');
+const {applyWikiPresentation} = require('./apply-wiki-presentation.cjs');
 
 // Deliberately read raw DOM fields separately from the production detail parser.
 function verifyDetail(html, item) {
@@ -122,6 +122,7 @@ function build(apply=false) {
   if (apply) {
     const report=JSON.parse(fs.readFileSync(path.join(cache,'live-report.json'),'utf8'));
     assert(Date.now()-Date.parse(report.verified_at)<2*3600000,'Live verification is stale');
+    assert.equal(report.failures,0,'Live verification reported failures');
     assert.deepEqual(report.snapshot_files,manifest.files.map(({path,sha256})=>({path,sha256})),'Live verification is for a different snapshot');
     manifest.live_recheck={verified_at:report.verified_at,tree_pages:report.live_tree_pages,unit_samples:report.live_unit_samples,failures:report.failures};
   }
@@ -130,10 +131,11 @@ function build(apply=false) {
   }
   fs.writeFileSync(path.join(cache,'staged/database/manifest.json'),JSON.stringify(manifest,null,2)+'\n');
   if (apply) {
-    for (const {file,content} of outputs) fs.writeFileSync(path.join(root,'docs',file),content);
-    fs.copyFileSync(path.join(cache,'staged/database/manifest.json'),path.join(root,'docs/database/manifest.json'));
-    syncRankUnlocks();
-    require('./build-vehicle-updates.cjs').buildVehicleUpdates(root);
+    const published = applyWikiPresentation(root, outputs, manifest.live_recheck);
+    console.log(JSON.stringify({applied:true,policy:'wiki-presentation-only',trees:published.tree_count,
+      units:published.unit_count,requiresReview:published.wiki_presentation_refresh.requires_review,
+      report:'logs/wiki-refresh/presentation-review.json'}));
+    return published;
   }
   console.log(JSON.stringify({applied:apply,trees:trees.length,units:manifest.unit_count,uniqueUnits:unique.size,failures:0,fetchedFrom:manifest.fetched_from,fetchedTo:manifest.fetched_to}));
   return manifest;

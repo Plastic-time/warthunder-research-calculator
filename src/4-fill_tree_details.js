@@ -7,6 +7,8 @@ const { vehicle_type, country_code } = require("@/dict/country_code");
 const { fetchTreeHTML } = require("./1-extract_tree_div");
 const { extract_rank_tb } = require("./2-extract_rank_tb");
 const { request_details } = require("./3-request_details");
+const { protectWikiTree } = require("./wiki-refresh-guard");
+const { writeWikiRefreshReport } = require("./wiki-refresh-report");
 
 const activeTrees = new Set();
 
@@ -171,6 +173,10 @@ async function updateTree(t_c, type, options = {}) {
   let temporary;
   try {
   signal.throwIfAborted();
+  const { dir, file } = getOutputPath(t_c, type);
+  // Wiki cannot bootstrap reviewed prices, prerequisites or vehicle membership.
+  const previousBytes = fs.readFileSync(file, "utf8");
+  const previous = JSON.parse(previousBytes);
   const tree_data = await get_tree_data(t_c, type, { signal });
   const singleItems = collectSingleItems(tree_data);
   if (!singleItems.length) throw new Error("Refusing to replace tree with empty data");
@@ -195,16 +201,21 @@ async function updateTree(t_c, type, options = {}) {
 
   processMultipleItems(tree_data);
 
-  const { dir, file } = getOutputPath(t_c, type);
+  const { tree, report } = protectWikiTree(previous, tree_data);
+  const reportFile = path.join(__dirname, "..", "logs", "wiki-update-review", `${t_c}_${type}.json`);
+  writeWikiRefreshReport(reportFile, { country: t_c, type, protectedChangesApplied: false, ...report });
   signal.throwIfAborted();
+  if (fs.readFileSync(file, "utf8") !== previousBytes) throw new Error("Tree changed during Wiki refresh; reviewed data was not replaced");
   fs.mkdirSync(dir, { recursive: true });
   temporary = `${file}.${randomUUID()}.tmp`;
-  fs.writeFileSync(temporary, JSON.stringify(tree_data, null, 2), { encoding: "utf-8", flag: "wx" });
+  fs.writeFileSync(temporary, JSON.stringify(tree, null, 2), { encoding: "utf-8", flag: "wx" });
   fs.renameSync(temporary, file);
   temporary = undefined;
-  console.log(`Wrote ${file}`);
+  console.log(`Refreshed Wiki presentation for ${t_c}/${type}; protected data unchanged. Review: logs/wiki-update-review/${t_c}_${type}.json`);
+  if (report.requiresReview) console.warn(`Wiki differences retained for review: ${report.conflicts.length} field conflicts, ${report.added.length} added and ${report.missing.length} missing nodes`);
+  if (options.onReview) options.onReview(report);
 
-  return tree_data;
+  return tree;
   } catch (error) {
     if (timeout.aborted) throw Object.assign(new Error("Update timed out"), { statusCode: 504 });
     throw error;

@@ -19,7 +19,12 @@ const { createSecurity } = require("../src/server-security");
 const updatePath = require.resolve("../src/4-fill_tree_details");
 const original = require(updatePath);
 let calls = 0;
-require.cache[updatePath].exports = { ...original, updateTree: async () => { calls++; return []; } };
+require.cache[updatePath].exports = { ...original, updateTree: async (country, type, options) => {
+  calls++;
+  options.onReview({ policy: 'wiki-presentation-only', requiresReview: true,
+    conflicts: [{}], added: [], missing: [], updated: [{}] });
+  return [];
+} };
 const detailsPath = require.resolve("../src/3-request_details");
 require.cache[detailsPath] = { id: detailsPath, filename: detailsPath, loaded: true,
   exports: { request_details: async () => { throw new Error("PRIVATE_PATH_AND_SECRET"); } } };
@@ -79,7 +84,10 @@ test("local server security boundaries (no external requests or database writes)
     assert.equal(calls, 0);
   });
   await t.test("authorized update succeeds once, repeated work is throttled", async () => {
-    assert.equal((await update(token, { limit: 4 })).status, 200);
+    const response = await update(token, { limit: 4 });
+    assert.equal(response.status, 200);
+    assert.deepEqual((await response.json()).review, { policy: 'wiki-presentation-only', requiresReview: true,
+      conflicts: 1, added: 0, missing: 0, presentationChanges: 1 });
     assert.equal((await update(token, { limit: 4 })).status, 429);
     assert.equal(calls, 1);
   });

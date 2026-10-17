@@ -48,14 +48,24 @@ Ka-29、Do 217 J-2 和两架 CA-27 的已确认修正记录在配件索引中。
 
 | 工具 | 行为与注意事项 |
 | --- | --- |
-| `npm run pull -- usa ground` | 更新本地指定 Wiki 科技树；可能改变本地数据库 |
-| `npm run pull` | 更新本地全部 Wiki 科技树 |
+| `npm run pull -- usa ground` | 只刷新本地指定科技树的名称、图片和用途说明，保留已有游戏字段 |
+| `npm run pull` | 对本地全部科技树执行相同的资料刷新保护 |
 | `node tools/refresh-wiki.cjs` | 抓取 Wiki 候选快照，临时资料位于 `logs/wiki-refresh` |
-| `node tools/build-wiki-snapshot.cjs` | 构建候选网页快照；`--apply` 会写入发布数据，应先审查 |
+| `node tools/build-wiki-snapshot.cjs` | 构建原始 Wiki 候选快照；完成实时复核后，`--apply` 仅将允许的资料字段合入已有网页快照 |
 | `node tools/verify-live-wiki.cjs` | 核对 Wiki，不代表已经核对游戏费用 |
 | `npm run build:modifications` | 重建配件快照；必须复核来源及用户确认修正 |
 
-“更新当前树”和本地更新接口同样属于历史更新流程，不是自动跟随固定游戏配置的升级器。不要以 Wiki 覆盖已确认的游戏数据。代码审查应将数据变化与 UI、规划算法变化分开。
+### 科技树刷新保护
+
+“更新当前树”、`POST /api/update/:country/:type`、`npm run pull` 和网页快照的 `--apply` 共用资料字段白名单：仅允许修改已有条目的 `title`、`vehicle_icon`、`main_role`。空资料和不在 Wiki 图片来源范围内的地址不会覆盖旧值。
+
+RP、银狮、BR、前置、等级、解锁数量、载具身份、未知费用、折叠成员、列顺序及已有来源记录全部保留。布局顺序也可能影响前置推导，因此不会随 Wiki 刷新。新出现的载具不会直接加入生产数据，Wiki 缺失的载具也不会被删除。没有本地基线时拒绝用 Wiki 建立新树。
+
+- 本地报告：`logs/wiki-update-review/<country>_<type>.json`。记录候选与结果哈希、保护字段差异及待核对名单；`protectedChangesApplied` 恒为 `false`，不代表资料字段没有刷新。接口响应的 `review` 提供摘要，不暴露本机路径。
+- 网页快照报告：`logs/wiki-refresh/presentation-review.json`。原始候选仍放在 `logs/wiki-refresh/staged`，只能用于核对，不能直接复制到发布目录。`--apply` 校验已有快照哈希，保留原游戏版本与来源，仅更新合入后的文件哈希；写入失败时尝试回滚已写文件，回滚失败会明确报错，必须停止发布并检查文件。
+- 本地刷新发现数据库在抓取期间被修改时停止写入；无法保存核对报告时也不会替换数据库。
+
+这些入口不是游戏数据升级器，也不会重建配件。`build:modifications` 等独立游戏数据工具仍须单独审查；本轮保护不等于所有历史导入器都已迁移。新增载具、调整费用或前置必须另行核对固定版本的游戏配置。代码审查应将数据变化与 UI、规划算法变化分开。
 
 ## 回归检查
 
@@ -66,6 +76,7 @@ node tools/test-planner.cjs
 node tools/test-modifications.cjs
 node tools/test-site-locales.cjs
 npm run test:security
+npm run test:wiki-refresh
 ```
 
 发布前还需检查实际浏览器页面、下载包及网页数据一致性。配件校验覆盖条目数量、哈希、前置、预算和已确认修正；结构检查通过不等于每一项玩家价格均已实机核对。
@@ -79,7 +90,7 @@ npm run test:security
 | `GET /api/tree/:country/:type/flat` | 读取扁平化载具列表 |
 | `POST /api/calculate/:country/:type` | 计算载具研发费用 |
 | `GET /api/unit/:data_unit_id` | 获取单个载具详情 |
-| `POST /api/update/:country/:type` | 有权限校验的本地数据更新，会写入数据库 |
+| `POST /api/update/:country/:type` | 有权限校验的资料刷新，保留游戏字段并返回 `review` 摘要 |
 
 不要把更新凭证放入公开前端。服务暴露范围、管理员更新及部署注意事项见 [服务器配置](server-security.md)。
 

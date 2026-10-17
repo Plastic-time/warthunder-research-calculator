@@ -4,6 +4,13 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-17 · 科技树更新保护
+
+- 本地 Wiki 刷新与离线网页快照合入只更新已有载具的名称、图片和用途说明。
+- 保留研发费、银狮、前置、等级、折叠结构和来源记录；新增、缺失及冲突条目写入核对报告，不直接改变现有游戏数据。
+- 增加缺失基线、并发修改、写入失败和全部 50 棵科技树的保护回归测试，并接入 GitHub 检查。
+- 不改变界面、规划算法或游戏版本，不重建配件，不发布 Windows 包。独立配件构建工具仍需单独审查。
+
 ## 2026-10-13 · 界面改版
 
 - 宽屏桌面的标题栏和筛选栏合并为一行，高度从约 184 像素降到 56 像素，科技树多显示约一行载具。使用指南、导出截图、清空计划和备份改为图标按钮，悬停显示名称。
@@ -71,6 +78,13 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-17 · Protected Tech Tree Refreshes
+
+- Local Wiki refreshes and offline web snapshot updates now merge only names, images, and role descriptions for existing entries.
+- Research costs, Silver Lions, prerequisites, ranks, folders, and source records stay unchanged. A review report lists new, missing, and conflicting entries.
+- Added checks for missing baselines, concurrent edits, write failures, and all 50 shipped trees. GitHub runs the new checks.
+- No UI, planning, game-version, or modification-data changes. No Windows package is released. Separate modification build tools still need their own review.
 
 ### 2026-10-13 · Interface Redesign
 
