@@ -6,7 +6,7 @@
   const brand = document.querySelector(".brand-title");
   const heading = brand.querySelector("h1");
   const t = source => window.WTI18n.t(source);
-  const asset = file => new URL(file, document.baseURI).href;
+  const asset = file => new URL(window.WTAssets?.url(file) || file, document.baseURI).href;
   const node = (tag, className) => Object.assign(document.createElement(tag), { className });
   const lockup = node("div", "brand-lockup");
   const emblem = Object.assign(node("img", "brand-emblem"), { src: asset("assets/research-emblem.png"), alt: "", width: 44, height: 44 });

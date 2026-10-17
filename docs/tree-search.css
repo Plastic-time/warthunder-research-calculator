@@ -30,7 +30,7 @@
   color: var(--gray-11);
   box-shadow: none;
 }
-.search-clear .nav-icon { width: 16px; height: 16px; --nav-icon: url("assets/navigation/x.svg"); }
+.search-clear .nav-icon { width: 16px; height: 16px; --nav-icon: url("assets/navigation/x.svg?r=4a9cdab38fbb9616"); }
 .search-label .search-clear:hover { background: var(--green-4-a08); color: var(--gray-13); }
 .search-label .search-clear:focus-visible { outline: 2px solid var(--gold-9); outline-offset: -3px; }
 #mobileSearch .search-clear { width: 46px; height: 46px; }

@@ -1,4 +1,4 @@
-#planBackupButton { --header-action-icon: url('assets/navigation/layers.svg'); min-width: 40px; }
+#planBackupButton { --header-action-icon: url('assets/navigation/layers.svg?r=ce16d0a955e3581c'); min-width: 40px; }
 #planBackupButton > span { display: none; }
 .mobile-sheet-body #planBackupButton > span { display: inline; }
 .plan-backup-dialog {

@@ -19,7 +19,7 @@ for (const folder of ['public', 'docs']) {
   assert.equal(avatar.length, 1);
   assert.equal(avatar.attr('width'), '26');
   assert.equal(avatar.attr('height'), '26');
-  assert.equal(avatar.attr('src'), (folder === 'public' ? '/' : '') + 'assets/creator-avatar.jpg');
+  assert.equal(avatar.attr('src').split('?')[0], (folder === 'public' ? '/' : '') + 'assets/creator-avatar.jpg');
   assert(fs.existsSync(path.join(root, folder, 'assets/creator-avatar.jpg')));
   assert.equal($('#planButton').length, 1);
   assert.equal($('#planBackupButton').length, 1);
@@ -31,6 +31,7 @@ for (const folder of ['public', 'docs']) {
   assert.equal($('#budgetRp').length, 1);
   assert.equal($('#budgetSl').length, 1);
   const scripts = $('script[src]').map((_, node) => $(node).attr('src').replace(/^\//, '').split('?')[0]).get();
+  assert.equal(scripts[0], 'asset-urls.js');
   for (const script of ['plan-storage.js', 'plan-backup.js', 'research-progress.js', 'vehicle-long-press.js', 'roster.js', 'modifications.js', 'tree-navigation.js', 'header-layout.js']) {
     assert(scripts.includes(script), `${folder}: missing ${script}`);
     assert(scripts.indexOf(script) < scripts.indexOf('app.js'));

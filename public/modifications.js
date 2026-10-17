@@ -1,4 +1,5 @@
 (function initializeModificationWorkbench() {
+  const asset = file => window.WTAssets?.url(file) || file;
   const dialog = document.getElementById("modificationDialog");
   if (!dialog || !window.ModificationPlanner) return;
 
@@ -118,13 +119,13 @@
       return `<img src="${escape(mod.icon)}" alt="" loading="eager">`;
     }
     const hint = art.v ? t("弹链组图示：{name}（{items}）", { name: art.n, items: art.v.map(item => item.w ? `${item.w}: ${item.n}` : item.n).join(" / ") }) : art.n;
-    const images = files => files.map(file => `<img src="images/ammunition/${escape(file)}" alt="" loading="eager">`).join("");
+    const images = files => files.map(file => `<img src="${escape(asset(`images/ammunition/${file}`))}" alt="" loading="eager">`).join("");
     const ratio = Number.isFinite(art.r) && art.r > 0 && art.r <= 1 ? art.r : 1 / art.b.length;
     const width = ratio * 100;
     const space = 100 - width * art.b.length;
     const gap = space > 0 ? space / (art.b.length + 1) : space / Math.max(1, art.b.length - 1);
     const start = space > 0 ? gap : 0;
-    const rounds = art.b.map((file, index) => `<img src="images/ammunition/${escape(file)}" alt="" loading="eager" style="left:${start + (width + gap) * index}%;width:${width}%">`).join("");
+    const rounds = art.b.map((file, index) => `<img src="${escape(asset(`images/ammunition/${file}`))}" alt="" loading="eager" style="left:${start + (width + gap) * index}%;width:${width}%">`).join("");
     return `<span class="modification-ammunition" title="${escape(hint)}" data-fallback="${escape(mod.icon)}">
       <span class="modification-ammunition-decor">${images(art.d)}</span>
       <span class="modification-ammunition-base">${rounds}</span>

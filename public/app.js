@@ -143,6 +143,10 @@ function storageKey() {
   return `wt-research:${state.country}:${state.type}`;
 }
 
+function localAsset(file) {
+  return window.WTAssets?.url(file) || file;
+}
+
 function cleanText(value) {
   return String(value || "").replace(/[\u200B-\u200D\u2060\uFEFF]/g, "").replace(/[\u00a0\u807d]/g, " ").replace(/\s+/g, " ").trim();
 }
@@ -1070,7 +1074,7 @@ function renderUnit(unit, inFolder = false) {
         </span>
       </span>
       ${isNew ? '<span class="unit-update-edge" aria-hidden="true"></span>' : ""}
-    </button><div class="unit-actions">${modificationButton}<button class="unit-wiki-launch" type="button" data-wiki-id="${escapeHtml(id)}" data-wiki-title="${escapeHtml(displayTitle(unit))}" aria-label="${escapeHtml(tr("查看 {name} Wiki 详情", { name: displayTitle(unit) }))}" title="${tr("Wiki 载具详情")}"><span class="wiki-bookmark"><img src="assets/wiki/book-open.svg" alt=""></span></button></div>
+    </button><div class="unit-actions">${modificationButton}<button class="unit-wiki-launch" type="button" data-wiki-id="${escapeHtml(id)}" data-wiki-title="${escapeHtml(displayTitle(unit))}" aria-label="${escapeHtml(tr("查看 {name} Wiki 详情", { name: displayTitle(unit) }))}" title="${tr("Wiki 载具详情")}"><span class="wiki-bookmark"><img src="${escapeHtml(localAsset('assets/wiki/book-open.svg'))}" alt=""></span></button></div>
     </div>
   `;
 }
@@ -1307,7 +1311,7 @@ function renderRankRail(rank) {
     <div class="rank-rail ${complete ? "is-complete" : ""}">
       <button type="button" class="rank-owned-trigger" data-owned-rank="${escapeHtml(rank.rank)}" aria-haspopup="dialog" title="${escapeHtml(ownedLabel)}" aria-label="${escapeHtml(displayRank(rank.rank))} · ${escapeHtml(ownedLabel)}">
         <span class="rank-name">${escapeHtml(displayRank(rank.rank))}</span>
-        <img src="assets/navigation/check.svg" width="16" height="16" alt="">
+        <img src="${escapeHtml(localAsset('assets/navigation/check.svg'))}" width="16" height="16" alt="">
       </button>
     </div>
   `;
@@ -1321,7 +1325,7 @@ function renderTree() {
     return;
   }
   if (!state.tree.length) {
-    els.treeContainer.innerHTML = `<div class="wiki-empty" role="status"><img src="assets/empty-wiki-tree.png" width="1200" height="1312" alt="" draggable="false"><p>${tr("这只笨蛋萝莉没有相关的Wiki科技树数据")}</p></div>`;
+    els.treeContainer.innerHTML = `<div class="wiki-empty" role="status"><img src="${escapeHtml(localAsset('assets/empty-wiki-tree.png'))}" width="1200" height="1312" alt="" draggable="false"><p>${tr("这只笨蛋萝莉没有相关的Wiki科技树数据")}</p></div>`;
     return;
   }
 

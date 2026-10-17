@@ -20,6 +20,15 @@ the `guizang-ppt-skill/SKILL.md` file under the user's local Codex skills direct
 - GitHub account email privacy settings are separate from repository settings.
   Never claim those account settings were changed without verifying them.
 
+## Web Cache Revisions
+
+- After changing scripts, styles, icons, fonts or local images, run
+  `npm run sync:web-assets`, `npm run check:web-assets` and `npm run test:web-assets`.
+- Include generated cache revisions with the source changes. Do not remove the
+  Pages pre-deployment cache check or manually pin revisions to the installer version.
+- Keep saved plans and research progress. See `doc/web-cache-policy.md` for scope
+  and warm-cache browser checks. Do not force-reload a page during user edits.
+
 ## Game Data Authority
 
 - Check https://github.com/gszabi99/War-Thunder-Datamine when reviewing game

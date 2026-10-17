@@ -201,8 +201,8 @@ body,
   flex: 0 0 18px; width: 18px; height: 18px; background: currentColor;
   -webkit-mask: var(--modification-action-icon) center / contain no-repeat; mask: var(--modification-action-icon) center / contain no-repeat;
 }
-[data-modification-action="clear"] { --modification-action-icon: url("assets/navigation/rotate-ccw.svg"); }
-[data-modification-action="all"] { --modification-action-icon: url("assets/navigation/list-checks.svg"); }
+[data-modification-action="clear"] { --modification-action-icon: url("assets/navigation/rotate-ccw.svg?r=622685386ab4017e"); }
+[data-modification-action="all"] { --modification-action-icon: url("assets/navigation/list-checks.svg?r=08d26ab05aaf7242"); }
 .modification-action-label {
   position: absolute; bottom: calc(100% + 8px); left: 0; z-index: 10;
   width: max-content; max-width: min(280px, 100%); padding: 6px 9px; box-sizing: border-box;
@@ -355,14 +355,14 @@ body,
   content: ""; display: block; flex: 0 0 auto; width: 12px; height: 12px;
   background: currentColor; -webkit-mask: var(--acquisition-icon) center / contain no-repeat; mask: var(--acquisition-icon) center / contain no-repeat;
 }
-.roster-premium-pack { --acquisition-icon: url("assets/navigation/gift.svg"); }
-.roster-premium-golden-eagles { --acquisition-icon: url("assets/navigation/golden-eagles.svg"); }
+.roster-premium-pack { --acquisition-icon: url("assets/navigation/gift.svg?r=bc0651476bc7fdef"); }
+.roster-premium-golden-eagles { --acquisition-icon: url("assets/navigation/golden-eagles.svg?r=3fff6c05c62b7f4b"); }
 .tree-canvas .unit-meta > .roster-premium-golden-eagles::before {
   width: 16px; height: 16px;
 }
 .tree-canvas .unit-meta > .unlocked { color: var(--green-8); background: var(--green-1); padding: 1px 5px; }
 :is(.tree-canvas, .folder-popup) .unit-meta > .pill.target-label { display: inline-flex; align-items: center; gap: 4px; color: var(--gray-3); background: var(--gold-13); padding: 1px 5px; border-radius: 2px; font-weight: 750; line-height: 15px; }
-:is(.tree-canvas, .folder-popup) .unit-meta > .target-label::before { content: ""; flex: 0 0 12px; width: 12px; height: 12px; background: currentColor; -webkit-mask: url("assets/navigation/check.svg") center / contain no-repeat; mask: url("assets/navigation/check.svg") center / contain no-repeat; }
+:is(.tree-canvas, .folder-popup) .unit-meta > .target-label::before { content: ""; flex: 0 0 12px; width: 12px; height: 12px; background: currentColor; -webkit-mask: url("assets/navigation/check.svg?r=7f33acc9a77a6165") center / contain no-repeat; mask: url("assets/navigation/check.svg?r=7f33acc9a77a6165") center / contain no-repeat; }
 .tree-canvas .unit-meta > .owned-label { color: var(--blue-5); background: var(--gray-7); padding: 1px 5px; }
 .tree-canvas .unit-meta > .waypoint-label { color: var(--gold-14); background: var(--gold-3); padding: 1px 5px; }
 .tree-canvas .unit-meta > .filler-label { color: var(--purple-7); background: var(--purple-2); padding: 1px 5px; }
@@ -381,11 +381,11 @@ body,
   --tile-border: var(--plan-accent);
   box-shadow: inset 3px 0 var(--plan-accent);
 }
-.tree-canvas .unit-tile[data-plan-state="target"] { --plan-accent: var(--gold-13); --plan-ink: var(--gray-3); --plan-icon: url("assets/navigation/target.svg"); }
-.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state="required"] { --plan-accent: var(--blue-5); --plan-ink: var(--gray-3); --plan-icon: url("assets/navigation/route.svg"); --tile-surface: color-mix(in srgb, var(--blue-1) 32%, var(--gray-5)); }
-.tree-canvas .unit-tile[data-plan-state="filler"] { --plan-accent: var(--purple-6); --plan-ink: var(--purple-1); --plan-icon: url("assets/navigation/layers.svg"); }
-.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state="owned"] { --plan-accent: var(--green-7); --plan-ink: var(--gray-4); --plan-icon: url("assets/navigation/check.svg"); --tile-surface: var(--gray-4); }
-.tree-canvas .unit-tile[data-plan-state="waypoint"] { --plan-accent: var(--gold-9); --plan-ink: var(--gray-4); --plan-icon: url("assets/navigation/map-pin.svg"); }
+.tree-canvas .unit-tile[data-plan-state="target"] { --plan-accent: var(--gold-13); --plan-ink: var(--gray-3); --plan-icon: url("assets/navigation/target.svg?r=96a6b16628825a1a"); }
+.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state="required"] { --plan-accent: var(--blue-5); --plan-ink: var(--gray-3); --plan-icon: url("assets/navigation/route.svg?r=fc169fd38a9963b0"); --tile-surface: color-mix(in srgb, var(--blue-1) 32%, var(--gray-5)); }
+.tree-canvas .unit-tile[data-plan-state="filler"] { --plan-accent: var(--purple-6); --plan-ink: var(--purple-1); --plan-icon: url("assets/navigation/layers.svg?r=ce16d0a955e3581c"); }
+.tree-canvas .unit-tile-shell > .unit-tile[data-plan-state="owned"] { --plan-accent: var(--green-7); --plan-ink: var(--gray-4); --plan-icon: url("assets/navigation/check.svg?r=7f33acc9a77a6165"); --tile-surface: var(--gray-4); }
+.tree-canvas .unit-tile[data-plan-state="waypoint"] { --plan-accent: var(--gold-9); --plan-ink: var(--gray-4); --plan-icon: url("assets/navigation/map-pin.svg?r=16f1042a62f1bda2"); }
 .tree-canvas .unit-meta > .pill.plan-status {
   position: absolute; top: -11px; right: 6px;
   z-index: 1; /* Keep new-vehicle edge decorations behind the status text. */

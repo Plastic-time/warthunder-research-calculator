@@ -17,6 +17,8 @@ jobs:
           check-latest: true
           cache: npm
       - run: npm ci --ignore-scripts
+      - run: npm run check:web-assets
+      - run: npm run test:web-assets
       - name: Check dependencies
         run: npm audit --audit-level=low
       - name: Check request handling

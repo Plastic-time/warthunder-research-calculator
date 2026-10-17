@@ -4,6 +4,13 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-17 · 网页缓存检查
+
+- 修正翻译、研发进度、点击反馈脚本更新后仍可能读取旧版本的问题，补充载具分类数据的缓存重新验证。
+- 脚本、样式、本地图标、字体和图片统一按内容生成缓存标记；标记遗漏或失效时阻止网页部署。
+- 保留原有科技树和配件数据的哈希校验，不清除已保存计划、拥有标记或研发进度，不改变计算逻辑和界面样式。
+- 发布后重新载入页面生效，不强制打断已打开页面的操作。本次不发布 Windows 包。[检查范围与更新流程](web-cache-policy.md)。
+
 ## 2026-10-17 · 规划数据核对
 
 - 修正规则文件更新后仍可能读取旧缓存的问题；网页引用现在随规则内容变化，保留已有计划和研发进度。
@@ -86,6 +93,13 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-17 · Web Cache Checks
+
+- Fixed stale scripts for translations, research progress and click feedback. Vehicle classification requests now revalidate cached responses.
+- Local scripts, styles, icons, fonts and images use content-based cache revisions. Missing or stale revisions block deployment.
+- Kept existing data hash checks, saved plans, ownership and research progress. Calculation logic and visual styles are unchanged.
+- Reload after deployment to load the update. Open pages are not interrupted. No Windows package was released. [Scope and update steps](web-cache-policy.md).
 
 ### 2026-10-17 · Planning Data Review
 

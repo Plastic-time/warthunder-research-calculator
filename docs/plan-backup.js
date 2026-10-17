@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  const asset = file => window.WTAssets?.url(file) || file;
   const storage = window.PlanStorage;
   const t = (source, params) => window.WTI18n.t(source, params);
   let hooks = { busy: () => true, restored: async () => {} };
@@ -11,10 +12,10 @@
   dialog.id = 'planBackupDialog';
   dialog.className = 'plan-backup-dialog';
   dialog.setAttribute('aria-labelledby', 'planBackupTitle');
-  dialog.innerHTML = `<header><h2 id="planBackupTitle" data-i18n="备份与恢复"></h2><button type="button" data-backup-close aria-label="关闭" data-i18n-aria-label="关闭"><span class="nav-icon" style="--nav-icon:url('assets/navigation/x.svg')" aria-hidden="true"></span></button></header>
+  dialog.innerHTML = `<header><h2 id="planBackupTitle" data-i18n="备份与恢复"></h2><button type="button" data-backup-close aria-label="关闭" data-i18n-aria-label="关闭"><span class="nav-icon" style="--nav-icon:url('${asset('assets/navigation/x.svg')}')" aria-hidden="true"></span></button></header>
     <div class="plan-backup-body"><div class="plan-backup-actions">
-      <button type="button" data-backup-export><span class="nav-icon" style="--nav-icon:url('assets/navigation/download.svg')" aria-hidden="true"></span><span data-i18n="导出备份"></span></button>
-      <button type="button" data-backup-import><span class="nav-icon" style="--nav-icon:url('assets/navigation/upload.svg')" aria-hidden="true"></span><span data-i18n="选择备份文件"></span></button>
+      <button type="button" data-backup-export><span class="nav-icon" style="--nav-icon:url('${asset('assets/navigation/download.svg')}')" aria-hidden="true"></span><span data-i18n="导出备份"></span></button>
+      <button type="button" data-backup-import><span class="nav-icon" style="--nav-icon:url('${asset('assets/navigation/upload.svg')}')" aria-hidden="true"></span><span data-i18n="选择备份文件"></span></button>
     </div><input type="file" accept=".json,application/json" data-backup-file hidden>
     <section class="plan-backup-preview" hidden aria-labelledby="planBackupFile"><h3 id="planBackupFile"></h3><p data-backup-date></p><p data-backup-counts></p><p data-backup-details></p><p data-backup-overwrite></p><p data-i18n="仅替换备份中包含的记录，其他记录保留。"></p></section>
     <p data-backup-status role="status" aria-live="polite"></p></div>

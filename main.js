@@ -42,7 +42,7 @@ const typeLabels = {
 app.disable("x-powered-by");
 app.use(security.guard);
 app.use(express.json({ limit: "1mb" }));
-app.use(express.static(PUBLIC_DIR));
+app.use(express.static(PUBLIC_DIR, { setHeaders: res => res.setHeader('Cache-Control', 'no-cache') }));
 app.get("/api/session", security.session);
 
 function validateTreeArgs(country, type) {

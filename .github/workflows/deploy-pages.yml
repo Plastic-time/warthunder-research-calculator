@@ -26,6 +26,15 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          check-latest: true
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Verify cache revisions before deploying
+        run: npm run check:web-assets
+      - run: npm run test:web-assets
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site

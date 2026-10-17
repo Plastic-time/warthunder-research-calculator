@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  const asset = file => window.WTAssets?.url(file) || file;
   const t = (source, params) => window.WTI18n.t(source, params);
   const dialog = document.createElement('dialog');
   dialog.id = 'wikiDialog';
@@ -7,9 +8,9 @@
   dialog.setAttribute('aria-labelledby', 'wikiTitle');
   dialog.innerHTML = `<div class="wiki-window">
     <header class="wiki-heading"><div><small></small><h2 id="wikiTitle"></h2></div>
-      <nav><button type="button" data-wiki-reload><img src="assets/wiki/rotate-cw.svg" alt=""></button>
-      <a data-wiki-external target="_blank" rel="noopener noreferrer"><img src="assets/wiki/external-link.svg" alt=""></a>
-      <button type="button" data-wiki-close autofocus><img src="assets/wiki/x.svg" alt=""></button></nav>
+      <nav><button type="button" data-wiki-reload><img src="${asset('assets/wiki/rotate-cw.svg')}" alt=""></button>
+      <a data-wiki-external target="_blank" rel="noopener noreferrer"><img src="${asset('assets/wiki/external-link.svg')}" alt=""></a>
+      <button type="button" data-wiki-close autofocus><img src="${asset('assets/wiki/x.svg')}" alt=""></button></nav>
     </header><p class="wiki-load-status" role="status" hidden><span></span><a target="_blank" rel="noopener noreferrer" hidden></a></p><div class="wiki-frame-host"></div></div>`;
   document.body.append(dialog);
   const heading = dialog.querySelector('h2');

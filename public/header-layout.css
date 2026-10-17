@@ -92,7 +92,7 @@
 .tree-filters input[type="search"], .tree-filters select, #mobileFilters select, #mobileMore select, #mobileSearch input[type="search"] { height: 40px; min-height: 40px; border: 1px solid var(--gray-8); border-radius: 4px; background: var(--gray-2); color: var(--gray-13); font-size: var(--fs-sm); font-weight: 500; line-height: 20px; padding: 8px 12px; box-shadow: none; }
 .tree-filters input[type="search"]:focus, .tree-filters select:focus, #mobileFilters select:focus, #mobileMore select:focus, #mobileSearch input[type="search"]:focus { border-color: var(--gray-11); outline: 2px solid var(--green-6-a32); outline-offset: 1px; box-shadow: none; }
 .tree-filters .search-label, #mobileSearch .search-label { position: relative; }
-.tree-filters .search-label::after, #mobileSearch .search-label::after { content: ""; position: absolute; width: 16px; height: 16px; left: 12px; bottom: 12px; background: var(--gray-11); -webkit-mask: url("assets/navigation/search.svg") center / contain no-repeat; mask: url("assets/navigation/search.svg") center / contain no-repeat; pointer-events: none; }
+.tree-filters .search-label::after, #mobileSearch .search-label::after { content: ""; position: absolute; width: 16px; height: 16px; left: 12px; bottom: 12px; background: var(--gray-11); -webkit-mask: url("assets/navigation/search.svg?r=283d371c2e433817") center / contain no-repeat; mask: url("assets/navigation/search.svg?r=283d371c2e433817") center / contain no-repeat; pointer-events: none; }
 .tree-filters input[type="search"], #mobileSearch input[type="search"] { padding-left: 36px; }
 .tree-filters > .tree-selection-options { border-left: 1px solid var(--green-1); padding-left: 16px; }
 .tree-selection-options .planner-option { cursor: pointer; }
@@ -244,9 +244,9 @@
   mask: var(--header-action-icon) center / contain no-repeat;
   -webkit-mask: var(--header-action-icon) center / contain no-repeat;
 }
-#guideButton { --header-action-icon: url("assets/navigation/book-open.svg"); }
-#routeExportButton { --header-action-icon: url("assets/navigation/image-down.svg"); }
-#clearButton, #refreshDataButton { --header-action-icon: url("assets/navigation/rotate-ccw.svg"); }
+#guideButton { --header-action-icon: url("assets/navigation/book-open.svg?r=9b9bed0ff057283d"); }
+#routeExportButton { --header-action-icon: url("assets/navigation/image-down.svg?r=598f3007626b879e"); }
+#clearButton, #refreshDataButton { --header-action-icon: url("assets/navigation/rotate-ccw.svg?r=622685386ab4017e"); }
 .topbar-actions #clearButton { color: var(--red-5); }
 .topbar-actions button:hover:not(:disabled) { background: var(--gray-5); border-color: transparent; }
 .topbar-actions #clearButton:hover { background: var(--green-4-a08); }

@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+  const asset = file => window.WTAssets?.url(file) || file;
   const flags = {usa: "us", germany: "de", ussr: "su", britain: "gb", japan: "jp", china: "cn", italy: "it", france: "fr", sweden: "se", israel: "il"};
   const icons = {ground: "truck", aviation: "plane", helicopters: "fan", ships: "ship", boats: "sailboat"};
   const labels = {ships: "远洋", boats: "近岸"};
@@ -18,13 +19,13 @@
   }
   function icon(name) {
     const node = element("span", "nav-icon");
-    node.style.setProperty("--nav-icon", `url("assets/navigation/${name}.svg")`);
+    node.style.setProperty("--nav-icon", `url("${asset(`assets/navigation/${name}.svg`)}")`);
     node.setAttribute("aria-hidden", "true");
     return node;
   }
   function flag(code) {
     const image = element("img", "country-flag");
-    image.src = `assets/flags/${flags[code]}.svg`;
+    image.src = asset(`assets/flags/${flags[code]}.svg`);
     image.alt = "";
     return image;
   }

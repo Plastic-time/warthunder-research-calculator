@@ -70,7 +70,7 @@ async function main() {
       console.log(JSON.stringify({mode, width, before, aircraftOriginalIcons: !before, imagery:true, selection:true, unlocked:true}));
     }
     const page = await browser.newPage();
-    await page.route('**/images/ammunition/armor_big.png', route => route.abort());
+    await page.route('**/images/ammunition/armor_big.png*', route => route.abort());
     await page.goto(`http://127.0.0.1:${server.address().port}/pages/`, {waitUntil:'domcontentloaded'});
     await page.waitForFunction(() => Boolean(window.ModificationWorkbench));
     await page.evaluate(() => ModificationWorkbench.open('us_m1a2_abrams'));

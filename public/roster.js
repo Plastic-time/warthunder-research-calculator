@@ -66,7 +66,7 @@
   window.RosterAudit = {
     async load() {
       try {
-        const response = await fetch('roster-audit.json?v=roster-1', { signal: AbortSignal.timeout(8000) });
+        const response = await fetch('roster-audit.json?v=roster-1', { cache: 'no-cache', signal: AbortSignal.timeout(8000) });
         if (!response.ok) throw new Error(t('载具收录对照暂不可用'));
         report = await response.json();
         if (report.schema !== 2 || !report.trees) throw new Error(t('载具收录对照格式错误'));
