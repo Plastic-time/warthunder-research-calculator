@@ -6,6 +6,7 @@
 
 ## 2026-10-17 · 规划数据核对
 
+- 修正规则文件更新后仍可能读取旧缓存的问题；网页引用现在随规则内容变化，保留已有计划和研发进度。
 - 依据固定提交的游戏 2.59.0.73 配置，修正 14 处等级解锁数量，避免自动规划少补载具。
 - 修正后端旧前置映射，核对 15 辆载具及两个折叠组入口，使这些记录与静态网页和游戏配置一致。
 - 增加全部 50 棵树、241 个显式门槛、前置及自动补足的回归测试。保留人工确认的配件修正。
@@ -88,6 +89,7 @@ This log covers web updates after the downloadable release. These entries do not
 
 ### 2026-10-17 · Planning Data Review
 
+- Fixed stale rule caching after web updates. The script URL now changes with the rule contents. Saved plans and research progress stay intact.
 - Corrected 14 rank unlock counts using pinned game data from 2.59.0.73. Plans now use the reviewed thresholds.
 - Updated backend mappings for 15 vehicle prerequisites and two folder entries. These records now match the static site and game configuration.
 - Added checks for all 50 trees, 241 explicit thresholds, prerequisite links, and automatic fillers. User-confirmed modification corrections remain intact.

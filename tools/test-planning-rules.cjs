@@ -10,6 +10,8 @@ const { test } = require('node:test');
 const { loadSources, projectTree } = require('./audit-planning-rules.cjs');
 const fixture = require('./fixtures/planning-rules-2.59.0.73.json');
 const { get_unlock_quantity } = require('../dict/unlock_quantity');
+const { syncRankUnlocks, ruleRevision } = require('./sync-rank-unlocks.cjs');
+const cheerio = require('cheerio');
 const root = path.resolve(__dirname, '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
@@ -80,6 +82,36 @@ test('both copies match all 241 explicit source rank requirements', () => {
   assert.equal(count, 241);
   assert.equal(fixture.missingRankFields.length, 37);
   assert.equal(fixture.fullSnapshotUpgrade, false);
+});
+
+test('the published rule URL changes with its contents, not just the installer version', () => {
+  const $ = cheerio.load(fs.readFileSync(path.join(root, 'docs/index.html'), 'utf8'));
+  const script = $('script[src^="unlock-quantity.js?"]');
+  assert.equal(script.length, 1);
+  const url = new URL(script.attr('src'), 'https://local.invalid/');
+  const source = fs.readFileSync(path.join(root, 'docs/unlock-quantity.js'), 'utf8');
+  assert.equal(url.searchParams.get('r'), ruleRevision(source), 'Run node tools/sync-rank-unlocks.cjs');
+});
+
+test('syncing rules refreshes only their URL and is stable across line endings', t => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'wt-rule-cache-'));
+  t.after(() => fs.rmSync(directory, { recursive: true, force: true }));
+  fs.mkdirSync(path.join(directory, 'dict'));
+  fs.mkdirSync(path.join(directory, 'docs'));
+  const html = '<!-- keep layout -->\n<script src="unlock-quantity.js?v=1.0.26"></script>\n<script src="app.js?v=unchanged"></script>\n';
+  const htmlPath = path.join(directory, 'docs/index.html');
+  const sourcePath = path.join(directory, 'dict/unlock_quantity.js');
+  fs.writeFileSync(htmlPath, html);
+  fs.writeFileSync(sourcePath, 'const required = 5;\n');
+  syncRankUnlocks(directory);
+  const first = fs.readFileSync(htmlPath, 'utf8');
+  assert.equal(first, html.replace('?v=1.0.26', '?v=1.0.26&amp;r=' + ruleRevision('const required = 5;\n')));
+  syncRankUnlocks(directory);
+  assert.equal(fs.readFileSync(htmlPath, 'utf8'), first);
+  fs.writeFileSync(sourcePath, 'const required = 6;\r\n');
+  syncRankUnlocks(directory);
+  assert.equal(fs.readFileSync(htmlPath, 'utf8'), html.replace('?v=1.0.26', '?v=1.0.26&amp;r=' + ruleRevision('const required = 6;\n')));
+  assert.equal(fs.readFileSync(path.join(directory, 'docs/unlock-quantity.js'), 'utf8'), 'const required = 6;\r\n');
 });
 
 function appContext(folder) {
