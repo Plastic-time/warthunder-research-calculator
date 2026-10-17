@@ -1,3 +1,4 @@
+// Reviewed against Datamine 2.59.0.73; provenance: doc/game-data-review-20261017.md.
 const unlock_quantity = {
   usa: {
     ground: {
@@ -28,7 +29,7 @@ const unlock_quantity = {
     },
     ships: {
       I: 3,
-      II: 3,
+      II: 5,
       III: 6,
       IV: 6,
       V: 5,
@@ -71,7 +72,7 @@ const unlock_quantity = {
       VII: 0,
     },
     ships: {
-      I: 4,
+      I: 5,
       II: 4,
       III: 5,
       IV: 5,
@@ -82,7 +83,7 @@ const unlock_quantity = {
     boats: {
       I: 2,
       II: 5,
-      III: 4,
+      III: 5,
       IV: 6,
       V: 0,
     },
@@ -117,7 +118,7 @@ const unlock_quantity = {
     ships: {
       I: 4,
       II: 4,
-      III: 5,
+      III: 6,
       IV: 3,
       V: 4,
       VI: 4,
@@ -125,7 +126,7 @@ const unlock_quantity = {
     },
     boats: {
       I: 5,
-      II: 5,
+      II: 6,
       III: 5,
       IV: 6,
       V: 0,
@@ -160,7 +161,7 @@ const unlock_quantity = {
     },
     ships: {
       I: 4,
-      II: 5,
+      II: 6,
       III: 5,
       IV: 6,
       V: 5,
@@ -191,7 +192,7 @@ const unlock_quantity = {
       II: 6,
       III: 6,
       IV: 6,
-      V: 4,
+      V: 5,
       VI: 5,
       VII: 5,
       VIII: 3,
@@ -213,7 +214,7 @@ const unlock_quantity = {
     },
     boats: {
       I: 4,
-      II: 5,
+      II: 6,
       III: 6,
       IV: 3,
       V: 0,
@@ -286,7 +287,7 @@ const unlock_quantity = {
       VII: 5,
     },
     boats: {
-      I: 3,
+      I: 4,
       II: 4,
       III: 3,
       IV: 4,
@@ -325,12 +326,12 @@ const unlock_quantity = {
       II: 6,
       III: 4,
       IV: 5,
-      V: 3,
+      V: 4,
       VI: 1,
       VII: 5,
     },
     boats: {
-      I: 3,
+      I: 4,
       II: 3,
       III: 4,
       IV: 3,
@@ -376,10 +377,10 @@ const unlock_quantity = {
       VIII: 0,
     },
     aviation: {
-      IV: 5,
-      V: 3,
+      IV: 6,
+      V: 4,
       VI: 5,
-      VII: 4,
+      VII: 5,
       VIII: 3,
     },
     helicopters: {

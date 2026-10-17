@@ -1,0 +1,564 @@
+{
+  "schema": 1,
+  "gameVersion": "2.59.0.73",
+  "datamineCommit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+  "baseline": {
+    "version": "2.59.0.17",
+    "commit": "510a793c2bdb01c51475118199c7b66b72935ff1",
+    "scope": "vehicle-research-and-purchase-costs"
+  },
+  "sources": [
+    {
+      "label": "baseline",
+      "commit": "510a793c2bdb01c51475118199c7b66b72935ff1",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/510a793c2bdb01c51475118199c7b66b72935ff1/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32042223,
+      "sha256": "71800cda51f69f77cf29768eea5fa5d496277cacc21143190b2f6cdf43fe3d5e"
+    },
+    {
+      "label": "current",
+      "commit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/6142de74d1e9a7125f0fd7e6517d4af7411db29e/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32116305,
+      "sha256": "9af889e2945709ac4f00fa648c6941132d20156015c484b93f84809ad5cb2b5d"
+    },
+    {
+      "label": "current",
+      "commit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "file": "char.vromfs.bin_u/config/rank.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/6142de74d1e9a7125f0fd7e6517d4af7411db29e/char.vromfs.bin_u/config/rank.blkx",
+      "bytes": 71494,
+      "sha256": "5a1320caa8d0b5655a52799d6a87c066957d9dd9fccd9a1a755ae5c6406aa9fc"
+    },
+    {
+      "label": "current",
+      "commit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "file": "char.vromfs.bin_u/config/shop.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/6142de74d1e9a7125f0fd7e6517d4af7411db29e/char.vromfs.bin_u/config/shop.blkx",
+      "bytes": 377427,
+      "sha256": "f6708cbeef50d1d11ead40119cae7fd12b9f41feac818f1cc2b3b99fe3bc9f87"
+    }
+  ],
+  "fullSnapshotUpgrade": false,
+  "scope": "Explicit rank unlock counts for existing trees and 15 changed vehicle prerequisites only",
+  "rankRules": {
+    "usa": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      },
+      "ships": {
+        "I": 3,
+        "II": 5,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "boats": {
+        "I": 4,
+        "II": 4,
+        "III": 5,
+        "IV": 5
+      }
+    },
+    "germany": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      },
+      "ships": {
+        "I": 5,
+        "II": 4,
+        "III": 5,
+        "IV": 5,
+        "V": 5,
+        "VI": 4,
+        "VII": 5
+      },
+      "boats": {
+        "I": 2,
+        "II": 5,
+        "III": 5,
+        "IV": 6
+      }
+    },
+    "ussr": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      },
+      "ships": {
+        "I": 4,
+        "II": 4,
+        "III": 6,
+        "IV": 3,
+        "V": 4,
+        "VI": 4,
+        "VII": 5
+      },
+      "boats": {
+        "I": 5,
+        "II": 6,
+        "III": 5,
+        "IV": 6
+      }
+    },
+    "britain": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      },
+      "ships": {
+        "I": 4,
+        "II": 6,
+        "III": 5,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "boats": {
+        "I": 6,
+        "II": 5,
+        "III": 6,
+        "IV": 5
+      }
+    },
+    "japan": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      },
+      "ships": {
+        "I": 3,
+        "II": 6,
+        "III": 6,
+        "IV": 5,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "boats": {
+        "I": 4,
+        "II": 6,
+        "III": 6,
+        "IV": 3
+      }
+    },
+    "china": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 5,
+        "V": 5,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      }
+    },
+    "italy": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      },
+      "ships": {
+        "I": 5,
+        "II": 4,
+        "III": 5,
+        "IV": 4,
+        "V": 5,
+        "VI": 2,
+        "VII": 5
+      },
+      "boats": {
+        "I": 4,
+        "II": 4,
+        "III": 3,
+        "IV": 4
+      }
+    },
+    "france": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      },
+      "ships": {
+        "I": 5,
+        "II": 6,
+        "III": 4,
+        "IV": 5,
+        "V": 4,
+        "VI": 1,
+        "VII": 5
+      },
+      "boats": {
+        "I": 4,
+        "II": 3,
+        "III": 4,
+        "IV": 3
+      }
+    },
+    "sweden": {
+      "ground": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "I": 6,
+        "II": 6,
+        "III": 6,
+        "IV": 3,
+        "V": 5,
+        "VI": 4,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      }
+    },
+    "israel": {
+      "ground": {
+        "IV": 6,
+        "V": 5,
+        "VI": 5,
+        "VII": 5
+      },
+      "aviation": {
+        "IV": 6,
+        "V": 4,
+        "VI": 5,
+        "VII": 5,
+        "VIII": 3
+      },
+      "helicopters": {
+        "V": 1,
+        "VI": 1
+      }
+    }
+  },
+  "missingRankFields": [
+    "usa/ground/VIII",
+    "germany/ground/VIII",
+    "ussr/ground/VIII",
+    "britain/ground/VIII",
+    "japan/ground/VIII",
+    "china/ground/VIII",
+    "italy/ground/VIII",
+    "france/ground/VIII",
+    "sweden/ground/VIII",
+    "israel/ground/VIII",
+    "usa/aviation/IX",
+    "germany/aviation/IX",
+    "ussr/aviation/IX",
+    "britain/aviation/IX",
+    "japan/aviation/IX",
+    "china/aviation/IX",
+    "italy/aviation/IX",
+    "france/aviation/IX",
+    "sweden/aviation/IX",
+    "israel/aviation/IX",
+    "usa/helicopters/VII",
+    "germany/helicopters/VII",
+    "ussr/helicopters/VII",
+    "britain/helicopters/VII",
+    "japan/helicopters/VII",
+    "china/helicopters/VII",
+    "italy/helicopters/VII",
+    "france/helicopters/VII",
+    "sweden/helicopters/VII",
+    "israel/helicopters/VII",
+    "usa/boats/V",
+    "germany/boats/V",
+    "ussr/boats/V",
+    "britain/boats/V",
+    "japan/boats/V",
+    "italy/boats/V",
+    "france/boats/V"
+  ],
+  "prerequisites": [
+    {
+      "country": "usa",
+      "type": "ground",
+      "id": "us_m6a1",
+      "previous": null,
+      "required": "us_m7",
+      "groupId": "us_m6_group"
+    },
+    {
+      "country": "ussr",
+      "type": "ground",
+      "id": "ussr_it_1",
+      "previous": "ussr_2s19_m1",
+      "required": "ussr_object_416",
+      "groupId": "ussr_it_9p149_group"
+    },
+    {
+      "country": "britain",
+      "type": "ground",
+      "id": "uk_m1a2_sep3_abrams",
+      "previous": "uk_vickers_mk7",
+      "required": "uk_arjun_mk1",
+      "groupId": null
+    },
+    {
+      "country": "china",
+      "type": "ground",
+      "id": "cn_hq_11",
+      "previous": "cn_pgz_625_fb10",
+      "required": "cn_fk_2000",
+      "groupId": null
+    },
+    {
+      "country": "italy",
+      "type": "ground",
+      "id": "it_m113a1_tow",
+      "previous": "it_palmaria",
+      "required": "it_pzh_2000",
+      "groupId": null
+    },
+    {
+      "country": "israel",
+      "type": "ground",
+      "id": "il_spyder_aio",
+      "previous": "il_mim_72_chaparral",
+      "required": "il_tor_m1",
+      "groupId": null
+    },
+    {
+      "country": "usa",
+      "type": "aviation",
+      "id": "f_101c",
+      "previous": "f-80",
+      "required": "f_102a_late",
+      "groupId": null
+    },
+    {
+      "country": "britain",
+      "type": "aviation",
+      "id": "swift_f1",
+      "previous": "hornet_mk3",
+      "required": "hawk_t1a_early",
+      "groupId": null
+    },
+    {
+      "country": "britain",
+      "type": "aviation",
+      "id": "harrier_frs1_early",
+      "previous": "scimitar_f1",
+      "required": "ca_27_mk32_raaf",
+      "groupId": null
+    },
+    {
+      "country": "japan",
+      "type": "aviation",
+      "id": "mig_29n",
+      "previous": "g8n1",
+      "required": "a_4ptm_malaysia",
+      "groupId": null
+    },
+    {
+      "country": "france",
+      "type": "aviation",
+      "id": "f-84f_france",
+      "previous": "f-84g_france",
+      "required": "se_203",
+      "groupId": null
+    },
+    {
+      "country": "usa",
+      "type": "ships",
+      "id": "us_destroyer_fletcher",
+      "previous": "us_destroyer_farragut_1942",
+      "required": "us_destroyer_mahan_class",
+      "groupId": null
+    },
+    {
+      "country": "france",
+      "type": "ships",
+      "id": "fr_battleship_bretagne_class_bretagne",
+      "previous": "fr_cruiser_la_galissoniere_class_gloire",
+      "required": "fr_cruiser_algerie_class",
+      "groupId": null
+    },
+    {
+      "country": "ussr",
+      "type": "boats",
+      "id": "ussr_skr_groza_1943",
+      "previous": "ussr_1124_ack",
+      "required": "ussr_fugas_t1_strela",
+      "groupId": null
+    },
+    {
+      "country": "france",
+      "type": "boats",
+      "id": "fr_mtb96_vosper",
+      "previous": "fr_vtb13",
+      "required": "fr_lcm_monitor",
+      "groupId": null
+    }
+  ],
+  "protectedVehicles": {
+    "ka_29": "df58d336c1e540ea36bd33672366fbe2cddb9902a1917cad318ba2e80618a5ce",
+    "do_217j_2": "73edc8e818f0992bea88e55fecece55cb77bed2b017c75ed4f9fce4c02d1cf89",
+    "ca_27_mk32_raaf": "7ac92a15a8cb054b7b4bb78e90797be6905e87c276a00df00427d07c0d903afd",
+    "ca_27_mk32_malaysia": "89221003f46507348c2a5142d74c39193a6504196ec2b2d859bafbb7c4f23882"
+  }
+}

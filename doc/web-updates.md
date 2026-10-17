@@ -4,6 +4,13 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-17 · 规划数据核对
+
+- 依据固定提交的游戏 2.59.0.73 配置，修正 14 处等级解锁数量，避免自动规划少补载具。
+- 修正后端旧前置映射，核对 15 辆载具及两个折叠组入口，使这些记录与静态网页和游戏配置一致。
+- 增加全部 50 棵树、241 个显式门槛、前置及自动补足的回归测试。保留人工确认的配件修正。
+- 不改变界面、规划算法或载具/配件费用，不宣称全量快照升级，不发布 Windows 包。[核对范围、来源及待确认项](game-data-review-20261017.md)。
+
 ## 2026-10-17 · 科技树更新保护
 
 - 本地 Wiki 刷新与离线网页快照合入只更新已有载具的名称、图片和用途说明。
@@ -78,6 +85,13 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-17 · Planning Data Review
+
+- Corrected 14 rank unlock counts using pinned game data from 2.59.0.73. Plans now use the reviewed thresholds.
+- Updated backend mappings for 15 vehicle prerequisites and two folder entries. These records now match the static site and game configuration.
+- Added checks for all 50 trees, 241 explicit thresholds, prerequisite links, and automatic fillers. User-confirmed modification corrections remain intact.
+- No UI, planning algorithm, or vehicle/modification cost changes. This is not a full snapshot upgrade or a new Windows release. See the [source review and remaining questions](game-data-review-20261017.md).
 
 ### 2026-10-17 · Protected Tech Tree Refreshes
 
