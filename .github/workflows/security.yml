@@ -28,6 +28,7 @@ jobs:
       - run: node tools/test-desktop-snapshot.cjs
       - run: node tools/test-planner.cjs
       - run: node --test tools/test-planning-rules.cjs
+      - run: node --test tools/test-datamine-updates.cjs
       - run: node --test tools/test-research-progress.cjs
       - run: node --test tools/test-plan-backup.cjs
       - run: node --test tools/test-tree-search.cjs
