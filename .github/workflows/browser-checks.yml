@@ -1,0 +1,32 @@
+name: Browser Checks
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          check-latest: true
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-checks-${{ github.run_id }}
+          retention-days: 7
+          path: |
+            logs/wheel-check/*.png
+            logs/web-cache-review/*.png
+            logs/web-cache-review/browser-report.json
+            logs/site-locales/*.png

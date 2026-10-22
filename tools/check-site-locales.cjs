@@ -4,6 +4,7 @@ const path = require('node:path');
 const { once } = require('node:events');
 const express = require('express');
 const { chromium } = require('playwright');
+const { launchOptions } = require('./browser-test-runtime.cjs');
 
 async function main() {
   const output = path.resolve('logs/site-locales');
@@ -15,7 +16,7 @@ async function main() {
   await once(server, 'listening');
   let browser;
   try {
-    browser = await chromium.launch({ channel: 'chrome', headless: true });
+    browser = await chromium.launch(launchOptions());
     for (const mode of ['local', 'pages']) for (const width of [1440, 390, 320]) {
       const page = await browser.newPage({ viewport: { width, height: 940 }, isMobile: width < 720, hasTouch: width < 720 });
       const errors = [];

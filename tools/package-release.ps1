@@ -5,6 +5,12 @@ param(
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 
+foreach ($testDependency in @('playwright', 'playwright-core')) {
+  if (Test-Path -LiteralPath (Join-Path $root "node_modules/$testDependency")) {
+    throw "Test dependencies must not ship. Run npm prune --omit=dev --ignore-scripts before packaging."
+  }
+}
+
 if ([string]::IsNullOrWhiteSpace($Version)) {
   $package = Get-Content -Raw -LiteralPath (Join-Path $root "package.json") | ConvertFrom-Json
   $Version = $package.version

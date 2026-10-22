@@ -6,6 +6,11 @@ on:
     paths:
       - "docs/**"
       - ".github/workflows/deploy-pages.yml"
+      - ".github/workflows/browser-checks.yml"
+      - "tools/check-wheel.cjs"
+      - "tools/check-web-cache.cjs"
+      - "tools/check-site-locales.cjs"
+      - "tools/browser-test-runtime.cjs"
   workflow_dispatch:
 
 permissions:
@@ -18,7 +23,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  browser:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/browser-checks.yml
   deploy:
+    needs: browser
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

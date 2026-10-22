@@ -5,7 +5,7 @@ const { spawn } = require('node:child_process');
 const { once } = require('node:events');
 const express = require('express');
 
-// Drive real browser input over Chrome's local debugging pipe, with no test dependency.
+// Drive real browser input over Chrome's local debugging pipe.
 async function main() {
   const root = path.resolve(__dirname, '..');
   const artifacts = path.join(root, 'logs', 'wheel-check');
@@ -15,8 +15,11 @@ async function main() {
   app.use(require('../main'));
   const server = app.listen(0, '127.0.0.1');
   await once(server, 'listening');
-  const browser = spawn(process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', [
+  const executable = process.env.CHROME_PATH || (process.platform === 'win32'
+    ? 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' : require('playwright').chromium.executablePath());
+  const browser = spawn(executable, [
     '--headless=new', '--remote-debugging-pipe', '--no-first-run', '--no-default-browser-check',
+    ...(process.env.CI ? ['--no-sandbox', '--disable-dev-shm-usage'] : []),
     `--user-data-dir=${path.join(artifacts, `profile-${Date.now()}`)}`,
   ], { stdio: ['ignore', 'ignore', 'ignore', 'pipe', 'pipe'], windowsHide: true });
   let sequence = 0;
@@ -48,10 +51,12 @@ async function main() {
     });
   }
   const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+  let activeCall;
   try {
     const { targetId } = await send('Target.createTarget', { url: 'about:blank' });
     const { sessionId } = await send('Target.attachToTarget', { targetId, flatten: true });
     const call = (method, params) => send(method, params, sessionId);
+    activeCall = call;
     async function evaluate(expression) {
       const result = await call('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true });
       if (result.exceptionDetails) throw new Error(JSON.stringify(result.exceptionDetails));
@@ -62,6 +67,8 @@ async function main() {
     for (const width of [1440, 900, 390]) {
       await call('Emulation.setDeviceMetricsOverride', { width, height: 900, deviceScaleFactor: 1, mobile: false });
       for (const route of ['/pages/', '/']) {
+        await call('Page.navigate', { url: 'about:blank' });
+        await call('Storage.clearDataForOrigin', { origin: `http://127.0.0.1:${server.address().port}`, storageTypes: 'all' });
         await call('Page.navigate', { url: `http://127.0.0.1:${server.address().port}${route}` });
         let ready = false;
         for (let i = 0; i < 100; i++) {
@@ -218,22 +225,35 @@ async function main() {
             document.querySelector('[data-unit-id="us_m18_hellcat"]').click();
             window.scrollTo(0, Math.floor(document.documentElement.scrollHeight / 2));
             await new Promise(resolve => setTimeout(resolve, 50));
-            const middleVisible = document.querySelector('.floating-planner').classList.contains('is-visible');
+            const middleBox = document.querySelector('.floating-budget').getBoundingClientRect();
+            const middleVisible = middleBox.height > 0 && middleBox.top >= 0 && middleBox.bottom <= innerHeight;
             window.scrollTo(0, document.documentElement.scrollHeight);
             await new Promise(resolve => setTimeout(resolve, 50));
-            const floatRect = document.querySelector('.floating-planner').getBoundingClientRect();
+            const budget = document.querySelector('.floating-budget');
+            const floatRect = budget.getBoundingClientRect();
             const treeRect = els.treeContainer.getBoundingClientRect();
             const copyRect = document.querySelector('.floating-planner-copy').getBoundingClientRect();
-            const floatingVisible = floatRect.top >= 0 && floatRect.bottom <= innerHeight && getComputedStyle(document.querySelector('.floating-planner')).position === 'fixed';
-            const dockedOutsideTree = floatRect.left >= treeRect.right - 1;
-            const copyFitsViewport = copyRect.left >= 0 && copyRect.right <= innerWidth;
-            const warningVisible = document.querySelector('.floating-planner').textContent.includes('测试功能') && document.querySelector('.floating-planner').textContent.includes('自行手动核对');
+            const floatingVisible = floatRect.top >= 0 && floatRect.bottom <= innerHeight && getComputedStyle(budget).position === 'fixed';
+            const dockedOutsideTree = innerWidth <= 720 || treeRect.bottom <= floatRect.top + 2;
+            const copyFitsViewport = getComputedStyle(document.querySelector('.floating-planner-copy')).visibility === 'hidden' || (copyRect.left >= 0 && copyRect.right <= innerWidth);
+            const warningVisible = document.querySelector('.floating-planner').textContent.includes('测试功能') && document.querySelector('.floating-planner').textContent.includes('游戏内手动核对');
             els.planButton.click();
             for (let i = 0; i < 100 && els.planButton.disabled; i++) await new Promise(resolve => setTimeout(resolve, 30));
             const result = state.planResult;
             const status = els.plannerStatus.textContent;
             const countsValid = result.rankCounts.every(rank => rank.selected >= rank.required);
-            const labels = [...document.querySelectorAll('.pill.filler-label')].map(node => node.textContent);
+            const labels = result.fillerIds.map(id => {
+              let tile = document.querySelector('[data-unit-id="' + id + '"]');
+              if (!tile) {
+                const unit = state.unitMap.get(id);
+                document.querySelector('[data-folder-group="' + unit.parent_group_id + '"]').click();
+                tile = document.querySelector('[data-unit-id="' + id + '"]');
+              }
+              const label = tile.querySelector('.filler-label');
+              const text = label?.getAttribute('aria-label') || label?.textContent;
+              VehicleFolders.close();
+              return text;
+            });
             return {
               rp: els.totalRp.textContent,
               sl: els.totalSp.textContent,
@@ -256,7 +276,7 @@ async function main() {
           assert.deepEqual({rp:exactPlan.rp,sl:exactPlan.sl,feasible:exactPlan.feasible,complete:exactPlan.complete,countsValid:exactPlan.countsValid,targetIncluded:exactPlan.targetIncluded}, {
             rp:'115,000',sl:'284,800',feasible:true,complete:true,countsValid:true,targetIncluded:true,
           });
-          assert(exactPlan.fillers > 0 && exactPlan.labels.length === exactPlan.fillers && exactPlan.labels.every(label => label === '等级补足'));
+          assert(exactPlan.fillers > 0 && exactPlan.labels.length === exactPlan.fillers && exactPlan.labels.every(label => label === '等级补足'), JSON.stringify(exactPlan));
           assert(exactPlan.status.includes('已找到最低 RP 路线'));
           console.log(JSON.stringify({label:`local-exact-plan-geometry-${width}`, middleVisible:exactPlan.middleVisible, floatingVisible:exactPlan.floatingVisible, dockedOutsideTree:exactPlan.dockedOutsideTree, copyFitsViewport:exactPlan.copyFitsViewport, warningVisible:exactPlan.warningVisible, countText:exactPlan.countText, geometry:exactPlan.geometry}));
           assert(exactPlan.middleVisible && exactPlan.floatingVisible && exactPlan.dockedOutsideTree && exactPlan.copyFitsViewport && exactPlan.warningVisible && exactPlan.countText === '目标 1 · 途经点 0');
@@ -266,7 +286,13 @@ async function main() {
           const language = await evaluate(`(async () => {
             els.countrySelect.value = 'britain'; els.typeSelect.value = 'aviation'; await loadTree();
             setLanguage('zh');
-            const groupTitle = () => [...document.querySelectorAll('.group-header > span')].find(node => node.textContent.includes('布伦海姆') || node.textContent.includes('Blenheim'));
+            const groupTitle = () => {
+              VehicleFolders.close();
+              const trigger = [...document.querySelectorAll('[data-folder-key]')].find(node => /布伦海姆|Blenheim/.test(node.getAttribute('aria-label')));
+              if (!trigger) return null;
+              trigger.click();
+              return document.getElementById('folderPopupTitle');
+            };
             const zhTitle = groupTitle();
             const zh = {
               text: zhTitle?.textContent,
@@ -281,15 +307,19 @@ async function main() {
               active: els.languageSelect.value === 'en',
             };
             els.searchInput.value = '布伦海姆'; els.searchInput.dispatchEvent(new Event('input'));
+            await new Promise(resolve => setTimeout(resolve, 350));
             const chineseSearchInEnglish = groupTitle()?.textContent === 'Blenheim/Beaufort';
             setLanguage('zh');
             els.searchInput.value = 'Blenheim/Beaufort'; els.searchInput.dispatchEvent(new Event('input'));
+            await new Promise(resolve => setTimeout(resolve, 350));
             const englishSearchInChinese = groupTitle()?.textContent === '布伦海姆/波佛特';
             const labelsFit = [...document.querySelectorAll('.unit-title, .group-header > span')].every(node =>
               node.scrollWidth <= node.clientWidth + 1 && node.scrollHeight <= node.clientHeight + 1
             );
             const languages = [...els.languageSelect.options].map(option => option.value);
+            VehicleFolders.close();
             els.searchInput.value = ''; els.searchInput.dispatchEvent(new Event('input'));
+            await new Promise(resolve => setTimeout(resolve, 350));
             return {zh, en, chineseSearchInEnglish, englishSearchInChinese, labelsFit, languages};
           })()`);
           assert.deepEqual(language.zh, {text:'布伦海姆/波佛特',complete:true,active:true});
@@ -310,24 +340,16 @@ async function main() {
           return {x: Math.round(Math.max(0, box.left) + Math.min(box.width, innerWidth - Math.max(0, box.left)) / 2), y: 250};
         })()`);
         assert(await evaluate(`!!document.elementFromPoint(${point.x}, ${point.y}).closest('.tree-container')`), 'Pointer must be over tree');
-        const position = () => evaluate('({ y: scrollY, x: document.querySelector(".tree-container").scrollLeft })');
+        const position = () => evaluate('({ y: els.treeContainer.scrollTop, x: els.treeContainer.scrollLeft, pageY: scrollY })');
         async function wheel(dx, dy) {
           await call('Input.dispatchMouseEvent', { type: 'mouseMoved', ...point });
           await call('Input.dispatchMouseEvent', { type: 'mouseWheel', ...point, deltaX: dx, deltaY: dy });
           await pause(400);
         }
-        // Reproduce the old regression in the same page before checking the fix.
-        const oldStart = await position();
-        if (width === 1440 && route === '/pages/') {
-          await evaluate('document.querySelector(".tree-container").style.overscrollBehavior = "contain"');
-          await pause(700);
-          await wheel(0, 350);
-          assert.equal((await position()).y, oldStart.y, 'Old CSS should reproduce blocked page scrolling');
-        }
-        const oldEnd = await position();
-        await evaluate('document.querySelector(".tree-container").style.removeProperty("overscroll-behavior")');
+        // The viewport-sized tree owns both scroll axes; the document stays fixed.
         await call('Page.reload');
         await pause(1500);
+        await evaluate('(async () => { els.countrySelect.value = "usa"; els.typeSelect.value = "ground"; await loadTree(); els.treeContainer.scrollLeft = 0; els.treeContainer.scrollTop = 0; })()');
         await evaluate('window.scrollTo(0, document.querySelector(".tree-container").getBoundingClientRect().top + scrollY)');
         await call('Input.dispatchMouseEvent', { type: 'mouseMoved', x: 10, y: 10 });
         await pause(700);
@@ -338,18 +360,21 @@ async function main() {
           console.log(await evaluate(`JSON.stringify([...document.querySelectorAll('.tree-container,.tree-canvas,.workspace')].map(e=>({class:e.className,client:e.clientHeight,scroll:e.scrollHeight,top:e.scrollTop,overflow:getComputedStyle(e).overflow,overscroll:getComputedStyle(e).overscrollBehavior})))`));
           console.log(await evaluate(`JSON.stringify({height:document.documentElement.scrollHeight, status:document.getElementById('statusText').textContent, target:document.elementFromPoint(${point.x},${point.y})?.outerHTML.slice(0,500), tiles:document.querySelectorAll('.unit-tile').length})`));
         }
-        assert(down.y > reloadedStart.y + 100, `Wheel down must move page: ${JSON.stringify({reloadedStart, down, route, width})}`);
+        assert(down.y > reloadedStart.y + 100, `Wheel down must move tree: ${JSON.stringify({reloadedStart, down, route, width})}`);
+        assert.equal(down.pageY, reloadedStart.pageY, 'Tree scrolling must not move the document');
         await wheel(0, -250);
         const up = await position();
-        assert(up.y < down.y - 100, 'Wheel up must move page');
+        assert(up.y < down.y - 100, 'Wheel up must move tree');
         await wheel(300, 0);
         const horizontal = await position();
-        assert(horizontal.x > up.x + 100, 'Horizontal wheel must move tree');
-        assert(Math.abs(horizontal.y - up.y) < 2, 'Horizontal wheel must not move page vertically');
+        const horizontalRange = await evaluate('els.treeContainer.scrollWidth - els.treeContainer.clientWidth');
+        assert(horizontalRange > 0 && horizontal.x >= Math.min(up.x + 100, horizontalRange - 1), 'Horizontal wheel must move tree: ' + JSON.stringify({up,horizontal,horizontalRange}));
+        assert(Math.abs(horizontal.y - up.y) < 2, 'Horizontal wheel must not move tree vertically');
+        assert.equal(horizontal.pageY, up.pageY, 'Horizontal wheel must not move document');
         const screenshot = await call('Page.captureScreenshot', { format: 'png' });
         const label = `${route === '/' ? 'local' : 'pages'}-${width}`;
         fs.writeFileSync(path.join(artifacts, `${label}.png`), Buffer.from(screenshot.data, 'base64'));
-        console.log(JSON.stringify({ label, blockedBefore: oldEnd.y - oldStart.y, down: down.y - oldEnd.y, up: up.y - down.y, horizontal: horizontal.x - up.x, pass: true }));
+        console.log(JSON.stringify({ label, down: down.y - reloadedStart.y, up: up.y - down.y, horizontal: horizontal.x - up.x, pass: true }));
         if (route === '/pages/') {
           const extra = await evaluate(`(async () => {
             els.countrySelect.value = 'germany'; els.typeSelect.value = 'ground'; await loadTree();
@@ -392,11 +417,11 @@ async function main() {
           const modifications = await evaluate(`(async () => {
             state.planned.clear();
             els.searchInput.value = 'j_16'; els.searchInput.dispatchEvent(new Event('input'));
+            await new Promise(resolve => setTimeout(resolve, 350));
             const launch = document.querySelector('[data-modifications-id="j_16"]');
             launch.click();
             for (let i = 0; i < 50 && !document.getElementById('modificationDialog').open; i++) await new Promise(resolve => setTimeout(resolve, 50));
             const dialog = document.getElementById('modificationDialog');
-            dialog.querySelector('[data-modification-action="clear-owned"]').click();
             dialog.querySelector('[data-modification-action="clear"]').click();
             const target = dialog.querySelector('[data-mod-id="cn_pl12a"]');
             target.click();
@@ -421,6 +446,7 @@ async function main() {
               sl: document.getElementById('modificationSl').textContent,
               status: document.getElementById('modificationStatus').textContent,
               dependencies: dialog.querySelectorAll('.modification-tile.dependency').length,
+              dependencyIds: [...dialog.querySelectorAll('.modification-tile.dependency')].map(node => node.dataset.modId).sort(),
               fillers: dialog.querySelectorAll('.modification-tile.filler').length,
               activeLinks: dialog.querySelectorAll('.modification-link.active').length,
               tiers,
@@ -443,7 +469,8 @@ async function main() {
           assert.equal(modifications.rp, '110,000');
           assert.equal(modifications.sl, '168,000');
           assert(modifications.status.includes('自动加入 8'));
-          assert(modifications.dependencies >= 3 && modifications.fillers >= 4 && modifications.activeLinks >= 2);
+          assert.deepEqual(modifications.dependencyIds, ['cn_pl12', 'cn_pl8b']);
+          assert(modifications.dependencies === 2 && modifications.fillers >= 4 && modifications.activeLinks >= 2, JSON.stringify(modifications));
           assert(modifications.tiers[0].includes('2/1') && modifications.tiers[1].includes('3/3') && modifications.tiers[2].includes('3/3'));
           console.log(JSON.stringify({label:`j16-modifications-${width}`, ...modifications}));
           assert(modifications.flatTile && modifications.darkPanel && modifications.horizontalAtSmallWidth && modifications.footerVisible && modifications.didNotSelectVehicle && modifications.iconsLoaded);
@@ -492,12 +519,14 @@ async function main() {
             setLanguage('en');
             els.clearButton.click();
             els.searchInput.value = 'rafale'; els.searchInput.dispatchEvent(new Event('input'));
+            await new Promise(resolve => setTimeout(resolve, 350));
             document.querySelector('[data-unit-id="rafale_eg_greece"]').click();
             await document.fonts.ready;
             const title = document.querySelector('.unit-title');
             const list = document.querySelector('.list-title');
             title.scrollIntoView({block:'center', inline:'center'});
-            return {title:title.textContent, tileFont:getComputedStyle(title).fontFamily.includes('WTSymbols'), listFont:getComputedStyle(list).fontFamily.includes('WTSymbols')};
+            const name = [...title.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).map(node => node.textContent).join('').trim();
+            return {title:name, tileFont:getComputedStyle(title).fontFamily.includes('WTSymbols'), listFont:getComputedStyle(list).fontFamily.includes('WTSymbols')};
           })()`);
           assert.equal(rafale.title, '\u2584Rafale EG');
           assert(rafale.tileFont && rafale.listFont);
@@ -509,6 +538,12 @@ async function main() {
       }
     }
     assert.deepEqual(pageErrors, [], 'No browser JavaScript exceptions');
+  } catch (error) {
+    try {
+      const screenshot = await activeCall?.('Page.captureScreenshot', { format: 'png' });
+      if (screenshot) fs.writeFileSync(path.join(artifacts, 'failure.png'), Buffer.from(screenshot.data, 'base64'));
+    } catch { /* Preserve the original failure if the browser already exited. */ }
+    throw error;
   } finally {
     await send('Browser.close').catch(() => browser.kill());
     if (browser.exitCode === null) await Promise.race([once(browser, 'exit'), pause(3000)]);

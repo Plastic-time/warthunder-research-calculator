@@ -5,6 +5,7 @@ const { once } = require('node:events');
 const crypto = require('node:crypto');
 const express = require('express');
 const { chromium } = require('playwright');
+const { launchOptions } = require('./browser-test-runtime.cjs');
 const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'logs/web-cache-review');
 
@@ -54,7 +55,7 @@ async function main() {
   let browser;
   const reports = [];
   try {
-    browser = await chromium.launch({ channel: 'chrome', headless: true });
+    browser = await chromium.launch(launchOptions());
     for (const mode of ['local', 'pages']) for (const width of [1440, 390]) {
       const context = await browser.newContext({ viewport: { width, height: 940 }, isMobile: width < 720, hasTouch: width < 720 });
       try {
