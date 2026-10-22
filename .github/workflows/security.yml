@@ -33,6 +33,7 @@ jobs:
       - run: node --test tools/test-plan-backup.cjs
       - run: node --test tools/test-tree-search.cjs
       - run: node tools/test-modifications.cjs
+      - run: node --test tools/test-modification-refresh-guard.cjs
       - run: node tools/test-f4u7-modifications.cjs
       - run: node tools/test-prerequisite-audit.cjs
       - run: node --test tools/test-modification-icons.cjs

@@ -61,3 +61,7 @@ the `guizang-ppt-skill/SKILL.md` file under the user's local Codex skills direct
   explicit implementation and regression pass before claiming game-only sourcing.
 - Do not alter UI or planning algorithms as a side effect of changing data
   sources. Review price and dependency diffs before publishing a refreshed snapshot.
+- `build:modifications` is now a protected dry-run review, requiring `--source-dir`
+  with pinned source metadata. Only explicit `--apply` can refresh conflict-free
+  presentation; gameplay, missing fields and recorded corrections are retained.
+  See `doc/modification-refresh-policy.md`. Never restore Wiki cost fallbacks.
