@@ -11,6 +11,7 @@ const shopDependencies = require("@/dict/shop_dependencies.json");
 const { request_details } = require("./src/3-request_details");
 const { updateTree, validateLimit } = require("./src/4-fill_tree_details");
 const { createSecurity, safeError } = require("./src/server-security");
+const researchProgress = require("./public/research-progress");
 
 const app = express();
 const security = createSecurity();
@@ -182,6 +183,8 @@ function isInitialUnlockedUnit(unit) {
     unit.section === "researchable" &&
     isFirstRankValue(unit.rank) &&
     !["prem", "premium", "squad", "event", "gift"].includes(className) &&
+    unit.rp != null &&
+    unit.sp != null &&
     parseNumber(unit.rp) === 0 &&
     parseNumber(unit.sp) === 0
   );
@@ -329,7 +332,26 @@ function getDependencyIds(unitId, indexes, options = {}, visited = new Set()) {
   return [...dependencyIds, unitId];
 }
 
+function validateCalculationBody(body) {
+  const invalid = () => { throw Object.assign(new Error("Invalid calculation request"), { statusCode: 400 }); };
+  const validId = (id) => typeof id === "string" && /^[a-zA-Z0-9_-]{1,160}$/.test(id) &&
+    !["__proto__", "prototype", "constructor"].includes(id);
+  if (!body || typeof body !== "object" || Array.isArray(body)) invalid();
+  for (const field of ["plannedIds", "ownedIds"]) {
+    if (body[field] !== undefined && (!Array.isArray(body[field]) || body[field].length > 10000 || !body[field].every(validId))) invalid();
+  }
+  if (body.targetId !== undefined && !validId(body.targetId)) invalid();
+  if (body.dependencyMode !== undefined && !["selected", "dependencies"].includes(body.dependencyMode)) invalid();
+  if (body.folderMode !== undefined && !["first", "all"].includes(body.folderMode)) invalid();
+  if (body.progressRp !== undefined) {
+    if (!body.progressRp || typeof body.progressRp !== "object" || Array.isArray(body.progressRp)) invalid();
+    const entries = Object.entries(body.progressRp);
+    if (entries.length > 10000 || entries.some(([id, value]) => !validId(id) || !Number.isSafeInteger(value) || value < 0)) invalid();
+  }
+}
+
 function calculatePlan(tree, body = {}) {
+  validateCalculationBody(body);
   const indexes = buildUnitIndexes(tree);
   const owned = new Set(body.ownedIds || []);
   const targetIds = [...new Set([...(body.plannedIds || []), body.targetId].filter(Boolean))];
@@ -355,13 +377,18 @@ function calculatePlan(tree, body = {}) {
     .filter(Boolean)
     .sort(compareUnitsByProgression);
 
-  const totalRp = missing.reduce((sum, unit) => sum + parseNumber(unit.rp), 0);
+  const rawTotalRp = missing.reduce((sum, unit) => sum + parseNumber(unit.rp), 0);
+  const totalRp = missing.reduce((sum, unit) => sum + (researchProgress.remaining(
+    unit.rp == null ? null : parseNumber(unit.rp), body.progressRp?.[unit.data_unit_id]
+  ) ?? 0), 0);
   const totalSp = missing.reduce((sum, unit) => sum + parseNumber(unit.sp), 0);
 
   return {
     total_rp: totalRp,
-    raw_total_rp: totalRp,
+    raw_total_rp: rawTotalRp,
     total_sp: totalSp,
+    unknown_rp_count: missing.filter((unit) => unit.rp == null).length,
+    unknown_sp_count: missing.filter((unit) => unit.sp == null).length,
     missing,
   };
 }

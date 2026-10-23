@@ -30,3 +30,5 @@ jobs:
             logs/web-cache-review/*.png
             logs/web-cache-review/browser-report.json
             logs/site-locales/*.png
+            logs/calculation-consistency/*.png
+            logs/calculation-consistency/browser-report.json

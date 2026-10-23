@@ -262,6 +262,7 @@ function formatNumber(value) {
 }
 
 function formatCost(value) {
+  if (value == null) return tr("未提供");
   const number = parseNumber(value);
   return number ? formatNumber(number) : "0";
 }
@@ -325,6 +326,8 @@ function isInitialUnlockedUnit(unit) {
     unit.section === "researchable" &&
     isFirstRankValue(unit.rank) &&
     !["prem", "premium", "squad", "event", "gift"].includes(className) &&
+    unit.rp != null &&
+    unit.sp != null &&
     parseNumber(unit.rp) === 0 &&
     parseNumber(unit.sp) === 0
   );
@@ -870,6 +873,8 @@ function renderSummary() {
 
   els.totalRp.textContent = formatNumber(rawRp);
   els.totalSp.textContent = formatNumber(totalSp);
+  document.getElementById("totalRpLabel").textContent = state.missing.some(unit => unit.rp == null) ? tr("已知 RP") : tr("还需 RP");
+  document.getElementById("totalSpLabel").textContent = state.missing.some(unit => unit.sp == null) ? tr("已知 SL") : tr("购买 SL");
   els.missingCount.textContent = state.missing.length;
   els.plannedCount.textContent = plannedUnits.length;
   els.pathCount.textContent = state.missing.length;

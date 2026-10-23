@@ -13,7 +13,7 @@
     "sync:web-assets": "node tools/sync-web-assets.cjs",
     "check:web-assets": "node tools/sync-web-assets.cjs --check",
     "test:web-assets": "node --test tools/test-web-assets.cjs",
-    "test:browser": "node tools/check-wheel.cjs && node tools/check-web-cache.cjs && node tools/check-site-locales.cjs",
+    "test:browser": "node tools/check-wheel.cjs && node tools/check-web-cache.cjs && node tools/check-site-locales.cjs && node tools/check-calculation-consistency.cjs",
     "test:wiki-refresh": "node --test tools/test-wiki-refresh-guard.cjs tools/test-update-security.cjs",
     "test:security": "node --test tools/test-server-security.cjs tools/test-update-security.cjs tools/test-proxy-addr-security.cjs",
     "pull": "node ./src/4-fill_tree_details.js",

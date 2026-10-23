@@ -44,6 +44,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Planner regression failed" }
           node --test tools/test-research-progress.cjs
           if ($LASTEXITCODE -ne 0) { throw "Research progress regression failed" }
+          node --test tools/test-calculation-consistency.cjs
+          if ($LASTEXITCODE -ne 0) { throw "Calculation consistency regression failed" }
           node tools/test-modifications.cjs
           if ($LASTEXITCODE -ne 0) { throw "Modification regression failed" }
           node tools/test-f4u7-modifications.cjs

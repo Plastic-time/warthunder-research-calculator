@@ -73,6 +73,7 @@ RP、银狮、BR、前置、等级、解锁数量、载具身份、未知费用�
 node tools/test-wiki.cjs
 node tools/test-desktop-snapshot.cjs
 node tools/test-planner.cjs
+node --test tools/test-calculation-consistency.cjs
 node tools/test-modifications.cjs
 node tools/test-site-locales.cjs
 npm run test:security
@@ -93,6 +94,24 @@ npm run test:wiki-refresh
 | `POST /api/update/:country/:type` | 有权限校验的资料刷新，保留游戏字段并返回 `review` 摘要 |
 
 不要把更新凭证放入公开前端。服务暴露范围、管理员更新及部署注意事项见 [服务器配置](server-security.md)。
+
+### 计算接口的费用口径
+
+`POST /api/calculate/:country/:type` 接收 JSON 对象。`plannedIds`、`ownedIds` 为可选的载具 ID 数组，`targetId` 为可选的单个目标。`dependencyMode` 可取 `selected`（默认）或 `dependencies`，`folderMode` 保留 `first`、`all` 两种取值。前置计算规则不变。
+
+`progressRp` 是可选的 `{ "载具ID": 已投入RP }` 对象，兼容现有本地存档。网页输入的是剩余 RP，保存时会换算为已投入 RP；接口不能直接把剩余值当作已投入值。进度须为非负安全整数，超出总 RP 时按总 RP 截断。进度适用于目标及纳入计划的前置，但不会改变已拥有状态或银狮费用。
+
+返回字段：
+
+- `total_rp`：扣除已投入进度后的已知 RP 小计。
+- `raw_total_rp`：同一份待购买列表在扣除进度前的已知 RP 小计。
+- `total_sp`：已知银狮费用小计。
+- `unknown_rp_count`、`unknown_sp_count`：待购买列表中对应费用未知的载具数量。数量非零时，小计不能当成完整总费用。
+- `missing`：尚未拥有且非初始免费载具的列表。原始 `rp`、`sp` 保留，包括未知值 `null`；研发完成但尚未购买的载具仍在列表中。
+
+只有普通一级载具的 RP 和银狮费用均明确为 0，才视为初始免费载具。费用未知不代表免费。空请求对象返回空计划；字段类型或取值错误返回 `400` 和通用错误消息，不返回服务器路径。ID 只允许 1–160 位字母、数字、下划线或连字符，禁止原型字段名；每个 ID 数组和进度表最多 10,000 项。其他科技树的存档 ID 不会影响当前树的预算。
+
+`tools/test-calculation-consistency.cjs` 对照全部 50 棵树的本地网页、静态网页和接口结果。`npm run test:browser` 另包含两版网页在桌面和手机尺寸下的缺失费用、剩余 RP、刷新保留和接口一致性检查。
 
 ## 提交与发布
 

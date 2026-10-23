@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="/assets/research-emblem.png?r=a8350fd9d7d6f27c" />
     <script src="/asset-urls.js?r=461d4e997cf355c2"></script>
     <script src="/i18n.js?v=1.0.26&amp;r=505dec7797df903f"></script>
-    <script src="/app-translations.js?v=1.0.26&amp;r=c10c506c24adf378"></script>
+    <script src="/app-translations.js?v=1.0.26&amp;r=966652932f01a4c8"></script>
     <script src="/static-translations.js?v=1.0.26&amp;r=30cdba7d0f9a9648"></script>
     <script src="/module-translations.js?v=1.0.26&amp;r=1c992a8635111a7a"></script>
     <title data-i18n="战争雷霆研发计算器">战争雷霆研发计算器</title>
@@ -92,11 +92,11 @@
           </div>
           <div class="metric-grid">
             <div class="metric">
-              <span data-i18n="还需 RP">还需 RP</span>
+              <span id="totalRpLabel" data-i18n="还需 RP">还需 RP</span>
               <strong id="totalRp">0</strong>
             </div>
             <div class="metric">
-              <span data-i18n="购买 SL">购买 SL</span>
+              <span id="totalSpLabel" data-i18n="购买 SL">购买 SL</span>
               <strong id="totalSp">0</strong>
             </div>
             <div class="metric">
@@ -210,6 +210,11 @@
         <p class="usage-guide-warning"><strong data-i18n="测试提醒：">测试提醒：</strong><span data-i18n="精确规划结果仅供参考。开始实际研发前，请在游戏内手动核对载具前置关系、等级数量和费用。">精确规划结果仅供参考。开始实际研发前，请在游戏内手动核对载具前置关系、等级数量和费用。</span></p>
         </section>
         <section id="usageGuideChangelog" role="tabpanel" aria-labelledby="usageGuideLogTab" tabindex="0" hidden>
+          <article class="usage-guide-update">
+            <div class="usage-guide-update-meta"><span>Web</span><time datetime="2026-10-23">2026.10.23</time></div>
+            <h3 data-i18n="费用计算一致性修复">费用计算一致性修复</h3>
+            <p data-i18n="本地版不再将未知费用显示为 0 或视为初始免费载具。计算接口按已保存进度扣减 RP，保留银狮费用和拥有状态。游戏数据未变，本次不发布安装包。">本地版不再将未知费用显示为 0 或视为初始免费载具。计算接口按已保存进度扣减 RP，保留银狮费用和拥有状态。游戏数据未变，本次不发布安装包。</p>
+          </article>
           <article class="usage-guide-update">
           <div class="usage-guide-update-meta"><span>Web</span><time datetime="2026-10-13">2026.10.13</time></div>
           <h3 data-i18n="界面改版">界面改版</h3>
@@ -365,6 +370,6 @@
     <script src="/plan-backup.js?v=1.0.26&amp;r=578fd78f5dd2faee"></script>
     <link rel="stylesheet" href="/tree-search.css?v=1.0.26&amp;r=92629b52f39f8f67" />
     <script src="/tree-search.js?v=1.0.26&amp;r=775800f6405796bb"></script>
-    <script src="/app.js?v=1.0.26&amp;r=5cbe113f7cb94423"></script>
+    <script src="/app.js?v=1.0.26&amp;r=469e9893d22222a4"></script>
   </body>
 </html>

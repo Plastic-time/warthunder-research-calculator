@@ -10,6 +10,7 @@ on:
       - "tools/check-wheel.cjs"
       - "tools/check-web-cache.cjs"
       - "tools/check-site-locales.cjs"
+      - "tools/check-calculation-consistency.cjs"
       - "tools/browser-test-runtime.cjs"
   workflow_dispatch:
 
