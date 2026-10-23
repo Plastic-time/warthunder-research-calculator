@@ -4,6 +4,13 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-23 · 费用计算一致性修复
+
+- 费用缺失的载具不再显示为 0，也不再被当作初始免费载具；网页版、本地版和计算接口对此的判断一致。
+- 本地计算接口按已保存的研发进度扣减 RP，并返回费用未知的载具数量；银狮费用、原始单价和拥有状态不变。
+- 计算接口增加请求校验，拒绝格式异常的载具 ID、超长列表和无效的进度数值。
+- 新增网页版、本地版与接口之间的一致性回归测试。游戏数据未变，不发布 Windows 包。
+
 ## 2026-10-17 · 网页缓存检查
 
 - 修正翻译、研发进度、点击反馈脚本更新后仍可能读取旧版本的问题，补充载具分类数据的缓存重新验证。
@@ -93,6 +100,13 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-23 · Cost Calculation Consistency Fix
+
+- Vehicles with missing costs are no longer shown as 0 or treated as free starter vehicles. The web version, the local version and the calculation API now agree on this.
+- The local calculation API deducts saved research progress from RP and reports how many vehicles have unknown costs. Silver Lions, original prices and ownership stay unchanged.
+- The API validates requests and rejects malformed vehicle IDs, oversized lists and invalid progress values.
+- Added consistency regression tests across the web version, the local version and the API. No game data changes or Windows package.
 
 ### 2026-10-17 · Web Cache Checks
 
