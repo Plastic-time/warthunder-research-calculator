@@ -4,6 +4,13 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-23 · 截图导出进度与取消
+
+- 导出时显示准备、图片加载数量、高清渲染及保存阶段，并提供取消按钮。
+- 取消会中止图片请求；已开始的浏览器渲染或 PNG 编码会等待结束后清理，不下载文件，不修改计划或研发进度。
+- 跨次导出的图片缓存最多保留 128 项，数据字符串按 16 MiB 估算上限淘汰旧项；这不是整个页面的内存上限。下载完成后释放画布。
+- 新增取消、重复导出、缓存淘汰和多语言窄屏检查，并保留真实高清 PNG 下载检查。计算规则、游戏数据及截图尺寸策略不变，不发布 Windows 包。
+
 ## 2026-10-23 · 费用计算一致性修复
 
 - 费用缺失的载具不再显示为 0，也不再被当作初始免费载具；网页版、本地版和计算接口对此的判断一致。
@@ -100,6 +107,13 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-23 · Screenshot Progress and Cancellation
+
+- Exports show preparation, image counts, rendering and saving stages. A cancel button is available.
+- Cancellation stops image requests. Active rendering or PNG encoding finishes before cleanup. No file is downloaded, and saved plans and research progress stay unchanged.
+- The image cache retains up to 128 entries with an estimated 16 MiB string budget. This is not a limit on total page memory. Completed downloads release their canvas.
+- Added cancellation, repeat-export, cache eviction and narrow-screen language checks. Real high-resolution PNG checks remain in place. Calculation rules, game data and screenshot size limits are unchanged. No Windows package.
 
 ### 2026-10-23 · Cost Calculation Consistency Fix
 

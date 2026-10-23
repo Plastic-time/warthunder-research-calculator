@@ -34,5 +34,7 @@ jobs:
             logs/calculation-consistency/browser-report.json
             logs/export-hd-check/*-detail.png
             logs/export-hd-check/browser-report.json
+            logs/export-controls/*.png
+            logs/export-controls/browser-report.json
             logs/plan-backup/*.png
             logs/plan-backup/browser-report.json

@@ -18,7 +18,7 @@ async function check() {
     }
   }));
   const assets=['index.html','app.js','planner.js','styles.css','vehicle-names.json','unlock-quantity.js','assets/fonts/wt-symbols.ttf','assets/fonts/source.json','assets/flags/cn.svg','assets/flags/gb.svg','roster.js','roster.css','roster-audit.json','tree-scroll.js','tree-scroll.css','modifications.js','modifications.css','modification-planner.js','database/modifications/catalog.json'];
-  assets.push('route-export.js', 'html-to-image.js', 'html-to-image.LICENSE.txt');
+  assets.push('route-export.js', 'route-export.css', 'html-to-image.js', 'html-to-image.LICENSE.txt');
   for(const file of assets) assert.equal(sha(await get(file)),sha(fs.readFileSync(path.join(root,'docs',file))),`Stale frontend: ${file}`);
   const modificationCatalog=JSON.parse(fs.readFileSync(path.join(root,'docs/database/modifications/catalog.json'),'utf8'));
   let chunkIndex=0;

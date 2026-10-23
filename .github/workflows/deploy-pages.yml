@@ -12,6 +12,7 @@ on:
       - "tools/check-site-locales.cjs"
       - "tools/check-calculation-consistency.cjs"
       - "tools/check-export-hd.cjs"
+      - "tools/check-export-controls.cjs"
       - "tools/check-plan-backup.cjs"
       - "tools/browser-test-runtime.cjs"
   workflow_dispatch:

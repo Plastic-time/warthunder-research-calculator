@@ -1004,7 +1004,7 @@ async function exportRouteImage() {
     await window.RouteExporter.download(buildRouteExportPayload(), els.treeContainer.querySelector(".tree-canvas"), renderTreeConnections);
     setStatus(tr("完整科技树截图已下载"));
   } catch (error) {
-    setStatus(tr("路线图生成失败：{error}", { error: error.message }));
+    setStatus(error.name === "AbortError" ? tr("截图导出已取消") : tr("路线图生成失败：{error}", { error: error.message }));
   } finally {
     els.routeExportButton.disabled = !state.units.length;
     els.routeExportButton.textContent = tr("导出科技树截图");
