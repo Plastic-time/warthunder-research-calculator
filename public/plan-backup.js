@@ -28,7 +28,7 @@
   warning.className = 'plan-storage-warning';
   warning.hidden = true;
   warning.setAttribute('role', 'alert');
-  warning.innerHTML = '<span></span><button type="button" data-i18n="备份与恢复"></button>';
+  warning.innerHTML = '<span></span><button type="button" data-i18n="备份与恢复"></button><button type="button" data-storage-reload data-i18n="重新载入" hidden></button>';
   document.body.append(warning);
   let warningSource = '';
   const errors = {
@@ -78,6 +78,12 @@
   }
   document.getElementById('planBackupButton').addEventListener('click', open);
   warning.querySelector('button').addEventListener('click', open);
+  warning.querySelector('[data-storage-reload]').addEventListener('click', async () => {
+    await storage.settled();
+    if (!window.confirm(t('重新载入会放弃本页未保存的修改。请先导出需要保留的备份。是否继续？'))) return;
+    storage.discardPending();
+    window.location.reload();
+  });
   query('[data-backup-close]').addEventListener('click', () => dialog.close());
   query('[data-backup-cancel]').addEventListener('click', () => { revision++; clearPreview(); say(''); });
   dialog.addEventListener('cancel', event => { if (busy) event.preventDefault(); });
@@ -94,7 +100,9 @@
       if (file.size > storage.MAX_BYTES) throw { code: 'invalid' };
       const text = await file.text();
       if (current !== revision || !dialog.open) return;
-      ticket = storage.preview(storage.parse(text));
+      const prepared = await storage.preview(storage.parse(text));
+      if (current !== revision || !dialog.open) return;
+      ticket = prepared;
       query('#planBackupFile').textContent = file.name;
       query('.plan-backup-preview').hidden = false;
       query('footer').hidden = false;
@@ -123,19 +131,28 @@
     if (hooks.busy()) { say('请等待当前载入或计算完成。'); return; }
     setBusy(true);
     try {
-      storage.restore(ticket);
+      await storage.restore(ticket);
       clearPreview();
-      warning.hidden = true;
       document.dispatchEvent(new Event('wt-plans-restored'));
       await hooks.restored();
+      warning.hidden = !storage.hasConflicts() && !storage.hasPending();
       say('计划记录已恢复。');
     } catch (error) { reject(error); }
     finally { setBusy(false); }
   });
   document.addEventListener('wt-storage-warning', event => {
-    warningSource = event.detail === 'read' ? '保存记录无法读取，原记录已保留。' : '本次修改未能保存，请先导出备份，避免刷新后丢失。';
+    warningSource = event.detail === 'changed' ? '其他页面已更新计划，本页修改尚未保存。请先导出需要保留的备份，再重新载入。' :
+      event.detail === 'read' ? '保存记录无法读取，原记录已保留。' : '本次修改未能保存，请先导出备份，避免刷新后丢失。';
+    warning.querySelector('[data-storage-reload]').hidden = event.detail !== 'changed' && !storage.hasConflicts();
     warning.querySelector('span').textContent = t(warningSource);
     warning.hidden = false;
+    const modal = [...document.querySelectorAll('dialog[open]')].at(-1);
+    if (modal && warning.parentElement !== modal) {
+      modal.append(warning);
+      modal.addEventListener('close', () => {
+        if (warning.parentElement === modal) document.body.append(warning);
+      }, { once: true });
+    }
   });
   document.addEventListener('wt-language-change', refreshText);
   window.PlanBackup = { configure(value) { hooks = value; } };

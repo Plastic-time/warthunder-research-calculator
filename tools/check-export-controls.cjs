@@ -35,6 +35,7 @@ async function main() {
         toggleUnitMode(target.data_unit_id, 'target');
         state.progressRp[target.data_unit_id] = 1000;
         saveState(); calculatePlan();
+        await PlanStorage.settled();
         els.treeContainer.scrollTo(100, 500);
       });
       const snapshot = () => page.evaluate(() => ({

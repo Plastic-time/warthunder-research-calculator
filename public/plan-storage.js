@@ -1,9 +1,24 @@
 (function (root, factory) {
   const api = factory();
   if (typeof module === 'object' && module.exports) module.exports = api;
-  else root.PlanStorage = api.create(() => root.localStorage, code => {
-    document.dispatchEvent(new CustomEvent('wt-storage-warning', { detail: code }));
-  });
+  else {
+    const storage = api.create(() => root.localStorage, code => {
+      document.dispatchEvent(new CustomEvent('wt-storage-warning', { detail: code }));
+    }, (action, options) => {
+      if (!root.PlanWriteGuard) return Promise.reject(Object.assign(new Error('Safe storage locking unavailable'), { code: 'storage' }));
+      return root.PlanWriteGuard.run(action, options);
+    });
+    const preview = storage.preview;
+    storage.preview = data => root.PlanWriteGuard.preview(() => preview(data));
+    root.PlanStorage = storage;
+    root.addEventListener('storage', event => {
+      try { if (event.storageArea === root.localStorage) storage.checkChanges(event.key); }
+      catch { /* Writes still verify storage access before committing. */ }
+    });
+    root.addEventListener('beforeunload', event => {
+      if (storage.hasPending()) { event.preventDefault(); event.returnValue = ''; }
+    });
+  }
 })(typeof globalThis === 'object' ? globalThis : this, function () {
   'use strict';
   const MAX_BYTES = 5 * 1024 * 1024;
@@ -74,27 +89,74 @@
     });
     return { format: FORMAT, version: 1, createdAt: data.createdAt, records };
   }
-  function create(getStorage, warn = () => {}) {
+  function create(getStorage, warn = () => {}, exclusive = action => action()) {
     const pending = new Map();
+    const observed = new Map();
+    const conflicts = new Set();
+    const tasks = new Set();
+    function run(action, options) {
+      const result = exclusive(action, options);
+      if (!result?.then) return result;
+      tasks.add(result);
+      result.then(() => tasks.delete(result), () => tasks.delete(result));
+      return result;
+    }
+    function checkChanges(key = null) {
+      try {
+        const storage = getStorage();
+        for (const [savedKey, raw] of observed) {
+          if ((key === null || key === savedKey) && storage.getItem(savedKey) !== raw) conflicts.add(savedKey);
+        }
+        if (conflicts.size) warn('changed');
+      } catch { warn('read'); }
+    }
     function read(key) {
       if (pending.has(key)) return normalize(key, pending.get(key));
       try {
         const raw = getStorage().getItem(key);
+        observed.set(key, raw);
+        conflicts.delete(key);
         return raw === null ? normalize(key, {}) : normalize(key, JSON.parse(raw));
       } catch { warn('read'); return normalize(key, {}); }
     }
     function write(key, value) {
       const clean = normalize(key, value);
+      const text = JSON.stringify(clean);
       pending.set(key, clean);
+      if (!observed.has(key)) {
+        try { observed.set(key, getStorage().getItem(key)); } catch { /* Retry inside the lock. */ }
+      }
+      const attempt = () => {
+        try {
+          const storage = getStorage();
+          const old = storage.getItem(key);
+          if (!observed.has(key) || conflicts.has(key) || old !== observed.get(key)) {
+            conflicts.add(key);
+            warn('changed');
+            return false;
+          }
+          // Keep damaged source records intact until an explicit restore replaces them.
+          if (old !== null) normalize(key, JSON.parse(old));
+          storage.setItem(key, text);
+          return true;
+        } catch { warn('write'); return false; }
+      };
+      const finish = saved => {
+        if (saved) {
+          observed.set(key, text);
+          if (pending.get(key) === clean) pending.delete(key);
+        }
+        return saved;
+      };
+      const rejected = reason => {
+        if (reason.code === 'changed') { conflicts.add(key); warn('changed'); }
+        else warn('write');
+        return false;
+      };
       try {
-        const storage = getStorage();
-        const old = storage.getItem(key);
-        // Keep damaged source records intact until an explicit restore replaces them.
-        if (old !== null) normalize(key, JSON.parse(old));
-        storage.setItem(key, JSON.stringify(clean));
-        pending.delete(key);
-        return true;
-      } catch { warn('write'); return false; }
+        const result = run(attempt, { before: () => new Map([[key, observed.get(key)]]), after: new Map([[key, text]]) });
+        return result?.then ? result.then(finish, rejected) : finish(result);
+      } catch (reason) { return rejected(reason); }
     }
     function capture() {
       let storage;
@@ -131,7 +193,7 @@
       } catch { fail('storage'); }
       return { data: clean, before, memory, overwritten };
     }
-    function restore(ticket) {
+    function restoreLocked(ticket) {
       const clean = parse(JSON.stringify(ticket.data));
       let storage;
       try { storage = getStorage(); } catch { fail('storage'); }
@@ -157,10 +219,30 @@
         }
         fail(rollbackFailed ? 'rollback' : 'storage');
       }
-      for (const {key} of clean.records) pending.delete(key);
       return clean.records.length;
     }
-    return { read, write, capture, preview, restore, parse, kind, MAX_BYTES };
+    function restore(ticket) {
+      const clean = parse(JSON.stringify(ticket.data));
+      const finish = result => {
+        for (const {key, value} of clean.records) {
+          pending.delete(key);
+          observed.set(key, JSON.stringify(value));
+          conflicts.delete(key);
+        }
+        return result;
+      };
+      const result = run(() => restoreLocked(ticket), {
+        before: () => ticket.before, after: new Map(clean.records.map(({key, value}) => [key, JSON.stringify(value)])), restore: true, revisions: ticket.revisions,
+      });
+      return result?.then ? result.then(finish).catch(error => { if (!error.code) fail('storage'); throw error; }) : finish(result);
+    }
+    async function settled() { while (tasks.size) await Promise.allSettled([...tasks]); }
+    function discardPending() {
+      if (tasks.size) fail('changed');
+      pending.clear();
+    }
+    return { read, write, capture, preview, restore, parse, kind, MAX_BYTES, checkChanges, settled,
+      hasPending: () => pending.size > 0 || tasks.size > 0, hasConflicts: () => conflicts.size > 0, discardPending };
   }
   return { create, normalize, parse, kind, MAX_BYTES };
 });

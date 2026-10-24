@@ -1,6 +1,15 @@
 const assert = require('node:assert/strict');
 const { test } = require('node:test');
 const { create, normalize, parse, MAX_BYTES } = require('../public/plan-storage');
+const { readFileSync } = require('node:fs');
+const { join } = require('node:path');
+
+test('local and Pages storage protection assets are identical', () => {
+  for (const file of ['plan-storage.js', 'plan-write-guard.js', 'plan-backup.js', 'plan-backup.css']) {
+    assert.equal(readFileSync(join(__dirname, '../public', file), 'utf8'),
+      readFileSync(join(__dirname, '../docs', file), 'utf8'), file);
+  }
+});
 const tree = 'wt-research:usa:ground';
 const mods = 'wt-research:modifications:us_m18_hellcat';
 const other = 'wt-research:germany:aviation';
@@ -16,6 +25,97 @@ function memory(initial = {}) {
 function fixture() { return memory({[tree]:JSON.stringify(value),[mods]:JSON.stringify(modValue),
   'wt-research:language':'en','private-setting':'not-part-of-plans'}); }
 const wrap = records => JSON.stringify({format:'war-thunder-research-plans',version:1,createdAt:'2026-10-10T12:00:00.000Z',records});
+
+test('stale tree and modification writes preserve the newer record and keep drafts exportable', () => {
+  for (const [key, initial] of [[tree, value], [mods, modValue]]) {
+    const store = memory(), warnings = [];
+    const a = create(() => store), b = create(() => store, code => warnings.push(code));
+    a.read(key); b.read(key);
+    assert.equal(a.write(key, initial), true);
+    const newer = store.getItem(key);
+    const stale = key === tree ? { planned: ['different'] } : { selected: ['different'] };
+    assert.equal(b.write(key, stale), false);
+    assert.equal(store.getItem(key), newer);
+    assert(b.hasConflicts() && b.hasPending());
+    assert.deepEqual(b.capture().records[0].value, normalize(key, stale));
+    assert.equal(b.write(key, {}), false);
+    assert.equal(store.getItem(key), newer);
+    assert(warnings.includes('changed'));
+    b.discardPending();
+    assert.deepEqual(b.read(key), normalize(key, initial));
+    assert.equal(b.write(key, initial), true);
+    assert(!b.hasConflicts() && !b.hasPending());
+  }
+});
+
+test('storage changes and deletion are detected without treating unrelated keys as conflicts', () => {
+  const store = fixture(), warnings = [], api = create(() => store, code => warnings.push(code));
+  api.read(tree);
+  store.setItem(other, '{}'); api.checkChanges(other);
+  assert(!api.hasConflicts());
+  store.removeItem(tree); api.checkChanges(null);
+  assert(api.hasConflicts());
+  assert.equal(api.write(tree, value), false);
+  assert.equal(store.getItem(tree), null);
+  assert.deepEqual(warnings, ['changed', 'changed']);
+});
+
+test('successful restore updates the baseline and invalidates other page writers', () => {
+  const store = fixture(), a = create(() => store), b = create(() => store);
+  a.read(tree); b.read(tree);
+  a.restore(a.preview(parse(wrap([{ key: tree, value: {} }]))));
+  assert.equal(b.write(tree, value), false);
+  assert.equal(a.write(tree, {}), true);
+});
+
+function serialLock() {
+  let tail = Promise.resolve();
+  return action => { const result = tail.then(action); tail = result.catch(() => {}); return result; };
+}
+
+test('exclusive writes serialize two stale tabs: exactly one may commit', async () => {
+  const store = memory(), lock = serialLock();
+  const a = create(() => store, () => {}, lock), b = create(() => store, () => {}, lock);
+  a.read(tree); b.read(tree);
+  const results = await Promise.all([a.write(tree, value), b.write(tree, { planned: ['other'] })]);
+  assert.deepEqual(results, [true, false]);
+  assert.deepEqual(JSON.parse(store.getItem(tree)).progressRp, value.progressRp);
+});
+
+test('rapid writes in one page keep the latest pending edit and settle in order', async () => {
+  const store = memory(), api = create(() => store, () => {}, serialLock());
+  api.read(tree);
+  const first = api.write(tree, value), second = api.write(tree, { ...value, progressRp: { us_m18_hellcat: 2000 } });
+  assert(api.hasPending());
+  assert.throws(() => api.discardPending(), { code: 'changed' });
+  assert.equal(api.read(tree).progressRp.us_m18_hellcat, 2000);
+  await api.settled();
+  assert.deepEqual(await Promise.all([first, second]), [true, true]);
+  assert.equal(JSON.parse(store.getItem(tree)).progressRp.us_m18_hellcat, 2000);
+  assert(!api.hasPending());
+});
+
+test('restore rechecks its preview after waiting for the write lock', async () => {
+  const store = fixture(), lock = serialLock(), api = create(() => store, () => {}, lock);
+  api.read(tree);
+  const ticket = api.preview(api.capture());
+  const saving = api.write(tree, {});
+  const restore = api.restore(ticket);
+  await saving;
+  await assert.rejects(restore, { code: 'changed' });
+  assert.equal(JSON.parse(store.getItem(tree)).planned.length, 0);
+});
+
+test('unavailable locks fail closed and retain a backup of unsaved work', async () => {
+  const store = fixture(), api = create(() => store, () => {}, () => Promise.reject(new Error('no lock')));
+  api.read(tree);
+  const before = store.getItem(tree);
+  assert.equal(await api.write(tree, {}), false);
+  assert.equal(store.getItem(tree), before);
+  assert(api.hasPending());
+  assert.equal(api.capture().records.find(record => record.key === tree).value.planned.length, 0);
+  await assert.rejects(api.restore(api.preview(api.capture())), { code: 'storage' });
+});
 test('export retains plans, invested RP, routes, and modification settings only', () => {
   const api=create(()=>fixture());
   const data=api.capture();

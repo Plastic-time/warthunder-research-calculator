@@ -4,6 +4,13 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-24 · 多页面存档保护
+
+- 修复同时打开多个页面时，旧页面可能覆盖另一页新计划或研发进度的问题，覆盖科技树和配件。
+- 冲突时保留新存档和本页未保存修改，提供备份与重新载入入口；重新载入前提示确认。
+- 备份恢复也会核对是否已有新保存，防止过期预览覆盖进度。补充同时写入、失败回滚和七种语言窄屏检查。
+- 请刷新已打开的旧版页面后使用。本功能仅保护浏览器本地存档，不是云同步；计算规则和游戏数据不变，不发布 Windows 包。
+
 ## 2026-10-23 · 截图导出进度与取消
 
 - 导出时显示准备、图片加载数量、高清渲染及保存阶段，并提供取消按钮。
@@ -107,6 +114,13 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-24 · Multi-Tab Save Protection
+
+- Fixed stale tabs overwriting newer plans or research progress. This covers tech trees and modifications.
+- Conflicts preserve the newer save and the current tab's unsaved edits. You can export a backup before confirming a reload.
+- Backup restores also check for newer saves. Added concurrent-write, rollback, and narrow-screen checks in all seven languages.
+- Refresh existing tabs to load the protection. Saves remain in your browser; this is not cloud sync. Calculation rules and game data are unchanged. No Windows package is published.
 
 ### 2026-10-23 · Screenshot Progress and Cancellation
 

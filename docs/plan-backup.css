@@ -30,6 +30,11 @@
 .plan-backup-dialog [data-backup-confirm] { background: var(--green-1); border-color: var(--green-4); }
 .plan-storage-warning { position: fixed; z-index: 80; left: 12px; right: 12px; bottom: calc(120px + env(safe-area-inset-bottom, 0px)); margin: auto; max-width: 660px; padding: 12px; background: var(--gray-4); border: 1px solid var(--gold-7); border-radius: 6px; color: var(--gold-15); display: flex; align-items: center; gap: 12px; font-size: var(--fs-md); line-height: 1.6; }
 .plan-storage-warning[hidden] { display: none; }
+.plan-storage-warning > span { min-width: 0; overflow-wrap: anywhere; }
+.plan-storage-warning [hidden] { display: none; }
+@media (max-width: 720px) {
+  .plan-storage-warning { flex-direction: column; align-items: stretch; max-height: calc(100dvh - 150px); overflow: auto; }
+}
 .plan-storage-warning button { flex-shrink: 0; min-height: 44px; padding: 8px; border: 1px solid var(--gold-7); border-radius: 4px; color: inherit; background: transparent; }
 @media (max-width: 380px) {
   .plan-backup-actions { grid-template-columns: 1fr; }

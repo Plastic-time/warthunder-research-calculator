@@ -28,12 +28,13 @@ const {launchOptions} = require('./browser-test-runtime.cjs');
       await page.evaluate(()=>ModificationWorkbench.open('us_m18_hellcat'));
       const modId=await page.locator('[data-mod-id]').first().getAttribute('data-mod-id');
       await page.evaluate(()=>document.getElementById('modificationDialog').close());
-      const expected=await page.evaluate(modId=>{
+      const expected=await page.evaluate(async modId=>{
         const tree=storageKey(),mods='wt-research:modifications:us_m18_hellcat';
         PlanStorage.write(tree,{planned:['us_m18_hellcat'],owned:['us_m2a4'],waypoints:['us_m4a1_1942'],progressRp:{us_m18_hellcat:1000},avoidFolded:true,
           route:{selectedIds:['us_m18_hellcat','us_m4a1_1942'],fillerIds:[],removedAutoRoles:{us_m4a2_1944:'filler'}}});
         PlanStorage.write(mods,{selected:[modId],researched:[],progressRp:{[modId]:100},airCombat:false});
         localStorage.setItem('unrelated-test-setting','keep-me');
+        await PlanStorage.settled();
         loadSavedState();calculatePlan();
         return {tree,mods,modId,values:{[tree]:PlanStorage.read(tree),[mods]:PlanStorage.read(mods)},budget:[els.budgetRp.textContent,els.budgetSl.textContent]};
       },modId);
@@ -51,9 +52,10 @@ const {launchOptions} = require('./browser-test-runtime.cjs');
       const otherMode=mode==='local'?'pages':'local';
       const importSource=backups[otherMode]?otherMode:mode;
       const imported=backups[importSource];
-      await page.evaluate(({tree,mods})=>{
+      await page.evaluate(async ({tree,mods})=>{
         PlanStorage.write(tree,{});PlanStorage.write(mods,{});
         PlanStorage.write('wt-research:germany:aviation',{planned:['bf-109e-1']});
+        await PlanStorage.settled();
         loadSavedState();calculatePlan();
       },expected);
       const snapshot=()=>page.evaluate(()=>Object.fromEntries(Object.entries(localStorage)));
@@ -138,7 +140,7 @@ const {launchOptions} = require('./browser-test-runtime.cjs');
       await page.waitForFunction(()=>!treeSelectionLoading&&state.units.length>0);
       assert(await page.locator('.plan-storage-warning').isVisible());
       assert.equal(await page.evaluate(()=>localStorage.getItem(storageKey())),'{broken');
-      await page.locator('.plan-storage-warning button').click();
+      await page.locator('.plan-storage-warning button').first().click();
       await page.locator('[data-backup-file]').setInputFiles(file);
       await page.locator('[data-backup-confirm]').click();
       await page.waitForFunction(()=>document.querySelector('[data-backup-status]').textContent==='\u8ba1\u5212\u8bb0\u5f55\u5df2\u6062\u590d\u3002');

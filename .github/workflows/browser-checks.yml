@@ -38,3 +38,5 @@ jobs:
             logs/export-controls/browser-report.json
             logs/plan-backup/*.png
             logs/plan-backup/browser-report.json
+            logs/plan-concurrency/*.png
+            logs/plan-concurrency/browser-report.json

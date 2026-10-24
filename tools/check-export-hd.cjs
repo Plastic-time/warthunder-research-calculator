@@ -43,6 +43,7 @@ async function main() {
           toggleUnitMode(target.data_unit_id, 'target');
           state.progressRp[target.data_unit_id] = Math.min(1000, target.rp);
           saveState(); calculatePlan();
+          await PlanStorage.settled();
           els.treeContainer.scrollTo(120, 600);
         }, country);
         if (country === 'israel') {
