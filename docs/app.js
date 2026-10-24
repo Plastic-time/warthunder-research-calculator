@@ -221,6 +221,7 @@ function setLanguage(language) {
   els.treeContainer.scrollTop = scroll.top;
   window.TreeNavigation?.sync(false);
   if (!treeSelectionLoading && !state.treeLoadError) setStatus(tr("{count} 个载具", { count: formatNumber(state.units.length) }));
+  else if (state.treeLoadError) setStatus(tr("科技树加载失败，请重试"));
   setPlanButtonsDisabled(els.planButton.disabled);
   closeUnitContextMenu();
   bulkOwnedDialog?.close();
@@ -616,6 +617,7 @@ function getTreeResearchUnits() {
 }
 
 let treeSelectionLoading = true;
+let initialLoadFailed = false;
 let treeSearch;
 function treeRosterAvailable() {
   return state.units.length > 0 && state.units.every(unit => window.RosterAudit?.info(state.country, state.type, unit.data_unit_id));
@@ -1357,7 +1359,7 @@ function renderTree() {
   window.VehicleFolders?.beforeTreeRender();
   window.RosterAudit?.render(state.country, state.type);
   if (state.treeLoadError) {
-    els.treeContainer.innerHTML = `<div class="loading" role="status">${tr("科技树加载失败，请重试")}</div>`;
+    els.treeContainer.innerHTML = `<div class="loading tree-load-error"><p role="status">${tr("科技树加载失败，请重试")}</p><button type="button" data-tree-retry><span class="nav-icon" style="--nav-icon:url('${escapeHtml(localAsset('assets/navigation/rotate-ccw.svg'))}')" aria-hidden="true"></span><span>${tr("重试")}</span></button></div>`;
     return;
   }
   if (!state.tree.length) {
@@ -1622,6 +1624,12 @@ function wireEvents() {
   });
 
   els.treeContainer.addEventListener("click", (event) => {
+    if (event.target.closest("[data-tree-retry]")) {
+      if (!treeSelectionLoading && state.treeLoadError) {
+        if (initialLoadFailed) loadInitialData(); else loadTree();
+      }
+      return;
+    }
     const rankButton = event.target.closest("[data-owned-rank]");
     if (rankButton) {
       openRankOwnedDialog(rankButton.dataset.ownedRank);
@@ -1681,17 +1689,31 @@ function wireEvents() {
   });
 }
 
-async function init() {
+async function loadInitialData() {
+  treeSelectionLoading = true;
+  state.treeLoadError = false;
+  refreshTreeSelectionButton();
+  els.treeContainer.innerHTML = `<div class="loading" role="status">${tr("正在载入科技树")}</div>`;
   try {
-    wireEvents();
     await window.RosterAudit?.load();
     await loadLocalizedNames();
     await window.ModificationWorkbench?.loadCatalog();
     await loadMeta();
+    initialLoadFailed = false;
     await loadTree();
   } catch (err) {
+    initialLoadFailed = true;
+    treeSelectionLoading = false;
+    state.treeLoadError = true;
     setStatus(err.message);
+    renderTree();
+    refreshTreeSelectionButton();
   }
+}
+
+async function init() {
+  wireEvents();
+  await loadInitialData();
 }
 
 init();

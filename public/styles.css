@@ -1473,6 +1473,14 @@ body:has(.wiki-empty) #floatingBudget { display: none; }
   color: var(--muted);
 }
 
+.tree-load-error { display: flex; flex-direction: column; justify-content: center; gap: 16px; padding: 24px; text-align: center; }
+.tree-load-error p { margin: 0; max-width: 100%; overflow-wrap: anywhere; }
+.tree-load-error button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 16px; max-width: 100%; border: 1px solid var(--green-4); border-radius: 4px; background: var(--green-1); color: var(--gray-13); font: inherit; cursor: pointer; }
+.tree-load-error button:hover { background: var(--green-2); }
+.tree-load-error button:focus-visible { outline: 2px solid var(--gold-10); outline-offset: 3px; }
+.tree-load-error button span:last-child { min-width: 0; overflow-wrap: anywhere; }
+.tree-load-error .nav-icon { width: 18px; height: 18px; flex: 0 0 18px; }
+
 @media (max-width: 1100px) {
   .toolbar {
     grid-template-columns: repeat(2, minmax(0, 1fr));

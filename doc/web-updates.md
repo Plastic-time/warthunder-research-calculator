@@ -4,6 +4,12 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-24 · 科技树加载重试
+
+- 科技树加载失败后提供重试按钮，无需刷新整页；首次加载资料失败也可重试，重复点击不会并发发送同一重试请求。
+- 两版保留已有目标、拥有标记及研发进度。切换国家后，旧请求的迟到结果不能覆盖当前树；Wiki 没有数据仍使用原空状态，不显示网络重试。
+- 保留静态数据哈希校验，重试不绕过核验。新增两版、三种宽度、七种语言的失败恢复与存档保护检查。不修改计算规则或游戏数据，不发布 Windows 包。
+
 ## 2026-10-24 · 多页面存档保护
 
 - 修复同时打开多个页面时，旧页面可能覆盖另一页新计划或研发进度的问题，覆盖科技树和配件。
@@ -114,6 +120,12 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-24 · Retry Loading a Tech Tree
+
+- Added a retry button for failed tree loads, including startup failures. No page refresh is needed. Repeated clicks do not send duplicate retry requests.
+- Both versions preserve saved targets, owned markers, and research progress. Late responses cannot replace a newer country selection. Empty Wiki trees keep their existing empty state.
+- Static data still passes the hash check. Added recovery tests at three widths in all seven languages. Calculation rules and game data are unchanged. No Windows package is published.
 
 ### 2026-10-24 · Multi-Tab Save Protection
 

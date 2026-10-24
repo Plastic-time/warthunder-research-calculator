@@ -9,6 +9,7 @@ on:
       - ".github/workflows/browser-checks.yml"
       - "tools/check-wheel.cjs"
       - "tools/check-web-cache.cjs"
+      - "tools/check-tree-retry.cjs"
       - "tools/check-site-locales.cjs"
       - "tools/check-calculation-consistency.cjs"
       - "tools/check-export-hd.cjs"
