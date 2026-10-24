@@ -4,6 +4,19 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-24 · 版本显示与介绍同步
+
+- 桌面“更多”菜单和手机页首显示最新核对版本 **2.59.0.86**，七语提示明确保留局部更新范围。
+- 中英文介绍同步最新核对版本，补记活动载具与配件更新；此前的 2.59.0.50 修正改列为已保留记录。
+- 基础费用快照仍为 2.59.0.17，软件和最新下载包仍为 v1.0.26；历史记录和来源版本不改写。新增页面与介绍的版本一致性检查，不发布 Windows 包。
+
+## 2026-10-24 · 活动载具与配件补录
+
+- 依据固定游戏数据 2.59.0.86 和官方活动证据，补入 Bf 109 E-3（TD）、Jagdpanther G2、S-706，无需等待 Wiki 页面；活动奖励不计入常规载具研发费用，来源链接指向官方活动。
+- 随后补齐三辆的 50 项配件。Bf 109 E-3（TD）的 15 项配件合计 8,410 RP / 9,490 SL；Jagdpanther G2、S-706 分别为 17、18 项，按已核实的高级载具规则显示已解锁，不将缺失字段直接当免费。
+- 前置只采用 `reqModification`，排列字段不生成研发箭头；七语言名称与游戏图标按具体型号核对。BT-7M（TD）在本次核对时尚未开始活动，继续暂缓。
+- 这两次补录更新了此前“尚未导入”的状态，不代表全量快照升级，不发布 Windows 包。见[载具依据](game-roster-additions-20261024.md)与[配件依据](event-modifications-20261024.md)。
+
 ## 2026-10-24 · 游戏数据核对与 J35A 分类修正
 
 - 对照固定版本 2.59.0.86 核对现有载具费用、前置和等级门槛；未发现需要新增修改的 RP/银狮费用或规划规则。
@@ -126,6 +139,19 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-24 · Version Display and Documentation
+
+- Desktop More and the mobile header show the latest reviewed version, **2.59.0.86**. The scope notice covers all seven languages.
+- Both READMEs now include the latest review and event additions. The 2.59.0.50 corrections remain as historical records.
+- The overall cost baseline remains 2.59.0.17. The app and latest download remain v1.0.26. Source versions and history are preserved. Added version consistency checks for pages and documentation. No Windows package was released.
+
+### 2026-10-24 · Event Vehicles and Modifications
+
+- Added Bf 109 E-3 (TD), Jagdpanther G2 and S-706 using pinned game data 2.59.0.86 and official event evidence. Wiki pages are not required. Reward vehicles do not add ordinary research costs. Source links open official announcements.
+- A follow-up added 50 modifications. The Bf 109's 15 modifications total 8,410 RP / 9,490 SL. Jagdpanther G2 and S-706 have 17 and 18 modifications. Their premium unlock status is verified separately; missing values are not treated as free by default.
+- Only `reqModification` creates research edges. Layout fields do not. Names in seven languages and game icons were checked for each exact variant. BT-7M (TD) remains deferred because its event had not started at review time.
+- These additions supersede the earlier deferral. They are not a full snapshot upgrade. No Windows package was released. See the [vehicle evidence](game-roster-additions-20261024.md) and [modification evidence](event-modifications-20261024.md).
 
 ### 2026-10-24 · Game Data Review and J35A Classification
 

@@ -71,7 +71,7 @@ On mobile, open More at the top to find the guide and export controls. Search an
 
 Open the web app to start. No game account is required. On Windows, download the [v1.0.26 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.26/WarThunderResearchCalculator-v1.0.26-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js installation is needed.
 
-> This guide and its screenshots show the current web app. The v1.0.26 download does not include the redesigned interface (single-row header, compact vehicle cards, new modification layout), the combined clear button, or remaining-RP input. It does not receive web updates automatically.
+> This guide describes the current web app. Screenshots illustrate the interface. The v1.0.26 download does not include later UI changes, the combined clear button, remaining-RP input, or subsequent web data additions. It does not receive web updates automatically.
 
 Select all, in Filters, toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
 
@@ -87,7 +87,8 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - **Protected tree refreshes**: Wiki refreshes only update names, images, and role descriptions for existing entries. Costs, prerequisites, ranks, folders, and source records stay unchanged. New, missing, and conflicting entries go into a review report. This does not verify a new game version.
 - **Scoped corrections**: confirmed Ka-29 and Do 217 J-2 corrections remain in place. Version 1.0.11 uses configuration **2.59.0.34** to set GLBC mk.3 on both CA-27 variants to **9,000 RP / 14,000 SL**. This is not a full snapshot upgrade.
 - **Retained correction**: v1.0.19 updates F4U-7 modification costs, the cannon upgrade tier, and unlock counts using **2.59.0.38**. All modifications total **47,800 RP / 86,900 SL**.
-- **Latest data corrections**: v1.0.25 updates modifications for the Greek F-86E(M), MiG-23M, and Object 416 using **2.59.0.50**. See the [release notes](doc/release-v1.0.25.md#english) for costs and prerequisites. This is not a full data upgrade. The latest UI and documentation changes do not alter game data.
+- **Retained correction**: v1.0.25 updates modifications for the Greek F-86E(M), MiG-23M, and Object 416 using **2.59.0.50**. See the [release notes](doc/release-v1.0.25.md#english) for costs and prerequisites. This is not a full data upgrade.
+- **Latest reviewed version**: **2.59.0.86**. J35A's purchase category is corrected. Bf 109 E-3 (TD), Jagdpanther G2, S-706 and their 50 modifications are now included. Unlocked premium modifications are distinct from unknown costs. These are scoped checks and additions, not a full snapshot upgrade. See the [data review](doc/game-data-review-20261024.md), [event vehicles](doc/game-roster-additions-20261024.md), and [modification evidence](doc/event-modifications-20261024.md).
 - **Unknown is not free**: missing prices are shown as unavailable, not zero. Rank-unlock counts still use a separate project rules table. Verify your route in the game.
 - **Plans stay in your browser**: selections, routes, and RP progress are saved locally. They are not uploaded or synced between devices. Clearing site data deletes these records. Images, Wiki pages, and the online counter need a connection. The counter estimates active browsers. An outage does not affect calculations.
 

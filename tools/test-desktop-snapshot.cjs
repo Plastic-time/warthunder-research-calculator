@@ -24,6 +24,13 @@ const compareVersion = (a, b) => {
 };
 for (const source of [version.gameVersion, correction.gameVersion, version.rosterAddition.version])
   assert(compareVersion(review.gameVersion, source) >= 0, 'Displayed review version must not lag published updates');
+for (const [file, label] of [['README.md', '最新核对版本'], ['README.en.md', 'Latest reviewed version']]) {
+  const lines = fs.readFileSync(path.join(root, file), 'utf8').split(/\r?\n/);
+  const current = lines.filter(line => line.startsWith(`- **${label}**`));
+  assert.equal(current.length, 1, file + ': exactly one current review summary');
+  assert.deepEqual(current[0].match(/\b\d+\.\d+\.\d+\.\d+\b/g), [review.gameVersion],
+    file + ': current summary must match the reviewed data version');
+}
 assert.equal(correction.fullSnapshotUpgrade, false);
 assert.notEqual(correction.gameVersion, version.gameVersion);
 assert.equal(catalog.version, version.gameVersion);
@@ -92,6 +99,16 @@ for (const folder of ['public', 'docs']) {
   for (const name of ['Bf 109 E-3', 'Jagdpanther G2', 'S-706']) assert($('[data-game-correction-scope]').text().includes(name));
   assert($('[data-game-correction-scope]').text().includes(review.gameVersion));
   assert($('[data-game-correction-scope]').text().includes('仅更新这三辆，不改其他载具数据'));
+  // Historical changelog entries retain their original source versions.
+  $('script, style, #usageGuideChangelog').remove();
+  const currentCopy = [$('body').text()];
+  $('[title], [data-i18n-title]').each((_, element) => {
+    currentCopy.push($(element).attr('title') || '', $(element).attr('data-i18n-title') || '');
+  });
+  const displayedVersions = currentCopy.join('\n').match(/\b\d+\.\d+\.\d+\.\d+\b/g) || [];
+  assert(displayedVersions.length > 0, folder + ': current version must remain visible');
+  assert.deepEqual([...new Set(displayedVersions)], [review.gameVersion],
+    folder + ': current page copy must not display stale game versions');
 }
 assert.equal(require('../dict/unlock_quantity').get_unlock_quantity('israel', 'aviation', 'VIII'), 3);
 console.log(JSON.stringify({ trees: manifest.files.length, units: units.size, gameVersion: version.gameVersion,

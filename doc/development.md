@@ -28,6 +28,13 @@ npm start
 
 静态版在浏览器内计算，不调用第三方规划接口。桌面版使用本地 Express 服务。网页发布和桌面打包是两个步骤；已下载的旧包不会自动获得新网页内容。
 
+### 版本标识的边界
+
+- 页面显示与中英文 README 的“最新核对版本”使用 `config/data-version.json` 的 `latestReview.gameVersion`；`fullSnapshotUpgrade: false` 表示局部核对，不能替代基础快照版本。
+- `gameVersion` 和各数据文件的来源版本记录实际基准；`latestCorrection`、`previousCorrections` 及历史更新日志保留当时的版本，不做全文替换。
+- `package.json` 的版本属于软件发布。资源 URL 的 `v` 属于软件版本，`r` 按文件内容变化。备份文件的 `version` 是格式版本，均不是游戏数据版本。未打新包时不能改写既有下载包说明或发布标签。
+- 核对新数据后同步页面标识、七语范围说明、中英文 README 和 `doc/web-updates.md`，运行 `node tools/test-desktop-snapshot.cjs` 与 `npm run check:web-assets`。浏览器还需检查桌面“更多”、手机页首、使用指南和语言切换。
+
 ## 游戏配置核对
 
 先阅读 [项目数据规则](../AGENTS.md)。游戏配置是未来费用、等级、前置和配件成员核对的主要依据，Wiki 仅作补充；现有历史导入器不能视为已经全部完成这一迁移。
