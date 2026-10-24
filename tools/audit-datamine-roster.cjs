@@ -12,6 +12,10 @@ const key = id => id.toLowerCase();
 
 function premiumAcquisition(unit) {
   if (!unit.is_premium) return null;
+  if (unit.game_source?.cost_policy === 'reward-excluded-from-ordinary-research') {
+    return { type: 'special', channel: unit.game_source.acquisition.type,
+      provenance: { kind: 'official-announcement', url: unit.game_source.official_url, gameDataCommit: unit.game_source.commit } };
+  }
   // Confirmed availability can be newer than the supplementary Wiki snapshot.
   const correction = acquisitionCorrections[key(unit.data_unit_id)];
   if (correction) return structuredClone(correction);

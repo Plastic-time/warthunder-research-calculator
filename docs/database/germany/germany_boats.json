@@ -828,6 +828,49 @@
             "sha256": "40064a052e8c93641a115eff59524bca7b95e2c10043e2c287994f7bff38513e"
           }
         }
+      ],
+      [
+        {
+          "type": "single",
+          "title": "S-706",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_s_700_s_706.png",
+          "br": "2.7",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "germ_s_700_s_706",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "III",
+          "research_country": "Germany",
+          "main_role": "Motor torpedo boat",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "game_source": {
+            "version": "2.59.0.86",
+            "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+            "battle_ratings": {
+              "AB": "2.7",
+              "RB": "2.7",
+              "SB": "2.7"
+            },
+            "official_url": "https://forum.warthunder.com/t/topic/359427",
+            "acquisition": {
+              "type": "battle-pass",
+              "availableFrom": "2026-10-21T12:00:00Z",
+              "season": 25,
+              "rewardLevel": 51,
+              "freeReward": true,
+              "url": "https://forum.warthunder.com/t/topic/359427"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research",
+            "modification_status": "pending-game-layout-and-cost-validation",
+            "provenance": "config/game-roster-additions.json"
+          }
+        }
       ]
     ],
     "selected": [],

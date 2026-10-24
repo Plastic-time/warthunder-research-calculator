@@ -7,6 +7,7 @@ const { premiumAcquisition, wikiUnits } = require('./audit-datamine-roster.cjs')
 const { changes, verifyDelta } = require('./audit-reviewed-data-delta.cjs');
 const fixture = require('./fixtures/game-data-review-2.59.0.86.json');
 const corrections = require('../config/acquisition-corrections.json');
+const additions = require('../config/game-roster-additions.json');
 const root = path.resolve(__dirname, '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file)));
 
@@ -30,13 +31,20 @@ test('J35A has verified regular GE pricing without changing its research costs o
   assert.deepEqual(tree, read('database/sweden/sweden_aviation.json'));
 });
 
-test('roster change is limited to J35A and acquisition counts, with identical web copies', () => {
+test('historical J35A review remains unchanged outside the later explicit game additions', () => {
   const report = read('docs/roster-audit.json');
   assert.deepEqual(report, read('public/roster-audit.json'));
   const unit = report.trees['sweden/aviation'].units.saab_j35a;
   assert.equal(unit.category, 'premium-golden-eagles');
   assert.deepEqual(unit.acquisition, corrections.saab_j35a);
-  assert.deepEqual(report.acquisitionCounts, { 'golden-eagles': 368, pack: 96, special: 311 });
+  assert.deepEqual(report.acquisitionCounts, { 'golden-eagles': 368, pack: 96, special: 313 });
+  for (const c of additions.units) {
+    const tree = report.trees[c.country + '/' + c.type];
+    delete tree.units[c.id];
+    delete tree.snapshotSha256;
+    delete tree.gameOnlyCount;
+    tree.matched--;
+  }
   delete report.trees['sweden/aviation'].units.saab_j35a;
   delete report.acquisitionCounts;
   assert.equal(crypto.createHash('sha256').update(JSON.stringify(report)).digest('hex'), fixture.rosterUnchangedSha256);
@@ -50,7 +58,7 @@ test('partial review checkpoints do not promote the full snapshot or import hidd
   }
   assert.equal(read('config/data-version.json').gameVersion, '2.59.0.17');
   const ids = new Set(Object.values(read('docs/roster-audit.json').trees).flatMap(tree => Object.keys(tree.units)));
-  for (const entry of fixture.deferredRosterEntries) assert(!ids.has(entry.id));
+  for (const entry of fixture.deferredRosterEntries) assert.equal(ids.has(entry.id), additions.units.some(c => c.id === entry.id));
   assert.equal(fixture.sources.length, 6);
   for (const source of fixture.sources) {
     assert.equal(source.commit, (source.label === 'baseline' ? fixture.baseline : fixture.upstream).commit);

@@ -12,13 +12,13 @@ let units = 0, candidates = 0;
 for (const [key, tree] of Object.entries(report.trees)) {
   const [country, type] = key.split('/');
   const raw = fs.readFileSync(`docs/database/${country}/${country}_${type}.json`);
-  assert.equal(crypto.createHash('sha256').update(raw).digest('hex'), tree.wikiSha256);
-  assert.equal(Object.keys(tree.units).length, tree.wikiCount);
+  assert.equal(crypto.createHash('sha256').update(raw).digest('hex'), tree.snapshotSha256 || tree.wikiSha256);
+  assert.equal(Object.keys(tree.units).length, tree.wikiCount + (tree.gameOnlyCount || 0));
   assert(tree.candidates.every(unit => !tree.units[unit.id.toLowerCase()]));
-  units += tree.wikiCount;
+  units += tree.wikiCount + (tree.gameOnlyCount || 0);
   candidates += tree.candidates.length;
 }
-assert.equal(units, 3235);
+assert.equal(units, 3238);
 assert.equal(report.trees['usa/ground'].units.us_m901_itv.category, 'squadron');
 assert.equal(report.schema, 2);
 assert.equal(report.trees['usa/ground'].units.us_m2a4_1st_armor_div.category, 'premium-golden-eagles');
@@ -27,5 +27,5 @@ assert.equal(report.trees['china/aviation'].units.j_7d.category, 'premium-golden
 assert.equal(report.trees['china/aviation'].units.j_7d.acquisition.currency, 'GE');
 assert.equal(report.trees['china/aviation'].units.su_30mkk.category, 'premium-pack');
 assert.match(report.trees['china/aviation'].units.su_30mkk.acquisition.storeUrl, /^https:\/\/store\.gaijin\.net\//);
-assert.equal(Object.values(report.acquisitionCounts).reduce((sum, count) => sum + count, 0), 775);
+assert.equal(Object.values(report.acquisitionCounts).reduce((sum, count) => sum + count, 0), 777);
 console.log(JSON.stringify({pass:true, units, candidates}));

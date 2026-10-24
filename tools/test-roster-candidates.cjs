@@ -82,17 +82,18 @@ test('404 and donor-vehicle pages cannot be accepted as the candidate detail pag
   }
 });
 
-test('deferred candidates do not enter runtime trees, modifications, acquisition overrides or NEW badges', () => {
+test('only separately verified game additions supersede the historical deferral; no invented modifications or NEW badges', () => {
   assert.deepEqual(review.imported, []);
   const catalog = read('docs/database/modifications/catalog.json');
   const roster = read('docs/roster-audit.json');
   const corrections = read('config/acquisition-corrections.json');
   const released = Object.values(read('config/vehicle-release.json').trees).flat();
   for (const c of review.candidates) {
+    const imported = require('../config/game-roster-additions.json').units.some(entry => entry.id === c.id);
     const relative = 'database/' + c.country + '/' + c.country + '_' + c.type + '.json';
-    for (const prefix of ['', 'docs/']) assert(!wikiUnits(read(prefix + relative)).has(c.id));
+    for (const prefix of ['', 'docs/']) assert.equal(wikiUnits(read(prefix + relative)).has(c.id), imported);
     assert(!catalog.vehicles[c.id]);
-    assert(!roster.trees[c.country + '/' + c.type].units[c.id]);
+    assert.equal(!!roster.trees[c.country + '/' + c.type].units[c.id], imported);
     assert(!corrections[c.id]);
     assert(!released.includes(c.id));
   }

@@ -157,7 +157,7 @@ async function main() {
             return {trees:report.length, units:report.reduce((a,b)=>a+b,0), selected, dependent, gateComplete, rankRailClean, initialLabels};
           })()`);
           assert.equal(smoke.trees, 50);
-          assert.equal(smoke.units, 3235);
+          assert.equal(smoke.units, 3238);
           assert.deepEqual(smoke.selected, {rp:'2,900',sl:'700'});
           assert.deepEqual(smoke.dependent, smoke.selected);
           assert.equal(smoke.gateComplete, true, 'Restore rank unlock count and completed gate');

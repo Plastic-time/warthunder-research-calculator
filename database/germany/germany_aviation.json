@@ -3700,6 +3700,46 @@
           "rp": null,
           "sp": null
         }
+      ],
+      [
+        {
+          "type": "single",
+          "title": "◆Bf 109 E-3",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/bf-109e-3_tl.png",
+          "br": "2.3",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "bf-109e-3_tl",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "II",
+          "research_country": "Germany",
+          "main_role": "Fighter",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "game_source": {
+            "version": "2.59.0.86",
+            "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+            "battle_ratings": {
+              "AB": "2.7",
+              "RB": "2.3",
+              "SB": "2.7"
+            },
+            "official_url": "https://warthunder.com/en/news/10275-esports-watch-the-2026-grand-finals-and-earn-tricolor-smoke-more-twitch-drops-en",
+            "acquisition": {
+              "type": "twitch-drops",
+              "availableFrom": "2026-10-23T14:50:00Z",
+              "url": "https://warthunder.com/en/news/10275-esports-watch-the-2026-grand-finals-and-earn-tricolor-smoke-more-twitch-drops-en"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research",
+            "modification_status": "pending-game-layout-and-cost-validation",
+            "provenance": "config/game-roster-additions.json"
+          }
+        }
       ]
     ],
     "selected": [],

@@ -1,0 +1,267 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-24T21:43:51.919Z",
+  "version": "2.59.0.86",
+  "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+  "scope": "three officially released reward vehicles; no full snapshot upgrade or modification import",
+  "sources": [
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/wpcost.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 32143254,
+      "sha256": "3797cb6f78c59dbfa173418c549417f77e5db7823123b91a0a27ac50f44e72d5"
+    },
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/shop.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/shop.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 378143,
+      "sha256": "da153eea5b3147468a0e51a21fcb67140f2d21c8fcd7c396e5ad16e3c382c6e6"
+    },
+    {
+      "file": "lang.vromfs.bin_u/lang/units.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/lang.vromfs.bin_u/lang/units.csv",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 5963607,
+      "sha256": "071b97aa1dc662609fe1af51a9b384f034d477f56dc79e283838b957ac7970f1"
+    },
+    {
+      "file": "gui.vromfs.bin_u/globals/ranks_common_shared.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/gui.vromfs.bin_u/globals/ranks_common_shared.nut",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 25515,
+      "sha256": "f4ba585b2260289bb7eb4b9e8d62b9357b6c1d6e36e7a4b44a67c21660008c9e"
+    }
+  ],
+  "coverage": {
+    "policy": "Pinned requested language, then pinned English, then existing same-language label, existing English, or ID. Equal-to-English source text is not counted as a missing translation. Existing labels are not asserted to be pinned game translations.",
+    "languages": {
+      "zh": {
+        "source": 3,
+        "englishFallback": 0,
+        "existingFallback": 0,
+        "idFallback": 0,
+        "sameAsEnglish": 3
+      },
+      "en": {
+        "source": 3,
+        "englishFallback": 0,
+        "existingFallback": 0,
+        "idFallback": 0,
+        "sameAsEnglish": 0
+      },
+      "ru": {
+        "source": 3,
+        "englishFallback": 0,
+        "existingFallback": 0,
+        "idFallback": 0,
+        "sameAsEnglish": 3
+      },
+      "de": {
+        "source": 3,
+        "englishFallback": 0,
+        "existingFallback": 0,
+        "idFallback": 0,
+        "sameAsEnglish": 3
+      },
+      "fr": {
+        "source": 3,
+        "englishFallback": 0,
+        "existingFallback": 0,
+        "idFallback": 0,
+        "sameAsEnglish": 3
+      },
+      "ja": {
+        "source": 3,
+        "englishFallback": 0,
+        "existingFallback": 0,
+        "idFallback": 0,
+        "sameAsEnglish": 3
+      },
+      "es": {
+        "source": 3,
+        "englishFallback": 0,
+        "existingFallback": 0,
+        "idFallback": 0,
+        "sameAsEnglish": 3
+      }
+    },
+    "missingKeys": [],
+    "fallbacks": {}
+  },
+  "units": [
+    {
+      "id": "bf-109e-3_tl",
+      "country": "germany",
+      "type": "aviation",
+      "names": {
+        "zh": "◆Bf 109 E-3",
+        "en": "◆Bf 109 E-3",
+        "ru": "◆Bf 109 E-3",
+        "de": "◆Bf 109 E-3",
+        "fr": "◆Bf 109 E-3",
+        "ja": "◆Bf 109 E-3",
+        "es": "◆Bf 109 E-3"
+      },
+      "nameKey": "bf-109e-3_tl_shop",
+      "gameFields": {
+        "rank": 2,
+        "country": "country_germany",
+        "unitClass": "exp_fighter",
+        "unitMoveType": "air",
+        "economicRankArcade": 5,
+        "economicRankHistorical": 4,
+        "economicRankSimulation": 5,
+        "reqExp": 9200,
+        "value": 16000,
+        "gift": "msi_notebook",
+        "showOnlyWhenBought": true
+      },
+      "shop": {
+        "id": "bf-109e-3_tl",
+        "rank": 2,
+        "showOnlyWhenBought": true,
+        "gift": "msi_notebook"
+      },
+      "acquisition": {
+        "type": "twitch-drops",
+        "availableFrom": "2026-10-23T14:50:00Z",
+        "url": "https://warthunder.com/en/news/10275-esports-watch-the-2026-grand-finals-and-earn-tricolor-smoke-more-twitch-drops-en"
+      },
+      "premium": false,
+      "image": {
+        "id": "bf-109e-3_tl",
+        "url": "https://static.encyclopedia.warthunder.com/slots/bf-109e-3_tl.png",
+        "status": 200,
+        "contentType": "image/png",
+        "bytes": 8996,
+        "pngSignature": true,
+        "sha256": "e70f6f2f4576ac7663d1d8f368b3001d8b4466c25b131813cc2600347f4024ca",
+        "checkedAt": "2026-10-24T21:26:58.274Z"
+      },
+      "modificationStatus": "pending-game-layout-and-cost-validation"
+    },
+    {
+      "id": "germ_panzerjager_panther_g2",
+      "country": "germany",
+      "type": "ground",
+      "names": {
+        "zh": "Jagdpanther G2",
+        "en": "Jagdpanther G2",
+        "ru": "Jagdpanther G2",
+        "de": "Jagdpanther G2",
+        "fr": "Jagdpanther G2",
+        "ja": "Jagdpanther G2",
+        "es": "Jagdpanther G2"
+      },
+      "nameKey": "germ_panzerjager_panther_g2_shop",
+      "gameFields": {
+        "rank": 4,
+        "country": "country_germany",
+        "unitClass": "exp_tank_destroyer",
+        "unitMoveType": "tank",
+        "economicRankArcade": 16,
+        "economicRankHistorical": 16,
+        "economicRankSimulation": 16,
+        "reqExp": 46000,
+        "value": 0,
+        "costGold": 2980,
+        "gift": "msi_notebook",
+        "event": "battlepass_season25",
+        "showOnlyWhenBought": true
+      },
+      "shop": {
+        "id": "germ_panzerjager_panther_g2",
+        "rank": 4,
+        "showOnlyWhenBought": true,
+        "gift": "msi_notebook"
+      },
+      "acquisition": {
+        "type": "battle-pass",
+        "availableFrom": "2026-10-21T12:00:00Z",
+        "season": 25,
+        "rewardLevel": 75,
+        "freeReward": false,
+        "url": "https://forum.warthunder.com/t/topic/359427"
+      },
+      "premium": true,
+      "image": {
+        "id": "germ_panzerjager_panther_g2",
+        "url": "https://static.encyclopedia.warthunder.com/slots/germ_panzerjager_panther_g2.png",
+        "status": 200,
+        "contentType": "image/png",
+        "bytes": 7656,
+        "pngSignature": true,
+        "sha256": "6f804419791e00a0fec9fa232b68b27815f61595dffb84264947a9b173d7134d",
+        "checkedAt": "2026-10-24T21:26:58.898Z"
+      },
+      "modificationStatus": "pending-game-layout-and-cost-validation"
+    },
+    {
+      "id": "germ_s_700_s_706",
+      "country": "germany",
+      "type": "boats",
+      "names": {
+        "zh": "S-706",
+        "en": "S-706",
+        "ru": "S-706",
+        "de": "S-706",
+        "fr": "S-706",
+        "ja": "S-706",
+        "es": "S-706"
+      },
+      "nameKey": "germ_s_700_s_706_shop",
+      "gameFields": {
+        "rank": 3,
+        "country": "country_germany",
+        "unitClass": "exp_torpedo_boat",
+        "unitMoveType": "fast_ship",
+        "economicRankArcade": 5,
+        "economicRankHistorical": 5,
+        "economicRankSimulation": 5,
+        "reqExp": 26000,
+        "value": 0,
+        "costGold": 1450,
+        "gift": "msi_notebook",
+        "event": "battlepass_season25",
+        "showOnlyWhenBought": true
+      },
+      "shop": {
+        "id": "germ_s_700_s_706",
+        "rank": 3,
+        "showOnlyWhenBought": true,
+        "gift": "msi_notebook"
+      },
+      "acquisition": {
+        "type": "battle-pass",
+        "availableFrom": "2026-10-21T12:00:00Z",
+        "season": 25,
+        "rewardLevel": 51,
+        "freeReward": true,
+        "url": "https://forum.warthunder.com/t/topic/359427"
+      },
+      "premium": true,
+      "image": {
+        "id": "germ_s_700_s_706",
+        "url": "https://static.encyclopedia.warthunder.com/slots/germ_s_700_s_706.png",
+        "status": 200,
+        "contentType": "image/png",
+        "bytes": 10182,
+        "pngSignature": true,
+        "sha256": "4de949bd08ae1ac7a7ade7f986b82d5afc62126f5a546678ff275e759b87bd51",
+        "checkedAt": "2026-10-24T21:26:59.173Z"
+      },
+      "modificationStatus": "pending-game-layout-and-cost-validation"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "ussr_bt_7_m_816",
+      "reason": "reward-not-started",
+      "availableFrom": "2026-10-30T14:50:00Z"
+    }
+  ]
+}

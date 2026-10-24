@@ -4,8 +4,8 @@
   "verified_at": "2026-09-19T06:41:19.929Z",
   "battle_rating_mode": "RB",
   "tree_count": 50,
-  "unit_count": 3235,
-  "unique_units": 3235,
+  "unit_count": 3238,
+  "unique_units": 3238,
   "failures": [],
   "limitations": [
     "Wiki rank unlock counts are unavailable; the calculator retains the existing dict/unlock_quantity.js rules separately from this source snapshot.",
@@ -25,15 +25,18 @@
     },
     {
       "path": "database/germany/germany_ground.json",
-      "units": 178,
-      "sha256": "c45de915e95dc27dcf77e50109abb5f91ded8292c4036f5494e78fd0b810af5f",
+      "units": 179,
+      "sha256": "fb02e006638b5259ba920ff194f3dea89bf2aa442e2969cf477bf8eec79b590e",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "germ_hummel",
         "germ_schutzenpanzer_puma_vjtf_mod",
         "germ_embt"
       ],
-      "removed": []
+      "removed": [],
+      "game_added": [
+        "germ_panzerjager_panther_g2"
+      ]
     },
     {
       "path": "database/ussr/ussr_ground.json",
@@ -152,15 +155,18 @@
     },
     {
       "path": "database/germany/germany_aviation.json",
-      "units": 186,
-      "sha256": "1013b11a76c399f61823f5c14f0ee02852d90b32900820582c995396250b0f61",
+      "units": 187,
+      "sha256": "f5afe90d93bcb7dfdb6c2d672686af501f39dd0de455adead422c62a0dc78c5a",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "fw_189c_0",
         "ia_58a_pucara",
         "arado_234b_2_mt"
       ],
-      "removed": []
+      "removed": [],
+      "game_added": [
+        "bf-109e-3_tl"
+      ]
     },
     {
       "path": "database/ussr/ussr_aviation.json",
@@ -454,13 +460,16 @@
     },
     {
       "path": "database/germany/germany_boats.json",
-      "units": 38,
-      "sha256": "c05cf71b2807ee0ce411491a93debc8c5e9e41af86b1f20609205639d4e47476",
+      "units": 39,
+      "sha256": "c823c152eb21ea08fad9a3d3c6fc917262aa5476b5b7098ab20c31053dc4ae60",
       "tree_source_sha256": "0d0d322252922211a2167e630f6b1a2fd1bc6ed84cb045b6dd93d1990afbd9fe",
       "added": [
         "germ_rboot_r310"
       ],
-      "removed": []
+      "removed": [],
+      "game_added": [
+        "germ_s_700_s_706"
+      ]
     },
     {
       "path": "database/ussr/ussr_boats.json",
@@ -1796,5 +1805,16 @@
     "tree_pages": 5,
     "unit_samples": 163,
     "failures": 0
+  },
+  "game_additions": {
+    "version": "2.59.0.86",
+    "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+    "ids": [
+      "bf-109e-3_tl",
+      "germ_panzerjager_panther_g2",
+      "germ_s_700_s_706"
+    ],
+    "provenance": "config/game-roster-additions.json",
+    "fullSnapshotUpgrade": false
   }
 }

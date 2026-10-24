@@ -6,7 +6,7 @@
   const t = (source, params) => window.WTI18n.t(source, params);
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const labels = { squadron: '联队载具', 'premium-golden-eagles': '金鹰载具', 'premium-pack': '礼包载具',
-    'premium-special': '特殊载具', component: '组合载具部件', standard: '普通 / 非金币' };
+    'premium-special': '特殊载具', component: '组合载具部件', standard: '普通 / 非金币', event: '活动载具' };
   const descriptions = { 'premium-golden-eagles': 'Wiki 标有明确的金鹰价格', 'premium-pack': 'Wiki 购买入口指向 Gaijin Store',
     'premium-special': '没有金鹰价格或当前礼包购买入口' };
   const badge = (kind, text, title = '') => `<span class="pill roster-badge roster-${kind}" data-roster-label="${escape(text || '')}" data-roster-title="${escape(title)}" title="${escape(title ? t(title) : '')}">${escape(text ? t(text) : '')}</span>`;
@@ -76,7 +76,7 @@
       const item = report?.trees[`${country}/${type}`]?.units[String(unit.data_unit_id).toLowerCase()];
       if (!item) return badge('pending', '分类待核对');
       const description = item.acquisition?.provenance?.kind === 'official-announcement'
-        ? '官方公告已确认购买方式' : descriptions[item.category] || '仅作分类展示，不改变计算规则';
+        ? (item.gameSource ? '查看官方活动来源' : '官方公告已确认购买方式') : descriptions[item.category] || '仅作分类展示，不改变计算规则';
       return (item.category === 'squadron' ? '' : badge(item.category, labels[item.category], description)) +
         (item.hidden ? hiddenBadge(displayName || item.title || unit.data_unit_id, unit.data_unit_id) : '');
     },
@@ -101,7 +101,8 @@
         return;
       }
       const unmatched = Object.entries(tree.units).filter(([, unit]) => !unit.matched);
-      panel.innerHTML = `<summary>${escape(t('载具收录对照 · 已匹配 {matched}/{total} · 配置独有 {config} · Wiki 独有 {wiki}', { matched: tree.matched, total: tree.wikiCount, config: tree.candidates.length, wiki: unmatched.length }))}</summary>
+      const total = tree.wikiCount + (tree.gameOnlyCount || 0);
+      panel.innerHTML = `<summary>${escape(t('载具收录对照 · 已匹配 {matched}/{total} · 配置独有 {config} · Wiki 独有 {wiki}', { matched: tree.matched, total, config: tree.candidates.length, wiki: unmatched.length }))}</summary>
         <p>${escape(t('Datamine {version} · {commit} · 配置独有条目待核对，不代表可获取，不计入研发。', { version: report.version, commit: report.commit.slice(0, 7) }))}</p>
         <div class="roster-legend">${Object.entries(labels).map(([k,v]) => badge(k,v)).join('')}${hiddenBadge('')}</div>
         <ul class="roster-candidates">${tree.candidates.map(item => `<li><code>${escape(item.id)}</code><span>${escape(t('等级 {rank}', { rank: item.rank }))}</span>${badge('pending','待核对')}${item.isClanVehicle ? badge('squadron','联队载具') : ''}${item.showOnlyWhenBought ? hiddenBadge(item.id, item.id) : ''}</li>`).join('')}

@@ -1085,6 +1085,12 @@ function renderUnit(unit, inFolder = false) {
   const unlocked = isInitialUnlockedUnit(unit);
   const cardRp = state.owned.has(id) ? unit.rp : remainingUnitRp(unit);
 
+  const officialUrl = unit.game_source?.official_url;
+  const officialSource = typeof officialUrl === "string" && /^https:\/\/(?:warthunder\.com|forum\.warthunder\.com)\//.test(officialUrl);
+  const sourceLabel = tr("查看官方活动来源");
+  const detailAction = officialSource
+    ? `<a class="unit-wiki-launch" data-game-source href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(sourceLabel)}" title="${escapeHtml(sourceLabel)}"><span class="wiki-bookmark"><img src="${escapeHtml(localAsset('assets/wiki/book-open.svg'))}" alt=""></span></a>`
+    : `<button class="unit-wiki-launch" type="button" data-wiki-id="${escapeHtml(id)}" data-wiki-title="${escapeHtml(displayTitle(unit))}" aria-label="${escapeHtml(tr("查看 {name} Wiki 详情", { name: displayTitle(unit) }))}" title="${tr("Wiki 载具详情")}"><span class="wiki-bookmark"><img src="${escapeHtml(localAsset('assets/wiki/book-open.svg'))}" alt=""></span></button>`;
   const modificationButton = window.ModificationWorkbench?.hasVehicle(id)
     ? `<button class="unit-modifications-launch" type="button" data-modifications-id="${escapeHtml(id)}" aria-label="${escapeHtml(tr("打开 {name} 配件研发", { name: displayTitle(unit) }))}" title="${tr("配件研发")}"><span aria-hidden="true">⚙</span><b>${tr("配件")}</b></button>`
     : "";
@@ -1098,7 +1104,7 @@ function renderUnit(unit, inFolder = false) {
         <span class="unit-meta">
           <span class="pill" data-unit-br>BR ${escapeHtml(unit.br || "-")}</span>
           ${role ? `<span class="pill role">${escapeHtml(role)}</span>` : ""}
-          ${squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${formatCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${formatCost(unit.sp)}</span></span>`}
+          ${unit.game_source?.cost_policy === "reward-excluded-from-ordinary-research" ? `<span class="pill">${tr(unit.game_source.acquisition.type === "battle-pass" ? "战斗通行证奖励" : "Twitch 掉宝奖励")}</span>` : squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${formatCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${formatCost(unit.sp)}</span></span>`}
           ${window.RosterAudit?.badges(state.country, state.type, unit, displayTitle(unit)) || ""}
           ${unitProgress(unit) && !state.owned.has(id) ? `<span class="pill unit-rp-progress" title="${tr("总计 {count} RP", { count: formatCost(unit.rp) })}">${tr("剩余 {count} RP", { count: formatNumber(remainingUnitRp(unit)) })}</span>` : ""}
           ${unlocked ? `<span class="pill unlocked">${tr("初始载具")}</span>` : ""}
@@ -1111,7 +1117,7 @@ function renderUnit(unit, inFolder = false) {
         </span>
       </span>
       ${isNew ? '<span class="unit-update-edge" aria-hidden="true"></span>' : ""}
-    </button><div class="unit-actions">${modificationButton}<button class="unit-wiki-launch" type="button" data-wiki-id="${escapeHtml(id)}" data-wiki-title="${escapeHtml(displayTitle(unit))}" aria-label="${escapeHtml(tr("查看 {name} Wiki 详情", { name: displayTitle(unit) }))}" title="${tr("Wiki 载具详情")}"><span class="wiki-bookmark"><img src="${escapeHtml(localAsset('assets/wiki/book-open.svg'))}" alt=""></span></button></div>
+    </button><div class="unit-actions">${modificationButton}${detailAction}</div>
     </div>
   `;
 }

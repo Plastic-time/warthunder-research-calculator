@@ -5263,6 +5263,49 @@
             "sha256": "15ac9597df433823c04536e43b4d31cd846d1bd74bbc851209a6cff2eb369783"
           }
         }
+      ],
+      [
+        {
+          "type": "single",
+          "title": "Jagdpanther G2",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_panzerjager_panther_g2.png",
+          "br": "6.3",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "germ_panzerjager_panther_g2",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "IV",
+          "research_country": "Germany",
+          "main_role": "Tank destroyer",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "game_source": {
+            "version": "2.59.0.86",
+            "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+            "battle_ratings": {
+              "AB": "6.3",
+              "RB": "6.3",
+              "SB": "6.3"
+            },
+            "official_url": "https://forum.warthunder.com/t/topic/359427",
+            "acquisition": {
+              "type": "battle-pass",
+              "availableFrom": "2026-10-21T12:00:00Z",
+              "season": 25,
+              "rewardLevel": 75,
+              "freeReward": false,
+              "url": "https://forum.warthunder.com/t/topic/359427"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research",
+            "modification_status": "pending-game-layout-and-cost-validation",
+            "provenance": "config/game-roster-additions.json"
+          }
+        }
       ]
     ],
     "selected": [],

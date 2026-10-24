@@ -41,7 +41,7 @@ assert.equal(docs.names.beaufighter_group.en, 'Beaufighter');
 assert.equal(docs.names.j_7d.zh, '歼-7D');
 assert.equal(docs.names.su_30mkk.zh, '␗苏-30MKK');
 assert(docs.translated > 2000);
-assert.equal(docs.count, 3633);
+assert.equal(docs.count, 3636);
 assert.equal(docs.sourceSha256, 'dcb65aaa40cbf3279b2e77140300b5750858fa3db6b5e6a77fedef882e146788');
 
 const modifications = read('docs/modification-names.json');
@@ -70,7 +70,7 @@ for (const [kind, payload] of [['vehicle', docs], ['modification', modifications
   for (const language of languages) {
     const coverage = payload.coverage.languages[language];
     assert.equal(coverage.source + coverage.englishFallback + coverage.existingFallback + coverage.idFallback, payload.count);
-    assert.equal(coverage.source, kind === 'vehicle' ? 3633 : 1320);
+    assert.equal(coverage.source, kind === 'vehicle' ? 3636 : 1320);
     assert.equal(coverage.englishFallback, 0);
     assert.equal(coverage.existingFallback, kind === 'vehicle' ? 0 : 507);
     assert.equal(coverage.idFallback, kind === 'vehicle' ? 0 : 84);

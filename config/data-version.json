@@ -4,7 +4,7 @@
   "scope": "vehicle-research-and-purchase-costs",
   "gameDataCommit": "510a793c2bdb01c51475118199c7b66b72935ff1",
   "treeCount": 50,
-  "vehicleCount": 3235,
+  "vehicleCount": 3238,
   "directCostPairCount": 2212,
   "wikiUnpricedVehicleCount": 156,
   "modificationsSnapshotChanged": false,
@@ -47,5 +47,16 @@
       "fullSnapshotUpgrade": false,
       "provenance": "doc/release-v1.0.11.md"
     }
-  ]
+  ],
+  "rosterAddition": {
+    "version": "2.59.0.86",
+    "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+    "ids": [
+      "bf-109e-3_tl",
+      "germ_panzerjager_panther_g2",
+      "germ_s_700_s_706"
+    ],
+    "provenance": "config/game-roster-additions.json",
+    "fullSnapshotUpgrade": false
+  }
 }
