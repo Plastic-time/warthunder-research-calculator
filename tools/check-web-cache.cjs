@@ -66,16 +66,18 @@ async function main() {
         const url = `http://127.0.0.1:${server.address().port}/${mode === 'pages' ? 'pages/' : ''}`;
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         await choose(page);
-        await page.evaluate(() => {
+        await page.evaluate(async () => {
           toggleUnitMode('meteor_nfmk13', 'target');
           toggleUnitMode('spitfire_mk9c_iaf', 'owned');
           state.progressRp.meteor_nfmk13 = 1234; saveState();
+          await PlanStorage.settled();
         });
         const snapshot = () => page.evaluate(() => ({ targets: [...state.planned], owned: [...state.owned], progress: state.progressRp }));
         const saved = await snapshot();
         await page.evaluate(() => ModificationWorkbench.open('f_86em_greece'));
         await page.waitForSelector('[data-mod-id="us_aim_9b"]');
         await page.locator('[data-mod-id="us_aim_9b"]').click();
+        await page.evaluate(() => PlanStorage.settled());
         const modKey = 'wt-research:modifications:f_86em_greece';
         const savedMods = await page.evaluate(key => localStorage.getItem(key), modKey);
         await page.evaluate(() => document.getElementById('modificationDialog').close());
