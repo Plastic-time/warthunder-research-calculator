@@ -142,7 +142,7 @@
         "sha256": "e70f6f2f4576ac7663d1d8f368b3001d8b4466c25b131813cc2600347f4024ca",
         "checkedAt": "2026-10-24T21:26:58.274Z"
       },
-      "modificationStatus": "pending-game-layout-and-cost-validation"
+      "modificationStatus": "verified-game-data"
     },
     {
       "id": "germ_panzerjager_panther_g2",
@@ -198,7 +198,7 @@
         "sha256": "6f804419791e00a0fec9fa232b68b27815f61595dffb84264947a9b173d7134d",
         "checkedAt": "2026-10-24T21:26:58.898Z"
       },
-      "modificationStatus": "pending-game-layout-and-cost-validation"
+      "modificationStatus": "verified-game-data"
     },
     {
       "id": "germ_s_700_s_706",
@@ -254,7 +254,7 @@
         "sha256": "4de949bd08ae1ac7a7ade7f986b82d5afc62126f5a546678ff275e759b87bd51",
         "checkedAt": "2026-10-24T21:26:59.173Z"
       },
-      "modificationStatus": "pending-game-layout-and-cost-validation"
+      "modificationStatus": "verified-game-data"
     }
   ],
   "deferred": [

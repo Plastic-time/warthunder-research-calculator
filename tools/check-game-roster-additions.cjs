@@ -6,6 +6,8 @@ const express = require('express');
 const { chromium } = require('playwright');
 const { launchOptions } = require('./browser-test-runtime.cjs');
 const additions = require('../config/game-roster-additions.json');
+const { build } = require('./event-modifications.cjs');
+const modifications = require('./fixtures/event-modifications-20261024.json');
 
 async function main() {
   const root = path.resolve(__dirname, '..'), output = path.join(root, 'logs/game-roster-browser');
@@ -40,7 +42,8 @@ async function main() {
           }, c.id);
           const shell = card.locator('..');
           assert.equal(await shell.locator('[data-wiki-id]').count(), 0);
-          assert.equal(await shell.locator('[data-modifications-id]').count(), 0);
+          await page.waitForFunction(id => document.querySelector('[data-modifications-id="' + id + '"]'), c.id);
+          assert.equal(await shell.locator('[data-modifications-id]').count(), 1);
           const source = shell.locator('[data-game-source]');
           assert.equal(await source.getAttribute('href'), c.acquisition.url);
           assert.equal(await source.getAttribute('rel'), 'noopener noreferrer');
@@ -71,7 +74,49 @@ async function main() {
           }
           await page.evaluate(() => setLanguage('zh'));
           await shell.screenshot({ path: path.join(output, mode + '-' + width + '-' + c.id + '.png') });
-          reports.push({mode, width, id:c.id, languages:7, realImage:true, officialSource:true, excludedCosts:true});
+          const expected = build(modifications.units.find(u => u.id === c.id));
+          await shell.locator('[data-modifications-id]').click();
+          const dialog = page.locator('#modificationDialog');
+          await page.waitForFunction(count => document.querySelectorAll('#modificationTree [data-mod-id]').length === count, expected.m.length);
+          await page.waitForFunction(() => [...document.querySelectorAll('#modificationDialog img')].every(i => i.complete && i.naturalWidth > 0));
+          assert.equal(await dialog.locator('[data-mod-id]').count(), expected.m.length);
+          for (const language of ['zh','en','ru','de','fr','ja','es']) {
+            await page.evaluate(language => setLanguage(language), language);
+            const labels = await dialog.locator('[data-mod-id]').evaluateAll(tiles => tiles.map(tile => ({
+              id:tile.dataset.modId, name:tile.querySelector('b').textContent,
+              fits:tile.querySelector('b').scrollWidth <= tile.querySelector('b').clientWidth + 1
+                && tile.querySelector('.modification-tile-copy').getBoundingClientRect().bottom <= tile.getBoundingClientRect().bottom + 1,
+            })));
+            for (const label of labels) {
+              assert.equal(label.name, expected.l[label.id][language]);
+              assert(label.fits, c.id + '/' + language + '/' + label.id + ': modification label overflows');
+            }
+          }
+          await page.evaluate(() => setLanguage('zh'));
+          const action = name => dialog.locator('[data-modification-action="' + name + '"]');
+          if (c.premium) {
+            assert.equal(await dialog.locator('[data-mod-id]:disabled').count(), expected.m.length);
+            assert.equal(await page.locator('#modificationStatus').innerText(), '全部配件已解锁');
+            for (const name of ['clear','all','calculate']) {
+              await action(name).click();
+              assert.equal(await page.locator('#modificationRp').innerText(),'0');
+              assert.equal(await page.locator('#modificationSl').innerText(),'0');
+            }
+            assert.equal(await dialog.locator('[data-mod-id]:disabled').count(), expected.m.length);
+          } else {
+            await action('all').click();
+            assert.equal(await page.locator('#modificationRp').innerText(),'8,410');
+            assert.equal(await page.locator('#modificationSl').innerText(),'9,490');
+            await action('clear').click();
+            await dialog.locator('[data-mod-id="Bf-109F-4_SC500"]').click();
+            await action('calculate').click();
+            for (const id of ['Bf-109E-3_SC250','Bf-109E-3_4xSC50'])
+              assert.match(await dialog.locator('[data-mod-id="' + id + '"]').getAttribute('class'), /dependency/);
+          }
+          assert.equal(await page.evaluate(id => state.initialUnlocked.has(id) || state.owned.has(id), c.id), false);
+          await dialog.screenshot({path:path.join(output, mode + '-' + width + '-' + c.id + '-modifications.png')});
+          await dialog.locator('[data-modification-close]').click();
+          reports.push({mode, width, id:c.id, languages:7, realImage:true, officialSource:true, excludedCosts:true, modifications:expected.m.length, modLanguages:7});
         }
         assert.deepEqual(errors, []);
       } finally { await context.close(); }

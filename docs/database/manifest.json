@@ -26,7 +26,7 @@
     {
       "path": "database/germany/germany_ground.json",
       "units": 179,
-      "sha256": "fb02e006638b5259ba920ff194f3dea89bf2aa442e2969cf477bf8eec79b590e",
+      "sha256": "2ca06d0357e4f4ef20f012f974dc4971beca61d8c903e531529967f74f506855",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "germ_hummel",
@@ -156,7 +156,7 @@
     {
       "path": "database/germany/germany_aviation.json",
       "units": 187,
-      "sha256": "f5afe90d93bcb7dfdb6c2d672686af501f39dd0de455adead422c62a0dc78c5a",
+      "sha256": "116a34b41abb50588c2dd708dc31dc3e1c8692dda519864243807c5502380560",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "fw_189c_0",
@@ -461,7 +461,7 @@
     {
       "path": "database/germany/germany_boats.json",
       "units": 39,
-      "sha256": "c823c152eb21ea08fad9a3d3c6fc917262aa5476b5b7098ab20c31053dc4ae60",
+      "sha256": "aad179d88289bed7d7bd103593789eb91237072af644c9111e024e6ce52044c9",
       "tree_source_sha256": "0d0d322252922211a2167e630f6b1a2fd1bc6ed84cb045b6dd93d1990afbd9fe",
       "added": [
         "germ_rboot_r310"

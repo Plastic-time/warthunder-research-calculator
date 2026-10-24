@@ -5302,7 +5302,7 @@
               "url": "https://forum.warthunder.com/t/topic/359427"
             },
             "cost_policy": "reward-excluded-from-ordinary-research",
-            "modification_status": "pending-game-layout-and-cost-validation",
+            "modification_status": "verified-game-data",
             "provenance": "config/game-roster-additions.json"
           }
         }

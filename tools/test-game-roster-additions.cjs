@@ -34,7 +34,8 @@ test('game-only additions use pinned evidence and explicit reward availability, 
     assert.deepEqual(read('docs/vehicle-names.json').names[c.id], c.names);
     assert.equal(read('docs/vehicle-names.json').keys[c.id], c.nameKey);
     assert.deepEqual(Object.keys(c.names).sort(), ['de','en','es','fr','ja','ru','zh']);
-    assert(!read('docs/database/modifications/catalog.json').vehicles[c.id]);
+    assert.equal(c.modificationStatus, 'verified-game-data');
+    assert.equal(read('docs/database/modifications/catalog.json').vehicles[c.id], 'germany_' + c.type);
     const raw = fs.readFileSync(path.join(root, 'docs', file));
     const manifestEntry = read('docs/database/manifest.json').files.find(e => e.path === file);
     assert.equal(manifestEntry.sha256, crypto.createHash('sha256').update(raw).digest('hex'));

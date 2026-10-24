@@ -3736,7 +3736,7 @@
               "url": "https://warthunder.com/en/news/10275-esports-watch-the-2026-grand-finals-and-earn-tricolor-smoke-more-twitch-drops-en"
             },
             "cost_policy": "reward-excluded-from-ordinary-research",
-            "modification_status": "pending-game-layout-and-cost-validation",
+            "modification_status": "verified-game-data",
             "provenance": "config/game-roster-additions.json"
           }
         }

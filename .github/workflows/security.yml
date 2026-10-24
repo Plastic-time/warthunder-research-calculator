@@ -35,6 +35,7 @@ jobs:
       - run: node tools/test-roster.cjs
       - run: node --test tools/test-roster-candidates.cjs
       - run: node --test tools/test-game-roster-additions.cjs
+      - run: node --test tools/test-event-modifications.cjs
       - run: node --test tools/test-research-progress.cjs
       - run: node --test tools/test-calculation-consistency.cjs
       - run: node --test tools/test-plan-backup.cjs

@@ -1,0 +1,1927 @@
+{
+  "schema": 1,
+  "version": "2.59.0.86",
+  "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+  "sources": [
+    {
+      "file": "char.vromfs.bin_u/config/modifications.blkx",
+      "filename": "modifications.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/modifications.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 884405,
+      "sha256": "c7f95b29272b14f209969e632996db129a184ae3206b12988bc6a53c271a790c"
+    },
+    {
+      "file": "lang.vromfs.bin_u/lang/units_modifications.csv",
+      "filename": "units_modifications.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/lang.vromfs.bin_u/lang/units_modifications.csv",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 3031657,
+      "sha256": "816d3a22baab14ddbe5fe74ef18802debadbeba89c398f1d5e324dd5db716373"
+    },
+    {
+      "file": "lang.vromfs.bin_u/lang/units_weaponry.csv",
+      "filename": "units_weaponry.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/lang.vromfs.bin_u/lang/units_weaponry.csv",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 3860542,
+      "sha256": "75ccd7a4b0b4d3b7bbb0b9d57e91afd4ee45f0465eb02765e2e6afa218b4b453"
+    },
+    {
+      "file": "gui.vromfs.bin_u/scripts/weaponry/modstree.nut",
+      "filename": "modstree.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/gui.vromfs.bin_u/scripts/weaponry/modstree.nut",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 18716,
+      "sha256": "2e718539f4f0e984e7435b8ebfb2f9dc92fda9d11bd13fd6c2cdee0b192cf330"
+    },
+    {
+      "file": "gui.vromfs.bin_u/scripts/unit/initunitweapons.nut",
+      "filename": "initunitweapons.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/gui.vromfs.bin_u/scripts/unit/initunitweapons.nut",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 9794,
+      "sha256": "3e012d6215f783a1d48e73cf4f434f49fad1a46312d682cc4f738fe203d0dca4"
+    },
+    {
+      "file": "gui.vromfs.bin_u/scripts/weaponry/modificationinfo.nut",
+      "filename": "modificationinfo.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/gui.vromfs.bin_u/scripts/weaponry/modificationinfo.nut",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 9351,
+      "sha256": "9b667ef3316c88182643cfec6cea49a6f7182f58c0ee67fbb115243bee03ee93"
+    },
+    {
+      "file": "gui.vromfs.bin_u/scripts/weaponry/bulletsinfo.nut",
+      "filename": "bulletsinfo.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/gui.vromfs.bin_u/scripts/weaponry/bulletsinfo.nut",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 54477,
+      "sha256": "c91931778dab0d23ddc8f8719e66ddfd9563dc633c6a1068c6fbee5f4a4398d4"
+    },
+    {
+      "file": "gui.vromfs.bin_u/scripts/unit/unit.nut",
+      "filename": "unit.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/gui.vromfs.bin_u/scripts/unit/unit.nut",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 21599,
+      "sha256": "be0c6a9cc46ce8e8574da30105cd42cf9405f04b9962040da9a072aa6a925d9f"
+    },
+    {
+      "file": "gui.vromfs.bin_u/scripts/unit/baseunittypes.nut",
+      "filename": "baseunittypes.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/gui.vromfs.bin_u/scripts/unit/baseunittypes.nut",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 8012,
+      "sha256": "d6e02f690ba0aa7f143c602a3d635f29bd9949071111fe7030c83e6868a90f47"
+    },
+    {
+      "file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/88mm_pak43_user_cannon.blkx",
+      "filename": "88mm_pak43_user_cannon.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/88mm_pak43_user_cannon.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 57879,
+      "sha256": "46591650221a3118e5a3bdf7b2c6995dd8dc34d02b035211e8f4177a4f0a8381"
+    },
+    {
+      "file": "aces.vromfs.bin_u/gamedata/weapons/navalmodels_weapons/30mm_38_mk103_1942_naval_user_cannon.blkx",
+      "filename": "30mm_38_mk103_1942_naval_user_cannon.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/aces.vromfs.bin_u/gamedata/weapons/navalmodels_weapons/30mm_38_mk103_1942_naval_user_cannon.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 174082,
+      "sha256": "1c5438fa35e8087d6c5d7f6b854a67abaa3dfb01877d401b8d26da67d3266e72"
+    },
+    {
+      "file": "aces.vromfs.bin_u/gamedata/weapons/navalmodels_weapons/20mm_65_c38_zwilling_naval_user_cannon.blkx",
+      "filename": "20mm_65_c38_zwilling_naval_user_cannon.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/aces.vromfs.bin_u/gamedata/weapons/navalmodels_weapons/20mm_65_c38_zwilling_naval_user_cannon.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 211250,
+      "sha256": "8d460f13c1df29ce67edaf1568fee1cfb3759a119500332b11bc0ab2e9be58b0"
+    },
+    {
+      "file": "aces.vromfs.bin_u/gamedata/flightmodels/bf-109e-3_tl.blkx",
+      "filename": "bf-109e-3_tl.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/aces.vromfs.bin_u/gamedata/flightmodels/bf-109e-3_tl.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 45904,
+      "sha256": "2ce23dd7980dcdf67eb0f226cff1b12d69b6f40083354e52380b62373dccaa52"
+    },
+    {
+      "file": "aces.vromfs.bin_u/gamedata/units/tankmodels/germ_panzerjager_panther_g2.blkx",
+      "filename": "germ_panzerjager_panther_g2.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/aces.vromfs.bin_u/gamedata/units/tankmodels/germ_panzerjager_panther_g2.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 95545,
+      "sha256": "ca28cfb1bb947ce6c7f55ac22d08abc708c8b84b21eb97b5e7b8144192904829"
+    },
+    {
+      "file": "aces.vromfs.bin_u/gamedata/units/ships/germ_s_700_s_706.blkx",
+      "filename": "germ_s_700_s_706.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/aces.vromfs.bin_u/gamedata/units/ships/germ_s_700_s_706.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 161829,
+      "sha256": "8edd06ac431889cd5274303adc7282c5c69b34cc37738d5ee1da513642f660f0"
+    },
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/wpcost.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 32143254,
+      "sha256": "3797cb6f78c59dbfa173418c549417f77e5db7823123b91a0a27ac50f44e72d5"
+    }
+  ],
+  "units": [
+    {
+      "id": "bf-109e-3_tl",
+      "type": "aviation",
+      "tierRequirements": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "categoryNames": {
+        "lth": [
+          "飞行性能",
+          "Flight performance"
+        ],
+        "armor": [
+          "生存能力",
+          "Survivability"
+        ],
+        "weapon": [
+          "武器配置",
+          "Weaponry"
+        ]
+      },
+      "entries": [
+        {
+          "id": "cd_98",
+          "cost": {
+            "tier": 3,
+            "reqExp": 530,
+            "value": 600,
+            "costGold": 0,
+            "openCostGold": 100
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "lth",
+            "image": "!#ui/gameuiskin#aerodinamic_wing.avif",
+            "prevModification": "CdMin_Fuse"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "nameKey": "modification/cd_98"
+        },
+        {
+          "id": "CdMin_Fuse",
+          "cost": {
+            "tier": 1,
+            "reqExp": 420,
+            "value": 470,
+            "costGold": 0,
+            "openCostGold": 80
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "lth",
+            "image": "!#ui/gameuiskin#aerodinamic_fuse.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Neuer Rumpf",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "nameKey": "modification/CdMin_Fuse"
+        },
+        {
+          "id": "new_cover",
+          "cost": {
+            "tier": 4,
+            "reqExp": 680,
+            "value": 770,
+            "costGold": 0,
+            "openCostGold": 130
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#armor_cover.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "nameKey": "modification/new_cover"
+        },
+        {
+          "id": "structure_str",
+          "cost": {
+            "tier": 2,
+            "reqExp": 630,
+            "value": 710,
+            "costGold": 0,
+            "openCostGold": 120
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#armor_frame.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "nameKey": "modification/structure_str"
+        },
+        {
+          "id": "hp_105",
+          "cost": {
+            "tier": 3,
+            "reqExp": 530,
+            "value": 600,
+            "costGold": 0,
+            "openCostGold": 100
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "lth",
+            "image": "!#ui/gameuiskin#new_engine.avif",
+            "prevModification": "new_compressor"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neuer Motor",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "nameKey": "modification/hp_105"
+        },
+        {
+          "id": "new_radiator",
+          "cost": {
+            "tier": 1,
+            "reqExp": 420,
+            "value": 470,
+            "costGold": 0,
+            "openCostGold": 80
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "lth",
+            "image": "!#ui/gameuiskin#radiator.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "散热器",
+            "en": "Radiator",
+            "ru": "Радиатор",
+            "de": "Neuer Kühler",
+            "fr": "Radiateur",
+            "ja": "ラジエーター",
+            "es": "Radiador"
+          },
+          "nameKey": "modification/new_radiator"
+        },
+        {
+          "id": "new_compressor",
+          "cost": {
+            "tier": 2,
+            "reqExp": 630,
+            "value": 710,
+            "costGold": 0,
+            "openCostGold": 120
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "lth",
+            "image": "!#ui/gameuiskin#compressor.avif",
+            "prevModification": "new_radiator"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "增压器",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "nameKey": "modification/new_compressor"
+        },
+        {
+          "id": "new_engine_injection",
+          "cost": {
+            "tier": 4,
+            "reqExp": 680,
+            "value": 770,
+            "costGold": 0,
+            "openCostGold": 130
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "lth",
+            "image": "!#ui/gameuiskin#metanol.avif",
+            "prevModification": "hp_105"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "喷油系统",
+            "en": "Engine injection",
+            "ru": "Впрыск",
+            "de": "Neuer Einspritzer",
+            "fr": "Injection moteur",
+            "ja": "インジェクター 交換",
+            "es": "Motor a inyección"
+          },
+          "nameKey": "modification/new_engine_injection"
+        },
+        {
+          "id": "mg_universal",
+          "cost": {
+            "tier": 0,
+            "value": 90,
+            "costGold": 0,
+            "reqModification": "mg_belt_pack"
+          },
+          "global": {
+            "group": "mg",
+            "reqModification": "mg_belt_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "mg_all_tracers",
+          "cost": {
+            "tier": 0,
+            "value": 90,
+            "costGold": 0,
+            "reqModification": "mg_belt_pack"
+          },
+          "global": {
+            "group": "mg",
+            "reqModification": "mg_belt_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "mg_stealth",
+          "cost": {
+            "tier": 0,
+            "value": 135,
+            "costGold": 0,
+            "reqModification": "mg_belt_pack"
+          },
+          "global": {
+            "group": "mg",
+            "reqModification": "mg_belt_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "mgff_universal",
+          "cost": {
+            "tier": 0,
+            "value": 11,
+            "costGold": 0,
+            "reqModification": "mgff_belt_pack"
+          },
+          "global": {
+            "group": "mgff",
+            "reqModification": "mgff_belt_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "mgff_air_targets",
+          "cost": {
+            "tier": 0,
+            "value": 11,
+            "costGold": 0,
+            "reqModification": "mgff_belt_pack"
+          },
+          "global": {
+            "group": "mgff",
+            "reqModification": "mgff_belt_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "mgff_all_tracers",
+          "cost": {
+            "tier": 0,
+            "value": 11,
+            "costGold": 0,
+            "reqModification": "mgff_belt_pack"
+          },
+          "global": {
+            "group": "mgff",
+            "reqModification": "mgff_belt_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "mgff_stealth",
+          "cost": {
+            "tier": 0,
+            "value": 17,
+            "costGold": 0,
+            "reqModification": "mgff_belt_pack"
+          },
+          "global": {
+            "group": "mgff",
+            "reqModification": "mgff_belt_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "mg_belt_pack",
+          "cost": {
+            "tier": 1,
+            "reqExp": 420,
+            "value": 470,
+            "costGold": 0,
+            "openCostGold": 80
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "weapon",
+            "caliber": 7.92,
+            "image": "!#ui/gameuiskin#ammo.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "7.92 毫米前射武器弹链",
+            "en": "Offensive 7.92 mm belts",
+            "ru": "Курсовые ленты 7.92 мм",
+            "de": "7.92-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 7.92 mm, armes offensives",
+            "ja": "7.92 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 7.92 mm"
+          },
+          "nameKey": "modification/_belt_pack"
+        },
+        {
+          "id": "mg17_new_gun",
+          "cost": {
+            "tier": 2,
+            "reqExp": 630,
+            "value": 710,
+            "costGold": 0,
+            "openCostGold": 120,
+            "reqModification": "mg_belt_pack"
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "weapon",
+            "caliber": 7.92,
+            "image": "!#ui/gameuiskin#weapon.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "7.92 毫米前射机枪翻新",
+            "en": "New 7.92 mm MGs",
+            "ru": "Новые 7.92-мм пулемёты",
+            "de": "Neue 7.92-mm-MGs",
+            "fr": "Nouvelles mitrailleuses de 7.92 mm",
+            "ja": "新しい 7.92 mm 機関銃",
+            "es": "Nuevas ametralladoras de 7.92 mm"
+          },
+          "nameKey": "modification/_new_gun"
+        },
+        {
+          "id": "mgff_belt_pack",
+          "cost": {
+            "tier": 3,
+            "reqExp": 530,
+            "value": 600,
+            "costGold": 0,
+            "openCostGold": 100
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "weapon",
+            "caliber": 20,
+            "image": "!#ui/gameuiskin#ammo.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "20 毫米前射武器弹链",
+            "en": "Offensive 20 mm belts",
+            "ru": "Курсовые ленты 20 мм",
+            "de": "20-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 20 mm, armes offensives",
+            "ja": "20 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 20 mm"
+          },
+          "nameKey": "modification/_belt_pack"
+        },
+        {
+          "id": "mgffm_new_gun",
+          "cost": {
+            "tier": 4,
+            "reqExp": 680,
+            "value": 770,
+            "costGold": 0,
+            "openCostGold": 130,
+            "reqModification": "mgff_belt_pack"
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "weapon",
+            "caliber": 20,
+            "image": "!#ui/gameuiskin#weapon.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "20 毫米前射机炮翻新",
+            "en": "New 20 mm cannons",
+            "ru": "Новые 20-мм пушки",
+            "de": "Neue 20-mm-Kanonen",
+            "fr": "Nouveaux canons de 20 mm",
+            "ja": "新しい 20 mm 機関砲",
+            "es": "Nuevos cañones de 20 mm"
+          },
+          "nameKey": "modification/_new_gun/cannon"
+        },
+        {
+          "id": "Bf-109E-3_4xSC50",
+          "cost": {
+            "tier": 1,
+            "reqExp": 420,
+            "value": 470,
+            "costGold": 0,
+            "openCostGold": 80
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_bomb.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "SC 50",
+            "en": "SC 50",
+            "ru": "SC 50",
+            "de": "SC 50",
+            "fr": "SC 50",
+            "ja": "ETC 50/VIIId",
+            "es": "SC 50"
+          },
+          "nameKey": "modification/Bf-109E-3_4xSC50"
+        },
+        {
+          "id": "Bf-109E-3_SC250",
+          "cost": {
+            "tier": 3,
+            "reqExp": 530,
+            "value": 600,
+            "costGold": 0,
+            "openCostGold": 100,
+            "reqModification": "Bf-109E-3_4xSC50"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_bomb.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "SC 250",
+            "en": "SC 250",
+            "ru": "SC 250",
+            "de": "SC 250",
+            "fr": "SC 250",
+            "ja": "ETC 500/IXb",
+            "es": "SC 250"
+          },
+          "nameKey": "modification/Bf-109E-3_SC250"
+        },
+        {
+          "id": "Bf-109F-4_SC500",
+          "cost": {
+            "tier": 4,
+            "reqExp": 680,
+            "value": 770,
+            "costGold": 0,
+            "openCostGold": 130,
+            "reqModification": "Bf-109E-3_SC250"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_bomb.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "SC 500",
+            "en": "SC 500",
+            "ru": "SC 500",
+            "de": "SC 500",
+            "fr": "SC 500",
+            "ja": "ETC 500/IXb II",
+            "es": "SC 500"
+          },
+          "nameKey": "modification/Bf-109F-4_SC500"
+        },
+        {
+          "id": "premExpMul",
+          "cost": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 640
+          },
+          "global": {
+            "costGold": true,
+            "image": "!#ui/gameuiskin#talisman.avif"
+          },
+          "bulletGroup": false
+        }
+      ]
+    },
+    {
+      "id": "germ_panzerjager_panther_g2",
+      "type": "ground",
+      "tierRequirements": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "categoryNames": {
+        "mobility": [
+          "机动改装",
+          "Mobility"
+        ],
+        "protection": [
+          "防御改装",
+          "Protection"
+        ],
+        "firepower": [
+          "武器改装",
+          "Firepower"
+        ]
+      },
+      "entries": [
+        {
+          "id": "tank_tool_kit",
+          "cost": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "protection",
+            "image": "!#ui/gameuiskin#tank_tool_kit.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "进阶维修套件",
+            "en": "Improved Parts",
+            "ru": "Улучшенные запчасти",
+            "de": "Verbesserte Ersatzteile",
+            "fr": "Pièces améliorées",
+            "ja": "改良された 部品",
+            "es": "Piezas Mejoradas"
+          },
+          "nameKey": "modification/tank_tool_kit"
+        },
+        {
+          "id": "manual_extinguisher",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "protection",
+            "image": "!#ui/gameuiskin#extinguisher.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "进阶灭火套件",
+            "en": "Improved FPE",
+            "ru": "Улучшенное ППО",
+            "de": "Verbessertes Löschzeug",
+            "fr": "FPE amélioré",
+            "ja": "改良された 消火器",
+            "es": "EPI Mejorado"
+          },
+          "nameKey": "modification/manual_extinguisher"
+        },
+        {
+          "id": "new_tank_tracks",
+          "cost": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "mobility",
+            "image": "!#ui/gameuiskin#new_tank_traks.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "履带",
+            "en": "Tracks",
+            "ru": "Гусеницы",
+            "de": "Gleisketten",
+            "fr": "Chenilles",
+            "ja": "履帯",
+            "es": "Orugas"
+          },
+          "nameKey": "modification/new_tank_tracks"
+        },
+        {
+          "id": "new_tank_suspension",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "mobility",
+            "image": "!#ui/gameuiskin#new_tank_suspension.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "悬挂系统",
+            "en": "Suspension",
+            "ru": "Подвеска",
+            "de": "Laufwerk",
+            "fr": "Suspension",
+            "ja": "サスペンション",
+            "es": "Suspensión"
+          },
+          "nameKey": "modification/new_tank_suspension"
+        },
+        {
+          "id": "new_tank_filter",
+          "cost": {
+            "tier": 3,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "mobility",
+            "image": "!#ui/gameuiskin#new_tank_filter.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "滤清器",
+            "en": "Filters",
+            "ru": "Фильтры",
+            "de": "Filter",
+            "fr": "Filtres",
+            "ja": "フィルター",
+            "es": "Filtros"
+          },
+          "nameKey": "modification/new_tank_filter"
+        },
+        {
+          "id": "new_tank_brakes",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "mobility",
+            "image": "!#ui/gameuiskin#new_tank_break.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "刹车装置",
+            "en": "Brake System",
+            "ru": "Тормозная система",
+            "de": "Bremsen",
+            "fr": "Freins",
+            "ja": "ブレーキ システム",
+            "es": "Sistema de frenos"
+          },
+          "nameKey": "modification/new_tank_brakes"
+        },
+        {
+          "id": "new_tank_transmission",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "mobility",
+            "image": "!#ui/gameuiskin#new_tank_transmission.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "传动装置",
+            "en": "Transmission",
+            "ru": "Трансмиссия",
+            "de": "Getriebe",
+            "fr": "Transmission",
+            "ja": "変速機",
+            "es": "Transmisión"
+          },
+          "nameKey": "modification/new_tank_transmission"
+        },
+        {
+          "id": "new_tank_engine",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "mobility",
+            "image": "!#ui/gameuiskin#new_tank_engine.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neuer Motor",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "nameKey": "modification/new_tank_engine"
+        },
+        {
+          "id": "camouflage_net",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "protection",
+            "image": "!#ui/gameuiskin#tank_camouflage.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "伪装网",
+            "en": "Camouflage net",
+            "ru": "Маскировочная сеть",
+            "de": "Tarnnetz",
+            "fr": "Filet de camouflage",
+            "ja": "カモフラージュネット",
+            "es": "Red de camuflaje"
+          },
+          "nameKey": "modification/camouflage_net"
+        },
+        {
+          "id": "new_tank_vertical_aiming",
+          "cost": {
+            "tier": 3,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#new_tank_vertical_aiming.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "高低机",
+            "en": "Elevation Mechanism",
+            "ru": "Подъёмный механизм",
+            "de": "Richtantrieb",
+            "fr": "Mécanisme d'élévation",
+            "ja": "昇降機構",
+            "es": "Mecanismo de elevación"
+          },
+          "nameKey": "modification/new_tank_vertical_aiming"
+        },
+        {
+          "id": "new_tank_horizontal_aiming",
+          "cost": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#new_tank_horizontal_aiming.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "方向机",
+            "en": "Horizontal Drive",
+            "ru": "Горизонтальный привод",
+            "de": "Drehkranz",
+            "fr": "Mécanisme de rotation",
+            "ja": "砲塔駆動機構",
+            "es": "Mecanismo Horizontal"
+          },
+          "nameKey": "modification/new_tank_horizontal_aiming"
+        },
+        {
+          "id": "tank_new_gun",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#tank_cannon.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "校准主炮",
+            "en": "Adjustment of Fire",
+            "ru": "Пристрелка орудия",
+            "de": "Einschießen",
+            "fr": "Réglage du tir",
+            "ja": "砲火調整",
+            "es": "Ajuste del disparo"
+          },
+          "nameKey": "modification/tank_new_gun"
+        },
+        {
+          "id": "tank_medical_kit",
+          "cost": {
+            "tier": 3,
+            "value": 0,
+            "costGold": 0,
+            "image": "!#ui/gameuiskin#tank_reinforcement_ger.avif"
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "protection",
+            "image": "!#ui/gameuiskin#tank_medkit.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "补充乘员",
+            "en": "Crew Replenishment",
+            "ru": "Пополнение экипажа",
+            "de": "Verstärkung",
+            "fr": "Équipage en renfort",
+            "ja": "救急 セット",
+            "es": "Reposición de la Tripulación"
+          },
+          "nameKey": "modification/tank_medical_kit"
+        },
+        {
+          "id": "tank_medical_kit_expendable",
+          "cost": {
+            "tier": 0,
+            "value": 400,
+            "costGold": 0,
+            "image": "!#ui/gameuiskin#tank_reinforcement_ger.avif",
+            "reqModification": "tank_medical_kit"
+          },
+          "global": {
+            "modClass": "expendable",
+            "image": "!#ui/gameuiskin#tank_medkit.avif",
+            "reqModification": "tank_medical_kit"
+          },
+          "bulletGroup": false
+        },
+        {
+          "id": "88mm_ger_kwk43_APCR",
+          "cost": {
+            "tier": 0,
+            "value": 105,
+            "costGold": 0,
+            "reqModification": "88mm_kwk_36_43_APCR_ammo_pack"
+          },
+          "global": {
+            "group": "88mm_APCR",
+            "image": "!#ui/gameuiskin#tank_ammo.avif",
+            "reqModification": "88mm_kwk_36_43_APCR_ammo_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "88mm_ger_kwk43_HEAT",
+          "cost": {
+            "tier": 0,
+            "value": 70,
+            "costGold": 0,
+            "reqModification": "88mm_kwk_36_43_HEAT_ammo_pack"
+          },
+          "global": {
+            "group": "88mm_HEAT",
+            "image": "!#ui/gameuiskin#tank_ammo.avif",
+            "reqModification": "88mm_kwk_36_43_HEAT_ammo_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "88mm_kwk_36_43_HEAT_ammo_pack",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": false,
+          "ammunition": {
+            "id": "88mm_ger_kwk43_HEAT",
+            "weapon": "88mm_pak43_user_cannon.blkx",
+            "key": "88mm_grhl39",
+            "bullets": [
+              {
+                "type": "heat_tank",
+                "caliber": 0.088,
+                "name": "88mm_grhl39"
+              }
+            ]
+          },
+          "names": {
+            "zh": "Gr. 39 Hl",
+            "en": "Hl.Gr 39",
+            "ru": "Hl.Gr 39",
+            "de": "Gr. 39 Hl",
+            "fr": "Hl.Gr 39",
+            "ja": "Hl.Gr 39",
+            "es": "Hl.Gr 39"
+          },
+          "nameKey": "88mm_grhl39"
+        },
+        {
+          "id": "88mm_kwk_36_43_APCR_ammo_pack",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": false,
+          "ammunition": {
+            "id": "88mm_ger_kwk43_APCR",
+            "weapon": "88mm_pak43_user_cannon.blkx",
+            "key": "88mm_pzrg_40_43",
+            "bullets": [
+              {
+                "type": "apcr_tank",
+                "caliber": 0.088,
+                "name": "88mm_pzrg_40_43"
+              }
+            ]
+          },
+          "names": {
+            "zh": "PzGr. 40/43",
+            "en": "PzGr 40/43",
+            "ru": "PzGr 40/43",
+            "de": "Pzgr. 40/43",
+            "fr": "PzGr 40/43",
+            "ja": "PzGr 40/43",
+            "es": "PzGr 40/43"
+          },
+          "nameKey": "88mm_pzrg_40_43"
+        },
+        {
+          "id": "88mm_ger_kwk43_default_HE",
+          "cost": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "group": "88mm_HE",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "tank_rangefinder",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#tank_rangefinder.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "测距仪",
+            "en": "Rangefinder",
+            "ru": "Дальномер",
+            "de": "Entfernungsmesser",
+            "fr": "Télémètre",
+            "ja": "距離測定器",
+            "es": "Telémetro"
+          },
+          "nameKey": "modification/tank_rangefinder"
+        },
+        {
+          "id": "tank_smoke_screen_system_mod",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "modClass": "firepower",
+            "group": "smoke_mod",
+            "image": "!#ui/gameuiskin#smoke_screen.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "烟雾弹",
+            "en": "Smoke grenade",
+            "ru": "Дымовая граната",
+            "de": "Nebeltöpfe",
+            "fr": "Grenade fumigène",
+            "ja": "発煙弾発射機",
+            "es": "Granada de humo"
+          },
+          "nameKey": "modification/tank_smoke_screen_system_mod"
+        },
+        {
+          "id": "premExpMul",
+          "cost": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "costGold": true,
+            "image": "!#ui/gameuiskin#talisman.avif"
+          },
+          "bulletGroup": false
+        },
+        {
+          "id": "allowPremDecals",
+          "cost": {
+            "tier": 0,
+            "reqExp": 110000,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "costGold": false,
+            "modClass": "premium",
+            "image": "!#ui/gameuiskin#new_slot_decal.avif"
+          },
+          "bulletGroup": false
+        }
+      ],
+      "premiumPolicy": {
+        "kind": "official-premium-pre-unlocked",
+        "announcement": "https://warthunder.com/en/news/10265-warbonds-event-battle-pass-season-25-steel-fury-and-its-warbond-shop-en",
+        "rule": "https://store.gaijin.net/story.php?title=Saab-JA-37DI-Viggen-F21-Pack",
+        "meaning": "Premium vehicles include all available modifications. Zero here is remaining research, not an invented missing reqExp value."
+      }
+    },
+    {
+      "id": "germ_s_700_s_706",
+      "type": "boats",
+      "tierRequirements": [
+        1,
+        3,
+        2,
+        2
+      ],
+      "categoryNames": {
+        "seakeeping": [
+          "适航性能",
+          "Seakeeping"
+        ],
+        "unsinkability": [
+          "抗沉能力",
+          "Unsinkability"
+        ],
+        "firepower": [
+          "武器改装",
+          "Firepower"
+        ]
+      },
+      "entries": [
+        {
+          "id": "ship_tool_kit",
+          "cost": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "unsinkability",
+            "image": "!#ui/gameuiskin#ship_damage_control_crew.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "损管部门",
+            "en": "Damage Control Division",
+            "ru": "Дивизион живучести",
+            "de": "Abteilung für Schadenskontrolle",
+            "fr": "Unité de contrôle des avaries",
+            "ja": "修理班",
+            "es": "División de Control de Daños"
+          },
+          "nameKey": "modification/ship_tool_kit"
+        },
+        {
+          "id": "manual_ship_extinguisher",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "unsinkability",
+            "image": "!#ui/gameuiskin#ship_fire_control_crew.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "消防部门",
+            "en": "Fire Division",
+            "ru": "Пожарный дивизион",
+            "de": "Abteilung für Brandschutz",
+            "fr": "Division incendie",
+            "ja": "消火班",
+            "es": "División de Incendios"
+          },
+          "nameKey": "modification/manual_ship_extinguisher"
+        },
+        {
+          "id": "new_ship_pumps",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "unsinkability",
+            "image": "!#ui/gameuiskin#new_ship_pumps.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "水泵",
+            "en": "New Pumps",
+            "ru": "Новые помпы",
+            "de": "Neue Pumpen",
+            "fr": "Pompes",
+            "ja": "新型 ポンプ",
+            "es": "Bombas Nuevas"
+          },
+          "nameKey": "modification/new_ship_pumps"
+        },
+        {
+          "id": "new_main_caliber_turrets",
+          "cost": {
+            "tier": 3,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "new_aux_caliber_turrets"
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#new_main_caliber_turrets.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "主炮火控系统",
+            "en": "Primary Armament Targeting",
+            "ru": "Приводы ГК",
+            "de": "Neuer Richtantrieb: Hauptgeschütz",
+            "fr": "Ciblage des armes principales",
+            "ja": "主砲照準装備",
+            "es": "Puntería del Armamento Primario"
+          },
+          "nameKey": "modification/new_main_caliber_turrets"
+        },
+        {
+          "id": "new_aux_caliber_turrets",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "new_aa_caliber_turrets"
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#new_aux_caliber_turrets.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "副炮火控系统",
+            "en": "Auxiliary Armament Targeting",
+            "ru": "Приводы ПМК",
+            "de": "Neuer Richtantrieb: Sekundärgeschütz",
+            "fr": "Ciblage des armes secondaires",
+            "ja": "副砲照準装備",
+            "es": "Puntería del Armamento Auxiliar"
+          },
+          "nameKey": "modification/new_aux_caliber_turrets"
+        },
+        {
+          "id": "new_ship_hull",
+          "cost": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "seakeeping",
+            "image": "!#ui/gameuiskin#new_ship_hull.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "干船坞维护",
+            "en": "Dry-Docking",
+            "ru": "Докование",
+            "de": "Eindocken",
+            "fr": "Cale-sèche",
+            "ja": "乾 ドック",
+            "es": "Carenado"
+          },
+          "nameKey": "modification/new_ship_hull"
+        },
+        {
+          "id": "new_ship_rudder",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "new_ship_hull"
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "seakeeping",
+            "image": "!#ui/gameuiskin#new_ship_rudder.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "更换船舵",
+            "en": "Rudder Replacement",
+            "ru": "Замена рулей",
+            "de": "Neues Ruder",
+            "fr": "Remplacement de la gouverne",
+            "ja": "舵交換",
+            "es": "Sustitución del Timón"
+          },
+          "nameKey": "modification/new_ship_rudder"
+        },
+        {
+          "id": "new_ship_screw",
+          "cost": {
+            "tier": 3,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "seakeeping",
+            "image": "!#ui/gameuiskin#new_ship_screw.avif",
+            "prevModification": "new_ship_hull"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "更换桨叶",
+            "en": "Propeller Replacement",
+            "ru": "Замена винтов",
+            "de": "Neue Schraube",
+            "fr": "Remplacement des hélices",
+            "ja": "スクリュー 交換",
+            "es": "Sustitución de la Hélice"
+          },
+          "nameKey": "modification/new_ship_screw"
+        },
+        {
+          "id": "new_ship_engine",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "new_ship_screw"
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "seakeeping",
+            "image": "!#ui/gameuiskin#new_ship_engine.avif",
+            "prevModification": "new_ship_rudder"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "轮机维护",
+            "en": "Engine Maintenance",
+            "ru": "Отладка машин",
+            "de": "Regelmäßige Wartung",
+            "fr": "Maintenance du navire",
+            "ja": "エンジン 点検",
+            "es": "Mantenimiento del Motor"
+          },
+          "nameKey": "modification/new_ship_engine"
+        },
+        {
+          "id": "ship_smoke_screen_system_mod",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "unsinkability",
+            "image": "!#ui/gameuiskin#engine_smoke_screen_system.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "烟雾系统",
+            "en": "Smokescreen",
+            "ru": "Дымовая завеса",
+            "de": "Nebel Generator",
+            "fr": "Écran de fumée",
+            "ja": "煙幕",
+            "es": "Cortina de Humo"
+          },
+          "nameKey": "modification/ship_smoke_screen_system_mod"
+        },
+        {
+          "id": "30mm_mk_103_38_universal",
+          "cost": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "caliber": 0.03
+          },
+          "global": {
+            "group": "30mm_HE",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "30mm_mk_103_38_AP_navy_ammo_pack",
+          "cost": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": false,
+          "ammunition": {
+            "id": "30mm_mk_103_38_AP_navy",
+            "weapon": "30mm_38_mk103_1942_naval_user_cannon.blkx",
+            "key": "30mm_mk_103_38_AP_navy/name",
+            "bullets": [
+              {
+                "type": "ap_i",
+                "caliber": 0.03
+              },
+              {
+                "type": "apcr_t",
+                "caliber": 0.03
+              },
+              {
+                "type": "ap_i",
+                "caliber": 0.03
+              },
+              {
+                "type": "he_i_t",
+                "caliber": 0.03
+              }
+            ]
+          },
+          "names": {
+            "zh": "API",
+            "en": "30 mm API",
+            "ru": "30-мм БЗ",
+            "de": "30 mm API",
+            "fr": "API de 30 mm",
+            "ja": "30mm API",
+            "es": "30 mm API"
+          },
+          "nameKey": "30mm_mk_103_38_AP_navy/name"
+        },
+        {
+          "id": "30mm_mk_103_38_AP_navy",
+          "cost": {
+            "tier": 0,
+            "value": 4,
+            "costGold": 0,
+            "reqModification": "30mm_mk_103_38_AP_navy_ammo_pack"
+          },
+          "global": {
+            "group": "30mm_AP",
+            "image": "!#ui/gameuiskin#tank_ammo.avif",
+            "reqModification": "30mm_mk_103_38_AP_navy_ammo_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "30mm_mk_103_38_APCR_navy_ammo_pack",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "30mm_mk_103_38_AP_navy_ammo_pack"
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": false,
+          "ammunition": {
+            "id": "30mm_mk_103_38_APCR_navy",
+            "weapon": "30mm_38_mk103_1942_naval_user_cannon.blkx",
+            "key": "30mm_mk_103_38_APCR_navy/name",
+            "bullets": [
+              {
+                "type": "he_i_t",
+                "caliber": 0.03
+              },
+              {
+                "type": "he_i_t",
+                "caliber": 0.03
+              },
+              {
+                "type": "he_i_t",
+                "caliber": 0.03
+              },
+              {
+                "type": "ap_i",
+                "caliber": 0.03
+              }
+            ]
+          },
+          "names": {
+            "zh": "HEI-T",
+            "en": "30 mm HEI-T",
+            "ru": "30-мм ОФЗТ",
+            "de": "30 mm HEI-T",
+            "fr": "HEI-T de 30 mm",
+            "ja": "30mm HEI-T",
+            "es": "30 mm HEI-T"
+          },
+          "nameKey": "30mm_mk_103_38_APCR_navy/name"
+        },
+        {
+          "id": "30mm_mk_103_38_APCR_navy",
+          "cost": {
+            "tier": 0,
+            "value": 4,
+            "costGold": 0,
+            "reqModification": "30mm_mk_103_38_APCR_navy_ammo_pack"
+          },
+          "global": {
+            "group": "30mm_APCR",
+            "image": "!#ui/gameuiskin#tank_ammo.avif",
+            "reqModification": "30mm_mk_103_38_APCR_navy_ammo_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "20mm_ger_c38_universal",
+          "cost": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "caliber": 0.02
+          },
+          "global": {
+            "group": "20mm_HE",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "20mm_ger_c38_navy_he",
+          "cost": {
+            "tier": 0,
+            "value": 14,
+            "costGold": 0,
+            "reqModification": "20mm_ger_c38_navy_he_ammo_pack"
+          },
+          "global": {
+            "group": "20mm_HE",
+            "image": "!#ui/gameuiskin#tank_ammo.avif",
+            "reqModification": "20mm_ger_c38_navy_he_ammo_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "20mm_ger_c38_navy_he_ammo_pack",
+          "cost": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": false,
+          "ammunition": {
+            "id": "20mm_ger_c38_navy_he",
+            "weapon": "20mm_65_c38_zwilling_naval_user_cannon.blkx",
+            "key": "20mm_ger_c38_navy_he/name",
+            "bullets": [
+              {
+                "type": "he_frag",
+                "caliber": 0.02
+              },
+              {
+                "type": "he_frag_t",
+                "caliber": 0.02
+              },
+              {
+                "type": "he_frag",
+                "caliber": 0.02
+              },
+              {
+                "type": "ap",
+                "caliber": 0.02
+              }
+            ]
+          },
+          "names": {
+            "zh": "HE-T",
+            "en": "20 mm HE-T",
+            "ru": "20-мм ОФТ",
+            "de": "20 mm HE-T",
+            "fr": "HE-T de 20 mm",
+            "ja": "20mm HE-T",
+            "es": "20 mm HE-T"
+          },
+          "nameKey": "20mm_ger_c38_navy_he/name"
+        },
+        {
+          "id": "20mm_ger_c38_navy_ap",
+          "cost": {
+            "tier": 0,
+            "value": 14,
+            "costGold": 0,
+            "reqModification": "20mm_ger_c38_navy_ap_ammo_pack"
+          },
+          "global": {
+            "group": "20mm_AP",
+            "image": "!#ui/gameuiskin#tank_ammo.avif",
+            "reqModification": "20mm_ger_c38_navy_ap_ammo_pack"
+          },
+          "bulletGroup": true
+        },
+        {
+          "id": "20mm_ger_c38_navy_ap_ammo_pack",
+          "cost": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "20mm_ger_c38_navy_he_ammo_pack"
+          },
+          "global": {
+            "tier": 2,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#tank_ammo.avif"
+          },
+          "bulletGroup": false,
+          "ammunition": {
+            "id": "20mm_ger_c38_navy_ap",
+            "weapon": "20mm_65_c38_zwilling_naval_user_cannon.blkx",
+            "key": "20mm_ger_c38_navy_ap/name",
+            "bullets": [
+              {
+                "type": "ap",
+                "caliber": 0.02
+              },
+              {
+                "type": "ap_t",
+                "caliber": 0.02
+              },
+              {
+                "type": "ap",
+                "caliber": 0.02
+              },
+              {
+                "type": "he_frag",
+                "caliber": 0.02
+              }
+            ]
+          },
+          "names": {
+            "zh": "AP-T",
+            "en": "20 mm AP-T",
+            "ru": "20-мм БТ",
+            "de": "20 mm AP-T",
+            "fr": "AP-T de 20 mm",
+            "ja": "20mm AP-T",
+            "es": "20 mm AP-T"
+          },
+          "nameKey": "20mm_ger_c38_navy_ap/name"
+        },
+        {
+          "id": "ship_torpedoes",
+          "cost": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 0,
+            "modClass": "firepower",
+            "isHidden": true
+          },
+          "bulletGroup": false
+        },
+        {
+          "id": "new_aa_caliber_turrets",
+          "cost": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "tier": 1,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#new_aa_caliber_turrets.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "防空火控系统",
+            "en": "Anti-Air Armament Targeting",
+            "ru": "Приводы ЗА",
+            "de": "Neuer Richtantrieb: Flugabwehr",
+            "fr": "Ciblage des armes anti-aériennes",
+            "ja": "対空砲照準装備",
+            "es": "Puntería del Armamento Antiaéreo"
+          },
+          "nameKey": "modification/new_aa_caliber_turrets"
+        },
+        {
+          "id": "ship_main_caliber_support",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "new_main_caliber_turrets"
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#ship_art_support.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "火炮支援",
+            "en": "Artillery Support",
+            "ru": "Артподдержка",
+            "de": "Artillerie",
+            "fr": "Soutien d'artillerie",
+            "ja": "艦砲射撃",
+            "es": "Apoyo de Artillería"
+          },
+          "nameKey": "modification/ship_main_caliber_support"
+        },
+        {
+          "id": "torpedoes_movement_mode",
+          "cost": {
+            "tier": 4,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "30mm_mk_103_38_APCR_navy_ammo_pack"
+          },
+          "global": {
+            "tier": 4,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#torpedo.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "鱼雷模式调节",
+            "en": "Torpedo Mode",
+            "ru": "Режим хода торпед",
+            "de": "Torpedomodus",
+            "fr": "Visée des torpilles",
+            "ja": "魚雷方式",
+            "es": "Modo Torpedo"
+          },
+          "nameKey": "modification/torpedoes_movement_mode"
+        },
+        {
+          "id": "ship_depth_charge",
+          "cost": {
+            "tier": 3,
+            "value": 0,
+            "costGold": 0,
+            "prevModification": "20mm_ger_c38_navy_ap_ammo_pack"
+          },
+          "global": {
+            "tier": 3,
+            "modClass": "firepower",
+            "image": "!#ui/gameuiskin#depth_charge.avif"
+          },
+          "bulletGroup": false,
+          "names": {
+            "zh": "深水炸弹",
+            "en": "Depth Charges",
+            "ru": "Глубинные бомбы",
+            "de": "Wasserbomben",
+            "fr": "Grenade anti-sous-marine",
+            "ja": "爆雷",
+            "es": "Cargas de Profundidad"
+          },
+          "nameKey": "modification/ship_depth_charge"
+        },
+        {
+          "id": "premExpMul",
+          "cost": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "costGold": true,
+            "image": "!#ui/gameuiskin#talisman.avif"
+          },
+          "bulletGroup": false
+        },
+        {
+          "id": "allowPremDecals",
+          "cost": {
+            "tier": 0,
+            "reqExp": 97000,
+            "value": 0,
+            "costGold": 0
+          },
+          "global": {
+            "costGold": false,
+            "modClass": "premium",
+            "image": "!#ui/gameuiskin#new_slot_decal.avif"
+          },
+          "bulletGroup": false
+        }
+      ],
+      "premiumPolicy": {
+        "kind": "official-premium-pre-unlocked",
+        "announcement": "https://warthunder.com/en/news/10265-warbonds-event-battle-pass-season-25-steel-fury-and-its-warbond-shop-en",
+        "rule": "https://store.gaijin.net/story.php?title=Saab-JA-37DI-Viggen-F21-Pack",
+        "meaning": "Premium vehicles include all available modifications. Zero here is remaining research, not an invented missing reqExp value."
+      }
+    }
+  ],
+  "baselines": {
+    "germany_aviation": "59b46aa3a9d656ccbe11e5fd7de8e3a2d7aacfad7a9cb15dbd1db13c793c3b4a",
+    "germany_ground": "91781bc1f14a1fa19597666a9c51b30c6806c9ae8f3d73175aabc86ef824bddc",
+    "germany_boats": "8eae49d4b89b4be3e71776b6602466ae07aa478f8d88111847b328a5bfb8fa17"
+  }
+}

@@ -102,7 +102,7 @@
       })),
       mods: raw.m.map(mod => ({
         id: mod[0], category: String(mod[1]), tier: mod[2], column: mod[3],
-        name: { zh: mod[4], en: mod[5] },
+        name: { zh: mod[4], en: mod[5] }, localizedNames: raw.l?.[mod[0]] || null,
         icon: mod[6].startsWith("http") ? mod[6] : `${iconPrefix}${mod[6]}`,
         artwork: mod[12] || null,
         rp: mod[7], sl: mod[8], ge: mod[9], requires: mod[10], order: mod[11],
@@ -308,8 +308,8 @@
       const names = localizedNames[mod.id] || {};
       const usable = value => typeof value === "string" && value.trim() && value !== mod.id ? value : "";
       const fallback = nameFallbacks[mod.id] || {};
-      const englishName = (fallback.en ? mod.name.en : usable(names.en)) || mod.name.en;
-      const name = (fallback[lang] ? mod.name[lang] || mod.name.en : usable(names[lang])) || mod.name[lang] || englishName;
+      const englishName = usable(mod.localizedNames?.en) || (fallback.en ? mod.name.en : usable(names.en)) || mod.name.en;
+      const name = usable(mod.localizedNames?.[lang]) || (fallback[lang] ? mod.name[lang] || mod.name.en : usable(names[lang])) || mod.name[lang] || englishName;
       const titleText = `${name} / ${englishName}\n${unlocked ? t("已解锁") : `${t("总计 {count} RP", { count: format(mod.rp) })} · ${format(mod.sl)} SL\n${t("剩余 {count} RP", { count: format(remainingRp) })}\n${t(ui.editProgress ? "研发进度" : "左键：目标 · 右键：已研发")}`}`;
       return `
         <button class="modification-tile ${stateName}${isPlanned ? " is-planned" : ""}${invested ? " has-progress" : ""}" type="button"

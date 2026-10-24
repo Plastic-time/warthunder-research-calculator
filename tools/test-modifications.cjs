@@ -37,7 +37,7 @@ const publicCatalogPath = path.join(publicRoot, "catalog.json");
 assert.deepEqual(fs.readFileSync(docsCatalogPath), fs.readFileSync(publicCatalogPath), "Catalog copies differ");
 const catalog = readJson(docsCatalogPath);
 assert.equal(catalog.schema, 2);
-assert.deepEqual(catalog.stats, { treeUnits: 3235, vehicles: 3225, modifications: 52424, chunks: 44 });
+assert.deepEqual(catalog.stats, { treeUnits: 3238, vehicles: 3228, modifications: 52474, chunks: 44 });
 assert.equal(Object.keys(catalog.vehicles).length, catalog.stats.vehicles);
 assert.equal(Object.keys(catalog.chunks).length, catalog.stats.chunks);
 

@@ -92,7 +92,7 @@ test('only separately verified game additions supersede the historical deferral;
     const imported = require('../config/game-roster-additions.json').units.some(entry => entry.id === c.id);
     const relative = 'database/' + c.country + '/' + c.country + '_' + c.type + '.json';
     for (const prefix of ['', 'docs/']) assert.equal(wikiUnits(read(prefix + relative)).has(c.id), imported);
-    assert(!catalog.vehicles[c.id]);
+    assert.equal(!!catalog.vehicles[c.id], imported);
     assert.equal(!!roster.trees[c.country + '/' + c.type].units[c.id], imported);
     assert(!corrections[c.id]);
     assert(!released.includes(c.id));

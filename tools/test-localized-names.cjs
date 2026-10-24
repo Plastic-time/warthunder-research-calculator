@@ -46,7 +46,7 @@ assert.equal(docs.sourceSha256, 'dcb65aaa40cbf3279b2e77140300b5750858fa3db6b5e6a
 
 const modifications = read('docs/modification-names.json');
 assert.equal(modifications.count, 1911);
-assert.equal(modifications.occurrences, 52424);
+assert.equal(modifications.occurrences, 52474);
 assert.equal(modifications.sourceSha256, '9a13db9b67bc5ab676fc3feb4ae4c27df069a479f4f8a4a0ebab6f5a427454ff');
 assert.equal(modifications.names['100_octan_spitfire'].ja, '100 \u30aa\u30af\u30bf\u30f3 \u71c3\u6599');
 assert.equal(modifications.names.bmg50_new_gun.en, 'New 12.7 mm MGs');

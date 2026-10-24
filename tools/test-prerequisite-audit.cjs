@@ -6,6 +6,8 @@ const { auditVehicle, projections, checkGraph, protectedIds } = require('./audit
 const proof = require('./fixtures/modification-prerequisite-audit.json');
 const catalog = require('../public/database/modifications/catalog.json');
 const planner = require('../public/modification-planner.js');
+const eventUnits = require('./fixtures/event-modifications-20261024.json').units;
+const { build: buildEvent } = require('./event-modifications.cjs');
 assert.equal(catalog.prerequisiteAudit.datamineCommit, proof.datamineCommit);
 assert.equal(catalog.prerequisiteAudit.verifiedMods, proof.verifiedMods);
 const root = path.resolve(__dirname, '..');
@@ -15,6 +17,11 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
   const chunk = JSON.parse(fs.readFileSync(path.join(root, 'public', meta.path)));
   // Compare the original audit against its snapshot, before the reviewed F4U-7 cost update.
   const audited = structuredClone(chunk);
+  for (const unit of eventUnits) {
+    if (!audited.v[unit.id]) continue;
+    assert.deepEqual(audited.v[unit.id], buildEvent(unit));
+    delete audited.v[unit.id];
+  }
   if (audited.v['f4u-7']) {
     const previous = require('./fixtures/f4u7-modifications.json').previous;
     const v = audited.v['f4u-7'];
@@ -66,8 +73,8 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
     }
   }
 }
-assert.equal(vehicleCount, proof.examinedVehicles);
-assert.equal(modCount, proof.examinedMods);
+assert.equal(vehicleCount, proof.examinedVehicles + eventUnits.length);
+assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0));
 for (const saved of proof.preserved) {
   const digest = crypto.createHash('sha256').update(JSON.stringify(vehicles.get(saved.id))).digest('hex');
   assert.equal(digest, saved.sha256, saved.id + ': user correction changed');

@@ -150,6 +150,6 @@ test('all shipped vehicles and recorded corrections survive empty/untrusted refr
     }
   }
   assert.equal(count, catalog.stats.vehicles);
-  assert.equal(count, 3225);
+  assert.equal(count, 3228);
   assert.equal(parsePresentation('<html>unavailable</html>', 'usa_aviation'), null);
 });
