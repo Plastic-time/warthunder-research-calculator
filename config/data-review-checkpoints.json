@@ -2,31 +2,31 @@
   "schema": 1,
   "scopes": {
     "vehicle-costs": {
-      "gameVersion": "2.59.0.73",
-      "gameDataCommit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "gameVersion": "2.59.0.86",
+      "gameDataCommit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
       "files": ["char.vromfs.bin_u/config/wpcost.blkx"],
-      "provenance": "doc/game-data-review-20261017.md",
+      "provenance": "doc/game-data-review-20261024.md",
       "limitations": "Existing ordinary vehicles with explicit RP/SL only; unknown and special-vehicle costs remain unverified."
     },
     "vehicle-prerequisites": {
-      "gameVersion": "2.59.0.73",
-      "gameDataCommit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "gameVersion": "2.59.0.86",
+      "gameDataCommit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
       "files": ["char.vromfs.bin_u/config/wpcost.blkx", "char.vromfs.bin_u/config/shop.blkx"],
-      "provenance": "doc/game-data-review-20261017.md",
-      "limitations": "Reviewed prerequisite changes only; rank-I planning policy unchanged."
+      "provenance": "doc/game-data-review-20261024.md",
+      "limitations": "Existing roster prerequisites only; new hidden/event entries are not imported. Rank-I planning policy unchanged."
     },
     "rank-unlocks": {
-      "gameVersion": "2.59.0.73",
-      "gameDataCommit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "gameVersion": "2.59.0.86",
+      "gameDataCommit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
       "files": ["char.vromfs.bin_u/config/rank.blkx"],
-      "provenance": "doc/game-data-review-20261017.md",
+      "provenance": "doc/game-data-review-20261024.md",
       "limitations": "241 explicit fields for 50 supported trees; missing fields are not assumed zero."
     },
     "modifications": {
-      "gameVersion": "2.59.0.73",
-      "gameDataCommit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "gameVersion": "2.59.0.86",
+      "gameDataCommit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
       "files": ["char.vromfs.bin_u/config/wpcost.blkx"],
-      "provenance": "doc/game-data-review-20261017.md",
+      "provenance": "doc/game-data-review-20261024.md",
       "limitations": "Existing explicit costs and tiers reviewed; missing RP and user-confirmed prerequisite conflicts remain unresolved."
     }
   }

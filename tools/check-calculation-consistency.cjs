@@ -89,8 +89,40 @@ async function main() {
         await page.locator('[data-progress-save]').click();
         assert.deepEqual(await budget(), { ...expected, rp: '0' }, 'Finished research still requires purchasing the vehicle');
         assert.equal(await page.evaluate(() => state.owned.has('us_m3_stuart')), false);
+        await page.evaluate(async () => {
+          els.countrySelect.value = 'sweden'; els.typeSelect.value = 'aviation'; await loadTree();
+        });
+        await ready();
+        await page.waitForFunction(() => RosterAudit.info('sweden', 'aviation', 'saab_j35a')?.category === 'premium-golden-eagles');
+        const j35a = page.locator('.unit-tile[data-unit-id="saab_j35a"]');
+        await j35a.scrollIntoViewIfNeeded();
+        await page.waitForFunction(() => {
+          const image = document.querySelector('.unit-tile[data-unit-id="saab_j35a"] img');
+          return image?.complete && image.naturalWidth > 0;
+        });
+        const purchaseBudget = await budget();
+        await j35a.click();
+        const selectedBudget = await budget();
+        assert.equal(selectedBudget.rp, purchaseBudget.rp, 'GE vehicle must not add research cost');
+        assert.equal(selectedBudget.sl, purchaseBudget.sl, 'GE price must not become Silver Lions');
+        for (const language of ['zh', 'en', 'ru', 'de', 'fr', 'ja', 'es']) {
+          await page.evaluate(language => setLanguage(language), language);
+          const badge = j35a.locator('.roster-golden-eagles, .roster-premium-golden-eagles');
+          assert.equal(await badge.count(), 1);
+          assert.equal(await badge.innerText(), await page.evaluate(() => tr('金鹰载具')));
+          assert.equal(await badge.getAttribute('title'), await page.evaluate(() => tr('官方公告已确认购买方式')));
+          const geometry = await badge.evaluate(element => {
+            const badge = element.getBoundingClientRect(), card = element.closest('.unit-tile').getBoundingClientRect();
+            return { fits: badge.left >= card.left && badge.right <= card.right && element.scrollWidth <= element.clientWidth + 1,
+              noPageOverflow: document.documentElement.scrollWidth <= innerWidth, missing: [...WTI18n.missing] };
+          });
+          assert(geometry.fits && geometry.noPageOverflow, 'Purchase badge must fit the card');
+          assert.deepEqual(geometry.missing, []);
+          await j35a.screenshot({ path: path.join(output, `${mode}-${width}-${language}-j35a.png`) });
+        }
         assert.deepEqual(errors, []);
-        reports.push({ mode, width, unknownCostsPreserved: true, savedProgressPreserved: true, apiMatches: true, slAndOwnershipUnchanged: true });
+        reports.push({ mode, width, unknownCostsPreserved: true, savedProgressPreserved: true, apiMatches: true,
+          slAndOwnershipUnchanged: true, j35aAcquisitionLocales: 7, geExcludedFromBudget: true });
       } finally { await context.close(); }
     }
     fs.writeFileSync(path.join(output, 'browser-report.json'), JSON.stringify(reports, null, 2));

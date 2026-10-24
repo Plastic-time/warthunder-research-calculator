@@ -2,6 +2,7 @@
   "use strict";
   // Load after the shared WTI18n runtime and before the auxiliary modules.
   window.WTI18n.register([
+    ["官方公告已确认购买方式","Purchase method confirmed by an official announcement","Способ покупки подтверждён официальным объявлением","Kaufmöglichkeit durch eine offizielle Ankündigung bestätigt","Mode d'achat confirmé par une annonce officielle","公式告知で購入方法を確認済み","Método de compra confirmado por un anuncio oficial"],
     ["清除搜索","Clear search","Очистить поиск","Suche löschen","Effacer la recherche","検索をクリア","Borrar búsqueda"],
     ["匹配 {count} 辆","Matches: {count}","Найдено: {count}","Treffer: {count}","Résultats : {count}","検索結果：{count}件","Resultados: {count}"],
     ["备份与恢复","Backup and restore","Резервная копия","Sichern und wiederherstellen","Sauvegarde et restauration","バックアップと復元","Copia y restauración"],

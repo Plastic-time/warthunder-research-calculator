@@ -75,7 +75,9 @@
     badges(country, type, unit, displayName) {
       const item = report?.trees[`${country}/${type}`]?.units[String(unit.data_unit_id).toLowerCase()];
       if (!item) return badge('pending', '分类待核对');
-      return (item.category === 'squadron' ? '' : badge(item.category, labels[item.category], descriptions[item.category] || '仅作分类展示，不改变计算规则')) +
+      const description = item.acquisition?.provenance?.kind === 'official-announcement'
+        ? '官方公告已确认购买方式' : descriptions[item.category] || '仅作分类展示，不改变计算规则';
+      return (item.category === 'squadron' ? '' : badge(item.category, labels[item.category], description)) +
         (item.hidden ? hiddenBadge(displayName || item.title || unit.data_unit_id, unit.data_unit_id) : '');
     },
     info(country, type, unitId) {

@@ -4,6 +4,12 @@
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 
+## 2026-10-24 · 游戏数据核对与 J35A 分类修正
+
+- 对照固定版本 2.59.0.86 核对现有载具费用、前置和等级门槛；未发现需要新增修改的 RP/银狮费用或规划规则。
+- 根据官方购买公告，将 J35A 从特殊载具修正为金鹰载具；记录常规价格，不将限时折扣或内部费用计入研发预算。
+- 这不是全量数据升级。新增活动条目暂未导入，原有人工更正和未知字段继续保留。见[核对记录与边界](game-data-review-20261024.md)。本次不发布 Windows 包。
+
 ## 2026-10-24 · 科技树加载重试
 
 - 科技树加载失败后提供重试按钮，无需刷新整页；首次加载资料失败也可重试，重复点击不会并发发送同一重试请求。
@@ -120,6 +126,12 @@
 ## English
 
 This log covers web updates after the downloadable release. These entries do not announce new Windows packages.
+
+### 2026-10-24 · Game Data Review and J35A Classification
+
+- Reviewed the relevant configuration at version 2.59.0.86. No new changes to existing RP, Silver Lion costs, prerequisites or rank requirements were needed.
+- Corrected J35A to a Golden Eagles vehicle using the official purchase announcement. The recorded price is the regular price, not the temporary discount.
+- This is a partial review, not a full data upgrade. New event entries have not been imported. Existing manual corrections and unknown fields remain unchanged. No Windows package was released.
 
 ### 2026-10-24 · Retry Loading a Tech Tree
 

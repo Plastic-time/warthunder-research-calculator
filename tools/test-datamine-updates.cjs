@@ -18,7 +18,12 @@ function fixture(t, options = {}) {
   const read = async url => {
     calls.push(url);
     if (url.endsWith('/commits/master')) return { sha: sha(2) };
-    if (url.endsWith('/version')) return url.includes(sha(2)) ? '2.59.0.82' : '2.59.0.73';
+    if (url.endsWith('/version')) {
+      if (url.includes(sha(2))) return '2.59.0.99';
+      const checkpoint = Object.values(checkpoints.scopes).find(scope => url.includes(scope.gameDataCommit));
+      assert(checkpoint, 'Unknown fixture revision');
+      return checkpoint.gameVersion;
+    }
     if (url.includes('/compare/')) return { status: 'ahead', files: Array.from({ length: options.fileCount ?? 300 }, (_, i) => ({ filename: `aces.vromfs.bin_u/${i}.blkx`, status: 'modified' })) };
     if (url.includes('/commits/')) {
       const commit = url.split('/').at(-1);
@@ -45,7 +50,7 @@ test('critical files omitted from a truncated compare are checked at pinned scop
   assert.equal(report.fullFileListComplete, false);
   assert.equal(report.criticalFilesComplete, true);
   assert.deepEqual(report.scopes.map(s => s.requiresReview), [true, true, false, true]);
-  assert(report.scopes.every(s => s.checkpoint.gameVersion === '2.59.0.73'));
+  assert.deepEqual(report.scopes.map(s => s.checkpoint.gameVersion), Object.values(checkpoints.scopes).map(s => s.gameVersion));
   assert.equal(report.applied, false);
   assert(fs.readFileSync(path.join(f.root, 'config/data-review-checkpoints.json')).equals(before));
   const trees = f.calls.filter(url => url.includes('/git/trees/'));

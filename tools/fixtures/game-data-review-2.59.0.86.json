@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "baseline": {
+    "version": "2.59.0.73",
+    "commit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e"
+  },
+  "upstream": {
+    "version": "2.59.0.86",
+    "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d"
+  },
+  "sources": [
+    {
+      "label": "baseline",
+      "commit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/6142de74d1e9a7125f0fd7e6517d4af7411db29e/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32116305,
+      "sha256": "9af889e2945709ac4f00fa648c6941132d20156015c484b93f84809ad5cb2b5d"
+    },
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/wpcost.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 32143254,
+      "sha256": "3797cb6f78c59dbfa173418c549417f77e5db7823123b91a0a27ac50f44e72d5"
+    },
+    {
+      "label": "baseline",
+      "commit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "file": "char.vromfs.bin_u/config/shop.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/6142de74d1e9a7125f0fd7e6517d4af7411db29e/char.vromfs.bin_u/config/shop.blkx",
+      "bytes": 377427,
+      "sha256": "f6708cbeef50d1d11ead40119cae7fd12b9f41feac818f1cc2b3b99fe3bc9f87"
+    },
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/shop.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/shop.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 378143,
+      "sha256": "da153eea5b3147468a0e51a21fcb67140f2d21c8fcd7c396e5ad16e3c382c6e6"
+    },
+    {
+      "label": "baseline",
+      "commit": "6142de74d1e9a7125f0fd7e6517d4af7411db29e",
+      "file": "char.vromfs.bin_u/config/rank.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/6142de74d1e9a7125f0fd7e6517d4af7411db29e/char.vromfs.bin_u/config/rank.blkx",
+      "bytes": 71494,
+      "sha256": "5a1320caa8d0b5655a52799d6a87c066957d9dd9fccd9a1a755ae5c6406aa9fc"
+    },
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/rank.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/rank.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 71494,
+      "sha256": "5a1320caa8d0b5655a52799d6a87c066957d9dd9fccd9a1a755ae5c6406aa9fc"
+    }
+  ],
+  "rosterUnchangedSha256": "af4b2edfdce7712f1e5c138f068ebf36cccc10e1846ddd82581769dccaa979f1",
+  "costChanges": [
+    {
+      "path": "/saab_j35a/showOnlyWhenAvailableForPurchase",
+      "before": true,
+      "after": null
+    },
+    {
+      "path": "/f_111a/modifications/countermeasures_launcher_chaff",
+      "before": {
+        "reqModification": "countermeasures_belt_pack",
+        "tier": 0,
+        "value": 0,
+        "costGold": 0,
+        "ammoCount": 1
+      },
+      "after": null
+    },
+    {
+      "path": "/f_111a/modifications/countermeasures_launcher_chaff_large",
+      "before": null,
+      "after": {
+        "reqModification": "countermeasures_belt_pack",
+        "tier": 0,
+        "value": 0,
+        "costGold": 0,
+        "ammoCount": 1
+      }
+    }
+  ],
+  "deferredRosterEntries": [
+    {
+      "id": "bf-109e-3_tl",
+      "showOnlyWhenBought": true,
+      "gift": "msi_notebook"
+    },
+    {
+      "id": "ussr_bt_7_m_816",
+      "showOnlyWhenBought": true,
+      "gift": "msi_notebook"
+    },
+    {
+      "id": "germ_panzerjager_panther_g2",
+      "showOnlyWhenBought": true,
+      "gift": "msi_notebook",
+      "event": "battlepass_season25"
+    },
+    {
+      "id": "germ_s_700_s_706",
+      "showOnlyWhenBought": true,
+      "gift": "msi_notebook",
+      "event": "battlepass_season25"
+    }
+  ]
+}

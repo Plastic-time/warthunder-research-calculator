@@ -1,0 +1,15 @@
+{
+  "saab_j35a": {
+    "type": "golden-eagles",
+    "price": "9,090",
+    "currency": "GE",
+    "provenance": {
+      "kind": "official-announcement",
+      "date": "2026-10-23",
+      "url": "https://warthunder.com/en/news/10278-shop-the-j35a-returns-with-a-discount-for-the-dragons-first-flight-en",
+      "gameVersion": "2.59.0.86",
+      "gameDataCommit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "note": "Permanent availability at the regular price; the temporary 50% discount is not stored."
+    }
+  }
+}

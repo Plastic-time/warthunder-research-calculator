@@ -3,6 +3,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const acquisitionCorrections = require('../config/acquisition-corrections.json');
 
 const commit = '371120bedae88b59fa0fa34c04566e83da64eed6';
 const source = `https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/${commit}/char.vromfs.bin_u/config/shop.blkx`;
@@ -11,6 +12,9 @@ const key = id => id.toLowerCase();
 
 function premiumAcquisition(unit) {
   if (!unit.is_premium) return null;
+  // Confirmed availability can be newer than the supplementary Wiki snapshot.
+  const correction = acquisitionCorrections[key(unit.data_unit_id)];
+  if (correction) return structuredClone(correction);
   if (unit.wiki?.purchase_currency === 'GE') {
     return { type: 'golden-eagles', price: unit.wiki.purchase, currency: 'GE' };
   }
