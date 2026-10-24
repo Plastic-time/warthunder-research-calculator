@@ -8,6 +8,13 @@
   "directCostPairCount": 2212,
   "wikiUnpricedVehicleCount": 156,
   "modificationsSnapshotChanged": false,
+  "latestReview": {
+    "gameVersion": "2.59.0.86",
+    "gameDataCommit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+    "scope": "partial-event-modifications",
+    "fullSnapshotUpgrade": false,
+    "provenance": "doc/event-modifications-20261024.md"
+  },
   "latestCorrection": {
     "gameVersion": "2.59.0.50",
     "gameDataCommit": "a5fef60f211c742c48183cf195dab8f603931196",

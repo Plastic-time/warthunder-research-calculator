@@ -8,6 +8,7 @@ const { launchOptions } = require('./browser-test-runtime.cjs');
 const additions = require('../config/game-roster-additions.json');
 const { build } = require('./event-modifications.cjs');
 const modifications = require('./fixtures/event-modifications-20261024.json');
+const displayedVersion = require('../config/data-version.json').latestReview.gameVersion;
 
 async function main() {
   const root = path.resolve(__dirname, '..'), output = path.join(root, 'logs/game-roster-browser');
@@ -29,6 +30,18 @@ async function main() {
         page.on('pageerror', error => errors.push(error.message));
         await page.goto(base + (mode === 'pages' ? '/pages/' : '/'), { waitUntil: 'domcontentloaded' });
         await page.waitForFunction(() => typeof state !== 'undefined' && state.units.length && !treeSelectionLoading);
+        assert.equal(await page.locator('[data-game-version]').textContent(), displayedVersion);
+        if (width >= 720) {
+          await page.locator('#mobileMoreButton').click();
+          const version = page.locator('#mobileMore [data-game-version]');
+          assert(await version.isVisible());
+          assert.equal(await version.innerText(), displayedVersion);
+          await page.locator('#mobileMore').screenshot({path:path.join(output, mode + '-' + width + '-more-version.png')});
+          await page.locator('#mobileMore .mobile-sheet-heading button').click();
+        } else {
+          assert(await page.locator('.topbar [data-game-version]').isVisible());
+          await page.locator('.topbar').screenshot({path:path.join(output, mode + '-' + width + '-header-version.png')});
+        }
         for (const c of additions.units) {
           await page.evaluate(async c => {
             els.countrySelect.value = c.country; els.typeSelect.value = c.type; await loadTree();
@@ -61,6 +74,8 @@ async function main() {
           assert.equal(result.total_rp, 0); assert.equal(result.total_sp, 0);
           for (const language of ['zh', 'en', 'ru', 'de', 'fr', 'ja', 'es']) {
             await page.evaluate(language => setLanguage(language), language);
+            assert.equal(await page.locator('[data-game-version]').textContent(), displayedVersion);
+            assert((await page.locator('.game-version').getAttribute('title')).includes(displayedVersion));
             assert.equal(await card.locator('.unit-title').innerText(), c.names[language]);
             assert.equal(await source.getAttribute('title'), await page.evaluate(() => tr('查看官方活动来源')));
             const geometry = await card.evaluate(card => {

@@ -21,7 +21,7 @@ async function main() {
       const page = await browser.newPage({ viewport: { width,height:960 }, isMobile: width < 720, hasTouch: width < 720, reducedMotion: 'reduce' });
       const errors = []; page.on('pageerror', e => errors.push(e.message));
       await page.goto(url, { waitUntil: 'domcontentloaded' });
-      assert.equal(await page.locator('[data-game-version]').innerText(), '2.59.0.50');
+      assert.equal(await page.locator('[data-game-version]').textContent(), require('../config/data-version.json').latestReview.gameVersion);
       await page.waitForFunction(() => ModificationWorkbench.hasVehicle('f_86em_greece'));
       await page.evaluate(() => {
         const plan = ModificationPlanner.plan;
