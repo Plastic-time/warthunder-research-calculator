@@ -33,6 +33,8 @@ J35A 的 `showOnlyWhenAvailableForPurchase` 限制已移除。[2026-10-23 官方
 
 本轮不扩展车型收录：新条目的 Wiki 布局、图片及配件覆盖仍需另行核验。它们未加入普通研发树、预算或 NEW 标记。内部价格不能单独证明玩家购买渠道；不将本次核对宣传为已补齐所有新活动载具。
 
+同日后续已完成这四项的[逐辆收录复核](roster-candidate-review-20261024.md)：公告与图片已核实，但四个单车页均为 404；BT-7M 掉宝还未开始，正式收录继续暂缓。
+
 ## 复核方式
 
 - `node tools/audit-reviewed-data-delta.cjs logs/game-data-review-20261024`：验证固定源文件长度和哈希，确认现有条目差异清单及新增隐藏条目；只读，不自动应用。

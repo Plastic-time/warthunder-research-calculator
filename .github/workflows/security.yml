@@ -33,6 +33,7 @@ jobs:
       - run: node --test tools/test-datamine-updates.cjs
       - run: node --test tools/test-game-data-review.cjs
       - run: node tools/test-roster.cjs
+      - run: node --test tools/test-roster-candidates.cjs
       - run: node --test tools/test-research-progress.cjs
       - run: node --test tools/test-calculation-consistency.cjs
       - run: node --test tools/test-plan-backup.cjs

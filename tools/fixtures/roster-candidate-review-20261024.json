@@ -1,0 +1,298 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-24T21:28:39.052Z",
+  "scope": "four deferred roster candidates; no runtime data changes",
+  "game": {
+    "version": "2.59.0.86",
+    "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+    "sources": [
+      {
+        "label": "current",
+        "file": "char.vromfs.bin_u/config/wpcost.blkx",
+        "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/wpcost.blkx",
+        "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+        "bytes": 32143254,
+        "sha256": "3797cb6f78c59dbfa173418c549417f77e5db7823123b91a0a27ac50f44e72d5"
+      },
+      {
+        "label": "current",
+        "file": "char.vromfs.bin_u/config/shop.blkx",
+        "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/shop.blkx",
+        "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+        "bytes": 378143,
+        "sha256": "da153eea5b3147468a0e51a21fcb67140f2d21c8fcd7c396e5ad16e3c382c6e6"
+      }
+    ]
+  },
+  "trees": [
+    {
+      "name": "aviation",
+      "url": "https://wiki.warthunder.com/aviation?v=t",
+      "finalUrl": "https://wiki.warthunder.com/aviation?v=t",
+      "status": 200,
+      "bytes": 1477602,
+      "sha256": "c18017bbd20581386a26f05f33f32ca3f3d114b77ac223b0812215a17b20e6cd",
+      "fetchedAt": "2026-10-24T21:25:43.167Z",
+      "title": "Aviation | War Thunder Wiki",
+      "cards": 0,
+      "mods": 0,
+      "treeIds": []
+    },
+    {
+      "name": "ground",
+      "url": "https://wiki.warthunder.com/ground?v=t",
+      "finalUrl": "https://wiki.warthunder.com/ground?v=t",
+      "status": 200,
+      "bytes": 1335313,
+      "sha256": "3eb925d48c2ed2be32fa493c475e8aef96390123bb2ffac84155adc7b75b342d",
+      "fetchedAt": "2026-10-24T21:25:43.845Z",
+      "title": "Ground Vehicles | War Thunder Wiki",
+      "cards": 0,
+      "mods": 0,
+      "treeIds": []
+    },
+    {
+      "name": "boats",
+      "url": "https://wiki.warthunder.com/boats?v=t",
+      "finalUrl": "https://wiki.warthunder.com/boats?v=t",
+      "status": 200,
+      "bytes": 530460,
+      "sha256": "959744e2776f2c6be4fa73759e924600e19ad7c84f5144f2ebb175af05741054",
+      "fetchedAt": "2026-10-24T21:25:44.103Z",
+      "title": "Coastal Fleet | War Thunder Wiki",
+      "cards": 0,
+      "mods": 0,
+      "treeIds": []
+    }
+  ],
+  "announcements": [
+    {
+      "id": "battlepass",
+      "url": "https://wiki.warthunder.com/battlepass/bp_25_season",
+      "status": 200,
+      "bytes": 62034,
+      "sha256": "5e22f6da070efc1599e8555559c591c10a174551a5e7e567ff129b2360b535af",
+      "checkedAt": "2026-10-24T21:26:59.549Z",
+      "unitLinks": []
+    },
+    {
+      "id": "battlepass-official",
+      "url": "https://forum.warthunder.com/t/topic/359427",
+      "status": 200,
+      "bytes": 35421,
+      "sha256": "b6e20c321cec2423f692b704aa1fafb5d6032ee8565985824a439b1ceade9925",
+      "checkedAt": "2026-10-24T21:26:59.880Z",
+      "unitLinks": []
+    },
+    {
+      "id": "twitch-official",
+      "url": "https://warthunder.com/en/news/10275-esports-watch-the-2026-grand-finals-and-earn-tricolor-smoke-more-twitch-drops-en",
+      "status": 200,
+      "bytes": 136761,
+      "sha256": "b390a39f65afcfab39cba1c5ae285ddc11723f523bacc67f79ddfa668bf0b924",
+      "checkedAt": "2026-10-24T21:27:00.550Z",
+      "unitLinks": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "bf-109e-3_tl",
+      "name": "Bf 109 E-3 (TD)",
+      "country": "germany",
+      "type": "aviation",
+      "acquisition": "twitch-drops",
+      "availableFrom": "2026-10-23T14:50:00Z",
+      "announcement": "twitch-official",
+      "wiki": {
+        "url": "https://wiki.warthunder.com/unit/bf-109e-3_tl",
+        "status": 404,
+        "sha256": "4da2d584aad80becfabf910439efbd21841773ad79496d940faefda77f38ee6a",
+        "fetchedAt": "2026-10-24T21:25:41.785Z",
+        "detailCards": 0,
+        "modifications": 0,
+        "tree": "aviation",
+        "treeMatches": 0
+      },
+      "image": {
+        "id": "bf-109e-3_tl",
+        "url": "https://static.encyclopedia.warthunder.com/slots/bf-109e-3_tl.png",
+        "status": 200,
+        "contentType": "image/png",
+        "bytes": 8996,
+        "pngSignature": true,
+        "sha256": "e70f6f2f4576ac7663d1d8f368b3001d8b4466c25b131813cc2600347f4024ca",
+        "checkedAt": "2026-10-24T21:26:58.274Z"
+      },
+      "gameFields": {
+        "country": "country_germany",
+        "rank": 2,
+        "reqExp": 9200,
+        "value": 16000,
+        "showOnlyWhenBought": true,
+        "gift": "msi_notebook"
+      },
+      "gameModificationCount": 23,
+      "missingExplicitModificationRp": 0,
+      "decision": "defer",
+      "blockers": [
+        "wiki-detail-unavailable",
+        "wiki-tree-entry-missing",
+        "modification-presentation-unavailable"
+      ]
+    },
+    {
+      "id": "ussr_bt_7_m_816",
+      "name": "BT-7M (TD)",
+      "country": "ussr",
+      "type": "ground",
+      "acquisition": "twitch-drops",
+      "availableFrom": "2026-10-30T14:50:00Z",
+      "announcement": "twitch-official",
+      "wiki": {
+        "url": "https://wiki.warthunder.com/unit/ussr_bt_7_m_816",
+        "status": 404,
+        "sha256": "4b7052633d8646745592ffadbc093c6430adb1b332aa09067d28240db4591226",
+        "fetchedAt": "2026-10-24T21:25:42.049Z",
+        "detailCards": 0,
+        "modifications": 0,
+        "tree": "ground",
+        "treeMatches": 0
+      },
+      "image": {
+        "id": "ussr_bt_7_m_816",
+        "url": "https://static.encyclopedia.warthunder.com/slots/ussr_bt_7_m_816.png",
+        "status": 200,
+        "contentType": "image/png",
+        "bytes": 8675,
+        "pngSignature": true,
+        "sha256": "7fdf5d19de327ac72b5a217dde96bebfb9de8f75d43bb84861f04b3e0c56ec4b",
+        "checkedAt": "2026-10-24T21:26:58.600Z"
+      },
+      "gameFields": {
+        "country": "country_ussr",
+        "rank": 1,
+        "reqExp": 5900,
+        "value": 6300,
+        "showOnlyWhenBought": true,
+        "gift": "msi_notebook"
+      },
+      "gameModificationCount": 17,
+      "missingExplicitModificationRp": 0,
+      "decision": "defer",
+      "blockers": [
+        "wiki-detail-unavailable",
+        "wiki-tree-entry-missing",
+        "modification-presentation-unavailable",
+        "reward-not-started"
+      ]
+    },
+    {
+      "id": "germ_panzerjager_panther_g2",
+      "name": "Jagdpanther G2",
+      "country": "germany",
+      "type": "ground",
+      "acquisition": "battle-pass",
+      "season": 25,
+      "rewardLevel": 75,
+      "freeReward": false,
+      "availableFrom": "2026-10-21T12:00:00Z",
+      "announcement": "battlepass-official",
+      "wiki": {
+        "url": "https://wiki.warthunder.com/unit/germ_panzerjager_panther_g2",
+        "status": 404,
+        "sha256": "4c6bee7b07f0bf800414a7447f007bc009263df7adef19fdc813ca0455d7ff3f",
+        "fetchedAt": "2026-10-24T21:25:42.291Z",
+        "detailCards": 0,
+        "modifications": 0,
+        "tree": "ground",
+        "treeMatches": 0
+      },
+      "image": {
+        "id": "germ_panzerjager_panther_g2",
+        "url": "https://static.encyclopedia.warthunder.com/slots/germ_panzerjager_panther_g2.png",
+        "status": 200,
+        "contentType": "image/png",
+        "bytes": 7656,
+        "pngSignature": true,
+        "sha256": "6f804419791e00a0fec9fa232b68b27815f61595dffb84264947a9b173d7134d",
+        "checkedAt": "2026-10-24T21:26:58.898Z"
+      },
+      "gameFields": {
+        "country": "country_germany",
+        "rank": 4,
+        "reqExp": 46000,
+        "value": 0,
+        "costGold": 2980,
+        "showOnlyWhenBought": true,
+        "gift": "msi_notebook",
+        "event": "battlepass_season25"
+      },
+      "gameModificationCount": 23,
+      "missingExplicitModificationRp": 17,
+      "decision": "defer",
+      "blockers": [
+        "wiki-detail-unavailable",
+        "wiki-tree-entry-missing",
+        "modification-presentation-unavailable"
+      ]
+    },
+    {
+      "id": "germ_s_700_s_706",
+      "name": "S-706",
+      "country": "germany",
+      "type": "boats",
+      "acquisition": "battle-pass",
+      "season": 25,
+      "rewardLevel": 51,
+      "freeReward": true,
+      "availableFrom": "2026-10-21T12:00:00Z",
+      "announcement": "battlepass-official",
+      "wiki": {
+        "url": "https://wiki.warthunder.com/unit/germ_s_700_s_706",
+        "status": 404,
+        "sha256": "962430c72ae0ebd4c9295f1530382cad0c9106891b018f7df7133b27f4bb0672",
+        "fetchedAt": "2026-10-24T21:25:42.487Z",
+        "detailCards": 0,
+        "modifications": 0,
+        "tree": "boats",
+        "treeMatches": 0
+      },
+      "image": {
+        "id": "germ_s_700_s_706",
+        "url": "https://static.encyclopedia.warthunder.com/slots/germ_s_700_s_706.png",
+        "status": 200,
+        "contentType": "image/png",
+        "bytes": 10182,
+        "pngSignature": true,
+        "sha256": "4de949bd08ae1ac7a7ade7f986b82d5afc62126f5a546678ff275e759b87bd51",
+        "checkedAt": "2026-10-24T21:26:59.173Z"
+      },
+      "gameFields": {
+        "country": "country_germany",
+        "rank": 3,
+        "reqExp": 26000,
+        "value": 0,
+        "costGold": 1450,
+        "showOnlyWhenBought": true,
+        "gift": "msi_notebook",
+        "event": "battlepass_season25"
+      },
+      "gameModificationCount": 27,
+      "missingExplicitModificationRp": 18,
+      "decision": "defer",
+      "blockers": [
+        "wiki-detail-unavailable",
+        "wiki-tree-entry-missing",
+        "modification-presentation-unavailable"
+      ]
+    }
+  ],
+  "imported": [],
+  "limitations": [
+    "An official announcement verifies acquisition, not complete calculator data.",
+    "Available images do not establish Wiki detail or modification coverage.",
+    "Internal reqExp, value and costGold are evidence only, not public research or purchase prices.",
+    "No zero costs, donor-vehicle modifications, tree positions or NEW badges are inferred.",
+    "A later review may use independently verified game-based presentation without Wiki; this dated report does not mandate Wiki as gameplay authority."
+  ]
+}
