@@ -23,6 +23,9 @@ jobs:
       - run: npm run test:web-assets
       - name: Check dependencies
         run: npm audit --audit-level=low
+      - name: Audit online counter dependencies (including development tools)
+        working-directory: cloudflare/online
+        run: npm audit --package-lock-only --include=dev --audit-level=low
       - name: Check request handling
         run: npm run test:security
       - run: node tools/test-wiki.cjs

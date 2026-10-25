@@ -61,17 +61,25 @@ For temporary diagnostics, enable logs only when necessary and do not add visito
 
 ### Development dependency security
 
-The scoped npm override pins Miniflare's `sharp` dependency to 0.35.5 to address
-[GHSA-wq5f-xc86-pv6w](https://github.com/advisories/GHSA-wq5f-xc86-pv6w).
-Miniflare and Wrangler versions are unchanged. Remove the override only after
-the upstream dependency includes the fix and the checks below pass. This tooling
-dependency is not part of the deployed counter code or the Windows calculator package.
+Scoped npm overrides pin Miniflare's development dependencies:
+
+- `sharp` 0.35.5 fixes [GHSA-wq5f-xc86-pv6w](https://github.com/advisories/GHSA-wq5f-xc86-pv6w).
+- `undici` 7.30.1 fixes [excessive content-encoding denial of service](https://github.com/advisories/GHSA-xjj6-f33q-929c), [EventSource memory exhaustion](https://github.com/advisories/GHSA-4qv8-2p9j-2685), and [integrity-check bypass](https://github.com/advisories/GHSA-f72v-6w45-q472).
+
+Miniflare and Wrangler versions are unchanged. Remove each override only after
+the upstream dependency includes the fix and the checks below pass. These tooling
+dependencies are not part of the deployed counter code or the Windows calculator package.
+
+Application Checks audits this directory's lockfile on every main push and pull
+request, including development dependencies. It does not require an online-counter
+file change. Online Counter Checks also audits installed dependencies before testing
+and building. Neither check automatically fixes or dismisses vulnerabilities.
 
 Use Node.js 24 with npm, then run these commands from this directory:
 
 ```sh
 npm ci --ignore-scripts
-npm audit --audit-level=low
+npm audit --include=dev --audit-level=low
 npm test
 npm run check:deploy
 npm run test:runtime

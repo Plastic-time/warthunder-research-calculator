@@ -28,7 +28,7 @@ jobs:
           cache: npm
           cache-dependency-path: cloudflare/online/package-lock.json
       - run: npm ci --ignore-scripts
-      - run: npm audit --audit-level=low
+      - run: npm audit --include=dev --audit-level=low
       - run: npm test
       - run: npm run check:deploy
       - run: npm run test:runtime
