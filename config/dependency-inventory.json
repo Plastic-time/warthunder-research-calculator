@@ -23,8 +23,9 @@
     {
       "id": "github-actions",
       "kind": "github-actions",
-      "coverage": "tracked-only",
+      "coverage": "github-actions-audit",
       "files": [
+        ".github/dependabot.yml",
         ".github/workflows/browser-checks.yml",
         ".github/workflows/commit-privacy.yml",
         ".github/workflows/deploy-pages.yml",
@@ -32,7 +33,16 @@
         ".github/workflows/release.yml",
         ".github/workflows/security.yml"
       ],
-      "note": "Workflow entry points only. Action version inventory, SHA pinning and automated version maintenance are pending."
+      "actions": [
+        { "repository": "actions/checkout", "version": "v7.0.1", "sha": "3d3c42e5aac5ba805825da76410c181273ba90b1" },
+        { "repository": "actions/setup-node", "version": "v7.1.0", "sha": "949feb2413d6458794dcd2491c4babbbce0c15c1" },
+        { "repository": "actions/setup-dotnet", "version": "v6.0.0", "sha": "a98b56852c35b8e3190ac28c8c2271da59106c68" },
+        { "repository": "actions/upload-artifact", "version": "v7.0.2", "sha": "cf430e030ddbb5b0abf93d22962f4752f3646cd9" },
+        { "repository": "actions/upload-artifact", "version": "v7.0.0", "sha": "bbbca2ddaa5d8feaa63e36b76fdaad77386f024f" },
+        { "repository": "actions/configure-pages", "version": "v6.0.0", "sha": "45bfe0192ca1faeb007ade9deae92b16b8254a0d" },
+        { "repository": "actions/upload-pages-artifact", "version": "v5.0.0", "sha": "fc324d3547104276b827a68afc52ff2a11cc49c9" },
+        { "repository": "actions/deploy-pages", "version": "v5.0.1", "sha": "368f82528645a54fb793d4d04e342629a3f51346" }
+      ]
     },
     {
       "id": "html-to-image",

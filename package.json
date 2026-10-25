@@ -21,6 +21,9 @@
     "audit:dependencies": "node tools/check-dependency-inventory.cjs --audit",
     "audit:vendored": "node tools/check-dependency-inventory.cjs --audit-vendored",
     "audit:dotnet": "node tools/check-dependency-inventory.cjs --audit-dotnet",
+    "check:actions": "node tools/audit-github-actions.cjs --check",
+    "audit:actions": "node tools/check-dependency-inventory.cjs --audit-actions",
+    "test:actions": "node --test tools/test-github-actions.cjs",
     "test:dependency-inventory": "node --test tools/test-dependency-inventory.cjs tools/test-vendored-dependencies.cjs tools/test-dotnet-dependencies.cjs",
     "pull": "node ./src/4-fill_tree_details.js",
     "pull:usa-ground": "node ./src/4-fill_tree_details.js usa ground"
@@ -37,7 +40,8 @@
     "module-alias": "^2.3.4"
   },
   "devDependencies": {
-    "playwright": "1.64.1"
+    "playwright": "1.64.1",
+    "yaml": "2.9.1"
   },
   "engines": {
     "node": ">=24.21.0 <25"

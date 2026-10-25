@@ -31,11 +31,11 @@ function fixture(t) {
 test('registered npm projects produce audit directories; known non-npm gaps stay explicit', t => {
   const f = fixture(t);
   f.project('cloud/counter', 'counter');
-  f.write('.github/workflows/test.yml', 'name: test');
-  f.inventory.entries.push({ id: 'actions', kind: 'github-actions', coverage: 'tracked-only', files: ['.github/workflows/test.yml'], note: 'Action audit pending.' });
+  f.write('old.exe', 'test binary');
+  f.inventory.entries.push({ id: 'binary', kind: 'binary', coverage: 'tracked-only', files: ['old.exe'], note: 'Historical binary audit pending.' });
   const report = f.check();
   assert.deepEqual(report.npmProjects.map(p => p.directory), ['.', 'cloud/counter']);
-  assert.equal(report.trackedOnly[0].id, 'actions');
+  assert.equal(report.trackedOnly[0].id, 'binary');
   assert.equal(report.registeredFiles, 5);
 });
 
@@ -102,8 +102,8 @@ test('manifest and lockfile must belong to the same directory; workspaces requir
 
 test('pending audit entries require an explanation and cannot report automated coverage', t => {
   const f = fixture(t);
-  f.write('.github/workflows/test.yml', 'name: test');
-  const entry = { id: 'actions', kind: 'github-actions', coverage: 'tracked-only', files: ['.github/workflows/test.yml'] };
+  f.write('old.exe', 'test binary');
+  const entry = { id: 'binary', kind: 'binary', coverage: 'tracked-only', files: ['old.exe'] };
   f.inventory.entries.push(entry);
   assert.throws(f.check, /explain the remaining audit gap/);
   entry.note = 'Pending'; entry.coverage = 'npm-audit';
@@ -163,6 +163,7 @@ test('CLI rejects an unregistered project before starting audit and picks it up 
   f.write('tools/check-dependency-inventory.cjs', fs.readFileSync(path.join(__dirname, 'check-dependency-inventory.cjs'), 'utf8'));
   f.write('tools/audit-vendored-dependencies.cjs', fs.readFileSync(path.join(__dirname, 'audit-vendored-dependencies.cjs'), 'utf8'));
   f.write('tools/audit-dotnet-dependencies.cjs', fs.readFileSync(path.join(__dirname, 'audit-dotnet-dependencies.cjs'), 'utf8'));
+  f.write('tools/audit-github-actions.cjs', fs.readFileSync(path.join(__dirname, 'audit-github-actions.cjs'), 'utf8'));
   f.write('config/dependency-inventory.json', f.inventory);
   const extra = f.project('new service', 'new-service');
   f.write('fake-npm.cjs', "require('node:fs').appendFileSync(process.env.AUDIT_LOG, process.cwd() + '\\n');");

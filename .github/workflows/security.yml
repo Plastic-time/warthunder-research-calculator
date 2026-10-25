@@ -12,8 +12,10 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24
           check-latest: true
@@ -21,13 +23,17 @@ jobs:
       - name: Reject unregistered dependency entry points
         run: npm run check:dependencies
       - run: npm run test:dependency-inventory
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
           dotnet-version: "10.0.x"
       - run: npm ci --ignore-scripts
+      - run: npm run check:actions
+      - run: npm run test:actions
       - run: npm run check:web-assets
       - run: npm run test:web-assets
-      - name: Audit npm, vendored browser libraries and .NET launcher
+      - name: Audit all registered executable dependencies
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: npm run audit:dependencies
       - name: Check request handling
         run: npm run test:security
