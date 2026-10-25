@@ -69,6 +69,31 @@
   background: var(--black-a60);
 }
 
+.modification-load-state {
+  width: 100%;
+  min-width: 0;
+  padding: 24px 12px;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.modification-load-state p { margin: 0; }
+.modification-load-state button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.modification-dialog[data-load-state="loading"] .modification-tree,
+.modification-dialog[data-load-state="error"] .modification-tree { min-width: 0; width: 100%; }
+
 .modification-titlebar {
   min-height: 70px;
   display: flex;

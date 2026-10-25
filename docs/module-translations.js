@@ -2,6 +2,8 @@
   "use strict";
   // Load after the shared WTI18n runtime and before the auxiliary modules.
   window.WTI18n.register([
+    ["正在载入配件…","Loading modifications…","Загрузка модификаций…","Modifikationen werden geladen…","Chargement des modifications…","改造データを読み込み中…","Cargando modificaciones…"],
+    ["配件载入超时，请重试","Modifications timed out. Try again.","Время загрузки модификаций истекло. Повторите попытку.","Zeitüberschreitung beim Laden. Bitte erneut versuchen.","Le chargement a expiré. Réessayez.","改造データの読み込みがタイムアウトしました。再試行してください。","La carga ha tardado demasiado. Inténtalo de nuevo."],
     ["官方公告已确认购买方式","Purchase method confirmed by an official announcement","Способ покупки подтверждён официальным объявлением","Kaufmöglichkeit durch eine offizielle Ankündigung bestätigt","Mode d'achat confirmé par une annonce officielle","公式告知で購入方法を確認済み","Método de compra confirmado por un anuncio oficial"],
     ["清除搜索","Clear search","Очистить поиск","Suche löschen","Effacer la recherche","検索をクリア","Borrar búsqueda"],
     ["匹配 {count} 辆","Matches: {count}","Найдено: {count}","Treffer: {count}","Résultats : {count}","検索結果：{count}件","Resultados: {count}"],

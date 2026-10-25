@@ -14,6 +14,21 @@
   let catalog = null;
   let catalogPromise = null;
   const chunkCache = new Map();
+  let openRequest = 0;
+  let requestedVehicle = null;
+  let loadError = "";
+
+  async function readData(url, errorSource, asText = false) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 15000);
+    try {
+      const response = await fetch(url, { cache: "no-cache", signal: controller.signal });
+      if (!response.ok) throw failure(errorSource);
+      return await (asText ? response.text() : response.json());
+    } catch (error) {
+      throw failure(controller.signal.aborted ? "配件载入超时，请重试" : error.translationSource || errorSource);
+    } finally { clearTimeout(timer); }
+  }
 
   const format = value => window.WTI18n.number(Number(value || 0));
   const escape = value => String(value ?? "").replace(/[&<>"']/g, character => ({
@@ -50,11 +65,7 @@
   async function loadCatalog() {
     if (catalog) return catalog;
     if (!catalogPromise) {
-      catalogPromise = Promise.all([fetch("database/modifications/catalog.json?v=all-vehicles-20260920", { cache: "no-cache" })
-        .then(response => {
-          if (!response.ok) throw failure("配件索引载入失败");
-          return response.json();
-        })
+      catalogPromise = Promise.all([readData("database/modifications/catalog.json?v=all-vehicles-20260920", "配件索引载入失败")
         .then(data => {
           if (data.schema !== 2 || !data.vehicles || !data.chunks) throw failure("配件索引格式错误");
           return data;
@@ -138,10 +149,8 @@
     const chunkMeta = index.chunks[chunkKey];
     if (!chunkKey || !chunkMeta) throw failure("这辆载具没有可研发配件");
     if (!chunkCache.has(chunkKey)) {
-      chunkCache.set(chunkKey, fetch(`${chunkMeta.path}?v=${chunkMeta.sha256.slice(0, 16)}`, { cache: "no-cache" })
-        .then(async response => {
-          if (!response.ok) throw failure("配件数据载入失败");
-          const content = await response.text();
+      chunkCache.set(chunkKey, readData(`${chunkMeta.path}?v=${chunkMeta.sha256.slice(0, 16)}`, "配件数据载入失败", true)
+        .then(async content => {
           if (await sha256(content) !== chunkMeta.sha256) throw failure("配件数据版本校验失败，请刷新页面");
           return JSON.parse(content);
         })
@@ -270,6 +279,7 @@
   }
 
   function render() {
+    if (dialog.dataset.loadState === "loading" || dialog.dataset.loadState === "error") { renderLoadState(); return; }
     if (!ui.data) return;
     const lang = language();
     title.textContent = t("配件研发 - {vehicle}", { vehicle: vehicleName() });
@@ -380,23 +390,56 @@
     render();
   }
 
+  function renderLoadState() {
+    const loading = dialog.dataset.loadState === "loading";
+    const name = typeof displayTitle === "function" ? displayTitle({ data_unit_id: requestedVehicle, title: requestedVehicle }) : requestedVehicle;
+    title.textContent = t("配件研发 - {vehicle}", { vehicle: name });
+    status.textContent = t(loading ? "正在载入配件…" : loadError);
+    tree.innerHTML = `<div class="modification-load-state"><p role="status">${escape(status.textContent)}</p>${loading ? "" : `<button type="button" data-modification-retry><span class="nav-icon" style="--nav-icon:url('${escape(asset('assets/navigation/rotate-ccw.svg'))}')" aria-hidden="true"></span><span>${escape(t("重试"))}</span></button>`}</div>`;
+  }
+
+  function setLoadState(state) {
+    dialog.dataset.loadState = state;
+    const blocked = state !== "ready";
+    viewport.setAttribute("aria-busy", String(state === "loading"));
+    vehicleImage.style.visibility = blocked ? "hidden" : "";
+    dialog.querySelectorAll("[data-modification-action], [data-modification-mode], [data-modification-air-combat]").forEach(control => { control.disabled = blocked; });
+    if (blocked) {
+      rpOutput.textContent = slOutput.textContent = "—";
+      renderLoadState();
+    }
+  }
+
+  function invalidateOpen() { openRequest += 1; }
+
   async function open(vehicleId) {
+    if (typeof vehicleId !== "string" || !/^[a-z0-9_-]+$/i.test(vehicleId)) return;
+    const request = ++openRequest;
+    requestedVehicle = vehicleId;
     dismissUndo();
+    loadError = "";
+    setLoadState("loading");
+    if (!dialog.open) dialog.showModal();
     try {
-      if (ui.data?.vehicleId !== vehicleId) {
-        ui.data = await loadVehicle(vehicleId);
+      const data = ui.data?.vehicleId === vehicleId ? ui.data : await loadVehicle(vehicleId);
+      // Shared downloads may finish after another selection or after the dialog closes.
+      if (request !== openRequest || !dialog.open) return;
+      if (ui.data !== data) {
+        ui.data = data;
         ui.unlocked = new Set(ui.data.mods.filter(window.ModificationPlanner.isAutomaticallyUnlocked).map(mod => mod.id));
         ui.result = null;
         restore();
       }
       vehicleImage.src = ui.data.vehicleIcon;
       ui.editProgress = false;
+      setLoadState("ready");
       translateControls();
       render();
-      dialog.showModal();
       requestAnimationFrame(drawConnections);
     } catch (error) {
-      if (typeof setStatus === "function") setStatus(t(error.translationSource || "配件数据载入失败"));
+      if (request !== openRequest || !dialog.open) return;
+      loadError = error.translationSource || "配件数据载入失败";
+      setLoadState("error");
     }
   }
 
@@ -408,10 +451,20 @@
       open(launch.dataset.modificationsId);
       return;
     }
-    if (event.target === dialog || event.target.closest("[data-modification-close]")) dialog.close();
+    if (event.target === dialog || event.target.closest("[data-modification-close]")) { invalidateOpen(); dialog.close(); }
   });
 
   tree.addEventListener("click", event => {
+    if (event.target.closest("[data-modification-retry]")) {
+      if (dialog.dataset.loadState !== "error") return;
+      // Re-read the catalog as well, so a deployment/version mismatch can recover.
+      catalog = null;
+      catalogPromise = null;
+      chunkCache.clear();
+      open(requestedVehicle);
+      return;
+    }
+    if (dialog.dataset.loadState !== "ready") return;
     const tile = event.target.closest("[data-mod-id]");
     if (!tile) return;
     const id = tile.dataset.modId;
@@ -423,7 +476,7 @@
       window.ResearchProgress.edit({
         title: tile.querySelector("b").textContent, total: mod.rp, value: ui.progressRp[id],
         onSave(value) {
-          if (ui.data.vehicleId !== vehicleId) return;
+          if (ui.data?.vehicleId !== vehicleId || dialog.dataset.loadState !== "ready") return;
           dismissUndo();
           if (value) ui.progressRp[id] = value; else delete ui.progressRp[id];
           if (ui.result) calculate(); else { save(); render(); }
@@ -449,6 +502,7 @@
   }, true);
 
   tree.addEventListener("contextmenu", event => {
+    if (dialog.dataset.loadState !== "ready") return;
     const tile = event.target.closest("[data-mod-id]");
     if (!tile) return;
     event.preventDefault();
@@ -467,6 +521,7 @@
   });
   dialog.addEventListener("keydown", () => { delete dialog.dataset.modificationPointer; });
   dialog.addEventListener("click", event => {
+    if (dialog.dataset.loadState !== "ready") return;
     const mode = event.target.closest("[data-modification-mode]");
     if (mode) {
       ui.editProgress = mode.dataset.modificationMode === "progress";
@@ -574,8 +629,10 @@
     render();
     dialog.querySelector('[data-modification-action="clear"]').focus({ preventScroll: true });
   });
-  dialog.addEventListener("close", dismissUndo);
+  dialog.addEventListener("cancel", invalidateOpen);
+  dialog.addEventListener("close", () => { if (!dialog.open) { invalidateOpen(); dismissUndo(); } });
   document.addEventListener("wt-plans-restored", () => {
+    invalidateOpen();
     dismissUndo();
     if (dialog.open) dialog.close();
     ui.data = null;

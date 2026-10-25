@@ -50,5 +50,7 @@ jobs:
             logs/plan-concurrency/browser-report.json
             logs/tree-retry/*.png
             logs/tree-retry/browser-report.json
+            logs/modification-loading/*.png
+            logs/modification-loading/browser-report.json
             logs/game-roster-browser/*.png
             logs/game-roster-browser/browser-report.json
