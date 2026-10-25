@@ -420,8 +420,9 @@ async function main() {
             await new Promise(resolve => setTimeout(resolve, 350));
             const launch = document.querySelector('[data-modifications-id="j_16"]');
             launch.click();
-            for (let i = 0; i < 50 && !document.getElementById('modificationDialog').open; i++) await new Promise(resolve => setTimeout(resolve, 50));
+            for (let i = 0; i < 200 && document.getElementById('modificationDialog').dataset.loadState !== 'ready'; i++) await new Promise(resolve => setTimeout(resolve, 50));
             const dialog = document.getElementById('modificationDialog');
+            if (!dialog.open || dialog.dataset.loadState !== 'ready') throw new Error('Modification data did not become ready');
             dialog.querySelector('[data-modification-action="clear"]').click();
             const target = dialog.querySelector('[data-mod-id="cn_pl12a"]');
             target.click();
