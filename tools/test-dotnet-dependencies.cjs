@@ -6,6 +6,18 @@ const path = require('node:path');
 const { validateDotnet, validatePolicy, validateRuntime, readRuntimeMetadata, runDotnet, validateAssets,
   validateReport, validatePublishedRuntime, auditDotnet } = require('./audit-dotnet-dependencies.cjs');
 const root = path.resolve(__dirname, '..');
+test('desktop policy is wired into the launcher, source archives and both CI gates', () => {
+  const read = file => fs.readFileSync(path.join(root, file), 'utf8');
+  const source = read('tools/launcher/Program.cs');
+  for (const call of ['LaunchPolicy.FindAppDirectory(AppContext.BaseDirectory)', 'LaunchPolicy.FindNode',
+    'LaunchPolicy.ServerStartInfo', 'LaunchPolicy.CreateHealthClient', 'LaunchPolicy.IsCalculatorAsync']) assert(source.includes(call));
+  assert(!source.includes('Environment.CurrentDirectory'));
+  assert(read('tools/package-release.ps1').includes('tools\\\\launcher\\\\LaunchPolicy.cs'));
+  for (const file of ['.github/workflows/security.yml', '.github/workflows/release.yml']) {
+    assert(read(file).includes('npm run test:launcher-security'));
+    assert(read(file).includes('npm run test:wiki-http'));
+  }
+});
 const entry = JSON.parse(fs.readFileSync(path.join(root, 'config/dependency-inventory.json'), 'utf8')).entries.find(e => e.kind === 'nuget');
 const policy = () => ({ Properties: { TargetFramework: 'net10.0-windows', RuntimeIdentifier: 'win-x64',
   RuntimeFrameworkVersion: '10.0.13', SelfContained: 'true', NuGetAudit: 'true', NuGetAuditMode: 'all',

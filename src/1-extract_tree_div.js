@@ -1,21 +1,16 @@
-const axios = require("axios");
+const { fetchWikiPage } = require('./wiki-http');
 const cheerio = require("cheerio");
 const beautify = require("js-beautify").html;
 require("module-alias/register");
+const { country_code, vehicle_type } = require('../dict/country_code');
 
 async function fetchTreeHTML(t_c, type = "ground", options = {}) {
+  if (!country_code.includes(t_c) || !vehicle_type.includes(type)) throw new Error('Invalid Wiki tree arguments');
   const url = `https://wiki.warthunder.com/${type}?v=t&t_c=${t_c}`;
   console.log(`Requesting Wiki tree: ${url}`);
 
   try {
-    const { data } = await axios.get(url, {
-      timeout: 30000,
-      signal: options.signal,
-      maxContentLength: 12 * 1024 * 1024,
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-      },
-    });
+    const data = await fetchWikiPage(url, { signal: options.signal });
 
     const $ = cheerio.load(data);
     const $div = $(`div.unit-tree[data-tree-id="${t_c}"]`);

@@ -17,6 +17,8 @@
     "test:browser:recovery": "node tools/check-export-controls.cjs && node tools/check-export-hd.cjs && node tools/check-plan-backup.cjs && node tools/check-plan-concurrency.cjs",
     "test:wiki-refresh": "node --test tools/test-wiki-refresh-guard.cjs tools/test-update-security.cjs",
     "test:security": "node --test tools/test-server-security.cjs tools/test-update-security.cjs tools/test-proxy-addr-security.cjs",
+    "test:wiki-http": "node --test tools/test-wiki-http.cjs",
+    "test:launcher-security": "node tools/check-launcher-policy.cjs",
     "check:dependencies": "node tools/check-dependency-inventory.cjs",
     "audit:dependencies": "node tools/check-dependency-inventory.cjs --audit",
     "audit:vendored": "node tools/check-dependency-inventory.cjs --audit-vendored",

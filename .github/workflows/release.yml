@@ -44,6 +44,10 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Dependency audit regression failed" }
           npm run audit:dependencies
           if ($LASTEXITCODE -ne 0) { throw "Dependency audit failed" }
+          npm run test:launcher-security
+          if ($LASTEXITCODE -ne 0) { throw "Launcher security regression failed" }
+          npm run test:wiki-http
+          if ($LASTEXITCODE -ne 0) { throw "Wiki HTTP security regression failed" }
           npm run test:security
           if ($LASTEXITCODE -ne 0) { throw "Security tests failed" }
           node tools/test-wiki.cjs

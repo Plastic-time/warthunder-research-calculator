@@ -29,3 +29,43 @@ its local server; the static site's matching meta policy covers Pages.
 Git hooks and CI inspect common secrets, personal directories and email
 addresses before publication. They supplement, not replace, GitHub account
 email privacy settings and human review. Public-source code is not encrypted.
+
+## Wiki Network Boundary
+
+The two runtime Wiki readers share `src/wiki-http.js`. Initial destinations
+and every redirect must remain on `https://wiki.warthunder.com`, without URL
+credentials, alternate ports or fragments. Up to three same-origin redirects
+are permitted. Axios uses its HTTP adapter with automatic redirects disabled;
+the application validates each Location before issuing the next request.
+The complete chain shares a 30-second cancellation deadline. Responses retain
+the 12 MiB size limit, and tree arguments are validated before network access.
+TLS validation and configured network proxies remain intact. This prevents
+redirect-based destination changes; it is not protection against compromised
+upstream content, a compromised trusted proxy/CA or arbitrary DNS manipulation.
+Run `npm run test:wiki-http` to check the boundary without external requests.
+
+## Desktop Launcher Boundary
+
+The launcher finds the app only beside itself, not in the working directory or
+parent folders. It prefers the bundled `node.exe`, then an explicitly absolute
+PATH entry; relative entries are ignored. The installation directory and the
+user's absolute PATH remain trusted inputs, not authenticated binaries.
+The script argument is an absolute path and no command shell is used.
+
+The desktop child process explicitly binds to `127.0.0.1:3000`. Hosted update
+settings and administrator tokens are not inherited, nor are `NODE_OPTIONS`
+and `NODE_PATH` preload settings. This applies to the launcher only; explicit
+hosted deployments using `node main.js` retain their existing configuration.
+The health probe uses literal loopback, no proxy, no redirect, a two-second
+timeout and a 4 KiB body limit. Only an HTTP 200 JSON response with the expected
+service name and `success: true` is accepted, not any successful web page.
+This identifies accidental port conflicts, not a malicious local process
+deliberately imitating the response. Existing processes are never killed.
+
+The browser still opens `http://localhost:3000`, preserving its saved plans.
+`npm run test:launcher-security` needs .NET 10 SDK and compiles the production
+policy with a package-free, temporary test harness. Fixture executables are
+never run. Application Checks also builds the real Windows launcher after
+the locked restore/audit; Release runs the same security tests before packaging.
+Source archives include `LaunchPolicy.cs`. A source-only push does not patch
+previously downloaded installers; these changes take effect in the next build.

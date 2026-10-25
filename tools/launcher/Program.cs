@@ -1,15 +1,13 @@
 using System.Diagnostics;
-using System.Net.Http;
 using System.Net.NetworkInformation;
-using System.Net.Sockets;
 using System.Windows.Forms;
 
 namespace WarThunderResearchCalculator;
 
 internal static class Program
 {
-    private const int Port = 3000;
-    private const string Url = "http://localhost:3000";
+    private const int Port = LaunchPolicy.Port;
+    private const string Url = LaunchPolicy.Url;
 
     [STAThread]
     private static async Task Main(string[] args)
@@ -19,7 +17,7 @@ internal static class Program
 
         try
         {
-            var appDir = FindAppDirectory();
+            var appDir = LaunchPolicy.FindAppDirectory(AppContext.BaseDirectory);
             if (appDir is null)
             {
                 ShowError("没有找到 main.js。请把这个启动器放在项目根目录，也就是 main.js 旁边。");
@@ -34,7 +32,7 @@ internal static class Program
                     return;
                 }
 
-                var nodePath = FindNode(appDir);
+                var nodePath = LaunchPolicy.FindNode(appDir, Environment.GetEnvironmentVariable("PATH"));
                 if (nodePath is null)
                 {
                     ShowError("没有找到 node.exe。请先安装 Node.js，或把 node.exe 放在启动器旁边。");
@@ -61,80 +59,9 @@ internal static class Program
         }
     }
 
-    private static string? FindAppDirectory()
-    {
-        foreach (var startDir in GetCandidateStartDirectories())
-        {
-            var dir = new DirectoryInfo(startDir);
-            while (dir is not null)
-            {
-                if (File.Exists(Path.Combine(dir.FullName, "main.js")) && File.Exists(Path.Combine(dir.FullName, "package.json")))
-                {
-                    return dir.FullName;
-                }
-
-                dir = dir.Parent;
-            }
-        }
-
-        return null;
-    }
-
-    private static IEnumerable<string> GetCandidateStartDirectories()
-    {
-        var dirs = new[]
-        {
-            Path.GetDirectoryName(Environment.ProcessPath),
-            AppContext.BaseDirectory,
-            Environment.CurrentDirectory,
-            Path.GetDirectoryName(Process.GetCurrentProcess().MainModule?.FileName),
-        };
-
-        return dirs.Where(dir => !string.IsNullOrWhiteSpace(dir)).Distinct(StringComparer.OrdinalIgnoreCase)!;
-    }
-
-    private static string? FindNode(string appDir)
-    {
-        var localNodes = new[]
-        {
-            Path.Combine(appDir, "node.exe"),
-            Path.Combine(Environment.CurrentDirectory, "node.exe"),
-            Path.Combine(Path.GetDirectoryName(Environment.ProcessPath) ?? "", "node.exe"),
-            Path.Combine(AppContext.BaseDirectory, "node.exe"),
-        };
-
-        foreach (var localNode in localNodes.Distinct(StringComparer.OrdinalIgnoreCase))
-        {
-            if (File.Exists(localNode)) return localNode;
-        }
-
-        var pathValue = Environment.GetEnvironmentVariable("PATH") ?? "";
-        foreach (var dir in pathValue.Split(Path.PathSeparator, StringSplitOptions.RemoveEmptyEntries))
-        {
-            try
-            {
-                var candidate = Path.Combine(dir.Trim(), "node.exe");
-                if (File.Exists(candidate)) return candidate;
-            }
-            catch
-            {
-                // Ignore malformed PATH entries.
-            }
-        }
-
-        return null;
-    }
-
     private static void StartServer(string appDir, string nodePath)
     {
-        var startInfo = new ProcessStartInfo
-        {
-            FileName = nodePath,
-            WorkingDirectory = appDir,
-            UseShellExecute = false,
-            CreateNoWindow = true,
-        };
-        startInfo.ArgumentList.Add("main.js");
+        var startInfo = LaunchPolicy.ServerStartInfo(appDir, nodePath);
 
         var process = new Process { StartInfo = startInfo };
         if (!process.Start())
@@ -151,25 +78,12 @@ internal static class Program
 
     private static async Task<bool> WaitForServerAsync(TimeSpan timeout)
     {
-        using var client = new HttpClient { Timeout = TimeSpan.FromSeconds(2) };
+        using var client = LaunchPolicy.CreateHealthClient();
         var deadline = DateTime.UtcNow + timeout;
 
         while (DateTime.UtcNow < deadline)
         {
-            try
-            {
-                using var response = await client.GetAsync($"{Url}/api/meta");
-                if (response.IsSuccessStatusCode) return true;
-            }
-            catch (HttpRequestException)
-            {
-            }
-            catch (TaskCanceledException)
-            {
-            }
-            catch (SocketException)
-            {
-            }
+            if (await LaunchPolicy.IsCalculatorAsync(client, new Uri(LaunchPolicy.HealthUrl))) return true;
 
             await Task.Delay(500);
         }

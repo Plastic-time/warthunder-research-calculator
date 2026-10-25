@@ -1,4 +1,4 @@
-const axios = require("axios");
+const { fetchWikiPage } = require('./wiki-http');
 const cheerio = require("cheerio");
 
 function cleanText(value) {
@@ -55,14 +55,7 @@ async function request_details(data_unit_id, options = {}) {
   if (!/^[a-z0-9_-]{1,160}$/i.test(data_unit_id || "")) throw new Error("Invalid unit ID");
   const url = `https://wiki.warthunder.com/unit/${data_unit_id}`;
 
-  const { data: html } = await axios.get(url, {
-    timeout: 30000,
-    signal: options.signal,
-    maxContentLength: 12 * 1024 * 1024,
-    headers: {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-    },
-  });
+  const html = await fetchWikiPage(url, { signal: options.signal });
 
   const $ = cheerio.load(html);
   const $unit = $(".game-unit").first();

@@ -68,6 +68,7 @@ Copy-Item -LiteralPath (Join-Path $root "tools\\package-release.ps1") -Destinati
 Copy-Item -LiteralPath (Join-Path $root "tools\\check-release-privacy.ps1") -Destination (Join-Path $sourceRoot "tools") -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\WarThunderResearchLauncher.csproj") -Destination $sourceLauncherRoot -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\Program.cs") -Destination $sourceLauncherRoot -Force
+Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\LaunchPolicy.cs") -Destination $sourceLauncherRoot -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\app.manifest") -Destination $sourceLauncherRoot -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\NuGet.Config") -Destination $sourceLauncherRoot -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\packages.lock.json") -Destination $sourceLauncherRoot -Force

@@ -36,6 +36,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: npm run audit:dependencies
+      - run: npm run test:launcher-security
+      - run: dotnet build tools/launcher/WarThunderResearchLauncher.csproj --no-restore -c Release
+      - run: npm run test:wiki-http
       - name: Check request handling
         run: npm run test:security
       - run: node tools/test-wiki.cjs
