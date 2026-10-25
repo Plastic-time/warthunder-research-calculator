@@ -88,7 +88,7 @@ NuGet 行为依据：[微软 NuGet 审计文档](https://learn.microsoft.com/en-
 - 本次没有改写任何图标。金鹰、国旗和图标的来源与版权说明继续保留；检查不是完整的图像解码器审计、上游供应链证明或浏览器漏洞扫描，也不是给任意上传 SVG 使用的通用清洗器。未来新图形语法需先审查并扩展测试，不得仅更新哈希绕过失败。
 - 全量 `audit:dependencies`、Application Checks、Release 及 Pages 依赖的浏览器检查均运行内容审计。新审计工具自身在 npm 漏洞审计范围内，只作为开发依赖，不打入正式运行依赖。
 - 移除根目录历史 `WarThunderResearchCalculator.exe`：162461 字节，SHA-256 `8a1005d9b210e25a476a3e2c8bdb40310acca12a9afa328b9e98330edfa5da71`，由提交 `4dc4123` 引入。只做静态检查，未执行。外层为无 CLI 目录的 x64 PE；嵌入运行时配置声明 `net6.0` 及 Microsoft.NETCore.App / Microsoft.WindowsDesktop.App 6.0.0。这是框架依赖配置，不代表内置或机器实际加载的运行时版本。
-- [.NET 6 已于 2024-11-12 停止支持](https://devblogs.microsoft.com/dotnet/dotnet-6-end-of-support/)。旧文件未签名不等于恶意软件；移除原因是已被替代、依赖过时框架且绕过当前源码构建审计。当前根目录不再分发它，历史 Git 提交及旧 Release 不做重写或删除。最新 v1.0.27 安装包、素材和启动器源码保持不变。
+- [.NET 6 已于 2024-11-12 停止支持](https://devblogs.microsoft.com/dotnet/dotnet-6-end-of-support/)。旧文件未签名不等于恶意软件；移除原因是已被替代、依赖过时框架且绕过当前源码构建审计。当前根目录不再分发它，历史 Git 提交及旧 Release 不做重写或删除。该次移除操作保留了当时的 v1.0.27 安装包、素材和启动器源码；最新发布以 README 下载链接为准。
 - 仓库入口检查现在拒绝任何已跟踪或未忽略的 EXE/DLL/WASM/JAR，即使登记为 `tracked-only` 也不能放行。生成目录仍按现有 `.gitignore` 排除；正式包只取 `tools/build-launcher.cjs` 当次从源码构建、运行时审计通过的输出。未来确需提交其他二进制，必须先新增可信来源和审计流程。
 
 固定引用和最小权限依据：[GitHub 安全使用参考](https://docs.github.com/en/actions/reference/security/secure-use)。

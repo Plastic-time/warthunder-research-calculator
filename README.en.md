@@ -69,9 +69,9 @@ On mobile, open More at the top to find the guide and export controls. Search an
 
 **Backup and restore**: select the backup icon at the top right. On mobile, open More, then Backup and restore. Export a JSON file to save targets, owned marks, waypoints, RP progress, and modification records across all trees in this browser. Import shows a summary before confirmation. Only records in the file are replaced. Other plans stay unchanged. Files are processed locally and are not uploaded. This is a manual transfer, not automatic device sync.
 
-Open the web app to start. No game account is required. On Windows, download the [v1.0.27 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.27/WarThunderResearchCalculator-v1.0.27-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js or .NET installation is needed.
+Open the web app to start. No game account is required. On Windows, download the [v1.0.28 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.28/WarThunderResearchCalculator-v1.0.28-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js or .NET installation is needed.
 
-> v1.0.27 includes the interface, planning features and data available at this release. The launcher bundles .NET 10.0.13. It does not receive later web updates automatically. Screenshots illustrate the interface.
+> v1.0.28 includes the interface, planning features and data available at this release. The launcher bundles .NET 10.0.13. It does not receive later web updates automatically. Screenshots illustrate the interface.
 
 Select all, in Filters, toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
 
@@ -100,7 +100,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - [Online counter rules](doc/online-counter.md) (Chinese)
 - [Modification artwork sources](doc/ammunition-artwork.md) (Chinese)
 - [Vehicle snapshot manifest](docs/database/manifest.json) · [Modification audit](tools/modifications-audit.json)
-- [v1.0.27 notes](doc/release-v1.0.27.md) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.28 notes](doc/release-v1.0.28.md) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 

@@ -69,9 +69,9 @@
 
 **备份与恢复**：电脑端点击右上角的备份图标，手机端打开“更多 → 备份与恢复”。导出 JSON 文件可保存当前浏览器中所有科技树的目标、已拥有标记、途经点、RP 进度和配件记录。导入前会显示记录数量与覆盖数量，确认后只替换文件中包含的记录，其他计划保留。文件在本机处理，不上传服务器；这不是自动跨设备同步。
 
-网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.27 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.27/WarThunderResearchCalculator-v1.0.27-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js 或 .NET。
+网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.28 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.28/WarThunderResearchCalculator-v1.0.28-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js 或 .NET。
 
-> v1.0.27 包含本次发布时的界面、规划功能与数据，启动器自带 .NET 10.0.13。下载包不会自动获得后续网页更新；截图用于展示界面。
+> v1.0.28 包含本次发布时的界面、规划功能与数据，启动器自带 .NET 10.0.13。下载包不会自动获得后续网页更新；截图用于展示界面。
 
 “筛选”菜单中的“全选”可选择或取消当前国家、军种的常规研发载具，包含折叠载具，保留已拥有标记和研发进度。导出截图同时显示科技树原始总额与当前选择还需的 RP、银狮；缺失费用会单独提示。
 
@@ -100,7 +100,7 @@
 - [在线人数统计规则](doc/online-counter.md)
 - [配件图标来源](doc/ammunition-artwork.md)
 - [载具快照清单](docs/database/manifest.json) · [配件核对记录](tools/modifications-audit.json)
-- [v1.0.27 更新说明](doc/release-v1.0.27.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.28 更新说明](doc/release-v1.0.28.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 

@@ -115,6 +115,19 @@ jobs:
                 finally { $stream.Dispose(); $sha.Dispose() }
                 if ($hash -ne (Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash) { throw "Stale image in $zipPath" }
               }
+              $securityFiles = @("src/wiki-http.js", "src/1-extract_tree_div.js", "src/3-request_details.js")
+              if ($suffix -eq "") {
+                $securityFiles += @("tools/launcher/LaunchPolicy.cs", "tools/launcher/Program.cs", "tools/check-launcher-policy.cjs", "tools/fixtures/launcher-policy-tests.cs")
+              }
+              foreach ($file in $securityFiles) {
+                $entry = $archive.Entries | Where-Object { $_.FullName.Replace('\', '/') -eq $file }
+                if (-not $entry) { throw "Missing security fix: $file" }
+                $stream = $entry.Open()
+                $sha = [System.Security.Cryptography.SHA256]::Create()
+                try { $hash = [BitConverter]::ToString($sha.ComputeHash($stream)).Replace('-', '') }
+                finally { $stream.Dispose(); $sha.Dispose() }
+                if ($hash -ne (Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash) { throw "Stale security fix: $file" }
+              }
               if ($suffix -eq "-portable") {
                 foreach ($file in @("node.exe", "WarThunderResearchCalculator.exe")) {
                   $entry = $archive.GetEntry($file)
