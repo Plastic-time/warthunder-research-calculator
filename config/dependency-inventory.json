@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "calculator",
+      "kind": "npm",
+      "coverage": "npm-audit",
+      "files": ["package.json", "package-lock.json"]
+    },
+    {
+      "id": "online-counter",
+      "kind": "npm",
+      "coverage": "npm-audit",
+      "files": ["cloudflare/online/package.json", "cloudflare/online/package-lock.json"]
+    },
+    {
+      "id": "windows-launcher",
+      "kind": "nuget",
+      "coverage": "tracked-only",
+      "files": ["tools/launcher/WarThunderResearchLauncher.csproj"],
+      "note": "No explicit PackageReference today. Dedicated NuGet and bundled .NET runtime security gates are pending; release-time restore is not a complete runtime audit."
+    },
+    {
+      "id": "github-actions",
+      "kind": "github-actions",
+      "coverage": "tracked-only",
+      "files": [
+        ".github/workflows/browser-checks.yml",
+        ".github/workflows/commit-privacy.yml",
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/online.yml",
+        ".github/workflows/release.yml",
+        ".github/workflows/security.yml"
+      ],
+      "note": "Workflow entry points only. Action version inventory, SHA pinning and automated version maintenance are pending."
+    },
+    {
+      "id": "html-to-image",
+      "kind": "vendored",
+      "coverage": "tracked-only",
+      "version": "1.11.13",
+      "files": ["public/html-to-image.js", "docs/html-to-image.js", "public/html-to-image.LICENSE.txt", "docs/html-to-image.LICENSE.txt"],
+      "note": "Copied browser library, outside npm lockfiles. Automated advisory and upstream integrity checks are pending."
+    },
+    {
+      "id": "icon-assets",
+      "kind": "assets",
+      "coverage": "tracked-only",
+      "files": ["public/assets/flags/LICENSE-flag-icons.txt", "docs/assets/flags/LICENSE-flag-icons.txt", "public/assets/navigation/LICENSE-lucide.txt", "docs/assets/navigation/LICENSE-lucide.txt", "public/assets/wiki/LICENSE", "docs/assets/wiki/LICENSE"],
+      "note": "Static third-party icons; license entry points are recorded. This is not an automated SVG or supply-chain security scan."
+    },
+    {
+      "id": "legacy-launcher-artifact",
+      "kind": "binary",
+      "coverage": "tracked-only",
+      "files": ["WarThunderResearchCalculator.exe"],
+      "note": "Existing checked-in launcher, not the launcher rebuilt by the release workflow. Binary provenance and runtime inspection remain pending."
+    }
+  ]
+}

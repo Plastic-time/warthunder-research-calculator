@@ -75,6 +75,10 @@ request, including development dependencies. It does not require an online-count
 file change. Online Counter Checks also audits installed dependencies before testing
 and building. Neither check automatically fixes or dismisses vulnerabilities.
 
+The shared [dependency inventory](../../doc/dependency-inventory.md) drives the main
+audit. New npm projects must be registered before checks pass. From the repository
+root, run `npm run audit:dependencies` to check all registered npm projects.
+
 Use Node.js 24 with npm, then run these commands from this directory:
 
 ```sh

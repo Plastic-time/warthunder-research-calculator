@@ -32,7 +32,7 @@ jobs:
 
       - name: Application regression checks
         run: |
-          npm audit --audit-level=low
+          npm run audit:dependencies
           if ($LASTEXITCODE -ne 0) { throw "Dependency audit failed" }
           npm run test:security
           if ($LASTEXITCODE -ne 0) { throw "Security tests failed" }
