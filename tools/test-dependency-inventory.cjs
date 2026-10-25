@@ -28,19 +28,17 @@ function fixture(t) {
   return { root, files, inventory, write, project, check: () => validateInventory(root, inventory, files) };
 }
 
-test('registered npm projects produce audit directories; known non-npm gaps stay explicit', t => {
+test('registered npm projects produce audit directories without unclaimed coverage', t => {
   const f = fixture(t);
   f.project('cloud/counter', 'counter');
-  f.write('old.exe', 'test binary');
-  f.inventory.entries.push({ id: 'binary', kind: 'binary', coverage: 'tracked-only', files: ['old.exe'], note: 'Historical binary audit pending.' });
   const report = f.check();
   assert.deepEqual(report.npmProjects.map(p => p.directory), ['.', 'cloud/counter']);
-  assert.equal(report.trackedOnly[0].id, 'binary');
-  assert.equal(report.registeredFiles, 5);
+  assert.equal(report.trackedOnly.length, 0);
+  assert.equal(report.registeredFiles, 4);
 });
 
 test('new package manifests, orphan locks, workflows, licenses and binary files cannot be silently omitted', t => {
-  for (const file of ['nested/package.json', 'nested/package-lock.json', '.github/workflows/new.yml', 'assets/LICENSE-new.txt', 'new.exe', 'vendor/new.js', 'new.min.js']) {
+  for (const file of ['nested/package.json', 'nested/package-lock.json', '.github/workflows/new.yml', 'assets/LICENSE-new.txt', 'new.svg', 'vendor/new.js', 'new.min.js']) {
     const f = fixture(t);
     f.write(file, '{}');
     assert.throws(f.check, /not registered/, file);
@@ -100,14 +98,19 @@ test('manifest and lockfile must belong to the same directory; workspaces requir
   assert.throws(f.check, /workspaces need explicit audit support/);
 });
 
-test('pending audit entries require an explanation and cannot report automated coverage', t => {
+test('checked-in executables cannot bypass the gate by registering tracked-only coverage', t => {
   const f = fixture(t);
   f.write('old.exe', 'test binary');
   const entry = { id: 'binary', kind: 'binary', coverage: 'tracked-only', files: ['old.exe'] };
   f.inventory.entries.push(entry);
-  assert.throws(f.check, /explain the remaining audit gap/);
+  assert.throws(f.check, /checked-in binaries are forbidden/);
   entry.note = 'Pending'; entry.coverage = 'npm-audit';
-  assert.throws(f.check, /no automated auditor/);
+  assert.throws(f.check, /checked-in binaries are forbidden/);
+  for (const file of ['nested/new.DLL', 'other.wasm', 'nested/app.jar']) {
+    const g = fixture(t);
+    g.write(file, 'binary');
+    assert.throws(g.check, /checked-in binaries are forbidden/);
+  }
 });
 
 test('inventory paths cannot escape the repository or follow directory links', t => {
@@ -164,6 +167,7 @@ test('CLI rejects an unregistered project before starting audit and picks it up 
   f.write('tools/audit-vendored-dependencies.cjs', fs.readFileSync(path.join(__dirname, 'audit-vendored-dependencies.cjs'), 'utf8'));
   f.write('tools/audit-dotnet-dependencies.cjs', fs.readFileSync(path.join(__dirname, 'audit-dotnet-dependencies.cjs'), 'utf8'));
   f.write('tools/audit-github-actions.cjs', fs.readFileSync(path.join(__dirname, 'audit-github-actions.cjs'), 'utf8'));
+  f.write('tools/audit-static-assets.cjs', fs.readFileSync(path.join(__dirname, 'audit-static-assets.cjs'), 'utf8'));
   f.write('config/dependency-inventory.json', f.inventory);
   const extra = f.project('new service', 'new-service');
   f.write('fake-npm.cjs', "require('node:fs').appendFileSync(process.env.AUDIT_LOG, process.cwd() + '\\n');");

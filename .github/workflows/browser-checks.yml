@@ -21,6 +21,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm run check:actions
+      - run: npm run audit:assets
       - name: Audit Actions before browser and Pages checks
         env:
           GH_TOKEN: ${{ github.token }}

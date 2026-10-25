@@ -5,6 +5,7 @@ const { execFileSync, spawnSync } = require('node:child_process');
 const { validateVendored, auditVendored } = require('./audit-vendored-dependencies.cjs');
 const { validateDotnet, auditDotnet } = require('./audit-dotnet-dependencies.cjs');
 const { validateActionsEntry, auditActions } = require('./audit-github-actions.cjs');
+const { validateAssets, auditAssets } = require('./audit-static-assets.cjs');
 
 const root = path.resolve(__dirname, '..');
 const inventoryPath = 'config/dependency-inventory.json';
@@ -17,6 +18,7 @@ function candidateKind(file) {
   if (/\.(?:csproj|fsproj|vbproj)$/i.test(base) || /^(?:packages\.(?:config|lock\.json)|Directory\.(?:Packages|Build)\.(?:props|targets)|NuGet\.config|global\.json)$/i.test(base)) return 'nuget';
   if (/^\.github\/(?:workflows\/[^/]+\.ya?ml|dependabot\.ya?ml)$/i.test(file) || /^action\.ya?ml$/i.test(base)) return 'github-actions';
   if (/\.(?:exe|dll|wasm|jar)$/i.test(base)) return 'binary';
+  if (/\.svg$/i.test(base)) return 'assets';
   if (unsupported.test(base)) return 'unsupported';
   if (/license|^notice(?:\.|$)/i.test(base)) return 'license';
   if (/\.min\.js$/i.test(base) || /(?:^|\/)(?:vendor|third[-_]party)\//i.test(file)) return 'vendored';
@@ -44,7 +46,8 @@ function repositoryFiles(base) {
 function validateInventory(base, inventory, files) {
   assert.equal(inventory.schemaVersion, 1, 'Unsupported dependency inventory schema');
   assert(Array.isArray(inventory.entries) && inventory.entries.length, 'Inventory entries are required');
-  const ids = new Set(), owners = new Map(), listed = new Set(files), npmProjects = [], vendoredPackages = [], dotnetProjects = [], actionEntries = [], trackedOnly = [];
+  const ids = new Set(), owners = new Map(), listed = new Set(files), npmProjects = [], vendoredPackages = [], dotnetProjects = [], actionEntries = [], assetEntries = [], trackedOnly = [];
+  for (const file of files) assert(candidateKind(file) !== 'binary', `${file}: checked-in binaries are forbidden; build audited release artifacts from source`);
   const read = file => JSON.parse(fs.readFileSync(safeFile(base, file), 'utf8'));
   for (const entry of inventory.entries) {
     assert(typeof entry.id === 'string' && /^[a-z0-9-]+$/.test(entry.id) && !ids.has(entry.id), 'Invalid or duplicate inventory ID');
@@ -67,6 +70,10 @@ function validateInventory(base, inventory, files) {
     }
     if (entry.kind === 'github-actions') {
       actionEntries.push(validateActionsEntry(entry));
+      continue;
+    }
+    if (entry.kind === 'assets') {
+      assetEntries.push(validateAssets(entry, file => fs.readFileSync(safeFile(base, file))));
       continue;
     }
     if (entry.kind !== 'npm') {
@@ -102,7 +109,7 @@ function validateInventory(base, inventory, files) {
     else assert.equal(entry.kind, kind, `${file}: dependency kind mismatch`);
   }
   assert(npmProjects.length, 'No npm projects are audited');
-  return { npmProjects, vendoredPackages, dotnetProjects, actionEntries, trackedOnly, registeredFiles: owners.size };
+  return { npmProjects, vendoredPackages, dotnetProjects, actionEntries, assetEntries, trackedOnly, registeredFiles: owners.size };
 }
 
 function auditProjects(base, projects, npmCli, run = spawnSync) {
@@ -121,11 +128,13 @@ function auditProjects(base, projects, npmCli, run = spawnSync) {
 async function main() {
   try {
     const args = process.argv.slice(2);
-    assert(args.length === 0 || (args.length === 1 && ['--audit', '--audit-vendored', '--audit-dotnet', '--audit-actions'].includes(args[0])), 'Unknown audit option');
+    assert(args.length === 0 || (args.length === 1 && ['--audit', '--audit-vendored', '--audit-dotnet', '--audit-actions', '--audit-assets'].includes(args[0])), 'Unknown audit option');
     const inventory = JSON.parse(fs.readFileSync(safeFile(root, inventoryPath), 'utf8'));
     const report = validateInventory(root, inventory, repositoryFiles(root));
-    console.log(JSON.stringify({ inventoryValid: true, ...report }, null, 2));
+    console.log(JSON.stringify({ inventoryValid: true, ...report, assetEntries: report.assetEntries.map(entry => ({ id: entry.id, coverage: entry.coverage, files: entry.files.length })) }, null, 2));
     console.log('Tracked-only entries are NOT vulnerability-audited by this check.');
+    if (args.includes('--audit') || args.includes('--audit-assets'))
+      console.log(JSON.stringify(auditAssets(report.assetEntries, file => fs.readFileSync(safeFile(root, file)))));
     if (args.includes('--audit')) auditProjects(root, report.npmProjects, process.env.npm_execpath);
     if (args.includes('--audit') || args.includes('--audit-vendored')) await auditVendored(report.vendoredPackages);
     if (args.includes('--audit') || args.includes('--audit-dotnet')) await auditDotnet(root, report.dotnetProjects);

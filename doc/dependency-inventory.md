@@ -10,8 +10,8 @@
 | Windows 启动器 | 锁定还原、直接及间接 NuGet 漏洞审计、当前受支持运行时补丁与发布版本核验 |
 | GitHub Actions | 全 SHA 固定、直接/间接引用核验、已知漏洞查询、工作流权限检查和 Dependabot 更新 PR |
 | html-to-image | 两份 1.11.13 脚本及许可证的本地校验、npm 发布包完整性核对、已知漏洞查询 |
-| 第三方图标 | 登记许可证入口；不是 SVG 安全扫描 |
-| 仓库内旧启动器二进制 | 显式登记；不等于验证其来源、内置运行时或最新安装包 |
+| 静态 SVG 与许可证 | 精确 SHA-256、两版资源一致性、XML/CSS 内容安全检查 |
+| 仓库内旧启动器二进制 | 已移除过时根目录副本；禁止重新提交二进制，安装包继续从源码构建 |
 
 尚未接入扫描器的类型必须标记 `tracked-only` 并说明缺口，检查输出会始终列出它们。npm、NuGet、GitHub Actions 与 `vendored` 浏览器包不能使用该标记跳过审计。npm 审计本身不覆盖 Node.js 或 .NET 运行时。
 
@@ -28,6 +28,8 @@ npm run audit:dotnet
 npm run check:actions
 npm run test:actions
 npm run audit:actions
+npm run audit:assets
+npm run test:assets
 ```
 
 - `check:dependencies` 不访问网络。通过 Git 文件清单发现已跟踪文件和未被忽略的新文件，包括新增子目录；不遍历安装生成的 `node_modules`。已经跟踪但后来被忽略的文件仍会检查。
@@ -77,7 +79,17 @@ NuGet 行为依据：[微软 NuGet 审计文档](https://learn.microsoft.com/en-
 - 默认令牌仅 `contents: read`。只有 Pages 的 main 分支部署作业获得 `pages: write` 和 `id-token: write`，并使用 `github-pages` 环境；手动执行也限制在 main。共享浏览器作业先完成 Actions 审计，Pages 等待它通过，不能跳过或替换依赖作业。checkout 均为 `persist-credentials: false`；拒绝 `pull_request_target`、`workflow_run`、秘密继承、忽略失败和将表达式直接插入 shell 脚本。
 - Dependabot 每周提出 Action 更新 PR，不自动合并。更新后需同步审查清单中的版本与 SHA，重新核验间接引用及公告；只改 workflow、不更新清单会失败。通过精确版本主动查询公告，不能把 SHA 固定本身当作 Dependabot 漏洞告警的保证。
 
-安装前的清单检查只验证入口登记和 pin 格式；YAML 策略及联网审计在安装开发依赖后执行。这是仓库 CI 门禁，不是 runner 原生执行前的工作流锁文件，也不替代分支保护或人工审查。它不扫描 Action 打包后的全部内部 npm 依赖、运行脚本的所有逻辑、托管 runner 镜像及未知漏洞。静态图标与仓库内历史启动器仍保持明确的待审计状态。
+安装前的清单检查只验证入口登记和 pin 格式；YAML 策略及联网审计在安装开发依赖后执行。这是仓库 CI 门禁，不是 runner 原生执行前的工作流锁文件，也不替代分支保护或人工审查。它不扫描 Action 打包后的全部内部 npm 依赖、运行脚本的所有逻辑、托管 runner 镜像及未知漏洞。
+
+## 静态图标与旧启动器
+
+- 清单登记仓库内全部 75 份 SVG（网页两套各 37 份，加文档头像）及其许可证、来源说明。安装前校验精确字节 SHA-256 和 public/docs 镜像一致性；新增 SVG 未登记、文件被替换或遗漏副本均失败。指纹只表示本次审查的文件，不能冒充上游签名认证。
+- `audit:assets` 使用锁定的开发依赖 `saxes` 和 `css-tree` 解析 XML 命名空间与 CSS 语法。只允许现有图标所需的静态元素、属性、绘图属性和本文件片段引用；拒绝脚本、事件属性、foreignObject、动画、外部资源、DTD、处理指令及不支持的 CSS。设置文件大小、元素数量和嵌套深度上限。文档头像只允许内嵌 JPEG，检查规范 Base64 与 JPEG 起止标识，不能混入 SVG/HTML 数据链接。
+- 本次没有改写任何图标。金鹰、国旗和图标的来源与版权说明继续保留；检查不是完整的图像解码器审计、上游供应链证明或浏览器漏洞扫描，也不是给任意上传 SVG 使用的通用清洗器。未来新图形语法需先审查并扩展测试，不得仅更新哈希绕过失败。
+- 全量 `audit:dependencies`、Application Checks、Release 及 Pages 依赖的浏览器检查均运行内容审计。新审计工具自身在 npm 漏洞审计范围内，只作为开发依赖，不打入正式运行依赖。
+- 移除根目录历史 `WarThunderResearchCalculator.exe`：162461 字节，SHA-256 `8a1005d9b210e25a476a3e2c8bdb40310acca12a9afa328b9e98330edfa5da71`，由提交 `4dc4123` 引入。只做静态检查，未执行。外层为无 CLI 目录的 x64 PE；嵌入运行时配置声明 `net6.0` 及 Microsoft.NETCore.App / Microsoft.WindowsDesktop.App 6.0.0。这是框架依赖配置，不代表内置或机器实际加载的运行时版本。
+- [.NET 6 已于 2024-11-12 停止支持](https://devblogs.microsoft.com/dotnet/dotnet-6-end-of-support/)。旧文件未签名不等于恶意软件；移除原因是已被替代、依赖过时框架且绕过当前源码构建审计。当前根目录不再分发它，历史 Git 提交及旧 Release 不做重写或删除。最新 v1.0.27 安装包、素材和启动器源码保持不变。
+- 仓库入口检查现在拒绝任何已跟踪或未忽略的 EXE/DLL/WASM/JAR，即使登记为 `tracked-only` 也不能放行。生成目录仍按现有 `.gitignore` 排除；正式包只取 `tools/build-launcher.cjs` 当次从源码构建、运行时审计通过的输出。未来确需提交其他二进制，必须先新增可信来源和审计流程。
 
 固定引用和最小权限依据：[GitHub 安全使用参考](https://docs.github.com/en/actions/reference/security/secure-use)。
 

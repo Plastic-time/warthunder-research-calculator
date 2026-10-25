@@ -38,6 +38,8 @@ jobs:
         run: |
           npm run test:actions
           if ($LASTEXITCODE -ne 0) { throw "Actions audit regression failed" }
+          npm run test:assets
+          if ($LASTEXITCODE -ne 0) { throw "Static asset audit regression failed" }
           npm run test:dependency-inventory
           if ($LASTEXITCODE -ne 0) { throw "Dependency audit regression failed" }
           npm run audit:dependencies

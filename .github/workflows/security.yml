@@ -29,6 +29,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run check:actions
       - run: npm run test:actions
+      - run: npm run test:assets
       - run: npm run check:web-assets
       - run: npm run test:web-assets
       - name: Audit all registered executable dependencies
