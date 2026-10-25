@@ -21,10 +21,13 @@ jobs:
       - name: Reject unregistered dependency entry points
         run: npm run check:dependencies
       - run: npm run test:dependency-inventory
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
       - run: npm ci --ignore-scripts
       - run: npm run check:web-assets
       - run: npm run test:web-assets
-      - name: Audit npm projects and vendored browser libraries
+      - name: Audit npm, vendored browser libraries and .NET launcher
         run: npm run audit:dependencies
       - name: Check request handling
         run: npm run test:security

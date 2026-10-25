@@ -32,6 +32,8 @@ jobs:
 
       - name: Application regression checks
         run: |
+          npm run test:dependency-inventory
+          if ($LASTEXITCODE -ne 0) { throw "Dependency audit regression failed" }
           npm run audit:dependencies
           if ($LASTEXITCODE -ne 0) { throw "Dependency audit failed" }
           npm run test:security

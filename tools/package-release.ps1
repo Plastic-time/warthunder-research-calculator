@@ -31,7 +31,7 @@ New-Item -ItemType Directory -Path $launcherOutput, $portableRoot, $sourceRoot -
 
 Push-Location $root
 try {
-  dotnet publish ./tools/launcher/WarThunderResearchLauncher.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true "-p:Version=$Version" -o $launcherOutput
+  node ./tools/build-launcher.cjs $launcherOutput $Version
   if ($LASTEXITCODE -ne 0) { throw "Failed to build the Windows launcher." }
 } finally {
   Pop-Location
@@ -69,6 +69,8 @@ Copy-Item -LiteralPath (Join-Path $root "tools\\check-release-privacy.ps1") -Des
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\WarThunderResearchLauncher.csproj") -Destination $sourceLauncherRoot -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\Program.cs") -Destination $sourceLauncherRoot -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\app.manifest") -Destination $sourceLauncherRoot -Force
+Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\NuGet.Config") -Destination $sourceLauncherRoot -Force
+Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\packages.lock.json") -Destination $sourceLauncherRoot -Force
 Get-ChildItem -LiteralPath (Join-Path $root "tools") -Filter '*.cjs' | Copy-Item -Destination (Join-Path $sourceRoot "tools")
 Copy-Item -LiteralPath (Join-Path $root "tools\\fixtures") -Destination (Join-Path $sourceRoot "tools") -Recurse
 

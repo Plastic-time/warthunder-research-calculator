@@ -7,13 +7,13 @@
 | 分组 | 覆盖 |
 | --- | --- |
 | 主计算器、在线人数服务 | 两套 npm 项目自动审计，包含生产、开发、可选和 peer 依赖 |
-| Windows 启动器 | 登记 .NET 项目；专用 NuGet / 内置运行时检查待补 |
+| Windows 启动器 | 锁定还原、直接及间接 NuGet 漏洞审计、当前受支持运行时补丁与发布版本核验 |
 | GitHub Actions | 登记工作流入口；具体 Action 版本维护及 SHA 固定待补 |
 | html-to-image | 两份 1.11.13 脚本及许可证的本地校验、npm 发布包完整性核对、已知漏洞查询 |
 | 第三方图标 | 登记许可证入口；不是 SVG 安全扫描 |
 | 仓库内旧启动器二进制 | 显式登记；不等于验证其来源、内置运行时或最新安装包 |
 
-尚未接入扫描器的类型必须标记 `tracked-only` 并说明缺口，检查输出会始终列出它们。npm 项目与 `vendored` 浏览器包不能使用该标记跳过审计。npm 审计也不覆盖 Node.js 或 .NET 运行时本身。
+尚未接入扫描器的类型必须标记 `tracked-only` 并说明缺口，检查输出会始终列出它们。npm、NuGet 项目与 `vendored` 浏览器包不能使用该标记跳过审计。npm 审计本身不覆盖 Node.js 或 .NET 运行时。
 
 ## 检查命令
 
@@ -24,12 +24,13 @@ npm run check:dependencies
 npm run test:dependency-inventory
 npm run audit:dependencies
 npm run audit:vendored
+npm run audit:dotnet
 ```
 
 - `check:dependencies` 不访问网络。通过 Git 文件清单发现已跟踪文件和未被忽略的新文件，包括新增子目录；不遍历安装生成的 `node_modules`。已经跟踪但后来被忽略的文件仍会检查。
 - 未登记的包清单、锁文件、.NET 项目、工作流、新二进制、许可证入口、`vendor` / `third-party` 目录及 `.min.js` 文件会失败。缺失文件、重复归属、路径越界、符号链接、npm 清单与锁文件不同步也会失败。
 - Python、Rust、Go、其他包管理器等已知但未接入审计的入口会直接失败，不会当作未知普通文件跳过。npm workspaces 暂不支持，不能冒充独立项目登记。
-- `audit:dependencies` 先检查清单，再按清单自动审计全部 npm 项目及内置浏览器库。目录不写死在工作流里。npm 审计显式包含各类依赖，使用锁文件且不运行安装脚本、不执行自动修复；漏洞、网络错误、超时和异常退出均使检查失败。
+- `audit:dependencies` 先检查清单，再按清单自动审计全部 npm 项目、内置浏览器库和 .NET 项目。目录不写死在工作流里。npm 审计显式包含各类依赖，使用锁文件且不运行安装脚本、不执行自动修复；漏洞、网络错误、超时和异常退出均使检查失败。.NET 联网审计需要稳定版 .NET 10 SDK。
 - `audit:vendored` 仅运行内置浏览器库的联网审计，但仍会先检查整个依赖清单。
 - 主 Application Checks 在每次 main 推送、PR 和手动执行时运行上述检查。安装依赖之前先检查遗漏。Release 工作流也调用同一审计入口；不会因修改此清单而自动触发打包。
 
@@ -51,5 +52,16 @@ npm run audit:vendored
 4. 向 [npm Bulk Advisory 接口](https://docs.npmjs.com/cli/v11/commands/npm-audit/#bulk-advisory-endpoint) 发送公开包名和固定版本，查询已知漏洞。任意严重级别的公告都会失败。请求限定 npm 官方 registry，禁止重定向并设置超时、响应大小及结构检查；失败不能降级为“0 漏洞”。
 
 当前扫描器只接收无运行时依赖的固定 npm 浏览器包。元数据或归档中新增生产、可选、peer 或 bundled 依赖时会失败，需先扩展审计覆盖，不能只改版本放行。开发依赖不属于网页运行时审计范围。
+
+## 启动器审计
+
+`nuget-audit` 登记项目、`packages.lock.json` 和独立 `NuGet.Config`。离线检查拒绝降级覆盖和修改已复核的官方源配置（只归一化 CRLF/LF）；任何策略变更都需同时审查配置与指纹。联网步骤使用 .NET 自身的 MSBuild 求值和 NuGet 解析，不用字符串解析项目依赖。
+
+- 强制 `NuGetAudit=true`、`NuGetAuditMode=all`、`NuGetAuditLevel=low`，拒绝 NuGetAuditSuppress、隐藏审计告警及未经扩展支持的项目引用。使用官方包源和显式漏洞源。按锁文件强制重新还原并禁用 HTTP 缓存，告警按错误处理；NU1900 至 NU1905 也会被外层检查拦截。
+- 解析 `dotnet list package --vulnerable --include-transitive --format json`，不能仅凭命令退出码判断无漏洞；缺失报告、错误源或漏洞项均阻断。当前无显式 PackageReference，未来加入依赖也须更新锁文件并接受同一审计。
+- 内置运行时不冒充普通 NuGet 包审计结果。读取微软 [.NET 10 官方发布元数据](https://builds.dotnet.microsoft.com/dotnet/release-metadata/10.0/releases.json)，要求固定的 RuntimeFrameworkVersion 等于当前受支持稳定补丁，并核验实际还原的 Core / Windows Desktop runtime packs。过期、预览、未知结构或网络失败均阻断。补丁变化时人工复核后更新项目并重新打包，不自动改源码。
+- `build:launcher` 和 `package:release` 共用构建入口；发布前重新审计，`publish --no-restore` 避免重新解析依赖，发布后核对包含的运行时配置。原生库随单文件启动器打包。此检查不宣称验证旧二进制、系统已安装的 SDK 或所有未知漏洞。
+
+NuGet 行为依据：[微软 NuGet 审计文档](https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages)。当前运行时补丁检查不是逐条 CVE 范围扫描，也不是微软发布者签名认证。
 
 升级截图库时须同时复核版本、发布包 SHA-512、脚本和许可证 SHA-256，再按网页缓存规则同步资源修订并跑导出回归。不得直接修改校验值来放行来源不明的文件。当前校验不等于发布者签名认证、源代码安全证明或没有未知漏洞；成功结果仅代表检查当时的来源匹配和已知公告状态。

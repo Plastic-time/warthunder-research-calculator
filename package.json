@@ -1,11 +1,11 @@
 {
   "name": "server",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
     "dev": "node main.js",
-    "build:launcher": "dotnet publish ./tools/launcher/WarThunderResearchLauncher.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./launcher-dist && powershell -NoProfile -Command \"Copy-Item -Force ./launcher-dist/WarThunderResearchCalculator.exe ./WarThunderResearchCalculator.exe\"",
+    "build:launcher": "node tools/build-launcher.cjs launcher-dist",
     "package:release": "powershell -NoProfile -ExecutionPolicy Bypass -File ./tools/package-release.ps1",
     "build:modifications": "node ./tools/build-modifications.cjs",
     "test:modifications": "node ./tools/test-modifications.cjs",
@@ -20,7 +20,8 @@
     "check:dependencies": "node tools/check-dependency-inventory.cjs",
     "audit:dependencies": "node tools/check-dependency-inventory.cjs --audit",
     "audit:vendored": "node tools/check-dependency-inventory.cjs --audit-vendored",
-    "test:dependency-inventory": "node --test tools/test-dependency-inventory.cjs tools/test-vendored-dependencies.cjs",
+    "audit:dotnet": "node tools/check-dependency-inventory.cjs --audit-dotnet",
+    "test:dependency-inventory": "node --test tools/test-dependency-inventory.cjs tools/test-vendored-dependencies.cjs tools/test-dotnet-dependencies.cjs",
     "pull": "node ./src/4-fill_tree_details.js",
     "pull:usa-ground": "node ./src/4-fill_tree_details.js usa ground"
   },

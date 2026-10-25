@@ -16,9 +16,9 @@
     {
       "id": "windows-launcher",
       "kind": "nuget",
-      "coverage": "tracked-only",
-      "files": ["tools/launcher/WarThunderResearchLauncher.csproj"],
-      "note": "No explicit PackageReference today. Dedicated NuGet and bundled .NET runtime security gates are pending; release-time restore is not a complete runtime audit."
+      "coverage": "nuget-audit",
+      "project": "tools/launcher/WarThunderResearchLauncher.csproj",
+      "files": ["tools/launcher/WarThunderResearchLauncher.csproj", "tools/launcher/NuGet.Config", "tools/launcher/packages.lock.json"]
     },
     {
       "id": "github-actions",
