@@ -61,7 +61,7 @@ test('npm coverage cannot be disabled or disguised as a pending non-npm entry', 
   entry.coverage = 'tracked-only';
   assert.throws(f.check, /cannot skip auditing/);
   entry.kind = 'vendored'; entry.note = 'Not yet audited';
-  assert.throws(f.check, /kind mismatch/);
+  assert.throws(f.check, /vendored packages cannot skip auditing/);
 });
 
 test('stale and incomplete lockfiles are rejected', t => {
@@ -161,6 +161,7 @@ test('CLI rejects an unregistered project before starting audit and picks it up 
   const f = fixture(t);
   execFileSync('git', ['init', '-q'], { cwd: f.root });
   f.write('tools/check-dependency-inventory.cjs', fs.readFileSync(path.join(__dirname, 'check-dependency-inventory.cjs'), 'utf8'));
+  f.write('tools/audit-vendored-dependencies.cjs', fs.readFileSync(path.join(__dirname, 'audit-vendored-dependencies.cjs'), 'utf8'));
   f.write('config/dependency-inventory.json', f.inventory);
   const extra = f.project('new service', 'new-service');
   f.write('fake-npm.cjs', "require('node:fs').appendFileSync(process.env.AUDIT_LOG, process.cwd() + '\\n');");

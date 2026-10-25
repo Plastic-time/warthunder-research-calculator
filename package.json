@@ -19,7 +19,8 @@
     "test:security": "node --test tools/test-server-security.cjs tools/test-update-security.cjs tools/test-proxy-addr-security.cjs",
     "check:dependencies": "node tools/check-dependency-inventory.cjs",
     "audit:dependencies": "node tools/check-dependency-inventory.cjs --audit",
-    "test:dependency-inventory": "node --test tools/test-dependency-inventory.cjs",
+    "audit:vendored": "node tools/check-dependency-inventory.cjs --audit-vendored",
+    "test:dependency-inventory": "node --test tools/test-dependency-inventory.cjs tools/test-vendored-dependencies.cjs",
     "pull": "node ./src/4-fill_tree_details.js",
     "pull:usa-ground": "node ./src/4-fill_tree_details.js usa ground"
   },

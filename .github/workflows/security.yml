@@ -24,7 +24,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run check:web-assets
       - run: npm run test:web-assets
-      - name: Audit every registered npm project
+      - name: Audit npm projects and vendored browser libraries
         run: npm run audit:dependencies
       - name: Check request handling
         run: npm run test:security

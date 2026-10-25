@@ -37,10 +37,23 @@
     {
       "id": "html-to-image",
       "kind": "vendored",
-      "coverage": "tracked-only",
+      "coverage": "npm-vendored-audit",
+      "packageName": "html-to-image",
       "version": "1.11.13",
       "files": ["public/html-to-image.js", "docs/html-to-image.js", "public/html-to-image.LICENSE.txt", "docs/html-to-image.LICENSE.txt"],
-      "note": "Copied browser library, outside npm lockfiles. Automated advisory and upstream integrity checks are pending."
+      "integrity": "sha512-cuOPoI7WApyhBElTTb9oqsawRvZ0rHhaHwghRLlTuffoD1B2aDemlCruLeZrUIIdvG7gs9xeELEPm6PhuASqrg==",
+      "artifacts": [
+        {
+          "archivePath": "package/dist/html-to-image.js",
+          "sha256Lf": "a90b42909d80964269ef6d5f3d1e4a5a7e2a4c263a5d2a76a9e7151901343262",
+          "files": ["public/html-to-image.js", "docs/html-to-image.js"]
+        },
+        {
+          "archivePath": "package/LICENSE",
+          "sha256Lf": "9fe73723f7a9e91057f73aafc9b6a3c3b2174db2b3ddc0a3a6a8ddf2bad68e37",
+          "files": ["public/html-to-image.LICENSE.txt", "docs/html-to-image.LICENSE.txt"]
+        }
+      ]
     },
     {
       "id": "icon-assets",

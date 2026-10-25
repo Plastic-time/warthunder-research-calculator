@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 const { execFileSync, spawnSync } = require('node:child_process');
+const { validateVendored, auditVendored } = require('./audit-vendored-dependencies.cjs');
 
 const root = path.resolve(__dirname, '..');
 const inventoryPath = 'config/dependency-inventory.json';
@@ -41,7 +42,7 @@ function repositoryFiles(base) {
 function validateInventory(base, inventory, files) {
   assert.equal(inventory.schemaVersion, 1, 'Unsupported dependency inventory schema');
   assert(Array.isArray(inventory.entries) && inventory.entries.length, 'Inventory entries are required');
-  const ids = new Set(), owners = new Map(), listed = new Set(files), npmProjects = [], trackedOnly = [];
+  const ids = new Set(), owners = new Map(), listed = new Set(files), npmProjects = [], vendoredPackages = [], trackedOnly = [];
   const read = file => JSON.parse(fs.readFileSync(safeFile(base, file), 'utf8'));
   for (const entry of inventory.entries) {
     assert(typeof entry.id === 'string' && /^[a-z0-9-]+$/.test(entry.id) && !ids.has(entry.id), 'Invalid or duplicate inventory ID');
@@ -53,6 +54,10 @@ function validateInventory(base, inventory, files) {
       assert(listed.has(file), `${file}: not a tracked or non-ignored new repository file`);
       assert(!owners.has(file), `${file}: duplicate inventory ownership`);
       owners.set(file, entry);
+    }
+    if (entry.kind === 'vendored') {
+      vendoredPackages.push(validateVendored(entry, file => fs.readFileSync(safeFile(base, file))));
+      continue;
     }
     if (entry.kind !== 'npm') {
       assert.equal(entry.coverage, 'tracked-only', `${entry.id}: no automated auditor exists for this kind`);
@@ -87,7 +92,7 @@ function validateInventory(base, inventory, files) {
     else assert.equal(entry.kind, kind, `${file}: dependency kind mismatch`);
   }
   assert(npmProjects.length, 'No npm projects are audited');
-  return { npmProjects, trackedOnly, registeredFiles: owners.size };
+  return { npmProjects, vendoredPackages, trackedOnly, registeredFiles: owners.size };
 }
 
 function auditProjects(base, projects, npmCli, run = spawnSync) {
@@ -103,19 +108,22 @@ function auditProjects(base, projects, npmCli, run = spawnSync) {
   assert.equal(failed.length, 0, `Dependency audit failed or unavailable: ${failed.join(', ')}`);
 }
 
-if (require.main === module) {
+async function main() {
   try {
     const args = process.argv.slice(2);
-    assert(args.length === 0 || (args.length === 1 && args[0] === '--audit'), 'Only --audit is supported');
+    assert(args.length === 0 || (args.length === 1 && ['--audit', '--audit-vendored'].includes(args[0])), 'Only --audit or --audit-vendored is supported');
     const inventory = JSON.parse(fs.readFileSync(safeFile(root, inventoryPath), 'utf8'));
     const report = validateInventory(root, inventory, repositoryFiles(root));
     console.log(JSON.stringify({ inventoryValid: true, ...report }, null, 2));
     console.log('Tracked-only entries are NOT vulnerability-audited by this check.');
     if (args.includes('--audit')) auditProjects(root, report.npmProjects, process.env.npm_execpath);
+    if (args.length) await auditVendored(report.vendoredPackages);
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;
   }
 }
+
+if (require.main === module) main();
 
 module.exports = { candidateKind, repositoryFiles, validateInventory, auditProjects };
