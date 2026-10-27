@@ -19,6 +19,25 @@ test('desktop policy is wired into the launcher, source archives and both CI gat
   }
 });
 const entry = JSON.parse(fs.readFileSync(path.join(root, 'config/dependency-inventory.json'), 'utf8')).entries.find(e => e.kind === 'nuget');
+test('launcher pins the reviewed 10.0.14 runtime without restoring debug symbols', () => {
+  const project = fs.readFileSync(path.join(root, entry.project), 'utf8');
+  assert.match(project, /<RuntimeFrameworkVersion>10\.0\.14<\/RuntimeFrameworkVersion>/);
+  assert.match(project, /<DebugType>none<\/DebugType>/);
+  assert.match(project, /<DebugSymbols>false<\/DebugSymbols>/);
+  const registry = JSON.parse(fs.readFileSync(path.join(root, 'config/release-privacy-runtime-paths.json'), 'utf8'));
+  assert.equal(registry.reviewedRuntime, '10.0.14');
+  assert.deepEqual(registry.sources.map(source => source.package).sort(),
+    ['microsoft.netcore.app.runtime.win-x64', 'microsoft.windowsdesktop.app.runtime.win-x64']);
+  for (const source of registry.sources) {
+    assert.equal(source.version, registry.reviewedRuntime);
+    assert.equal(source.metadata, `https://api.nuget.org/v3/registration5-gz-semver2/${source.package}/${source.version}.json`);
+    assert.equal(Buffer.from(source.sha512, 'base64').length, 64);
+  }
+  validateRuntime({ ...metadata(), 'latest-runtime': '10.0.14', releases: [
+    { runtime: { version: '10.0.14' }, windowsdesktop: { version: '10.0.14' }, 'release-date': '2026-10-25' }
+  ] }, '10.0.14', Date.parse('2026-10-26'));
+  assert.throws(() => validateRuntime({ ...metadata(), 'latest-runtime': '10.0.14' }, '10.0.13'), /current patch/);
+});
 const policy = () => ({ Properties: { TargetFramework: 'net10.0-windows', RuntimeIdentifier: 'win-x64',
   RuntimeFrameworkVersion: '10.0.13', SelfContained: 'true', NuGetAudit: 'true', NuGetAuditMode: 'all',
   NuGetAuditLevel: 'low', RestorePackagesWithLockFile: 'true', NoWarn: '', WarningsNotAsErrors: '' },

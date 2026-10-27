@@ -24,10 +24,14 @@ The packaged Node 24.22.1 executable has SHA-256
 `d702daa815eabbff763c7d3808e235cf031cf2ca70211b56847bc72f51e240e5`,
 matching `win-x64/node.exe` in the [official checksum manifest](https://nodejs.org/dist/v24.22.1/SHASUMS256.txt).
 The .NET source and mapped PDB references were checked against the official
-NETCore and WindowsDesktop 10.0.13 runtime packages. Their SHA-512 hashes were
+NETCore and WindowsDesktop 10.0.14 runtime packages. Their SHA-512 hashes were
 verified against NuGet registration/catalog metadata and recorded in the
 registry. The native `singlefilehost` PDB reference is the previously reviewed
 apphost reference. No local project path was accepted into the registry.
+The 10.0.14 upgrade was verified using a locally compiled launcher EXE and DLL,
+not a new installer release. Its path hashes match the existing 216-entry set;
+no exception was added or broadened. Historical release notes and installers
+still describe their original runtime versions and have not been replaced.
 These exceptions never exempt an entire binary, directory prefix, or filename.
 A toolchain update that changes a path must fail pending review. Verify the
 runtime provenance before adding an exception; never allow a personal build
