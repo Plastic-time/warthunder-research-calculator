@@ -37,6 +37,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: npm run audit:dependencies
       - run: npm run test:launcher-security
+      - name: Test release privacy safeguards
+        shell: pwsh
+        run: ./tools/test-release-privacy.ps1
       - run: dotnet build tools/launcher/WarThunderResearchLauncher.csproj --no-restore -c Release
       - run: npm run test:wiki-http
       - name: Check request handling

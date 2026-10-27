@@ -89,6 +89,10 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Production dependency preparation failed" }
           npm run package:release
 
+      - name: Test release privacy safeguards
+        shell: pwsh
+        run: ./tools/test-release-privacy.ps1
+
       - name: Verify release contents
         shell: pwsh
         run: |
