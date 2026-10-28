@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "baseline": {
+    "version": "2.59.0.86",
+    "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d"
+  },
+  "upstream": {
+    "version": "2.59.0.92",
+    "commit": "af0cce561a73704e30c1df66eff06209bcc3f035"
+  },
+  "sources": [
+    {
+      "label": "baseline",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/wpcost.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 32143254,
+      "sha256": "3797cb6f78c59dbfa173418c549417f77e5db7823123b91a0a27ac50f44e72d5"
+    },
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/af0cce561a73704e30c1df66eff06209bcc3f035/char.vromfs.bin_u/config/wpcost.blkx",
+      "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "bytes": 32207135,
+      "sha256": "8dc4fb15ac057df616e97d498ff455aac81b4328ec860be61a4fc8bea18a300a",
+      "gitBlob": "c9829267ac48df140de2a7b8a5b693aca7e8af07"
+    },
+    {
+      "label": "baseline",
+      "file": "char.vromfs.bin_u/config/shop.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/shop.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 378143,
+      "sha256": "da153eea5b3147468a0e51a21fcb67140f2d21c8fcd7c396e5ad16e3c382c6e6"
+    },
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/shop.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/af0cce561a73704e30c1df66eff06209bcc3f035/char.vromfs.bin_u/config/shop.blkx",
+      "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "bytes": 378559,
+      "sha256": "e85bcd9c1d29c15545f1cdd6316fb6e1551a5157709f38d628e03cbf5a56c731",
+      "gitBlob": "de891f01eb9c78b230a875f5209dc86416780640"
+    },
+    {
+      "label": "baseline",
+      "file": "char.vromfs.bin_u/config/rank.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/aa326f10c6ba7d523647572368ead2e4d51ffb4d/char.vromfs.bin_u/config/rank.blkx",
+      "commit": "aa326f10c6ba7d523647572368ead2e4d51ffb4d",
+      "bytes": 71494,
+      "sha256": "5a1320caa8d0b5655a52799d6a87c066957d9dd9fccd9a1a755ae5c6406aa9fc"
+    },
+    {
+      "label": "current",
+      "file": "char.vromfs.bin_u/config/rank.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/af0cce561a73704e30c1df66eff06209bcc3f035/char.vromfs.bin_u/config/rank.blkx",
+      "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "bytes": 71494,
+      "sha256": "34a1c500f5e47705fa0bb2163f3162d11bd6869385136ea9b95791010e115b08",
+      "gitBlob": "5c22c1df9a2b096034f18b7e47056075382f6dcb"
+    }
+  ],
+  "wpcostChanges": 163,
+  "wpcostDeltaSha256": "9fe13a7e8d3aa33ea70eaa55774c65de24a0abc1267b0275976d4daf3d5a0178",
+  "shopDeltaSha256": "705a00e12b6c4219fb3d88983e98decc456aea40f5ab464afae0827968217198",
+  "rankChanges": [
+    {
+      "path": "/needBuyToOpenNextInEra/country_ussr/needBuyToOpenNextInEraHuman5",
+      "before": 6,
+      "after": 4
+    },
+    {
+      "path": "/needBuyToOpenNextInEra/country_usa/needBuyToOpenNextInEraHuman5",
+      "before": 6,
+      "after": 5
+    }
+  ],
+  "changedUnits": {
+    "sw_patria_bmp_3": 1,
+    "sv_98": 41,
+    "m249_para": 63,
+    "m24": 42,
+    "ju_88g_1_mistel": 1,
+    "fw_190a_8_mistel": 1,
+    "ussr_rpk": 1,
+    "ussr_as_44": 1,
+    "ussr_ak_47": 1,
+    "ussr_akm": 1,
+    "ussr_ppsh_41": 1,
+    "ussr_avs_36_sniper": 1,
+    "ussr_sv_98": 1,
+    "us_m1919a6_browning_mg": 1,
+    "us_m16_ar": 1,
+    "us_m16a2_ar": 1,
+    "us_m1921_28_thompson": 1,
+    "us_xm177e1": 1,
+    "us_m21_dmr": 1,
+    "us_m24_dmr": 1
+  },
+  "unchangedSnapshots": {
+    "docs/database/manifest.json": "74963c11944b403829d0dbf796d4ef3cbe49ea82a830437d8634dec6ea43eaaf",
+    "docs/database/modifications/catalog.json": "680024d6608befb1af84a96d35d28a028b4d95e02b31c66318e411624ab9b735",
+    "docs/roster-audit.json": "b53e26e006f0f3a53a9768aac244a99821abfb79a41b51b577927967549f357d"
+  },
+  "deferredCompositeIds": [
+    "fw_190a_8_mistel",
+    "ju_88g_1_mistel"
+  ],
+  "officialAnnouncement": "https://warthunder.com/en/news/10290-development-dreams-come-true-mistel-2-en"
+}

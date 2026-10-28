@@ -6,6 +6,8 @@ const crypto = require('node:crypto');
 const { premiumAcquisition, wikiUnits } = require('./audit-datamine-roster.cjs');
 const { changes, verifyDelta } = require('./audit-reviewed-data-delta.cjs');
 const fixture = require('./fixtures/game-data-review-2.59.0.86.json');
+const latestReview = require('./fixtures/game-data-review-2.59.0.92.json');
+const { verifyReview } = require('./audit-game-data-20261028.cjs');
 const corrections = require('../config/acquisition-corrections.json');
 const additions = require('../config/game-roster-additions.json');
 const root = path.resolve(__dirname, '..');
@@ -52,8 +54,8 @@ test('historical J35A review remains unchanged outside the later explicit game a
 
 test('partial review checkpoints do not promote the full snapshot or import hidden additions', () => {
   for (const scope of Object.values(read('config/data-review-checkpoints.json').scopes)) {
-    assert.equal(scope.gameVersion, fixture.upstream.version);
-    assert.equal(scope.gameDataCommit, fixture.upstream.commit);
+    assert.equal(scope.gameVersion, latestReview.upstream.version);
+    assert.equal(scope.gameDataCommit, latestReview.upstream.commit);
     assert(fs.existsSync(path.join(root, scope.provenance)));
   }
   assert.equal(read('config/data-version.json').gameVersion, '2.59.0.17');
@@ -64,6 +66,47 @@ test('partial review checkpoints do not promote the full snapshot or import hidd
     assert.equal(source.commit, (source.label === 'baseline' ? fixture.baseline : fixture.upstream).commit);
     assert(source.url.includes('/' + source.commit + '/'));
     assert.match(source.sha256, /^[a-f0-9]{64}$/);
+  }
+});
+
+test('October 28 review leaves the supported roster, costs and modification snapshots intact', () => {
+  for (const [file, expected] of Object.entries(latestReview.unchangedSnapshots))
+    assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex'), expected);
+  const ids = new Set(Object.values(read('docs/roster-audit.json').trees).flatMap(tree => Object.keys(tree.units)));
+  const mods = read('docs/database/modifications/catalog.json').vehicles;
+  for (const id of Object.keys(latestReview.changedUnits)) {
+    assert(!ids.has(id));
+    assert(!Object.hasOwn(mods, id));
+  }
+  assert.equal(latestReview.wpcostChanges, 163);
+  assert.equal(latestReview.sources.length, 6);
+  for (const source of latestReview.sources) {
+    assert.equal(source.commit, latestReview[source.label === 'current' ? 'upstream' : 'baseline'].commit);
+    assert.equal(source.url, `https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/${source.commit}/${source.file}`);
+    assert.match(source.sha256, /^[a-f0-9]{64}$/);
+  }
+  assert(latestReview.rankChanges.every(row => row.path.includes('InEraHuman')));
+});
+
+test('incremental review fails closed on unreviewed fields or newly supported entries', () => {
+  const data = { 'baseline-wpcost': { internal: { value: 1 } }, 'current-wpcost': { internal: { value: 2 } },
+    'baseline-shop': {}, 'current-shop': {}, 'baseline-rank': {}, 'current-rank': {} };
+  const digest = value => crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
+  const evidence = { upstream: latestReview.upstream, wpcostChanges: 1,
+    wpcostDeltaSha256: digest(changes(data['baseline-wpcost'], data['current-wpcost'])),
+    shopDeltaSha256: digest([]), rankChanges: [] };
+  const verify = (candidate, roster = new Set(), mods = new Set()) => verifyReview(candidate, roster, mods, evidence);
+  assert.equal(verify(data).supportedChanges, 0);
+  assert.throws(() => verify(data, new Set(['internal'])), /supported snapshot/);
+  assert.throws(() => verify(data, new Set(), new Set(['internal'])), /supported snapshot/);
+  for (const mutate of [
+    d => { d['current-wpcost'].internal.value = 3; },
+    d => { d['current-wpcost'].internal.reqAir = 'unexpected'; },
+    d => { d['current-shop'].unexpected = { rank: 1 }; },
+    d => { d['current-rank'].needBuyToOpenNextInEraAircraft5 = 7; }
+  ]) {
+    const candidate = structuredClone(data); mutate(candidate);
+    assert.throws(() => verify(candidate), /Unreviewed/);
   }
 });
 
