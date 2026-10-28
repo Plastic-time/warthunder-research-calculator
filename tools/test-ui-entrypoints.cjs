@@ -61,12 +61,18 @@ for (const file of ['styles.css', 'tree-scroll.css', 'vehicle-long-press.js', 'm
   assert(fs.readFileSync(path.join(root, 'public', file)).equals(fs.readFileSync(path.join(root, 'docs', file))), `${file}: copies differ`);
 }
 const pkg = require('../package.json');
+const runtime = fs.readFileSync(path.join(root, 'tools/launcher/WarThunderResearchLauncher.csproj'), 'utf8')
+  .match(/<RuntimeFrameworkVersion>([^<]+)<\/RuntimeFrameworkVersion>/)[1];
 for (const file of ['tree-search.js', 'tree-search.css', 'plan-storage.js', 'plan-backup.js', 'plan-backup.css', 'module-translations.js', 'assets/navigation/download.svg', 'assets/navigation/upload.svg']) {
   assert(fs.readFileSync(path.join(root, 'public', file)).equals(fs.readFileSync(path.join(root, 'docs', file))), `${file}: copies differ`);
 }
 assert(fs.readFileSync(path.join(root, 'public/assets/creator-avatar.jpg')).equals(fs.readFileSync(path.join(root, 'docs/assets/creator-avatar.jpg'))));
 for (const file of ['README.md', 'README.en.md']) {
   const text = fs.readFileSync(path.join(root, file), 'utf8');
+  const downloads = [...text.matchAll(/https:\/\/github\.com\/Plastic-time\/warthunder-research-calculator\/releases\/download\/[^)\s]+/g)].map(match => match[0]);
+  assert.deepEqual(downloads, [`https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v${pkg.version}/WarThunderResearchCalculator-v${pkg.version}-portable.zip`]);
+  assert(text.includes(`doc/release-v${pkg.version}.md`));
+  assert(text.includes(`.NET ${runtime}`), 'README runtime must match the bundled runtime');
   assert(text.includes('<a href="https://space.bilibili.com/543495611">扑街的靓仔</a>'));
   const readme = cheerio.load(text);
   const image = readme('img[src="doc/assets/creator-avatar.svg"]');

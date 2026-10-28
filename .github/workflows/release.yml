@@ -121,7 +121,7 @@ jobs:
               }
               $securityFiles = @("src/wiki-http.js", "src/1-extract_tree_div.js", "src/3-request_details.js")
               if ($suffix -eq "") {
-                $securityFiles += @("tools/launcher/LaunchPolicy.cs", "tools/launcher/Program.cs", "tools/check-launcher-policy.cjs", "tools/fixtures/launcher-policy-tests.cs")
+                $securityFiles += @("tools/launcher/LaunchPolicy.cs", "tools/launcher/Program.cs", "tools/check-launcher-policy.cjs", "tools/fixtures/launcher-policy-tests.cs", "tools/check-release-privacy.ps1", "tools/test-release-privacy.ps1")
               }
               foreach ($file in $securityFiles) {
                 $entry = $archive.Entries | Where-Object { $_.FullName.Replace('\', '/') -eq $file }

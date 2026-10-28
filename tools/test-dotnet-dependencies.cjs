@@ -160,3 +160,10 @@ test('CI and packaging use the same auditor and publish without an unaudited sec
   assert.match(read('tools/build-launcher.cjs'), /'--no-restore'/);
   assert.match(read('tools/build-launcher.cjs'), /IncludeNativeLibrariesForSelfExtract=true/);
 });
+
+test('source packages include the privacy regression script required by release CI', () => {
+  const packaging = fs.readFileSync(path.join(root, 'tools/package-release.ps1'), 'utf8');
+  assert(packaging.includes('tools\\\\test-release-privacy.ps1'), 'Source package omits privacy regression tests');
+  const workflow = fs.readFileSync(path.join(root, '.github/workflows/release.yml'), 'utf8');
+  assert(workflow.includes('"tools/test-release-privacy.ps1"'), 'Release contents must verify the privacy test script');
+});

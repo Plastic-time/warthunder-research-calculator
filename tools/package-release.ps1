@@ -66,6 +66,7 @@ $sourceLauncherRoot = Join-Path $sourceRoot "tools\\launcher"
 New-Item -ItemType Directory -Path $sourceLauncherRoot -Force | Out-Null
 Copy-Item -LiteralPath (Join-Path $root "tools\\package-release.ps1") -Destination (Join-Path $sourceRoot "tools") -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\check-release-privacy.ps1") -Destination (Join-Path $sourceRoot "tools") -Force
+Copy-Item -LiteralPath (Join-Path $root "tools\\test-release-privacy.ps1") -Destination (Join-Path $sourceRoot "tools") -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\WarThunderResearchLauncher.csproj") -Destination $sourceLauncherRoot -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\Program.cs") -Destination $sourceLauncherRoot -Force
 Copy-Item -LiteralPath (Join-Path $root "tools\\launcher\\LaunchPolicy.cs") -Destination $sourceLauncherRoot -Force
