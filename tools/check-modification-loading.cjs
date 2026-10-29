@@ -120,6 +120,7 @@ async function main() {
         const beforeCatalog = count;
         await retry.click(); await state('error');
         assert.equal(count, beforeCatalog, 'Bad catalog must not start a chunk request');
+        assert(await page.evaluate(() => ModificationWorkbench.hasVehicle('us_m2a4')), 'Failed catalog retry dropped the last good catalog');
         catalogFault = false;
         fault = 'hold';
         const beforeRetry = count;

@@ -62,9 +62,10 @@
     return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, "0")).join("");
   }
 
-  async function loadCatalog() {
-    if (catalog) return catalog;
-    if (!catalogPromise) {
+  async function loadCatalog(refresh = false) {
+    if (catalog && !refresh) return catalog;
+    // A failed refresh keeps the last good catalog, which still decides which vehicles show the launch button.
+    if (refresh || !catalogPromise) {
       catalogPromise = Promise.all([readData("database/modifications/catalog.json?v=all-vehicles-20260920", "配件索引载入失败")
         .then(data => {
           if (data.schema !== 2 || !data.vehicles || !data.chunks) throw failure("配件索引格式错误");
@@ -88,9 +89,7 @@
       localizedNames = data.names;
       nameFallbacks = data.coverage?.fallbacks || {};
     } catch {
-      // Names are supplementary; keep the independently verified costs usable offline.
-      localizedNames = {};
-      nameFallbacks = {};
+      // Names are supplementary; keep the independently verified costs usable offline, with any names already loaded.
     }
   }
 
@@ -143,8 +142,8 @@
     </span>`;
   }
 
-  async function loadVehicle(vehicleId) {
-    const index = await loadCatalog();
+  async function loadVehicle(vehicleId, refresh = false) {
+    const index = await loadCatalog(refresh);
     const chunkKey = index.vehicles[vehicleId];
     const chunkMeta = index.chunks[chunkKey];
     if (!chunkKey || !chunkMeta) throw failure("这辆载具没有可研发配件");
@@ -412,7 +411,7 @@
 
   function invalidateOpen() { openRequest += 1; }
 
-  async function open(vehicleId) {
+  async function open(vehicleId, refresh = false) {
     if (typeof vehicleId !== "string" || !/^[a-z0-9_-]+$/i.test(vehicleId)) return;
     const request = ++openRequest;
     requestedVehicle = vehicleId;
@@ -421,7 +420,7 @@
     setLoadState("loading");
     if (!dialog.open) dialog.showModal();
     try {
-      const data = ui.data?.vehicleId === vehicleId ? ui.data : await loadVehicle(vehicleId);
+      const data = ui.data?.vehicleId === vehicleId ? ui.data : await loadVehicle(vehicleId, refresh);
       // Shared downloads may finish after another selection or after the dialog closes.
       if (request !== openRequest || !dialog.open) return;
       if (ui.data !== data) {
@@ -458,10 +457,8 @@
     if (event.target.closest("[data-modification-retry]")) {
       if (dialog.dataset.loadState !== "error") return;
       // Re-read the catalog as well, so a deployment/version mismatch can recover.
-      catalog = null;
-      catalogPromise = null;
       chunkCache.clear();
-      open(requestedVehicle);
+      open(requestedVehicle, true);
       return;
     }
     if (dialog.dataset.loadState !== "ready") return;
