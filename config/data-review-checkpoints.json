@@ -23,11 +23,11 @@
       "limitations": "241 explicit fields for 50 supported trees; missing fields are not assumed zero."
     },
     "modifications": {
-      "gameVersion": "2.59.0.92",
-      "gameDataCommit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "gameVersion": "2.59.0.93",
+      "gameDataCommit": "501af3e34af2cb82d65140297e1b994b444c4b88",
       "files": ["char.vromfs.bin_u/config/wpcost.blkx"],
-      "provenance": "doc/game-data-review-20261028.md",
-      "limitations": "Existing explicit costs and tiers reviewed; missing RP and user-confirmed prerequisite conflicts remain unresolved."
+      "provenance": "doc/modification-update-20261029.md",
+      "limitations": "Six changed supported trees updated with explicit costs and reqModification only. Other snapshots and user-confirmed corrections preserved; not a full snapshot upgrade."
     }
   }
 }

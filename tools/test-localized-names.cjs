@@ -88,7 +88,16 @@ const catalog = read('docs/database/modifications/catalog.json');
 const modificationIds = new Set();
 for (const chunk of Object.values(catalog.chunks)) {
   for (const vehicle of Object.values(read(`docs/${chunk.path}`).v)) {
-    for (const mod of vehicle.m) modificationIds.add(mod[0]);
+    for (const mod of vehicle.m) {
+      if (modifications.names[mod[0]]) modificationIds.add(mod[0]);
+      else {
+        const reviewed = require('./fixtures/modification-update-20261029.json');
+        assert(reviewed.vehicles[vehicle.i], 'Unreviewed vehicle-local name');
+        assert.deepEqual(vehicle.l?.[mod[0]], reviewed.additions[mod[0]]?.names);
+        assert.deepEqual(Object.keys(vehicle.l[mod[0]]).sort(), languages);
+        for (const language of languages) assertDisplayName(vehicle.l[mod[0]][language], vehicle.i + ':' + mod[0]);
+      }
+    }
   }
 }
 assert.deepEqual(Object.keys(modifications.names).sort(), [...modificationIds].sort());

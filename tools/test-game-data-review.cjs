@@ -54,7 +54,8 @@ test('historical J35A review remains unchanged outside the later explicit game a
 
 test('partial review checkpoints do not promote the full snapshot or import hidden additions', () => {
   for (const [name, scope] of Object.entries(read('config/data-review-checkpoints.json').scopes)) {
-    const expected = name === 'vehicle-costs' ? read('config/vehicle-cost-update.json') : latestReview.upstream;
+    const expected = name === 'vehicle-costs' ? read('config/vehicle-cost-update.json')
+      : name === 'modifications' ? require('./fixtures/modification-update-20261029.json') : latestReview.upstream;
     assert.equal(scope.gameVersion, expected.version);
     assert.equal(scope.gameDataCommit, expected.commit);
     assert(fs.existsSync(path.join(root, scope.provenance)));
@@ -73,6 +74,9 @@ test('partial review checkpoints do not promote the full snapshot or import hidd
 test('October 28 review leaves the supported roster, costs and modification snapshots intact', () => {
   for (const [file, expected] of Object.entries(latestReview.unchangedSnapshots)) {
     let bytes = fs.readFileSync(path.join(root, file));
+    if (file.endsWith('/modifications/catalog.json')) {
+      bytes = Buffer.from(JSON.stringify(require('./apply-modification-update.cjs').restoreCatalog(JSON.parse(bytes))) + '\n');
+    }
     if (file === 'docs/database/manifest.json') {
       const manifest = JSON.parse(bytes), br = read('config/battle-rating-update.json');
       const costs = read('config/vehicle-cost-update.json');

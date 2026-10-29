@@ -58,3 +58,5 @@ jobs:
             logs/battle-ratings/browser-report.json
             logs/vehicle-cost-update/*.png
             logs/vehicle-cost-update/browser-report.json
+            logs/modification-update/*.png
+            logs/modification-update/browser-report.json

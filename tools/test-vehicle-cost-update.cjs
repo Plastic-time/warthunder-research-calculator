@@ -51,9 +51,10 @@ test('all 50 trees retain every field outside the three verified RP/SL correctio
   assert.equal(changed, 3);
 });
 
-test('all modification costs and historical Wiki evidence remain unchanged', () => {
+test('historical modification baseline and Wiki evidence remain verifiable after the separate modification update', () => {
   const bytes = fs.readFileSync(path.join(root, 'docs/database/modifications/catalog.json'));
-  assert.equal(hash(bytes), evidence.modificationCatalogSha256);
+  const previous = require('./apply-modification-update.cjs').restoreCatalog(JSON.parse(bytes));
+  assert.equal(hash(JSON.stringify(previous) + '\n'), evidence.modificationCatalogSha256);
   assert(bytes.equals(fs.readFileSync(path.join(root, 'public/database/modifications/catalog.json'))));
   for (const chunk of Object.values(JSON.parse(bytes).chunks)) {
     for (const prefix of ['docs/', 'public/']) assert.equal(hash(fs.readFileSync(path.join(root, prefix + chunk.path))), chunk.sha256);

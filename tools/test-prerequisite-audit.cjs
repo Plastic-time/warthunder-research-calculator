@@ -17,6 +17,11 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
   const chunk = JSON.parse(fs.readFileSync(path.join(root, 'public', meta.path)));
   // Compare the original audit against its snapshot, before the reviewed F4U-7 cost update.
   const audited = structuredClone(chunk);
+  for (const [id, entry] of Object.entries(require('./fixtures/modification-update-20261029.json').vehicles)) {
+    if (!audited.v[id]) continue;
+    assert.deepEqual(chunk.v[id], require('./apply-modification-update.cjs').correctVehicle(entry.previous));
+    audited.v[id] = structuredClone(entry.previous);
+  }
   for (const unit of eventUnits) {
     if (!audited.v[unit.id]) continue;
     assert.deepEqual(audited.v[unit.id], buildEvent(unit));
@@ -74,7 +79,7 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
   }
 }
 assert.equal(vehicleCount, proof.examinedVehicles + eventUnits.length);
-assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0));
+assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0) + 3);
 for (const saved of proof.preserved) {
   const digest = crypto.createHash('sha256').update(JSON.stringify(vehicles.get(saved.id))).digest('hex');
   assert.equal(digest, saved.sha256, saved.id + ': user correction changed');

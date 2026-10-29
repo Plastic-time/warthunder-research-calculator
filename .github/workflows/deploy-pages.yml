@@ -16,6 +16,7 @@ on:
       - "tools/check-game-roster-additions.cjs"
       - "tools/check-battle-ratings.cjs"
       - "tools/check-vehicle-cost-update.cjs"
+      - "tools/check-modification-update.cjs"
       - "tools/check-export-hd.cjs"
       - "tools/check-export-controls.cjs"
       - "tools/check-plan-backup.cjs"

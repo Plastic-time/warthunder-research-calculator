@@ -1,0 +1,4199 @@
+{
+  "schema": 1,
+  "version": "2.59.0.93",
+  "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+  "previousVersion": "2.59.0.92",
+  "previousCommit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+  "sources": [
+    {
+      "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "localFile": "af0cce56-wpcost.blkx",
+      "role": "previous",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/af0cce561a73704e30c1df66eff06209bcc3f035/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32207135,
+      "sha256": "8dc4fb15ac057df616e97d498ff455aac81b4328ec860be61a4fc8bea18a300a",
+      "gitBlob": "c9829267ac48df140de2a7b8a5b693aca7e8af07"
+    },
+    {
+      "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "localFile": "501af3e3-wpcost.blkx",
+      "role": "current",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/501af3e34af2cb82d65140297e1b994b444c4b88/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32212188,
+      "sha256": "d269b1df680d76ff544025d0ba5b9642812a8f39e86b69bb4ca837563aef2b3a",
+      "gitBlob": "225ac9b6c9c9cdd15bce7707abf8a50477ab48ce"
+    },
+    {
+      "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+      "file": "char.vromfs.bin_u/config/modifications.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/501af3e34af2cb82d65140297e1b994b444c4b88/char.vromfs.bin_u/config/modifications.blkx",
+      "localFile": "501af3e3-modifications.blkx",
+      "bytes": 886039,
+      "sha256": "63cd10129716c8256e6bd429c0994e7e18f7b10945636499e6bc903f95ebfcae"
+    },
+    {
+      "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+      "file": "lang.vromfs.bin_u/lang/units_modifications.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/501af3e34af2cb82d65140297e1b994b444c4b88/lang.vromfs.bin_u/lang/units_modifications.csv",
+      "localFile": "501af3e3-units_modifications.csv",
+      "bytes": 3033341,
+      "sha256": "8473c0aa9866b09af3dbfbe1687dfa288c0b2279bdddf416e994ad9acedf321d"
+    },
+    {
+      "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+      "file": "lang.vromfs.bin_u/lang/units_weaponry.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/501af3e34af2cb82d65140297e1b994b444c4b88/lang.vromfs.bin_u/lang/units_weaponry.csv",
+      "localFile": "501af3e3-units_weaponry.csv",
+      "bytes": 3862507,
+      "sha256": "a1afafad863f587d94415cd6de110cf3c39de4a0c0dc97cb6c70dc0446bd3bee"
+    }
+  ],
+  "prerequisiteField": "reqModification",
+  "catalogSha256": "680024d6608befb1af84a96d35d28a028b4d95e02b31c66318e411624ab9b735",
+  "previousChunks": {
+    "usa_ground": {
+      "path": "database/modifications/usa_ground.json",
+      "vehicles": 152,
+      "modifications": 2557,
+      "bytes": 329718,
+      "sha256": "d1ba8621a1aff40e5cc45e58c56fbd204fa72b089fb41cee783b64a7588e18ea"
+    },
+    "germany_ground": {
+      "path": "database/modifications/germany_ground.json",
+      "vehicles": 178,
+      "modifications": 2940,
+      "bytes": 390763,
+      "sha256": "a4efab9191f3cc261edb25a5da5c3b1259d17eb4495e43d7a0a2d61a60f13eea"
+    },
+    "ussr_ground": {
+      "path": "database/modifications/ussr_ground.json",
+      "vehicles": 192,
+      "modifications": 3146,
+      "bytes": 410629,
+      "sha256": "c6f2f687b52494c69a135ac6ade0088f805892a3fcccc504a78819457172a512"
+    },
+    "britain_ground": {
+      "path": "database/modifications/britain_ground.json",
+      "vehicles": 144,
+      "modifications": 2420,
+      "bytes": 317467,
+      "sha256": "8267689a30339648cc0a53727eb6c8b92ea8bb484ca1ad5c10156a98233b61a1"
+    },
+    "japan_ground": {
+      "path": "database/modifications/japan_ground.json",
+      "vehicles": 85,
+      "modifications": 1359,
+      "bytes": 174988,
+      "sha256": "49fcc7c8f3c0453cf03c234aeebb7a0fd6ba8cd474f5eb1cb446e838668eb853"
+    },
+    "china_ground": {
+      "path": "database/modifications/china_ground.json",
+      "vehicles": 99,
+      "modifications": 1688,
+      "bytes": 219782,
+      "sha256": "b2aef775863b904acb4795395fff8ab4f9334e8321388e28e602f9821e860a55"
+    },
+    "italy_ground": {
+      "path": "database/modifications/italy_ground.json",
+      "vehicles": 107,
+      "modifications": 1741,
+      "bytes": 226557,
+      "sha256": "c5da22cd5770ae7a665c194b273d99614fe2d23764324df587deec3347391e31"
+    },
+    "france_ground": {
+      "path": "database/modifications/france_ground.json",
+      "vehicles": 106,
+      "modifications": 1658,
+      "bytes": 206114,
+      "sha256": "80d79a64bca53822c5638e5aaece7ba80ea184197267be534ea3e96c45023dd7"
+    },
+    "sweden_ground": {
+      "path": "database/modifications/sweden_ground.json",
+      "vehicles": 95,
+      "modifications": 1565,
+      "bytes": 203837,
+      "sha256": "04944d321c43e439bbdb282837662e0cdad3ee8e0984902e940b6d97704043d5"
+    },
+    "israel_ground": {
+      "path": "database/modifications/israel_ground.json",
+      "vehicles": 57,
+      "modifications": 996,
+      "bytes": 129427,
+      "sha256": "053115ca2b37202f38597433fcc51aa395885c8da025a268dd594fed66a08b6b"
+    },
+    "usa_aviation": {
+      "path": "database/modifications/usa_aviation.json",
+      "vehicles": 199,
+      "modifications": 3218,
+      "bytes": 579130,
+      "sha256": "b694d2dcf8c700efca960ed83bb14910ee446df83bf4f8f0e225f54b1594ae4a"
+    },
+    "germany_aviation": {
+      "path": "database/modifications/germany_aviation.json",
+      "vehicles": 187,
+      "modifications": 2856,
+      "bytes": 614721,
+      "sha256": "51bb4adda33b0e806eaa70b5f2d2298beb2754d6ae476f4b0285492b2ae49609"
+    },
+    "ussr_aviation": {
+      "path": "database/modifications/ussr_aviation.json",
+      "vehicles": 198,
+      "modifications": 3071,
+      "bytes": 607494,
+      "sha256": "db830dadfa8778e676e1c6eb8c6a7578463ae08dcbc1c486ac6313aaa749138b"
+    },
+    "britain_aviation": {
+      "path": "database/modifications/britain_aviation.json",
+      "vehicles": 164,
+      "modifications": 2471,
+      "bytes": 444470,
+      "sha256": "983d4fae57924717a6d9a49a9d2e353595e3ddd3855999a4d2da31d611e0c3f8"
+    },
+    "japan_aviation": {
+      "path": "database/modifications/japan_aviation.json",
+      "vehicles": 140,
+      "modifications": 2077,
+      "bytes": 426704,
+      "sha256": "80182b9a1d620dae5a3e80fe43ac4d3d82d984648858232dbe3ec8bb78cd3405"
+    },
+    "china_aviation": {
+      "path": "database/modifications/china_aviation.json",
+      "vehicles": 89,
+      "modifications": 1395,
+      "bytes": 245841,
+      "sha256": "ea761a3b528cb69793b848ce29a47acdad49ac8dfecd838a8cebf3f766242112"
+    },
+    "italy_aviation": {
+      "path": "database/modifications/italy_aviation.json",
+      "vehicles": 111,
+      "modifications": 1747,
+      "bytes": 349938,
+      "sha256": "f416b6a82af7156a78b9839a630744382ac20c1d11ef4eda5298e11869f2d050"
+    },
+    "france_aviation": {
+      "path": "database/modifications/france_aviation.json",
+      "vehicles": 113,
+      "modifications": 1756,
+      "bytes": 326988,
+      "sha256": "d1b1d8c69a11f0db569a98352978f2bac3471a24c69c70bf075873bafc3a9db1"
+    },
+    "sweden_aviation": {
+      "path": "database/modifications/sweden_aviation.json",
+      "vehicles": 75,
+      "modifications": 1141,
+      "bytes": 212010,
+      "sha256": "cd18af062ecb0962e2f9516afed48953dc9605427cc4b5cd5a80426953a22344"
+    },
+    "israel_aviation": {
+      "path": "database/modifications/israel_aviation.json",
+      "vehicles": 49,
+      "modifications": 922,
+      "bytes": 159347,
+      "sha256": "ef9ef6fd8e6a0d877e311e7c4bf660cb3b046444887cdd888e7cebc7102be5bd"
+    },
+    "usa_helicopters": {
+      "path": "database/modifications/usa_helicopters.json",
+      "vehicles": 19,
+      "modifications": 286,
+      "bytes": 41577,
+      "sha256": "bae734a60116be0826f8db61c168277a088ec6330184352567cbac17a87b0986"
+    },
+    "germany_helicopters": {
+      "path": "database/modifications/germany_helicopters.json",
+      "vehicles": 12,
+      "modifications": 169,
+      "bytes": 31102,
+      "sha256": "b7b608842666f8425244fae68d43cd3fc3ca5a927e93397702e7359101a80a5e"
+    },
+    "ussr_helicopters": {
+      "path": "database/modifications/ussr_helicopters.json",
+      "vehicles": 15,
+      "modifications": 267,
+      "bytes": 52995,
+      "sha256": "1b7b1a7ad3e6e59f138b1ae89f9f084a92b0d366eea9af57becde14d7204f5de"
+    },
+    "britain_helicopters": {
+      "path": "database/modifications/britain_helicopters.json",
+      "vehicles": 10,
+      "modifications": 123,
+      "bytes": 18220,
+      "sha256": "29c64276444e012dcceaa39a9e0ec0b47e84c188115375791a1e49db1f9b1303"
+    },
+    "japan_helicopters": {
+      "path": "database/modifications/japan_helicopters.json",
+      "vehicles": 8,
+      "modifications": 115,
+      "bytes": 18090,
+      "sha256": "35fb5d0895015215e2afebcf9930ce4c6e140781592815c32ee4b0088ca508c9"
+    },
+    "china_helicopters": {
+      "path": "database/modifications/china_helicopters.json",
+      "vehicles": 13,
+      "modifications": 204,
+      "bytes": 38230,
+      "sha256": "668cfede93f0b04a79a3c1b70a6256f21d3bc96525557a9062df79d7b8b76774"
+    },
+    "italy_helicopters": {
+      "path": "database/modifications/italy_helicopters.json",
+      "vehicles": 9,
+      "modifications": 161,
+      "bytes": 31416,
+      "sha256": "66a3bc65c1dcffcf046e1114c6fe7c03a64bedae8d0b3b748a6f2a408cd625e2"
+    },
+    "france_helicopters": {
+      "path": "database/modifications/france_helicopters.json",
+      "vehicles": 12,
+      "modifications": 143,
+      "bytes": 20802,
+      "sha256": "b9f45d16621e3d3e34b0c6d262d5696f257421c55506f3a632c1944c1f69e1c1"
+    },
+    "sweden_helicopters": {
+      "path": "database/modifications/sweden_helicopters.json",
+      "vehicles": 6,
+      "modifications": 61,
+      "bytes": 10982,
+      "sha256": "793cdd896058cc6ded3ce3d6693372b38a7e82c016459045e95f62482cb0921e"
+    },
+    "israel_helicopters": {
+      "path": "database/modifications/israel_helicopters.json",
+      "vehicles": 8,
+      "modifications": 106,
+      "bytes": 15347,
+      "sha256": "943d397f7a075edf184c06a507ac60b6aba51d6693f0fa9d57928322bb30d461"
+    },
+    "usa_ships": {
+      "path": "database/modifications/usa_ships.json",
+      "vehicles": 56,
+      "modifications": 1084,
+      "bytes": 163289,
+      "sha256": "99d36f764092107b5509d84c74c6875a5646486a4f5c66957343855331743128"
+    },
+    "germany_ships": {
+      "path": "database/modifications/germany_ships.json",
+      "vehicles": 46,
+      "modifications": 883,
+      "bytes": 134691,
+      "sha256": "b933a5436e8eeff6321264d1ac1326fd1f6b629247d7cdce2c9c17fcc7b897e8"
+    },
+    "ussr_ships": {
+      "path": "database/modifications/ussr_ships.json",
+      "vehicles": 44,
+      "modifications": 862,
+      "bytes": 128141,
+      "sha256": "7c48e6caf7cadad794fcf9da25e187e00fe985d50c7ca88cffbf2de3b5375e69"
+    },
+    "britain_ships": {
+      "path": "database/modifications/britain_ships.json",
+      "vehicles": 57,
+      "modifications": 1116,
+      "bytes": 165106,
+      "sha256": "2ca3cf7138e42b2d4f0d9144cc8c44c222a9b331fb4a06b6117f481640be9507"
+    },
+    "japan_ships": {
+      "path": "database/modifications/japan_ships.json",
+      "vehicles": 54,
+      "modifications": 994,
+      "bytes": 149583,
+      "sha256": "928f654061a3362fab131a29cf9c7ad1050bdcd0d8499f6564e91dd4da5e0848"
+    },
+    "italy_ships": {
+      "path": "database/modifications/italy_ships.json",
+      "vehicles": 37,
+      "modifications": 700,
+      "bytes": 105648,
+      "sha256": "230e45693de318c3e193a281dbfb57e81ffb801c6d05813f9e90967d8fa2cb97"
+    },
+    "france_ships": {
+      "path": "database/modifications/france_ships.json",
+      "vehicles": 36,
+      "modifications": 667,
+      "bytes": 100496,
+      "sha256": "ea97a596ca0f2f271eac84f7ba1f16c5676d1d0c2b595bfb42a54eeef0e1ae2c"
+    },
+    "usa_boats": {
+      "path": "database/modifications/usa_boats.json",
+      "vehicles": 35,
+      "modifications": 559,
+      "bytes": 92966,
+      "sha256": "ce6e1e199fb6be2ae06a6b9de0cca66e02e35094e9892a2fa74f91de622cb4fb"
+    },
+    "germany_boats": {
+      "path": "database/modifications/germany_boats.json",
+      "vehicles": 39,
+      "modifications": 597,
+      "bytes": 95963,
+      "sha256": "c6c06cde662151d715a93d7c419bafa0bf6a60256791d0fefc8815b2e6d3bb5a"
+    },
+    "ussr_boats": {
+      "path": "database/modifications/ussr_boats.json",
+      "vehicles": 47,
+      "modifications": 709,
+      "bytes": 109661,
+      "sha256": "ebdbb1576e4b7ceb18849f2db40211be56a74b5c1432b030694c763a044e6a51"
+    },
+    "britain_boats": {
+      "path": "database/modifications/britain_boats.json",
+      "vehicles": 39,
+      "modifications": 643,
+      "bytes": 100562,
+      "sha256": "81a30528abf41873b5a1ec9f4dcb5c40303f94d25aca8281df16bb0c04ccddd2"
+    },
+    "japan_boats": {
+      "path": "database/modifications/japan_boats.json",
+      "vehicles": 33,
+      "modifications": 516,
+      "bytes": 79475,
+      "sha256": "af062044c17e8720bd90b5455c4881590e684d556635bd740b77037137ba1810"
+    },
+    "italy_boats": {
+      "path": "database/modifications/italy_boats.json",
+      "vehicles": 27,
+      "modifications": 395,
+      "bytes": 61202,
+      "sha256": "3527953dadf5a5abdfabcadcfbb94e6bf271016f0335a9863d0b16be9293f58d"
+    },
+    "france_boats": {
+      "path": "database/modifications/france_boats.json",
+      "vehicles": 26,
+      "modifications": 390,
+      "bytes": 61459,
+      "sha256": "5360b961fc9283788294a177e50f7f9bf8a68474c5068652fed53c30dcc399b8"
+    }
+  },
+  "previousModificationCount": 52474,
+  "vehicles": {
+    "b7a2": {
+      "previous": {
+        "i": "b7a2",
+        "n": [
+          "流星一一型",
+          "B7A2"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/b7a2.png",
+        "r": [
+          1,
+          2,
+          2
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器",
+            "Weaponry",
+            2
+          ]
+        ],
+        "t": [
+          24500,
+          44300
+        ],
+        "m": [
+          [
+            "CdMin_Fuse",
+            0,
+            1,
+            0,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            1200,
+            2200,
+            120,
+            [],
+            0
+          ],
+          [
+            "new_radiator",
+            0,
+            1,
+            1,
+            "散热器",
+            "Radiator",
+            "radiator.png",
+            1200,
+            2200,
+            120,
+            [],
+            1
+          ],
+          [
+            "new_compressor",
+            0,
+            2,
+            1,
+            "增压器",
+            "Compressor",
+            "compressor.png",
+            1400,
+            2500,
+            140,
+            [],
+            2
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            1500,
+            2700,
+            150,
+            [],
+            3
+          ],
+          [
+            "hp_105",
+            0,
+            3,
+            1,
+            "发动机",
+            "Engine",
+            "new_engine.png",
+            1500,
+            2700,
+            150,
+            [],
+            4
+          ],
+          [
+            "new_engine_injection",
+            0,
+            4,
+            1,
+            "喷油系统",
+            "Engine injection",
+            "metanol.png",
+            2700,
+            4900,
+            270,
+            [],
+            5
+          ],
+          [
+            "structure_str",
+            1,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            1400,
+            2500,
+            140,
+            [],
+            6
+          ],
+          [
+            "new_cover",
+            1,
+            4,
+            0,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            2700,
+            4900,
+            270,
+            [],
+            7
+          ],
+          [
+            "type2_turret_belt_pack",
+            2,
+            1,
+            0,
+            "Turret 13 mm belts",
+            "Turret 13 mm belts",
+            "ammo.png",
+            1200,
+            2200,
+            120,
+            [],
+            8,
+            {
+              "b": [
+                "bullet_gun_red_green.png",
+                "bullet_cannon_yellow_green.png",
+                "bullet_cannon_blue_yellow.png",
+                "bullet_cannon_yellow_green.png",
+                "bullet_gun_green.png"
+              ],
+              "d": [],
+              "n": "Universal",
+              "w": "Turret — 13 mm Type 2 machine gun",
+              "r": 0.2,
+              "v": [
+                {
+                  "n": "Default",
+                  "b": [
+                    "bullet_gun_blue.png",
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_gun_green.png",
+                    "bullet_cannon_blue_yellow.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Armored targets",
+                  "b": [
+                    "bullet_gun_green.png",
+                    "bullet_gun_red_green.png",
+                    "bullet_gun_red_green.png",
+                    "bullet_gun_red_green.png",
+                    "bullet_gun_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Universal",
+                  "b": [
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_gun_green.png"
+                  ],
+                  "d": []
+                }
+              ]
+            }
+          ],
+          [
+            "b5n2_17-34in_mod45",
+            2,
+            1,
+            1,
+            "17.75 英寸 45 型挂架",
+            "17 3/4 in (mod45)",
+            "pilon_torpedo.png",
+            1200,
+            2200,
+            120,
+            [],
+            9
+          ],
+          [
+            "type2_turret_new_gun",
+            2,
+            2,
+            0,
+            "New 13 mm MGs (turret)",
+            "New 13 mm MGs (turret)",
+            "turret_gun.png",
+            1400,
+            2500,
+            140,
+            [
+              "type2_turret_belt_pack"
+            ],
+            10
+          ],
+          [
+            "b5n2_12in_mod30",
+            2,
+            2,
+            1,
+            "12 英寸 30 型挂架",
+            "12 in (mod30)",
+            "pilon_bomb.png",
+            1400,
+            2500,
+            140,
+            [
+              "b5n2_17-34in_mod45"
+            ],
+            11
+          ],
+          [
+            "type99mk2_belt_pack",
+            2,
+            3,
+            0,
+            "Offensive 20 mm belts",
+            "Offensive 20 mm belts",
+            "ammo.png",
+            1500,
+            2700,
+            150,
+            [],
+            12,
+            {
+              "b": [
+                "bullet_cannon_yellow_green.png",
+                "bullet_cannon_yellow.png",
+                "bullet_cannon_yellow.png",
+                "bullet_cannon_red_blue.png"
+              ],
+              "d": [],
+              "n": "Universal",
+              "w": "2 × 20 mm Type 99 Mark 2 cannon",
+              "r": 0.2,
+              "v": [
+                {
+                  "n": "Default",
+                  "b": [
+                    "bullet_cannon_green.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Universal",
+                  "b": [
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Ground targets",
+                  "b": [
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_yellow_green.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Tracers",
+                  "b": [
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_cannon_yellow_green.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Stealth",
+                  "b": [
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                }
+              ]
+            }
+          ],
+          [
+            "b5n2_14in_mod35",
+            2,
+            3,
+            1,
+            "14 英寸 35 型挂架",
+            "14 in (mod35)",
+            "pilon_bomb.png",
+            1500,
+            2700,
+            150,
+            [
+              "b5n2_12in_mod30"
+            ],
+            13
+          ],
+          [
+            "type99mk2_new_gun",
+            2,
+            4,
+            0,
+            "New 20 mm cannons",
+            "New 20 mm cannons",
+            "weapon.png",
+            2700,
+            4900,
+            270,
+            [
+              "type99mk2_belt_pack"
+            ],
+            14
+          ]
+        ]
+      },
+      "before": {
+        "mods": {
+          "cd_98": {
+            "tier": 3,
+            "repairCostCoef": 0.05,
+            "reqExp": 1500,
+            "value": 2700,
+            "costGold": 0,
+            "openCostGold": 150,
+            "repairCostCoefArcade": 0.051
+          },
+          "CdMin_Fuse": {
+            "tier": 1,
+            "repairCostCoef": 0.006,
+            "reqExp": 1200,
+            "value": 2200,
+            "costGold": 0,
+            "openCostGold": 120,
+            "repairCostCoefArcade": 0.007
+          },
+          "new_cover": {
+            "tier": 4,
+            "repairCostCoef": 0.042,
+            "reqExp": 2700,
+            "value": 4900,
+            "costGold": 0,
+            "openCostGold": 270,
+            "repairCostCoefArcade": 0.043
+          },
+          "structure_str": {
+            "tier": 2,
+            "repairCostCoef": 0.043,
+            "reqExp": 1400,
+            "value": 2500,
+            "costGold": 0,
+            "openCostGold": 140,
+            "repairCostCoefArcade": 0.045
+          },
+          "type2_turret_ap": {
+            "reqModification": "type2_turret_belt_pack",
+            "tier": 0,
+            "value": 230,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 1000
+          },
+          "type2_turret_apit": {
+            "reqModification": "type2_turret_belt_pack",
+            "tier": 0,
+            "value": 230,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 1000
+          },
+          "hp_105": {
+            "tier": 3,
+            "repairCostCoef": 0.048,
+            "reqExp": 1500,
+            "value": 2700,
+            "costGold": 0,
+            "openCostGold": 150,
+            "repairCostCoefArcade": 0.05
+          },
+          "new_radiator": {
+            "tier": 1,
+            "repairCostCoef": 0.005,
+            "reqExp": 1200,
+            "value": 2200,
+            "costGold": 0,
+            "openCostGold": 120
+          },
+          "new_compressor": {
+            "tier": 2,
+            "repairCostCoef": 0.034,
+            "reqExp": 1400,
+            "value": 2500,
+            "costGold": 0,
+            "openCostGold": 140,
+            "repairCostCoefArcade": 0.035
+          },
+          "new_engine_injection": {
+            "tier": 4,
+            "repairCostCoef": 0.017,
+            "repairCostCoefArcade": 0.047,
+            "reqExp": 2700,
+            "value": 4900,
+            "costGold": 0,
+            "openCostGold": 270
+          },
+          "type2_turret_belt_pack": {
+            "tier": 1,
+            "reqExp": 1200,
+            "value": 2200,
+            "costGold": 0,
+            "openCostGold": 120
+          },
+          "type2_turret_new_gun": {
+            "reqModification": "type2_turret_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.014,
+            "reqExp": 1400,
+            "value": 2500,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "type99mk2_universal": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 0,
+            "value": 80,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 200
+          },
+          "type99mk2_ground_targets": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 0,
+            "value": 80,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 200
+          },
+          "type99mk2_all_tracers": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 0,
+            "value": 80,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 200
+          },
+          "type99mk2_stealth": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 0,
+            "value": 120,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 200
+          },
+          "type99mk2_belt_pack": {
+            "tier": 3,
+            "reqExp": 1500,
+            "value": 2700,
+            "costGold": 0,
+            "openCostGold": 150
+          },
+          "type99mk2_new_gun": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 4,
+            "repairCostCoef": 0.014,
+            "reqExp": 2700,
+            "value": 4900,
+            "costGold": 0,
+            "openCostGold": 270
+          },
+          "b5n2_17-34in_mod45": {
+            "tier": 1,
+            "reqExp": 1200,
+            "value": 2200,
+            "costGold": 0,
+            "openCostGold": 120
+          },
+          "b5n2_12in_mod30": {
+            "reqModification": "b5n2_17-34in_mod45",
+            "tier": 2,
+            "reqExp": 1400,
+            "value": 2500,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "b5n2_14in_mod35": {
+            "reqModification": "b5n2_12in_mod30",
+            "tier": 3,
+            "reqExp": 1500,
+            "value": 2700,
+            "costGold": 0,
+            "openCostGold": 150
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 1100
+          }
+        },
+        "tierRequirements": [
+          1,
+          2,
+          2,
+          1
+        ]
+      },
+      "after": {
+        "mods": {
+          "cd_98": {
+            "tier": 3,
+            "repairCostCoef": 0.05,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 175,
+            "repairCostCoefArcade": 0.051
+          },
+          "CdMin_Fuse": {
+            "tier": 1,
+            "repairCostCoef": 0.006,
+            "reqExp": 1500,
+            "value": 2900,
+            "costGold": 0,
+            "openCostGold": 140,
+            "repairCostCoefArcade": 0.007
+          },
+          "new_cover": {
+            "tier": 4,
+            "repairCostCoef": 0.042,
+            "reqExp": 3200,
+            "value": 6300,
+            "costGold": 0,
+            "openCostGold": 300,
+            "repairCostCoefArcade": 0.043
+          },
+          "structure_str": {
+            "tier": 2,
+            "repairCostCoef": 0.043,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 155,
+            "repairCostCoefArcade": 0.045
+          },
+          "type2_turret_ap": {
+            "reqModification": "type2_turret_belt_pack",
+            "tier": 0,
+            "value": 270,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 1000
+          },
+          "type2_turret_apit": {
+            "reqModification": "type2_turret_belt_pack",
+            "tier": 0,
+            "value": 270,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 1000
+          },
+          "hp_105": {
+            "tier": 3,
+            "repairCostCoef": 0.048,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 175,
+            "repairCostCoefArcade": 0.05
+          },
+          "new_radiator": {
+            "tier": 1,
+            "repairCostCoef": 0.005,
+            "reqExp": 1500,
+            "value": 2900,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "new_compressor": {
+            "tier": 2,
+            "repairCostCoef": 0.034,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 155,
+            "repairCostCoefArcade": 0.035
+          },
+          "new_engine_injection": {
+            "tier": 4,
+            "repairCostCoef": 0.017,
+            "repairCostCoefArcade": 0.047,
+            "reqExp": 3200,
+            "value": 6300,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "type2_turret_belt_pack": {
+            "tier": 1,
+            "reqExp": 1500,
+            "value": 2900,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "type2_turret_new_gun": {
+            "reqModification": "type2_turret_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.014,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 155
+          },
+          "type99mk2_universal": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 0,
+            "value": 90,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 200
+          },
+          "type99mk2_ground_targets": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 0,
+            "value": 90,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 200
+          },
+          "type99mk2_all_tracers": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 0,
+            "value": 90,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 200
+          },
+          "type99mk2_stealth": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 0,
+            "value": 135,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 200
+          },
+          "type99mk2_belt_pack": {
+            "tier": 3,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 175
+          },
+          "type99mk2_new_gun": {
+            "reqModification": "type99mk2_belt_pack",
+            "tier": 4,
+            "repairCostCoef": 0.014,
+            "reqExp": 3200,
+            "value": 6300,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "b5n2_17-34in_mod45": {
+            "tier": 1,
+            "reqExp": 1500,
+            "value": 2900,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "b5n2_12in_mod30": {
+            "reqModification": "b5n2_17-34in_mod45",
+            "tier": 2,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 155
+          },
+          "b5n2_14in_mod35": {
+            "reqModification": "b5n2_12in_mod30",
+            "tier": 3,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 175
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 1200
+          }
+        },
+        "tierRequirements": [
+          1,
+          2,
+          2,
+          1
+        ]
+      }
+    },
+    "f_102a_greece": {
+      "previous": {
+        "i": "f_102a_greece",
+        "n": [
+          "◐F-102A",
+          "▄F-102A"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/f_102a_greece.png",
+        "r": [
+          1,
+          1,
+          1
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器",
+            "Weaponry",
+            2
+          ]
+        ],
+        "t": [
+          114300,
+          179000
+        ],
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            5700,
+            9000,
+            200,
+            [],
+            0
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            0,
+            1,
+            1,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            5700,
+            9000,
+            200,
+            [],
+            1
+          ],
+          [
+            "hydravlic_power",
+            0,
+            2,
+            0,
+            "液压助力",
+            "New boosters",
+            "booster.png",
+            8500,
+            13000,
+            300,
+            [],
+            2
+          ],
+          [
+            "structure_str",
+            0,
+            2,
+            1,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            8500,
+            13000,
+            300,
+            [],
+            3
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            14000,
+            22000,
+            500,
+            [],
+            4
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            19000,
+            30000,
+            670,
+            [],
+            5
+          ],
+          [
+            "new_cover",
+            0,
+            4,
+            1,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            19000,
+            30000,
+            670,
+            [],
+            6
+          ],
+          [
+            "f_4c_g_suit",
+            1,
+            2,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            8500,
+            13000,
+            300,
+            [],
+            7
+          ],
+          [
+            "us_aim_4g",
+            2,
+            1,
+            0,
+            "AIM-4G",
+            "AIM-4G",
+            "air_to_air_longrange_missile.png",
+            5700,
+            9000,
+            200,
+            [],
+            8
+          ],
+          [
+            "us_f8u_ffar",
+            2,
+            1,
+            1,
+            "FFAR 太空飞鼠",
+            "FFAR Mighty Mouse",
+            "pilon_block_rocket.png",
+            5700,
+            9000,
+            200,
+            [],
+            9
+          ],
+          [
+            "us_aim_4f",
+            2,
+            3,
+            0,
+            "AIM-4F",
+            "AIM-4F",
+            "air_to_air_longrange_missile.png",
+            14000,
+            22000,
+            500,
+            [
+              "us_aim_4g"
+            ],
+            10
+          ]
+        ]
+      },
+      "before": {
+        "mods": {
+          "new_compressor_jet": {
+            "tier": 1,
+            "repairCostCoef": 0.04,
+            "reqExp": 5700,
+            "value": 9000,
+            "costGold": 0,
+            "openCostGold": 200
+          },
+          "hydravlic_power": {
+            "prevModification": "new_compressor_jet",
+            "tier": 2,
+            "repairCostCoef": 0.012,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "cd_98": {
+            "prevModification": "hydravlic_power",
+            "tier": 3,
+            "repairCostCoef": 0.058,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 500
+          },
+          "hp_105_jet": {
+            "prevModification": "cd_98",
+            "tier": 4,
+            "repairCostCoef": 0.086,
+            "reqExp": 19000,
+            "value": 30000,
+            "costGold": 0,
+            "openCostGold": 670
+          },
+          "f_4c_CdMin_Fuse": {
+            "tier": 1,
+            "modClass": "lth",
+            "repairCostCoef": 0.007,
+            "reqExp": 5700,
+            "value": 9000,
+            "costGold": 0,
+            "openCostGold": 200
+          },
+          "structure_str": {
+            "tier": 2,
+            "modClass": "lth",
+            "repairCostCoef": 0.05,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "new_cover": {
+            "tier": 4,
+            "modClass": "lth",
+            "repairCostCoef": 0.049,
+            "reqExp": 19000,
+            "value": 30000,
+            "costGold": 0,
+            "openCostGold": 670
+          },
+          "f_4c_g_suit": {
+            "tier": 2,
+            "repairCostCoef": 0.056,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "us_f8u_ffar": {
+            "tier": 1,
+            "repairCostCoef": 0.121,
+            "reqExp": 5700,
+            "value": 9000,
+            "costGold": 0,
+            "openCostGold": 200
+          },
+          "us_aim_4g": {
+            "tier": 1,
+            "reqExp": 5700,
+            "value": 9000,
+            "costGold": 0,
+            "openCostGold": 200,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "f_102a_late_aim_4g"
+          },
+          "us_aim_4f": {
+            "reqModification": "us_aim_4g",
+            "tier": 3,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 500,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "f_102a_late_aim_4f"
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 2300
+          }
+        },
+        "tierRequirements": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "after": {
+        "mods": {
+          "new_compressor_jet": {
+            "tier": 1,
+            "repairCostCoef": 0.04,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195
+          },
+          "hydravlic_power": {
+            "prevModification": "new_compressor_jet",
+            "tier": 2,
+            "repairCostCoef": 0.012,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 360
+          },
+          "cd_98": {
+            "prevModification": "hydravlic_power",
+            "tier": 3,
+            "repairCostCoef": 0.058,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 590
+          },
+          "hp_105_jet": {
+            "prevModification": "cd_98",
+            "tier": 4,
+            "repairCostCoef": 0.087,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 500
+          },
+          "f_4c_CdMin_Fuse": {
+            "tier": 1,
+            "modClass": "lth",
+            "repairCostCoef": 0.007,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195
+          },
+          "structure_str": {
+            "tier": 2,
+            "modClass": "lth",
+            "repairCostCoef": 0.051,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 360
+          },
+          "new_cover": {
+            "tier": 4,
+            "modClass": "lth",
+            "repairCostCoef": 0.049,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 500
+          },
+          "f_4c_g_suit": {
+            "tier": 2,
+            "repairCostCoef": 0.057,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 360
+          },
+          "M163_Minigun_new_gun": {
+            "tier": 1,
+            "repairCostCoef": 0.01,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195
+          },
+          "us_f8u_ffar": {
+            "tier": 1,
+            "repairCostCoef": 0.123,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195
+          },
+          "us_aim_4g": {
+            "tier": 1,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "f_102a_late_aim_4g"
+          },
+          "us_aim_4f": {
+            "reqModification": "us_aim_4g",
+            "tier": 3,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 590,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "f_102a_late_aim_4f"
+          },
+          "us_aim_26b": {
+            "reqModification": "us_aim_4f",
+            "tier": 4,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 500,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "f_102a_late_aim_26b"
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 2300
+          }
+        },
+        "tierRequirements": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "f_102a_late": {
+      "previous": {
+        "i": "f_102a_late",
+        "n": [
+          "F-102A",
+          "F-102A"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/f_102a_late.png",
+        "r": [
+          1,
+          1,
+          1
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器",
+            "Weaponry",
+            2
+          ]
+        ],
+        "t": [
+          114300,
+          179000
+        ],
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            5700,
+            9000,
+            200,
+            [],
+            0
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            0,
+            1,
+            1,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            5700,
+            9000,
+            200,
+            [],
+            1
+          ],
+          [
+            "hydravlic_power",
+            0,
+            2,
+            0,
+            "液压助力",
+            "New boosters",
+            "booster.png",
+            8500,
+            13000,
+            300,
+            [],
+            2
+          ],
+          [
+            "structure_str",
+            0,
+            2,
+            1,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            8500,
+            13000,
+            300,
+            [],
+            3
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            14000,
+            22000,
+            500,
+            [],
+            4
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            19000,
+            30000,
+            670,
+            [],
+            5
+          ],
+          [
+            "new_cover",
+            0,
+            4,
+            1,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            19000,
+            30000,
+            670,
+            [],
+            6
+          ],
+          [
+            "f_4c_g_suit",
+            1,
+            2,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            8500,
+            13000,
+            300,
+            [],
+            7
+          ],
+          [
+            "us_aim_4g",
+            2,
+            1,
+            0,
+            "AIM-4G",
+            "AIM-4G",
+            "air_to_air_longrange_missile.png",
+            5700,
+            9000,
+            200,
+            [],
+            8
+          ],
+          [
+            "us_f8u_ffar",
+            2,
+            1,
+            1,
+            "FFAR 太空飞鼠",
+            "FFAR Mighty Mouse",
+            "pilon_block_rocket.png",
+            5700,
+            9000,
+            200,
+            [],
+            9
+          ],
+          [
+            "us_aim_4f",
+            2,
+            3,
+            0,
+            "AIM-4F",
+            "AIM-4F",
+            "air_to_air_longrange_missile.png",
+            14000,
+            22000,
+            500,
+            [
+              "us_aim_4g"
+            ],
+            10
+          ]
+        ]
+      },
+      "before": {
+        "mods": {
+          "new_compressor_jet": {
+            "tier": 1,
+            "repairCostCoef": 0.04,
+            "reqExp": 5700,
+            "value": 9000,
+            "costGold": 0,
+            "openCostGold": 200
+          },
+          "hydravlic_power": {
+            "prevModification": "new_compressor_jet",
+            "tier": 2,
+            "repairCostCoef": 0.012,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "cd_98": {
+            "prevModification": "hydravlic_power",
+            "tier": 3,
+            "repairCostCoef": 0.058,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 500
+          },
+          "hp_105_jet": {
+            "prevModification": "cd_98",
+            "tier": 4,
+            "repairCostCoef": 0.086,
+            "reqExp": 19000,
+            "value": 30000,
+            "costGold": 0,
+            "openCostGold": 670
+          },
+          "f_4c_CdMin_Fuse": {
+            "tier": 1,
+            "modClass": "lth",
+            "repairCostCoef": 0.007,
+            "reqExp": 5700,
+            "value": 9000,
+            "costGold": 0,
+            "openCostGold": 200
+          },
+          "structure_str": {
+            "tier": 2,
+            "modClass": "lth",
+            "repairCostCoef": 0.05,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "new_cover": {
+            "tier": 4,
+            "modClass": "lth",
+            "repairCostCoef": 0.049,
+            "reqExp": 19000,
+            "value": 30000,
+            "costGold": 0,
+            "openCostGold": 670
+          },
+          "f_4c_g_suit": {
+            "tier": 2,
+            "repairCostCoef": 0.056,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "us_f8u_ffar": {
+            "tier": 1,
+            "repairCostCoef": 0.121,
+            "reqExp": 5700,
+            "value": 9000,
+            "costGold": 0,
+            "openCostGold": 200
+          },
+          "us_aim_4g": {
+            "tier": 1,
+            "reqExp": 5700,
+            "value": 9000,
+            "costGold": 0,
+            "openCostGold": 200,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "f_102a_late_aim_4g"
+          },
+          "us_aim_4f": {
+            "reqModification": "us_aim_4g",
+            "tier": 3,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 500,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "f_102a_late_aim_4f"
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 2300
+          }
+        },
+        "tierRequirements": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "after": {
+        "mods": {
+          "new_compressor_jet": {
+            "tier": 1,
+            "repairCostCoef": 0.04,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195
+          },
+          "hydravlic_power": {
+            "prevModification": "new_compressor_jet",
+            "tier": 2,
+            "repairCostCoef": 0.012,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 360
+          },
+          "cd_98": {
+            "prevModification": "hydravlic_power",
+            "tier": 3,
+            "repairCostCoef": 0.058,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 590
+          },
+          "hp_105_jet": {
+            "prevModification": "cd_98",
+            "tier": 4,
+            "repairCostCoef": 0.087,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 500
+          },
+          "f_4c_CdMin_Fuse": {
+            "tier": 1,
+            "modClass": "lth",
+            "repairCostCoef": 0.007,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195
+          },
+          "structure_str": {
+            "tier": 2,
+            "modClass": "lth",
+            "repairCostCoef": 0.051,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 360
+          },
+          "new_cover": {
+            "tier": 4,
+            "modClass": "lth",
+            "repairCostCoef": 0.049,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 500
+          },
+          "f_4c_g_suit": {
+            "tier": 2,
+            "repairCostCoef": 0.057,
+            "reqExp": 8500,
+            "value": 13000,
+            "costGold": 0,
+            "openCostGold": 360
+          },
+          "M163_Minigun_new_gun": {
+            "tier": 1,
+            "repairCostCoef": 0.01,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195
+          },
+          "us_f8u_ffar": {
+            "tier": 1,
+            "repairCostCoef": 0.123,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195
+          },
+          "us_aim_4g": {
+            "tier": 1,
+            "reqExp": 4600,
+            "value": 7300,
+            "costGold": 0,
+            "openCostGold": 195,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "f_102a_late_aim_4g"
+          },
+          "us_aim_4f": {
+            "reqModification": "us_aim_4g",
+            "tier": 3,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 590,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "f_102a_late_aim_4f"
+          },
+          "us_aim_26b": {
+            "reqModification": "us_aim_4f",
+            "tier": 4,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 500,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "f_102a_late_aim_26b"
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 2300
+          }
+        },
+        "tierRequirements": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "ki_93_1_ko": {
+      "previous": {
+        "i": "ki_93_1_ko",
+        "n": [
+          "Ki-93 一型甲",
+          "Ki-93-I Ko"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/ki_93_1_ko.png",
+        "r": [
+          1,
+          2,
+          2
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器",
+            "Weaponry",
+            2
+          ]
+        ],
+        "t": [
+          30000,
+          58500
+        ],
+        "m": [
+          [
+            "CdMin_Fuse",
+            0,
+            1,
+            0,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            1500,
+            2900,
+            140,
+            [],
+            0
+          ],
+          [
+            "new_radiator",
+            0,
+            1,
+            1,
+            "散热器",
+            "Radiator",
+            "radiator.png",
+            1500,
+            2900,
+            140,
+            [],
+            1
+          ],
+          [
+            "new_compressor",
+            0,
+            2,
+            1,
+            "增压器",
+            "Compressor",
+            "compressor.png",
+            1700,
+            3300,
+            155,
+            [],
+            2
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            1900,
+            3700,
+            175,
+            [],
+            3
+          ],
+          [
+            "hp_105",
+            0,
+            3,
+            1,
+            "发动机",
+            "Engine",
+            "new_engine.png",
+            1900,
+            3700,
+            175,
+            [],
+            4
+          ],
+          [
+            "new_engine_injection",
+            0,
+            4,
+            1,
+            "喷油系统",
+            "Engine injection",
+            "metanol.png",
+            3200,
+            6300,
+            300,
+            [],
+            5
+          ],
+          [
+            "structure_str",
+            1,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            1700,
+            3300,
+            155,
+            [],
+            6
+          ],
+          [
+            "new_cover",
+            1,
+            4,
+            0,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            3200,
+            6300,
+            300,
+            [],
+            7
+          ],
+          [
+            "ho5_belt_pack",
+            2,
+            1,
+            0,
+            "Offensive 20 mm belts",
+            "Offensive 20 mm belts",
+            "ammo.png",
+            1500,
+            2900,
+            140,
+            [],
+            8,
+            {
+              "b": [
+                "bullet_cannon_blue_yellow.png",
+                "bullet_cannon_blue_yellow.png",
+                "bullet_cannon_red_green.png"
+              ],
+              "d": [],
+              "n": "Universal",
+              "w": "2 × 20 mm Ho-5 cannon",
+              "r": 0.2,
+              "v": [
+                {
+                  "n": "Default",
+                  "b": [
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_brown.png",
+                    "bullet_cannon_red_green.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Universal",
+                  "b": [
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_red_green.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Ground targets",
+                  "b": [
+                    "bullet_cannon_red_green.png",
+                    "bullet_cannon_red_green.png",
+                    "bullet_cannon_blue_yellow.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Tracers",
+                  "b": [
+                    "bullet_cannon_red_green.png",
+                    "bullet_cannon_red_green.png",
+                    "bullet_cannon_red_green.png",
+                    "bullet_cannon_red_green.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Stealth",
+                  "b": [
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_brown.png"
+                  ],
+                  "d": []
+                }
+              ]
+            }
+          ],
+          [
+            "safat12_turret_belt_pack",
+            2,
+            1,
+            1,
+            "Turret 12.7 mm belts",
+            "Turret 12.7 mm belts",
+            "ammo.png",
+            1500,
+            2900,
+            140,
+            [],
+            9,
+            {
+              "b": [
+                "bullet_gun_red_green.png",
+                "bullet_cannon_blue_yellow.png",
+                "bullet_cannon_blue_yellow.png",
+                "bullet_cannon_blue_yellow.png"
+              ],
+              "d": [],
+              "n": "Universal",
+              "w": "Turret — 12.7 mm Ho-103 machine gun",
+              "r": 0.2,
+              "v": [
+                {
+                  "n": "Default",
+                  "b": [
+                    "bullet_gun_red_green.png",
+                    "bullet_gun_red.png",
+                    "bullet_cannon_blue_yellow.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Armored targets",
+                  "b": [
+                    "bullet_gun_red_green.png",
+                    "bullet_gun_red.png",
+                    "bullet_gun_red_green.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Universal",
+                  "b": [
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png"
+                  ],
+                  "d": []
+                }
+              ]
+            }
+          ],
+          [
+            "ho5_new_gun",
+            2,
+            2,
+            0,
+            "New 20 mm cannons",
+            "New 20 mm cannons",
+            "weapon.png",
+            1700,
+            3300,
+            155,
+            [
+              "ho5_belt_pack"
+            ],
+            10
+          ],
+          [
+            "ho103_turret_new_gun",
+            2,
+            2,
+            1,
+            "New 12.7 mm MGs (turret)",
+            "New 12.7 mm MGs (turret)",
+            "turret_gun.png",
+            1700,
+            3300,
+            155,
+            [
+              "safat12_turret_belt_pack"
+            ],
+            11
+          ],
+          [
+            "ho_401_belt_pack",
+            2,
+            3,
+            0,
+            "Offensive 57 mm belts",
+            "Offensive 57 mm belts",
+            "ammo.png",
+            1900,
+            3700,
+            175,
+            [],
+            12,
+            {
+              "b": [
+                "bullet_cannon_yellow.png",
+                "bullet_cannon_yellow.png",
+                "bullet_cannon_yellow.png",
+                "bullet_cannon_yellow.png"
+              ],
+              "d": [],
+              "n": "Air targets",
+              "w": "57 mm Ho-402 cannon",
+              "r": 0.2,
+              "v": [
+                {
+                  "n": "Default",
+                  "b": [
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_yellow.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Air targets",
+                  "b": [
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_yellow.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Armored targets",
+                  "b": [
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                }
+              ]
+            }
+          ],
+          [
+            "ki49_12in_mod30",
+            2,
+            3,
+            1,
+            "12 英寸 30 型挂架",
+            "12 in (mod30)",
+            "pilon_bomb.png",
+            1900,
+            3700,
+            175,
+            [],
+            13
+          ],
+          [
+            "ho401_new_gun",
+            2,
+            4,
+            0,
+            "New 57 mm cannons",
+            "New 57 mm cannons",
+            "weapon.png",
+            3200,
+            6300,
+            300,
+            [
+              "ho_401_belt_pack"
+            ],
+            14
+          ]
+        ]
+      },
+      "before": {
+        "mods": {
+          "cd_98": {
+            "tier": 3,
+            "repairCostCoef": 0.052,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 175,
+            "repairCostCoefArcade": 0.054
+          },
+          "CdMin_Fuse": {
+            "tier": 1,
+            "repairCostCoef": 0.007,
+            "reqExp": 1500,
+            "value": 2900,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "new_cover": {
+            "tier": 4,
+            "repairCostCoef": 0.044,
+            "reqExp": 3200,
+            "value": 6300,
+            "costGold": 0,
+            "openCostGold": 300,
+            "repairCostCoefArcade": 0.045
+          },
+          "structure_str": {
+            "tier": 2,
+            "repairCostCoef": 0.045,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 155,
+            "repairCostCoefArcade": 0.047
+          },
+          "hp_105": {
+            "tier": 3,
+            "repairCostCoef": 0.051,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 175,
+            "repairCostCoefArcade": 0.052
+          },
+          "new_radiator": {
+            "tier": 1,
+            "repairCostCoef": 0.005,
+            "reqExp": 1500,
+            "value": 2900,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "new_compressor": {
+            "tier": 2,
+            "repairCostCoef": 0.036,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 155,
+            "repairCostCoefArcade": 0.037
+          },
+          "new_engine_injection": {
+            "tier": 4,
+            "repairCostCoef": 0.017,
+            "repairCostCoefArcade": 0.049,
+            "reqExp": 3200,
+            "value": 6300,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "ho5_universal": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 0,
+            "value": 135,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 300
+          },
+          "ho5_ground_targets": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 0,
+            "value": 135,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 300
+          },
+          "ho5_all_tracers": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 0,
+            "value": 135,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 300
+          },
+          "ho5_stealth": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 0,
+            "value": 210,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 300
+          },
+          "ho5_belt_pack": {
+            "tier": 1,
+            "reqExp": 1500,
+            "value": 2900,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "ho5_new_gun": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.015,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 155
+          },
+          "ho_401_belt_pack": {
+            "prevModification": "ho5_new_gun",
+            "tier": 3,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 175
+          },
+          "ho_401_antitank": {
+            "reqModification": "ho_401_belt_pack",
+            "tier": 0,
+            "value": 280,
+            "costGold": 0,
+            "spawnCostMul": 1.33,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 20
+          },
+          "ho_401_antibomber": {
+            "reqModification": "ho_401_belt_pack",
+            "tier": 0,
+            "value": 280,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 20
+          },
+          "ho401_new_gun": {
+            "reqModification": "ho_401_belt_pack",
+            "tier": 4,
+            "repairCostCoef": 0.045,
+            "reqExp": 3200,
+            "value": 6300,
+            "costGold": 0,
+            "openCostGold": 300,
+            "repairCostCoefArcade": 0.047
+          },
+          "safat12_turret_belt_pack": {
+            "tier": 1,
+            "reqExp": 1500,
+            "value": 2900,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "breda12_7_turret_ap": {
+            "reqModification": "safat12_turret_belt_pack",
+            "tier": 0,
+            "value": 70,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 400
+          },
+          "breda12_7_turret_apit": {
+            "reqModification": "safat12_turret_belt_pack",
+            "tier": 0,
+            "value": 70,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 400
+          },
+          "ho103_turret_new_gun": {
+            "reqModification": "safat12_turret_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.015,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 155
+          },
+          "ki49_12in_mod30": {
+            "tier": 3,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 175
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 1200
+          }
+        },
+        "tierRequirements": [
+          1,
+          2,
+          2,
+          1
+        ]
+      },
+      "after": {
+        "mods": {
+          "cd_98": {
+            "tier": 3,
+            "repairCostCoef": 0.052,
+            "reqExp": 2200,
+            "value": 4300,
+            "costGold": 0,
+            "openCostGold": 190,
+            "repairCostCoefArcade": 0.054
+          },
+          "CdMin_Fuse": {
+            "tier": 1,
+            "repairCostCoef": 0.007,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 145
+          },
+          "new_cover": {
+            "tier": 4,
+            "repairCostCoef": 0.044,
+            "reqExp": 3800,
+            "value": 7400,
+            "costGold": 0,
+            "openCostGold": 330,
+            "repairCostCoefArcade": 0.045
+          },
+          "structure_str": {
+            "tier": 2,
+            "repairCostCoef": 0.045,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 165,
+            "repairCostCoefArcade": 0.047
+          },
+          "hp_105": {
+            "tier": 3,
+            "repairCostCoef": 0.051,
+            "reqExp": 2200,
+            "value": 4300,
+            "costGold": 0,
+            "openCostGold": 190,
+            "repairCostCoefArcade": 0.052
+          },
+          "new_radiator": {
+            "tier": 1,
+            "repairCostCoef": 0.005,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 145
+          },
+          "new_compressor": {
+            "tier": 2,
+            "repairCostCoef": 0.036,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 165,
+            "repairCostCoefArcade": 0.037
+          },
+          "new_engine_injection": {
+            "tier": 4,
+            "repairCostCoef": 0.017,
+            "repairCostCoefArcade": 0.049,
+            "reqExp": 3800,
+            "value": 7400,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "ho5_universal": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 0,
+            "value": 155,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 300
+          },
+          "ho5_ground_targets": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 0,
+            "value": 155,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 300
+          },
+          "ho5_all_tracers": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 0,
+            "value": 155,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 300
+          },
+          "ho5_stealth": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 0,
+            "value": 230,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 300
+          },
+          "ho5_belt_pack": {
+            "tier": 1,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 145
+          },
+          "ho5_new_gun": {
+            "reqModification": "ho5_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.015,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 165
+          },
+          "ho_401_belt_pack": {
+            "prevModification": "ho5_new_gun",
+            "tier": 3,
+            "reqExp": 2200,
+            "value": 4300,
+            "costGold": 0,
+            "openCostGold": 190
+          },
+          "ho_401_antitank": {
+            "reqModification": "ho_401_belt_pack",
+            "tier": 0,
+            "value": 310,
+            "costGold": 0,
+            "spawnCostMul": 1.33,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 20
+          },
+          "ho_401_antibomber": {
+            "reqModification": "ho_401_belt_pack",
+            "tier": 0,
+            "value": 310,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 20
+          },
+          "ho401_new_gun": {
+            "reqModification": "ho_401_belt_pack",
+            "tier": 4,
+            "repairCostCoef": 0.045,
+            "reqExp": 3800,
+            "value": 7400,
+            "costGold": 0,
+            "openCostGold": 330,
+            "repairCostCoefArcade": 0.047
+          },
+          "safat12_turret_belt_pack": {
+            "tier": 1,
+            "reqExp": 1700,
+            "value": 3300,
+            "costGold": 0,
+            "openCostGold": 145
+          },
+          "breda12_7_turret_ap": {
+            "reqModification": "safat12_turret_belt_pack",
+            "tier": 0,
+            "value": 75,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 400
+          },
+          "breda12_7_turret_apit": {
+            "reqModification": "safat12_turret_belt_pack",
+            "tier": 0,
+            "value": 75,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 400
+          },
+          "ho103_turret_new_gun": {
+            "reqModification": "safat12_turret_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.015,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 165
+          },
+          "ki49_12in_mod30": {
+            "tier": 3,
+            "reqExp": 2200,
+            "value": 4300,
+            "costGold": 0,
+            "openCostGold": 190
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 1300
+          }
+        },
+        "tierRequirements": [
+          1,
+          2,
+          2,
+          1
+        ]
+      }
+    },
+    "p1y1_mod11": {
+      "previous": {
+        "i": "p1y1_mod11",
+        "n": [
+          "银河一一型",
+          "P1Y1 mod. 11"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/p1y1_mod11.png",
+        "r": [
+          1,
+          1,
+          2
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器",
+            "Weaponry",
+            2
+          ]
+        ],
+        "t": [
+          19560,
+          32100
+        ],
+        "m": [
+          [
+            "CdMin_Fuse",
+            0,
+            1,
+            0,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            990,
+            1600,
+            105,
+            [],
+            0
+          ],
+          [
+            "new_radiator",
+            0,
+            1,
+            1,
+            "散热器",
+            "Radiator",
+            "radiator.png",
+            990,
+            1600,
+            105,
+            [],
+            1
+          ],
+          [
+            "new_compressor",
+            0,
+            2,
+            1,
+            "增压器",
+            "Compressor",
+            "compressor.png",
+            1500,
+            2500,
+            160,
+            [],
+            2
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            1200,
+            2000,
+            130,
+            [],
+            3
+          ],
+          [
+            "hp_105",
+            0,
+            3,
+            1,
+            "发动机",
+            "Engine",
+            "new_engine.png",
+            1200,
+            2000,
+            130,
+            [],
+            4
+          ],
+          [
+            "new_engine_injection",
+            0,
+            4,
+            1,
+            "喷油系统",
+            "Engine injection",
+            "metanol.png",
+            2100,
+            3400,
+            220,
+            [],
+            5
+          ],
+          [
+            "structure_str",
+            1,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            1500,
+            2500,
+            160,
+            [],
+            6
+          ],
+          [
+            "air_extinguisher",
+            1,
+            3,
+            0,
+            "引擎灭火系统",
+            "EFS",
+            "engine_extinguisher.png",
+            1200,
+            2000,
+            130,
+            [],
+            7
+          ],
+          [
+            "new_cover",
+            1,
+            4,
+            0,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            2100,
+            3400,
+            220,
+            [],
+            8
+          ],
+          [
+            "type99_turret_belt_pack",
+            2,
+            1,
+            0,
+            "Turret 20 mm belts",
+            "Turret 20 mm belts",
+            "ammo.png",
+            990,
+            1600,
+            105,
+            [],
+            9,
+            {
+              "b": [
+                "bullet_cannon_yellow_green.png",
+                "bullet_cannon_red_blue.png",
+                "bullet_cannon_red_blue.png",
+                "bullet_cannon_red_blue.png",
+                "bullet_cannon_red_blue.png"
+              ],
+              "d": [],
+              "n": "Armored targets",
+              "w": "2 × Turret — 20 mm Type 99 Mark 1 Model 11 cannon",
+              "r": 0.2,
+              "v": [
+                {
+                  "n": "Default",
+                  "b": [
+                    "bullet_cannon_green.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Armored targets",
+                  "b": [
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Air targets",
+                  "b": [
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_yellow_green.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_yellow_green.png"
+                  ],
+                  "d": []
+                }
+              ]
+            }
+          ],
+          [
+            "b5n2_17-34in_mod45",
+            2,
+            1,
+            1,
+            "17.75 英寸 45 型挂架",
+            "17 3/4 in (mod45)",
+            "pilon_torpedo.png",
+            990,
+            1600,
+            105,
+            [],
+            10
+          ],
+          [
+            "type99_turret_new_gun",
+            2,
+            2,
+            0,
+            "New 20 mm cannons (turret)",
+            "New 20 mm cannons (turret)",
+            "turret_gun.png",
+            1500,
+            2500,
+            160,
+            [
+              "type99_turret_belt_pack"
+            ],
+            11
+          ],
+          [
+            "14in_mod30",
+            2,
+            3,
+            1,
+            "14 英寸 30 型挂架",
+            "14 in (mod30)",
+            "pilon_bomb.png",
+            1200,
+            2000,
+            130,
+            [
+              "b5n2_17-34in_mod45"
+            ],
+            12
+          ],
+          [
+            "ki49_14in_mod35",
+            2,
+            4,
+            1,
+            "14 英寸 35 型挂架",
+            "14 in (mod35)",
+            "pilon_bomb.png",
+            2100,
+            3400,
+            220,
+            [
+              "14in_mod30"
+            ],
+            13
+          ]
+        ]
+      },
+      "before": {
+        "mods": {
+          "cd_98": {
+            "tier": 3,
+            "repairCostCoef": 0.052,
+            "reqExp": 1200,
+            "value": 2000,
+            "costGold": 0,
+            "openCostGold": 130,
+            "repairCostCoefArcade": 0.054
+          },
+          "CdMin_Fuse": {
+            "tier": 1,
+            "repairCostCoef": 0.007,
+            "reqExp": 990,
+            "value": 1600,
+            "costGold": 0,
+            "openCostGold": 105
+          },
+          "air_extinguisher": {
+            "tier": 3,
+            "repairCostCoef": 0.071,
+            "image": "!#ui/gameuiskin#engine_extinguisher.avif",
+            "reqExp": 1200,
+            "value": 2000,
+            "costGold": 0,
+            "openCostGold": 130,
+            "repairCostCoefArcade": 0.074
+          },
+          "new_cover": {
+            "tier": 4,
+            "repairCostCoef": 0.044,
+            "reqExp": 2100,
+            "value": 3400,
+            "costGold": 0,
+            "openCostGold": 220,
+            "repairCostCoefArcade": 0.046
+          },
+          "structure_str": {
+            "tier": 2,
+            "repairCostCoef": 0.046,
+            "reqExp": 1500,
+            "value": 2500,
+            "costGold": 0,
+            "openCostGold": 160,
+            "repairCostCoefArcade": 0.047
+          },
+          "hp_105": {
+            "tier": 3,
+            "repairCostCoef": 0.051,
+            "reqExp": 1200,
+            "value": 2000,
+            "costGold": 0,
+            "openCostGold": 130,
+            "repairCostCoefArcade": 0.053
+          },
+          "new_radiator": {
+            "tier": 1,
+            "repairCostCoef": 0.005,
+            "reqExp": 990,
+            "value": 1600,
+            "costGold": 0,
+            "openCostGold": 105,
+            "repairCostCoefArcade": 0.006
+          },
+          "new_compressor": {
+            "tier": 2,
+            "repairCostCoef": 0.036,
+            "reqExp": 1500,
+            "value": 2500,
+            "costGold": 0,
+            "openCostGold": 160,
+            "repairCostCoefArcade": 0.037
+          },
+          "new_engine_injection": {
+            "tier": 4,
+            "repairCostCoef": 0.017,
+            "repairCostCoefArcade": 0.05,
+            "reqExp": 2100,
+            "value": 3400,
+            "costGold": 0,
+            "openCostGold": 220
+          },
+          "type99_turret_belt_pack": {
+            "tier": 1,
+            "reqExp": 990,
+            "value": 1600,
+            "costGold": 0,
+            "openCostGold": 105
+          },
+          "type99_turret_new_gun": {
+            "reqModification": "type99_turret_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.015,
+            "reqExp": 1500,
+            "value": 2500,
+            "costGold": 0,
+            "openCostGold": 160
+          },
+          "type99mk1_turret_ap": {
+            "reqModification": "type99_turret_belt_pack",
+            "tier": 0,
+            "value": 40,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 225
+          },
+          "type99mk1_turret_he": {
+            "reqModification": "type99_turret_belt_pack",
+            "tier": 0,
+            "value": 40,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 225
+          },
+          "14in_mod30": {
+            "reqModification": "b5n2_17-34in_mod45",
+            "tier": 3,
+            "reqExp": 1200,
+            "value": 2000,
+            "costGold": 0,
+            "openCostGold": 130
+          },
+          "ki49_14in_mod35": {
+            "reqModification": "14in_mod30",
+            "tier": 4,
+            "reqExp": 2100,
+            "value": 3400,
+            "costGold": 0,
+            "openCostGold": 220
+          },
+          "b5n2_17-34in_mod45": {
+            "tier": 1,
+            "reqExp": 990,
+            "value": 1600,
+            "costGold": 0,
+            "openCostGold": 105
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 980
+          }
+        },
+        "tierRequirements": [
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "after": {
+        "mods": {
+          "cd_98": {
+            "tier": 3,
+            "repairCostCoef": 0.052,
+            "reqExp": 1500,
+            "value": 2700,
+            "costGold": 0,
+            "openCostGold": 140,
+            "repairCostCoefArcade": 0.054
+          },
+          "CdMin_Fuse": {
+            "tier": 1,
+            "repairCostCoef": 0.007,
+            "reqExp": 1200,
+            "value": 2200,
+            "costGold": 0,
+            "openCostGold": 115
+          },
+          "air_extinguisher": {
+            "tier": 3,
+            "repairCostCoef": 0.071,
+            "image": "!#ui/gameuiskin#engine_extinguisher.avif",
+            "reqExp": 1500,
+            "value": 2700,
+            "costGold": 0,
+            "openCostGold": 140,
+            "repairCostCoefArcade": 0.074
+          },
+          "new_cover": {
+            "tier": 4,
+            "repairCostCoef": 0.044,
+            "reqExp": 2700,
+            "value": 4900,
+            "costGold": 0,
+            "openCostGold": 250,
+            "repairCostCoefArcade": 0.046
+          },
+          "structure_str": {
+            "tier": 2,
+            "repairCostCoef": 0.046,
+            "reqExp": 1900,
+            "value": 3500,
+            "costGold": 0,
+            "openCostGold": 180,
+            "repairCostCoefArcade": 0.047
+          },
+          "hp_105": {
+            "tier": 3,
+            "repairCostCoef": 0.051,
+            "reqExp": 1500,
+            "value": 2700,
+            "costGold": 0,
+            "openCostGold": 140,
+            "repairCostCoefArcade": 0.053
+          },
+          "new_radiator": {
+            "tier": 1,
+            "repairCostCoef": 0.005,
+            "reqExp": 1200,
+            "value": 2200,
+            "costGold": 0,
+            "openCostGold": 115,
+            "repairCostCoefArcade": 0.006
+          },
+          "new_compressor": {
+            "tier": 2,
+            "repairCostCoef": 0.036,
+            "reqExp": 1900,
+            "value": 3500,
+            "costGold": 0,
+            "openCostGold": 180,
+            "repairCostCoefArcade": 0.037
+          },
+          "new_engine_injection": {
+            "tier": 4,
+            "repairCostCoef": 0.017,
+            "repairCostCoefArcade": 0.05,
+            "reqExp": 2700,
+            "value": 4900,
+            "costGold": 0,
+            "openCostGold": 250
+          },
+          "type99_turret_belt_pack": {
+            "tier": 1,
+            "reqExp": 1200,
+            "value": 2200,
+            "costGold": 0,
+            "openCostGold": 115
+          },
+          "type99_turret_new_gun": {
+            "reqModification": "type99_turret_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.015,
+            "reqExp": 1900,
+            "value": 3500,
+            "costGold": 0,
+            "openCostGold": 180
+          },
+          "type99mk1_turret_ap": {
+            "reqModification": "type99_turret_belt_pack",
+            "tier": 0,
+            "value": 45,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 225
+          },
+          "type99mk1_turret_he": {
+            "reqModification": "type99_turret_belt_pack",
+            "tier": 0,
+            "value": 45,
+            "costGold": 0,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 225
+          },
+          "14in_mod30": {
+            "reqModification": "b5n2_17-34in_mod45",
+            "tier": 3,
+            "reqExp": 1500,
+            "value": 2700,
+            "costGold": 0,
+            "openCostGold": 140
+          },
+          "ki49_14in_mod35": {
+            "reqModification": "14in_mod30",
+            "tier": 4,
+            "reqExp": 2700,
+            "value": 4900,
+            "costGold": 0,
+            "openCostGold": 250
+          },
+          "b5n2_17-34in_mod45": {
+            "tier": 1,
+            "reqExp": 1200,
+            "value": 2200,
+            "costGold": 0,
+            "openCostGold": 115
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 1100
+          }
+        },
+        "tierRequirements": [
+          1,
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    "uk_challenger_1": {
+      "previous": {
+        "i": "uk_challenger_1",
+        "n": [
+          "挑战者 Mk 2",
+          "Challenger Mk.2"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_1.png",
+        "r": [
+          1,
+          2,
+          2
+        ],
+        "c": [
+          [
+            "机动性",
+            "Mobility",
+            2
+          ],
+          [
+            "防护",
+            "Protection",
+            1
+          ],
+          [
+            "火力",
+            "Firepower",
+            3
+          ]
+        ],
+        "t": [
+          207300,
+          350000
+        ],
+        "m": [
+          [
+            "new_tank_tracks",
+            0,
+            1,
+            0,
+            "履带",
+            "Tracks",
+            "new_tank_traks.png",
+            11000,
+            17000,
+            350,
+            [],
+            0
+          ],
+          [
+            "new_tank_suspension",
+            0,
+            2,
+            0,
+            "悬挂系统",
+            "Suspension",
+            "new_tank_suspension.png",
+            10000,
+            16000,
+            310,
+            [],
+            1
+          ],
+          [
+            "new_tank_brakes",
+            0,
+            2,
+            1,
+            "刹车装置",
+            "Brake System",
+            "new_tank_break.png",
+            10000,
+            16000,
+            310,
+            [],
+            2
+          ],
+          [
+            "new_tank_filter",
+            0,
+            3,
+            0,
+            "滤清器",
+            "Filters",
+            "new_tank_filter.png",
+            14000,
+            22000,
+            440,
+            [],
+            3
+          ],
+          [
+            "new_tank_transmission",
+            0,
+            4,
+            0,
+            "传动装置",
+            "Transmission",
+            "new_tank_transmission.png",
+            12000,
+            19000,
+            380,
+            [],
+            4
+          ],
+          [
+            "new_tank_engine",
+            0,
+            4,
+            1,
+            "发动机",
+            "Engine",
+            "new_tank_engine.png",
+            12000,
+            19000,
+            380,
+            [],
+            5
+          ],
+          [
+            "tank_tool_kit",
+            1,
+            1,
+            0,
+            "进阶维修套件",
+            "Improved Parts",
+            "tank_tool_kit.png",
+            3300,
+            17000,
+            350,
+            [],
+            6
+          ],
+          [
+            "manual_extinguisher",
+            1,
+            2,
+            0,
+            "进阶灭火套件",
+            "Improved FPE",
+            "extinguisher.png",
+            3000,
+            16000,
+            310,
+            [],
+            7
+          ],
+          [
+            "tank_medical_kit",
+            1,
+            3,
+            0,
+            "补充乘员",
+            "Crew Replenishment",
+            "tank_reinforcement_uk.png",
+            14000,
+            22000,
+            440,
+            [],
+            8
+          ],
+          [
+            "tank_smoke_screen_system_mod",
+            1,
+            4,
+            0,
+            "烟雾弹",
+            "Smoke grenade",
+            "smoke_screen.png",
+            12000,
+            19000,
+            380,
+            [],
+            9
+          ],
+          [
+            "new_tank_horizontal_aiming",
+            2,
+            1,
+            0,
+            "方向机",
+            "Horizontal Drive",
+            "new_tank_horizontal_aiming.png",
+            11000,
+            17000,
+            350,
+            [],
+            10
+          ],
+          [
+            "120mm_britain_Smoke_ammo_pack",
+            2,
+            1,
+            1,
+            "L34",
+            "L34",
+            "tank_ammo.png",
+            11000,
+            17000,
+            350,
+            [],
+            11,
+            {
+              "b": [
+                "smoke_tank.png"
+              ],
+              "d": [],
+              "n": "L34",
+              "w": "120 mm L11A5 cannon",
+              "r": 1
+            }
+          ],
+          [
+            "tank_new_gun",
+            2,
+            2,
+            0,
+            "校准主炮",
+            "Adjustment of Fire",
+            "tank_cannon.png",
+            10000,
+            16000,
+            310,
+            [],
+            12
+          ],
+          [
+            "tank_bulldozer_blade",
+            2,
+            2,
+            1,
+            "推土铲",
+            "Dozer Blade",
+            "dozer_blade.png",
+            10000,
+            16000,
+            310,
+            [],
+            13
+          ],
+          [
+            "new_tank_vertical_aiming",
+            2,
+            3,
+            0,
+            "高低机",
+            "Elevation Mechanism",
+            "new_tank_vertical_aiming.png",
+            14000,
+            22000,
+            440,
+            [],
+            14
+          ],
+          [
+            "night_vision_system",
+            2,
+            3,
+            1,
+            "夜视仪",
+            "NVD",
+            "thermal_sight.png",
+            14000,
+            22000,
+            440,
+            [],
+            15
+          ],
+          [
+            "modern_tank_laser_rangefinder",
+            2,
+            4,
+            0,
+            "激光测距仪",
+            "Laser rangefinder",
+            "tank_laser_rangefinder.png",
+            12000,
+            19000,
+            380,
+            [],
+            16
+          ],
+          [
+            "120mm_britain_L23A1_APDSFS_ammo_pack",
+            2,
+            4,
+            1,
+            "Shot L23A1",
+            "Shot L23A1",
+            "apdsfs_tank.png",
+            12000,
+            19000,
+            380,
+            [],
+            17,
+            {
+              "b": [
+                "apdsfs_tank.png"
+              ],
+              "d": [
+                "damage.png",
+                "armor_middle.png"
+              ],
+              "n": "Shot L23A1",
+              "w": "120 mm L11A5 cannon",
+              "r": 1
+            }
+          ],
+          [
+            "art_support",
+            2,
+            4,
+            2,
+            "火炮支援",
+            "Artillery Support",
+            "art_support.png",
+            12000,
+            19000,
+            380,
+            [],
+            18
+          ]
+        ]
+      },
+      "before": {
+        "mods": {
+          "tank_tool_kit": {
+            "tier": 1,
+            "repairCostCoef": 0.011,
+            "reqExp": 3300,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 350
+          },
+          "manual_extinguisher": {
+            "tier": 2,
+            "repairCostCoef": 0.011,
+            "reqExp": 3000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "new_tank_tracks": {
+            "tier": 1,
+            "repairCostCoef": 0.016,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 350
+          },
+          "new_tank_suspension": {
+            "tier": 2,
+            "repairCostCoef": 0.012,
+            "reqExp": 10000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "new_tank_filter": {
+            "tier": 3,
+            "repairCostCoef": 0.039,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+          },
+          "new_tank_brakes": {
+            "tier": 2,
+            "repairCostCoef": 0.02,
+            "reqExp": 10000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "new_tank_transmission": {
+            "tier": 4,
+            "repairCostCoef": 0.053,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 380
+          },
+          "new_tank_engine": {
+            "tier": 4,
+            "repairCostCoef": 0.061,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 380
+          },
+          "new_tank_horizontal_aiming": {
+            "tier": 1,
+            "repairCostCoef": 0.016,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 350
+          },
+          "new_tank_vertical_aiming": {
+            "tier": 3,
+            "repairCostCoef": 0.036,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+          },
+          "tank_new_gun": {
+            "tier": 2,
+            "repairCostCoef": 0.025,
+            "reqExp": 10000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "tank_bulldozer_blade": {
+            "tier": 2,
+            "modClass": "firepower",
+            "repairCostCoef": 0.048,
+            "reqExp": 10000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "tank_medical_kit": {
+            "tier": 3,
+            "image": "!#ui/gameuiskin#tank_reinforcement_uk.avif",
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+          },
+          "tank_medical_kit_expendable": {
+            "reqModification": "tank_medical_kit",
+            "tier": 0,
+            "image": "!#ui/gameuiskin#tank_reinforcement_uk.avif",
+            "value": 700,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true
+          },
+          "modern_tank_laser_rangefinder": {
+            "tier": 4,
+            "repairCostCoef": 0.023,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 380,
+            "tutorialMission": "tank_laser_rangefinder_tft"
+          },
+          "120mm_britain_L37A7_HESH": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1,
+            "bulletsIconParam": 22
+          },
+          "120mm_britain_L23A1_APDSFS": {
+            "reqModification": "120mm_britain_L23A1_APDSFS_ammo_pack",
+            "tier": 0,
+            "value": 230,
+            "costGold": 0,
+            "maxCount": 156,
+            "validIfBought": true,
+            "ammoCount": 1,
+            "bulletsIconParam": 23
+          },
+          "120mm_britain_L23A1_APDSFS_ammo_pack": {
+            "tier": 4,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 380
+          },
+          "120mm_britain_Smoke": {
+            "reqModification": "120mm_britain_Smoke_ammo_pack",
+            "tier": 0,
+            "value": 20,
+            "costGold": 0,
+            "maxCount": 156,
+            "validIfBought": true,
+            "ammoCount": 1,
+            "bulletsIconParam": 65
+          },
+          "120mm_britain_Smoke_ammo_pack": {
+            "tier": 1,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 350
+          },
+          "art_support": {
+            "tier": 4,
+            "repairCostCoef": 0.047,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 380
+          },
+          "tank_smoke_screen_system_mod": {
+            "tier": 4,
+            "modClass": "protection",
+            "repairCostCoef": 0.059,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 380,
+            "weaponUpgrade1": "new_tank_horizontal_aiming",
+            "weaponUpgrade2": "new_tank_vertical_aiming",
+            "weaponUpgrade3": "tank_new_gun"
+          },
+          "night_vision_system": {
+            "tier": 3,
+            "repairCostCoef": 0.083,
+            "image": "!#ui/gameuiskin#thermal_sight.avif",
+            "animation": "video/unitModifications/night_vision_system_thermal.ivf",
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 440
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 2800
+          }
+        },
+        "tierRequirements": [
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      "after": {
+        "mods": {
+          "tank_tool_kit": {
+            "tier": 1,
+            "repairCostCoef": 0.011,
+            "reqExp": 3300,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "manual_extinguisher": {
+            "tier": 2,
+            "repairCostCoef": 0.011,
+            "reqExp": 3000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "new_tank_tracks": {
+            "tier": 1,
+            "repairCostCoef": 0.016,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "new_tank_suspension": {
+            "tier": 2,
+            "repairCostCoef": 0.012,
+            "reqExp": 10000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "new_tank_filter": {
+            "tier": 3,
+            "repairCostCoef": 0.039,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 420
+          },
+          "new_tank_brakes": {
+            "tier": 2,
+            "repairCostCoef": 0.02,
+            "reqExp": 10000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "new_tank_transmission": {
+            "tier": 4,
+            "repairCostCoef": 0.053,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 450
+          },
+          "new_tank_engine": {
+            "tier": 4,
+            "repairCostCoef": 0.061,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 450
+          },
+          "new_tank_horizontal_aiming": {
+            "tier": 1,
+            "repairCostCoef": 0.016,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "new_tank_vertical_aiming": {
+            "tier": 3,
+            "repairCostCoef": 0.036,
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 420
+          },
+          "tank_new_gun": {
+            "tier": 2,
+            "repairCostCoef": 0.025,
+            "reqExp": 10000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "tank_bulldozer_blade": {
+            "tier": 2,
+            "modClass": "firepower",
+            "repairCostCoef": 0.048,
+            "reqExp": 10000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 300
+          },
+          "tank_medical_kit": {
+            "tier": 3,
+            "image": "!#ui/gameuiskin#tank_reinforcement_uk.avif",
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 420
+          },
+          "tank_medical_kit_expendable": {
+            "reqModification": "tank_medical_kit",
+            "tier": 0,
+            "image": "!#ui/gameuiskin#tank_reinforcement_uk.avif",
+            "value": 700,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true
+          },
+          "modern_tank_laser_rangefinder": {
+            "tier": 4,
+            "repairCostCoef": 0.023,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 450,
+            "tutorialMission": "tank_laser_rangefinder_tft"
+          },
+          "120mm_britain_L37A7_HESH": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1,
+            "bulletsIconParam": 23
+          },
+          "120mm_britain_Smoke": {
+            "reqModification": "120mm_britain_Smoke_ammo_pack",
+            "tier": 0,
+            "value": 20,
+            "costGold": 0,
+            "maxCount": 156,
+            "validIfBought": true,
+            "ammoCount": 1,
+            "bulletsIconParam": 65
+          },
+          "120mm_britain_Smoke_ammo_pack": {
+            "tier": 1,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "art_support": {
+            "tier": 4,
+            "repairCostCoef": 0.047,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 450
+          },
+          "tank_smoke_screen_system_mod": {
+            "tier": 4,
+            "modClass": "protection",
+            "repairCostCoef": 0.059,
+            "reqExp": 15000,
+            "value": 23000,
+            "costGold": 0,
+            "openCostGold": 450,
+            "weaponUpgrade1": "new_tank_horizontal_aiming",
+            "weaponUpgrade2": "new_tank_vertical_aiming",
+            "weaponUpgrade3": "tank_new_gun"
+          },
+          "night_vision_system": {
+            "tier": 3,
+            "repairCostCoef": 0.083,
+            "image": "!#ui/gameuiskin#thermal_sight.avif",
+            "animation": "video/unitModifications/night_vision_system_thermal.ivf",
+            "reqExp": 14000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 420
+          },
+          "premExpMul": {
+            "tier": 0,
+            "value": 0,
+            "costGold": 2800
+          }
+        },
+        "tierRequirements": [
+          1,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "additions": {
+    "M163_Minigun_new_gun": {
+      "definition": {
+        "image": "!#ui/gameuiskin#weapon.avif",
+        "animation": "video/unitModifications/new_gun.ivf",
+        "invertEnableLogic": true,
+        "modClass": "weapon",
+        "caliber": 7.62,
+        "modOverdriveType": "new_gun",
+        "modUpgradeType": "new_gun",
+        "effects": {
+          "weaponMod": "M163_Minigun_new_gun"
+        }
+      },
+      "localizationKey": "modification/_new_gun",
+      "names": {
+        "zh": "7.62 毫米前射机枪翻新",
+        "en": "New 7.62 mm MGs",
+        "ru": "Новые 7.62-мм пулемёты",
+        "de": "Neue 7.62-mm-MGs",
+        "fr": "Nouvelles mitrailleuses de 7.62 mm",
+        "ja": "新しい 7.62 mm 機関銃",
+        "es": "Nuevas ametralladoras de 7.62 mm"
+      }
+    },
+    "us_aim_26b": {
+      "definition": {
+        "image": "!#ui/gameuiskin#air_to_air_longrange_missile.avif",
+        "animation": "video/unitModifications/missile_air_to_air_midrange.ivf",
+        "modClass": "weapon",
+        "deactivationIsAllowed": false
+      },
+      "localizationKey": "modification/us_aim_26b",
+      "names": {
+        "zh": "AIM-26B",
+        "en": "AIM-26B",
+        "ru": "AIM-26B",
+        "de": "AIM-26B",
+        "fr": "AIM-26B",
+        "ja": "AIM-26B",
+        "es": "AIM-26B"
+      }
+    }
+  }
+}
