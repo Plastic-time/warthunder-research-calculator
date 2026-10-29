@@ -193,7 +193,7 @@
     {
       "path": "database/japan/japan_aviation.json",
       "units": 140,
-      "sha256": "733a8e7e2de5fe371c803795f0d4e4e95ef38e833e72418e6e6477f74cfbe33c",
+      "sha256": "db34599fb323f66e09a10fe24c9379320717ee821afcd51ce983a16e176a8cd3",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "ki_93_1_ko",
@@ -1822,6 +1822,18 @@
     "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
     "scope": "changed-mode-specific-battle-ratings",
     "provenance": "config/battle-rating-update.json",
+    "fullSnapshotUpgrade": false
+  },
+  "vehicleCosts": {
+    "version": "2.59.0.93",
+    "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+    "scope": "existing-ordinary-vehicle-research-and-purchase-costs",
+    "ids": [
+      "b7a2",
+      "ki_93_1_ko",
+      "p1y1_mod11"
+    ],
+    "provenance": "config/vehicle-cost-update.json",
     "fullSnapshotUpgrade": false
   }
 }

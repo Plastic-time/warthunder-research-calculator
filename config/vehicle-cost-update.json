@@ -1,0 +1,115 @@
+{
+  "version": "2.59.0.93",
+  "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+  "previousCommit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+  "scope": "existing-ordinary-vehicle-research-and-purchase-costs",
+  "fullSnapshotUpgrade": false,
+  "sources": [
+    {
+      "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "localFile": "af0cce56-wpcost.blkx",
+      "role": "previous",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/af0cce561a73704e30c1df66eff06209bcc3f035/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32207135,
+      "sha256": "8dc4fb15ac057df616e97d498ff455aac81b4328ec860be61a4fc8bea18a300a",
+      "gitBlob": "c9829267ac48df140de2a7b8a5b693aca7e8af07"
+    },
+    {
+      "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "localFile": "501af3e3-wpcost.blkx",
+      "role": "current",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/501af3e34af2cb82d65140297e1b994b444c4b88/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32212188,
+      "sha256": "d269b1df680d76ff544025d0ba5b9642812a8f39e86b69bb4ca837563aef2b3a",
+      "gitBlob": "225ac9b6c9c9cdd15bce7707abf8a50477ab48ce"
+    }
+  ],
+  "units": {
+    "p1y1_mod11": {
+      "before": {
+        "rp": 18000,
+        "sl": 47000
+      },
+      "after": {
+        "rp": 26000,
+        "sl": 76000
+      }
+    },
+    "ki_93_1_ko": {
+      "before": {
+        "rp": 33000,
+        "sl": 105000
+      },
+      "after": {
+        "rp": 40000,
+        "sl": 135000
+      }
+    },
+    "b7a2": {
+      "before": {
+        "rp": 26000,
+        "sl": 76000
+      },
+      "after": {
+        "rp": 33000,
+        "sl": 105000
+      }
+    }
+  },
+  "trees": {
+    "database/usa/usa_ground.json": "878b0f701c94253f737c96a3fff3c7db5d5bfcb47e1baa0a6b6c86bd0685c6c7",
+    "database/germany/germany_ground.json": "16868f252e07884e1d8beef0f24401f74bde2a558fac897915197e0927a4e039",
+    "database/ussr/ussr_ground.json": "acb19b3f5e2ecc676eab7246a29cb6d90e017766f2716cade4f691834f04a19c",
+    "database/britain/britain_ground.json": "a521c7a584459ebf07fa29f6adbeccc9ebded48b80191565d9d77023b5c4f8c6",
+    "database/japan/japan_ground.json": "038f42355a421f4910396812ce7f405df02543f0a1c1d7b098fc92263caf1b4b",
+    "database/china/china_ground.json": "e68e1ca3708be223f6d466d67ef6ff3524fba1bd6c584c0fd3bc23e227e03970",
+    "database/italy/italy_ground.json": "05eb2d815d0899d9e584cc61a25b89f1895d7fe1fc844bd9dfdcca95df67e2ee",
+    "database/france/france_ground.json": "44207c0e7808033a61e3f718f09fa3717291e53aa51933b73216b845cdda29c9",
+    "database/sweden/sweden_ground.json": "34e3d595dbc25610c33059b865f0d5bf7a5cbeaaf2ddcdf1896073edb63f0fe0",
+    "database/israel/israel_ground.json": "0164f36d0449c2c6b57c384e34226f925631c6c9105fa541b5a6ac06c2a83af3",
+    "database/usa/usa_aviation.json": "625d73578ff5f6154513b3ef6f03a1d38c3f7c9d2cfa4d2979ad3c91ea5d0d2e",
+    "database/germany/germany_aviation.json": "6af5a9f0f58aa333294a059b5babe4b32adc0aee0de57928de4058b813342816",
+    "database/ussr/ussr_aviation.json": "8cc849cdd2aacd1ebc48efc265ec01c99cf979b9371772a74649d0225f5a5a6c",
+    "database/britain/britain_aviation.json": "16feb8a4b9012e4a9f6b9e7b36b3f2506828036e5008c10c40ab4bc618aa8e94",
+    "database/japan/japan_aviation.json": "733a8e7e2de5fe371c803795f0d4e4e95ef38e833e72418e6e6477f74cfbe33c",
+    "database/china/china_aviation.json": "f5597246c7abb0b6bd4c7c1caf4f556236dd09d82833d674619f16e8329492ed",
+    "database/italy/italy_aviation.json": "3cc857acaf5531394e5298b278464f89f95af48ba16110fb591a25666d9dd0b6",
+    "database/france/france_aviation.json": "70b192e50ecf837014b68fbf4d2de79d4a0673876d41936f395c32faf00c1e17",
+    "database/sweden/sweden_aviation.json": "dc41b224a5340877cec85ca23509225eea8083f8e913d1eb6e6031c0e8f527da",
+    "database/israel/israel_aviation.json": "254a303ee2f880beb61a4fefd434dc17d0582c29763432f871af5a6e3f9fee98",
+    "database/usa/usa_helicopters.json": "1b514b0f3e376d52ad625feb0d1a636145555bc40de0c581b2aa877d66fa1b89",
+    "database/germany/germany_helicopters.json": "f3af3acea9b8211defe866fca028f90290d6aab0249f7c86e88989a623c298cb",
+    "database/ussr/ussr_helicopters.json": "db8aa0d6285dc2cd7fc7b2f504492556e021b37233ebd40d9cc883f16de8c83b",
+    "database/britain/britain_helicopters.json": "4683f0ca0d6fda12646386acee87abcbd65592f9b2ec174f8494e95c906f63af",
+    "database/japan/japan_helicopters.json": "af71f456f7b8fd2af15de9c539717a0d3ba03ed0d73a45f6de2ecc9a921474ff",
+    "database/china/china_helicopters.json": "7aafedb5c9ce6019e1531cac80509d205e21851b0c6807260282163d10a98681",
+    "database/italy/italy_helicopters.json": "2020ce189ee0a265677dc6e51ce542a10b403ba71eb561d6477e7994b90bd266",
+    "database/france/france_helicopters.json": "1f28042e4da35ca20caa3083d8f2b55f5ca29b4a8b121b5b0702210e962514b8",
+    "database/sweden/sweden_helicopters.json": "1737d12bdde9c00797463e5ad968d255349da38fc66f5948299e763f75bc0634",
+    "database/israel/israel_helicopters.json": "1cb6e0923cc5669d4aa018f757016568b4b9e3ad37e41427627220c0067aa378",
+    "database/usa/usa_ships.json": "d0539e37c8ff48bc7e2ba29e40c7d1f374152d38c895604c77914abc3032e3fb",
+    "database/germany/germany_ships.json": "d415abeb3f66d5273af2a9d20ff6cff33de9a8560febb162f2969c4d0d39dcc1",
+    "database/ussr/ussr_ships.json": "69aa3af716c78066cab37ffbbadbff1c709ea3255f921bf9dca56f14804bdff8",
+    "database/britain/britain_ships.json": "efb1739ede5c810e7a1bb8da0b57a7370b35fea6829834a4b22533b11e07d3af",
+    "database/japan/japan_ships.json": "9016c0a15c95ef5847e8fa575f7ef558c9093e905f683f3cbb5315d200e118e1",
+    "database/china/china_ships.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "database/italy/italy_ships.json": "c046f4650f6ecfcfaced500ab4c5da29dc517173159f5b52dd271c15176ea34d",
+    "database/france/france_ships.json": "9caf7a42ec8e4b1c254865cecb975389165442ed7f4e36081049ac7c6f127597",
+    "database/sweden/sweden_ships.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "database/israel/israel_ships.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "database/usa/usa_boats.json": "c48b849ca65de59bd9249d00836510722646a418518659f2f69ebfce2b228408",
+    "database/germany/germany_boats.json": "91a284041d160a72c7144309affe2716691f7246f27a5fb29a9ea37f3e1b7707",
+    "database/ussr/ussr_boats.json": "501c70c088260488f6a24354876c16652c2b028d6528a88e5fe3d3aff7984fe4",
+    "database/britain/britain_boats.json": "ee2f089c87cc99bfc4b6529c80b2f28c2c837f6bf226c0e5a3a067929191a25a",
+    "database/japan/japan_boats.json": "32d310cf2582f5417adfdc4c58e3dff5d1697a53f39594afab186f88e172fae4",
+    "database/china/china_boats.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "database/italy/italy_boats.json": "540c7d035d98957403019df00fe746e2f75a8006c40a62e7b61a91f63a16865d",
+    "database/france/france_boats.json": "50581dfd89e80e09b4bb3f5b96098f0299bbcad4be54248718f47146710eea77",
+    "database/sweden/sweden_boats.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "database/israel/israel_boats.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "manifestSha256": "adcb0c8a0e8703faf908f22472352b9fb6db086770bc6c6a0bd9b9bda6f6de6a",
+  "modificationCatalogSha256": "680024d6608befb1af84a96d35d28a028b4d95e02b31c66318e411624ab9b735"
+}

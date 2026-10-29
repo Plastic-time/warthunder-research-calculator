@@ -2,10 +2,10 @@
   "schema": 1,
   "scopes": {
     "vehicle-costs": {
-      "gameVersion": "2.59.0.92",
-      "gameDataCommit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "gameVersion": "2.59.0.93",
+      "gameDataCommit": "501af3e34af2cb82d65140297e1b994b444c4b88",
       "files": ["char.vromfs.bin_u/config/wpcost.blkx"],
-      "provenance": "doc/game-data-review-20261028.md",
+      "provenance": "doc/vehicle-cost-update-20261029.md",
       "limitations": "Existing ordinary vehicles with explicit RP/SL only; unknown and special-vehicle costs remain unverified."
     },
     "vehicle-prerequisites": {

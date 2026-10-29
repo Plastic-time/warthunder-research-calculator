@@ -6,6 +6,7 @@ const express = require('express');
 const { chromium } = require('playwright');
 const { launchOptions } = require('./browser-test-runtime.cjs');
 const { restoreTree } = require('./apply-battle-ratings.cjs');
+const { restoreCosts } = require('./apply-vehicle-cost-update.cjs');
 const evidence = require('../config/battle-rating-update.json');
 const manifest = require('../docs/database/manifest.json');
 const root = path.resolve(__dirname, '..');
@@ -20,13 +21,14 @@ async function run() {
     if (!legacy) return next();
     const file = manifest.files.find(f => f.path === `database/${req.params.country}/${req.params.country}_${req.params.type}.json`);
     if (!file) return res.sendStatus(404);
-    res.set('Cache-Control', 'no-store').json({ success: true, data: restoreTree(JSON.parse(fs.readFileSync(path.join(root, file.path)))) });
+    res.set('Cache-Control', 'no-store').json({ success: true, data: restoreTree(restoreCosts(JSON.parse(fs.readFileSync(path.join(root, file.path))))) });
   });
   app.use('/pages/database', (req, res, next) => {
     if (req.path === '/manifest.json') {
       const value = structuredClone(manifest);
       if (legacy) {
         delete value.battleRatings;
+        delete value.vehicleCosts;
         for (const file of value.files) if (evidence.trees[file.path]) file.sha256 = evidence.trees[file.path];
       }
       return res.set('Cache-Control', 'public, max-age=31536000').json(value);
@@ -36,7 +38,7 @@ async function run() {
     requests++;
     const tree = JSON.parse(fs.readFileSync(path.join(root, file.path)));
     res.set('Cache-Control', 'public, max-age=31536000').type('json')
-      .send(JSON.stringify(legacy ? restoreTree(tree) : tree, null, 2) + '\n');
+      .send(JSON.stringify(legacy ? restoreTree(restoreCosts(tree)) : tree, null, 2) + '\n');
   });
   app.use('/pages', express.static(path.join(root, 'docs')));
   app.use(require('../main'));

@@ -11,9 +11,9 @@
   "latestReview": {
     "gameVersion": "2.59.0.93",
     "gameDataCommit": "501af3e34af2cb82d65140297e1b994b444c4b88",
-    "scope": "partial-battle-ratings",
+    "scope": "partial-battle-ratings-and-vehicle-costs",
     "fullSnapshotUpgrade": false,
-    "provenance": "doc/battle-rating-update-20261029.md"
+    "provenance": "doc/vehicle-cost-update-20261029.md"
   },
   "latestCorrection": {
     "gameVersion": "2.59.0.50",

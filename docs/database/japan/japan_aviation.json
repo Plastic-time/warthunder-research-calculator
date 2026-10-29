@@ -3029,8 +3029,8 @@
           "title": "P1Y1 mod. 11",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/p1y1_mod11.png",
           "br": "3.3",
-          "rp": 18000,
-          "sp": 47000,
+          "rp": 26000,
+          "sp": 76000,
           "data_unit_id": "p1y1_mod11",
           "required_unit_id": "d4y3",
           "selected": false,
@@ -3065,6 +3065,13 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:11.517Z",
             "sha256": "61857a490208a4b45bc1982541eb4ea86a2435da21ee859a0d0ae19e698e6825"
+          },
+          "game_costs": {
+            "version": "2.59.0.93",
+            "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+            "rp": 26000,
+            "sl": 76000,
+            "provenance": "config/vehicle-cost-update.json"
           }
         },
         {
@@ -3072,8 +3079,8 @@
           "title": "B7A2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/b7a2.png",
           "br": "4.0",
-          "rp": 26000,
-          "sp": 76000,
+          "rp": 33000,
+          "sp": 105000,
           "data_unit_id": "b7a2",
           "required_unit_id": "p1y1_mod11",
           "selected": false,
@@ -3138,6 +3145,13 @@
                 "SB": "4.0"
               }
             }
+          },
+          "game_costs": {
+            "version": "2.59.0.93",
+            "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+            "rp": 33000,
+            "sl": 105000,
+            "provenance": "config/vehicle-cost-update.json"
           }
         },
         {
@@ -3145,8 +3159,8 @@
           "title": "Ki-93-I Ko",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ki_93_1_ko.png",
           "br": "4.3",
-          "rp": 33000,
-          "sp": 105000,
+          "rp": 40000,
+          "sp": 135000,
           "data_unit_id": "ki_93_1_ko",
           "required_unit_id": "b7a2",
           "selected": false,
@@ -3181,6 +3195,13 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:10.263Z",
             "sha256": "7ba41ba12ca37b9533739b064914e69948e935d17982bbd5794ec6e6e638915a"
+          },
+          "game_costs": {
+            "version": "2.59.0.93",
+            "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+            "rp": 40000,
+            "sl": 135000,
+            "provenance": "config/vehicle-cost-update.json"
           }
         }
       ],

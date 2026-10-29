@@ -13,7 +13,9 @@ const correction = version.latestCorrection;
 const review = version.latestReview;
 assert.equal(review.gameVersion, manifest.battleRatings.version);
 assert.equal(review.gameDataCommit, manifest.battleRatings.commit);
-assert.equal(review.scope, 'partial-battle-ratings');
+assert.equal(review.scope, 'partial-battle-ratings-and-vehicle-costs');
+assert.equal(review.gameVersion, manifest.vehicleCosts.version);
+assert.equal(review.gameDataCommit, manifest.vehicleCosts.commit);
 assert.equal(catalog.eventModifications.version, version.rosterAddition.version);
 assert.equal(catalog.eventModifications.commit, version.rosterAddition.commit);
 assert.equal(review.fullSnapshotUpgrade, false);
@@ -99,9 +101,11 @@ for (const folder of ['public', 'docs']) {
   assert.equal($('.game-version [data-i18n="基础"]').length, 0);
   assert.equal($('.game-version [data-i18n="局部修正"]').length, 0);
   assert.equal($('[data-game-correction-scope]').length, 1);
-  for (const scope of ['638', '442', '空战', '陆战', '海战']) assert($('[data-game-correction-scope]').text().includes(scope));
+  for (const scope of ['P1Y1', 'B7A2', 'Ki-93-I', '研发', '银狮']) assert($('[data-game-correction-scope]').text().includes(scope));
   assert($('[data-game-correction-scope]').text().includes(review.gameVersion));
-  assert($('[data-game-correction-scope]').text().includes('费用、配件、前置及已有计划不变'));
+  assert($('[data-game-correction-scope]').text().includes('分模式 BR、配件、前置和拥有标记不变'));
+  assert($('#usageGuideChangelog').text().includes('638'));
+  assert($('#usageGuideChangelog').text().includes('442'));
   // Historical changelog entries retain their original source versions.
   $('script, style, #usageGuideChangelog').remove();
   const currentCopy = [$('body').text()];

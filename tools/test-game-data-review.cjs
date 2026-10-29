@@ -53,9 +53,10 @@ test('historical J35A review remains unchanged outside the later explicit game a
 });
 
 test('partial review checkpoints do not promote the full snapshot or import hidden additions', () => {
-  for (const scope of Object.values(read('config/data-review-checkpoints.json').scopes)) {
-    assert.equal(scope.gameVersion, latestReview.upstream.version);
-    assert.equal(scope.gameDataCommit, latestReview.upstream.commit);
+  for (const [name, scope] of Object.entries(read('config/data-review-checkpoints.json').scopes)) {
+    const expected = name === 'vehicle-costs' ? read('config/vehicle-cost-update.json') : latestReview.upstream;
+    assert.equal(scope.gameVersion, expected.version);
+    assert.equal(scope.gameDataCommit, expected.commit);
     assert(fs.existsSync(path.join(root, scope.provenance)));
   }
   assert.equal(read('config/data-version.json').gameVersion, '2.59.0.17');
@@ -74,6 +75,10 @@ test('October 28 review leaves the supported roster, costs and modification snap
     let bytes = fs.readFileSync(path.join(root, file));
     if (file === 'docs/database/manifest.json') {
       const manifest = JSON.parse(bytes), br = read('config/battle-rating-update.json');
+      const costs = read('config/vehicle-cost-update.json');
+      assert.equal(manifest.vehicleCosts.commit, costs.commit);
+      delete manifest.vehicleCosts;
+      for (const entry of manifest.files) entry.sha256 = costs.trees[entry.path];
       assert.equal(manifest.battleRatings.commit, br.commit);
       delete manifest.battleRatings;
       for (const entry of manifest.files) if (br.trees[entry.path]) entry.sha256 = br.trees[entry.path];

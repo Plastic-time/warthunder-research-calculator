@@ -56,3 +56,5 @@ jobs:
             logs/game-roster-browser/browser-report.json
             logs/battle-ratings/*.png
             logs/battle-ratings/browser-report.json
+            logs/vehicle-cost-update/*.png
+            logs/vehicle-cost-update/browser-report.json

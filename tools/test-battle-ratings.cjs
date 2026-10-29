@@ -5,6 +5,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const { wikiUnits } = require('./audit-datamine-roster.cjs');
 const { ratings, patchTree, restoreTree, verifySources } = require('./apply-battle-ratings.cjs');
+const { restoreCosts } = require('./apply-vehicle-cost-update.cjs');
 const root = path.resolve(__dirname, '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file)));
 const unit = (country, type, id) => wikiUnits(read(`docs/database/${country}/${country}_${type}.json`)).get(id);
@@ -24,7 +25,7 @@ test('October 29 default RB ratings use the correct battle context without chang
     assert.equal(vehicle.game_battle_ratings.context, context);
     assert.deepEqual(Object.keys(vehicle.game_battle_ratings.by_battle), [context]);
   }
-  const bomber = unit('japan', 'aviation', 'p1y1_mod11');
+  const bomber = wikiUnits(restoreCosts(read('docs/database/japan/japan_aviation.json'))).get('p1y1_mod11');
   assert.equal(bomber.rp, 18000);
   assert.equal(bomber.sp, 47000);
 });
@@ -84,7 +85,7 @@ test('all reviewed snapshots differ only in BR fields and runtime mirrors remain
     const bytes = fs.readFileSync(path.join(root, 'docs', entry.path));
     assert(bytes.equals(fs.readFileSync(path.join(root, entry.path))));
     assert.equal(hash(bytes), entry.sha256);
-    const tree = JSON.parse(bytes), type = path.basename(entry.path, '.json').split('_').slice(1).join('_');
+    const tree = restoreCosts(JSON.parse(bytes)), type = path.basename(entry.path, '.json').split('_').slice(1).join('_');
     if (evidence.trees[entry.path]) {
       const previous = restoreTree(tree, evidence);
       assert.equal(hash(JSON.stringify(previous, null, 2) + '\n'), evidence.trees[entry.path], 'No non-BR changes: ' + entry.path);
