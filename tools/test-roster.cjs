@@ -2,6 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const crypto = require('node:crypto');
 const { shopUnits, wikiUnits } = require('./audit-datamine-roster.cjs');
+const { restoreTree } = require('./apply-battle-ratings.cjs');
 const report = require('../docs/roster-audit.json');
 const sample = shopUnits({ range: [{ group: { showOnlyWhenBought: true, Unit_A: { rank: 2, reqAir: '' } } }] });
 assert.equal(sample.get('unit_a').showOnlyWhenBought, true);
@@ -12,7 +13,8 @@ let units = 0, candidates = 0;
 for (const [key, tree] of Object.entries(report.trees)) {
   const [country, type] = key.split('/');
   const raw = fs.readFileSync(`docs/database/${country}/${country}_${type}.json`);
-  assert.equal(crypto.createHash('sha256').update(raw).digest('hex'), tree.snapshotSha256 || tree.wikiSha256);
+  const baseline = JSON.stringify(restoreTree(JSON.parse(raw)), null, 2) + '\n';
+  assert.equal(crypto.createHash('sha256').update(baseline).digest('hex'), tree.snapshotSha256 || tree.wikiSha256);
   assert.equal(Object.keys(tree.units).length, tree.wikiCount + (tree.gameOnlyCount || 0));
   assert(tree.candidates.every(unit => !tree.units[unit.id.toLowerCase()]));
   units += tree.wikiCount + (tree.gameOnlyCount || 0);

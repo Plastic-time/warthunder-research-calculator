@@ -64,7 +64,7 @@
           "type": "single",
           "title": "▅AH-1E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_1s_early.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 360000,
           "sp": 980000,
           "data_unit_id": "ah_1s_early",
@@ -101,13 +101,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:03.744Z",
             "sha256": "147709e36ce83245928f896a90317ce6f9bc0f8db039af106985ae33be3b3287"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "AH-1S",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_1s_late.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "ah_1s_late",
@@ -144,6 +154,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:03.920Z",
             "sha256": "a8b52fdf4f652cf4478a26462cb3aac4c3a09de9c0535d2f3c0aa50c929a07f0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -152,7 +172,7 @@
           "type": "single",
           "title": "◥Mi-35",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_35p_indonesia.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 370000,
           "sp": 990000,
           "data_unit_id": "mi_35p_indonesia",
@@ -189,6 +209,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:04.446Z",
             "sha256": "302caa232194c6e22b66ad17de823fecb83060df0d040018de87f547a2aa9f0b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -199,7 +229,7 @@
           "type": "single",
           "title": "AH-1S Kisarazu",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_1s.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ah_1s",
@@ -236,6 +266,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:03.664Z",
             "sha256": "fceb45ae6be3ecbfe61bad3ee23b820b0d2e4738c083f608da0f77c5deba4885"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -252,7 +292,7 @@
           "type": "single",
           "title": "AH-64DJP",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64d_japan.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "ah_64d_japan",
@@ -289,13 +329,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:03.927Z",
             "sha256": "c82e8995aad77f73f334424eeb817d1022f65e36db741a6b7e7521190b8ec41b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◥AH-64E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64e_indonesia.png",
-          "br": "13.0",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1030000,
           "data_unit_id": "ah_64e_indonesia",
@@ -332,6 +382,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:04.252Z",
             "sha256": "269f28820c4dcb30d5ac600c3cf4c1e2b6ace6cd11cfb53f2632b2376c9314c5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "13.3",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -343,7 +403,7 @@
           "type": "single",
           "title": "AH-64DJP (AT)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64d_lightweight_japan.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ah_64d_lightweight_japan",
@@ -380,6 +440,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:04.125Z",
             "sha256": "a6aadf64b437caf4a62200317c30ee53e6abdbd4c2779558a90f145c6cc71769"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ]

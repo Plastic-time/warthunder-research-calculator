@@ -2090,7 +2090,7 @@
           "title": "ZTS/ZBD",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_zts_type_group.png",
           "selected": false,
-          "br": "7.7-8.0",
+          "br": "7.7",
           "data_unit_id": "cn_zts_type_group",
           "required_unit_id": "cn_type_63_62_group",
           "class_name": "",
@@ -2142,7 +2142,7 @@
               "type": "single",
               "title": "ZBD86",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_type_86.png",
-              "br": "8.0",
+              "br": "7.7",
               "rp": 53000,
               "sp": 300000,
               "data_unit_id": "cn_type_86",
@@ -2179,6 +2179,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:00.589Z",
                 "sha256": "e6273e6e51674a5ce75040390015d6ff819abc30df2ded199a34153c88449975"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "7.7",
+                    "RB": "7.7",
+                    "SB": "7.7"
+                  }
+                }
               }
             }
           ],
@@ -2236,7 +2246,7 @@
           "title": "Type 59/69",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_type_59_69_group.png",
           "selected": false,
-          "br": "8.0",
+          "br": "8.0-8.3",
           "data_unit_id": "cn_type_59_69_group",
           "required_unit_id": "cn_m48a1_patton_iii",
           "class_name": "",
@@ -2288,7 +2298,7 @@
               "type": "single",
               "title": "Type 69",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_type_69.png",
-              "br": "8.0",
+              "br": "8.3",
               "rp": 61000,
               "sp": 340000,
               "data_unit_id": "cn_type_69",
@@ -2325,6 +2335,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:00.056Z",
                 "sha256": "fa47801808d4946c748195dd5a3d6821f9b1748efd9911d2ad82571545dd1150"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.3",
+                    "RB": "8.3",
+                    "SB": "8.3"
+                  }
+                }
               }
             }
           ],
@@ -2338,7 +2358,7 @@
           "type": "single",
           "title": "PGZ88",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_pgz_88.png",
-          "br": "8.0",
+          "br": "8.7",
           "rp": 95000,
           "sp": 270000,
           "data_unit_id": "cn_pgz_88",
@@ -2375,13 +2395,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:56.931Z",
             "sha256": "72c89a605eb74d118c102209885e282619f60cdff2f0d10b09e9312ce1cb89c9"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "8.7",
+                "SB": "8.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "WZ305",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_wz_305.png",
-          "br": "8.0",
+          "br": "8.3",
           "rp": 105000,
           "sp": 300000,
           "data_unit_id": "cn_wz_305",
@@ -2418,6 +2448,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:01.286Z",
             "sha256": "91d49991c2154b6d086406c2cd1cedb38b3ce439b7d777009d2b61d76c92890e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "8.3",
+                "SB": "8.3"
+              }
+            }
           }
         }
       ],
@@ -2516,7 +2556,7 @@
           "type": "single",
           "title": "ZTZ59A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ztz_59a.png",
-          "br": "8.0",
+          "br": "8.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "cn_ztz_59a",
@@ -2553,13 +2593,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:02.175Z",
             "sha256": "4ae88489c51dfdfdc494e4a53009cb1c697a072028522160ecdb5fde3086b60d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.3",
+                "RB": "8.3",
+                "SB": "8.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Type 69-IIa",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_type_69_2a.png",
-          "br": "8.3",
+          "br": "8.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "cn_type_69_2a",
@@ -2596,6 +2646,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:00.166Z",
             "sha256": "997eefce5c90e2e0705aa1f5cefa08e3fb65469dbe3d4144ac2e0a9be57a2a3f"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "8.7",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ],
@@ -2657,7 +2717,7 @@
           "type": "single",
           "title": "M41D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_m_41d.png",
-          "br": "8.3",
+          "br": "8.7",
           "rp": 135000,
           "sp": 380000,
           "data_unit_id": "cn_m_41d",
@@ -2694,6 +2754,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:56.228Z",
             "sha256": "3785d83cd4e7e464c2ccdb9a9ccc874fc1e96c44ee7983737f19ee9691350632"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.3",
+                "RB": "8.7",
+                "SB": "8.7"
+              }
+            }
           }
         },
         {
@@ -2788,7 +2858,7 @@
           "type": "single",
           "title": "ZTZ59D1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_type_59d.png",
-          "br": "8.3",
+          "br": "8.7",
           "rp": 135000,
           "sp": 380000,
           "data_unit_id": "cn_type_59d",
@@ -2825,6 +2895,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:59.503Z",
             "sha256": "a44c2c7c031b8cb86e4b3c7bfe6a3de20709792d8ce4c2060f0e5d29167171f9"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "8.7",
+                "SB": "8.7"
+              }
+            }
           }
         },
         {
@@ -2932,7 +3012,7 @@
           "type": "single",
           "title": "ZTZ96",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ztz_96.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "cn_ztz_96",
@@ -2969,6 +3049,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:02.306Z",
             "sha256": "c8af01128db50eba80c9731e81c9a80b896e493c551c65907491e07c2ebe7167"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -2977,7 +3067,7 @@
           "type": "single",
           "title": "PGZ09",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_pgz_09.png",
-          "br": "9.3",
+          "br": "10.0",
           "rp": 160000,
           "sp": 450000,
           "data_unit_id": "cn_pgz_09",
@@ -3014,13 +3104,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:56.866Z",
             "sha256": "306c661d420fdd79fe581a492e1411ee754b2a01b0e4610aaf4bf7d8fb5f076b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "PGZ04A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_pgz_04a.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 190000,
           "sp": 520000,
           "data_unit_id": "cn_pgz_04a",
@@ -3057,6 +3157,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:56.606Z",
             "sha256": "a1eea70c91d16a012eb42d4d09d26ae5a03d08c84ed57f7dfd2ca023d2b10478"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -3167,7 +3277,7 @@
           "title": "PTL02/AFT09",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ptl_aft_group.png",
           "selected": false,
-          "br": "9.0",
+          "br": "9.0-9.3",
           "data_unit_id": "cn_ptl_aft_group",
           "required_unit_id": "cn_cm_ptz_group",
           "class_name": "",
@@ -3176,7 +3286,7 @@
               "type": "single",
               "title": "PTL02",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ptl_02.png",
-              "br": "9.0",
+              "br": "9.3",
               "rp": 190000,
               "sp": 520000,
               "data_unit_id": "cn_ptl_02",
@@ -3213,6 +3323,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:58.077Z",
                 "sha256": "99b4d23c233b4533cd4c4282ba8dd53cbd3d9ed2aaf76f91e319458a3a02b16b"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.3",
+                    "RB": "9.3",
+                    "SB": "9.3"
+                  }
+                }
               }
             },
             {
@@ -3357,7 +3477,7 @@
           "type": "single",
           "title": "WMA301",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_wma_301.png",
-          "br": "9.0",
+          "br": "9.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "cn_wma_301",
@@ -3394,13 +3514,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:01.135Z",
             "sha256": "c88012fe8ce5077cef5368c831320a781c533fd914167738ddb87b82a99f0855"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "T-69 II G",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_type_69_2g.png",
-          "br": "9.0",
+          "br": "9.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "cn_type_69_2g",
@@ -3437,6 +3567,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:00.251Z",
             "sha256": "8735e6e49cae1f4a3bf8c4bcfd5ae2a2feb0826ef76284dde619a0273606b64b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.3"
+              }
+            }
           }
         }
       ],
@@ -3733,7 +3873,7 @@
           "title": "Tor/HQ",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_tor_hq_group.png",
           "selected": false,
-          "br": "11.3-11.7",
+          "br": "11.7-12.0",
           "data_unit_id": "cn_tor_hq_group",
           "required_unit_id": "cn_antelope_tc_1l_ads",
           "class_name": "",
@@ -3742,7 +3882,7 @@
               "type": "single",
               "title": "Tor-M1",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_tor_m1.png",
-              "br": "11.3",
+              "br": "11.7",
               "rp": 300000,
               "sp": 830000,
               "data_unit_id": "cn_tor_m1",
@@ -3779,13 +3919,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:58.832Z",
                 "sha256": "cec4b473c2d831498961d00ebe83bc530a969d9101c88e5127b75735762303ef"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.7",
+                    "RB": "11.7",
+                    "SB": "11.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "HQ17",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_hq_17.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "cn_hq_17",
@@ -3822,6 +3972,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:53.529Z",
                 "sha256": "18f634706f322c8eea96b0b53b311957185b0000e56692566baca1527d79772f"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             }
           ],
@@ -3968,7 +4128,7 @@
           "type": "single",
           "title": "QN506",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_qn506.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": null,
           "sp": null,
           "data_unit_id": "cn_qn506",
@@ -4005,6 +4165,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:57.806Z",
             "sha256": "996621af609d82152cfe204ad4c18673c94ea8711704d637896fd057df46e54d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
@@ -4054,7 +4224,7 @@
           "type": "single",
           "title": "ZTZ96B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ztz_96b.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "cn_ztz_96b",
@@ -4091,6 +4261,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:02.908Z",
             "sha256": "1bde337d77f368ff7a51f6dbae2bde5191535324e7be0234a7be385c061cffb1"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         }
       ],
@@ -4238,7 +4418,7 @@
           "type": "single",
           "title": "VT4",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_vt_4.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "cn_vt_4",
@@ -4275,13 +4455,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:00.650Z",
             "sha256": "912ba2a0d276118d24a524874c3d6fdd6be41479ffb30c20221b61b3fd058da2"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "VT4A1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_vt_4b.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "cn_vt_4b",
@@ -4318,13 +4508,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:01.024Z",
             "sha256": "003c9bb577ab107b913b0d42fa5c5053c7a0ebaed1477672d0223d2ab27ca8e0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "M1A2T",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_m1a2t.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "cn_m1a2t",
@@ -4361,6 +4561,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:54.437Z",
             "sha256": "4b7542594972c8de194838b3e5fc9365ea29e5a593cde464a31fe12dc4f5a518"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         }
       ],
@@ -4369,7 +4579,7 @@
           "type": "single",
           "title": "WZ1001(E) LCT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_wz_1001.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "cn_wz_1001",
@@ -4406,13 +4616,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:01.251Z",
             "sha256": "8ada028f0fb7a3dd98395db9e6e87577e4a591223cbc85ad6e0a0d4593e27c4c"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "ZTZ99A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ztz_99a.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "cn_ztz_99a",
@@ -4449,6 +4669,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:03.206Z",
             "sha256": "c182e65f80967be25f125a7ce12bf89f62291d987bc47ebe68fb6bafc39763f7"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
@@ -4457,7 +4687,7 @@
           "type": "single",
           "title": "CS/SA5",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_pgz_625_fb10.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "cn_pgz_625_fb10",
@@ -4494,13 +4724,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:56.814Z",
             "sha256": "cd037a676532090889102b13ea6c7c205e17eb899b56c6096a032a8ec47e1121"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "FK-2000",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_fk_2000.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "cn_fk_2000",
@@ -4537,13 +4777,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:53.201Z",
             "sha256": "ff693d9d03d37ebe59248f93b9b15de5bba6b0d65fa97c009cca6fec67c23b68"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "HQ11",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_hq_11.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "cn_hq_11",
@@ -4580,6 +4830,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:53.470Z",
             "sha256": "8c8585c83acb5a57c9ddc75639885b602114b2c40c42b8d57ca3c16ee8717d4f"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -4591,7 +4851,7 @@
           "type": "single",
           "title": "Oplot-M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_oplot_t.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "cn_oplot_t",
@@ -4628,6 +4888,16 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:28:56.496Z",
             "sha256": "bfd1a602eafb232b8591afef90919c6849493d00b0262f004d98bda2891debcf"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],

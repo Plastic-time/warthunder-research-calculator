@@ -5407,7 +5407,7 @@
           "title": "BMP-1/Ob.906",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_bmp_1_group.png",
           "selected": false,
-          "br": "8.0",
+          "br": "7.7-8.3",
           "data_unit_id": "ussr_bmp_1_group",
           "required_unit_id": "ussr_btr_80a",
           "class_name": "",
@@ -5416,7 +5416,7 @@
               "type": "single",
               "title": "BMP-1",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_bmp_1.png",
-              "br": "8.0",
+              "br": "7.7",
               "rp": 105000,
               "sp": 300000,
               "data_unit_id": "ussr_bmp_1",
@@ -5453,13 +5453,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:11.154Z",
                 "sha256": "37a50acb9fd7fce4f17f3043e01414988e6152c6904d553f663fb08474741ed2"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "7.7",
+                    "RB": "7.7",
+                    "SB": "7.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Object 906",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_object_906.png",
-              "br": "8.0",
+              "br": "8.3",
               "rp": 61000,
               "sp": 340000,
               "data_unit_id": "ussr_object_906",
@@ -5496,6 +5506,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:17.258Z",
                 "sha256": "8c0c042874c6720802763ca2c6034eb6432102f3d4d91d319225f4f877923354"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.3",
+                    "RB": "8.3",
+                    "SB": "8.3"
+                  }
+                }
               }
             }
           ],
@@ -5917,7 +5937,7 @@
           "type": "single",
           "title": "TO-55",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_to_55.png",
-          "br": "8.0",
+          "br": "8.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ussr_to_55",
@@ -5954,6 +5974,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:27.298Z",
             "sha256": "304873c27e67c97f6da099ddee900000a35e52b2dd3e444cf765a6194667a3a9"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.3",
+                "RB": "8.3",
+                "SB": "8.3"
+              }
+            }
           }
         }
       ],
@@ -6048,7 +6078,7 @@
           "type": "single",
           "title": "PT-76-57",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_pt_76_57.png",
-          "br": "8.3",
+          "br": "8.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ussr_pt_76_57",
@@ -6085,6 +6115,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:17.784Z",
             "sha256": "95cae55874c742c678441d89e1679fc5f8fc85cc92d521dba81c8d76463706b0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.0",
+                "RB": "8.7",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ]
@@ -6102,7 +6142,7 @@
           "title": "T-55/62",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_55_62_group.png",
           "selected": false,
-          "br": "8.3-8.7",
+          "br": "8.7",
           "data_unit_id": "ussr_t_55_group",
           "required_unit_id": "ussr_t_54_group",
           "class_name": "",
@@ -6111,7 +6151,7 @@
               "type": "single",
               "title": "T-55A",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_55a.png",
-              "br": "8.3",
+              "br": "8.7",
               "rp": 135000,
               "sp": 380000,
               "data_unit_id": "ussr_t_55a",
@@ -6148,6 +6188,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:24.383Z",
                 "sha256": "f1b4a4493a0a310b65087f7e841303740869d6c2e8a6f4e807160996870e8eaf"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
               }
             },
             {
@@ -6303,7 +6353,7 @@
           "type": "single",
           "title": "T-72A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_72a.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "ussr_t_72a",
@@ -6340,6 +6390,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:25.174Z",
             "sha256": "be3315ed8096afbf1dd6042ff8f29fd687b98200e0b3ca26a2e4742799cb9993"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -6434,7 +6494,7 @@
           "type": "single",
           "title": "T-64A (1971)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_64a_1971.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 190000,
           "sp": 520000,
           "data_unit_id": "ussr_t_64a_1971",
@@ -6471,6 +6531,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:24.767Z",
             "sha256": "4905caf20beb3d63c8a5f4a478ecf3a57bcb0cdc7303dfcb2dc4c1941ae1d4a5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -7523,7 +7593,7 @@
           "title": "T-64B/80B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_64_t_80_group.png",
           "selected": false,
-          "br": "10.3-10.7",
+          "br": "10.3-11.0",
           "data_unit_id": "ussr_t_64_t_80_group",
           "required_unit_id": "ussr_t_64a_1971",
           "class_name": "",
@@ -7575,7 +7645,7 @@
               "type": "single",
               "title": "T-80B",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_80b.png",
-              "br": "10.7",
+              "br": "11.0",
               "rp": 150000,
               "sp": 830000,
               "data_unit_id": "ussr_t_80b",
@@ -7612,6 +7682,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:25.882Z",
                 "sha256": "525b89e20e8fbfbb28c9fab0c155ea2693f5a68354deb77240f0ab027791fa9b"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.0",
+                    "RB": "11.0",
+                    "SB": "11.0"
+                  }
+                }
               }
             }
           ],
@@ -7623,7 +7703,7 @@
           "type": "single",
           "title": "T-80U",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_80u.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "ussr_t_80u",
@@ -7660,6 +7740,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:26.371Z",
             "sha256": "59ce9a52b10fb2550b517406db29bf6c9ffcb47806f9e4f27f6fb23768c168bd"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         }
       ],
@@ -7713,7 +7803,7 @@
           "type": "single",
           "title": "BMPT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_bmpt.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "ussr_bmpt",
@@ -7750,6 +7840,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:11.678Z",
             "sha256": "c38b89de1685981c4b17cd4bb82a197f46cc11b01b60ef6bc62dec557a267bc2"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         }
       ],
@@ -7759,7 +7859,7 @@
           "title": "Osa/Strela",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_9a33_35_group.png",
           "selected": false,
-          "br": "10.3",
+          "br": "10.7",
           "data_unit_id": "ussr_9a33_35_group",
           "required_unit_id": "ussr_zsu_23_4m4",
           "class_name": "",
@@ -7768,7 +7868,7 @@
               "type": "single",
               "title": "Osa-AKM",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_9a33bm3.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 260000,
               "sp": 710000,
               "data_unit_id": "ussr_9a33bm3",
@@ -7805,13 +7905,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:09.654Z",
                 "sha256": "fdd102f8b229368c67606f1752143b3b88d68c7cba1857e535931b8354b4ae7b"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Strela-10M2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_9a35_m2.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 150000,
               "sp": 830000,
               "data_unit_id": "ussr_9a35_m2",
@@ -7848,6 +7958,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:09.566Z",
                 "sha256": "e5372c076905e2d59a923f68f5b4dcaf4802a52c33581c049c69755af042beec"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.0",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             }
           ],
@@ -7859,7 +7979,7 @@
           "type": "single",
           "title": "2S6",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_zprk_2s6.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "ussr_zprk_2s6",
@@ -7896,13 +8016,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:28.191Z",
             "sha256": "f411d54fdf5d0e1bfe0c9053a9022cb2f1a1dd9e5ea9afd166afc519ad86b349"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.3",
+                "SB": "11.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Tor-M1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_tor_m1.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "ussr_tor_m1",
@@ -7939,6 +8069,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:27.383Z",
             "sha256": "60fda38a49219d75f14134bb6f177ebec69f1a8377931a6a78cf7596de142efd"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.7",
+                "RB": "11.7",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ]
@@ -8035,7 +8175,7 @@
           "type": "single",
           "title": "BMPT-72",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_bmpt_72.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ussr_bmpt_72",
@@ -8072,6 +8212,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:11.691Z",
             "sha256": "47a689076ae6ac21027aaca32484d16f0175dc6bef7b6566f0cc92066827e9d3"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
@@ -8121,7 +8271,7 @@
           "type": "single",
           "title": "T-80U-E1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_80ue1.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ussr_t_80ue1",
@@ -8158,13 +8308,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:26.569Z",
             "sha256": "321db73243ef4e535c12b5e8d4088df6d03a84e6e560ab60b13965cb4965986c"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◍Т-80U-Е1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_80ue1_sm.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ussr_t_80ue1_sm",
@@ -8201,6 +8361,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:26.655Z",
             "sha256": "4a8d3f8b3f31b56c0341132153f5dd82ec46fa3ff2de13da05bdec70b2601f4a"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         }
       ],
@@ -8252,7 +8422,7 @@
           "type": "single",
           "title": "Object 292",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_object_292.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": null,
           "sp": null,
           "data_unit_id": "ussr_object_292",
@@ -8289,6 +8459,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:16.754Z",
             "sha256": "911b0f6259b49d03a6a515c18c7ef72962d92b78acbb88874283ec0fbcecd859"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         },
         {
@@ -8381,7 +8561,7 @@
           "type": "single",
           "title": "␙T-80U",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_80u.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": null,
           "sp": null,
           "data_unit_id": "ussr_t_80u_yt_cup_2019",
@@ -8418,13 +8598,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:26.407Z",
             "sha256": "911105b455f42902c8fe7f20674a19257f9dcde94edf3e8b4ca9458f04009e1f"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "T-80UM2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_80um2.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": null,
           "sp": null,
           "data_unit_id": "ussr_t_80um2",
@@ -8461,13 +8651,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:26.937Z",
             "sha256": "8bccbf868c767ff3fc428cb30137670a78f7edb5094a17ed20f2e0e7253c4c54"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "T-80UK",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_80uk.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ussr_t_80uk",
@@ -8504,6 +8704,16 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:28:26.695Z",
             "sha256": "1dedee34bdab33594f9983bf75829d0c11d31d852179439e0a03ef717cfdc7e5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         }
       ]
@@ -8563,7 +8773,7 @@
           "type": "single",
           "title": "T-90M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_90m_2020.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "ussr_t_90m_2020",
@@ -8600,13 +8810,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:26.926Z",
             "sha256": "4cacb29c5baaf31c800cde7dc88676fc716bcee20b68d25e0d315306838bf57a"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "T-90M (Arena-M)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_90m_arena_m.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "ussr_t_90m_arena_m",
@@ -8643,6 +8863,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:27.227Z",
             "sha256": "37299a7dfd813dd1eb2c8956447b7462ba90387574d34923e0ff8c095ee3fdf2"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -8651,7 +8881,7 @@
           "type": "single",
           "title": "T-80BVM",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_80bvm.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "ussr_t_80bvm",
@@ -8688,6 +8918,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:26.047Z",
             "sha256": "0adb6d41701ca45d0a6228103472c3123ee10c54708969857bd856ae16561aca"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -8698,7 +8938,7 @@
           "type": "single",
           "title": "Pantsir-S1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_pantsyr_s1.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "ussr_pantsyr_s1",
@@ -8735,6 +8975,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:17.326Z",
             "sha256": "b26992eb9587c8b0bf7c1ef8da94504c9ddf8e2f8f257017f2eb2aaa96df6113"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         },
         {
@@ -8832,7 +9082,7 @@
           "type": "single",
           "title": "Pantsir SM-SV",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_pantsyr_sm_sv.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "ussr_pantsyr_sm_sv",
@@ -8869,6 +9119,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:17.493Z",
             "sha256": "764fcba14428324163ed6c766cd510b06f0311a2e070e2c9661bb90f3c25d325"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ]

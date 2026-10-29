@@ -50,7 +50,7 @@
           "type": "single",
           "title": "SA 313B Alouette II",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sa_313b_france.png",
-          "br": "8.3",
+          "br": "9.0",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "sa_313b_france",
@@ -87,6 +87,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:06.795Z",
             "sha256": "3519441e31028feacbd5fadd61d204f69d212712da5f918e625365add5e46457"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.0",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ],
@@ -95,7 +105,7 @@
           "type": "single",
           "title": "SA 316B Alouette III",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sa_316b.png",
-          "br": "8.3",
+          "br": "9.0",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "sa_316b",
@@ -132,6 +142,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:06.847Z",
             "sha256": "b0c35128e76fea94984ece41041897341b7e02658280e21394fb02829bd11a88"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.0",
+                "SB": "9.0"
+              }
+            }
           }
         }
       ]
@@ -142,7 +162,7 @@
           "type": "single",
           "title": "IAR 316B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/iar_316b.png",
-          "br": "8.3",
+          "br": "9.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "iar_316b",
@@ -179,6 +199,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:06.654Z",
             "sha256": "dab682ce6e2e1afea4fe77eddfedfcf741e326b2d5f94828f1e1de1b4d8f292a"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.0",
+                "SB": "9.3"
+              }
+            }
           }
         }
       ]
@@ -196,7 +226,7 @@
           "type": "single",
           "title": "SA.341F Gazelle",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sa_341f.png",
-          "br": "9.0",
+          "br": "9.3",
           "rp": 370000,
           "sp": 990000,
           "data_unit_id": "sa_341f",
@@ -233,13 +263,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:06.894Z",
             "sha256": "eb6e11826a297f35d3fcace6c47a0c1b16acffe3aa917c93dcd7495a07444c4b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.3",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "SA.342M Gazelle",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sa_342m.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "sa_342m",
@@ -276,6 +316,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:06.937Z",
             "sha256": "9cb4ff200a5b664fbaafafd86a2e32b3920e74f620dfeec33139f11c02b0bf57"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.3",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -286,7 +336,7 @@
           "type": "single",
           "title": "EC-665 Tiger HAP",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/tiger_hap_france.png",
-          "br": "10.0",
+          "br": "10.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "tiger_hap_france",
@@ -323,6 +373,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:07.394Z",
             "sha256": "9264af2c491d55f99b39c1a3a23e81a4497d242bff6d1c5b7b351499405b2e0e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.7",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ]
@@ -339,7 +399,7 @@
           "type": "single",
           "title": "◘AH-64E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64e_netherlands.png",
-          "br": "13.0",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1030000,
           "data_unit_id": "ah_64e_netherlands",
@@ -376,6 +436,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:06.478Z",
             "sha256": "8deba9066d953c4b5f6cf40d15c4d1c35fe4f1d77f884be838024547d7693fdc"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "13.3",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -385,7 +455,7 @@
           "title": "Tiger HAD/Tiger HAC",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/tiger_group.png",
           "selected": false,
-          "br": "11.0-12.7",
+          "br": "11.3-13.0",
           "data_unit_id": "tiger_group",
           "required_unit_id": "sa_342m",
           "class_name": "",
@@ -394,7 +464,7 @@
               "type": "single",
               "title": "EC-665 Tiger HAD",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/tiger_had_france.png",
-              "br": "11.0",
+              "br": "11.3",
               "rp": 400000,
               "sp": 1020000,
               "data_unit_id": "tiger_had_france",
@@ -431,13 +501,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:32:07.271Z",
                 "sha256": "9370641738c177e885a47610534cdb688c3f8fd4918a074fa3a98978bd484958"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "11.3",
+                    "SB": "10.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "EC-665 Tiger HAC",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/tiger_hac_france.png",
-              "br": "12.7",
+              "br": "13.0",
               "rp": 200000,
               "sp": 1030000,
               "data_unit_id": "tiger_hac_france",
@@ -474,6 +554,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:32:07.083Z",
                 "sha256": "03b0c8a6365e0ea7d614599376c6d406714b22fa936fd982a318a3792f7626a9"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.0",
+                    "RB": "13.0",
+                    "SB": "11.7"
+                  }
+                }
               }
             }
           ],
@@ -485,7 +575,7 @@
           "type": "single",
           "title": "Tiger HAD Block 2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/tiger_had_block2_france.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 400000,
           "sp": 1030000,
           "data_unit_id": "tiger_had_block2_france",
@@ -522,6 +612,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:07.197Z",
             "sha256": "ae2335cf3956e67360a1897ef053828c227edc0bd35b192b79845430890956f4"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "13.0",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ]
@@ -532,7 +632,7 @@
           "type": "single",
           "title": "◘AH-64D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64d_netherlands.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ah_64d_netherlands",
@@ -569,6 +669,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:06.382Z",
             "sha256": "c8592e2c19a9cc32b53b19a844cdd19ef2a0afd19a10e09193c03ee9b9bd78be"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "11.7",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ]

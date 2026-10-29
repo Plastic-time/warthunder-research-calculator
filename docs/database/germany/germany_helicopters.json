@@ -52,7 +52,7 @@
           "type": "single",
           "title": "◄SA 313B Alouette II",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sa_313b.png",
-          "br": "8.3",
+          "br": "9.0",
           "rp": 0,
           "sp": 390000,
           "data_unit_id": "sa_313b",
@@ -89,13 +89,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:00.832Z",
             "sha256": "030c3e64992a55f956615aaff576a05ded2f7661a09063a9712d18fbcf858580"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.0",
+                "SB": "8.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◄UH-1D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uh_1d.png",
-          "br": "8.3",
+          "br": "9.0",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "uh_1d",
@@ -132,6 +142,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:01.004Z",
             "sha256": "37857b06af09f1672e411b500f5970695b094aefb726162bf8269d7149ba3e1b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ]
@@ -142,7 +162,7 @@
           "type": "single",
           "title": "BO 105 CB-2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/bo_105cb2.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "bo_105cb2",
@@ -179,6 +199,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:31:59.884Z",
             "sha256": "a80a6d17335dfce6385de5fba2bd4bfaf252caacf6104ddc88299eedd5274444"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -195,7 +225,7 @@
           "type": "single",
           "title": "◊Mi-24D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_24d_german.png",
-          "br": "8.7",
+          "br": "9.0",
           "rp": 360000,
           "sp": 980000,
           "data_unit_id": "mi_24d_german",
@@ -232,13 +262,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:00.376Z",
             "sha256": "799ceef3c20dbe4349a2d9fed5783135f9a39c0da6059096b7b67e389c1116bd"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.3",
+                "RB": "9.0",
+                "SB": "9.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◊Mi-24P",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_24p_german.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "mi_24p_german",
@@ -275,6 +315,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:00.532Z",
             "sha256": "50e078f10ca56ce6db7e80dad74426326d05e6779b2ceddb94e9512b656ceb60"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -283,7 +333,7 @@
           "type": "single",
           "title": "BO 105 PAH-1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/bo_105pah1.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 360000,
           "sp": 980000,
           "data_unit_id": "bo_105pah1",
@@ -320,13 +370,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:59.915Z",
             "sha256": "d7865107a077d9ad1be6408253ae4cda642802f6d4a6c7530ae228cf448ed381"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "BO 105 PAH-1A1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/bo_105pah1_a1.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 370000,
           "sp": 990000,
           "data_unit_id": "bo_105pah1_a1",
@@ -363,6 +423,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:00.216Z",
             "sha256": "25ead8824a54e0c9cbffd18922c176a6989a52b3779a8f131586a844f200174e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -373,7 +443,7 @@
           "type": "single",
           "title": "◄Mi-24P HFS 80",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_24p_german_hfs80.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "mi_24p_german_hfs80",
@@ -410,6 +480,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:00.527Z",
             "sha256": "493e2bb14aae5f766b36704c6b2d59dd945f712f3e95a272d1e2a36e80581bad"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -426,7 +506,7 @@
           "type": "single",
           "title": "H145M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/h145m.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "h145m",
@@ -463,6 +543,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:00.165Z",
             "sha256": "3f5efa00089d70b20da0dfe47a62686909f08a19af34d79ee54f991ac11a6c66"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "13.0",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
@@ -471,7 +561,7 @@
           "type": "single",
           "title": "EC-665 Tiger UHT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/tiger_uht.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "tiger_uht",
@@ -508,6 +598,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:00.931Z",
             "sha256": "fb58ead18bdf9af1daa0241dbff01f2e66b7014c8a7f27d2d39206d5757afddb"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "13.0",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ]
@@ -518,7 +618,7 @@
           "type": "single",
           "title": "▄Tigre HAD-E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/tiger_had_spain.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "tiger_had_spain",
@@ -555,6 +655,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:00.796Z",
             "sha256": "2b99de5eb48272c27bb2a5664dbf4fad1c780c868c2cdc843fc8725865e62c28"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "11.3",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ]

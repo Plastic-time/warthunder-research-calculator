@@ -51,7 +51,7 @@
           "type": "single",
           "title": "UH-1B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uh_1b.png",
-          "br": "8.3",
+          "br": "9.0",
           "rp": 99000,
           "sp": 390000,
           "data_unit_id": "uh_1b",
@@ -88,6 +88,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:59.300Z",
             "sha256": "c9919b9e41ce2b7fc8b9c043792c56bc69ee607e8a73fe6036e0fb63081abf92"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ],
@@ -96,7 +106,7 @@
           "type": "single",
           "title": "UH-1C",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uh_1c.png",
-          "br": "8.7",
+          "br": "9.3",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "uh_1c",
@@ -133,6 +143,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:59.757Z",
             "sha256": "e0ddaa07a08216d21929d1a4dee1aa46557a75548e04f59b8bba82e72cba08f1"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.3",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ]
@@ -143,7 +163,7 @@
           "type": "single",
           "title": "H-34",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/h_34.png",
-          "br": "8.0",
+          "br": "8.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "h_34",
@@ -180,13 +200,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:31:59.044Z",
             "sha256": "05d7bd47a9ea854e639f3a5dcb2d4469ed9c376418addae42526a032d2243cb5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.0",
+                "RB": "8.7",
+                "SB": "8.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "UH-1C XM-30",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uh_1c_xm_30.png",
-          "br": "8.7",
+          "br": "9.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "uh_1c_xm_30",
@@ -223,6 +253,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:31:59.662Z",
             "sha256": "e4d1763f7f9161976002a939e43c88ab7b52c023a416918afcf81113474d94a1"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.3",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ],
@@ -240,7 +280,7 @@
           "type": "single",
           "title": "AH-6M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_6m.png",
-          "br": "10.3",
+          "br": "10.7",
           "rp": 370000,
           "sp": 990000,
           "data_unit_id": "ah_6m",
@@ -277,13 +317,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:59.024Z",
             "sha256": "97ea5731a2ddcdd3941beaea60a5ec4b80f09b9f2dc9442303dec69435d4d9c8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.7",
+                "SB": "10.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "OH-58D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/oh_58d.png",
-          "br": "10.3",
+          "br": "11.0",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "oh_58d",
@@ -320,6 +370,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:59.372Z",
             "sha256": "49e03c4bbf85464a69efee709ce94675532728a378a90f8f19ca7af698e9ab5f"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "11.0",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -328,7 +388,7 @@
           "type": "single",
           "title": "AH-64A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64a.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 390000,
           "sp": 1010000,
           "data_unit_id": "ah_64a",
@@ -365,6 +425,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:58.399Z",
             "sha256": "ace68109293850b1e8c2125b43674a9cedff908aa6c4219e69628cf0f0bec258"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -373,7 +443,7 @@
           "type": "single",
           "title": "AH-1F",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_1f.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 370000,
           "sp": 990000,
           "data_unit_id": "ah_1f",
@@ -410,6 +480,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:58.012Z",
             "sha256": "e7938f38f890de7658cb8f1a2e59df8c83da20a10cae2848a24d9386857d97cf"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
@@ -463,7 +543,7 @@
           "type": "single",
           "title": "RAH-66",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/rah_66.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "rah_66",
@@ -500,13 +580,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:31:59.422Z",
             "sha256": "f9355d412ddb0cac8eeee8ab96a17790b6fab53e3ec72934404d90636ee81a9a"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "▃AH-64A (GR)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64a_greece_usa.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ah_64a_greece_usa",
@@ -543,13 +633,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:31:58.572Z",
             "sha256": "7fae5a69686c1de87d37a49f08521cc7ba93661b520877335f7faf3283665725"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "▃AH-64A Peten",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64a_peten.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ah_64a_peten",
@@ -586,6 +686,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:31:58.593Z",
             "sha256": "fa5609912a1e3343cb6368782b03ba8dbb6869fe307c1c7ff39c6e2ccb3cbd40"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -594,7 +704,7 @@
           "type": "single",
           "title": "AH-56A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_56a.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ah_56a",
@@ -631,13 +741,23 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:31:58.391Z",
             "sha256": "62740bb3bdc6023a0d18f24fa9155577abd81c72d1405137a17033b58a66f8d5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "YAH-64",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/yah_64.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "yah_64",
@@ -674,6 +794,16 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:31:59.812Z",
             "sha256": "1b895184fba1a7267a4bb09078042fd91e170f126d4fc4d468867901aa33cf61"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ]
@@ -690,7 +820,7 @@
           "type": "single",
           "title": "MH-60L DAP",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mh_60l_dap.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "mh_60l_dap",
@@ -727,6 +857,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:59.347Z",
             "sha256": "f970e339e1c2aa984c012ba77923540aabd38d445f7a6e9b02b758e81822ff91"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "11.3",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ],
@@ -735,7 +875,7 @@
           "type": "single",
           "title": "AH-64D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64d.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "ah_64d",
@@ -772,13 +912,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:58.830Z",
             "sha256": "38c60e612d07b2e3506aeda63df3afc672056dc1b1f064a8e043c450411cede5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "12.0",
+                "SB": "10.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "AH-64E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64e.png",
-          "br": "13.0",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1030000,
           "data_unit_id": "ah_64e",
@@ -815,6 +965,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:58.965Z",
             "sha256": "beb38b73f1c4628bebee3b6c6e7eec4cc985b6919acc6e20a505c5d60e3ca375"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "13.3",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -823,7 +983,7 @@
           "type": "single",
           "title": "AH-1Z",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_1z.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "ah_1z",
@@ -860,6 +1020,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:31:58.175Z",
             "sha256": "8c036f140e3cf5e0f22be455179fdc3698f3842eb38e4c2a105ada44ad0786f0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "12.3",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ]

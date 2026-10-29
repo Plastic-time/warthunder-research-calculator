@@ -70,8 +70,17 @@ test('partial review checkpoints do not promote the full snapshot or import hidd
 });
 
 test('October 28 review leaves the supported roster, costs and modification snapshots intact', () => {
-  for (const [file, expected] of Object.entries(latestReview.unchangedSnapshots))
-    assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex'), expected);
+  for (const [file, expected] of Object.entries(latestReview.unchangedSnapshots)) {
+    let bytes = fs.readFileSync(path.join(root, file));
+    if (file === 'docs/database/manifest.json') {
+      const manifest = JSON.parse(bytes), br = read('config/battle-rating-update.json');
+      assert.equal(manifest.battleRatings.commit, br.commit);
+      delete manifest.battleRatings;
+      for (const entry of manifest.files) if (br.trees[entry.path]) entry.sha256 = br.trees[entry.path];
+      bytes = Buffer.from(JSON.stringify(manifest, null, 2) + '\n');
+    }
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), expected);
+  }
   const ids = new Set(Object.values(read('docs/roster-audit.json').trees).flatMap(tree => Object.keys(tree.units)));
   const mods = read('docs/database/modifications/catalog.json').vehicles;
   for (const id of Object.keys(latestReview.changedUnits)) {

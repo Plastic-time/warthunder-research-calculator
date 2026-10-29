@@ -50,7 +50,7 @@
           "type": "single",
           "title": "◔Mi-24D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_24d_hungary.png",
-          "br": "8.7",
+          "br": "9.0",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "mi_24d_hungary",
@@ -87,6 +87,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:06.122Z",
             "sha256": "114617fbabd5d012fa9ee363ba207302e3bf5e2b493428570ce1dbfd45462f3f"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.3",
+                "RB": "9.0",
+                "SB": "9.3"
+              }
+            }
           }
         }
       ]
@@ -106,7 +116,7 @@
           "type": "single",
           "title": "A.109EOA-2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/a_109_eoa2.png",
-          "br": "8.7",
+          "br": "9.0",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "a_109_eoa2",
@@ -143,13 +153,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:05.696Z",
             "sha256": "492ea2aaab73d962f14ac3b2b8620dee25e76f3cd51e89cbe0283547bcf0734d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.0",
+                "SB": "9.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◔Mi-24V",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_24v_hungary.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 390000,
           "sp": 1010000,
           "data_unit_id": "mi_24v_hungary",
@@ -186,6 +206,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:06.407Z",
             "sha256": "40ef432e10ec481827e7cfdc60f567e4b47b68b82f39096528fc63ca2fca5293"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -196,7 +226,7 @@
           "type": "single",
           "title": "T129",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/t_129_atak.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "t_129_atak",
@@ -233,13 +263,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:06.573Z",
             "sha256": "853170e7a8ad1209bb10d0898ccacd396020859ff67df5e82abe5190785f7c9b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "11.0",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◔Mi-24P",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_24p_hungary.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "mi_24p_hungary",
@@ -276,6 +316,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:06.228Z",
             "sha256": "49bd2df8d3c0abf145bf6ce9dfa20fc04c21aaab75e6c092542c4ef6d2ec0460"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
@@ -335,7 +385,7 @@
           "type": "single",
           "title": "A129CBT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/a_129_cbt.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "a_129_cbt",
@@ -372,13 +422,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:05.850Z",
             "sha256": "3a51853eea0e0f3d118849fa0e3f6e0a2b873a61264bf8ccc6c8628235a3c762"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "11.3",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "AH-129D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/a_129_d.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 400000,
           "sp": 1030000,
           "data_unit_id": "a_129_d",
@@ -415,6 +475,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:06.109Z",
             "sha256": "614271e8f43999b850d623817e106c3cf1b9006480968208db9e545a82fa57fe"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "13.0",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ]

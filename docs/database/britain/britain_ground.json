@@ -4510,7 +4510,7 @@
           "title": "Vickers/Olifant",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_vickers_olifant_group.png",
           "selected": false,
-          "br": "8.3",
+          "br": "8.3-8.7",
           "data_unit_id": "uk_vickers_olifant_group",
           "required_unit_id": "uk_vickers_mbt_mk_1",
           "class_name": "",
@@ -4562,7 +4562,7 @@
               "type": "single",
               "title": "Olifant Mk.1A",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_olifant_mk_1a.png",
-              "br": "8.3",
+              "br": "8.7",
               "rp": 81000,
               "sp": 450000,
               "data_unit_id": "uk_olifant_mk_1a",
@@ -4599,6 +4599,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:40.221Z",
                 "sha256": "03c1f240a3812a088a95a4f2ce8228ac78a5a679be1d0b965afa928eb7bd74ce"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
               }
             }
           ],
@@ -4656,7 +4666,7 @@
           "title": "Warrior/ZT3A2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_fv510_isv.png",
           "selected": false,
-          "br": "8.3",
+          "br": "8.3-8.7",
           "data_unit_id": "uk_fv510_zt3_group",
           "required_unit_id": "uk_fv438_swingfire",
           "class_name": "",
@@ -4708,7 +4718,7 @@
               "type": "single",
               "title": "ZT3A2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_ratel_zt3.png",
-              "br": "8.3",
+              "br": "8.7",
               "rp": 81000,
               "sp": 450000,
               "data_unit_id": "uk_ratel_zt3",
@@ -4745,6 +4755,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:40.798Z",
                 "sha256": "7f28e6383701a76329a6e82ba8d2420c6cf7cf92c2265fda24cbf2bb887257e5"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
               }
             }
           ],
@@ -4802,7 +4822,7 @@
           "title": "Marksman/ZA-35",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_chieftain_marksman.png",
           "selected": false,
-          "br": "8.3-8.7",
+          "br": "8.7",
           "data_unit_id": "uk_marksman_za_group",
           "required_unit_id": "uk_falcon",
           "class_name": "",
@@ -4811,7 +4831,7 @@
               "type": "single",
               "title": "Chieftain Marksman",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_chieftain_marksman.png",
-              "br": "8.3",
+              "br": "8.7",
               "rp": 135000,
               "sp": 380000,
               "data_unit_id": "uk_chieftain_marksman",
@@ -4848,6 +4868,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:35.652Z",
                 "sha256": "7831651f5ece17574f28a2f6ccfbb4632262a8357d5792616e2d678dcec40403"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
               }
             },
             {
@@ -4902,7 +4932,7 @@
           "type": "single",
           "title": "Rapier",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_tracked_rapier.png",
-          "br": "9.7",
+          "br": "10.3",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "uk_tracked_rapier",
@@ -4939,6 +4969,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:42.724Z",
             "sha256": "0e05e3efe973137d67248f7d210ca2bff23d65e38dc63c3e3f26118c25408f3e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -4948,7 +4988,7 @@
           "title": "Vickers/Rooikat",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_vickers_rooikat_group.png",
           "selected": false,
-          "br": "8.7",
+          "br": "8.7-9.0",
           "data_unit_id": "uk_vickers_rooikat_group",
           "required_unit_id": "uk_scimitar_fox_group",
           "class_name": "",
@@ -5000,7 +5040,7 @@
               "type": "single",
               "title": "Rooikat Mk.1D",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_rooikat_76.png",
-              "br": "8.7",
+              "br": "9.0",
               "rp": 81000,
               "sp": 450000,
               "data_unit_id": "uk_rooikat_76",
@@ -5037,6 +5077,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:41.052Z",
                 "sha256": "316996b83917fe6b0100b7108f23bc5c7cccfd2df75fe0b269face5d4e4f805e"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.0",
+                    "RB": "9.0",
+                    "SB": "9.0"
+                  }
+                }
               }
             }
           ],
@@ -5092,7 +5142,7 @@
           "title": "VFM/MTTD",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_vfm_rooikat_group.png",
           "selected": false,
-          "br": "9.3",
+          "br": "9.7",
           "data_unit_id": "uk_vfm_mttd_group",
           "required_unit_id": "uk_badger",
           "class_name": "",
@@ -5101,7 +5151,7 @@
               "type": "single",
               "title": "VFM5",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_vfm_5.png",
-              "br": "9.3",
+              "br": "9.7",
               "rp": 190000,
               "sp": 520000,
               "data_unit_id": "uk_vfm_5",
@@ -5138,13 +5188,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:43.211Z",
                 "sha256": "118e1b2416cf9b89c84e6b4e191df37f5ff550a411ad87cbb3af8b2daa295eab"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.7",
+                    "RB": "9.7",
+                    "SB": "9.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Rooikat MTTD",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_rooikat_mttd.png",
-              "br": "9.3",
+              "br": "9.7",
               "rp": 110000,
               "sp": 620000,
               "data_unit_id": "uk_rooikat_mttd",
@@ -5181,6 +5241,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:40.809Z",
                 "sha256": "03f03c8843084e32bb0edec43941c193023bff5dfe39c78e8ea4651b90d4b137"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.7",
+                    "RB": "9.7",
+                    "SB": "9.7"
+                  }
+                }
               }
             }
           ],
@@ -5239,7 +5309,7 @@
           "type": "single",
           "title": "Khalid",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_khalid.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "uk_khalid",
@@ -5276,13 +5346,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:38.933Z",
             "sha256": "9437795349d67da3d5ca79af40c3494ac1cb31c01e13d30a1242e2ed0bde86df"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Rooikat 105",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_rooikat_105_td.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "uk_rooikat_105_td",
@@ -5319,6 +5399,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:40.743Z",
             "sha256": "81cd9e22358c0135bd2f5d749641c4d338f3d7ba2a0a3966902354190bb36bf0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ],
@@ -5413,7 +5503,7 @@
           "type": "single",
           "title": "FV4030/3",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_shir_2.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": null,
           "sp": null,
           "data_unit_id": "uk_shir_2",
@@ -5450,6 +5540,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:41.772Z",
             "sha256": "6343b119252ab8a394a4078266031fbb25fede7d5fa593bf71d0d8c80878d3d0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ]
@@ -5467,7 +5567,7 @@
           "title": "Challenger Mk.2/Mk.3",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_1.png",
           "selected": false,
-          "br": "10.3-10.7",
+          "br": "10.7-11.0",
           "data_unit_id": "uk_challenger_group",
           "required_unit_id": "uk_chieftain_mk_10_900_group",
           "class_name": "",
@@ -5476,7 +5576,7 @@
               "type": "single",
               "title": "Challenger Mk.2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_1.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 260000,
               "sp": 710000,
               "data_unit_id": "uk_challenger_1",
@@ -5513,13 +5613,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:34.044Z",
                 "sha256": "d835b410bf8d483d41308ca7bc205bf57e02046429936e60af762fa54fa4d3e2"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Challenger Mk.3",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_mk_3.png",
-              "br": "10.7",
+              "br": "11.0",
               "rp": 150000,
               "sp": 830000,
               "data_unit_id": "uk_challenger_mk_3",
@@ -5556,6 +5666,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:35.262Z",
                 "sha256": "6d47b4c728e5b99da9b2a0e1ca002f47146e634219d594e3892df8ee05e6b1c9"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.0",
+                    "RB": "11.0",
+                    "SB": "11.0"
+                  }
+                }
               }
             }
           ],
@@ -5568,7 +5688,7 @@
           "title": "Challenger 2/2F/TES",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_ii.png",
           "selected": false,
-          "br": "11.7",
+          "br": "12.0",
           "data_unit_id": "uk_challenger_2_group",
           "required_unit_id": "uk_challenger_group",
           "class_name": "",
@@ -5577,7 +5697,7 @@
               "type": "single",
               "title": "Challenger 2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_ii.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 350000,
               "sp": 950000,
               "data_unit_id": "uk_challenger_ii",
@@ -5614,13 +5734,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:35.205Z",
                 "sha256": "dde65c8e02b0b312011647f38941f85ed1657310393e824d5421982dc8eac1d8"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Challenger 2 (2F)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_2_dorchester.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "uk_challenger_2_dorchester",
@@ -5657,13 +5787,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:34.196Z",
                 "sha256": "e191bd6917856ab20f577b4acbcb5958808ad88ca1dd8e72758f6837c3df9949"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Challenger 2 TES",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_2_tes.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "uk_challenger_2_tes",
@@ -5700,6 +5840,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:34.919Z",
                 "sha256": "201b65448ada2140a583d3dc4fe131a4af30bdf2e555d66bfeb77c8a02920e67"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             }
           ],
@@ -5713,7 +5863,7 @@
           "type": "single",
           "title": "TTD",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_ttd.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "uk_ttd",
@@ -5750,13 +5900,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:42.848Z",
             "sha256": "804248861ca3505f134f9320bda3199ccf665a084f1c46380c0206df9649d3b2"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Vickers Mk.7",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_vickers_mk7.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "uk_vickers_mk7",
@@ -5793,13 +5953,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:43.739Z",
             "sha256": "49bd29fea158a5bd16a3315ccf2587a38176ea6ea240aa9834ec37e13924601e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Arjun Mk 1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_arjun_mk1.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "uk_arjun_mk1",
@@ -5836,6 +6006,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:32.267Z",
             "sha256": "62e93eccefb521c3e1a632448d8deac398f6aead655c64815e0c928c100778d8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -5890,7 +6070,7 @@
           "title": "Stormer/Osa",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_stormer_9a33_group.png",
           "selected": false,
-          "br": "10.0-10.3",
+          "br": "10.0-10.7",
           "data_unit_id": "uk_stormer_9a33_group",
           "required_unit_id": "uk_tracked_rapier",
           "class_name": "",
@@ -5942,7 +6122,7 @@
               "type": "single",
               "title": "▄Osa-AK",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_9a33bm2.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 150000,
               "sp": 830000,
               "data_unit_id": "uk_9a33bm2",
@@ -5979,6 +6159,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:29.461Z",
                 "sha256": "6531b22d20905d51ab4dd00b9c9080d3270f5bed9dc82a91d03dfc82f0bc0456"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             }
           ],
@@ -5991,7 +6181,7 @@
           "title": "Stormer/Strela",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_stormer_9a35_group.png",
           "selected": false,
-          "br": "10.3",
+          "br": "10.7",
           "data_unit_id": "uk_stormer_9a35_group",
           "required_unit_id": "uk_stormer_9a33_group",
           "class_name": "",
@@ -6000,7 +6190,7 @@
               "type": "single",
               "title": "Stormer HVM",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_stormer_hvm.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 300000,
               "sp": 830000,
               "data_unit_id": "uk_stormer_hvm",
@@ -6037,13 +6227,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:42.206Z",
                 "sha256": "5dc3232a6e3b7a39ff2bfbc2b4becf896ab069d919b9f38c8ba4eecdce3d125b"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "▄Strela-10M",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_9a35_m.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "uk_9a35_m",
@@ -6080,6 +6280,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:29.334Z",
                 "sha256": "3c01ccea06bc33ae82c6a92e9db948f1c19a253322f6cefede06eb9e401021f2"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.0",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             }
           ],
@@ -6093,7 +6303,7 @@
           "type": "single",
           "title": "Ajax",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_ajax.png",
-          "br": "10.3",
+          "br": "10.7",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "uk_ajax",
@@ -6130,6 +6340,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:32.064Z",
             "sha256": "60ccce1dba886e248a7d8ccf299132c0425f230e0f9f5027a7bf70f449f1e60c"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "10.7",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ]
@@ -6140,7 +6360,7 @@
           "type": "single",
           "title": "Challenger DS",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_1_mk_3_gulf.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "uk_challenger_1_mk_3_gulf",
@@ -6177,13 +6397,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:34.267Z",
             "sha256": "f2094cb8835071f3e9ffdd51b6925bee028940558963ef2b792afa99e7e3e3e8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Challenger 2 OES",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_2_megatron.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "uk_challenger_2_megatron",
@@ -6220,13 +6450,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:34.476Z",
             "sha256": "77919968c07222cc77c7836845294f5a1c6368b1c37b12faefb795f9254eefbf"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◍Challenger 2 OES",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_2_megatron_sm.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "uk_challenger_2_megatron_sm",
@@ -6263,6 +6503,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:34.802Z",
             "sha256": "f7c5c47d3559536ba46c513cc4ef7ee3de98bf1e1dd6c5defd6012b4ecfec508"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         }
       ],
@@ -6357,7 +6607,7 @@
           "type": "single",
           "title": "␙Challenger 2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_ii.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": null,
           "sp": null,
           "data_unit_id": "uk_challenger_ii_yt_cup_2019",
@@ -6394,13 +6644,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:35.484Z",
             "sha256": "ed9ccc5f76ebada87935adce1a1d17d00101e5d1eaa03c92b8a412a6eec847e5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "▄M1A1 SA",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_m1a1_aim_abrams.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "uk_m1a1_aim_abrams",
@@ -6437,6 +6697,16 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:28:39.174Z",
             "sha256": "2f3b11bd4eba1db2ba282e9961e67314e672890e7aaf0845fbae2bd068f99d51"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ]
@@ -6453,7 +6723,7 @@
           "type": "single",
           "title": "Challenger 3 TD",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_2_lep.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "uk_challenger_2_lep",
@@ -6490,6 +6760,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:34.433Z",
             "sha256": "8d9088b079e03ae8ab183d72f0723a535cbfd4c981aaf3233681497a8d496021"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         },
         {
@@ -6497,7 +6777,7 @@
           "title": "Challenger 2BN/2E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_2_bn.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.0",
           "data_unit_id": "uk_challenger_bn_e_group",
           "required_unit_id": "uk_challenger_2_lep",
           "class_name": "",
@@ -6506,7 +6786,7 @@
               "type": "single",
               "title": "Black Night",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_2_bn.png",
-              "br": "12.7",
+              "br": "13.0",
               "rp": 410000,
               "sp": 1100000,
               "data_unit_id": "uk_challenger_2_bn",
@@ -6543,13 +6823,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:34.390Z",
                 "sha256": "e77f651de0c5c0e43c3c208b52cead5c39ca1097b3d43f27526343e7a6ec5118"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Challenger 2E",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_challenger_2e.png",
-              "br": "12.7",
+              "br": "13.0",
               "rp": 210000,
               "sp": 1120000,
               "data_unit_id": "uk_challenger_2e",
@@ -6586,6 +6876,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:34.781Z",
                 "sha256": "8d14fcbd671184a0c598d80edf816f8b4702150549b4eea5e3bec8565dfd3071"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             }
           ],
@@ -6599,7 +6899,7 @@
           "type": "single",
           "title": "M1A2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_m1a2_sep3_abrams.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "uk_m1a2_sep3_abrams",
@@ -6636,6 +6936,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:39.178Z",
             "sha256": "4cc2d8f88654c9f62340944ec330c954dc80146427237740a0cb86c696c75287"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -6645,7 +6955,7 @@
           "type": "single",
           "title": "ADATS (M113)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_adats_m113a3.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "uk_adats_m113a3",
@@ -6682,6 +6992,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:32.007Z",
             "sha256": "48185e9f2affba0328ae5c5bdcbeedf2d53b4becea7e969e6bbe75bbe919a51e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
@@ -6689,7 +7009,7 @@
           "title": "Sky Sabre",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_sky_sabre_fcs.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.3",
           "data_unit_id": "uk_sky_sabre_fcs",
           "required_unit_id": "uk_adats_m113a3",
           "class_name": "",
@@ -6698,7 +7018,7 @@
               "type": "single",
               "title": "Sky Sabre (TADS)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_sky_sabre_fcs.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 410000,
               "sp": 1100000,
               "data_unit_id": "uk_sky_sabre_fcs",
@@ -6735,13 +7055,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:41.784Z",
                 "sha256": "7f31ffa272fd427774be2ba7e2f710fb5115bf285f67babc586b3b65337847b2"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Sky Sabre (TEL)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_sky_sabre_launcher.png",
-              "br": null,
+              "br": "13.3",
               "rp": 0,
               "sp": 0,
               "data_unit_id": "uk_sky_sabre_launcher",
@@ -6768,6 +7098,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:42.075Z",
                 "sha256": "90b5c5b59fdcb42532fa7825cf5aade7b4e2316161177d6093cb20cdbc5ea625"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             }
           ],

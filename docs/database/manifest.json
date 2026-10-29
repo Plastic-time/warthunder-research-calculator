@@ -16,7 +16,7 @@
     {
       "path": "database/usa/usa_ground.json",
       "units": 154,
-      "sha256": "ed83b06323a6ac38df0ca3e195aebd1f83db8ee5c93bc56477df93bc587756ee",
+      "sha256": "878b0f701c94253f737c96a3fff3c7db5d5bfcb47e1baa0a6b6c86bd0685c6c7",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "us_m7"
@@ -26,7 +26,7 @@
     {
       "path": "database/germany/germany_ground.json",
       "units": 179,
-      "sha256": "2ca06d0357e4f4ef20f012f974dc4971beca61d8c903e531529967f74f506855",
+      "sha256": "16868f252e07884e1d8beef0f24401f74bde2a558fac897915197e0927a4e039",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "germ_hummel",
@@ -41,7 +41,7 @@
     {
       "path": "database/ussr/ussr_ground.json",
       "units": 193,
-      "sha256": "2a2fe13a3670ca7f28f4f3d8a0f6c05c53586085db33390067f59fe1c3c9ac37",
+      "sha256": "acb19b3f5e2ecc676eab7246a29cb6d90e017766f2716cade4f691834f04a19c",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "ussr_t_44_kit_4rank",
@@ -55,7 +55,7 @@
     {
       "path": "database/britain/britain_ground.json",
       "units": 145,
-      "sha256": "1ca8aa8536c7ed8bd319a0c01048f044861c0ff06c1d4fb7e5e3e96f77e865f9",
+      "sha256": "a521c7a584459ebf07fa29f6adbeccc9ebded48b80191565d9d77023b5c4f8c6",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "uk_fv107_scimitar_mk2",
@@ -69,7 +69,7 @@
     {
       "path": "database/japan/japan_ground.json",
       "units": 87,
-      "sha256": "0d3058a06914ebbffd9c2d364f1449c45dd901472a8a24be71ce042e0e68c35a",
+      "sha256": "038f42355a421f4910396812ce7f405df02543f0a1c1d7b098fc92263caf1b4b",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "jp_harimau",
@@ -81,7 +81,7 @@
     {
       "path": "database/china/china_ground.json",
       "units": 99,
-      "sha256": "4dcea28a97caf40e6c7e59e007448ac5efed6f1970c9e0272b19a31f712ba22b",
+      "sha256": "e68e1ca3708be223f6d466d67ef6ff3524fba1bd6c584c0fd3bc23e227e03970",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "cn_plz_45",
@@ -94,7 +94,7 @@
     {
       "path": "database/italy/italy_ground.json",
       "units": 108,
-      "sha256": "22bc5c164b62e9bbcea51ea0c27a2974fa829b05dd757f261cfeead7ba98c8eb",
+      "sha256": "05eb2d815d0899d9e584cc61a25b89f1895d7fe1fc844bd9dfdcca95df67e2ee",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "it_palmaria",
@@ -106,7 +106,7 @@
     {
       "path": "database/france/france_ground.json",
       "units": 107,
-      "sha256": "522b4aac7a39301205f165bc56b4d583befc40181532cc43fe1e2fa9931524f8",
+      "sha256": "44207c0e7808033a61e3f718f09fa3717291e53aa51933b73216b845cdda29c9",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "fr_arl_44_mod",
@@ -118,7 +118,7 @@
     {
       "path": "database/sweden/sweden_ground.json",
       "units": 96,
-      "sha256": "16a631f2e75d4625a3c91699be7e9a1e4ebc1f53001b920d2a8b2c7f0762c78b",
+      "sha256": "34e3d595dbc25610c33059b865f0d5bf7a5cbeaaf2ddcdf1896073edb63f0fe0",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "sw_nomads"
@@ -128,7 +128,7 @@
     {
       "path": "database/israel/israel_ground.json",
       "units": 57,
-      "sha256": "d7f89d91215c91897549c868c8626c5acfb6ec03bd79ce23979449fda5fd625d",
+      "sha256": "0164f36d0449c2c6b57c384e34226f925631c6c9105fa541b5a6ac06c2a83af3",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "il_9a33bm3",
@@ -141,7 +141,7 @@
     {
       "path": "database/usa/usa_aviation.json",
       "units": 199,
-      "sha256": "0860913faeb8f21bd654eb055ff029cdf0825c19dae50de4a13c672f96de8b1e",
+      "sha256": "625d73578ff5f6154513b3ef6f03a1d38c3f7c9d2cfa4d2979ad3c91ea5d0d2e",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "f_102a_late",
@@ -156,7 +156,7 @@
     {
       "path": "database/germany/germany_aviation.json",
       "units": 187,
-      "sha256": "116a34b41abb50588c2dd708dc31dc3e1c8692dda519864243807c5502380560",
+      "sha256": "6af5a9f0f58aa333294a059b5babe4b32adc0aee0de57928de4058b813342816",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "fw_189c_0",
@@ -171,7 +171,7 @@
     {
       "path": "database/ussr/ussr_aviation.json",
       "units": 198,
-      "sha256": "ab9c15919d6c5dca298e91555e1a51272e65b1a7314767a47dc872111d407260",
+      "sha256": "8cc849cdd2aacd1ebc48efc265ec01c99cf979b9371772a74649d0225f5a5a6c",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "mig_35"
@@ -181,7 +181,7 @@
     {
       "path": "database/britain/britain_aviation.json",
       "units": 164,
-      "sha256": "eb6fcfdb483ea90517e44d104b9ecb9ebccd6d97163356e0c1baa5d996182694",
+      "sha256": "16feb8a4b9012e4a9f6b9e7b36b3f2506828036e5008c10c40ab4bc618aa8e94",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "hawk_t1a_early",
@@ -193,7 +193,7 @@
     {
       "path": "database/japan/japan_aviation.json",
       "units": 140,
-      "sha256": "3305c59a7aa889b407b0f5b46b4a8bef6ce6ba3e2117d20b218c8a1b18ae2862",
+      "sha256": "733a8e7e2de5fe371c803795f0d4e4e95ef38e833e72418e6e6477f74cfbe33c",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "ki_93_1_ko",
@@ -206,7 +206,7 @@
     {
       "path": "database/china/china_aviation.json",
       "units": 89,
-      "sha256": "25b4199d846259601372a549ef9bd39b777a7919c40677251544f603f34387f8",
+      "sha256": "f5597246c7abb0b6bd4c7c1caf4f556236dd09d82833d674619f16e8329492ed",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "j_16"
@@ -216,7 +216,7 @@
     {
       "path": "database/italy/italy_aviation.json",
       "units": 111,
-      "sha256": "c5ad79802a63fb63664fe79b7a4d91d61559c3c22ee249f4b07fd5ad0c3a31cb",
+      "sha256": "3cc857acaf5531394e5298b278464f89f95af48ba16110fb591a25666d9dd0b6",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "iar_81c_db_605"
@@ -226,7 +226,7 @@
     {
       "path": "database/france/france_aviation.json",
       "units": 113,
-      "sha256": "1bcec043b5ef0e5835f920bd8b4d04d4c55aee050f6722240cb349b5887a8b60",
+      "sha256": "70b192e50ecf837014b68fbf4d2de79d4a0673876d41936f395c32faf00c1e17",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "se_203"
@@ -236,7 +236,7 @@
     {
       "path": "database/sweden/sweden_aviation.json",
       "units": 75,
-      "sha256": "ae89d28e4c2f8a68dea85221d6e408fcc2a4ec74f3211771b58f404e2d5d30e7",
+      "sha256": "dc41b224a5340877cec85ca23509225eea8083f8e913d1eb6e6031c0e8f527da",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "saab_j35j",
@@ -247,7 +247,7 @@
     {
       "path": "database/israel/israel_aviation.json",
       "units": 49,
-      "sha256": "799a63c60a45b1112c04fc94cdb1bbd0b4b25cd69c249791ca09026bbde9e934",
+      "sha256": "254a303ee2f880beb61a4fefd434dc17d0582c29763432f871af5a6e3f9fee98",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "sb2c_5_greece",
@@ -268,7 +268,7 @@
     {
       "path": "database/usa/usa_helicopters.json",
       "units": 19,
-      "sha256": "e4cd142bf731fd02a82c4db0b9792cf87365dc2180cfd47c306e22378b549b58",
+      "sha256": "1b514b0f3e376d52ad625feb0d1a636145555bc40de0c581b2aa877d66fa1b89",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -276,7 +276,7 @@
     {
       "path": "database/germany/germany_helicopters.json",
       "units": 12,
-      "sha256": "0372345309c786f1ae750635526e743861c99253f14f6889f2b20d56cf0390be",
+      "sha256": "f3af3acea9b8211defe866fca028f90290d6aab0249f7c86e88989a623c298cb",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [
         "mi_24d_german",
@@ -287,7 +287,7 @@
     {
       "path": "database/ussr/ussr_helicopters.json",
       "units": 15,
-      "sha256": "467ee1169eed717eacea62991f9c0274bbcc41636b2cb547116d6e41e9b0f60c",
+      "sha256": "db8aa0d6285dc2cd7fc7b2f504492556e021b37233ebd40d9cc883f16de8c83b",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -295,7 +295,7 @@
     {
       "path": "database/britain/britain_helicopters.json",
       "units": 10,
-      "sha256": "4c57b9f1fc52150f503da5932fcfb6a4fe11b5ca686725cdc1f97ccc2d3b67a0",
+      "sha256": "4683f0ca0d6fda12646386acee87abcbd65592f9b2ec174f8494e95c906f63af",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [
         "aw_159"
@@ -305,7 +305,7 @@
     {
       "path": "database/japan/japan_helicopters.json",
       "units": 8,
-      "sha256": "328266a4969139cfcd12cbe705de7679546a16f869595c7bcaa2f959a8047253",
+      "sha256": "af71f456f7b8fd2af15de9c539717a0d3ba03ed0d73a45f6de2ecc9a921474ff",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -313,7 +313,7 @@
     {
       "path": "database/china/china_helicopters.json",
       "units": 13,
-      "sha256": "8b06346e04040ec83ff28b1616b42ec8f425c084de9ed681cb0ac57062f357b9",
+      "sha256": "7aafedb5c9ce6019e1531cac80509d205e21851b0c6807260282163d10a98681",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -321,7 +321,7 @@
     {
       "path": "database/italy/italy_helicopters.json",
       "units": 9,
-      "sha256": "f2390249f90edea529825e4f5c1486731840dec59939aa547f2650d618cdbe4e",
+      "sha256": "2020ce189ee0a265677dc6e51ce542a10b403ba71eb561d6477e7994b90bd266",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -329,7 +329,7 @@
     {
       "path": "database/france/france_helicopters.json",
       "units": 12,
-      "sha256": "b80798bf46667ecb1cc97d32c7a2c555c7ab395e539944ea4cc0766d5d5d3d9b",
+      "sha256": "1f28042e4da35ca20caa3083d8f2b55f5ca29b4a8b121b5b0702210e962514b8",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -337,7 +337,7 @@
     {
       "path": "database/sweden/sweden_helicopters.json",
       "units": 6,
-      "sha256": "5dff62bd651c0c2ece9c20a0dfb3b33234c5efa28f3223ee2051b484436dd086",
+      "sha256": "1737d12bdde9c00797463e5ad968d255349da38fc66f5948299e763f75bc0634",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -345,7 +345,7 @@
     {
       "path": "database/israel/israel_helicopters.json",
       "units": 8,
-      "sha256": "24e1e4594541bc2250ad1d4610d9a06f0c4842f2d4d9a9978885f7e96db36fdb",
+      "sha256": "1cb6e0923cc5669d4aa018f757016568b4b9e3ad37e41427627220c0067aa378",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -353,7 +353,7 @@
     {
       "path": "database/usa/usa_ships.json",
       "units": 56,
-      "sha256": "ecf5f4b75cb43139eb569f637917ecbd597cd4798b5d17ffcb9912daa85e76a7",
+      "sha256": "d0539e37c8ff48bc7e2ba29e40c7d1f374152d38c895604c77914abc3032e3fb",
       "tree_source_sha256": "68089cf4b12f9f785a5cbfb9544ccfcd6ad09ba165ee5c0ff304db363e243dda",
       "added": [
         "us_destroyer_mahan_class",
@@ -453,7 +453,7 @@
     {
       "path": "database/usa/usa_boats.json",
       "units": 35,
-      "sha256": "ec4b2d29362c554408b9db9f04fd45efa7e96c5e6055413854d24c604fe915cc",
+      "sha256": "c48b849ca65de59bd9249d00836510722646a418518659f2f69ebfce2b228408",
       "tree_source_sha256": "0d0d322252922211a2167e630f6b1a2fd1bc6ed84cb045b6dd93d1990afbd9fe",
       "added": [],
       "removed": []
@@ -461,7 +461,7 @@
     {
       "path": "database/germany/germany_boats.json",
       "units": 39,
-      "sha256": "aad179d88289bed7d7bd103593789eb91237072af644c9111e024e6ce52044c9",
+      "sha256": "91a284041d160a72c7144309affe2716691f7246f27a5fb29a9ea37f3e1b7707",
       "tree_source_sha256": "0d0d322252922211a2167e630f6b1a2fd1bc6ed84cb045b6dd93d1990afbd9fe",
       "added": [
         "germ_rboot_r310"
@@ -513,7 +513,7 @@
     {
       "path": "database/italy/italy_boats.json",
       "units": 27,
-      "sha256": "b550f22140c6628f1a34d3e41f8102d9ac9ca59f3ef9ba457cce94a878979336",
+      "sha256": "540c7d035d98957403019df00fe746e2f75a8006c40a62e7b61a91f63a16865d",
       "tree_source_sha256": "0d0d322252922211a2167e630f6b1a2fd1bc6ed84cb045b6dd93d1990afbd9fe",
       "added": [
         "it_mas_classe429"
@@ -1815,6 +1815,13 @@
       "germ_s_700_s_706"
     ],
     "provenance": "config/game-roster-additions.json",
+    "fullSnapshotUpgrade": false
+  },
+  "battleRatings": {
+    "version": "2.59.0.93",
+    "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+    "scope": "changed-mode-specific-battle-ratings",
+    "provenance": "config/battle-rating-update.json",
     "fullSnapshotUpgrade": false
   }
 }

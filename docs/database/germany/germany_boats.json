@@ -662,7 +662,7 @@
           "type": "single",
           "title": "VS-10",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_vs10_hydrofoil.png",
-          "br": "2.7",
+          "br": "2.3",
           "rp": 75000,
           "sp": 250000,
           "data_unit_id": "germ_vs10_hydrofoil",
@@ -697,6 +697,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:50.671Z",
             "sha256": "d9283501f30a471759bcb332c5e7069bdd7dee755b7b45d221fb40f860a8db68"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "2.3",
+                "RB": "2.3",
+                "SB": "2.3"
+              }
+            }
           }
         }
       ]

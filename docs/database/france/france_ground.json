@@ -3371,7 +3371,7 @@
           "title": "MARS/AMX",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_mars_hot_group.png",
           "selected": false,
-          "br": "8.3",
+          "br": "8.3-8.7",
           "data_unit_id": "fr_mars_hot_group",
           "required_unit_id": "fr_marder_df_105",
           "class_name": "",
@@ -3380,7 +3380,7 @@
               "type": "single",
               "title": "MARS 15",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_mars_15.png",
-              "br": "8.3",
+              "br": "8.7",
               "rp": 135000,
               "sp": 380000,
               "data_unit_id": "fr_mars_15",
@@ -3417,6 +3417,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:22.553Z",
                 "sha256": "5725a315a7f71e0f83b9c7086063c9e1fabb65fdc6a7a029f19e55354434eb45"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
               }
             },
             {
@@ -3472,7 +3482,7 @@
           "title": "AMX/SK",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_sk_group.png",
           "selected": false,
-          "br": "8.3-8.7",
+          "br": "8.7-9.0",
           "data_unit_id": "fr_amx_sk_group",
           "required_unit_id": "fr_mars_hot_group",
           "class_name": "",
@@ -3481,7 +3491,7 @@
               "type": "single",
               "title": "AMX-10RC",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_10rc.png",
-              "br": "8.3",
+              "br": "8.7",
               "rp": 160000,
               "sp": 450000,
               "data_unit_id": "fr_amx_10rc",
@@ -3518,13 +3528,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:15.414Z",
                 "sha256": "bb6d2242423806d7093b55f856eff9efd255cd569b9f1781541108ba8a24332d"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "SK-105A2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_sk105_a2.png",
-              "br": "8.7",
+              "br": "9.0",
               "rp": 94000,
               "sp": 520000,
               "data_unit_id": "fr_sk105_a2",
@@ -3561,6 +3581,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:23.588Z",
                 "sha256": "aa7fa728216f644092ca4b1503e8ca9b5cb13487eb0134625b018a0017bb63f7"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.0",
+                    "RB": "9.0",
+                    "SB": "9.0"
+                  }
+                }
               }
             }
           ],
@@ -3572,7 +3602,7 @@
           "type": "single",
           "title": "VBCI",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_vbci.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 190000,
           "sp": 520000,
           "data_unit_id": "fr_vbci",
@@ -3609,6 +3639,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:24.585Z",
             "sha256": "24fb4ff53af65c434339e88676f27b7248d399fa53174593a1f090c0e6371e70"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -3866,7 +3906,7 @@
           "type": "single",
           "title": "AMX-30 S DCA",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_30_dca.png",
-          "br": "8.7",
+          "br": "8.3",
           "rp": 135000,
           "sp": 380000,
           "data_unit_id": "fr_amx_30_dca",
@@ -3903,13 +3943,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:16.730Z",
             "sha256": "d7f11f66ad305d2757dbc250677aaebcf2e10349ffc06666004994e5794ce77c"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.3",
+                "RB": "8.3",
+                "SB": "8.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "SANTAL",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_vab_santal.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "fr_vab_santal",
@@ -3946,6 +3996,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:24.125Z",
             "sha256": "1beac8f72424d1dd574170292a8087b878e4b724deffc01ecea90523ecc80d60"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -4087,7 +4147,7 @@
           "type": "single",
           "title": "VBCI-2 (MCT30)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_vbci2_mct30.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "fr_vbci2_mct30",
@@ -4124,6 +4184,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:24.377Z",
             "sha256": "4ebc79e9c5b52b5e062c246523ea2768366c7d9cc4b7164e83cb21567fdbcce4"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ],
@@ -4186,7 +4256,7 @@
           "type": "single",
           "title": "MSC",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_msc.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "fr_msc",
@@ -4223,6 +4293,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:22.801Z",
             "sha256": "3c2e9954946002c45315e9c2126f97cfb65bea4390d188fe12682bcb32132807"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.3",
+                "RB": "11.3",
+                "SB": "11.3"
+              }
+            }
           }
         }
       ],
@@ -4231,7 +4311,7 @@
           "type": "single",
           "title": "AMX-40",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_40.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "fr_amx_40",
@@ -4268,13 +4348,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:17.386Z",
             "sha256": "0635ddc6926a290ec5f4f4972b2205d184c3ced77c97a5c3d8acdb61c5c07ab2"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Leopard 2A4NL",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leopard_2a4nl.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "fr_leopard_2a4nl",
@@ -4311,6 +4401,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:20.302Z",
             "sha256": "29e1d047e94d5ef2b76d94387e896a6afe2fbafd4a6dae2945af711dc2f88493"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -4319,7 +4419,7 @@
           "type": "single",
           "title": "Roland 1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_30_roland.png",
-          "br": "9.7",
+          "br": "10.3",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "fr_amx_30_roland",
@@ -4356,6 +4456,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:16.792Z",
             "sha256": "2f0b887bbc81d3baf9f04f0e0d14043d9f256cb964a1743234a79417fe8e64dd"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -4364,7 +4474,7 @@
           "type": "single",
           "title": "EBRC Jaguar",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_jaguar_ebrc.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "fr_jaguar_ebrc",
@@ -4401,6 +4511,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:19.892Z",
             "sha256": "2933f80599fb77c995ad22464919e058dad8e91fbf6dbc1e582be7c7e8cf4333"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.3",
+                "RB": "11.3",
+                "SB": "11.3"
+              }
+            }
           }
         }
       ]
@@ -4411,7 +4531,7 @@
           "type": "single",
           "title": "CV 9035NL",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_cv_9035_nl.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "fr_cv_9035_nl",
@@ -4448,13 +4568,23 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:29:19.294Z",
             "sha256": "e8d0af5ff386614a3aa3d0b633d18473f85a326800515206e75304c23bbcbd36"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Leopard 2 (OTCo)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leopard_2a4nl_les.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "fr_leopard_2a4nl_les",
@@ -4491,6 +4621,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:20.476Z",
             "sha256": "a779b9387f305226c5afa4cc1c3f4f5edd1375ca3309a6a62f3b6cfbde8c6a1e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -4510,7 +4650,7 @@
           "title": "Leclerc S1/S2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leclerc_group.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.0",
           "data_unit_id": "fr_leclerc_group",
           "required_unit_id": "fr_msc",
           "class_name": "",
@@ -4519,7 +4659,7 @@
               "type": "single",
               "title": "Leclerc",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leclerc_s1.png",
-              "br": "12.7",
+              "br": "13.0",
               "rp": 400000,
               "sp": 1080000,
               "data_unit_id": "fr_leclerc_s1",
@@ -4556,13 +4696,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:20.033Z",
                 "sha256": "f46225bf9c0e76f7b126977de4f6026b6b0727fe0534f19c71f32df39a5a4b94"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Leclerc S2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leclerc_s2.png",
-              "br": "12.7",
+              "br": "13.0",
               "rp": 200000,
               "sp": 1100000,
               "data_unit_id": "fr_leclerc_s2",
@@ -4599,6 +4749,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:20.256Z",
                 "sha256": "ebaffee8362f8d00142f96eaf82f322ec7c55ea64371dcc547e31792b0fc9a9f"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             }
           ],
@@ -4610,7 +4770,7 @@
           "type": "single",
           "title": "Leclerc SXXI",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leclerc_sxxi.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "fr_leclerc_sxxi",
@@ -4647,13 +4807,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:20.346Z",
             "sha256": "f7756a720cd1c1a8b0344d65296e5fe69b1728101965ae95b50ee6902c6e8ee2"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Leclerc AZUR",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leclerc_azur.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "fr_leclerc_azur",
@@ -4690,6 +4860,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:19.823Z",
             "sha256": "48316dc7f0927651a309630dd8f3bcfb3f703325c5d8afc518a7144ff6784038"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         }
       ],
@@ -4698,7 +4878,7 @@
           "type": "single",
           "title": "Leopard 2A5NL",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leopard_2a5nl.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "fr_leopard_2a5nl",
@@ -4735,13 +4915,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:20.762Z",
             "sha256": "ba4e7f8b53c2295f0fb654c2d134e43d7e5a12cf365da8b702ad22247c1686dc"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Leopard 2A6NL",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_leopard_2a6nl.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "fr_leopard_2a6nl",
@@ -4778,13 +4968,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:20.559Z",
             "sha256": "0b9534a9667cb75c4855a47e3451771fef224f8d180feaa8b52b9b18b86b4231"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "▄EMBT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_embt.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "fr_embt",
@@ -4821,6 +5021,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:19.568Z",
             "sha256": "66c476e5328811a49971fe3e535a81ae193f33a2086589232483bc9ffe9227e4"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -4829,7 +5039,7 @@
           "type": "single",
           "title": "▄ItO 90M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_crotale_ng.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "fr_crotale_ng",
@@ -4866,6 +5076,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:19.252Z",
             "sha256": "72ad089dffe75afdd173db837c5cfe0f8e244f32ab7f89dfe51cb5a00e465830"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         },
         {
@@ -4873,7 +5093,7 @@
           "title": "FSAF SAMP/T (Mamba)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_samp_t_fcs.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.3",
           "data_unit_id": "fr_samp_t_fcs",
           "required_unit_id": "fr_crotale_ng",
           "class_name": "",
@@ -4882,7 +5102,7 @@
               "type": "single",
               "title": "FSAF SAMP/T (Mamba) (TADS)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_samp_t_fcs.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 410000,
               "sp": 1100000,
               "data_unit_id": "fr_samp_t_fcs",
@@ -4919,13 +5139,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:23.449Z",
                 "sha256": "1afdcb2be3e6c9e156bdf316de40d344f229619f18abde1710f45ad1421c9d28"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "FSAF SAMP/T (Mamba) (TEL)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_samp_t_launcher.png",
-              "br": null,
+              "br": "13.3",
               "rp": 0,
               "sp": 0,
               "data_unit_id": "fr_samp_t_launcher",
@@ -4952,6 +5182,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:23.598Z",
                 "sha256": "f60469e77cd1cbb96af117979b5794c9480ad735eb675a4a52a937a168526fdd"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             }
           ],

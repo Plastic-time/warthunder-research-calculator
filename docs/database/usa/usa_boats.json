@@ -485,7 +485,7 @@
           "type": "single",
           "title": "PT-262",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_huckins_78ft_pt262.png",
-          "br": "2.0",
+          "br": "2.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_huckins_78ft_pt262",
@@ -520,6 +520,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:45.333Z",
             "sha256": "0163d309bbc6d256be9623162b202b349bd3f69bdb9c6bc3019af7d461c19f14"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "2.3",
+                "RB": "2.3",
+                "SB": "2.3"
+              }
+            }
           }
         },
         {
@@ -915,7 +925,7 @@
           "type": "single",
           "title": "USS Flagstaff",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_flagstaff_pgh1.png",
-          "br": "2.7",
+          "br": "2.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_flagstaff_pgh1",
@@ -950,6 +960,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:44.563Z",
             "sha256": "431884608453f6737c775365a291481f454c1672db515de630442df53d5b8c7d"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "2.3",
+                "RB": "2.3",
+                "SB": "2.3"
+              }
+            }
           }
         }
       ]

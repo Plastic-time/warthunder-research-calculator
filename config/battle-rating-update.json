@@ -1,0 +1,5809 @@
+{
+  "version": "2.59.0.93",
+  "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+  "previousCommit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+  "reviewedAt": "2026-10-29",
+  "sources": [
+    {
+      "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "localFile": "af0cce56-wpcost.blkx",
+      "role": "previous",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/af0cce561a73704e30c1df66eff06209bcc3f035/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32207135,
+      "sha256": "8dc4fb15ac057df616e97d498ff455aac81b4328ec860be61a4fc8bea18a300a",
+      "gitBlob": "c9829267ac48df140de2a7b8a5b693aca7e8af07"
+    },
+    {
+      "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "localFile": "501af3e3-wpcost.blkx",
+      "role": "current",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/501af3e34af2cb82d65140297e1b994b444c4b88/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32212188,
+      "sha256": "d269b1df680d76ff544025d0ba5b9642812a8f39e86b69bb4ca837563aef2b3a",
+      "gitBlob": "225ac9b6c9c9cdd15bce7707abf8a50477ab48ce"
+    },
+    {
+      "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+      "file": "gui.vromfs.bin_u/globals/ranks_common_shared.nut",
+      "localFile": "ranks_common_shared.nut",
+      "role": "rules",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/501af3e34af2cb82d65140297e1b994b444c4b88/gui.vromfs.bin_u/globals/ranks_common_shared.nut",
+      "bytes": 25515,
+      "sha256": "f4ba585b2260289bb7eb4b9e8d62b9357b6c1d6e36e7a4b44a67c21660008c9e",
+      "gitBlob": "3be8bae9861a29398b45bcae30af9157329ebc41"
+    }
+  ],
+  "scope": "Changed explicit BR fields only; costs, prerequisites, modifications and saved plans unchanged.",
+  "units": {
+    "us_t58": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "us_xm_800t": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "us_stingray": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "us_mbt_70": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "us_xm246": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "us_m247": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "us_xm1_chrysler": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "us_xm1_gm": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "us_merkava_mk_1": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "us_merkava_mk_2b_late": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "us_xm_8": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "us_m10_booker_late": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "us_hstv_l": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_m1a1_hc_abrams": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_m1_abrams": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "us_m1a1_abrams": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "us_m1_ip_abrams": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "us_m1a2_abrams": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_xm_975_roland": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "us_m1_abrams_kvt": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "us_m1a1_abrams_yt_cup_2019": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "us_m1a1_aim_abrams": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_m1a1_hc_usmc": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_m1a1_hc_usmc_sm": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_rdf_lt": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_ccvl": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "us_m60a3_slep": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "us_ags_teledyne": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_merkava_mk_3d": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "us_m1a2_sep_abrams": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "us_m1a2_sep2_abrams": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "us_m1a2_sep2_abrams_trophy": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "us_m1a2_sep3_abrams": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "us_adats_bradley": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "us_sl_amraam_fcs": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_sl_amraam_launcher": {
+      "previousBr": null,
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "us_nasams_fcs": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "us_nasams_launcher": {
+      "previousBr": null,
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "germ_bmp_1_ddr": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 20,
+        "economicRankHistorical": 20,
+        "economicRankSimulation": 20
+      }
+    },
+    "germ_sk105_a2": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "germ_kpz_70": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "germ_kpz_t72m1": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "germ_flakpz_i_gepard": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "germ_wiesel_2_adwc": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "germ_flakpz_1a2_gepard": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "germ_th_800_bismark": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25
+      }
+    },
+    "germ_radpanzer_90": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "germ_leopard_2k": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "germ_leopard_2a4": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "germ_flarakpz_1": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "germ_9a33bm3": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "germ_9a35_m": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "germ_leopard_2a4m_can": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "germ_leopard_2a4m_can_sm": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "germ_leopard_2_pt14": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31
+      }
+    },
+    "germ_leopard_2a4_pzbtl_123": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "germ_embt": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "germ_leopard_2a5": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "germ_leopard_2a6": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "germ_leopard_2a5_pso": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "germ_leopard_2a7v": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "germ_flarakrad": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "germ_iris_slm_fcs": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "germ_iris_slm_launcher": {
+      "previousBr": null,
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "germ_leopard_2pl": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "germ_leopard_2a5_yt_cup_2019": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "ussr_bmp_1": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 20,
+        "economicRankHistorical": 20,
+        "economicRankSimulation": 20
+      }
+    },
+    "ussr_object_906": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "ussr_to_55": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "ussr_pt_76_57": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 21,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "ussr_t_55a": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "ussr_t_72a": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "ussr_t_64a_1971": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "ussr_t_80b": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "ussr_t_80u": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "ussr_bmpt": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "ussr_9a33bm3": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "ussr_9a35_m2": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "ussr_zprk_2s6": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31
+      }
+    },
+    "ussr_tor_m1": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "ussr_bmpt_72": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "ussr_t_80ue1": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "ussr_t_80ue1_sm": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "ussr_object_292": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "ussr_t_80u_yt_cup_2019": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "ussr_t_80um2": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "ussr_t_80uk": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "ussr_t_90m_2020": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "ussr_t_90m_arena_m": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "ussr_t_80bvm": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "ussr_pantsyr_s1": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "ussr_pantsyr_sm_sv": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "uk_olifant_mk_1a": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "uk_ratel_zt3": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "uk_chieftain_marksman": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "uk_tracked_rapier": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "uk_rooikat_76": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "uk_vfm_5": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "uk_rooikat_mttd": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "uk_khalid": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "uk_rooikat_105_td": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "uk_shir_2": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "uk_challenger_1": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "uk_challenger_mk_3": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "uk_challenger_ii": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "uk_challenger_2_dorchester": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "uk_challenger_2_tes": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "uk_ttd": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "uk_vickers_mk7": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "uk_arjun_mk1": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "uk_9a33bm2": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "uk_stormer_hvm": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "uk_9a35_m": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "uk_ajax": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "uk_challenger_1_mk_3_gulf": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "uk_challenger_2_megatron": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "uk_challenger_2_megatron_sm": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "uk_challenger_ii_yt_cup_2019": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "uk_m1a1_aim_abrams": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "uk_challenger_2_lep": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "uk_challenger_2_bn": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "uk_challenger_2e": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "uk_m1a2_sep3_abrams": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "uk_adats_m113a3": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "uk_sky_sabre_fcs": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "uk_sky_sabre_launcher": {
+      "previousBr": null,
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "jp_st_b1": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "jp_type_74_c": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "jp_type_74_red_star": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "jp_type_87_rcv": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25
+      }
+    },
+    "jp_type_16_mcv_prot": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "jp_type_87": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "jp_stingray": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "jp_type_16_mod": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "jp_type_10_prototype": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "jp_type_90": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "jp_type_90b": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "jp_type_16": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "jp_type_93": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "jp_type_90b_camo": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "jp_type_90b_sm": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "jp_leopard_2ri": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "jp_type_10": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "jp_tkx_prot": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "jp_oplot_t": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "cn_type_86": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 20,
+        "economicRankHistorical": 20,
+        "economicRankSimulation": 20
+      }
+    },
+    "cn_type_69": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "cn_pgz_88": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "cn_wz_305": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "cn_ztz_59a": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "cn_type_69_2a": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "cn_m_41d": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "cn_type_59d": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "cn_ztz_96": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "cn_pgz_09": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "cn_pgz_04a": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "cn_ptl_02": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25
+      }
+    },
+    "cn_wma_301": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25
+      }
+    },
+    "cn_type_69_2g": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25
+      }
+    },
+    "cn_tor_m1": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "cn_hq_17": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "cn_qn506": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "cn_ztz_96b": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "cn_vt_4": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "cn_vt_4b": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "cn_m1a2t": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "cn_wz_1001": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "cn_ztz_99a": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "cn_pgz_625_fb10": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "cn_fk_2000": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "cn_hq_11": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "cn_oplot_t": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "it_oto_r3_106sr": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 21,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "it_aubl_74_60_70m": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "it_b1_centauro": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "it_b1_centauro_romor": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "it_otobreda_sidam_25_mistral": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "it_t_72m1": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "it_of_40_mtca": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "it_vrcc_centauro": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "it_centauro_mgs_120": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "it_c1_ariete_pso": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "it_c1_ariete": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "it_9a33bm3": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "it_9a35_m": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "it_otomatic": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "it_freccia": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31
+      }
+    },
+    "it_leopard_2a4": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "it_centauro_rgo_120": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "it_c1_ariete_certezza": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 33
+      }
+    },
+    "it_centauro_2": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "it_ariete_amv_pt1": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "it_samp_t_fcs": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "it_samp_t_launcher": {
+      "previousBr": null,
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "it_leopard_2a7_hungary": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "fr_mars_15": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "fr_amx_10rc": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23
+      }
+    },
+    "fr_sk105_a2": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "fr_vbci": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "fr_amx_30_dca": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "fr_vab_santal": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "fr_vbci2_mct30": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "fr_msc": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31
+      }
+    },
+    "fr_amx_40": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "fr_leopard_2a4nl": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "fr_amx_30_roland": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "fr_jaguar_ebrc": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31
+      }
+    },
+    "fr_cv_9035_nl": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "fr_leopard_2a4nl_les": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "fr_leclerc_s1": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "fr_leclerc_s2": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "fr_leclerc_sxxi": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "fr_leclerc_azur": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "fr_leopard_2a5nl": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "fr_leopard_2a6nl": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "fr_embt": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "fr_crotale_ng": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "fr_samp_t_fcs": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "fr_samp_t_launcher": {
+      "previousBr": null,
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "sw_landsverk_ush_405": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 21,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "sw_strv_103a": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "sw_strv_103_0": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "sw_cv_90105": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "sw_strf_90b": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "sw_itpsv_90": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "sw_lvrbv_701": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "sw_t_72m1": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "sw_cv_9035_dk": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "sw_strf_90c": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "sw_strv_121": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "sw_lvkv_90c": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "sw_asrad_r": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "sw_leopard_2a4_fin": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "sw_cv_90105_tml": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "sw_strv121b_christian2": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30
+      }
+    },
+    "sw_cv_90120": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "sw_strv_122": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "sw_strv_122b_plss": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "sw_strv_122b_plus": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "sw_crotale_ng": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "sw_eldenhet_98": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "sw_nomads": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34
+      }
+    },
+    "sw_nasams_fcs": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "sw_nasams_launcher": {
+      "previousBr": null,
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "sw_leopard_2a6nl": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "sw_t_80u": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "il_magach_6b": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "il_magach_6_rocket": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "il_merkava_mk_1": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "il_merkava_mk_1b": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "il_merkava_mk_2b_early": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "il_merkava_mk_2d": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "il_sabra_mk1": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28
+      }
+    },
+    "il_merkava_mk_3b": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "il_merkava_mk_3c": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "il_9a33bm3": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29
+      }
+    },
+    "il_tor_m1": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "il_eitan": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "il_namer_rcws_30": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "il_namer_tsrikhon": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "il_merkava_mk_3_raam_segol": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32
+      }
+    },
+    "il_leopard_2a6_hel": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "il_merkava_mk_4b": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "il_merkava_mk_4_lic": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35
+      }
+    },
+    "il_merkava_mk_4m": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37
+      }
+    },
+    "il_spyder_aio": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36
+      }
+    },
+    "p-61c_1": {
+      "previousBr": "4.0",
+      "ranks": {
+        "economicRankArcade": 9,
+        "economicRankHistorical": 9,
+        "economicRankSimulation": 12,
+        "economicRankTankHistorical": 8,
+        "economicRankTankSimulation": 12
+      }
+    },
+    "xp-55": {
+      "previousBr": "4.3",
+      "ranks": {
+        "economicRankArcade": 8,
+        "economicRankHistorical": 10,
+        "economicRankSimulation": 6,
+        "economicRankTankHistorical": 12,
+        "economicRankTankSimulation": 11
+      }
+    },
+    "fr_1_fireball": {
+      "previousBr": "4.3",
+      "ranks": {
+        "economicRankArcade": 8,
+        "economicRankHistorical": 10,
+        "economicRankSimulation": 10
+      }
+    },
+    "f-89d": {
+      "previousBr": "7.0",
+      "ranks": {
+        "economicRankArcade": 18,
+        "economicRankHistorical": 18,
+        "economicRankSimulation": 19
+      }
+    },
+    "f_101c": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 24
+      }
+    },
+    "f-104c": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26,
+        "economicRankTankHistorical": 24,
+        "economicRankTankSimulation": 25
+      }
+    },
+    "f3h-2": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 23,
+        "economicRankShipArcade": 25,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "f8u-2": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 27,
+        "economicRankTankHistorical": 25,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "a_4e_early": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 25,
+        "economicRankShipArcade": 25,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "f_117": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 23,
+        "economicRankTankHistorical": 28,
+        "economicRankTankSimulation": 27,
+        "economicRankShipArcade": 25,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "a_10a_early": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 30,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "f4d_1": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 25
+      }
+    },
+    "f-5e": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "f-4c": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "f-4e": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "a_10a_late": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "a_7d": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 27,
+        "economicRankTankHistorical": 30,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "a_7e": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "a_10c": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "f_111a": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "f_111f": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "av_8b_na": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "a_6e_tram": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "a_7k": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "f_16a_block_10": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "f_16a_block_15_adf": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "f_16c_block_50": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_15a": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "f_15c_msip2": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "fa_18a": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "fa_18c_late": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_14b": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "f_14d_vf_11": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "av_8b_plus": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 35,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "f_15e": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 40,
+        "economicRankHistorical": 40,
+        "economicRankSimulation": 40,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_20a": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "fa_18c_early": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "f_14d": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "f_16xl": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "f_14a_iriaf": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "f_16c_block_52_aesa": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 40,
+        "economicRankHistorical": 40,
+        "economicRankSimulation": 40,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "f_15c_golden_eagle": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "fa_18e_block_2": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "he_112a_0": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 3,
+        "economicRankHistorical": 3,
+        "economicRankSimulation": 3,
+        "economicRankTankHistorical": 4,
+        "economicRankTankSimulation": 3
+      }
+    },
+    "bf-109f-2": {
+      "previousBr": "3.0",
+      "ranks": {
+        "economicRankArcade": 6,
+        "economicRankHistorical": 6,
+        "economicRankSimulation": 8,
+        "economicRankTankHistorical": 7,
+        "economicRankTankSimulation": 8
+      }
+    },
+    "he_112b_0": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 3,
+        "economicRankSimulation": 4,
+        "economicRankTankHistorical": 4,
+        "economicRankTankSimulation": 4
+      }
+    },
+    "he_112b_1": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 3,
+        "economicRankSimulation": 4,
+        "economicRankTankHistorical": 4,
+        "economicRankTankSimulation": 4
+      }
+    },
+    "he_112b_2": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 3,
+        "economicRankSimulation": 4,
+        "economicRankTankHistorical": 4,
+        "economicRankTankSimulation": 4
+      }
+    },
+    "bf-110g-2": {
+      "previousBr": "3.7",
+      "ranks": {
+        "economicRankArcade": 8,
+        "economicRankHistorical": 8,
+        "economicRankSimulation": 8,
+        "economicRankTankHistorical": 6,
+        "economicRankTankSimulation": 7
+      }
+    },
+    "do_335a_1": {
+      "previousBr": "4.3",
+      "ranks": {
+        "economicRankArcade": 9,
+        "economicRankHistorical": 9,
+        "economicRankSimulation": 12,
+        "economicRankTankHistorical": 8,
+        "economicRankTankSimulation": 9
+      }
+    },
+    "do_335a_0": {
+      "previousBr": "4.7",
+      "ranks": {
+        "economicRankArcade": 10,
+        "economicRankHistorical": 10,
+        "economicRankSimulation": 12,
+        "economicRankTankHistorical": 9,
+        "economicRankTankSimulation": 10
+      }
+    },
+    "ia_58a_pucara": {
+      "previousBr": "4.7",
+      "ranks": {
+        "economicRankArcade": 12,
+        "economicRankHistorical": 12,
+        "economicRankSimulation": 10,
+        "economicRankTankHistorical": 11,
+        "economicRankTankSimulation": 10
+      }
+    },
+    "hunter_f58_switzerland": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26,
+        "economicRankTankHistorical": 28,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "f-104g": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 25,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "f-4f_late": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 29,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "mig-21_bis_sau": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "tornado_ids_de_assta1": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "su_22m4": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "f-5e_switzerland": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "mig-21_bis_lazur": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "su_22m4_de_wtd61": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "mig_23mf_germany": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "f-4f_kws_lv": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "tornado_ids_de_assta3_sle": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 35,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "fa_18c_late_switzerland": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "fa_18c_switzerland": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "ef_2000_block_10": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "ef_2000_aesa": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "il_2_37_1943": {
+      "previousBr": "2.7",
+      "ranks": {
+        "economicRankArcade": 6,
+        "economicRankHistorical": 4,
+        "economicRankSimulation": 8,
+        "economicRankTankHistorical": 5,
+        "economicRankTankSimulation": 8
+      }
+    },
+    "hurricanemkii_ussr": {
+      "previousBr": "3.0",
+      "ranks": {
+        "economicRankArcade": 8,
+        "economicRankHistorical": 6,
+        "economicRankSimulation": 6,
+        "economicRankTankHistorical": 6,
+        "economicRankTankSimulation": 6
+      }
+    },
+    "yak-3": {
+      "previousBr": "4.7",
+      "ranks": {
+        "economicRankArcade": 11,
+        "economicRankHistorical": 11,
+        "economicRankSimulation": 11,
+        "economicRankTankHistorical": 12,
+        "economicRankTankSimulation": 11
+      }
+    },
+    "yak-3_eremin": {
+      "previousBr": "4.3",
+      "ranks": {
+        "economicRankArcade": 11,
+        "economicRankHistorical": 10,
+        "economicRankSimulation": 10,
+        "economicRankTankHistorical": 12,
+        "economicRankTankSimulation": 11
+      }
+    },
+    "itp_m1": {
+      "previousBr": "4.3",
+      "ranks": {
+        "economicRankArcade": 12,
+        "economicRankHistorical": 10,
+        "economicRankSimulation": 7,
+        "economicRankTankHistorical": 11,
+        "economicRankTankSimulation": 7
+      }
+    },
+    "yak-3p": {
+      "previousBr": "5.0",
+      "ranks": {
+        "economicRankArcade": 13,
+        "economicRankHistorical": 12,
+        "economicRankSimulation": 14,
+        "economicRankTankHistorical": 14,
+        "economicRankTankSimulation": 14
+      }
+    },
+    "yak-3u": {
+      "previousBr": "5.7",
+      "ranks": {
+        "economicRankArcade": 14,
+        "economicRankHistorical": 14,
+        "economicRankSimulation": 15,
+        "economicRankTankHistorical": 17,
+        "economicRankTankSimulation": 15
+      }
+    },
+    "yak-9ut": {
+      "previousBr": "5.7",
+      "ranks": {
+        "economicRankArcade": 15,
+        "economicRankHistorical": 14,
+        "economicRankSimulation": 16,
+        "economicRankTankHistorical": 18,
+        "economicRankTankSimulation": 17
+      }
+    },
+    "yak-3t": {
+      "previousBr": "5.0",
+      "ranks": {
+        "economicRankArcade": 13,
+        "economicRankHistorical": 12,
+        "economicRankSimulation": 14,
+        "economicRankTankHistorical": 14,
+        "economicRankTankSimulation": 13
+      }
+    },
+    "yak-15": {
+      "previousBr": "6.7",
+      "ranks": {
+        "economicRankArcade": 18,
+        "economicRankHistorical": 17,
+        "economicRankSimulation": 17,
+        "economicRankTankHistorical": 18,
+        "economicRankTankSimulation": 17
+      }
+    },
+    "yak-17": {
+      "previousBr": "6.7",
+      "ranks": {
+        "economicRankArcade": 17,
+        "economicRankHistorical": 17,
+        "economicRankSimulation": 18,
+        "economicRankTankHistorical": 18,
+        "economicRankTankSimulation": 18
+      }
+    },
+    "yak_130_early": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24,
+        "economicRankTankHistorical": 28,
+        "economicRankTankSimulation": 26,
+        "economicRankShipArcade": 25,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "mig-21_s": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 27,
+        "economicRankTankHistorical": 25,
+        "economicRankTankSimulation": 25,
+        "economicRankShipArcade": 24,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "j_22m1a": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 30,
+        "economicRankShipArcade": 25,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "mig-21_bis": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "mig_23m": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "su_17m4": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "su_25t": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "mig_27m": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "mig_27k": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "su_24m": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "mig_25pd": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 28,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "su_25_558arz": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "su_25tm": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "mig_29kr_9_41r": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "mig_29smt_9_19": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 35,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "su_27sm": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "su_25sm3": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "su_34": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "su_30mk2v_venezuela": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "mig_29m_9_15": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "mig_35": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 40,
+        "economicRankHistorical": 40,
+        "economicRankSimulation": 40,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "su_30sm": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "su_30sm2": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "spitfire_mk5c": {
+      "previousBr": "4.7",
+      "ranks": {
+        "economicRankArcade": 13,
+        "economicRankHistorical": 11,
+        "economicRankSimulation": 11,
+        "economicRankTankHistorical": 12,
+        "economicRankTankSimulation": 11
+      }
+    },
+    "spitfire_mk5c_notrop": {
+      "previousBr": "5.0",
+      "ranks": {
+        "economicRankArcade": 14,
+        "economicRankHistorical": 12,
+        "economicRankSimulation": 12,
+        "economicRankTankHistorical": 14,
+        "economicRankTankSimulation": 13
+      }
+    },
+    "mosquito_b_mk16": {
+      "previousBr": "3.7",
+      "ranks": {
+        "economicRankArcade": 9,
+        "economicRankHistorical": 8,
+        "economicRankSimulation": 8,
+        "economicRankTankHistorical": 7,
+        "economicRankTankSimulation": 7
+      }
+    },
+    "spitfire_mk18e": {
+      "previousBr": "5.7",
+      "ranks": {
+        "economicRankArcade": 12,
+        "economicRankHistorical": 14,
+        "economicRankSimulation": 13,
+        "economicRankTankHistorical": 17,
+        "economicRankTankSimulation": 15
+      }
+    },
+    "spitfire_f24": {
+      "previousBr": "6.7",
+      "ranks": {
+        "economicRankArcade": 16,
+        "economicRankHistorical": 17,
+        "economicRankSimulation": 17,
+        "economicRankTankHistorical": 18,
+        "economicRankTankSimulation": 17
+      }
+    },
+    "seafire_mk17": {
+      "previousBr": "5.3",
+      "ranks": {
+        "economicRankArcade": 13,
+        "economicRankHistorical": 13,
+        "economicRankSimulation": 14,
+        "economicRankTankHistorical": 15,
+        "economicRankTankSimulation": 14
+      }
+    },
+    "dh_110_sea_vixen": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 22,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 22,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 23,
+        "economicRankShipArcade": 25,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "lightning_f6": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 26,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 24
+      }
+    },
+    "ca_27_mk32_raaf": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 23
+      }
+    },
+    "lightning_f53": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 26,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 24
+      }
+    },
+    "buccaneer_s1": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 24,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 23,
+        "economicRankShipArcade": 25,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "jaguar_gr1a": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 30,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "hawk_200": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "hawk_200_rda": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "buccaneer_s2b": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "f_111c_raaf": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "tornado_gr1": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "jaguar_is": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "harrier_t10": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "saab_jas39c_south_africa": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "tornado_f3_late": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "fa_18a_raaf": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "fa_18a_hug_2_raaf": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "sea_harrier_fa2": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "harrier_gr7": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "tornado_gr4": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "cf_188a_canada": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "ef_2000_fgr4": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "ef_2000_typhoon_aesa": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "fa_18f_block_2_raaf": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "ki_102_otsu": {
+      "previousBr": "3.3",
+      "ranks": {
+        "economicRankArcade": 5,
+        "economicRankHistorical": 6,
+        "economicRankSimulation": 7
+      }
+    },
+    "a7he1": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 3,
+        "economicRankSimulation": 4,
+        "economicRankTankHistorical": 4,
+        "economicRankTankSimulation": 4
+      }
+    },
+    "a6m3_mod22_zero": {
+      "previousBr": "4.7",
+      "ranks": {
+        "economicRankArcade": 10,
+        "economicRankHistorical": 11,
+        "economicRankSimulation": 9,
+        "economicRankTankHistorical": 12,
+        "economicRankTankSimulation": 9
+      }
+    },
+    "b7a2": {
+      "previousBr": "4.0",
+      "ranks": {
+        "economicRankArcade": 10,
+        "economicRankHistorical": 9,
+        "economicRankSimulation": 9,
+        "economicRankTankHistorical": 8,
+        "economicRankTankSimulation": 8
+      }
+    },
+    "b7a2_homare_23": {
+      "previousBr": "4.0",
+      "ranks": {
+        "economicRankArcade": 10,
+        "economicRankHistorical": 9,
+        "economicRankSimulation": 9,
+        "economicRankTankHistorical": 8,
+        "economicRankTankSimulation": 8
+      }
+    },
+    "n1k2_j": {
+      "previousBr": "6.0",
+      "ranks": {
+        "economicRankArcade": 14,
+        "economicRankHistorical": 15,
+        "economicRankSimulation": 15,
+        "economicRankTankHistorical": 17,
+        "economicRankTankSimulation": 15
+      }
+    },
+    "n1k2_jko": {
+      "previousBr": "6.0",
+      "ranks": {
+        "economicRankArcade": 15,
+        "economicRankHistorical": 15,
+        "economicRankSimulation": 16,
+        "economicRankTankHistorical": 17,
+        "economicRankTankSimulation": 16
+      }
+    },
+    "kitsuka": {
+      "previousBr": "7.0",
+      "ranks": {
+        "economicRankArcade": 19,
+        "economicRankHistorical": 18,
+        "economicRankSimulation": 17
+      }
+    },
+    "f-104j": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 27,
+        "economicRankTankHistorical": 25,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "alpha_jet_th_phase_1": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 26,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "ca_27_mk32_malaysia": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 23,
+        "economicRankTankSimulation": 23
+      }
+    },
+    "a_7e_thailand": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "f-5t_thailand": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "f-5e_fcu_thailand": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "hawk_209_indonesia": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "f-4ej_kai": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 30,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "f_15j_kai": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_16aj": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "f_2a": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f-5th_thailand": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 35,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "f_16a_block_15_ocu_thailand": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "saab_jas39c_thailand": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "mig_29n": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "fa_18d_late_malaysia": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_2a_adtw": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 35,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "su_30mkm": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "f-100a_china": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 26,
+        "economicRankTankHistorical": 24,
+        "economicRankTankSimulation": 24
+      }
+    },
+    "f_6c_pakistan": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26,
+        "economicRankTankHistorical": 24,
+        "economicRankTankSimulation": 25
+      }
+    },
+    "f-104g_china": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 25,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "f-5e_aidc": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "q_5l": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 30,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "jh_7": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 28,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "a_5c": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 26,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "f_16a_block_20_mlu": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "mirage_2000_5ei": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 40,
+        "economicRankSimulation": 40,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "j_8f": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "j_10a": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "jh_7a": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "jh_7a2": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "j_11a": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "j_11b": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "jh_7a_prototype": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "jf_17": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "su_30mkk": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "f_16a_block_72v_china": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 40,
+        "economicRankHistorical": 40,
+        "economicRankSimulation": 40,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "j_10c": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "j_16": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "j_15t": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "re_2000_heja_2": {
+      "previousBr": "2.3",
+      "ranks": {
+        "economicRankArcade": 5,
+        "economicRankHistorical": 4,
+        "economicRankSimulation": 3
+      }
+    },
+    "he_112b_1_italy": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 3,
+        "economicRankSimulation": 4,
+        "economicRankTankHistorical": 4,
+        "economicRankTankSimulation": 4
+      }
+    },
+    "iar_81c": {
+      "previousBr": "2.7",
+      "ranks": {
+        "economicRankArcade": 6,
+        "economicRankHistorical": 5,
+        "economicRankSimulation": 5,
+        "economicRankTankHistorical": 6,
+        "economicRankTankSimulation": 6
+      }
+    },
+    "iar_81c_db_605": {
+      "previousBr": "3.0",
+      "ranks": {
+        "economicRankArcade": 7,
+        "economicRankHistorical": 7,
+        "economicRankSimulation": 6,
+        "economicRankTankHistorical": 6,
+        "economicRankTankSimulation": 6
+      }
+    },
+    "mb_326k": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 20,
+        "economicRankHistorical": 21,
+        "economicRankSimulation": 18,
+        "economicRankTankHistorical": 20,
+        "economicRankTankSimulation": 20
+      }
+    },
+    "f-104g_italy": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 25,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "f-104s": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 26,
+        "economicRankTankSimulation": 27
+      }
+    },
+    "amx": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "tornado_ids_it_mod95": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "tornado_ids_it_ret8": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 32,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 32,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "mig-21_bis_sau_hungary": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "mig_23mf_hungary": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "f-104s_cb": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 26,
+        "economicRankTankSimulation": 27
+      }
+    },
+    "f_16a_block_15_adf_italy": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "m_346fa": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 36,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "av_8b_plus_italy": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 35,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "saab_jas39c_hungary": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "ef_2000a": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "ef_2000a_aesa": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "br_693_ab2": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 5,
+        "economicRankHistorical": 3,
+        "economicRankSimulation": 2
+      }
+    },
+    "fokker_d23": {
+      "previousBr": "2.7",
+      "ranks": {
+        "economicRankArcade": 6,
+        "economicRankHistorical": 5,
+        "economicRankSimulation": 5,
+        "economicRankTankHistorical": 6,
+        "economicRankTankSimulation": 5
+      }
+    },
+    "yak-3_france": {
+      "previousBr": "4.7",
+      "ranks": {
+        "economicRankArcade": 11,
+        "economicRankHistorical": 11,
+        "economicRankSimulation": 11,
+        "economicRankTankHistorical": 12,
+        "economicRankTankSimulation": 11
+      }
+    },
+    "f-100d_france": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 26,
+        "economicRankTankHistorical": 24,
+        "economicRankTankSimulation": 24
+      }
+    },
+    "so_4050_vautour_2n": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 24,
+        "economicRankTankHistorical": 22,
+        "economicRankTankSimulation": 21,
+        "economicRankShipArcade": 25,
+        "economicRankShipHistorical": 25
+      }
+    },
+    "super_etendard_97": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 30
+      }
+    },
+    "jaguar_a": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "f-104g_belgium": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 25,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "mirage_2000c_s5": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "mirage_2000_5f": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 40,
+        "economicRankSimulation": 40,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "mirage_2000d_r1": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "mirage_2000d_rmv": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "f_16a_block_15_belgium": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "f_16am_block_15_mlu_belgium": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_16a_block_5_netherlands": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "mirage_2000c_s4": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 34,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "f_16am_block_20_mlu_netherlands": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "rafale_c_f3": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "rafale_m_f3r": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "b_239_finland": {
+      "previousBr": "3.0",
+      "ranks": {
+        "economicRankArcade": 5,
+        "economicRankHistorical": 6,
+        "economicRankSimulation": 4,
+        "economicRankTankHistorical": 7,
+        "economicRankTankSimulation": 4
+      }
+    },
+    "fokker_d21_mod20": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 3,
+        "economicRankSimulation": 2,
+        "economicRankTankHistorical": 4,
+        "economicRankTankSimulation": 2
+      }
+    },
+    "vl_myrsky_2_late": {
+      "previousBr": "2.3",
+      "ranks": {
+        "economicRankArcade": 5,
+        "economicRankHistorical": 4,
+        "economicRankSimulation": 4,
+        "economicRankTankHistorical": 5,
+        "economicRankTankSimulation": 4
+      }
+    },
+    "saab_j35a": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 24,
+        "economicRankTankSimulation": 25
+      }
+    },
+    "saab_j35d": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 27
+      }
+    },
+    "saab_j35j": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 27
+      }
+    },
+    "saab_aj37": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 29,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "saab_ajs37": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "mig_21_bis_finland": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 30,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "saab_j35xs": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 27
+      }
+    },
+    "saab_f35_wdns": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "saab_ajs37_early": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "saab_ja37di": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "saab_jas39a": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 36,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 36,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "saab_jas39c": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_16a_block_10_norway": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "f_16am_block_20_mlu_norway": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "fa_18c_finland": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "fa_18c_mlu_2_finland": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "saab_ja37di_f21": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "saab_jas39d": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "saab_jas39e": {
+      "previousBr": "14.3",
+      "ranks": {
+        "economicRankArcade": 41,
+        "economicRankHistorical": 41,
+        "economicRankSimulation": 41,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "spitfire_mk9c_iaf": {
+      "previousBr": "4.7",
+      "ranks": {
+        "economicRankArcade": 10,
+        "economicRankHistorical": 11,
+        "economicRankSimulation": 11,
+        "economicRankTankHistorical": 12,
+        "economicRankTankSimulation": 11
+      }
+    },
+    "a_4e_early_iaf": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 25
+      }
+    },
+    "a_4n": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26,
+        "economicRankTankHistorical": 29,
+        "economicRankTankSimulation": 27
+      }
+    },
+    "a_4e_late_iaf": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 25,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 25
+      }
+    },
+    "f-4e_iaf": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 31,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "nesher": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27,
+        "economicRankTankHistorical": 25,
+        "economicRankTankSimulation": 26
+      }
+    },
+    "a_7e_greece": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 28,
+        "economicRankSimulation": 28,
+        "economicRankTankHistorical": 31,
+        "economicRankTankSimulation": 29
+      }
+    },
+    "kfir_canard": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 31,
+        "economicRankTankHistorical": 27,
+        "economicRankTankSimulation": 28
+      }
+    },
+    "mig_21_2000_iaf": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 33,
+        "economicRankTankHistorical": 32,
+        "economicRankTankSimulation": 31
+      }
+    },
+    "f_16a_block_10_iaf": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "f_16c_block_40_barak_2": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f-4e_kurnass_2000": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 33,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 33,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "f_15a_iaf": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 35,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 33,
+        "economicRankTankSimulation": 32
+      }
+    },
+    "f_15c_baz_msip": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_16d_block_40_barak_2": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_16i_sufa": {
+      "previousBr": "13.7",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 39,
+        "economicRankSimulation": 39,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "f_15i_raam": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 40,
+        "economicRankHistorical": 40,
+        "economicRankSimulation": 40,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "f_4e_aup_greece": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 37,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 37,
+        "economicRankTankHistorical": 37,
+        "economicRankTankSimulation": 34
+      }
+    },
+    "mirage_2000_5eg_mk2_greece": {
+      "previousBr": "14.0",
+      "ranks": {
+        "economicRankArcade": 39,
+        "economicRankHistorical": 40,
+        "economicRankSimulation": 40,
+        "economicRankTankHistorical": 38,
+        "economicRankTankSimulation": 35
+      }
+    },
+    "f_16a_block_10_netz_mod": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 34,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 35,
+        "economicRankTankHistorical": 34,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "kfir_c10_colombia": {
+      "previousBr": "13.3",
+      "ranks": {
+        "economicRankArcade": 38,
+        "economicRankHistorical": 38,
+        "economicRankSimulation": 38,
+        "economicRankTankHistorical": 35,
+        "economicRankTankSimulation": 33
+      }
+    },
+    "rafale_eg_greece": {
+      "previousBr": "14.7",
+      "ranks": {
+        "economicRankArcade": 42,
+        "economicRankHistorical": 42,
+        "economicRankSimulation": 42,
+        "economicRankTankHistorical": 39,
+        "economicRankTankSimulation": 36
+      }
+    },
+    "uh_1b": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 23
+      }
+    },
+    "uh_1c": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 23
+      }
+    },
+    "h_34": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 21,
+        "economicRankHistorical": 23,
+        "economicRankSimulation": 22
+      }
+    },
+    "uh_1c_xm_30": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 23
+      }
+    },
+    "ah_6m": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 27
+      }
+    },
+    "oh_58d": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_64a": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_1f": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "rah_66": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_64a_greece_usa": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_64a_peten": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_56a": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "yah_64": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "mh_60l_dap": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29
+      }
+    },
+    "ah_64d": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 29
+      }
+    },
+    "ah_64e": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 30
+      }
+    },
+    "ah_1z": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 27
+      }
+    },
+    "sa_313b": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 23
+      }
+    },
+    "uh_1d": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 23
+      }
+    },
+    "bo_105cb2": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "mi_24d_german": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 25
+      }
+    },
+    "mi_24p_german": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "bo_105pah1": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "bo_105pah1_a1": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "mi_24p_german_hfs80": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "h145m": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 35
+      }
+    },
+    "tiger_uht": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 29
+      }
+    },
+    "tiger_had_spain": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29
+      }
+    },
+    "mi_8tv": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 23
+      }
+    },
+    "mi_4av": {
+      "previousBr": "8.0",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 22,
+        "economicRankSimulation": 22
+      }
+    },
+    "mi_24a": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "mi_24d": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 25
+      }
+    },
+    "mi_8amtsh": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "mi_24v": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "mi_24p": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "mi_35m": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 28
+      }
+    },
+    "ka_29": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "ka_50": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "mi_8amtsh_vn": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29
+      }
+    },
+    "mi_28n": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29
+      }
+    },
+    "mi_28nm": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 30
+      }
+    },
+    "ka_52": {
+      "previousBr": "12.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 29
+      }
+    },
+    "mi_35p": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 33,
+        "economicRankSimulation": 29
+      }
+    },
+    "scout_ah_mk1": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 23
+      }
+    },
+    "wasp_has_mk1": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 24
+      }
+    },
+    "lynx_ah_mk1": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 27
+      }
+    },
+    "super_hind_mk3": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 28
+      }
+    },
+    "g_lynx": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 27
+      }
+    },
+    "ah_2_rooivalk": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 29
+      }
+    },
+    "ah_mk1": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 29
+      }
+    },
+    "ah_64e_britain": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 30
+      }
+    },
+    "aw_159": {
+      "previousBr": "12.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 35,
+        "economicRankSimulation": 29
+      }
+    },
+    "ah_1s_early": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 25
+      }
+    },
+    "ah_1s_late": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "mi_35p_indonesia": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "ah_1s": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "ah_64d_japan": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_64e_indonesia": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 30
+      }
+    },
+    "ah_64d_lightweight_japan": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "z_11wa": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 23
+      }
+    },
+    "sa_342l_china": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 23
+      }
+    },
+    "z_9w": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 25
+      }
+    },
+    "z_9wa": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 26
+      }
+    },
+    "z_19": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 28
+      }
+    },
+    "oh_58d_china": {
+      "previousBr": "10.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 28
+      }
+    },
+    "mi_35m_pakistan": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 28
+      }
+    },
+    "z_19e": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 28
+      }
+    },
+    "z_10": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 29
+      }
+    },
+    "z_10me": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 30
+      }
+    },
+    "ah_64e_china": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 30
+      }
+    },
+    "z_10a": {
+      "previousBr": "11.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 34,
+        "economicRankSimulation": 29
+      }
+    },
+    "mi_24d_hungary": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 25
+      }
+    },
+    "a_109_eoa2": {
+      "previousBr": "8.7",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 25
+      }
+    },
+    "mi_24v_hungary": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "t_129_atak": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 26
+      }
+    },
+    "mi_24p_hungary": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "a_129_cbt": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 26
+      }
+    },
+    "a_129_d": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 32
+      }
+    },
+    "sa_313b_france": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 23
+      }
+    },
+    "sa_316b": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 24
+      }
+    },
+    "iar_316b": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 25
+      }
+    },
+    "sa_341f": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 26
+      }
+    },
+    "sa_342m": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 25,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "tiger_hap_france": {
+      "previousBr": "10.0",
+      "ranks": {
+        "economicRankArcade": 27,
+        "economicRankHistorical": 29,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_64e_netherlands": {
+      "previousBr": "13.0",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 37,
+        "economicRankSimulation": 30
+      }
+    },
+    "tiger_had_france": {
+      "previousBr": "11.0",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 31,
+        "economicRankSimulation": 29
+      }
+    },
+    "tiger_hac_france": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 32
+      }
+    },
+    "tiger_had_block2_france": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 30,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 32
+      }
+    },
+    "ah_64d_netherlands": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 29
+      }
+    },
+    "hkp2": {
+      "previousBr": "8.3",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 24,
+        "economicRankSimulation": 23
+      }
+    },
+    "hkp9a_cb2": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 26
+      }
+    },
+    "hkp9a_cb3_fc": {
+      "previousBr": "9.3",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 27
+      }
+    },
+    "mi_28a_sweden": {
+      "previousBr": "10.7",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 30,
+        "economicRankSimulation": 27
+      }
+    },
+    "ahs": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "md_500_tow_late": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 23,
+        "economicRankHistorical": 25,
+        "economicRankSimulation": 23
+      }
+    },
+    "ah_1q_iaf": {
+      "previousBr": "9.0",
+      "ranks": {
+        "economicRankArcade": 24,
+        "economicRankHistorical": 26,
+        "economicRankSimulation": 24
+      }
+    },
+    "ah_1f_iaf": {
+      "previousBr": "9.7",
+      "ranks": {
+        "economicRankArcade": 26,
+        "economicRankHistorical": 27,
+        "economicRankSimulation": 26
+      }
+    },
+    "ah_64a_iaf": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_64a_peten_iaf": {
+      "previousBr": "11.3",
+      "ranks": {
+        "economicRankArcade": 28,
+        "economicRankHistorical": 32,
+        "economicRankSimulation": 28
+      }
+    },
+    "ah_64d_i_saraph": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 29
+      }
+    },
+    "ah_60_iaf": {
+      "previousBr": "12.7",
+      "ranks": {
+        "economicRankArcade": 29,
+        "economicRankHistorical": 36,
+        "economicRankSimulation": 29
+      }
+    },
+    "us_destroyer_porter_1941": {
+      "previousBr": "5.3",
+      "ranks": {
+        "economicRankArcade": 12,
+        "economicRankHistorical": 12,
+        "economicRankSimulation": 12
+      }
+    },
+    "us_destroyer_somers": {
+      "previousBr": "5.3",
+      "ranks": {
+        "economicRankArcade": 12,
+        "economicRankHistorical": 12,
+        "economicRankSimulation": 12
+      }
+    },
+    "us_destroyer_porter_1942": {
+      "previousBr": "5.3",
+      "ranks": {
+        "economicRankArcade": 12,
+        "economicRankHistorical": 12,
+        "economicRankSimulation": 12
+      }
+    },
+    "us_destroyer_somers_davis": {
+      "previousBr": "5.3",
+      "ranks": {
+        "economicRankArcade": 12,
+        "economicRankHistorical": 12,
+        "economicRankSimulation": 12
+      }
+    },
+    "us_huckins_78ft_pt262": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 4,
+        "economicRankSimulation": 4
+      }
+    },
+    "us_flagstaff_pgh1": {
+      "previousBr": "2.7",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 4,
+        "economicRankSimulation": 4
+      }
+    },
+    "germ_vs10_hydrofoil": {
+      "previousBr": "2.7",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 4,
+        "economicRankSimulation": 4
+      }
+    },
+    "it_mas441": {
+      "previousBr": "2.0",
+      "ranks": {
+        "economicRankArcade": 4,
+        "economicRankHistorical": 4,
+        "economicRankSimulation": 4
+      }
+    },
+    "it_mc492_baleno": {
+      "previousBr": "3.3",
+      "ranks": {
+        "economicRankArcade": 8,
+        "economicRankHistorical": 8,
+        "economicRankSimulation": 8
+      }
+    }
+  },
+  "groups": {
+    "us_mbt_xm_group": "9.0-9.3",
+    "us_m247_mim72_group": "9.0-9.3",
+    "us_abrams_group": "11.3-11.7",
+    "us_abrams_a2_group": "12.7",
+    "us_sl_amraam_fcs": "12.3",
+    "us_nasams_fcs": "12.7",
+    "germ_marder_bmp_group": "7.7-8.0",
+    "germ_tam_sk_group": "8.7-9.0",
+    "germ_kpz_super_group": "9.3",
+    "germ_wiesel_gepard_group": "9.7",
+    "germ_radpanzer_tam_group": "10.0-10.3",
+    "germ_roland_osa_group": "10.0-10.3",
+    "germ_leopard_2_group": "12.3-12.7",
+    "germ_iris_slm_fcs": "12.7",
+    "ussr_bmp_1_group": "8.0",
+    "ussr_t_55_group": "8.3-8.7",
+    "ussr_t_64_t_80_group": "10.3-10.7",
+    "ussr_9a33_35_group": "10.3",
+    "uk_vickers_olifant_group": "8.3",
+    "uk_fv510_zt3_group": "8.3",
+    "uk_marksman_za_group": "8.3-8.7",
+    "uk_vickers_rooikat_group": "8.7",
+    "uk_vfm_mttd_group": "9.3",
+    "uk_challenger_group": "10.3-10.7",
+    "uk_challenger_2_group": "11.7",
+    "uk_stormer_9a33_group": "10.0-10.3",
+    "uk_stormer_9a35_group": "10.3",
+    "uk_challenger_bn_e_group": "12.7",
+    "uk_sky_sabre_fcs": "12.7",
+    "jp_type_74_stb_group": "8.3",
+    "jp_type_87_89_group": "9.0",
+    "jp_type_90_group": "11.7",
+    "jp_type_10_group": "12.7",
+    "cn_zts_type_group": "7.7-8.0",
+    "cn_type_59_69_group": "8.0",
+    "cn_ptl_aft_group": "9.0",
+    "cn_tor_hq_group": "11.3-11.7",
+    "it_centauro_105_group": "9.3-9.7",
+    "it_ariete_group": "11.7",
+    "it_9a33_35_group": "10.3",
+    "it_samp_t_fcs": "12.7",
+    "fr_mars_hot_group": "8.3",
+    "fr_amx_sk_group": "8.3-8.7",
+    "fr_leclerc_group": "12.7",
+    "fr_samp_t_fcs": "12.7",
+    "sw_strv_101_103a_group": "8.0",
+    "sw_cv_90_ifv_group": "9.3-9.7",
+    "sw_lvkv_asrad_group": "10.3",
+    "sw_strv_122_group": "12.7",
+    "sw_eldenhet_nomads_group": "12.0",
+    "sw_nasams_fcs": "12.7",
+    "il_magach_6_group": "8.7",
+    "il_merkava_1_2_group": "9.7",
+    "il_merkava_3_group": "11.3",
+    "il_namer_group": "11.3",
+    "il_merkava_4_group": "12.3",
+    "f-104_group": "9.3-9.7",
+    "a_7_group": "10.3",
+    "f_16_group": "12.3-13.3",
+    "f_18_group": "12.3-14.0",
+    "f_14_group": "12.7-13.0",
+    "he_112_group": "1.3-2.0",
+    "bf-109f_early_group": "2.7-3.0",
+    "bf_110g_group": "3.7",
+    "do_335_group": "4.3-4.7",
+    "mig_21_germany_group": "10.3-11.0",
+    "il-2i_group": "2.7-3.0",
+    "yak-3_group": "4.7",
+    "yak-9up_group": "5.0",
+    "yak-3up_group": "5.7",
+    "yak-15_group": "6.3-6.7",
+    "mig-21_group": "10.3-11.0",
+    "mig-23m_group": "11.0-11.7",
+    "mig_27_group": "11.0",
+    "spitfire_mk5c_group": "4.7-5.0",
+    "spitfire_mk9e_group": "5.7-6.0",
+    "spitfire_griffon_group": "6.7",
+    "seafire_group": "5.3-5.7",
+    "hawk_200_group": "10.7-11.3",
+    "f_111c_tornado_group": "11.3-11.7",
+    "fa_18a_raaf_group": "12.3-14.0",
+    "a6m3_mod22_group": "4.3-5.0",
+    "n1k2_group": "5.7-6.0",
+    "f_15j_group": "12.7-13.7",
+    "f_5_f_16_thailand_group": "13.0-13.7",
+    "f_5a_china_group": "10.7-11.0",
+    "j_11_group": "13.0-13.3",
+    "tornado_ids_it_group": "11.3-11.7",
+    "mig-21_hungary_group": "10.3-11.0",
+    "saab_j35_group": "10.0-10.3",
+    "saab_ja37d_group": "12.0-13.0",
+    "saab_jas39_group": "13.0-13.7",
+    "a_4_iaf_group": "8.3-8.7",
+    "f_4e_f_15_iaf_group": "12.3-12.7",
+    "f_16d_iaf_group": "13.3-13.7",
+    "tiger_group": "11.0-12.7"
+  },
+  "trees": {
+    "database/usa/usa_ground.json": "ed83b06323a6ac38df0ca3e195aebd1f83db8ee5c93bc56477df93bc587756ee",
+    "database/germany/germany_ground.json": "2ca06d0357e4f4ef20f012f974dc4971beca61d8c903e531529967f74f506855",
+    "database/ussr/ussr_ground.json": "2a2fe13a3670ca7f28f4f3d8a0f6c05c53586085db33390067f59fe1c3c9ac37",
+    "database/britain/britain_ground.json": "1ca8aa8536c7ed8bd319a0c01048f044861c0ff06c1d4fb7e5e3e96f77e865f9",
+    "database/japan/japan_ground.json": "0d3058a06914ebbffd9c2d364f1449c45dd901472a8a24be71ce042e0e68c35a",
+    "database/china/china_ground.json": "4dcea28a97caf40e6c7e59e007448ac5efed6f1970c9e0272b19a31f712ba22b",
+    "database/italy/italy_ground.json": "22bc5c164b62e9bbcea51ea0c27a2974fa829b05dd757f261cfeead7ba98c8eb",
+    "database/france/france_ground.json": "522b4aac7a39301205f165bc56b4d583befc40181532cc43fe1e2fa9931524f8",
+    "database/sweden/sweden_ground.json": "16a631f2e75d4625a3c91699be7e9a1e4ebc1f53001b920d2a8b2c7f0762c78b",
+    "database/israel/israel_ground.json": "d7f89d91215c91897549c868c8626c5acfb6ec03bd79ce23979449fda5fd625d",
+    "database/usa/usa_aviation.json": "0860913faeb8f21bd654eb055ff029cdf0825c19dae50de4a13c672f96de8b1e",
+    "database/germany/germany_aviation.json": "116a34b41abb50588c2dd708dc31dc3e1c8692dda519864243807c5502380560",
+    "database/ussr/ussr_aviation.json": "ab9c15919d6c5dca298e91555e1a51272e65b1a7314767a47dc872111d407260",
+    "database/britain/britain_aviation.json": "eb6fcfdb483ea90517e44d104b9ecb9ebccd6d97163356e0c1baa5d996182694",
+    "database/japan/japan_aviation.json": "3305c59a7aa889b407b0f5b46b4a8bef6ce6ba3e2117d20b218c8a1b18ae2862",
+    "database/china/china_aviation.json": "25b4199d846259601372a549ef9bd39b777a7919c40677251544f603f34387f8",
+    "database/italy/italy_aviation.json": "c5ad79802a63fb63664fe79b7a4d91d61559c3c22ee249f4b07fd5ad0c3a31cb",
+    "database/france/france_aviation.json": "1bcec043b5ef0e5835f920bd8b4d04d4c55aee050f6722240cb349b5887a8b60",
+    "database/sweden/sweden_aviation.json": "ae89d28e4c2f8a68dea85221d6e408fcc2a4ec74f3211771b58f404e2d5d30e7",
+    "database/israel/israel_aviation.json": "799a63c60a45b1112c04fc94cdb1bbd0b4b25cd69c249791ca09026bbde9e934",
+    "database/usa/usa_helicopters.json": "e4cd142bf731fd02a82c4db0b9792cf87365dc2180cfd47c306e22378b549b58",
+    "database/germany/germany_helicopters.json": "0372345309c786f1ae750635526e743861c99253f14f6889f2b20d56cf0390be",
+    "database/ussr/ussr_helicopters.json": "467ee1169eed717eacea62991f9c0274bbcc41636b2cb547116d6e41e9b0f60c",
+    "database/britain/britain_helicopters.json": "4c57b9f1fc52150f503da5932fcfb6a4fe11b5ca686725cdc1f97ccc2d3b67a0",
+    "database/japan/japan_helicopters.json": "328266a4969139cfcd12cbe705de7679546a16f869595c7bcaa2f959a8047253",
+    "database/china/china_helicopters.json": "8b06346e04040ec83ff28b1616b42ec8f425c084de9ed681cb0ac57062f357b9",
+    "database/italy/italy_helicopters.json": "f2390249f90edea529825e4f5c1486731840dec59939aa547f2650d618cdbe4e",
+    "database/france/france_helicopters.json": "b80798bf46667ecb1cc97d32c7a2c555c7ab395e539944ea4cc0766d5d5d3d9b",
+    "database/sweden/sweden_helicopters.json": "5dff62bd651c0c2ece9c20a0dfb3b33234c5efa28f3223ee2051b484436dd086",
+    "database/israel/israel_helicopters.json": "24e1e4594541bc2250ad1d4610d9a06f0c4842f2d4d9a9978885f7e96db36fdb",
+    "database/usa/usa_ships.json": "ecf5f4b75cb43139eb569f637917ecbd597cd4798b5d17ffcb9912daa85e76a7",
+    "database/usa/usa_boats.json": "ec4b2d29362c554408b9db9f04fd45efa7e96c5e6055413854d24c604fe915cc",
+    "database/germany/germany_boats.json": "aad179d88289bed7d7bd103593789eb91237072af644c9111e024e6ce52044c9",
+    "database/italy/italy_boats.json": "b550f22140c6628f1a34d3e41f8102d9ac9ca59f3ef9ba457cce94a878979336"
+  }
+}

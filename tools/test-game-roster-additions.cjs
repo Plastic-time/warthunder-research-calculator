@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const { makeUnit, battleRating, verifySources } = require('./apply-game-roster-additions.cjs');
+const { restoreTree } = require('./apply-battle-ratings.cjs');
 const { wikiUnits, premiumAcquisition } = require('./audit-datamine-roster.cjs');
 const additions = require('../config/game-roster-additions.json');
 const root = path.resolve(__dirname, '..');
@@ -22,7 +23,7 @@ test('game-only additions use pinned evidence and explicit reward availability, 
     const file = 'database/' + c.country + '/' + c.country + '_' + c.type + '.json';
     const tree = read('docs/' + file);
     assert.deepEqual(tree, read(file));
-    assert.deepEqual(wikiUnits(tree).get(c.id), expected);
+    assert.deepEqual(wikiUnits(restoreTree(tree)).get(c.id), expected);
     assert(!Object.hasOwn(expected, 'wiki'), 'Do not fabricate Wiki provenance');
     assert.equal(expected.game_source.cost_policy, 'reward-excluded-from-ordinary-research');
     assert.equal(expected.rp, 0); assert.equal(expected.sp, 0);
@@ -39,7 +40,7 @@ test('game-only additions use pinned evidence and explicit reward availability, 
     const raw = fs.readFileSync(path.join(root, 'docs', file));
     const manifestEntry = read('docs/database/manifest.json').files.find(e => e.path === file);
     assert.equal(manifestEntry.sha256, crypto.createHash('sha256').update(raw).digest('hex'));
-    const previous = structuredClone(tree);
+    const previous = restoreTree(tree);
     for (const rank of previous) rank.premium_vehicles = rank.premium_vehicles.filter(column => !column.some(u => u.data_unit_id === c.id));
     assert.equal(crypto.createHash('sha256').update(JSON.stringify(previous, null, 2) + '\n').digest('hex'),
       read('docs/roster-audit.json').trees[c.country + '/' + c.type].wikiSha256, 'All previous vehicle fields and placement must remain unchanged');

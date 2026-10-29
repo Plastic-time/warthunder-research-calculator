@@ -7,7 +7,7 @@
           "type": "single",
           "title": "Z-11WA",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/z_11wa.png",
-          "br": "9.0",
+          "br": "9.7",
           "rp": 0,
           "sp": 390000,
           "data_unit_id": "z_11wa",
@@ -44,6 +44,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:05.201Z",
             "sha256": "4bc0969fca7f508e1965b1230bd82a130739bae3e786d2285d08ccbf28abb799"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.7",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ],
@@ -52,7 +62,7 @@
           "type": "single",
           "title": "SA.342L Gazelle",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sa_342l_china.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "sa_342l_china",
@@ -89,6 +99,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:04.903Z",
             "sha256": "9ef24258c3dcd284a112aa2f38c48c3a4bca3e0b91a41c0f829e274594d27947"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.7",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ]
@@ -108,7 +128,7 @@
           "type": "single",
           "title": "Z-9W",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/z_9w.png",
-          "br": "10.3",
+          "br": "10.7",
           "rp": 360000,
           "sp": 980000,
           "data_unit_id": "z_9w",
@@ -145,13 +165,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:05.331Z",
             "sha256": "89cfafc763eb4f342e878d2b5eacfe06a0eeb02959d8068ebf21c9fa6d4cd6c9"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.3",
+                "RB": "10.7",
+                "SB": "9.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Z-9WA",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/z_9wa.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "z_9wa",
@@ -188,13 +218,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:05.583Z",
             "sha256": "395f110f535cabca8417d204edd515462214f5b4162abf699731c34b275e961a"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "11.3",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Z-19",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/z_19.png",
-          "br": "11.7",
+          "br": "12.3",
           "rp": 390000,
           "sp": 1010000,
           "data_unit_id": "z_19",
@@ -231,6 +271,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:05.458Z",
             "sha256": "6c373f35c07c51706e89e3764218ba744e6ca4fadee5367c19c3541540f536ef"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "12.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -239,7 +289,7 @@
           "type": "single",
           "title": "␗OH-58D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/oh_58d_china.png",
-          "br": "10.3",
+          "br": "11.0",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "oh_58d_china",
@@ -276,6 +326,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:04.731Z",
             "sha256": "d395150ba206f5292be113c1f6f109f25f1bb30c473f29ff88f0e60a19303fc8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "11.0",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
@@ -329,7 +389,7 @@
           "type": "single",
           "title": "▄Mi-35M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_35m_pakistan.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "mi_35m_pakistan",
@@ -366,13 +426,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:04.535Z",
             "sha256": "b8649faa6228ed36e866bbe2a1bff97ccebb435b40bf96994b9e7fe54a31834e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "11.0",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Z-19E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/z_19e.png",
-          "br": "11.7",
+          "br": "12.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "z_19e",
@@ -409,6 +479,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:05.403Z",
             "sha256": "716a2e0d122fdc51218ffa027fe46edba6856ce9e1274a9c2294d068d4f241f8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "12.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ]
@@ -425,7 +505,7 @@
           "type": "single",
           "title": "Z-10",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/z_10.png",
-          "br": "11.7",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "z_10",
@@ -462,13 +542,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:04.933Z",
             "sha256": "67ca9b661f0442a27e40aea06457a539cd617b68fcf9ba173a7d97d859434860"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "12.3",
+                "SB": "10.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Z-10ME",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/z_10me.png",
-          "br": "13.0",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1030000,
           "data_unit_id": "z_10me",
@@ -505,6 +595,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:05.026Z",
             "sha256": "a3be051927bb320541e9a00c20714d99a26ec925c5927e7390f543d65bcaf1eb"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "13.3",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -513,7 +613,7 @@
           "type": "single",
           "title": "␗AH-64E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64e_china.png",
-          "br": "13.0",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1030000,
           "data_unit_id": "ah_64e_china",
@@ -550,6 +650,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:04.499Z",
             "sha256": "6eef82cae42a0d315910d5658b27dbb7ae6d43952008fa89ddf0e677026aa180"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "13.3",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ]
@@ -560,7 +670,7 @@
           "type": "single",
           "title": "Z-10A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/z_10a.png",
-          "br": "11.7",
+          "br": "12.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "z_10a",
@@ -597,6 +707,16 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:32:05.066Z",
             "sha256": "6ebd4dd9367c3a560756a057434c65254aa6fee2a983640e5f4d6746fcd6cab8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "12.3",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ]

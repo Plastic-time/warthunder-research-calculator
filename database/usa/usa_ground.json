@@ -4511,7 +4511,7 @@
           "type": "single",
           "title": "T58",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_t58.png",
-          "br": "8.7",
+          "br": "9.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_t58",
@@ -4548,6 +4548,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:46.031Z",
             "sha256": "d0c97b67f0f997e536bbe6f0eb5bb1a3974b3602c2b2740b3345a836b1e25a74"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "9.0"
+              }
+            }
           }
         }
       ]
@@ -4564,7 +4574,7 @@
           "type": "single",
           "title": "XM800T",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_xm_800t.png",
-          "br": "8.7",
+          "br": "9.0",
           "rp": 135000,
           "sp": 380000,
           "data_unit_id": "us_xm_800t",
@@ -4601,13 +4611,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:47.089Z",
             "sha256": "5995a1ec7cfb57f2b40b1944a65e6ca398ad7b9fefc377d865b3d3dc7728aadf"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.0",
+                "SB": "9.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Stingray",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_stingray.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 190000,
           "sp": 520000,
           "data_unit_id": "us_stingray",
@@ -4644,6 +4664,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:44.195Z",
             "sha256": "a41321cefaf0afb51f82f0167aa4d29045403b091fcc20dc7cc58f147f301d5b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
@@ -4885,7 +4915,7 @@
           "title": "MBT/XM",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_mbt_xm_group.png",
           "selected": false,
-          "br": "9.0-9.3",
+          "br": "9.0-9.7",
           "data_unit_id": "us_mbt_xm_group",
           "required_unit_id": "us_t95e1",
           "class_name": "",
@@ -4937,7 +4967,7 @@
               "type": "single",
               "title": "MBT-70",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_mbt_70.png",
-              "br": "9.3",
+              "br": "9.7",
               "rp": 110000,
               "sp": 620000,
               "data_unit_id": "us_mbt_70",
@@ -4974,6 +5004,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:42.700Z",
                 "sha256": "e07e4b4b99cf5fbbad2b4fe9382dec7ea34e80444339ec3bbc034a651908c50c"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.7",
+                    "RB": "9.7",
+                    "SB": "9.7"
+                  }
+                }
               }
             }
           ],
@@ -4987,7 +5027,7 @@
           "type": "single",
           "title": "XM246",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_xm246.png",
-          "br": "8.7",
+          "br": "9.0",
           "rp": 135000,
           "sp": 380000,
           "data_unit_id": "us_xm246",
@@ -5024,6 +5064,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:46.816Z",
             "sha256": "c6680ca64939fbcc9b2c8625ae880e9baf16eba465ecaffd499f9042971b09bf"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "9.0"
+              }
+            }
           }
         },
         {
@@ -5031,7 +5081,7 @@
           "title": "M247/Chaparral",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m247_mim72_group.png",
           "selected": false,
-          "br": "9.0-9.3",
+          "br": "9.0-10.0",
           "data_unit_id": "us_m247_mim72_group",
           "required_unit_id": "us_xm246",
           "class_name": "",
@@ -5040,7 +5090,7 @@
               "type": "single",
               "title": "M247",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m247.png",
-              "br": "9.3",
+              "br": "10.0",
               "rp": 190000,
               "sp": 520000,
               "data_unit_id": "us_m247",
@@ -5077,6 +5127,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:36.288Z",
                 "sha256": "0b77c45b84a488a5f569f106682cac5a3818f7131a11549846faa48f9c24c382"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.0",
+                    "RB": "10.0",
+                    "SB": "10.0"
+                  }
+                }
               }
             },
             {
@@ -5309,7 +5369,7 @@
           "type": "single",
           "title": "XM1 (Chrysler)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_xm1_chrysler.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_xm1_chrysler",
@@ -5346,13 +5406,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:46.714Z",
             "sha256": "d75c5113f8d601cd32508021e78067efdbd6df8754275820c0fbd34c33e6a505"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "XM1 (GM)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_xm1_gm.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_xm1_gm",
@@ -5389,6 +5459,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:46.634Z",
             "sha256": "339a91070c5f56a3a0693306d08c0b2fdcb1fa0167accbaff00aa8e6dd0c6bc1"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -5440,7 +5520,7 @@
           "type": "single",
           "title": "▃Merkava Mk.1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_merkava_mk_1.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": null,
           "sp": null,
           "data_unit_id": "us_merkava_mk_1",
@@ -5477,13 +5557,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:42.818Z",
             "sha256": "be5e4726ce32ca16bc1b120d4f59ae95717ec4483633f0b9f67e5677cb18e58b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "▃Merkava Mk.2B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_merkava_mk_2b_late.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": null,
           "sp": null,
           "data_unit_id": "us_merkava_mk_2b_late",
@@ -5520,13 +5610,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:42.908Z",
             "sha256": "976bbd1015cb41d21f3033d9ea32d26673d7cc2457fa00e117c6f323369b2439"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "XM8",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_xm_8.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": null,
           "sp": null,
           "data_unit_id": "us_xm_8",
@@ -5563,6 +5663,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:46.970Z",
             "sha256": "112b6de6fb7e5c5432ad8f94f1efe2fbfa0a56f77ea96877896eab27eeaa7014"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ]
@@ -5622,7 +5732,7 @@
           "type": "single",
           "title": "M10 Booker",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m10_booker_late.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "us_m10_booker_late",
@@ -5659,13 +5769,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:33.847Z",
             "sha256": "811a4586bf2ed9c9be447b8bdb8475681aaa5c33ecd0d89e9c040ae65ea9f9c8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "HSTV-L",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_hstv_l.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "us_hstv_l",
@@ -5702,6 +5822,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:32.816Z",
             "sha256": "3bc6728c4c0d3c539ca7698691341845b2c871a9ce6ca977e3f1d95edd238e2e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
@@ -5753,7 +5883,7 @@
           "type": "single",
           "title": "M1A1 HC",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a1_hc_abrams.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "us_m1a1_hc_abrams",
@@ -5790,6 +5920,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:35.401Z",
             "sha256": "f714e4835ad7819be20a04eff01dd31cb97f717563f3cf7a51b0ec66d7c38387"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
@@ -5798,7 +5938,7 @@
           "type": "single",
           "title": "M1 Abrams",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1_abrams.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "us_m1_abrams",
@@ -5835,6 +5975,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:35.005Z",
             "sha256": "63159d7934355eef704d4fe9038deea44f63d683f3795175e91cf21422565168"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         },
         {
@@ -5842,7 +5992,7 @@
           "title": "M1A1/IPM1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_abrams_group.png",
           "selected": false,
-          "br": "11.3-11.7",
+          "br": "11.7-12.0",
           "data_unit_id": "us_abrams_group",
           "required_unit_id": "us_m1_abrams",
           "class_name": "",
@@ -5851,7 +6001,7 @@
               "type": "single",
               "title": "M1A1",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a1_abrams.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 300000,
               "sp": 830000,
               "data_unit_id": "us_m1a1_abrams",
@@ -5888,13 +6038,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:35.088Z",
                 "sha256": "7062aed5fae0ca433865bf993f1223ce78c80a9c9cc9d2877a1f7c41b8fee73e"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "IPM1",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1_ip_abrams.png",
-              "br": "11.3",
+              "br": "11.7",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "us_m1_ip_abrams",
@@ -5931,6 +6091,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:34.929Z",
                 "sha256": "f4c1b6eac47d1aefe9d37a486077b995feade905376e3654afa8be488a6f9500"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.7",
+                    "RB": "11.7",
+                    "SB": "11.7"
+                  }
+                }
               }
             }
           ],
@@ -5942,7 +6112,7 @@
           "type": "single",
           "title": "M1A2 Abrams",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a2_abrams.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "us_m1a2_abrams",
@@ -5979,6 +6149,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:35.894Z",
             "sha256": "6cda6f23a1bee4a5d56e205ed184d57a1aa09fe2140c7c4933a5a1220af7e092"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
@@ -6030,7 +6210,7 @@
           "type": "single",
           "title": "XM975",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_xm_975_roland.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "us_xm_975_roland",
@@ -6067,6 +6247,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:47.269Z",
             "sha256": "500996505ff7adbca5aff51e0b367da429ecbb86b24afc83e3a436e9ccbf6426"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -6165,7 +6355,7 @@
           "type": "single",
           "title": "M1 KVT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1_abrams_kvt.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_m1_abrams_kvt",
@@ -6202,13 +6392,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:35.095Z",
             "sha256": "341b3f089851aceda362b10b51b9ff13b4c91ba3283ba0cea1d08bd88909ed99"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "␙M1A1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a1_abrams_yt_cup_2019.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": null,
           "sp": null,
           "data_unit_id": "us_m1a1_abrams_yt_cup_2019",
@@ -6245,13 +6445,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:35.189Z",
             "sha256": "210dc7697864c1d7d85cf3202b49a98bea44167f0cd283645c4dc07fb8ed0670"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "M1A1 SA",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a1_aim_abrams.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_m1a1_aim_abrams",
@@ -6288,13 +6498,23 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:27:35.315Z",
             "sha256": "d4fa4a93961c20d852551732f44fefa21739fb02fc759ff0e508021bae37d6f2"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "M1A1 Click-Bait",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a1_hc_usmc.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_m1a1_hc_usmc",
@@ -6331,13 +6551,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:35.680Z",
             "sha256": "432aa3570bc3a372f5997cd7a91c5bee1a0e9efc6c1144c793c8a92c8f078ca1"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◍M1A1 HC",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a1_hc_usmc_sm.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_m1a1_hc_usmc_sm",
@@ -6374,13 +6604,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:35.718Z",
             "sha256": "9af372baad1bc397bae4ea5b111e0f09733d50a74559ec4badd5cfc9efaf9c59"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "RDF/LT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_rdf_lt.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_rdf_lt",
@@ -6417,6 +6657,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:43.747Z",
             "sha256": "845549f33c913242a546b2c6befce9951b5749942b3fa6210f5806907769fec8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
@@ -6425,7 +6675,7 @@
           "type": "single",
           "title": "CCVL",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_ccvl.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": null,
           "sp": null,
           "data_unit_id": "us_ccvl",
@@ -6462,13 +6712,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:32.104Z",
             "sha256": "8776b249c41852d2f095fa5f3176390323039a6f0dbe05fb43d6da8a3c023db7"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "M60 AMBT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m60a3_slep.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": null,
           "sp": null,
           "data_unit_id": "us_m60a3_slep",
@@ -6505,6 +6765,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:41.563Z",
             "sha256": "cd730e3e720496cc80f5d4b4261daaec6bcf862126d9ddbcbe47f315de634d13"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
@@ -6554,7 +6824,7 @@
           "type": "single",
           "title": "AGS",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_ags_teledyne.png",
-          "br": "12.0",
+          "br": "12.7",
           "rp": null,
           "sp": null,
           "data_unit_id": "us_ags_teledyne",
@@ -6591,13 +6861,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:32.161Z",
             "sha256": "c1cd20618783bb5d9eaff9f0a14514564bb3558e947e616ade050d6718dd886b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "▃Merkava Mk.3D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_merkava_mk_3d.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": null,
           "sp": null,
           "data_unit_id": "us_merkava_mk_3d",
@@ -6634,6 +6914,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:42.949Z",
             "sha256": "7fb7fb0a06a7a299c9d44f4f8a5d780182bc78e62c6c401a5679f712977f7a25"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.7",
+                "RB": "11.7",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ]
@@ -6653,7 +6943,7 @@
           "title": "M1 A2/A2 SEP",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_abrams_a2_group.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.3",
           "data_unit_id": "us_abrams_a2_group",
           "required_unit_id": "us_m1a2_abrams",
           "class_name": "",
@@ -6662,7 +6952,7 @@
               "type": "single",
               "title": "M1A2 SEP",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a2_sep_abrams.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 400000,
               "sp": 1080000,
               "data_unit_id": "us_m1a2_sep_abrams",
@@ -6699,13 +6989,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:36.387Z",
                 "sha256": "cc14242be1c55da884ecd7084c8b685feb4e713ea5fc9091dff630397fe80cbd"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "M1A2 SEPv2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a2_sep2_abrams.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 200000,
               "sp": 1100000,
               "data_unit_id": "us_m1a2_sep2_abrams",
@@ -6742,6 +7042,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:35.863Z",
                 "sha256": "7770ee4de2cbaa53479a2a14320e12f8ac881347a62c5293b2cc59aa80f09817"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             }
           ],
@@ -6753,7 +7063,7 @@
           "type": "single",
           "title": "M1A2 (Trophy-HV)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a2_sep2_abrams_trophy.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "us_m1a2_sep2_abrams_trophy",
@@ -6790,13 +7100,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:35.975Z",
             "sha256": "dfd87bb41bc199dd79e46fe27fc9216ccf753d242e513dab1fc8701e8cd4c8ae"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "M1A2 SEPv3",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m1a2_sep3_abrams.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "us_m1a2_sep3_abrams",
@@ -6833,6 +7153,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:36.133Z",
             "sha256": "40c4f7ca38389d2181e7433545fd422ee923e2d9bd2ee8f93fe7a845aa57b5d5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -6841,7 +7171,7 @@
           "type": "single",
           "title": "ADATS",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_adats_bradley.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "us_adats_bradley",
@@ -6878,6 +7208,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:32.236Z",
             "sha256": "b5614717076bccf81ab5e89f7f87b03152056ca8eb8cb7dd5a094860d5cc87c5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
@@ -6885,7 +7225,7 @@
           "title": "CLAWS",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_sl_amraam_fcs.png",
           "selected": false,
-          "br": "12.3",
+          "br": "12.7",
           "data_unit_id": "us_sl_amraam_fcs",
           "required_unit_id": "us_adats_bradley",
           "class_name": "",
@@ -6894,7 +7234,7 @@
               "type": "single",
               "title": "CLAWS (TADS)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_sl_amraam_fcs.png",
-              "br": "12.3",
+              "br": "12.7",
               "rp": 410000,
               "sp": 1100000,
               "data_unit_id": "us_sl_amraam_fcs",
@@ -6931,13 +7271,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:43.738Z",
                 "sha256": "39e9c6f71287ede929d5ad830a36e80560aff025f751c71f02ee32b2795e1144"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.7",
+                    "RB": "12.7",
+                    "SB": "12.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "CLAWS (TEL)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_sl_amraam_launcher.png",
-              "br": null,
+              "br": "12.7",
               "rp": 0,
               "sp": 0,
               "data_unit_id": "us_sl_amraam_launcher",
@@ -6964,6 +7314,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:43.962Z",
                 "sha256": "a607bfb9eca57c00c0fb96c9de52ee39da8eeef3887e29967771e941b76ffea3"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.7",
+                    "RB": "12.7",
+                    "SB": "12.7"
+                  }
+                }
               }
             }
           ],
@@ -6976,7 +7336,7 @@
           "title": "NASAMS 3",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_nasams_fcs.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.0",
           "data_unit_id": "us_nasams_fcs",
           "required_unit_id": "us_sl_amraam_fcs",
           "class_name": "",
@@ -6985,7 +7345,7 @@
               "type": "single",
               "title": "NASAMS 3 (TADS)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_nasams_fcs.png",
-              "br": "12.7",
+              "br": "13.0",
               "rp": 420000,
               "sp": 1120000,
               "data_unit_id": "us_nasams_fcs",
@@ -7022,13 +7382,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:43.357Z",
                 "sha256": "527f0392eb74f5b545b72d53ba8541b72c0704fa84de0329476addce86a51338"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "NASAMS 3 (TEL)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_nasams_launcher.png",
-              "br": null,
+              "br": "13.0",
               "rp": 0,
               "sp": 0,
               "data_unit_id": "us_nasams_launcher",
@@ -7055,6 +7425,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:43.337Z",
                 "sha256": "2bcf8c0b270cbf65ae6bb2ea6538a31838ab3ebdf2cb8b0fc424b43e1185d97e"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             }
           ],

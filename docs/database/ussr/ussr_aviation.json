@@ -2412,7 +2412,7 @@
           "title": "IL-2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il-2m_group.png",
           "selected": false,
-          "br": "2.7-3.0",
+          "br": "2.3-3.0",
           "data_unit_id": "il-2i_group",
           "required_unit_id": "il_2_1941",
           "class_name": "",
@@ -2464,7 +2464,7 @@
               "type": "single",
               "title": "IL-2-37",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_2_37_1943.png",
-              "br": "2.7",
+              "br": "2.3",
               "rp": 5600,
               "sp": 22000,
               "data_unit_id": "il_2_37_1943",
@@ -2501,6 +2501,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:25.275Z",
                 "sha256": "18259671777624dea248be898fada095570c06c09f80795db614e1a4d089cb2a"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "3.0",
+                    "RB": "2.3",
+                    "SB": "3.7"
+                  },
+                  "tank": {
+                    "AB": "3.0",
+                    "RB": "2.7",
+                    "SB": "3.7"
+                  },
+                  "ship": {
+                    "AB": "3.0",
+                    "RB": "2.3",
+                    "SB": "3.7"
+                  }
+                }
               }
             }
           ],
@@ -2982,6 +3002,26 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:22.405Z",
             "sha256": "c1fcf38842a45d46449c458cfd68c501d6bb98870a86e933b867564366a14f2d"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "3.7",
+                "RB": "3.0",
+                "SB": "3.0"
+              },
+              "tank": {
+                "AB": "3.7",
+                "RB": "3.0",
+                "SB": "3.0"
+              },
+              "ship": {
+                "AB": "3.7",
+                "RB": "3.0",
+                "SB": "3.0"
+              }
+            }
           }
         },
         {
@@ -3555,6 +3595,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:38.646Z",
                 "sha256": "b647e8e442125f5e36c2bed00f0f52113ff9eba49c6c693be937fc5c59bdf6cc"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "4.7",
+                    "RB": "4.7",
+                    "SB": "4.7"
+                  },
+                  "tank": {
+                    "AB": "4.7",
+                    "RB": "5.0",
+                    "SB": "4.7"
+                  },
+                  "ship": {
+                    "AB": "4.7",
+                    "RB": "4.7",
+                    "SB": "4.7"
+                  }
+                }
               }
             },
             {
@@ -4613,6 +4673,26 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:38.951Z",
             "sha256": "e63d42aaa1841346aca23af53be6dcd2197bb172fae2d4ee98212c9342a89c17"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "4.7",
+                "RB": "4.3",
+                "SB": "4.3"
+              },
+              "tank": {
+                "AB": "4.7",
+                "RB": "5.0",
+                "SB": "4.7"
+              },
+              "ship": {
+                "AB": "4.7",
+                "RB": "4.3",
+                "SB": "4.3"
+              }
+            }
           }
         }
       ],
@@ -4883,6 +4963,26 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:25.634Z",
             "sha256": "7b6cf5aacfb02749cf03fc1d40c81e3f6e905f8c7a0759e99f5e0119f9db6090"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "5.0",
+                "RB": "4.3",
+                "SB": "3.3"
+              },
+              "tank": {
+                "AB": "5.0",
+                "RB": "4.7",
+                "SB": "3.3"
+              },
+              "ship": {
+                "AB": "5.0",
+                "RB": "4.3",
+                "SB": "3.3"
+              }
+            }
           }
         },
         {
@@ -4999,6 +5099,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:39.091Z",
                 "sha256": "8332db6ed7b8507b6917f568fc9788b6460c778918cc1d021da29c34da1919dd"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "5.3",
+                    "RB": "5.0",
+                    "SB": "5.7"
+                  },
+                  "tank": {
+                    "AB": "5.3",
+                    "RB": "5.7",
+                    "SB": "5.7"
+                  },
+                  "ship": {
+                    "AB": "5.3",
+                    "RB": "5.0",
+                    "SB": "5.7"
+                  }
+                }
               }
             },
             {
@@ -5120,6 +5240,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:39.447Z",
                 "sha256": "7c5022a83353d6a4f1a267f46bf835ba9cd515b83e8aac33f2dfbe368676b95c"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "5.7",
+                    "RB": "5.7",
+                    "SB": "6.0"
+                  },
+                  "tank": {
+                    "AB": "5.7",
+                    "RB": "6.7",
+                    "SB": "6.0"
+                  },
+                  "ship": {
+                    "AB": "5.7",
+                    "RB": "5.7",
+                    "SB": "6.0"
+                  }
+                }
               }
             },
             {
@@ -5173,6 +5313,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:40.424Z",
                 "sha256": "0cda4421700f58a2b4f46607c68d7145ae304ee68121cf1cabf3d3a8f69968e4"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "6.0",
+                    "RB": "5.7",
+                    "SB": "6.3"
+                  },
+                  "tank": {
+                    "AB": "6.0",
+                    "RB": "7.0",
+                    "SB": "6.7"
+                  },
+                  "ship": {
+                    "AB": "6.0",
+                    "RB": "5.7",
+                    "SB": "6.3"
+                  }
+                }
               }
             }
           ],
@@ -6223,6 +6383,26 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:39.283Z",
             "sha256": "c95bcfc57d7df44897b63297e88b7c1ef1e54a103ac9bdd19898961cad58ab57"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "5.3",
+                "RB": "5.0",
+                "SB": "5.7"
+              },
+              "tank": {
+                "AB": "5.3",
+                "RB": "5.7",
+                "SB": "5.3"
+              },
+              "ship": {
+                "AB": "5.3",
+                "RB": "5.0",
+                "SB": "5.7"
+              }
+            }
           }
         },
         {
@@ -6372,6 +6552,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:37.921Z",
                 "sha256": "ab722e8c84fcb20fe2e1889800b491d711788459c294ece04c7f77fb7c5e0ee6"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "7.0",
+                    "RB": "6.7",
+                    "SB": "6.7"
+                  },
+                  "tank": {
+                    "AB": "7.0",
+                    "RB": "7.0",
+                    "SB": "6.7"
+                  },
+                  "ship": {
+                    "AB": "7.0",
+                    "RB": "6.7",
+                    "SB": "6.7"
+                  }
+                }
               }
             },
             {
@@ -6415,6 +6615,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:37.992Z",
                 "sha256": "a0510ea61ab8fe98cf8670f7ab932204c223f1ba704f38cd74ba1f305f43226e"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "6.7",
+                    "RB": "6.7",
+                    "SB": "7.0"
+                  },
+                  "tank": {
+                    "AB": "6.7",
+                    "RB": "7.0",
+                    "SB": "7.0"
+                  },
+                  "ship": {
+                    "AB": "6.7",
+                    "RB": "6.7",
+                    "SB": "7.0"
+                  }
+                }
               }
             }
           ],
@@ -7745,6 +7965,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:40.511Z",
             "sha256": "f8ff08a13bc8e1f6ab0ca531bbcdd24cce5304e62fba74d78c2ee65eb3d01f1d"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "9.7",
+                "RB": "9.0",
+                "SB": "9.0"
+              },
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.3",
+                "SB": "9.7"
+              },
+              "ship": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.0"
+              }
+            }
           }
         },
         {
@@ -8006,6 +8246,26 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:28.946Z",
             "sha256": "c882bbcaf73343a46e75ef0e39c2e3e0f64db9fd5d21f5e800ee0bbedd5a1019"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "9.3",
+                "RB": "9.7",
+                "SB": "10.0"
+              },
+              "tank": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.3"
+              },
+              "ship": {
+                "AB": "9.0",
+                "RB": "9.3",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ],
@@ -8114,6 +8374,26 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:25.789Z",
             "sha256": "a78bd64a6aec6d1742a60d0e959e73784cc15f2a4975e50d16a606be560613af"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "9.0"
+              },
+              "tank": {
+                "AB": "9.0",
+                "RB": "11.7",
+                "SB": "11.0"
+              },
+              "ship": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.0"
+              }
+            }
           }
         },
         {
@@ -8400,6 +8680,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:28.741Z",
                 "sha256": "f3298dd7049e032400b24bf416b5d03ca7ed84055ca59cbc894abdba0ad810e8"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "11.0",
+                    "RB": "11.0",
+                    "SB": "11.0"
+                  },
+                  "tank": {
+                    "AB": "11.0",
+                    "RB": "10.0",
+                    "SB": "10.3"
+                  },
+                  "ship": {
+                    "AB": "11.0",
+                    "RB": "11.0",
+                    "SB": "11.0"
+                  }
+                }
               }
             }
           ],
@@ -8412,7 +8712,7 @@
           "title": "MiG-23",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mig-23m_group.png",
           "selected": false,
-          "br": "11.0-11.7",
+          "br": "10.7-11.7",
           "data_unit_id": "mig-23m_group",
           "required_unit_id": "mig-21_group",
           "class_name": "",
@@ -8421,7 +8721,7 @@
               "type": "single",
               "title": "MiG-23M",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mig_23m.png",
-              "br": "11.0",
+              "br": "10.7",
               "rp": 230000,
               "sp": 630000,
               "data_unit_id": "mig_23m",
@@ -8468,6 +8768,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:29.470Z",
                 "sha256": "ff05abddd1f354778f65568aaace872c51f69d593a420c66655e30eba82ac1ac"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "11.3",
+                    "RB": "10.7",
+                    "SB": "11.0"
+                  },
+                  "tank": {
+                    "AB": "11.3",
+                    "RB": "10.0",
+                    "SB": "10.3"
+                  },
+                  "ship": {
+                    "AB": "11.3",
+                    "RB": "10.7",
+                    "SB": "11.0"
+                  }
+                }
               }
             },
             {
@@ -8624,6 +8944,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:34.949Z",
             "sha256": "24c13fa411ba756625f0034dad5dc12c266ca19098cdce6626d3d2ca55789bee"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "11.3",
+                "RB": "11.0",
+                "SB": "11.0"
+              },
+              "tank": {
+                "AB": "11.3",
+                "RB": "11.3",
+                "SB": "11.0"
+              },
+              "ship": {
+                "AB": "11.3",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -8679,6 +9019,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:35.610Z",
             "sha256": "674ef5d88335e3421df89da639cd6e102f45ee24b6f800772cb2dc8ed040cb2d"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "12.0",
+                "RB": "11.3",
+                "SB": "11.7"
+              },
+              "tank": {
+                "AB": "12.0",
+                "RB": "11.7",
+                "SB": "11.3"
+              },
+              "ship": {
+                "AB": "12.0",
+                "RB": "11.3",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ],
@@ -8744,6 +9104,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:29.993Z",
                 "sha256": "8304a318e98bb48d5a2a052031c85e700f748391ba05812f66594ed034a120ad"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "11.3",
+                    "RB": "11.0",
+                    "SB": "11.7"
+                  },
+                  "tank": {
+                    "AB": "11.3",
+                    "RB": "11.3",
+                    "SB": "11.0"
+                  },
+                  "ship": {
+                    "AB": "11.3",
+                    "RB": "11.0",
+                    "SB": "11.7"
+                  }
+                }
               }
             },
             {
@@ -8797,6 +9177,26 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:30:29.605Z",
                 "sha256": "ab91a40298d807dc820643c52230e14e09c7639c255c93726b140d1eba1c3277"
+              },
+              "game_battle_ratings": {
+                "context": "air",
+                "by_battle": {
+                  "air": {
+                    "AB": "11.3",
+                    "RB": "11.0",
+                    "SB": "11.7"
+                  },
+                  "tank": {
+                    "AB": "11.3",
+                    "RB": "11.7",
+                    "SB": "11.3"
+                  },
+                  "ship": {
+                    "AB": "11.3",
+                    "RB": "11.0",
+                    "SB": "11.7"
+                  }
+                }
               }
             }
           ],
@@ -8845,6 +9245,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:35.053Z",
             "sha256": "2eca5cbc5a9e993f8ab494c62e26fdc2003414bdda0301cd2bb39106223190aa"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "11.7",
+                "RB": "11.3",
+                "SB": "11.3"
+              },
+              "tank": {
+                "AB": "11.7",
+                "RB": "11.7",
+                "SB": "11.3"
+              },
+              "ship": {
+                "AB": "11.7",
+                "RB": "11.3",
+                "SB": "11.3"
+              }
+            }
           }
         }
       ]
@@ -8955,6 +9375,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:29.671Z",
             "sha256": "71d6d14fc7b78304eef388e0e37042eabcfc0fe0b285d2831bbe0f52a28bb0ec"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "11.3",
+                "RB": "11.0",
+                "SB": "10.7"
+              },
+              "tank": {
+                "AB": "11.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              },
+              "ship": {
+                "AB": "11.3",
+                "RB": "11.0",
+                "SB": "10.7"
+              }
+            }
           }
         },
         {
@@ -9063,6 +9503,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:35.459Z",
             "sha256": "c2583cf09bc832a0beb53abf6267a95a481ec79ca42ee40d0b9e080288c90885"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "11.3",
+                "RB": "11.0",
+                "SB": "11.7"
+              },
+              "tank": {
+                "AB": "11.3",
+                "RB": "11.3",
+                "SB": "10.7"
+              },
+              "ship": {
+                "AB": "11.3",
+                "RB": "11.0",
+                "SB": "11.7"
+              }
+            }
           }
         },
         {
@@ -9116,6 +9576,26 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:35.852Z",
             "sha256": "0bdc3bbe687266be60bd72196bf488da895f1951e5b11617d8f389ca791eac53"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "12.0",
+                "RB": "11.3",
+                "SB": "11.7"
+              },
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "11.7"
+              },
+              "ship": {
+                "AB": "12.0",
+                "RB": "11.3",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ]
@@ -9185,7 +9665,7 @@
           "type": "single",
           "title": "MiG-29KR (9-41R)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mig_29kr_9_41r.png",
-          "br": "13.7",
+          "br": "14.0",
           "rp": 350000,
           "sp": 940000,
           "data_unit_id": "mig_29kr_9_41r",
@@ -9232,6 +9712,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:29.982Z",
             "sha256": "9dea17010f5b993bfdf97f58ba1ff3dc51e8e341407c16901dd91371025acc88"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "14.0",
+                "RB": "14.0",
+                "SB": "14.0"
+              },
+              "tank": {
+                "AB": "14.0",
+                "RB": "13.3",
+                "SB": "12.3"
+              },
+              "ship": {
+                "AB": "14.0",
+                "RB": "14.0",
+                "SB": "14.0"
+              }
+            }
           }
         }
       ],
@@ -9346,7 +9846,7 @@
           "type": "single",
           "title": "MiG-29SMT (9-19)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mig_29smt_9_19.png",
-          "br": "13.3",
+          "br": "13.7",
           "rp": 350000,
           "sp": 940000,
           "data_unit_id": "mig_29smt_9_19",
@@ -9393,6 +9893,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:30.300Z",
             "sha256": "63a9419acca4361505f02b13305a342e5408b2dbebd2b85cbb98687591ebb2e1"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "13.7",
+                "RB": "13.7",
+                "SB": "13.7"
+              },
+              "tank": {
+                "AB": "13.7",
+                "RB": "12.7",
+                "SB": "12.3"
+              },
+              "ship": {
+                "AB": "13.7",
+                "RB": "13.7",
+                "SB": "13.7"
+              }
+            }
           }
         }
       ],
@@ -9454,7 +9974,7 @@
           "type": "single",
           "title": "Su-27SM",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/su_27sm.png",
-          "br": "13.7",
+          "br": "14.0",
           "rp": 350000,
           "sp": 940000,
           "data_unit_id": "su_27sm",
@@ -9501,6 +10021,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:36.007Z",
             "sha256": "1769d7f5b2fc07be4f572b1533789a5b06d3fc443491e9e97d385ea3f1524bf3"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "14.0",
+                "RB": "14.0",
+                "SB": "14.0"
+              },
+              "tank": {
+                "AB": "14.0",
+                "RB": "13.3",
+                "SB": "12.7"
+              },
+              "ship": {
+                "AB": "14.0",
+                "RB": "14.0",
+                "SB": "14.0"
+              }
+            }
           }
         }
       ],
@@ -9556,6 +10096,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:35.560Z",
             "sha256": "27de5da2eb09636794ec3fd46d942befb3546f953933be31edff3db883fb84a3"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "12.3",
+                "RB": "11.7",
+                "SB": "11.7"
+              },
+              "tank": {
+                "AB": "12.3",
+                "RB": "13.0",
+                "SB": "12.7"
+              },
+              "ship": {
+                "AB": "12.3",
+                "RB": "11.7",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ],
@@ -9564,7 +10124,7 @@
           "type": "single",
           "title": "Su-34",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/su_34.png",
-          "br": "13.7",
+          "br": "14.0",
           "rp": 350000,
           "sp": 940000,
           "data_unit_id": "su_34",
@@ -9611,6 +10171,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:36.760Z",
             "sha256": "40d95ede0440af6c470efb0d3c1068901f77882f5a73b5d215099e4b0ada7e9a"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "14.0",
+                "RB": "14.0",
+                "SB": "14.0"
+              },
+              "tank": {
+                "AB": "14.0",
+                "RB": "13.7",
+                "SB": "13.0"
+              },
+              "ship": {
+                "AB": "14.0",
+                "RB": "14.0",
+                "SB": "14.0"
+              }
+            }
           }
         }
       ]
@@ -9674,7 +10254,7 @@
           "type": "single",
           "title": "▄Su-30MK2 AMV",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/su_30mk2v_venezuela.png",
-          "br": "13.3",
+          "br": "13.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "su_30mk2v_venezuela",
@@ -9721,13 +10301,33 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:36.183Z",
             "sha256": "2c3c39215268fd928bfa2f51e39f8349bcf0e7261b4f79b98f4a8437f0338540"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "13.7",
+                "RB": "13.7",
+                "SB": "13.7"
+              },
+              "tank": {
+                "AB": "13.7",
+                "RB": "13.0",
+                "SB": "12.3"
+              },
+              "ship": {
+                "AB": "13.7",
+                "RB": "13.7",
+                "SB": "13.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "MiG-29M (9-15)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mig_29m_9_15.png",
-          "br": "13.7",
+          "br": "14.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "mig_29m_9_15",
@@ -9774,6 +10374,26 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:30:30.195Z",
             "sha256": "4652363835e1b36c75525a232f9e9f7a1688886dfd56e83cfeb3720f7a3a9fcf"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "14.0",
+                "RB": "14.0",
+                "SB": "14.0"
+              },
+              "tank": {
+                "AB": "14.0",
+                "RB": "13.0",
+                "SB": "12.3"
+              },
+              "ship": {
+                "AB": "14.0",
+                "RB": "14.0",
+                "SB": "14.0"
+              }
+            }
           }
         }
       ],
@@ -9839,6 +10459,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:30.533Z",
             "sha256": "cf4b6882b3ff95b1d896774bb0b05f940fd7bea27d8edfa68cb18730a46a33ed"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "14.3",
+                "RB": "14.3",
+                "SB": "14.3"
+              },
+              "tank": {
+                "AB": "14.3",
+                "RB": "14.0",
+                "SB": "13.0"
+              },
+              "ship": {
+                "AB": "14.3",
+                "RB": "14.3",
+                "SB": "14.3"
+              }
+            }
           }
         }
       ],
@@ -9847,7 +10487,7 @@
           "type": "single",
           "title": "Su-30SM",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/su_30sm.png",
-          "br": "14.3",
+          "br": "14.7",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "su_30sm",
@@ -9894,13 +10534,33 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:36.381Z",
             "sha256": "6ba55a77d840d2da0b95aadca0d88897f456c3b7bdad358d64d5dec291d0b8db"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "14.7",
+                "RB": "14.7",
+                "SB": "14.7"
+              },
+              "tank": {
+                "AB": "14.7",
+                "RB": "14.0",
+                "SB": "13.0"
+              },
+              "ship": {
+                "AB": "14.7",
+                "RB": "14.7",
+                "SB": "14.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Su-30SM2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/su_30sm2.png",
-          "br": "14.7",
+          "br": "15.0",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "su_30sm2",
@@ -9947,6 +10607,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:36.309Z",
             "sha256": "47fe9dd0eeea665aea68c634871a5214f7e0c04aabb48f96375a57cf73ba283a"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "15.0",
+                "RB": "15.0",
+                "SB": "15.0"
+              },
+              "tank": {
+                "AB": "15.0",
+                "RB": "14.0",
+                "SB": "13.0"
+              },
+              "ship": {
+                "AB": "15.0",
+                "RB": "15.0",
+                "SB": "15.0"
+              }
+            }
           }
         }
       ],

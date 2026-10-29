@@ -2210,7 +2210,7 @@
           "type": "single",
           "title": "U-SH 405",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_landsverk_ush_405.png",
-          "br": "8.0",
+          "br": "8.3",
           "rp": 105000,
           "sp": 300000,
           "data_unit_id": "sw_landsverk_ush_405",
@@ -2247,6 +2247,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:27.310Z",
             "sha256": "c7af723d1fb36f3b9f6a2856fb772a9eea07311e326ad81fdc502942c32a92c7"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.0",
+                "RB": "8.3",
+                "SB": "8.3"
+              }
+            }
           }
         }
       ],
@@ -2299,7 +2309,7 @@
           "title": "Strv 101/103A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_101_103a_group.png",
           "selected": false,
-          "br": "8.0",
+          "br": "8.0-8.3",
           "data_unit_id": "sw_strv_101_103a_group",
           "required_unit_id": "sw_strv_81",
           "class_name": "",
@@ -2351,7 +2361,7 @@
               "type": "single",
               "title": "Strv 103A",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_103a.png",
-              "br": "8.0",
+              "br": "8.3",
               "rp": 61000,
               "sp": 340000,
               "data_unit_id": "sw_strv_103a",
@@ -2388,6 +2398,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:31.498Z",
                 "sha256": "fc47a8c6519139b48482fb999de80485736b7c87fd660612f76ebbe4beaeb073"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.3",
+                    "RB": "8.3",
+                    "SB": "8.3"
+                  }
+                }
               }
             }
           ],
@@ -2624,7 +2644,7 @@
           "type": "single",
           "title": "Strv 103-0",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_103_0.png",
-          "br": "8.0",
+          "br": "8.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "sw_strv_103_0",
@@ -2661,6 +2681,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:31.365Z",
             "sha256": "c329711d9806d0088151632c895fba7ca5f71415185fd26a9b74eaa4a90f43fa"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.3",
+                "RB": "8.3",
+                "SB": "8.3"
+              }
+            }
           }
         }
       ],
@@ -2722,7 +2752,7 @@
           "type": "single",
           "title": "CV 90105 TML",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_cv_90105.png",
-          "br": "8.7",
+          "br": "9.0",
           "rp": 135000,
           "sp": 380000,
           "data_unit_id": "sw_cv_90105",
@@ -2759,6 +2789,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:25.301Z",
             "sha256": "be30e732483f61600292852ca5f7fa01d0b347abf2e6eb3d8dd9066193cb2191"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "9.0"
+              }
+            }
           }
         },
         {
@@ -2809,7 +2849,7 @@
           "title": "CV30FIN/Strf 40B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_cv_90_ifv_group.png",
           "selected": false,
-          "br": "9.3-9.7",
+          "br": "9.3-10.0",
           "data_unit_id": "sw_cv_90_ifv_group",
           "required_unit_id": "sw_ikv_91_105",
           "class_name": "",
@@ -2861,7 +2901,7 @@
               "type": "single",
               "title": "Strf 9040B",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strf_90b.png",
-              "br": "9.7",
+              "br": "10.0",
               "rp": 110000,
               "sp": 620000,
               "data_unit_id": "sw_strf_90b",
@@ -2898,6 +2938,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:30.835Z",
                 "sha256": "7473aa0df432b7a39355929829fe72ea62269c342af78dd0329f0b1c0665e4d1"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.0",
+                    "RB": "10.0",
+                    "SB": "10.0"
+                  }
+                }
               }
             }
           ],
@@ -3057,7 +3107,7 @@
           "type": "single",
           "title": "ItPsV Leopard",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_itpsv_90.png",
-          "br": "8.7",
+          "br": "9.0",
           "rp": 160000,
           "sp": 450000,
           "data_unit_id": "sw_itpsv_90",
@@ -3094,6 +3144,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:26.765Z",
             "sha256": "d2f1ff3e47dcb2f0dce9da3ffbddd82b1ebd5e63a597a35e1e5db90a1ececccd"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "9.0"
+              }
+            }
           }
         },
         {
@@ -3137,6 +3197,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:28.132Z",
             "sha256": "70f017e11e332c3149900848d883124e4d00aa09929de1577273eab7f959f3a9"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -3291,7 +3361,7 @@
           "type": "single",
           "title": "▄T-72M1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_t_72m1.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "sw_t_72m1",
@@ -3328,6 +3398,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:34.156Z",
             "sha256": "3cf4a82b3b94515af1643d3eef833119aeeca6e02700e0e83f52a473e15d9d05"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -3381,7 +3461,7 @@
           "type": "single",
           "title": "CV 9035DK",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_cv_9035_dk.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "sw_cv_9035_dk",
@@ -3418,6 +3498,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:25.623Z",
             "sha256": "ec151bd77d25c6f5dd38fc42d52d9bdd17d490c86f9c5ffcc5e51c773d16d9cc"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ],
@@ -3479,7 +3569,7 @@
           "type": "single",
           "title": "Strf 9040C",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strf_90c.png",
-          "br": "10.3",
+          "br": "10.7",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "sw_strf_90c",
@@ -3516,6 +3606,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:30.989Z",
             "sha256": "90d9116f39b63d6d9ee92f3c14c59c58e84c49c89a8af51720a1199052a06a4b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "10.7",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ],
@@ -3524,7 +3624,7 @@
           "type": "single",
           "title": "Strv 121",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_121.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "sw_strv_121",
@@ -3561,6 +3661,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:32.035Z",
             "sha256": "01c9eb78734f3e60f386c928c09a4663f461d954ce196bc2c47b4ed28ffafac7"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -3570,7 +3680,7 @@
           "title": "Lvkv/ASRAD",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_lvkv_asrad_group.png",
           "selected": false,
-          "br": "10.3",
+          "br": "10.7",
           "data_unit_id": "sw_lvkv_asrad_group",
           "required_unit_id": "sw_lvrbv_701",
           "class_name": "",
@@ -3579,7 +3689,7 @@
               "type": "single",
               "title": "Lvkv 9040C",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_lvkv_90c.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 300000,
               "sp": 830000,
               "data_unit_id": "sw_lvkv_90c",
@@ -3616,13 +3726,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:27.828Z",
                 "sha256": "9b665307d5ba4475f5584f03f108559170c7918c4038d6b5939eef9c7fdaac60"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "ASRAD-R",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_asrad_r.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "sw_asrad_r",
@@ -3659,6 +3779,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:24.823Z",
                 "sha256": "d1250aa69540648fbd0d9bf3629e87890cbdcc81cc61e25555515b4c099f5879"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             }
           ],
@@ -3717,7 +3847,7 @@
           "type": "single",
           "title": "▄Leopard 2A4",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_leopard_2a4_fin.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "sw_leopard_2a4_fin",
@@ -3754,6 +3884,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:27.717Z",
             "sha256": "affb314ce7355e3e52828a080ec651ff2bcc6bfa580226be605466966ae43ac0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ]
@@ -3764,7 +3904,7 @@
           "type": "single",
           "title": "CV 90105",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_cv_90105_tml.png",
-          "br": "10.3",
+          "br": "10.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "sw_cv_90105_tml",
@@ -3801,13 +3941,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:25.426Z",
             "sha256": "0ac7feb4494faddcd5f6a0fef1fc101edb46d7964bfe3eb904fa4a80da95a00d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "10.7",
+                "SB": "10.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Christian II",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv121b_christian2.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "sw_strv121b_christian2",
@@ -3844,6 +3994,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:31.140Z",
             "sha256": "537447ffaa689d57fccf173a92492675faa6bcd8508c24fec0dbdc09aea2c224"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -3905,7 +4065,7 @@
           "type": "single",
           "title": "CV90120-T",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_cv_90120.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "sw_cv_90120",
@@ -3942,6 +4102,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:25.667Z",
             "sha256": "1fbfeebce7d6fb1eaf6e37012ed1ab497e34447607efb6e989df8cd036a320ef"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         }
       ],
@@ -3951,7 +4121,7 @@
           "title": "Strv 122/122 PLSS",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_122_group.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.3",
           "data_unit_id": "sw_strv_122_group",
           "required_unit_id": "sw_strv_121",
           "class_name": "",
@@ -3960,7 +4130,7 @@
               "type": "single",
               "title": "Strv 122A",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_122.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 400000,
               "sp": 1080000,
               "data_unit_id": "sw_strv_122",
@@ -3997,13 +4167,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:31.865Z",
                 "sha256": "384183ed9458675cb506ee623bd743c11ba630fb6ebc4c80b6d59fd4d795a539"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Strv 122B PLSS",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_122b_plss.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 200000,
               "sp": 1100000,
               "data_unit_id": "sw_strv_122b_plss",
@@ -4040,6 +4220,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:32.148Z",
                 "sha256": "ff7526e7160725bff045eb88a452390d8c55b5da0c5fff7ff51ae93e98152cab"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             }
           ],
@@ -4051,7 +4241,7 @@
           "type": "single",
           "title": "Strv 122B+",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_122b_plus.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "sw_strv_122b_plus",
@@ -4088,6 +4278,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:32.124Z",
             "sha256": "ffdcd01e3c151d29dc824c8b15bb7754286aa3915e9178afdf1c91167f1d386d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -4096,7 +4296,7 @@
           "type": "single",
           "title": "ItO 90M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_crotale_ng.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "sw_crotale_ng",
@@ -4133,6 +4333,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:25.268Z",
             "sha256": "0508390328ad7edf2f8da8b1e9437b9dab4cd3879f217654660d0ac20e236e10"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         },
         {
@@ -4140,7 +4350,7 @@
           "title": "EldE 98/NOMADS",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_eldenhet_nomads_group.png",
           "selected": false,
-          "br": "12.0",
+          "br": "12.3",
           "data_unit_id": "sw_eldenhet_nomads_group",
           "required_unit_id": "sw_crotale_ng",
           "class_name": "",
@@ -4149,7 +4359,7 @@
               "type": "single",
               "title": "EldE 98",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_eldenhet_98.png",
-              "br": "12.0",
+              "br": "12.3",
               "rp": 410000,
               "sp": 1100000,
               "data_unit_id": "sw_eldenhet_98",
@@ -4186,13 +4396,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:26.071Z",
                 "sha256": "973885ed186bd958512547befa3d11304aa8ec06d104e83895e428c07b7f83cb"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.3",
+                    "RB": "12.3",
+                    "SB": "12.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "NOMADS",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_nomads.png",
-              "br": "12.0",
+              "br": "12.3",
               "rp": 210000,
               "sp": 1120000,
               "data_unit_id": "sw_nomads",
@@ -4229,6 +4449,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:28.415Z",
                 "sha256": "5985262bb636e53f7752586550e07bc000d688576e24ff85f8f8aa221af25b5a"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.3",
+                    "RB": "12.3",
+                    "SB": "12.3"
+                  }
+                }
               }
             }
           ],
@@ -4241,7 +4471,7 @@
           "title": "NASAMS 3",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_nasams_fcs.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.0",
           "data_unit_id": "sw_nasams_fcs",
           "required_unit_id": "sw_eldenhet_nomads_group",
           "class_name": "",
@@ -4250,7 +4480,7 @@
               "type": "single",
               "title": "NASAMS 3 (TADS)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_nasams_fcs.png",
-              "br": "12.7",
+              "br": "13.0",
               "rp": 420000,
               "sp": 1120000,
               "data_unit_id": "sw_nasams_fcs",
@@ -4287,13 +4517,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:28.105Z",
                 "sha256": "772c8a56b16738700e6375b93a8b11782af873acb4484a82e8870ae3afbb1fc6"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "NASAMS 3 (TEL)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_nasams_launcher.png",
-              "br": null,
+              "br": "13.0",
               "rp": 0,
               "sp": 0,
               "data_unit_id": "sw_nasams_launcher",
@@ -4320,6 +4560,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:28.419Z",
                 "sha256": "32c27d08d408dfc170cbafa1ceb4b3d8de7a6ac2da57a8a41631d743695316f2"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             }
           ],
@@ -4378,7 +4628,7 @@
           "type": "single",
           "title": "▄Leopard 2A6",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_leopard_2a6nl.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "sw_leopard_2a6nl",
@@ -4415,6 +4665,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:27.768Z",
             "sha256": "e155cf1b0a7a0ee344ac751b2db185a5d0a30d83e2788b58870c3f5f52183d55"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         }
       ]
@@ -4425,7 +4685,7 @@
           "type": "single",
           "title": "T 80 U",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_t_80u.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "sw_t_80u",
@@ -4462,6 +4722,16 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:29:34.075Z",
             "sha256": "2a1e2bce6581ae810831904d4fa53e1faeffa5cdaa9fcf48a6fc2b4d20887fdf"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.7",
+                "RB": "11.7",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ],

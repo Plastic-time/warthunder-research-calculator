@@ -494,7 +494,7 @@
           "type": "single",
           "title": "USS Porter",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_destroyer_porter_1941.png",
-          "br": "5.3",
+          "br": "5.0",
           "rp": 21000,
           "sp": 70000,
           "data_unit_id": "us_destroyer_porter_1941",
@@ -529,13 +529,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:14.213Z",
             "sha256": "cfc6e277968e8beff5a433deba1ae5d98ebfc3ad748c526aa1d882e683ffcebb"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "5.0",
+                "RB": "5.0",
+                "SB": "5.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "USS Somers",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_destroyer_somers.png",
-          "br": "5.3",
+          "br": "5.0",
           "rp": 25000,
           "sp": 87000,
           "data_unit_id": "us_destroyer_somers",
@@ -570,6 +580,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:14.561Z",
             "sha256": "72a3bb27ea3034bea3f6bfc2011a6d3db68e1cf17e00fe4966478df4e1bc719e"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "5.0",
+                "RB": "5.0",
+                "SB": "5.0"
+              }
+            }
           }
         }
       ],
@@ -830,7 +850,7 @@
           "type": "single",
           "title": "USS Moffett",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_destroyer_porter_1942.png",
-          "br": "5.3",
+          "br": "5.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_destroyer_porter_1942",
@@ -865,6 +885,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:14.115Z",
             "sha256": "07dac32bec283962de2b6973f6194bf5464ea7f92680fcdbc8bb851d15794c82"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "5.0",
+                "RB": "5.0",
+                "SB": "5.0"
+              }
+            }
           }
         },
         {
@@ -914,7 +944,7 @@
           "type": "single",
           "title": "USS Davis",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_destroyer_somers_davis.png",
-          "br": "5.3",
+          "br": "5.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "us_destroyer_somers_davis",
@@ -949,6 +979,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:14.658Z",
             "sha256": "a861c9c0c587a8d89244c6fbefda7c28188ca37b433717af917ce32bd5868a83"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "5.0",
+                "RB": "5.0",
+                "SB": "5.0"
+              }
+            }
           }
         },
         {

@@ -2324,7 +2324,7 @@
           "title": "STB-2/Type 74",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_74_stb_group.png",
           "selected": false,
-          "br": "8.3",
+          "br": "8.7",
           "data_unit_id": "jp_type_74_stb_group",
           "required_unit_id": "jp_m47_patton_ii",
           "class_name": "",
@@ -2333,7 +2333,7 @@
               "type": "single",
               "title": "STB-2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_st_b1.png",
-              "br": "8.3",
+              "br": "8.7",
               "rp": 105000,
               "sp": 300000,
               "data_unit_id": "jp_st_b1",
@@ -2370,13 +2370,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:46.371Z",
                 "sha256": "8308e2c5b0f7eba982d90a36c271f1b151b727601877997505f064c06e3b8c29"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Type 74 (C)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_74_c.png",
-              "br": "8.3",
+              "br": "8.7",
               "rp": 61000,
               "sp": 340000,
               "data_unit_id": "jp_type_74_c",
@@ -2413,6 +2423,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:49.575Z",
                 "sha256": "7bb203e4aa48628a24ea5e550be786106f0ddcfd6b1de9df1287fa3e93868e8d"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
               }
             }
           ],
@@ -2562,7 +2582,7 @@
           "type": "single",
           "title": "Type 74 Red Star",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_74_red_star.png",
-          "br": "8.3",
+          "br": "8.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "jp_type_74_red_star",
@@ -2599,6 +2619,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:49.699Z",
             "sha256": "d10444bc47e28796650268b8e19281b3097f5f22e15319bb4b1d7545d5647ed5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "8.7",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ],
@@ -2661,7 +2691,7 @@
           "title": "Type 87/89",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_87_89_group.png",
           "selected": false,
-          "br": "9.0",
+          "br": "9.0-9.3",
           "data_unit_id": "jp_type_87_89_group",
           "required_unit_id": "jp_type_87_rcv_prot",
           "class_name": "",
@@ -2670,7 +2700,7 @@
               "type": "single",
               "title": "Type 87 RCV",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_87_rcv.png",
-              "br": "9.0",
+              "br": "9.3",
               "rp": 160000,
               "sp": 450000,
               "data_unit_id": "jp_type_87_rcv",
@@ -2707,6 +2737,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:50.631Z",
                 "sha256": "27b1537a0ff87480b2a829139db988c7cc6c0024a0dcec5021e4615691930673"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.3",
+                    "RB": "9.3",
+                    "SB": "9.3"
+                  }
+                }
               }
             },
             {
@@ -2866,7 +2906,7 @@
           "type": "single",
           "title": "Type 16 (P)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_16_mcv_prot.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 190000,
           "sp": 520000,
           "data_unit_id": "jp_type_16_mcv_prot",
@@ -2903,6 +2943,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:47.143Z",
             "sha256": "7c3340aa39e195bb8e5eb3cc9123f1a608b96755e2f3982f662b83b5105be390"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -2911,7 +2961,7 @@
           "type": "single",
           "title": "Type 87",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_87.png",
-          "br": "8.3",
+          "br": "8.7",
           "rp": 135000,
           "sp": 380000,
           "data_unit_id": "jp_type_87",
@@ -2948,6 +2998,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:50.291Z",
             "sha256": "fe57430d9d0227911d541dcbb1d41061ae74d6299bfb0c961ac60946874d1e61"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "8.7",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ],
@@ -3042,7 +3102,7 @@
           "type": "single",
           "title": "▄Stingray",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_stingray.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "jp_stingray",
@@ -3079,6 +3139,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:46.755Z",
             "sha256": "e31ab07b9ee08b17dde00fb3f59adc5d59d7ce25100d5b1967b45b3f213f0c70"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -3132,7 +3202,7 @@
           "type": "single",
           "title": "Type 16 (FPS)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_16_mod.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "jp_type_16_mod",
@@ -3169,6 +3239,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:47.340Z",
             "sha256": "8ab4163defdd04df3c4a6a220b3bb84e3eba54c53ef2af3c08885f2853a1e7f5"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -3229,7 +3309,7 @@
           "type": "single",
           "title": "TKX (P)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_10_prototype.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "jp_type_10_prototype",
@@ -3266,6 +3346,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:47.068Z",
             "sha256": "94f3722d3c714df450d70f5d4c0f3c6480894982666b977cbcd4e28fa0682cfb"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         }
       ],
@@ -3275,7 +3365,7 @@
           "title": "Type 90/90B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_90_group.png",
           "selected": false,
-          "br": "11.7",
+          "br": "12.0",
           "data_unit_id": "jp_type_90_group",
           "required_unit_id": "jp_type_74_group",
           "class_name": "",
@@ -3284,7 +3374,7 @@
               "type": "single",
               "title": "Type 90",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_90.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 300000,
               "sp": 830000,
               "data_unit_id": "jp_type_90",
@@ -3321,13 +3411,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:51.020Z",
                 "sha256": "f521678299bd667004cab7f7ddb868b239ee3677db9b1f6a23e7018d84b56668"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Type 90 (B)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_90b.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "jp_type_90b",
@@ -3364,6 +3464,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:50.996Z",
                 "sha256": "df17c57443cc799865b50537cdcbbcb407fc5792a4484af06e6da7f472f19b5c"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             }
           ],
@@ -3377,7 +3487,7 @@
           "type": "single",
           "title": "Type 16",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_16.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "jp_type_16",
@@ -3414,6 +3524,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:47.173Z",
             "sha256": "c7fa01f2181b54b300cdc9a59e7be1d50455353b11ef005d652784c9fe30997d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         },
         {
@@ -3465,7 +3585,7 @@
           "type": "single",
           "title": "Type 93",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_93.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "jp_type_93",
@@ -3502,6 +3622,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:51.342Z",
             "sha256": "dbc4247c38b83acf5b9f37d52f0cf88e16fa130457fa2970a3afd376ed1eb01f"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
@@ -3599,7 +3729,7 @@
           "type": "single",
           "title": "Type 90 (B) \"Fuji\"",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_90b_camo.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "jp_type_90b_camo",
@@ -3636,13 +3766,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:51.009Z",
             "sha256": "384e462a17b8a0fdf970ecbf946cd551df13204a3986944aff33305e38987a90"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◍Type 90 (B)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_90b_sm.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "jp_type_90b_sm",
@@ -3679,6 +3819,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:28:51.229Z",
             "sha256": "aa7be6e39357b574b27186785ae9cdd5d57774d174519099d3f0dcdae9408fc3"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         }
       ],
@@ -3696,7 +3846,7 @@
           "type": "single",
           "title": "Leopard 2RI",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_leopard_2ri.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "jp_leopard_2ri",
@@ -3733,6 +3883,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:44.488Z",
             "sha256": "cc0113637747b142ec0e89d5bbbf434b6f43b2c195319a872f31d27361739c30"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -3742,7 +3902,7 @@
           "title": "Type 10/TKX",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_10_group.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.3",
           "data_unit_id": "jp_type_10_group",
           "required_unit_id": "jp_type_90_group",
           "class_name": "",
@@ -3751,7 +3911,7 @@
               "type": "single",
               "title": "Type 10",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_10.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 400000,
               "sp": 1080000,
               "data_unit_id": "jp_type_10",
@@ -3788,13 +3948,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:47.017Z",
                 "sha256": "508fc63bb405308d874703c3812d1d4e96bac4ea904f01fe71a2035f9624a1a5"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "TKX",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_tkx_prot.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 200000,
               "sp": 1100000,
               "data_unit_id": "jp_tkx_prot",
@@ -3831,6 +4001,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:46.561Z",
                 "sha256": "8142139991c16b2a9ef656b244dbcd54b63ee6fb27cce5fb9cda857be6487c6f"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             }
           ],
@@ -4029,7 +4209,7 @@
           "type": "single",
           "title": "BM Oplot-T",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_oplot_t.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "jp_oplot_t",
@@ -4066,6 +4246,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:45.990Z",
             "sha256": "6cc0060e4a2f28cc70d8f1dfafd1260e6c0351aaaa9a3d78762906f087aefb05"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ]

@@ -1155,7 +1155,7 @@
           "title": "Magach 6 R/B/Hydra",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_magach_6_group.png",
           "selected": false,
-          "br": "8.7",
+          "br": "8.7-9.0",
           "data_unit_id": "il_magach_6_group",
           "required_unit_id": "il_magach_6a_5_group",
           "class_name": "",
@@ -1207,7 +1207,7 @@
               "type": "single",
               "title": "Magach 6B",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_magach_6b.png",
-              "br": "8.7",
+              "br": "9.0",
               "rp": 81000,
               "sp": 450000,
               "data_unit_id": "il_magach_6b",
@@ -1244,13 +1244,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:37.688Z",
                 "sha256": "5d70b19fab24508b3f9f86d8e7531be089d13a5fb330bde18404cd125a0e79f9"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.0",
+                    "RB": "9.0",
+                    "SB": "9.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Magach Hydra",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_magach_6_rocket.png",
-              "br": "8.7",
+              "br": "9.0",
               "rp": 94000,
               "sp": 520000,
               "data_unit_id": "il_magach_6_rocket",
@@ -1287,6 +1297,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:37.340Z",
                 "sha256": "e4ad545ce7913e3c0207a1961eff65c428cfc5744ee3b0df37e7bba18e4ce4ad"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.0",
+                    "RB": "9.0",
+                    "SB": "9.0"
+                  }
+                }
               }
             }
           ],
@@ -1603,7 +1623,7 @@
           "type": "single",
           "title": "Merkava Mk.1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_1.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 160000,
           "sp": 450000,
           "data_unit_id": "il_merkava_mk_1",
@@ -1640,6 +1660,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:38.513Z",
             "sha256": "94689c21873ff1e2891a790d9368e8f42fbbff385ee3ed094e89f29fd94b4e96"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
@@ -1647,7 +1677,7 @@
           "title": "Merkava 1B/2B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_1_2_group.png",
           "selected": false,
-          "br": "9.7",
+          "br": "10.0",
           "data_unit_id": "il_merkava_1_2_group",
           "required_unit_id": "il_merkava_mk_1",
           "class_name": "",
@@ -1656,7 +1686,7 @@
               "type": "single",
               "title": "Merkava Mk.1B",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_1b.png",
-              "br": "9.7",
+              "br": "10.0",
               "rp": 190000,
               "sp": 520000,
               "data_unit_id": "il_merkava_mk_1b",
@@ -1693,13 +1723,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:38.535Z",
                 "sha256": "e064b1324115a88352f617a398149eebfe2969798533d83609345e55ffc4cff4"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.0",
+                    "RB": "10.0",
+                    "SB": "10.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Merkava Mk.2B",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_2b_early.png",
-              "br": "9.7",
+              "br": "10.0",
               "rp": 110000,
               "sp": 620000,
               "data_unit_id": "il_merkava_mk_2b_early",
@@ -1736,6 +1776,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:38.489Z",
                 "sha256": "663e060e78c8d8aeff33b9b2261d41f4129ba06878776e2ad545568ee61e6ef5"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.0",
+                    "RB": "10.0",
+                    "SB": "10.0"
+                  }
+                }
               }
             }
           ],
@@ -1970,7 +2020,7 @@
           "type": "single",
           "title": "Merkava Mk.2D",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_2d.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "il_merkava_mk_2d",
@@ -2007,6 +2057,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:38.476Z",
             "sha256": "9397803e6880ed4a82335502e8a48f8c7f5e74b25499589ec87316cef906259f"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ]
@@ -2023,7 +2083,7 @@
           "type": "single",
           "title": "Sabra Mk.I",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_sabra_mk1.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "il_sabra_mk1",
@@ -2060,6 +2120,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:39.557Z",
             "sha256": "18d84e681158933a48c4beeb9d059ef4f01a6f290fedfa0a672eeef821012134"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -2069,7 +2139,7 @@
           "title": "Merkava 3 B/C",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_3_group.png",
           "selected": false,
-          "br": "11.3",
+          "br": "11.7",
           "data_unit_id": "il_merkava_3_group",
           "required_unit_id": "il_merkava_1_2_group",
           "class_name": "",
@@ -2078,7 +2148,7 @@
               "type": "single",
               "title": "Merkava Mk.3B",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_3b.png",
-              "br": "11.3",
+              "br": "11.7",
               "rp": 300000,
               "sp": 830000,
               "data_unit_id": "il_merkava_mk_3b",
@@ -2115,13 +2185,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:39.018Z",
                 "sha256": "434f83798458ace350b32f44242672380a9e064b99bcd9c9b9d47f6fb0500f31"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.7",
+                    "RB": "11.7",
+                    "SB": "11.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Merkava Mk.3C",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_3c.png",
-              "br": "11.3",
+              "br": "11.7",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "il_merkava_mk_3c",
@@ -2158,6 +2238,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:38.835Z",
                 "sha256": "40157905207b723cf513703eebd88fbf5746947d2e133af957bf4a00f64685be"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.7",
+                    "RB": "11.7",
+                    "SB": "11.7"
+                  }
+                }
               }
             }
           ],
@@ -2171,7 +2261,7 @@
           "type": "single",
           "title": "◐Osa-AKM",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_9a33bm3.png",
-          "br": "10.3",
+          "br": "10.7",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "il_9a33bm3",
@@ -2208,13 +2298,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:34.731Z",
             "sha256": "eb6b7d92a5ee4a742211be1ed5105c83df2c57ec78de332e13e8f34b87189392"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "10.7",
+                "SB": "10.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◐Tor-M1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_tor_m1.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "il_tor_m1",
@@ -2251,6 +2351,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:40.290Z",
             "sha256": "6501bf2fcd5d35b9cf03ea6bed0eecdc3f0f7e293b515b239d1270ab04d28e10"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.7",
+                "RB": "11.7",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ],
@@ -2302,7 +2412,7 @@
           "type": "single",
           "title": "Eitan (P)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_eitan.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "il_eitan",
@@ -2339,6 +2449,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:35.640Z",
             "sha256": "b478780aa7753f544e4d5fe4f692060aae1a96b501fd6826e8a3617d808d0a39"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.7",
+                "RB": "11.7",
+                "SB": "11.7"
+              }
+            }
           }
         },
         {
@@ -2346,7 +2466,7 @@
           "title": "Namer",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_namer_group.png",
           "selected": false,
-          "br": "11.3",
+          "br": "11.7",
           "data_unit_id": "il_namer_group",
           "required_unit_id": "il_eitan",
           "class_name": "",
@@ -2355,7 +2475,7 @@
               "type": "single",
               "title": "Namer 30",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_namer_rcws_30.png",
-              "br": "11.3",
+              "br": "11.7",
               "rp": 350000,
               "sp": 950000,
               "data_unit_id": "il_namer_rcws_30",
@@ -2392,13 +2512,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:39.560Z",
                 "sha256": "eb43b9d5bf918801492d60f09748431cd9e45715d9bfabc26757762100f1a394"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.7",
+                    "RB": "11.7",
+                    "SB": "11.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Namer Tsrikhon",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_namer_tsrikhon.png",
-              "br": "11.3",
+              "br": "11.7",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "il_namer_tsrikhon",
@@ -2435,6 +2565,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:39.726Z",
                 "sha256": "f7433b436ffc6f9bdc8b04eafd6f92f6211b13132bc8bc4a3eaef3fd2529370e"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.7",
+                    "RB": "11.7",
+                    "SB": "11.7"
+                  }
+                }
               }
             }
           ],
@@ -2450,7 +2590,7 @@
           "type": "single",
           "title": "Ra'am Sagol",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_3_raam_segol.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "il_merkava_mk_3_raam_segol",
@@ -2487,6 +2627,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:38.997Z",
             "sha256": "9bc5f1ba3e59227b1e5392f1b3671f8a1a5d868d11d2fdc6e7f251041602affb"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.7",
+                "RB": "11.7",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ]
@@ -2503,7 +2653,7 @@
           "type": "single",
           "title": "◐Leopard 2HEL",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_leopard_2a6_hel.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "il_leopard_2a6_hel",
@@ -2540,6 +2690,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:35.838Z",
             "sha256": "10bada034b769f6ed6cf59cb1d9b950ea1273e94eb133fcc60084aa313f1daf1"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -2549,7 +2709,7 @@
           "title": "Merkava 4 B/LIC",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_4_group.png",
           "selected": false,
-          "br": "12.3",
+          "br": "12.7",
           "data_unit_id": "il_merkava_4_group",
           "required_unit_id": "il_merkava_3_group",
           "class_name": "",
@@ -2558,7 +2718,7 @@
               "type": "single",
               "title": "Merkava Mk.4B",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_4b.png",
-              "br": "12.3",
+              "br": "12.7",
               "rp": 400000,
               "sp": 1080000,
               "data_unit_id": "il_merkava_mk_4b",
@@ -2595,13 +2755,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:39.195Z",
                 "sha256": "8e854adbc5c31a7e59917673f69418bbf41e531143a958ee69da960efb9cde69"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.7",
+                    "RB": "12.7",
+                    "SB": "12.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Merkava Mk.4 LIC",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_4_lic.png",
-              "br": "12.3",
+              "br": "12.7",
               "rp": 200000,
               "sp": 1100000,
               "data_unit_id": "il_merkava_mk_4_lic",
@@ -2638,6 +2808,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:38.800Z",
                 "sha256": "c762b25be2f81f3dadaccfbe37452e6d3fc6906e8b2caa364857482fd03ffbc8"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.7",
+                    "RB": "12.7",
+                    "SB": "12.7"
+                  }
+                }
               }
             }
           ],
@@ -2649,7 +2829,7 @@
           "type": "single",
           "title": "Merkava Mk.4M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_merkava_mk_4m.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "il_merkava_mk_4m",
@@ -2686,6 +2866,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:39.218Z",
             "sha256": "df357f18fe0d181cc4f5eba536d0454cc9784a72775d785f607f87d9a1c03441"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -2694,7 +2884,7 @@
           "type": "single",
           "title": "SPYDER",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/il_spyder_aio.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "il_spyder_aio",
@@ -2731,6 +2921,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:39.834Z",
             "sha256": "2d18d513689d21f3a4657ed2d972b14a8e1bda9ccb5b572968af8299ca26de89"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         }
       ],

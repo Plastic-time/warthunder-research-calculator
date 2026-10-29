@@ -7,7 +7,7 @@
           "type": "single",
           "title": "Scout AH.Mk.1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/scout_ah_mk1.png",
-          "br": "8.3",
+          "br": "9.0",
           "rp": 0,
           "sp": 390000,
           "data_unit_id": "scout_ah_mk1",
@@ -44,13 +44,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:03.211Z",
             "sha256": "3c44fb1dd4c192081b61e3f4ef74999d6edd0129b10baab601b222027f7d241f"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.0",
+                "SB": "8.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Wasp HAS.Mk.1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/wasp_has_mk1.png",
-          "br": "9.0",
+          "br": "9.3",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "wasp_has_mk1",
@@ -87,6 +97,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:03.372Z",
             "sha256": "85bb87d7ba535f2a8dce0657a48d0abb84d3b3674f8da294b103adf3b8187a78"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.3",
+                "SB": "9.0"
+              }
+            }
           }
         },
         {
@@ -150,7 +170,7 @@
           "type": "single",
           "title": "Lynx AH.Mk.1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/lynx_ah_mk1.png",
-          "br": "10.7",
+          "br": "11.3",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "lynx_ah_mk1",
@@ -187,6 +207,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:02.972Z",
             "sha256": "451db8b3c7c3a398b73741c0df319fe95085d9aa83988bf81e77349f947974bb"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "11.3",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ],
@@ -198,7 +228,7 @@
           "type": "single",
           "title": "Superhind",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/super_hind_mk3.png",
-          "br": "10.3",
+          "br": "10.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "super_hind_mk3",
@@ -235,13 +265,23 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:32:03.334Z",
             "sha256": "f9ac47385884eb42a395e2c5cd742ca83314fbb00962111e26220e16e3698b63"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.7",
+                "SB": "10.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "G-LYNX",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/g_lynx.png",
-          "br": "10.7",
+          "br": "11.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "g_lynx",
@@ -278,13 +318,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:02.850Z",
             "sha256": "95f2bf6ddc683ed1ef48a83b57ddbb1a1175cf45999fc3a0316ae1134e670b51"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "11.3",
+                "SB": "10.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Rooivalk Mk1F CSH",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_2_rooivalk.png",
-          "br": "11.7",
+          "br": "12.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ah_2_rooivalk",
@@ -321,6 +371,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:02.420Z",
             "sha256": "56385d28f8995171fc60d10aa6a733576d4c72d1c8e5f06fe9582c8c517f42fc"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "12.3",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ]
@@ -337,7 +397,7 @@
           "type": "single",
           "title": "AH Mk.1 Apache",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_mk1.png",
-          "br": "11.7",
+          "br": "12.3",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "ah_mk1",
@@ -374,13 +434,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:02.817Z",
             "sha256": "892a40cd40b2c48424d85c524e6a8e149d9d8f8c5d3151fb217f43cb1c935677"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "12.3",
+                "SB": "10.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "AH Mk.2 Apache",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64e_britain.png",
-          "br": "13.0",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1030000,
           "data_unit_id": "ah_64e_britain",
@@ -417,6 +487,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:02.702Z",
             "sha256": "7a0cea12945a97a05fa005526c03ad747cf6f9e99da8aa5651b143d3ff3e4e7e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "13.3",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -425,7 +505,7 @@
           "type": "single",
           "title": "Wildcat HMA2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/aw_159.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "aw_159",
@@ -462,6 +542,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:02.738Z",
             "sha256": "69a8307352daf8117d347965f45f259ecb25ea23c80033266ccb0b98228e20ec"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "12.7",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ]

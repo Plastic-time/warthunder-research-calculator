@@ -11,8 +11,11 @@ const version = read('config/data-version.json');
 const catalog = read('public/database/modifications/catalog.json');
 const correction = version.latestCorrection;
 const review = version.latestReview;
-assert.equal(review.gameVersion, catalog.eventModifications.version);
-assert.equal(review.gameDataCommit, catalog.eventModifications.commit);
+assert.equal(review.gameVersion, manifest.battleRatings.version);
+assert.equal(review.gameDataCommit, manifest.battleRatings.commit);
+assert.equal(review.scope, 'partial-battle-ratings');
+assert.equal(catalog.eventModifications.version, version.rosterAddition.version);
+assert.equal(catalog.eventModifications.commit, version.rosterAddition.commit);
 assert.equal(review.fullSnapshotUpgrade, false);
 assert(fs.readFileSync(path.join(root, review.provenance), 'utf8').includes(review.gameDataCommit));
 const compareVersion = (a, b) => {
@@ -96,9 +99,9 @@ for (const folder of ['public', 'docs']) {
   assert.equal($('.game-version [data-i18n="基础"]').length, 0);
   assert.equal($('.game-version [data-i18n="局部修正"]').length, 0);
   assert.equal($('[data-game-correction-scope]').length, 1);
-  for (const name of ['Bf 109 E-3', 'Jagdpanther G2', 'S-706']) assert($('[data-game-correction-scope]').text().includes(name));
+  for (const scope of ['638', '442', '空战', '陆战', '海战']) assert($('[data-game-correction-scope]').text().includes(scope));
   assert($('[data-game-correction-scope]').text().includes(review.gameVersion));
-  assert($('[data-game-correction-scope]').text().includes('仅更新这三辆，不改其他载具数据'));
+  assert($('[data-game-correction-scope]').text().includes('费用、配件、前置及已有计划不变'));
   // Historical changelog entries retain their original source versions.
   $('script, style, #usageGuideChangelog').remove();
   const currentCopy = [$('body').text()];

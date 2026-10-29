@@ -354,7 +354,7 @@
           "type": "single",
           "title": "MAS 441",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_mas441.png",
-          "br": "2.0",
+          "br": "2.3",
           "rp": 14000,
           "sp": 32000,
           "data_unit_id": "it_mas441",
@@ -389,6 +389,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:33:03.905Z",
             "sha256": "0071e71b26fa750c92eb1d73570d841980017f991a8ba380d5300042b2024126"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "2.3",
+                "RB": "2.3",
+                "SB": "2.3"
+              }
+            }
           }
         }
       ]
@@ -672,7 +682,7 @@
           "type": "single",
           "title": "Baleno MC-492",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_mc492_baleno.png",
-          "br": "3.3",
+          "br": "3.7",
           "rp": 120000,
           "sp": 360000,
           "data_unit_id": "it_mc492_baleno",
@@ -707,6 +717,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:33:04.746Z",
             "sha256": "539d620f450b0141b301ce83f153b48b19e53f85e364d7944490d4978b4928a8"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "3.7",
+                "RB": "3.7",
+                "SB": "3.7"
+              }
+            }
           }
         }
       ],

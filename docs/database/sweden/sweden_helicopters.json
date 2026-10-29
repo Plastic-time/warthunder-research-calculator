@@ -50,7 +50,7 @@
           "type": "single",
           "title": "HKP2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/hkp2.png",
-          "br": "8.3",
+          "br": "9.0",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "hkp2",
@@ -87,6 +87,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:07.838Z",
             "sha256": "468f3db188f35decba453668e4f7b8b51b884a300d2cbf438eaacd6c186f8dbd"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.0",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ]
@@ -106,7 +116,7 @@
           "type": "single",
           "title": "HKP9A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/hkp9a_cb2.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 360000,
           "sp": 980000,
           "data_unit_id": "hkp9a_cb2",
@@ -143,13 +153,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:07.669Z",
             "sha256": "91212d298cd75a1287a070fd11345ce3c09697e88435b3c5f5741b23904cf5fd"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "HKP9A (FC)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/hkp9a_cb3_fc.png",
-          "br": "9.3",
+          "br": "10.0",
           "rp": 370000,
           "sp": 990000,
           "data_unit_id": "hkp9a_cb3_fc",
@@ -186,6 +206,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:07.966Z",
             "sha256": "791b8990b323cc8dc94c96153ac9d926868d03790f3fe86bfdc04c8319562df3"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ]
@@ -196,7 +226,7 @@
           "type": "single",
           "title": "Mi-28A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/mi_28a_sweden.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "mi_28a_sweden",
@@ -233,6 +263,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:08.003Z",
             "sha256": "70daf5a961106ec54cdc3d460cabc81db70da0d1ece5424d51d277b67d0df3ca"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.0",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ]
@@ -249,7 +289,7 @@
           "type": "single",
           "title": "AHS",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ahs.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "ahs",
@@ -286,6 +326,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:07.450Z",
             "sha256": "dc101c4b3f03a202dc4fd527c34e0ca57c6daa1e0b1aead6600661fd1d6b473e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ]

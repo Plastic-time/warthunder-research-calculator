@@ -52,7 +52,7 @@
           "type": "single",
           "title": "Lahatut",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/md_500_tow_late.png",
-          "br": "9.0",
+          "br": "9.3",
           "rp": 150000,
           "sp": 490000,
           "data_unit_id": "md_500_tow_late",
@@ -89,6 +89,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:08.916Z",
             "sha256": "250ef7aa407fe96d0a887fa4eaa765dc901d70925a9e77e517c8ff6bf1f7b12c"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "9.3",
+                "SB": "8.7"
+              }
+            }
           }
         }
       ]
@@ -108,7 +118,7 @@
           "type": "single",
           "title": "Tzefa B",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_1q_iaf.png",
-          "br": "9.0",
+          "br": "9.7",
           "rp": 360000,
           "sp": 980000,
           "data_unit_id": "ah_1q_iaf",
@@ -145,13 +155,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:08.286Z",
             "sha256": "facb8aadfaf35bff3c1b0e292b3ae107dc344797b7492ccd66aa8d984e90691b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.7",
+                "SB": "9.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Tzefa D/E",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_1f_iaf.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 380000,
           "sp": 1000000,
           "data_unit_id": "ah_1f_iaf",
@@ -188,13 +208,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:08.189Z",
             "sha256": "0e304d2bd9b7211d4e45f01383f80c59cd738504cdc9a2e90e1db86e3e7e3c7e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.0",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Peten",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64a_iaf.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 390000,
           "sp": 1010000,
           "data_unit_id": "ah_64a_iaf",
@@ -231,6 +261,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:08.607Z",
             "sha256": "8ddbeaf976ae193634e08d5f2477225a191f43575ed4cb181047b841434b2130"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -242,7 +282,7 @@
           "type": "single",
           "title": "AH-64A Peten",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64a_peten_iaf.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "ah_64a_peten_iaf",
@@ -279,6 +319,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:32:08.658Z",
             "sha256": "9815800c1690dfd6416f4ed4d2a3ea6789664ea1194142b0958ce40fa466e226"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "11.7",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ]
@@ -295,7 +345,7 @@
           "type": "single",
           "title": "Saraph",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_64d_i_saraph.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "ah_64d_i_saraph",
@@ -332,6 +382,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:08.905Z",
             "sha256": "1aa47c706a75b8c05269206f2c0a7ce63a4791618c3891aa88394e665469007b"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "13.0",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ],
@@ -340,7 +400,7 @@
           "type": "single",
           "title": "AH-60",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ah_60_iaf.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 400000,
           "sp": 1020000,
           "data_unit_id": "ah_60_iaf",
@@ -377,6 +437,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:08.471Z",
             "sha256": "c7aa9d1e78d775288d83929bf8602b4c7b9d834261037b18054f040378e9cef0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.7",
+                "RB": "13.0",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ]

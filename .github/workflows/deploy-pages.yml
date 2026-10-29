@@ -14,6 +14,7 @@ on:
       - "tools/check-site-locales.cjs"
       - "tools/check-calculation-consistency.cjs"
       - "tools/check-game-roster-additions.cjs"
+      - "tools/check-battle-ratings.cjs"
       - "tools/check-export-hd.cjs"
       - "tools/check-export-controls.cjs"
       - "tools/check-plan-backup.cjs"

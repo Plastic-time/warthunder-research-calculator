@@ -2917,7 +2917,7 @@
           "type": "single",
           "title": "R3 T106 FA",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_oto_r3_106sr.png",
-          "br": "8.0",
+          "br": "8.3",
           "rp": 120000,
           "sp": 340000,
           "data_unit_id": "it_oto_r3_106sr",
@@ -2954,6 +2954,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:10.177Z",
             "sha256": "d5fe84a5b1106a72c351ffe721c9bd7fc79c8cdfa361efe3bf567ee923e12045"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.0",
+                "RB": "8.3",
+                "SB": "8.3"
+              }
+            }
           }
         }
       ],
@@ -3419,7 +3429,7 @@
           "type": "single",
           "title": "AUBL/74 HVG",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_aubl_74_60_70m.png",
-          "br": "8.0",
+          "br": "8.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "it_aubl_74_60_70m",
@@ -3456,6 +3466,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:04.567Z",
             "sha256": "0df92d2a18fa7c5c63d893b9654b6b8231673182181ef872b3eeb2e9e461dacb"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.3",
+                "RB": "8.3",
+                "SB": "8.3"
+              }
+            }
           }
         }
       ]
@@ -3516,7 +3536,7 @@
           "title": "Centauro 105/105R",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_centauro_105_group.png",
           "selected": false,
-          "br": "9.3-9.7",
+          "br": "9.7-10.0",
           "data_unit_id": "it_centauro_105_group",
           "required_unit_id": "it_vcc_80_hitfist_60",
           "class_name": "",
@@ -3525,7 +3545,7 @@
               "type": "single",
               "title": "Centauro I 105",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_b1_centauro.png",
-              "br": "9.3",
+              "br": "9.7",
               "rp": 190000,
               "sp": 520000,
               "data_unit_id": "it_b1_centauro",
@@ -3562,13 +3582,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:04.743Z",
                 "sha256": "216e0506a1fcda4dde86248900958ed09fa4185c2f4abf85cbda066fd86e2dc9"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.7",
+                    "RB": "9.7",
+                    "SB": "9.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Centauro I 105 R",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_b1_centauro_romor.png",
-              "br": "9.7",
+              "br": "10.0",
               "rp": 110000,
               "sp": 620000,
               "data_unit_id": "it_b1_centauro_romor",
@@ -3605,6 +3635,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:04.887Z",
                 "sha256": "f06db34a0c2251dc1ccd69131bdaef31ba0af723d532fbdf4e116fa1ab7e2cd7"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.0",
+                    "RB": "10.0",
+                    "SB": "10.0"
+                  }
+                }
               }
             }
           ],
@@ -3749,7 +3789,7 @@
           "type": "single",
           "title": "SIDAM 25 (Mistral)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_otobreda_sidam_25_mistral.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "it_otobreda_sidam_25_mistral",
@@ -3786,6 +3826,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:10.365Z",
             "sha256": "a89447ab9ac2ebf1e9daaaea99cd95051ff4f4feb702a264c6ca7c6853123b71"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ],
@@ -3882,7 +3932,7 @@
           "type": "single",
           "title": "◔T-72M1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_t_72m1.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "it_t_72m1",
@@ -3919,6 +3969,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:13.329Z",
             "sha256": "a91dda7ea32821bdf8700176a4f66784734d348109bfec2df61293855219d57d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ]
@@ -3929,7 +3989,7 @@
           "type": "single",
           "title": "OF-40 (MTCA)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_of_40_mtca.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "it_of_40_mtca",
@@ -3966,13 +4026,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:10.098Z",
             "sha256": "73080ac7f939e7f8b0f091c8437cf4af39c588ad73dca2798e94f7357f7c6fff"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "VRCC",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_vrcc_centauro.png",
-          "br": "9.7",
+          "br": "10.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "it_vrcc_centauro",
@@ -4009,6 +4079,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:14.117Z",
             "sha256": "c8f0f8a1402800507414ea34eeb9645f8b37914766abe079f36d7d774d71feaa"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
           }
         }
       ],
@@ -4070,7 +4150,7 @@
           "type": "single",
           "title": "Centauro I 120",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_centauro_mgs_120.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "it_centauro_mgs_120",
@@ -4107,6 +4187,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:05.974Z",
             "sha256": "3639779dc02a375c6ab4403bf71e1eb1dfccff376f656f3247c7db9d352e705d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         }
       ],
@@ -4159,7 +4249,7 @@
           "title": "Ariete PSO/WAR",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_ariete_group.png",
           "selected": false,
-          "br": "11.7",
+          "br": "12.0",
           "data_unit_id": "it_ariete_group",
           "required_unit_id": "it_c1_ariete_preserie",
           "class_name": "",
@@ -4168,7 +4258,7 @@
               "type": "single",
               "title": "Ariete PSO",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_c1_ariete_pso.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 350000,
               "sp": 950000,
               "data_unit_id": "it_c1_ariete_pso",
@@ -4205,13 +4295,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:05.573Z",
                 "sha256": "be3e36fe14eb51235bedf68017e64455eb7beb50222e793476c8bdb2c425a73b"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Ariete",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_c1_ariete.png",
-              "br": "11.7",
+              "br": "12.0",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "it_c1_ariete",
@@ -4248,6 +4348,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:05.577Z",
                 "sha256": "a4d37cb37a38e22093e8d1fe700092630a0e977ec8b9bc9dd2f3cf9922049e66"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.0",
+                    "RB": "12.0",
+                    "SB": "12.0"
+                  }
+                }
               }
             }
           ],
@@ -4262,7 +4372,7 @@
           "title": "Osa/Strela",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_9a33_35_group.png",
           "selected": false,
-          "br": "10.3",
+          "br": "10.7",
           "data_unit_id": "it_9a33_35_group",
           "required_unit_id": "it_otobreda_sidam_25_mistral",
           "class_name": "",
@@ -4271,7 +4381,7 @@
               "type": "single",
               "title": "▄Osa-AKM",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_9a33bm3.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 300000,
               "sp": 830000,
               "data_unit_id": "it_9a33bm3",
@@ -4308,13 +4418,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:03.929Z",
                 "sha256": "1a8946a43375562ba614b2cc72a310f7daabb6a636871174a5dfad22887e15eb"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "◔Strela-10M",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_9a35_m.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "it_9a35_m",
@@ -4351,6 +4471,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:04.188Z",
                 "sha256": "863b7d9704ee8a610a65317fa9402168ca686f1e23df54dccc08ea45e8edf151"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "11.0",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             }
           ],
@@ -4362,7 +4492,7 @@
           "type": "single",
           "title": "OTOMATIC",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_otomatic.png",
-          "br": "11.3",
+          "br": "11.7",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "it_otomatic",
@@ -4399,6 +4529,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:10.667Z",
             "sha256": "5a3b43322c319e558eff68315ea17c10fe992d0038a78bf75e1db8ef6b037bfa"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.7",
+                "RB": "11.7",
+                "SB": "11.7"
+              }
+            }
           }
         }
       ],
@@ -4508,7 +4648,7 @@
           "type": "single",
           "title": "Freccia",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_freccia.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "it_freccia",
@@ -4545,6 +4685,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:06.870Z",
             "sha256": "168e4fc091d7897d537fad8e3e4a8644dd3d2ff5557209e57033775f4184a297"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.3",
+                "SB": "11.3"
+              }
+            }
           }
         }
       ],
@@ -4553,7 +4703,7 @@
           "type": "single",
           "title": "◔Leopard 2A4",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_leopard_2a4.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "it_leopard_2a4",
@@ -4590,6 +4740,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:07.845Z",
             "sha256": "fac0133c66913921dec39399d4159bc8fdfe0dc63bb86a203f3746926ef8ad96"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         },
         {
@@ -4643,7 +4803,7 @@
           "type": "single",
           "title": "Centauro RGO",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_centauro_rgo_120.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "it_centauro_rgo_120",
@@ -4680,13 +4840,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:06.084Z",
             "sha256": "fc72c3212370d43412a869d840b70d782386f20db905fd7e80f263d0b48d8900"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Ariete Certezza",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_c1_ariete_certezza.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "it_c1_ariete_certezza",
@@ -4723,6 +4893,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:29:05.466Z",
             "sha256": "7338872dab98a91bd604de3ef6ff8676ecf5cbed46e36a1ddf481dcf1f91c23e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         }
       ],
@@ -4784,7 +4964,7 @@
           "type": "single",
           "title": "Centauro II (P)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_centauro_2.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "it_centauro_2",
@@ -4821,6 +5001,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:05.670Z",
             "sha256": "feb7c7e22a97fc7150531873e78765ae2b497ad9bcc8dfbca67511aee8f56a82"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
@@ -4829,7 +5019,7 @@
           "type": "single",
           "title": "Ariete AMV",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_ariete_amv_pt1.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "it_ariete_amv_pt1",
@@ -4866,6 +5056,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:04.257Z",
             "sha256": "52bb28f102a460add8afaeae5458c728038cd70b0a33d648b389e151e8c850b0"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
@@ -4875,7 +5075,7 @@
           "title": "FSAF SAMP/T",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_samp_t_fcs.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.3",
           "data_unit_id": "it_samp_t_fcs",
           "required_unit_id": "it_otomatic",
           "class_name": "",
@@ -4884,7 +5084,7 @@
               "type": "single",
               "title": "FSAF SAMP/T (TADS)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_samp_t_fcs.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 410000,
               "sp": 1100000,
               "data_unit_id": "it_samp_t_fcs",
@@ -4921,13 +5121,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:11.615Z",
                 "sha256": "83fdddcd250f38778b30fffc9e1a1c2050041fc2dc82eec68ea86dce154eaf31"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "FSAF SAMP/T (TEL)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_samp_t_launcher.png",
-              "br": null,
+              "br": "13.3",
               "rp": 0,
               "sp": 0,
               "data_unit_id": "it_samp_t_launcher",
@@ -4954,6 +5164,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:29:11.685Z",
                 "sha256": "0b9e8752e25ec84e935eb27a5bc920ad25a30f4a823c8673ca7cc5bbd769c6ac"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             }
           ],
@@ -4968,7 +5188,7 @@
           "type": "single",
           "title": "Leopard 2A7HU",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_leopard_2a7_hungary.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "it_leopard_2a7_hungary",
@@ -5005,6 +5225,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:07.858Z",
             "sha256": "bbc4206bf159f3e62066f1bf4f66aa80612fc9cf3876b7a145cda5595fe1fee7"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ]

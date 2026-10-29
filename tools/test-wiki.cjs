@@ -62,7 +62,8 @@ for (const entry of manifest.files) {
   for(const rank of tree) assert.equal(calc.getRankUnlockQuantity(rank),require('../dict/unlock_quantity').get_unlock_quantity(country,type,rank.rank));
   for(const unit of calc.state.units) {
     total++;
-    assert.equal(unit.br,(unit.wiki || unit.game_source).battle_ratings.RB||null);
+    const gameBr = unit.game_battle_ratings;
+    assert.equal(unit.br, gameBr ? gameBr.by_battle[gameBr.context].RB : (unit.wiki || unit.game_source).battle_ratings.RB||null);
     if(unit.is_component) {components++;assert.equal(unit.rp,0);}
     if(unit.rp===null||unit.sp===null) {unknown++;assert(!calc.isInitialUnlockedUnit(unit));}
     if(unit.is_squadron||unit.is_premium) {assert.equal(unit.rp,0);assert.equal(unit.sp,0);}

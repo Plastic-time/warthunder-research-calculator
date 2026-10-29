@@ -54,3 +54,5 @@ jobs:
             logs/modification-loading/browser-report.json
             logs/game-roster-browser/*.png
             logs/game-roster-browser/browser-report.json
+            logs/battle-ratings/*.png
+            logs/battle-ratings/browser-report.json

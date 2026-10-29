@@ -5321,7 +5321,7 @@
           "title": "Marder A1/BMP-1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_marder_bmp_group.png",
           "selected": false,
-          "br": "7.7-8.0",
+          "br": "7.7",
           "data_unit_id": "germ_marder_bmp_group",
           "required_unit_id": "germ_le_kpz_m41",
           "class_name": "",
@@ -5373,7 +5373,7 @@
               "type": "single",
               "title": "SPz BMP-1",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_bmp_1_ddr.png",
-              "br": "8.0",
+              "br": "7.7",
               "rp": 53000,
               "sp": 300000,
               "data_unit_id": "germ_bmp_1_ddr",
@@ -5410,6 +5410,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:48.374Z",
                 "sha256": "2f2863cf784842452de7c8915a5b529309fc415076569f2dd20fe56bfedd00bc"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "7.7",
+                    "RB": "7.7",
+                    "SB": "7.7"
+                  }
+                }
               }
             }
           ],
@@ -6078,7 +6088,7 @@
           "title": "TAM/JaPz.K",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_tam_sk_group.png",
           "selected": false,
-          "br": "8.7-9.0",
+          "br": "9.0",
           "data_unit_id": "germ_tam_sk_group",
           "required_unit_id": "germ_marder_group",
           "class_name": "",
@@ -6130,7 +6140,7 @@
               "type": "single",
               "title": "JaPz.K A2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_sk105_a2.png",
-              "br": "8.7",
+              "br": "9.0",
               "rp": 94000,
               "sp": 520000,
               "data_unit_id": "germ_sk105_a2",
@@ -6167,6 +6177,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:06.099Z",
                 "sha256": "18d7ac965ccf15064f6fad92b44ac979b6838e866bec523deab5c6e039b1a963"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.0",
+                    "RB": "9.0",
+                    "SB": "9.0"
+                  }
+                }
               }
             }
           ],
@@ -6267,7 +6287,7 @@
           "title": "KPz-70/M48 Super",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_kpz_super_group.png",
           "selected": false,
-          "br": "9.3",
+          "br": "9.3-9.7",
           "data_unit_id": "germ_kpz_super_group",
           "required_unit_id": "germ_mkpz_m48a2ga2",
           "class_name": "",
@@ -6276,7 +6296,7 @@
               "type": "single",
               "title": "KPz-70",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_kpz_70.png",
-              "br": "9.3",
+              "br": "9.7",
               "rp": 190000,
               "sp": 520000,
               "data_unit_id": "germ_kpz_70",
@@ -6313,6 +6333,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:51.501Z",
                 "sha256": "03967f0d8348ed5ef3392336a99c0cfb9f216b879b56eba1d5da2132cc7900c3"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.7",
+                    "RB": "9.7",
+                    "SB": "9.7"
+                  }
+                }
               }
             },
             {
@@ -6367,7 +6397,7 @@
           "type": "single",
           "title": "◊T-72M1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_kpz_t72m1.png",
-          "br": "9.3",
+          "br": "9.7",
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "germ_kpz_t72m1",
@@ -6404,6 +6434,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:51.391Z",
             "sha256": "889505b03d7c19fc5f6343c44a735ddb0dbf1d9a88172a0f4af77fae66267cad"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
           }
         }
       ],
@@ -6515,7 +6555,7 @@
           "type": "single",
           "title": "Gepard",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_flakpz_i_gepard.png",
-          "br": "8.3",
+          "br": "8.7",
           "rp": 135000,
           "sp": 380000,
           "data_unit_id": "germ_flakpz_i_gepard",
@@ -6552,6 +6592,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:50.140Z",
             "sha256": "143aee788e67d84575edae80c6f8efc8ed79732445724ce808280338a18ebf27"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "8.7",
+                "RB": "8.7",
+                "SB": "8.7"
+              }
+            }
           }
         },
         {
@@ -6559,7 +6609,7 @@
           "title": "Ozelot/Gepard 1A2",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_wiesel_gepard_group.png",
           "selected": false,
-          "br": "9.7",
+          "br": "10.0",
           "data_unit_id": "germ_wiesel_gepard_group",
           "required_unit_id": "germ_flakpz_i_gepard",
           "class_name": "",
@@ -6568,7 +6618,7 @@
               "type": "single",
               "title": "Ozelot",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_wiesel_2_adwc.png",
-              "br": "9.7",
+              "br": "10.0",
               "rp": 190000,
               "sp": 520000,
               "data_unit_id": "germ_wiesel_2_adwc",
@@ -6605,13 +6655,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:08.882Z",
                 "sha256": "cd962260e34dca866bf5a5d1c07f08f48e5a8690f9e903315a314e27d3e2c1a3"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.0",
+                    "RB": "10.0",
+                    "SB": "10.0"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Gepard 1A2",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_flakpz_1a2_gepard.png",
-              "br": "9.7",
+              "br": "10.0",
               "rp": 110000,
               "sp": 620000,
               "data_unit_id": "germ_flakpz_1a2_gepard",
@@ -6648,6 +6708,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:50.034Z",
                 "sha256": "461c502f2adfbfb71193ca5e83f3a434f3405c468d8dfa44a37012390b3a3b32"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.0",
+                    "RB": "10.0",
+                    "SB": "10.0"
+                  }
+                }
               }
             }
           ],
@@ -6925,7 +6995,7 @@
           "type": "single",
           "title": "Class 3 (P)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_th_800_bismark.png",
-          "br": "9.0",
+          "br": "9.3",
           "rp": null,
           "sp": null,
           "data_unit_id": "germ_th_800_bismark",
@@ -6962,6 +7032,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:28:07.978Z",
             "sha256": "2599ab903661d72a2d27b6cc6c7267a53db1078eec17d299d9327a116ce03a3e"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.3"
+              }
+            }
           }
         },
         {
@@ -7022,7 +7102,7 @@
           "title": "R.Kpfw.90/TAM 2C",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_radpanzer_tam_group.png",
           "selected": false,
-          "br": "10.0-10.3",
+          "br": "10.3",
           "data_unit_id": "germ_radpanzer_tam_group",
           "required_unit_id": "germ_begleitpanzer_57",
           "class_name": "",
@@ -7031,7 +7111,7 @@
               "type": "single",
               "title": "Radkampfwagen 90",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_radpanzer_90.png",
-              "br": "10.0",
+              "br": "10.3",
               "rp": 260000,
               "sp": 710000,
               "data_unit_id": "germ_radpanzer_90",
@@ -7068,6 +7148,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:28:04.060Z",
                 "sha256": "95b52b2235fde5cfc3f9320bc65f6e030765cecbcea33331f25c0d5393c9cf35"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.3",
+                    "RB": "10.3",
+                    "SB": "10.3"
+                  }
+                }
               }
             },
             {
@@ -7225,7 +7315,7 @@
           "type": "single",
           "title": "Leopard 2K",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2k.png",
-          "br": "10.0",
+          "br": "10.3",
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "germ_leopard_2k",
@@ -7262,6 +7352,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:53.332Z",
             "sha256": "38b6280540db0e5edbc4c7a47913619d1a3ee7cf67d035740c1d127ab6c9da19"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
           }
         }
       ],
@@ -7270,7 +7370,7 @@
           "type": "single",
           "title": "Leopard 2A4",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a4.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 300000,
           "sp": 830000,
           "data_unit_id": "germ_leopard_2a4",
@@ -7307,6 +7407,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:52.179Z",
             "sha256": "a730a26b2f592d2d4bc9f4a3dcb0fc792af71c7a88cc942526c617870470409d"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         }
       ],
@@ -7316,7 +7426,7 @@
           "title": "Roland/Osa",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_roland_osa_group.png",
           "selected": false,
-          "br": "10.0-10.3",
+          "br": "10.3-10.7",
           "data_unit_id": "germ_roland_osa_group",
           "required_unit_id": "germ_wiesel_gepard_group",
           "class_name": "",
@@ -7325,7 +7435,7 @@
               "type": "single",
               "title": "FlaRakPz 1",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_flarakpz_1.png",
-              "br": "10.0",
+              "br": "10.3",
               "rp": 300000,
               "sp": 830000,
               "data_unit_id": "germ_flarakpz_1",
@@ -7362,13 +7472,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:50.274Z",
                 "sha256": "9294f5481264c20329725528946896a5e16979579fa36dc796f46984dbbb3d59"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.3",
+                    "RB": "10.3",
+                    "SB": "10.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "◊Osa-AK",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_9a33bm3.png",
-              "br": "10.3",
+              "br": "10.7",
               "rp": 175000,
               "sp": 950000,
               "data_unit_id": "germ_9a33bm3",
@@ -7405,6 +7525,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:47.428Z",
                 "sha256": "ad1881230833ffd9502937381bb7e840cc8bf67b56cd340b62b5f08fdeaf0884"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "10.7",
+                    "RB": "10.7",
+                    "SB": "10.7"
+                  }
+                }
               }
             }
           ],
@@ -7416,7 +7546,7 @@
           "type": "single",
           "title": "◊Strela-10M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_9a35_m.png",
-          "br": "10.3",
+          "br": "10.7",
           "rp": 350000,
           "sp": 950000,
           "data_unit_id": "germ_9a35_m",
@@ -7453,6 +7583,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:47.517Z",
             "sha256": "2866595c09dbe79ebb2e3e34c74e4ce8991e0283a4a1fa610ef7463a62d94bcc"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "10.7",
+                "SB": "10.7"
+              }
+            }
           }
         }
       ],
@@ -7637,7 +7777,7 @@
           "type": "single",
           "title": "Leopard 2A4M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a4m_can.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "germ_leopard_2a4m_can",
@@ -7674,13 +7814,23 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:52.434Z",
             "sha256": "0ee16af9b898bd07d3c4743d516b3953cab4c7c1ba8bd7fa3b702cb83d3028e8"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "◍Leopard 2A4M",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a4m_can_sm.png",
-          "br": "12.0",
+          "br": "12.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "germ_leopard_2a4m_can_sm",
@@ -7717,6 +7867,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:52.463Z",
             "sha256": "71f32d52067df1f54ac3c5166b07bc8fb40b030fdb0abecedf8cd441658732b2"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.3",
+                "RB": "12.3",
+                "SB": "12.3"
+              }
+            }
           }
         }
       ],
@@ -7768,7 +7928,7 @@
           "type": "single",
           "title": "PT-16/T14 mod.",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2_pt14.png",
-          "br": "11.0",
+          "br": "11.3",
           "rp": null,
           "sp": null,
           "data_unit_id": "germ_leopard_2_pt14",
@@ -7805,13 +7965,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:52.291Z",
             "sha256": "b6216441a25b3e2d681f96661b8029c44d426dd8381dc581b0d21ee74d6547ed"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.3",
+                "SB": "11.3"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Leopard 2 (PzBtl 123)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a4_pzbtl_123.png",
-          "br": "10.7",
+          "br": "11.0",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "germ_leopard_2a4_pzbtl_123",
@@ -7848,6 +8018,16 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:27:52.324Z",
             "sha256": "c32eaab86873075e024db4a26f3e1d3735cac137da26b3c63b0124c6ce5cb4c3"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "11.0",
+                "RB": "11.0",
+                "SB": "11.0"
+              }
+            }
           }
         },
         {
@@ -7908,7 +8088,7 @@
           "type": "single",
           "title": "◄EMBT",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_embt.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "germ_embt",
@@ -7945,6 +8125,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:48.391Z",
             "sha256": "4ff42700a0b5505af2aaeb3150160485693f0f956dc633c2b357668bc2509adb"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -7954,7 +8144,7 @@
           "title": "Leopard 2 A5/A6",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2_group.png",
           "selected": false,
-          "br": "12.3-12.7",
+          "br": "12.7-13.0",
           "data_unit_id": "germ_leopard_2_group",
           "required_unit_id": "germ_leopard_2a4",
           "class_name": "",
@@ -7963,7 +8153,7 @@
               "type": "single",
               "title": "Leopard 2A5",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a5.png",
-              "br": "12.3",
+              "br": "12.7",
               "rp": 400000,
               "sp": 1080000,
               "data_unit_id": "germ_leopard_2a5",
@@ -8000,13 +8190,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:52.808Z",
                 "sha256": "213c5aaa00a4dc96f5d55f8ac8e31da3dcd4bb80ae761154e8bdafe928edbf01"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "12.7",
+                    "RB": "12.7",
+                    "SB": "12.7"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "Leopard 2A6",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a6.png",
-              "br": "12.7",
+              "br": "13.0",
               "rp": 200000,
               "sp": 1100000,
               "data_unit_id": "germ_leopard_2a6",
@@ -8043,6 +8243,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:52.762Z",
                 "sha256": "26b5cfe7e8d32b26fc3f867520f947080d04e9b9af032f8258405eb46fc897c3"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.0",
+                    "RB": "13.0",
+                    "SB": "13.0"
+                  }
+                }
               }
             }
           ],
@@ -8054,7 +8264,7 @@
           "type": "single",
           "title": "Leopard 2 PSO",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a5_pso.png",
-          "br": "12.7",
+          "br": "13.0",
           "rp": 410000,
           "sp": 1100000,
           "data_unit_id": "germ_leopard_2a5_pso",
@@ -8091,13 +8301,23 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:52.589Z",
             "sha256": "15c2104785b1c6ade870e73b3cb0a94edfa54a86dd8bc5eddefe67cac8a840f3"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "Leopard 2A7V",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a7v.png",
-          "br": "12.7",
+          "br": "13.3",
           "rp": 420000,
           "sp": 1120000,
           "data_unit_id": "germ_leopard_2a7v",
@@ -8134,6 +8354,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:52.896Z",
             "sha256": "8c1956c591250366ac9c3ffd21b88b63ccd422d28338eb63ad0c9c671fd577bb"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
           }
         }
       ],
@@ -8142,7 +8372,7 @@
           "type": "single",
           "title": "FlaRakRad",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_flarakrad.png",
-          "br": "11.7",
+          "br": "12.0",
           "rp": 400000,
           "sp": 1080000,
           "data_unit_id": "germ_flarakrad",
@@ -8179,6 +8409,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:50.406Z",
             "sha256": "d3e47263c65e1af405a96a914ccaee7160065a4dd938cdfb8531f6c5bd10d0b7"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.0",
+                "RB": "12.0",
+                "SB": "12.0"
+              }
+            }
           }
         },
         {
@@ -8186,7 +8426,7 @@
           "title": "IRIS-T SLM",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_iris_slm_fcs.png",
           "selected": false,
-          "br": "12.7",
+          "br": "13.3",
           "data_unit_id": "germ_iris_slm_fcs",
           "required_unit_id": "germ_flarakrad",
           "class_name": "",
@@ -8195,7 +8435,7 @@
               "type": "single",
               "title": "IRIS-T SLM (TADS)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_iris_slm_fcs.png",
-              "br": "12.7",
+              "br": "13.3",
               "rp": 410000,
               "sp": 1100000,
               "data_unit_id": "germ_iris_slm_fcs",
@@ -8232,13 +8472,23 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:50.770Z",
                 "sha256": "d10560ebdc25b1865ab450f96bec815b16392214dd6063b1077eeb94a745f698"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             },
             {
               "type": "single",
               "title": "IRIS-T SLM (TEL)",
               "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_iris_slm_launcher.png",
-              "br": null,
+              "br": "13.3",
               "rp": 0,
               "sp": 0,
               "data_unit_id": "germ_iris_slm_launcher",
@@ -8265,6 +8515,16 @@
                 "status": null,
                 "fetched_at": "2026-09-19T06:27:50.714Z",
                 "sha256": "16be8e1233a7d2427920fcfc9ffccbd833b0a4407a9c0b223cd17af0cb3c3fe4"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "13.3",
+                    "RB": "13.3",
+                    "SB": "13.3"
+                  }
+                }
               }
             }
           ],
@@ -8281,7 +8541,7 @@
           "type": "single",
           "title": "Leopard 2PL",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2pl.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "germ_leopard_2pl",
@@ -8318,13 +8578,23 @@
             "status": "Squadron vehicle",
             "fetched_at": "2026-09-19T06:27:53.403Z",
             "sha256": "a8fda9f601c52b0bec07f516af6699b99ab77fe6dfdbd33ae39d1fbcd7a1cc73"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         },
         {
           "type": "single",
           "title": "␙Leopard 2A5",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a5.png",
-          "br": "12.3",
+          "br": "12.7",
           "rp": null,
           "sp": null,
           "data_unit_id": "germ_leopard_2a5_yt_cup_2019",
@@ -8361,6 +8631,16 @@
             "status": null,
             "fetched_at": "2026-09-19T06:27:52.938Z",
             "sha256": "61413949c5d391e73e52d3408374ec09310804bbfee460f6919eb0a57bea49c9"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "12.7",
+                "RB": "12.7",
+                "SB": "12.7"
+              }
+            }
           }
         }
       ],
