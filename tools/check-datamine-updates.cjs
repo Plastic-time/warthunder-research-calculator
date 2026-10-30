@@ -33,6 +33,56 @@ function validateCheckpoints(checkpoints) {
   }
 }
 
+async function releaseChannels(reader, headVersion) {
+  // master mixes live and dev. Use explicit maintainer declarations, never version parity.
+  const gistsApi = 'https://api.github.com/gists';
+  const listings = await reader('https://api.github.com/users/gszabi99/gists?per_page=30');
+  assert(Array.isArray(listings), 'Invalid channel announcement listing');
+  const latest = listings.find(gist => Object.keys(gist.files || {}).some(name => /^\d+\.\d+\.\d+\.\d+\.md$/.test(name)));
+  assert(latest && /^[a-f0-9]{32}$/.test(latest.id), 'Missing channel announcement');
+  const filename = `${headVersion}.md`;
+  assert(Object.hasOwn(latest.files, filename), 'Channel announcement does not match repository head');
+  const metadata = await reader(`${gistsApi}/${latest.id}`);
+  const revision = metadata.history?.[0]?.version;
+  assert(validSha(revision), 'Invalid channel announcement revision');
+  const pinned = await reader(`${gistsApi}/${latest.id}/${revision}`);
+  assert.equal(pinned.id, latest.id, 'Channel announcement identity mismatch');
+  assert.equal(pinned.owner?.login, 'gszabi99', 'Unexpected channel announcement owner');
+  assert.equal(pinned.history?.[0]?.version, revision, 'Channel announcement revision mismatch');
+  const file = pinned.files?.[filename];
+  assert(file && file.truncated === false && typeof file.content === 'string', 'Incomplete channel announcement');
+  const channels = {};
+  for (const [channel, label] of Object.entries({
+    'regular-live': 'regular live', dev: 'dev', 'dev-stable': 'dev-stable', 'wip-live': 'WiP live',
+  })) {
+    const prefix = `Current ${label} version:`;
+    const lines = file.content.split(/\r?\n/).map(line => line.trim()).filter(line => line.startsWith(prefix));
+    if (!lines.length && ['dev-stable', 'wip-live'].includes(channel)) continue;
+    assert.equal(lines.length, 1, `Missing or ambiguous ${channel} declaration`);
+    const version = lines[0].slice(prefix.length).trim();
+    assert(validVersion(version), `Invalid ${channel} version`);
+    channels[channel] = version;
+  }
+  assert(Object.values(channels).includes(headVersion), 'Repository head has no declared channel');
+  return { channels, channelEvidence: {
+    type: 'datamine-maintainer-gist', revision,
+    url: `https://gist.github.com/gszabi99/${latest.id}/${revision}`,
+    limitation: 'Maintainer channel declarations, not an official game availability guarantee.',
+  } };
+}
+
+async function regularLiveCommit(reader, head, headVersion, liveVersion) {
+  if (headVersion === liveVersion) return head;
+  // Bound network work; an unavailable/older live pin requires a manual review.
+  const history = await reader(`${api}/commits?sha=${head}&path=version&per_page=100`);
+  assert(Array.isArray(history), 'Invalid version history');
+  const match = history.find(entry => entry.commit?.message?.trim() === liveVersion);
+  assert(match && validSha(match.sha), 'Regular live revision not found in recent version history');
+  const actual = (await reader(`${raw}/${match.sha}/version`, false)).trim();
+  assert.equal(actual, liveVersion, 'Regular live version does not match pinned revision');
+  return match.sha;
+}
+
 // Compare-file pagination cannot recover files beyond 300; walk small Git trees instead.
 function sourceFiles(reader) {
   const responses = new Map();
@@ -78,17 +128,20 @@ async function checkDatamineUpdates(options = {}) {
     assert(validSha(baseline.gameDataCommit), 'Invalid snapshot revision');
     const head = await reader(`${api}/commits/master`);
     assert(validSha(head.sha), 'Invalid source revision');
-    const version = (await reader(`${raw}/${head.sha}/version`, false)).trim();
-    assert(validVersion(version), 'Invalid source version');
-    const changed = head.sha !== baseline.gameDataCommit;
-    const compare = changed ? await reader(`${api}/compare/${baseline.gameDataCommit}...${head.sha}`) : null;
+    const headVersion = (await reader(`${raw}/${head.sha}/version`, false)).trim();
+    assert(validVersion(headVersion), 'Invalid source version');
+    const { channels, channelEvidence } = await releaseChannels(reader, headVersion);
+    const version = channels['regular-live'];
+    const liveCommit = await regularLiveCommit(reader, head.sha, headVersion, version);
+    const changed = liveCommit !== baseline.gameDataCommit;
+    const compare = changed ? await reader(`${api}/compare/${baseline.gameDataCommit}...${liveCommit}`) : null;
     if (compare) {
       assert(['ahead', 'identical'].includes(compare.status), 'Upstream history diverged from snapshot');
       assert(Array.isArray(compare.files), 'Invalid comparison file list');
     }
     const files = (compare?.files || []).map(file => ({ path: file.filename, status: file.status }));
     const resolveFile = sourceFiles(reader);
-    const versions = new Map([[head.sha, version]]);
+    const versions = new Map([[liveCommit, version]]);
     const scopes = [];
     for (const [name, checkpoint] of Object.entries(checkpoints.scopes)) {
       const pin = checkpoint.gameDataCommit;
@@ -97,7 +150,7 @@ async function checkDatamineUpdates(options = {}) {
       const checkedFiles = [];
       for (const file of checkpoint.files) {
         const before = await resolveFile(pin, file);
-        const after = await resolveFile(head.sha, file);
+        const after = await resolveFile(liveCommit, file);
         checkedFiles.push({ path: file, before, after, changed: before !== after });
       }
       scopes.push({ name, checkpoint, files: checkedFiles, requiresReview: checkedFiles.some(file => file.changed) });
@@ -105,14 +158,17 @@ async function checkDatamineUpdates(options = {}) {
     const report = {
       checkedAt, repository: `https://github.com/${repository}`,
       baseline: { version: baseline.gameVersion, commit: baseline.gameDataCommit, scope: baseline.scope },
-      upstream: { version, commit: head.sha }, changed,
+      upstream: { channel: 'regular-live', version, commit: liveCommit }, changed,
+      repositoryHead: { version: headVersion, commit: head.sha,
+        channels: Object.keys(channels).filter(channel => channels[channel] === headVersion) },
+      channels, channelEvidence,
       comparisonStatus: compare?.status || 'identical',
       requiresReview: changed || scopes.some(scope => scope.requiresReview),
       fileListMayBeTruncated: files.length >= 300,
       criticalFilesComplete: true, fullFileListComplete: files.length < 300,
       relevantFiles: files.filter(file => /^(char\.vromfs\.bin_u\/config\/|aces\.vromfs\.bin_u\/|gui\.vromfs\.bin_u\/|atlases\.vromfs\.bin_u\/|images\.vromfs\.bin_u\/|lang\.vromfs\.bin_u\/)/.test(file.path)),
       scopes,
-      compareUrl: `https://github.com/${repository}/compare/${baseline.gameDataCommit}...${head.sha}`,
+      compareUrl: `https://github.com/${repository}/compare/${baseline.gameDataCommit}...${liveCommit}`,
       applied: false,
     };
     writeReport(report);
