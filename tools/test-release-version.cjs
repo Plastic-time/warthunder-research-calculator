@@ -14,7 +14,7 @@ test('package, lock, current release notes and README downloads share one versio
   assert.equal(lock.version,version);
   assert.equal(lock.packages[''].version,version);
   const notes=read('doc/release-v'+version+'.md');
-  for(const text of ['v'+version,game.gameVersion,'638','442','P1Y1','B7A2','Ki-93','AIM-26B','.NET 10.0.14'])
+  for(const text of ['v'+version,'2.59.0.93','638','442','P1Y1','B7A2','Ki-93','AIM-26B','.NET 10.0.14'])
     assert(notes.includes(text),text);
   const link='https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v'+version+'/WarThunderResearchCalculator-v'+version+'-portable.zip';
   for(const file of ['README.md','README.en.md']) {
@@ -28,9 +28,9 @@ test('package, lock, current release notes and README downloads share one versio
 test('both app entrypoints include the new release while retaining historical entries', () => {
   for(const folder of ['public','docs']) {
     const $=cheerio.load(read(folder+'/index.html'));
-    const first=$('#usageGuideChangelog article').first().text();
+    const first=$('#usageGuideChangelog article').filter((_, el) => $(el).find('.usage-guide-update-meta span').text() === 'v'+version).text();
     assert(first.includes('v'+version));
-    for(const text of [game.gameVersion,'638','P1Y1','配件','真实前置']) assert(first.includes(text));
+    for(const text of ['2.59.0.93','638','P1Y1','配件','真实前置']) assert(first.includes(text));
     assert($('#usageGuideChangelog').text().includes('v1.0.29'));
     assert.equal($('[data-game-version]').text(),game.gameVersion);
   }

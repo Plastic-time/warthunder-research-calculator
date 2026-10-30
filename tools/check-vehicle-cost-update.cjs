@@ -6,29 +6,33 @@ const express = require('express');
 const { chromium } = require('playwright');
 const { launchOptions } = require('./browser-test-runtime.cjs');
 const { restoreCosts } = require('./apply-vehicle-cost-update.cjs');
+const { restoreCorrection } = require('./apply-battle-ratings.cjs');
 const evidence = require('../config/vehicle-cost-update.json');
 const manifest = require('../docs/database/manifest.json');
 const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'logs/vehicle-cost-update');
 const file = 'database/japan/japan_aviation.json';
 const tree = require('../docs/' + file);
+const legacyTree = restoreCosts(restoreCorrection(tree));
+assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(legacyTree, null, 2) + '\n').digest('hex'), evidence.trees[file]);
 
 async function run() {
   fs.mkdirSync(output, { recursive: true });
   let legacy = true;
   const app = express();
   app.get('/api/tree/japan/aviation', (req, res, next) => legacy
-    ? res.set('Cache-Control', 'no-store').json({ success: true, data: restoreCosts(tree) }) : next());
+    ? res.set('Cache-Control', 'no-store').json({ success: true, data: legacyTree }) : next());
   app.get('/pages/database/manifest.json', (req, res) => {
     const value = structuredClone(manifest);
     if (legacy) {
       delete value.vehicleCosts;
+      delete value.battleRatingCorrection;
       for (const row of value.files) row.sha256 = evidence.trees[row.path];
     }
     res.set('Cache-Control', 'public, max-age=31536000').json(value);
   });
   app.get('/pages/' + file, (req, res) => res.set('Cache-Control', 'public, max-age=31536000')
-    .type('json').send(JSON.stringify(legacy ? restoreCosts(tree) : tree, null, 2) + '\n'));
+    .type('json').send(JSON.stringify(legacy ? legacyTree : tree, null, 2) + '\n'));
   app.use('/pages', express.static(path.join(root, 'docs')));
   app.use(require('../main'));
   const server = app.listen(0, '127.0.0.1'); await once(server, 'listening');
@@ -84,7 +88,7 @@ async function run() {
           await page.evaluate(locale => { WTI18n.missing.clear(); setLanguage(locale); }, locale);
           if (!(await page.locator('#guideButton').isVisible())) await page.locator('#mobileMoreButton').click();
           await page.locator('#guideButton').click(); await page.locator('#usageGuideLogTab').click();
-          const latest = page.locator('#usageGuideChangelog article').first();
+          const latest = page.locator('#usageGuideChangelog article').filter({ hasText: 'P1Y1' }).first();
           assert((await latest.innerText()).includes('P1Y1'));
           assert(await latest.locator('p').evaluate(p => p.scrollWidth <= p.clientWidth));
           assert.deepEqual(await page.evaluate(() => [...WTI18n.missing]), []);

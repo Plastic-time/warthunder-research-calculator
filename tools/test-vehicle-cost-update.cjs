@@ -5,6 +5,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const { wikiUnits } = require('./audit-datamine-roster.cjs');
 const { patchCosts, restoreCosts, verifyDelta, verifySources } = require('./apply-vehicle-cost-update.cjs');
+const { restoreCorrection } = require('./apply-battle-ratings.cjs');
 const evidence = require('../config/vehicle-cost-update.json');
 const root = path.resolve(__dirname, '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file)));
@@ -35,7 +36,7 @@ test('all 50 trees retain every field outside the three verified RP/SL correctio
     const bytes = fs.readFileSync(path.join(root, 'docs', file.path));
     assert(bytes.equals(fs.readFileSync(path.join(root, file.path))), file.path);
     assert.equal(hash(bytes), file.sha256);
-    const current = JSON.parse(bytes), previous = restoreCosts(current);
+    const current = restoreCorrection(JSON.parse(bytes)), previous = restoreCosts(current);
     assert.equal(hash(JSON.stringify(previous, null, 2) + '\n'), evidence.trees[file.path], file.path);
     assert.deepEqual(patchCosts(previous), current);
     for (const [id, unit] of wikiUnits(current)) {
@@ -47,6 +48,7 @@ test('all 50 trees retain every field outside the three verified RP/SL correctio
     file.sha256 = evidence.trees[file.path];
   }
   delete manifest.vehicleCosts;
+  delete manifest.battleRatingCorrection;
   assert.equal(hash(JSON.stringify(manifest, null, 2) + '\n'), evidence.manifestSha256);
   assert.equal(changed, 3);
 });

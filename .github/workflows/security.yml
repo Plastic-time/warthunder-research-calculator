@@ -52,6 +52,7 @@ jobs:
       - run: node --test tools/test-datamine-updates.cjs
       - run: node --test tools/test-game-data-review.cjs
       - run: node --test tools/test-battle-ratings.cjs
+      - run: node --test tools/test-battle-rating-correction.cjs
       - run: node --test tools/test-vehicle-cost-update.cjs
       - run: node --test tools/test-modification-update.cjs
       - run: node --test tools/test-release-version.cjs

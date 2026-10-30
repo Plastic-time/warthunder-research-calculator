@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const { wikiUnits } = require('./audit-datamine-roster.cjs');
-const { ratings, patchTree, restoreTree, verifySources } = require('./apply-battle-ratings.cjs');
+const { ratings, patchTree, restoreTree, restoreCorrection, verifySources } = require('./apply-battle-ratings.cjs');
 const { restoreCosts } = require('./apply-vehicle-cost-update.cjs');
 const root = path.resolve(__dirname, '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file)));
@@ -85,7 +85,7 @@ test('all reviewed snapshots differ only in BR fields and runtime mirrors remain
     const bytes = fs.readFileSync(path.join(root, 'docs', entry.path));
     assert(bytes.equals(fs.readFileSync(path.join(root, entry.path))));
     assert.equal(hash(bytes), entry.sha256);
-    const tree = restoreCosts(JSON.parse(bytes)), type = path.basename(entry.path, '.json').split('_').slice(1).join('_');
+    const tree = restoreCorrection(restoreCosts(JSON.parse(bytes))), type = path.basename(entry.path, '.json').split('_').slice(1).join('_');
     if (evidence.trees[entry.path]) {
       const previous = restoreTree(tree, evidence);
       assert.equal(hash(JSON.stringify(previous, null, 2) + '\n'), evidence.trees[entry.path], 'No non-BR changes: ' + entry.path);

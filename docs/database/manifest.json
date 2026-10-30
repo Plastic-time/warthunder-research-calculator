@@ -171,7 +171,7 @@
     {
       "path": "database/ussr/ussr_aviation.json",
       "units": 198,
-      "sha256": "8cc849cdd2aacd1ebc48efc265ec01c99cf979b9371772a74649d0225f5a5a6c",
+      "sha256": "0ce0859eaec191ed4371f21345f40546b6542f5b1710ff4d01275b17df7cad78",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "mig_35"
@@ -181,7 +181,7 @@
     {
       "path": "database/britain/britain_aviation.json",
       "units": 164,
-      "sha256": "16feb8a4b9012e4a9f6b9e7b36b3f2506828036e5008c10c40ab4bc618aa8e94",
+      "sha256": "e2279b0ac44f062f0a203193071061c85ede3c8a39ab1023d502ca614e16a00d",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "hawk_t1a_early",
@@ -193,7 +193,7 @@
     {
       "path": "database/japan/japan_aviation.json",
       "units": 140,
-      "sha256": "db34599fb323f66e09a10fe24c9379320717ee821afcd51ce983a16e176a8cd3",
+      "sha256": "d6544f36ee3f9b5950621eb763bee6f51b02cdd574058c3104ef12b14c2ab3e2",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "ki_93_1_ko",
@@ -206,7 +206,7 @@
     {
       "path": "database/china/china_aviation.json",
       "units": 89,
-      "sha256": "f5597246c7abb0b6bd4c7c1caf4f556236dd09d82833d674619f16e8329492ed",
+      "sha256": "3e368a1a328b17ea2ae24d6039a70cc6e5fb2b1ddad523836b8249c2fb14689e",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "j_16"
@@ -1834,6 +1834,13 @@
       "p1y1_mod11"
     ],
     "provenance": "config/vehicle-cost-update.json",
+    "fullSnapshotUpgrade": false
+  },
+  "battleRatingCorrection": {
+    "version": "2.59.0.94",
+    "commit": "2423f3099e2a5ec3f31efdce87b9f4380ea761ec",
+    "scope": "changed-mode-specific-battle-ratings",
+    "provenance": "config/battle-rating-correction.json",
     "fullSnapshotUpgrade": false
   }
 }

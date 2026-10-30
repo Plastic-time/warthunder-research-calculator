@@ -40,7 +40,7 @@ function patchTree(tree, type, evidence) {
     const entry = evidence.units[id];
     if (node.type === 'single' && entry) {
       assert.equal(node.br, entry.previousBr, 'Unexpected pre-update BR: ' + id);
-      assert(!node.game_battle_ratings, 'BR source already exists: ' + id);
+      assert.deepEqual(node.game_battle_ratings || null, entry.previousRatings || null, 'Unexpected previous BR source: ' + id);
       node.game_battle_ratings = ratings(entry.ranks, type);
       node.br = node.game_battle_ratings.by_battle[node.game_battle_ratings.context].RB;
     } else if (node.type === 'multiple' && node.items.some(item => evidence.units[item.data_unit_id?.toLowerCase()])) {
@@ -54,16 +54,22 @@ function patchTree(tree, type, evidence) {
 }
 
 // Reconstruct the previous snapshot for historical integrity assertions; only BR fields are reversed.
-function restoreTree(tree, evidence = read('config/battle-rating-update.json')) {
+function restoreTree(tree, evidence) {
+  if (!evidence) return restoreTree(restoreCorrection(tree), read('config/battle-rating-update.json'));
   const result = structuredClone(tree);
   visit(result, node => {
     const id = node.data_unit_id?.toLowerCase();
     if (node.type === 'single' && evidence.units[id] && node.game_battle_ratings) {
       node.br = evidence.units[id].previousBr;
-      delete node.game_battle_ratings;
+      if (evidence.units[id].previousRatings) node.game_battle_ratings = structuredClone(evidence.units[id].previousRatings);
+      else delete node.game_battle_ratings;
     } else if (node.type === 'multiple' && Object.hasOwn(evidence.groups, id)) node.br = evidence.groups[id];
   });
   return result;
+}
+
+function restoreCorrection(tree) {
+  return restoreTree(tree, read('config/battle-rating-correction.json'));
 }
 
 function verifySources(directory, evidence) {
@@ -90,16 +96,20 @@ function verifySources(directory, evidence) {
   for (const [id, entry] of Object.entries(evidence.units)) {
     assert(current.has(id) && old.has(id), 'Missing source vehicle: ' + id);
     assert.deepEqual(extract(current.get(id)), entry.ranks, 'Unverified BR source: ' + id);
+    if (entry.previousRanks) assert.deepEqual(extract(old.get(id)), entry.previousRanks, 'Unverified previous BR source: ' + id);
     assert.notDeepEqual(extract(old.get(id)), entry.ranks, 'Vehicle has no BR delta: ' + id);
   }
   return { verified: true, units: Object.keys(evidence.units).length };
 }
 
-function apply(directory, write = false) {
-  const evidence = read('config/battle-rating-update.json');
+function apply(directory, write = false, correction = false) {
+  const provenance = correction ? 'config/battle-rating-correction.json' : 'config/battle-rating-update.json';
+  const evidence = read(provenance);
   verifySources(directory, evidence);
   const manifest = read('docs/database/manifest.json'), writes = new Map();
-  assert(!manifest.battleRatings, 'BR update already applied');
+  const key = correction ? 'battleRatingCorrection' : 'battleRatings';
+  assert(!manifest[key], 'BR update already applied');
+  if (correction) assert.equal(digest(fs.readFileSync(path.join(root, 'docs/database/manifest.json'))), evidence.manifestSha256, 'Unexpected baseline manifest');
   for (const file of manifest.files) {
     const source = fs.readFileSync(path.join(root, file.path));
     assert(source.equals(fs.readFileSync(path.join(root, 'docs', file.path))), 'Runtime mirrors differ');
@@ -113,8 +123,8 @@ function apply(directory, write = false) {
     file.sha256 = digest(bytes);
     writes.set(file.path, bytes); writes.set('docs/' + file.path, bytes);
   }
-  manifest.battleRatings = { version: evidence.version, commit: evidence.commit, scope: 'changed-mode-specific-battle-ratings',
-    provenance: 'config/battle-rating-update.json', fullSnapshotUpgrade: false };
+  manifest[key] = { version: evidence.version, commit: evidence.commit, scope: 'changed-mode-specific-battle-ratings',
+    provenance, fullSnapshotUpgrade: false };
   writes.set('docs/database/manifest.json', JSON.stringify(manifest, null, 2) + '\n');
   if (write) for (const [file, bytes] of writes) fs.writeFileSync(path.join(root, file), bytes);
   return { applied: write, files: writes.size, units: Object.keys(evidence.units).length };
@@ -124,7 +134,7 @@ if (require.main === module) {
   try {
     const at = process.argv.indexOf('--source-dir');
     assert(at >= 0 && process.argv[at + 1], 'Provide --source-dir');
-    console.log(JSON.stringify(apply(process.argv[at + 1], process.argv.includes('--apply'))));
+    console.log(JSON.stringify(apply(process.argv[at + 1], process.argv.includes('--apply'), process.argv.includes('--correction'))));
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = { ratings, patchTree, restoreTree, verifySources, rankField };
+module.exports = { ratings, patchTree, restoreTree, restoreCorrection, verifySources, rankField };

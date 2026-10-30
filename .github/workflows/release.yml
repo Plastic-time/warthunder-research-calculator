@@ -54,7 +54,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Wiki regression failed" }
           node tools/test-desktop-snapshot.cjs
           if ($LASTEXITCODE -ne 0) { throw "Desktop snapshot regression failed" }
-          node --test tools/test-battle-ratings.cjs tools/test-vehicle-cost-update.cjs tools/test-modification-update.cjs tools/test-release-version.cjs
+          node --test tools/test-battle-ratings.cjs tools/test-battle-rating-correction.cjs tools/test-vehicle-cost-update.cjs tools/test-modification-update.cjs tools/test-release-version.cjs
           if ($LASTEXITCODE -ne 0) { throw "Release data or version regression failed" }
           node tools/test-planner.cjs
           if ($LASTEXITCODE -ne 0) { throw "Planner regression failed" }
@@ -141,7 +141,7 @@ jobs:
                 }
               }
               Write-Host "Verified $zipPath"
-              $dataFiles = @("config/data-version.json", "config/battle-rating-update.json", "config/vehicle-cost-update.json", "public/database/modifications/catalog.json")
+              $dataFiles = @("config/data-version.json", "config/battle-rating-update.json", "config/battle-rating-correction.json", "config/vehicle-cost-update.json", "public/database/modifications/catalog.json")
               $manifest = Get-Content -Raw docs/database/manifest.json | ConvertFrom-Json
               $dataFiles += @($manifest.files | ForEach-Object { $_.path })
               $catalog = Get-Content -Raw public/database/modifications/catalog.json | ConvertFrom-Json

@@ -79,6 +79,7 @@ test('October 28 review leaves the supported roster, costs and modification snap
     }
     if (file === 'docs/database/manifest.json') {
       const manifest = JSON.parse(bytes), br = read('config/battle-rating-update.json');
+      delete manifest.battleRatingCorrection;
       const costs = read('config/vehicle-cost-update.json');
       assert.equal(manifest.vehicleCosts.commit, costs.commit);
       delete manifest.vehicleCosts;

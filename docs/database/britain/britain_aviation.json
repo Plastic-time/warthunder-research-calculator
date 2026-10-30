@@ -4151,7 +4151,7 @@
                   },
                   "tank": {
                     "AB": "5.0",
-                    "RB": "6.7",
+                    "RB": "6.3",
                     "SB": "6.0"
                   },
                   "ship": {
@@ -5661,7 +5661,7 @@
           "type": "single",
           "title": "Hawk T Mk 1A",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/hawk_t1a_early.png",
-          "br": "7.7",
+          "br": "7.3",
           "rp": 95000,
           "sp": 270000,
           "data_unit_id": "hawk_t1a_early",
@@ -5708,6 +5708,26 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:46.298Z",
             "sha256": "80ef70ca500bb094f51dc71deec39f5fc73c603ca911961bc2248923e13e791f"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "7.3",
+                "RB": "7.3",
+                "SB": "7.3"
+              },
+              "tank": {
+                "AB": "7.3",
+                "RB": "7.0",
+                "SB": "7.0"
+              },
+              "ship": {
+                "AB": "7.3",
+                "RB": "7.3",
+                "SB": "7.3"
+              }
+            }
           }
         },
         {
@@ -6141,7 +6161,7 @@
           "type": "single",
           "title": "Hawk T Mk 1A (FRP)",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/hawk_t1a.png",
-          "br": "7.7",
+          "br": "7.3",
           "rp": 0,
           "sp": 0,
           "data_unit_id": "hawk_t1a",
@@ -6188,6 +6208,26 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:46.491Z",
             "sha256": "0044e5c257bdd880202aa3df8aa53dc97bab320805ccdcaf34273f08d2665841"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "7.3",
+                "RB": "7.3",
+                "SB": "7.3"
+              },
+              "tank": {
+                "AB": "7.3",
+                "RB": "7.0",
+                "SB": "7.0"
+              },
+              "ship": {
+                "AB": "7.3",
+                "RB": "7.3",
+                "SB": "7.3"
+              }
+            }
           }
         },
         {
