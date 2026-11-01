@@ -8,8 +8,18 @@ report under `logs/`; it never imports data or advances review checkpoints.
 The datamine repository's `master` branch contains both live and development
 builds. A newer version or commit does not mean it is on the regular live server.
 The checker reads the maintainer's latest version-named changelog among their
-30 most recent public Gists, pins its revision, and requires its filename and
-explicit channel declarations to match the pinned repository head.
+30 most recent public Gists and pins its revision. Both `2.60.0.20.md` and
+numbered parts such as `2.60.0.20_Part_5.md` are recognized; unrelated asset lists
+are ignored. The filename describes the diff topic, not necessarily the current
+server version. The explicit current-channel declarations in the pinned body
+must still identify the pinned repository head.
+
+For example, a `2.60.0.20_Part_5.md` note may explicitly declare dev `2.60.0.21`
+and regular live `2.59.0.94`. This is accepted only after verifying the owner,
+revision, complete content, unique channel declarations and live data revision.
+Multiple matching files or a filename change between discovery and the pinned
+revision fail closed. An invalid latest part is not skipped in favor of older
+notes, and declarations from different parts are not mixed together.
 
 `channels` lists `regular-live` and `dev`, plus `dev-stable` and `wip-live` when
 declared. A build can belong to multiple channels. `repositoryHead` describes
@@ -26,7 +36,7 @@ unresolvable live revision fail closed. There is no fallback to `master` and no
 reuse of an earlier successful report. Re-run after the maintainer publishes
 matching evidence; otherwise review the source manually.
 
-`channelEvidence` records the immutable Gist revision and URL. These are
+`channelEvidence` records the immutable Gist revision, filename and URL. These are
 **datamine maintainer declarations, not an official game availability guarantee**.
 Before importing changes, still confirm release status against official notices.
 This command only checks data; it neither updates the website nor builds installers.

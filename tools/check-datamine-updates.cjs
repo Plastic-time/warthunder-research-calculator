@@ -8,6 +8,7 @@ const api = `https://api.github.com/repos/${repository}`;
 const raw = `https://raw.githubusercontent.com/${repository}`;
 const validSha = value => typeof value === 'string' && /^[a-f0-9]{40}$/.test(value);
 const validVersion = value => typeof value === 'string' && /^\d+\.\d+\.\d+\.\d+$/.test(value);
+const changelogFiles = files => Object.keys(files || {}).filter(name => /^\d+\.\d+\.\d+\.\d+(?:_Part_[1-9]\d*)?\.md$/.test(name));
 const scopeFiles = {
   'vehicle-costs': ['wpcost'], 'vehicle-prerequisites': ['wpcost', 'shop'],
   'rank-unlocks': ['rank'], modifications: ['wpcost'],
@@ -38,10 +39,11 @@ async function releaseChannels(reader, headVersion) {
   const gistsApi = 'https://api.github.com/gists';
   const listings = await reader('https://api.github.com/users/gszabi99/gists?per_page=30');
   assert(Array.isArray(listings), 'Invalid channel announcement listing');
-  const latest = listings.find(gist => Object.keys(gist.files || {}).some(name => /^\d+\.\d+\.\d+\.\d+\.md$/.test(name)));
+  const latest = listings.find(gist => changelogFiles(gist.files).length > 0);
   assert(latest && /^[a-f0-9]{32}$/.test(latest.id), 'Missing channel announcement');
-  const filename = `${headVersion}.md`;
-  assert(Object.hasOwn(latest.files, filename), 'Channel announcement does not match repository head');
+  const filenames = changelogFiles(latest.files);
+  assert.equal(filenames.length, 1, 'Ambiguous channel announcement files');
+  const [filename] = filenames;
   const metadata = await reader(`${gistsApi}/${latest.id}`);
   const revision = metadata.history?.[0]?.version;
   assert(validSha(revision), 'Invalid channel announcement revision');
@@ -49,6 +51,7 @@ async function releaseChannels(reader, headVersion) {
   assert.equal(pinned.id, latest.id, 'Channel announcement identity mismatch');
   assert.equal(pinned.owner?.login, 'gszabi99', 'Unexpected channel announcement owner');
   assert.equal(pinned.history?.[0]?.version, revision, 'Channel announcement revision mismatch');
+  assert.deepEqual(changelogFiles(pinned.files), filenames, 'Channel announcement files changed or are ambiguous');
   const file = pinned.files?.[filename];
   assert(file && file.truncated === false && typeof file.content === 'string', 'Incomplete channel announcement');
   const channels = {};
@@ -63,9 +66,10 @@ async function releaseChannels(reader, headVersion) {
     assert(validVersion(version), `Invalid ${channel} version`);
     channels[channel] = version;
   }
+  // The filename describes the diff topic; its current-channel footer may name a newer build.
   assert(Object.values(channels).includes(headVersion), 'Repository head has no declared channel');
   return { channels, channelEvidence: {
-    type: 'datamine-maintainer-gist', revision,
+    type: 'datamine-maintainer-gist', revision, filename,
     url: `https://gist.github.com/gszabi99/${latest.id}/${revision}`,
     limitation: 'Maintainer channel declarations, not an official game availability guarantee.',
   } };

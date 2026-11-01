@@ -18,12 +18,13 @@ function fixture(t, options = {}) {
   const calls = [];
   const read = async url => {
     calls.push(url);
-    const headVersion = options.dev ? '2.60.0.20' : '2.59.0.99';
-    if (url.includes('/users/gszabi99/gists?')) return [{ id: gistId, files: { [`${options.stale ? '2.59.0.98' : headVersion}.md`]: {} } }];
+    const headVersion = options.headVersion || (options.dev ? '2.60.0.20' : '2.59.0.99');
+    const filename = options.filename || `${headVersion}.md`;
+    if (url.includes('/users/gszabi99/gists?')) return [{ id: gistId, files: { [filename]: {} } }];
     if (url.includes(`/gists/${gistId}`)) return {
       id: gistId, owner: { login: 'gszabi99' }, history: [{ version: sha(50) }],
-      files: { [`${headVersion}.md`]: { truncated: false, content: options.channelText ??
-        `Current dev version: ${headVersion}\nCurrent dev-stable version: 2.59.0.99\nCurrent WiP live version: 2.59.0.99\nCurrent regular live version: 2.59.0.99` } },
+      files: { [filename]: { truncated: false, content: options.channelText ??
+        `Current dev version: ${options.stale ? '2.60.0.19' : headVersion}\nCurrent dev-stable version: 2.59.0.99\nCurrent WiP live version: 2.59.0.99\nCurrent regular live version: 2.59.0.99` } },
     };
     if (url.includes('/commits?')) return options.noLive ? [] : [{ sha: sha(3), commit: { message: '2.59.0.99' } }];
     if (url.endsWith('/commits/master')) return { sha: sha(2) };
@@ -83,6 +84,73 @@ test('development head is informational; all review comparisons target regular l
   assert.deepEqual(report.scopes.map(s => s.requiresReview), [true, true, false, true]);
   assert(fs.readFileSync(path.join(f.root, 'config/data-review-checkpoints.json')).equals(before));
   assert.equal(report.applied, false);
+});
+
+for (const filename of ['2.60.0.20.md', '2.60.0.20_Part_2.md', '2.60.0.20_Part_5.md', '2.60.0.20_Part_12.md']) {
+  test(`${filename} uses current channel declarations, not the changelog topic version`, async t => {
+    const f = fixture(t, { dev: true, headVersion: '2.60.0.21', filename });
+    const before = fs.readFileSync(path.join(f.root, 'config/data-review-checkpoints.json'));
+    const report = await checkDatamineUpdates(f);
+    assert.deepEqual(report.upstream, { channel: 'regular-live', version: '2.59.0.99', commit: sha(3) });
+    assert.deepEqual(report.repositoryHead, { version: '2.60.0.21', commit: sha(2), channels: ['dev'] });
+    assert.equal(report.channelEvidence.filename, filename);
+    assert.equal(report.channelEvidence.revision, sha(50));
+    assert(f.calls.includes(`https://api.github.com/gists/${gistId}/${sha(50)}`));
+    assert(!f.calls.some(url => url.includes('/compare/') && url.endsWith(sha(2))));
+    assert(fs.readFileSync(path.join(f.root, 'config/data-review-checkpoints.json')).equals(before));
+    assert.equal(report.applied, false);
+  });
+}
+
+test('latest part takes precedence over older single-file notes; unrelated asset Gists are ignored', async t => {
+  const f = fixture(t, { dev: true, headVersion: '2.60.0.21', filename: '2.60.0.20_Part_5.md' });
+  const older = 'b'.repeat(32);
+  const read = async url => {
+    const result = await f.read(url);
+    if (url.includes('/users/gszabi99/gists?')) return [
+      { id: 'c'.repeat(32), files: { 'unused_assets_2.60.0.21.md': {} } }, ...result,
+      { id: older, files: { '2.60.0.21.md': {} } },
+    ];
+    return result;
+  };
+  const report = await checkDatamineUpdates({ ...f, read });
+  assert.equal(report.channelEvidence.filename, '2.60.0.20_Part_5.md');
+  assert(!f.calls.some(url => url.includes(`/gists/${older}`)));
+});
+
+for (const [name, mutate] of Object.entries({
+  'stale declarations': file => { file.content = 'Current dev version: 2.60.0.20\nCurrent regular live version: 2.59.0.99'; },
+  'missing regular live': file => { file.content = 'Current dev version: 2.60.0.21'; },
+  'conflicting regular live': file => { file.content += '\nCurrent regular live version: 2.60.0.21'; },
+  'truncated part': file => { file.truncated = true; },
+})) test(`${name} in the newest part stops the check instead of falling back to older notes`, async t => {
+  const filename = '2.60.0.20_Part_5.md';
+  const f = fixture(t, { dev: true, headVersion: '2.60.0.21', filename });
+  const older = 'b'.repeat(32);
+  fs.mkdirSync(path.dirname(f.output));
+  fs.writeFileSync(f.output, '{"criticalFilesComplete":true}');
+  const read = async url => {
+    const result = await f.read(url);
+    if (url.includes('/users/gszabi99/gists?')) return [...result, { id: older, files: { '2.60.0.21.md': {} } }];
+    if (url.endsWith(`/gists/${gistId}/${sha(50)}`)) mutate(result.files[filename]);
+    return result;
+  };
+  await assert.rejects(checkDatamineUpdates({ ...f, read }));
+  assert(!f.calls.some(url => url.includes(`/gists/${older}`)));
+  assert(!f.calls.some(url => url.includes('/compare/')));
+  assert.equal(JSON.parse(fs.readFileSync(f.output)).status, 'failed');
+});
+
+for (const location of ['listing', 'pinned revision']) test(`ambiguous changelog files in ${location} fail closed`, async t => {
+  const f = fixture(t, { dev: true });
+  const read = async url => {
+    const result = await f.read(url);
+    if (location === 'listing' && url.includes('/users/gszabi99/gists?')) result[0].files['2.60.0.20_Part_2.md'] = {};
+    if (location === 'pinned revision' && url.endsWith(`/gists/${gistId}/${sha(50)}`)) result.files['2.60.0.20_Part_2.md'] = result.files['2.60.0.20.md'];
+    return result;
+  };
+  await assert.rejects(checkDatamineUpdates({ ...f, read }));
+  assert.equal(JSON.parse(fs.readFileSync(f.output)).status, 'failed');
 });
 
 test('a build can belong to both regular live and dev without version-number heuristics', async t => {
