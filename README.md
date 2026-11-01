@@ -69,9 +69,9 @@
 
 **备份与恢复**：电脑端点击右上角的备份图标，手机端打开“更多 → 备份与恢复”。导出 JSON 文件可保存当前浏览器中所有科技树的目标、已拥有标记、途经点、RP 进度和配件记录。导入前会显示记录数量与覆盖数量，确认后只替换文件中包含的记录，其他计划保留。文件在本机处理，不上传服务器；这不是自动跨设备同步。
 
-网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.30 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.30/WarThunderResearchCalculator-v1.0.30-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js 或 .NET。
+网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.31 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.31/WarThunderResearchCalculator-v1.0.31-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js 或 .NET。
 
-> v1.0.30 包含本次发布时的界面、规划功能与数据，启动器自带 .NET 10.0.14。下载包不会自动获得后续网页更新；截图用于展示界面。
+> v1.0.31 包含依赖安全修复、配件重试保护、七架飞机 BR 修正及更新检查器改进，启动器自带 .NET 10.0.14。下载包不会自动获得后续网页更新；截图用于展示界面。
 
 “筛选”菜单中的“全选”可选择或取消当前国家、军种的常规研发载具，包含折叠载具，保留已拥有标记和研发进度。导出截图同时显示科技树原始总额与当前选择还需的 RP、银狮；缺失费用会单独提示。
 
@@ -88,7 +88,7 @@
 - **局部修正单独记录**：Ka-29、Do 217 J-2 保留已确认修正；v1.0.11 按 **2.59.0.34** 配置将两架 CA-27 的 GLBC mk.3 调整为 **9,000 RP / 14,000 SL**，不代表整体快照升级。
 - **已保留修正**：v1.0.19 按 **2.59.0.38** 更新 F4U-7 配件费用、机炮翻新层级和解锁数量；全配件合计 **47,800 RP / 86,900 SL**。
 - **已保留修正**：v1.0.25 按 **2.59.0.50** 定向更新希腊 F-86E(M)、米格-23M 和 416 工程的配件。具体费用与前置变化见[更新说明](doc/release-v1.0.25.md)，不代表全量数据升级。
-- **最新核对版本**：**2.59.0.94**。本轮只修正七架飞机的分模式 BR，空战、陆战和海战数值分别保存；费用、配件、前置和已有计划不变，不是全量快照升级。见[本轮 BR 修正依据](doc/battle-rating-correction-20261030.md)。此前 638 辆载具的 [BR 更新](doc/battle-rating-update-20261029.md)、三架日系飞机的[载具费用更新](doc/vehicle-cost-update-20261029.md)和六辆载具的[配件更新](doc/modification-update-20261029.md)已纳入 v1.0.30 便携包；本轮七架飞机修正尚未打包。此前[活动载具](doc/game-roster-additions-20261024.md)和[活动配件依据](doc/event-modifications-20261024.md)保留。
+- **最新核对版本**：**2.59.0.94**。本轮只修正七架飞机的分模式 BR，空战、陆战和海战数值分别保存；费用、配件、前置和已有计划不变，不是全量快照升级。见[本轮 BR 修正依据](doc/battle-rating-correction-20261030.md)。此前 638 辆载具的 [BR 更新](doc/battle-rating-update-20261029.md)、三架日系飞机的[载具费用更新](doc/vehicle-cost-update-20261029.md)和六辆载具的[配件更新](doc/modification-update-20261029.md)，连同本轮七架飞机修正均已纳入 v1.0.31 便携包。此前[活动载具](doc/game-roster-additions-20261024.md)和[活动配件依据](doc/event-modifications-20261024.md)保留。
 - **未知不是免费**：缺失费用显示“未提供”，不当作 0。等级解锁数量还使用项目独立规则表，规划结果需结合游戏核对。
 - **计划留在浏览器**：选择、规划和研发进度保存在当前浏览器，不上传、不跨设备同步；清除浏览器站点数据会删除这些记录。图片、Wiki 和网页版在线人数需要联网；在线人数是浏览器估计值，统计异常不影响计算。
 
@@ -100,7 +100,7 @@
 - [在线人数统计规则](doc/online-counter.md)
 - [配件图标来源](doc/ammunition-artwork.md)
 - [载具快照清单](docs/database/manifest.json) · [配件核对记录](tools/modifications-audit.json)
-- [v1.0.30 更新说明](doc/release-v1.0.30.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.31 更新说明](doc/release-v1.0.31.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 

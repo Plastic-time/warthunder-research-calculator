@@ -69,9 +69,9 @@ On mobile, open More at the top to find the guide and export controls. Search an
 
 **Backup and restore**: select the backup icon at the top right. On mobile, open More, then Backup and restore. Export a JSON file to save targets, owned marks, waypoints, RP progress, and modification records across all trees in this browser. Import shows a summary before confirmation. Only records in the file are replaced. Other plans stay unchanged. Files are processed locally and are not uploaded. This is a manual transfer, not automatic device sync.
 
-Open the web app to start. No game account is required. On Windows, download the [v1.0.30 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.30/WarThunderResearchCalculator-v1.0.30-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js or .NET installation is needed.
+Open the web app to start. No game account is required. On Windows, download the [v1.0.31 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.31/WarThunderResearchCalculator-v1.0.31-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js or .NET installation is needed.
 
-> v1.0.30 includes the interface, planning features and data available at this release. The launcher bundles .NET 10.0.14. It does not receive later web updates automatically. Screenshots illustrate the interface.
+> v1.0.31 includes dependency security fixes, safer modification retries, seven aircraft BR corrections and update checker improvements. The launcher bundles .NET 10.0.14. It does not receive later web updates automatically. Screenshots illustrate the interface.
 
 Select all, in Filters, toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
 
@@ -88,7 +88,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - **Scoped corrections**: confirmed Ka-29 and Do 217 J-2 corrections remain in place. Version 1.0.11 uses configuration **2.59.0.34** to set GLBC mk.3 on both CA-27 variants to **9,000 RP / 14,000 SL**. This is not a full snapshot upgrade.
 - **Retained correction**: v1.0.19 updates F4U-7 modification costs, the cannon upgrade tier, and unlock counts using **2.59.0.38**. All modifications total **47,800 RP / 86,900 SL**.
 - **Retained correction**: v1.0.25 updates modifications for the Greek F-86E(M), MiG-23M, and Object 416 using **2.59.0.50**. See the [release notes](doc/release-v1.0.25.md#english) for costs and prerequisites. This is not a full data upgrade.
-- **Latest reviewed version**: **2.59.0.94**. This update corrects mode-specific BR for seven aircraft. Air, ground and naval ratings remain separate. Costs, modifications, prerequisites and saved plans are unchanged. This is not a full snapshot upgrade. See the [current BR correction evidence](doc/battle-rating-correction-20261030.md). The earlier [BR update for 638 vehicles](doc/battle-rating-update-20261029.md), [vehicle cost update for three Japanese aircraft](doc/vehicle-cost-update-20261029.md) and [modification update for six vehicles](doc/modification-update-20261029.md) are included in v1.0.30. The new seven-aircraft correction is not yet included in a portable release. Earlier [event vehicle](doc/game-roster-additions-20261024.md) and [event modification evidence](doc/event-modifications-20261024.md) is retained.
+- **Latest reviewed version**: **2.59.0.94**. This update corrects mode-specific BR for seven aircraft. Air, ground and naval ratings remain separate. Costs, modifications, prerequisites and saved plans are unchanged. This is not a full snapshot upgrade. See the [current BR correction evidence](doc/battle-rating-correction-20261030.md). The earlier [BR update for 638 vehicles](doc/battle-rating-update-20261029.md), [vehicle cost update for three Japanese aircraft](doc/vehicle-cost-update-20261029.md) and [modification update for six vehicles](doc/modification-update-20261029.md) are included in v1.0.31, together with the seven-aircraft correction. Earlier [event vehicle](doc/game-roster-additions-20261024.md) and [event modification evidence](doc/event-modifications-20261024.md) is retained.
 - **Unknown is not free**: missing prices are shown as unavailable, not zero. Rank-unlock counts still use a separate project rules table. Verify your route in the game.
 - **Plans stay in your browser**: selections, routes, and RP progress are saved locally. They are not uploaded or synced between devices. Clearing site data deletes these records. Images, Wiki pages, and the online counter need a connection. The counter estimates active browsers. An outage does not affect calculations.
 
@@ -100,7 +100,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - [Online counter rules](doc/online-counter.md) (Chinese)
 - [Modification artwork sources](doc/ammunition-artwork.md) (Chinese)
 - [Vehicle snapshot manifest](docs/database/manifest.json) · [Modification audit](tools/modifications-audit.json)
-- [v1.0.30 notes](doc/release-v1.0.30.md) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.31 notes](doc/release-v1.0.31.md) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 

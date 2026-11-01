@@ -50,6 +50,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Wiki HTTP security regression failed" }
           npm run test:security
           if ($LASTEXITCODE -ne 0) { throw "Security tests failed" }
+          node --test tools/test-datamine-updates.cjs
+          if ($LASTEXITCODE -ne 0) { throw "Live channel and multipart checks failed" }
           node tools/test-wiki.cjs
           if ($LASTEXITCODE -ne 0) { throw "Wiki regression failed" }
           node tools/test-desktop-snapshot.cjs
@@ -123,7 +125,7 @@ jobs:
               }
               $securityFiles = @("src/wiki-http.js", "src/1-extract_tree_div.js", "src/3-request_details.js")
               if ($suffix -eq "") {
-                $securityFiles += @("tools/launcher/LaunchPolicy.cs", "tools/launcher/Program.cs", "tools/check-launcher-policy.cjs", "tools/fixtures/launcher-policy-tests.cs", "tools/check-release-privacy.ps1", "tools/test-release-privacy.ps1")
+                $securityFiles += @("tools/launcher/LaunchPolicy.cs", "tools/launcher/Program.cs", "tools/check-launcher-policy.cjs", "tools/fixtures/launcher-policy-tests.cs", "tools/check-release-privacy.ps1", "tools/test-release-privacy.ps1", "tools/check-datamine-updates.cjs", "tools/test-datamine-updates.cjs", "tools/test-dependency-security.cjs")
               }
               foreach ($file in $securityFiles) {
                 $entry = $archive.Entries | Where-Object { $_.FullName.Replace('\', '/') -eq $file }
@@ -135,6 +137,15 @@ jobs:
                 if ($hash -ne (Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash) { throw "Stale security fix: $file" }
               }
               if ($suffix -eq "-portable") {
+                $patchedDependencies = @{ "follow-redirects" = "1.16.2"; "glob" = "14.0.2"; "minimatch" = "11.0.1" }
+                foreach ($name in $patchedDependencies.Keys) {
+                  $dependencyPath = "node_modules/$name/package.json"
+                  $entry = $archive.Entries | Where-Object { $_.FullName.Replace('\', '/') -eq $dependencyPath }
+                  if (-not $entry) { throw "Missing packaged dependency: $name" }
+                  $reader = [System.IO.StreamReader]::new($entry.Open())
+                  try { $installed = $reader.ReadToEnd() | ConvertFrom-Json } finally { $reader.Dispose() }
+                  if ($installed.version -ne $patchedDependencies[$name]) { throw "Stale packaged dependency: $name" }
+                }
                 foreach ($file in @("node.exe", "WarThunderResearchCalculator.exe")) {
                   $entry = $archive.GetEntry($file)
                   if (-not $entry -or $entry.Length -eq 0) { throw "Missing runtime: $file" }
