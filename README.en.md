@@ -88,7 +88,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - **Scoped corrections**: confirmed Ka-29 and Do 217 J-2 corrections remain in place. Version 1.0.11 uses configuration **2.59.0.34** to set GLBC mk.3 on both CA-27 variants to **9,000 RP / 14,000 SL**. This is not a full snapshot upgrade.
 - **Retained correction**: v1.0.19 updates F4U-7 modification costs, the cannon upgrade tier, and unlock counts using **2.59.0.38**. All modifications total **47,800 RP / 86,900 SL**.
 - **Retained correction**: v1.0.25 updates modifications for the Greek F-86E(M), MiG-23M, and Object 416 using **2.59.0.50**. See the [release notes](doc/release-v1.0.25.md#english) for costs and prerequisites. This is not a full data upgrade.
-- **Latest reviewed version**: **2.59.0.94**. This update corrects mode-specific BR for seven aircraft. Air, ground and naval ratings remain separate. Costs, modifications, prerequisites and saved plans are unchanged. This is not a full snapshot upgrade. See the [current BR correction evidence](doc/battle-rating-correction-20261030.md). The earlier [BR update for 638 vehicles](doc/battle-rating-update-20261029.md), [vehicle cost update for three Japanese aircraft](doc/vehicle-cost-update-20261029.md) and [modification update for six vehicles](doc/modification-update-20261029.md) are included in v1.0.31, together with the seven-aircraft correction. Earlier [event vehicle](doc/game-roster-additions-20261024.md) and [event modification evidence](doc/event-modifications-20261024.md) is retained.
+- **Latest reviewed version**: **2.59.0.94**. This update corrects mode-specific BR for seven aircraft. Air, ground and naval ratings remain separate. Costs, modifications, prerequisites and saved plans are unchanged. This is not a full snapshot upgrade. See the [current BR correction evidence](doc/battle-rating-correction-20261030.md) (Chinese). The earlier [BR update for 638 vehicles](doc/battle-rating-update-20261029.md) (Chinese), [vehicle cost update for three Japanese aircraft](doc/vehicle-cost-update-20261029.md) (Chinese) and [modification update for six vehicles](doc/modification-update-20261029.md) are included in v1.0.31, together with the seven-aircraft correction. Earlier [event vehicle](doc/game-roster-additions-20261024.md) and [event modification evidence](doc/event-modifications-20261024.md) is retained.
 - **Unknown is not free**: missing prices are shown as unavailable, not zero. Rank-unlock counts still use a separate project rules table. Verify your route in the game.
 - **Plans stay in your browser**: selections, routes, and RP progress are saved locally. They are not uploaded or synced between devices. Clearing site data deletes these records. Images, Wiki pages, and the online counter need a connection. The counter estimates active browsers. An outage does not affect calculations.
 
@@ -96,7 +96,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 <summary>Development, maintenance, and further reading</summary>
 
 - [Local setup and data maintenance](doc/development.md) (Chinese)
-- [Server configuration and update permissions](doc/server-security.md) (Chinese)
+- [Server configuration and update permissions](doc/server-security.md)
 - [Online counter rules](doc/online-counter.md) (Chinese)
 - [Modification artwork sources](doc/ammunition-artwork.md) (Chinese)
 - [Vehicle snapshot manifest](docs/database/manifest.json) · [Modification audit](tools/modifications-audit.json)
