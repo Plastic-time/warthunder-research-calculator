@@ -14,7 +14,7 @@
 
 <p align="center"><a href="README.md">简体中文</a> &nbsp; / &nbsp; <strong>English</strong></p>
 
-<p align="center"><sub>3,235 vehicles · 3,225 modification trees · 5 vehicle categories · 7 UI languages</sub></p>
+<p align="center"><sub>3,238 vehicles · 3,228 modification trees · 5 vehicle categories · 7 UI languages</sub></p>
 
 ## Plan Your Research Route
 
@@ -26,7 +26,7 @@ Set your targets and mark the vehicles you own. The calculator searches for a lo
 - **Adjust the result**: remove a vehicle or mark it as owned without clearing the rest of the route. Run the planner again when you want a new calculation.
 - **Use the remaining RP shown in the game**: if a 140,000 RP vehicle needs 60,000 more, enter 60,000. Budgets and route choices use that amount. Its Silver Lion cost stays the same.
 - **Mark ranks as owned**: mark regular vehicles at a chosen rank and all lower ranks. Review the list before confirming, or undo the change afterward. Special and hidden vehicles are excluded.
-- **Keep the budget in view**: see the remaining vehicle count, RP, and Silver Lions in the bottom bar. Export the complete tech tree and its budget as an image.
+- **Keep the budget in view**: the bottom bar shows the remaining vehicle count, RP, and Silver Lions. On desktop it also shows your targets and waypoints. Export the complete tech tree and its budget as an image.
 
 > Route optimization is a beta feature. The search has a computation limit. It returns the best route found. A cheaper route may still exist. Check the result in the game before researching.
 
@@ -61,7 +61,12 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 | View vehicle information | Select the Wiki bookmark on the card | Same |
 | Open modification research | Select the gear at the top right of the card | Same |
 
-On desktop, the header is a single row: nation, search, and icon buttons for Filters, Guide, Export, Clear Plan, and Backup. Hover over an icon to see its name. Calculation scope, the foldered-vehicle option, and Select all are in Filters. Language and game version are in More at the top right. Select the avatar for author details. In narrower windows, nation and category share one row and search takes the next.
+On desktop, the header is a single row: nation, search, and icon buttons for Filters, Guide, Export, Clear Plan, and Backup. Hover over an icon to see its name.
+
+- Calculation scope, the foldered-vehicle option, and Select all are in Filters.
+- Language and game version are in More at the top right.
+- Select the avatar for author details.
+- In narrower windows, nation and category share one row. Search takes the next.
 
 On mobile, open More at the top to find the guide and export controls. Search and filters have separate buttons. See the [web changelog](doc/web-updates.md#english) for recent changes. The in-app guide keeps earlier release notes.
 
@@ -71,7 +76,7 @@ Search accepts names such as F15, F-15, and F 15 and shows the match count. On m
 
 Open the web app to start. No game account is required. On Windows, download the [v1.0.31 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.31/WarThunderResearchCalculator-v1.0.31-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js or .NET installation is needed.
 
-> v1.0.31 includes dependency security fixes, safer modification retries, seven aircraft BR corrections and update checker improvements. The launcher bundles .NET 10.0.14. It does not receive later web updates automatically. Screenshots illustrate the interface.
+> v1.0.31 includes dependency security fixes, safer modification retries, BR corrections for seven aircraft, and update checker improvements. The launcher bundles .NET 10.0.14. The download does not receive later web updates automatically. Screenshots illustrate the interface.
 
 Select all, in Filters, toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
 
@@ -88,7 +93,13 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - **Scoped corrections**: confirmed Ka-29 and Do 217 J-2 corrections remain in place. Version 1.0.11 uses configuration **2.59.0.34** to set GLBC mk.3 on both CA-27 variants to **9,000 RP / 14,000 SL**. This is not a full snapshot upgrade.
 - **Retained correction**: v1.0.19 updates F4U-7 modification costs, the cannon upgrade tier, and unlock counts using **2.59.0.38**. All modifications total **47,800 RP / 86,900 SL**.
 - **Retained correction**: v1.0.25 updates modifications for the Greek F-86E(M), MiG-23M, and Object 416 using **2.59.0.50**. See the [release notes](doc/release-v1.0.25.md#english) for costs and prerequisites. This is not a full data upgrade.
-- **Latest reviewed version**: **2.59.0.94**. This update corrects mode-specific BR for seven aircraft. Air, ground and naval ratings remain separate. Costs, modifications, prerequisites and saved plans are unchanged. This is not a full snapshot upgrade. See the [current BR correction evidence](doc/battle-rating-correction-20261030.md) (Chinese). The earlier [BR update for 638 vehicles](doc/battle-rating-update-20261029.md) (Chinese), [vehicle cost update for three Japanese aircraft](doc/vehicle-cost-update-20261029.md) (Chinese) and [modification update for six vehicles](doc/modification-update-20261029.md) are included in v1.0.31, together with the seven-aircraft correction. Earlier [event vehicle](doc/game-roster-additions-20261024.md) and [event modification evidence](doc/event-modifications-20261024.md) is retained.
+- **Latest reviewed version**: **2.59.0.94**. This update corrects mode-specific BR for seven aircraft. Air, ground, and naval ratings are stored separately. Costs, modifications, prerequisites, and saved plans are unchanged. This is not a full snapshot upgrade. See the [current BR correction evidence](doc/battle-rating-correction-20261030.md) (Chinese).
+- **Data updates in the v1.0.31 package**:
+  - [BR update for 638 vehicles](doc/battle-rating-update-20261029.md) (Chinese)
+  - [Vehicle cost update for three Japanese aircraft](doc/vehicle-cost-update-20261029.md) (Chinese)
+  - [Modification update for six vehicles](doc/modification-update-20261029.md)
+  - The BR correction for the seven aircraft above
+- **Event vehicles**: earlier [event vehicle](doc/game-roster-additions-20261024.md) and [event modification evidence](doc/event-modifications-20261024.md) is retained.
 - **Unknown is not free**: missing prices are shown as unavailable, not zero. Rank-unlock counts still use a separate project rules table. Verify your route in the game.
 - **Plans stay in your browser**: selections, routes, and RP progress are saved locally. They are not uploaded or synced between devices. Clearing site data deletes these records. Images, Wiki pages, and the online counter need a connection. The counter estimates active browsers. An outage does not affect calculations.
 

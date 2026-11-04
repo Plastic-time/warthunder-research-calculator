@@ -40,6 +40,8 @@ async function main() {
           tree.scrollLeft += r.left - t.left - 350;
         });
         await page.waitForFunction(() => [...document.querySelectorAll('.tree-canvas .unit-tile > img')].filter(i => { const r = i.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth; }).every(i => i.complete && i.naturalWidth > 0));
+        // Connections are drawn in an idle callback, so wait for the route before capturing.
+        await page.waitForFunction(() => document.querySelector('.tree-canvas .tree-links path.is-route'));
         assert.equal(await page.evaluate(() => remainingUnitRp(state.unitMap.get('us_m18_hellcat'))), 16000);
         await page.mouse.move(1430, 5);
         await page.screenshot({ path: path.join(output, `research-tree-${locale}.png`) });
