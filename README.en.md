@@ -18,13 +18,11 @@
 
 ## Plan Your Research Route
 
-Search accepts names such as F15, F-15, and F 15 and shows the match count. On mobile, View results locates the first match, including foldered vehicles. Clear search returns to your previous tree position. Your plan and RP progress stay unchanged.
-
 Set your targets and mark the vehicles you own. The calculator searches for a low-RP route. It checks prerequisites and rank unlock requirements, then totals the RP and Silver Lions.
 
 [![US ground tech tree after automatic planning, showing an M18 target and the research budget](doc/assets/research-tree-en.png)](doc/assets/research-tree-en.png)
 
-- **Understand each selection**: distinguish targets, waypoints, required vehicles, and rank fillers. Foldered groups show how many vehicles are selected.
+- **Understand each selection**: distinguish targets, waypoints, required vehicles, and rank fillers. Foldered groups show how many vehicles are selected. Once a target is set, vehicles and links off the route are dimmed. Hover over them to restore them.
 - **Adjust the result**: remove a vehicle or mark it as owned without clearing the rest of the route. Run the planner again when you want a new calculation.
 - **Use the remaining RP shown in the game**: if a 140,000 RP vehicle needs 60,000 more, enter 60,000. Budgets and route choices use that amount. Its Silver Lion cost stays the same.
 - **Mark ranks as owned**: mark regular vehicles at a chosen rank and all lower ranks. Review the list before confirming, or undo the change afterward. Special and hidden vehicles are excluded.
@@ -66,6 +64,8 @@ Open a vehicle's modification window and choose the upgrades you need. Mark rese
 On desktop, the header is a single row: nation, search, and icon buttons for Filters, Guide, Export, Clear Plan, and Backup. Hover over an icon to see its name. Calculation scope, the foldered-vehicle option, and Select all are in Filters. Language and game version are in More at the top right. Select the avatar for author details. In narrower windows, nation and category share one row and search takes the next.
 
 On mobile, open More at the top to find the guide and export controls. Search and filters have separate buttons. See the [web changelog](doc/web-updates.md#english) for recent changes. The in-app guide keeps earlier release notes.
+
+Search accepts names such as F15, F-15, and F 15 and shows the match count. On mobile, View results locates the first match, including foldered vehicles. Clear search returns to your previous tree position. Your plan and RP progress stay unchanged.
 
 **Backup and restore**: select the backup icon at the top right. On mobile, open More, then Backup and restore. Export a JSON file to save targets, owned marks, waypoints, RP progress, and modification records across all trees in this browser. Import shows a summary before confirmation. Only records in the file are replaced. Other plans stay unchanged. Files are processed locally and are not uploaded. This is a manual transfer, not automatic device sync.
 
