@@ -1084,6 +1084,8 @@ function renderUnit(unit, inFolder = false) {
   const role = translateRole(unit.main_role);
   const unlocked = isInitialUnlockedUnit(unit);
   const cardRp = state.owned.has(id) ? unit.rp : remainingUnitRp(unit);
+  // The special column cannot be researched; show 0 like its gold neighbours.
+  const cardCost = value => value == null && classes.includes("premium") ? "0" : formatCost(value);
 
   const officialUrl = unit.game_source?.official_url;
   const officialSource = typeof officialUrl === "string" && /^https:\/\/(?:warthunder\.com|forum\.warthunder\.com)\//.test(officialUrl);
@@ -1104,7 +1106,7 @@ function renderUnit(unit, inFolder = false) {
         <span class="unit-meta">
           <span class="pill" data-unit-br>BR ${escapeHtml(unit.br || "-")}</span>
           ${role ? `<span class="pill role">${escapeHtml(role)}</span>` : ""}
-          ${unit.game_source?.cost_policy === "reward-excluded-from-ordinary-research" ? `<span class="pill">${tr(unit.game_source.acquisition.type === "battle-pass" ? "战斗通行证奖励" : "Twitch 掉宝奖励")}</span>` : squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${formatCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${formatCost(unit.sp)}</span></span>`}
+          ${unit.game_source?.cost_policy === "reward-excluded-from-ordinary-research" ? `<span class="pill">${tr(unit.game_source.acquisition.type === "battle-pass" ? "战斗通行证奖励" : "Twitch 掉宝奖励")}</span>` : squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${cardCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${cardCost(unit.sp)}</span></span>`}
           ${window.RosterAudit?.badges(state.country, state.type, unit, displayTitle(unit)) || ""}
           ${unitProgress(unit) && !state.owned.has(id) ? `<span class="pill unit-rp-progress" title="${tr("总计 {count} RP", { count: formatCost(unit.rp) })}">${tr("剩余 {count} RP", { count: formatNumber(remainingUnitRp(unit)) })}</span>` : ""}
           ${unlocked ? `<span class="pill unlocked">${tr("初始载具")}</span>` : ""}
