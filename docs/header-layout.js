@@ -187,13 +187,27 @@
       if (field === languageField) relocate(field, filterBody);
       else relocate(field, filterBody, "always");
     }
-    relocate(metadata, compactTools);
-    // On desktop the More sheet holds what is set once or rarely needed.
-    for (const element of [languageField, version]) relocate(element, moreBody, "desktop");
+    // The More sheet holds what is set once or rarely needed.
+    relocate(languageField, moreBody, "desktop");
+    relocate(version, moreBody, "always");
     const actions = node("div", "mobile-tree-actions");
     actions.append(search, options);
     compactTools.append(actions);
     toolbar.append(compactTools);
+    // Phones get one header row: search and filters sit beside the author and More buttons.
+    relocate(actions, controls);
+    const tabs = toolbar.querySelector(".branch-tabs");
+    if (tabs) {
+      // Fade the edge that still scrolls, so hidden branches are discoverable.
+      const edges = () => {
+        tabs.classList.toggle("has-more-start", tabs.scrollLeft > 2);
+        tabs.classList.toggle("has-more-end", tabs.scrollLeft + tabs.clientWidth < tabs.scrollWidth - 2);
+      };
+      tabs.addEventListener("scroll", edges, { passive: true });
+      // Labels change width after translation and font loading without resizing the strip.
+      const sizes = new ResizeObserver(edges);
+      for (const element of [tabs, ...tabs.children]) sizes.observe(element);
+    }
     const input = document.getElementById("searchInput");
     function searchState() {
       search.classList.toggle("has-value", !!input.value.trim());
