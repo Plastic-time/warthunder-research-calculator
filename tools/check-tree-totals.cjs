@@ -89,9 +89,10 @@ async function main() {
       for (const key of ['y', 'height']) assert(Math.abs(leftText[key] - rightText[key]) < 0.1, 'Labels should align: ' + key);
       assert(rect.x >= 0 && rect.x + rect.width <= width);
       if (width < 720) {
-        const metadata = await page.locator('.mobile-tree-tools .header-metadata').boundingBox();
-        const actions = await page.locator('.mobile-tree-actions').boundingBox();
-        assert(metadata.x + metadata.width <= actions.x + 1);
+        // The status line sits beside the header buttons, or below them on narrow phones.
+        const metadata = await page.locator('.topbar .header-metadata').boundingBox();
+        const actions = await page.locator('.topbar .mobile-tree-actions').boundingBox();
+        assert(metadata.x + metadata.width <= actions.x + 1 || metadata.y >= actions.y + actions.height - 1, 'Status line must not run under the header buttons');
         assert(rect.width >= 44 && rect.height >= 44);
       }
       await page.screenshot({ path: path.join(output, mode + '-' + width + '.png') });

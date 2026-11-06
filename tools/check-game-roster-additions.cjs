@@ -31,17 +31,13 @@ async function main() {
         await page.goto(base + (mode === 'pages' ? '/pages/' : '/'), { waitUntil: 'domcontentloaded' });
         await page.waitForFunction(() => typeof state !== 'undefined' && state.units.length && !treeSelectionLoading);
         assert.equal(await page.locator('[data-game-version]').textContent(), displayedVersion);
-        if (width >= 720) {
-          await page.locator('#mobileMoreButton').click();
-          const version = page.locator('#mobileMore [data-game-version]');
-          assert(await version.isVisible());
-          assert.equal(await version.innerText(), displayedVersion);
-          await page.locator('#mobileMore').screenshot({path:path.join(output, mode + '-' + width + '-more-version.png')});
-          await page.locator('#mobileMore .mobile-sheet-heading button').click();
-        } else {
-          assert(await page.locator('.topbar [data-game-version]').isVisible());
-          await page.locator('.topbar').screenshot({path:path.join(output, mode + '-' + width + '-header-version.png')});
-        }
+        // The version lives in the More sheet at every width.
+        await page.locator('#mobileMoreButton').click();
+        const version = page.locator('#mobileMore [data-game-version]');
+        assert(await version.isVisible());
+        assert.equal(await version.innerText(), displayedVersion);
+        await page.locator('#mobileMore').screenshot({path:path.join(output, mode + '-' + width + '-more-version.png')});
+        await page.locator('#mobileMore .mobile-sheet-heading button').click();
         for (const c of additions.units) {
           await page.evaluate(async c => {
             els.countrySelect.value = c.country; els.typeSelect.value = c.type; await loadTree();
