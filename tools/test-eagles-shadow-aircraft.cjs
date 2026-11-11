@@ -8,6 +8,39 @@ const { wikiUnits } = require('./audit-datamine-roster.cjs');
 const root = path.resolve(__dirname, '..');
 const read = p => JSON.parse(fs.readFileSync(path.join(root, p)));
 const hash = b => crypto.createHash('sha256').update(b).digest('hex');
+test('F-15EX grid matches the in-game modification screen', () => {
+  // Rows transcribed from the supplied game screenshot, left to right.
+  const rows = [
+    ['new_compressor_jet','f_4c_CdMin_Fuse','countermeasures_belt_pack','M60_belt_pack','us_aim_9m','us_sniper_pod','us_jdam'],
+    ['f_4c_g_suit','structure_str','asm','M60_new_gun',null,'us_gbu_laser','us_ljdam'],
+    ['cd_98','new_cover','us_agm_84h','us_agm_65','us_aim_120b_c','us_apkws','us_gbu_15v1'],
+    ['hp_105_jet','air_extinguisher','us_arm','us_agm_130','us_aim_120d','us_agm154_jsow','us_gbu_53'],
+  ];
+  const mods = read('docs/database/modifications/usa_aviation.json').v.f_15ex;
+  assert.deepEqual(mods.c.map(c => c[2]), [2,1,4]);
+  const actual = Array.from({length:4}, () => Array(7).fill(null));
+  for (const m of mods.m) {
+    const offset = mods.c.slice(0,m[1]).reduce((n,c) => n+c[2],0);
+    actual[m[2]-1][offset+m[3]] = m[0];
+  }
+  assert.deepEqual(actual, rows);
+});
+
+test('all nine layouts reproduce the pinned game branch relations', () => {
+  const { layout } = require('./event-modifications.cjs');
+  const source = require('./fixtures/eagles-shadow-layout-20261111.json');
+  const categories = ['lth','armor','weapon'];
+  assert.equal(source.commit, fixture.commit);
+  for (const unit of source.units) {
+    const mods = structuredClone(unit.mods);
+    const widths = layout(mods, categories);
+    const active = categories.filter((_,i) => widths[i] > 0);
+    const saved = fixture.units.find(u => u.id === unit.id).modification;
+    assert.deepEqual(saved.c.map(c => c[2]), widths.filter(w => w > 0), unit.id);
+    assert.deepEqual(saved.m.map(m => [m[0],...m.slice(1,4),m[10]]),
+      mods.map(m => [m.id,active.indexOf(m.category),m.tier,m.column,m.requires]), unit.id);
+  }
+});
 for (const c of fixture.units) test(`${c.id}: aircraft, prices, prerequisites and modification tree are available`, () => {
   const file = `database/${c.country}/${c.country}_aviation.json`;
   const tree = read('docs/' + file), unit = wikiUnits(tree).get(c.id);

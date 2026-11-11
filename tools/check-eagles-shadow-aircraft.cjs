@@ -33,6 +33,15 @@ async function main() {
         await page.evaluate(id => ModificationWorkbench.open(id), c.id);
         await page.waitForFunction(() => document.getElementById('modificationDialog').dataset.loadState === 'ready');
         const dialog = page.locator('#modificationDialog');
+        const grid = await dialog.locator('[data-mod-id]').evaluateAll(nodes => nodes.map(node =>
+          [node.dataset.modId, Number(node.style.gridColumn), Number(node.style.gridRow)]));
+        assert.deepEqual(grid, c.modification.m.map(m => [m[0],
+          c.modification.c.slice(0,m[1]).reduce((n,category) => n+category[2],0)+m[3]+2,
+          m[2]+1]), c.id+' rendered grid');
+        for (const node of await dialog.locator('[data-mod-id]').all()) {
+          await node.scrollIntoViewIfNeeded();
+          assert(await node.isVisible(), c.id+' modification must remain reachable');
+        }
         await dialog.locator('[data-modification-action="clear"]').click();
         await dialog.locator('[data-modification-action="all"]').click();
         const totals = await page.evaluate(() => [document.getElementById('modificationRp').textContent,document.getElementById('modificationSl').textContent]);
@@ -41,6 +50,18 @@ async function main() {
         if (c.id === 'f_15ex') {
           fs.mkdirSync('logs/eagles-shadow-browser', { recursive: true });
           await page.screenshot({ path: `logs/eagles-shadow-browser/${mode}-${width}.png` });
+        }
+        if (width === 1440) {
+          // Expand only the capture viewport/container to inspect every column.
+          await page.setViewportSize({width:2400,height:1200});
+          await dialog.evaluate(async el => {
+            el.style.maxWidth='2350px'; el.style.width='2350px';
+            window.dispatchEvent(new Event('resize'));
+            await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+          });
+          await dialog.locator('.modification-board').screenshot({path:`logs/eagles-shadow-browser/${mode}-${c.id}-grid.png`});
+          await dialog.evaluate(el => { el.style.maxWidth=''; el.style.width=''; });
+          await page.setViewportSize({width,height:940});
         }
         await page.keyboard.press('Escape');
       }

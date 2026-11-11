@@ -33,7 +33,9 @@ function effective(entry) {
   return merged;
 }
 
-// Reproduce category/branch packing, without the game's bonus column or fake padding.
+// Reproduce modstree.nut category/branch packing (non-infantry vehicles),
+// without the game's bonus column or fake padding. A branch inherits its root's
+// display category, even when a child has a different modClass.
 function layout(mods, categories) {
   const tree = categories.map(c => [c]);
   const find = (branch, id) => {
@@ -48,8 +50,6 @@ function layout(mods, categories) {
     const found = find(tree, previous);
     if (!found) return false;
     const [branch, i] = found;
-    assert.equal(branch[i].category, mod.category, 'Cross-category layout needs review');
-    assert(branch[i].tier < mod.tier, 'Same/backward tier layout needs review');
     if (i === 0) branch.push(mod); else branch[i] = [branch[i], mod];
     return true;
   };
@@ -60,27 +60,55 @@ function layout(mods, categories) {
     assert(pending.length < before, 'Unresolved or cyclic layout predecessor');
   }
   const members = b => Array.isArray(b) ? b.flatMap(members) : typeof b === 'object' ? [b] : [];
+  const shift = (branch, offset) => { for (const m of members(branch)) m.column += offset; };
+  const mergeOffset = (branch, widths) => Math.max(...members(branch).map(m => (widths[m.tier] || 0) - m.column));
+  const addTiers = (base, widths, offset) => {
+    for (const [tier, width] of Object.entries(widths)) base[tier] = offset + width;
+    return base;
+  };
   const position = branch => {
     const category = typeof branch[0] === 'string';
     const rootTier = category ? -1 : branch[0].tier;
-    const occupied = {}, free = [];
+    let occupied = {};
+    const side = [];
     for (const child of branch.slice(1)) {
       let widths;
       if (Array.isArray(child)) widths = position(child);
       else { child.column = 0; widths = { [child.tier]: 1 }; }
       const childTier = Array.isArray(child) ? child[0].tier : child.tier;
       if (rootTier >= 0) for (let t = rootTier + 1; t < childTier; t++) widths[t] = 1;
-      if (category && !Array.isArray(child)) { free.push(child); continue; }
+      if ((category && !Array.isArray(child)) || childTier === rootTier) {
+        side.push({ child, widths }); continue;
+      }
       const offset = Object.keys(occupied).length
-        ? Math.max(...members(child).map(m => (occupied[m.tier] || 0) - m.column)) : 0;
-      for (const m of members(child)) m.column += offset;
-      for (const [t, width] of Object.entries(widths)) occupied[t] = offset + width;
+        ? mergeOffset(child, occupied) : 0;
+      shift(child, offset);
+      addTiers(occupied, widths, offset);
     }
-    if (!category) { branch[0].column = 0; occupied[rootTier] = 1; }
-    for (const m of free) { m.column = occupied[m.tier] || 0; occupied[m.tier] = m.column + 1; }
+    if (!category) {
+      branch[0].column = 0; occupied[rootTier] = 1;
+      assert(side.length <= 2, 'More than two same-tier child branches');
+      const rightCount = side.length > 1 ? side.length - 1 : side.length;
+      for (const { child, widths } of side.slice(0, rightCount)) {
+        const offset = mergeOffset(child, occupied);
+        shift(child, offset); addTiers(occupied, widths, offset);
+      }
+      if (side.length > 1) {
+        const { child, widths } = side.at(-1);
+        const offset = Math.max(0, ...Object.values(widths));
+        shift(branch, offset); shift(child, -offset);
+        occupied = addTiers(widths, occupied, offset);
+      }
+    } else for (const { child } of side) {
+      child.column = occupied[child.tier] || 0; occupied[child.tier] = child.column + 1;
+    }
     return occupied;
   };
-  return tree.map(branch => Math.max(1, ...Object.values(position(branch))));
+  return tree.map(branch => {
+    if (branch.length === 1) return 0; // clearEmptyClasses in the game client.
+    for (const mod of members(branch)) mod.category = branch[0];
+    return Math.max(1, ...Object.values(position(branch)));
+  });
 }
 
 function build(unit) {

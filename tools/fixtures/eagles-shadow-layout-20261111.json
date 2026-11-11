@@ -1,0 +1,1319 @@
+{
+  "version": "2.61.0.9",
+  "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+  "sources": [
+    {
+      "local": "candidate-wpcost.json",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/char.vromfs.bin_u/config/wpcost.blkx",
+      "sha256": "583e9d8302fec17b94771667998cb9a619814a9a35ecbaf6ad8240834dc4db10"
+    },
+    {
+      "local": "modifications.blkx",
+      "file": "char.vromfs.bin_u/config/modifications.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/char.vromfs.bin_u/config/modifications.blkx",
+      "sha256": "019d7763a0e608d08f738e9d60d8ec357204a426032fe49e43b151e1bce558f0"
+    },
+    {
+      "file": "gui.vromfs.bin_u/scripts/weaponry/modstree.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/gui.vromfs.bin_u/scripts/weaponry/modstree.nut",
+      "sha256": "45538b641317a63a3d9925b8d9886742ca72e7041eec359f5f11fee3b1dd9918"
+    },
+    {
+      "file": "gui.vromfs.bin_u/scripts/unit/initunitweapons.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/gui.vromfs.bin_u/scripts/unit/initunitweapons.nut",
+      "sha256": "d245e74ee8e098e055944c032058f0388b2f0b58a385916d2bfd3886ebe61469"
+    }
+  ],
+  "units": [
+    {
+      "id": "f_15ex",
+      "mods": [
+        {
+          "id": "new_compressor_jet",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "f_4c_g_suit",
+          "category": "lth",
+          "tier": 2,
+          "requires": [],
+          "prev": "new_compressor_jet"
+        },
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "f_4c_g_suit"
+        },
+        {
+          "id": "hp_105_jet",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "cd_98"
+        },
+        {
+          "id": "f_4c_CdMin_Fuse",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "lth",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "lth",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "air_extinguisher",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "new_cover"
+        },
+        {
+          "id": "countermeasures_belt_pack",
+          "category": "armor",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "asm",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [],
+          "prev": "countermeasures_belt_pack"
+        },
+        {
+          "id": "us_agm_84h",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "asm"
+        },
+        {
+          "id": "us_arm",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_agm_84h"
+        },
+        {
+          "id": "M60_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "M60_new_gun",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "M60_belt_pack"
+          ]
+        },
+        {
+          "id": "us_agm_65",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "M60_new_gun"
+        },
+        {
+          "id": "us_agm_130",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_agm_65"
+        },
+        {
+          "id": "us_aim_9m",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "us_aim_120b_c",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "us_aim_9m"
+          ]
+        },
+        {
+          "id": "us_aim_120d",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "us_aim_120b_c"
+          ]
+        },
+        {
+          "id": "us_jdam",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "us_ljdam",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "us_gbu_laser"
+          ]
+        },
+        {
+          "id": "us_gbu_15v1",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "us_ljdam"
+        },
+        {
+          "id": "us_gbu_53",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_gbu_15v1"
+        },
+        {
+          "id": "us_sniper_pod",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "us_gbu_laser",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "us_sniper_pod"
+          ]
+        },
+        {
+          "id": "us_apkws",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "us_gbu_laser"
+          ]
+        },
+        {
+          "id": "us_agm154_jsow",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_apkws"
+        }
+      ]
+    },
+    {
+      "id": "fa_18d_late",
+      "mods": [
+        {
+          "id": "new_compressor_jet",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "f_4c_g_suit",
+          "category": "armor",
+          "tier": 2,
+          "requires": [],
+          "prev": "new_compressor_jet"
+        },
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "f_4c_g_suit"
+        },
+        {
+          "id": "hp_105_jet",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "cd_98"
+        },
+        {
+          "id": "f_4c_CdMin_Fuse",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "lth",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "lth",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "air_extinguisher",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "new_cover"
+        },
+        {
+          "id": "countermeasures_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "asm",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [],
+          "prev": "countermeasures_belt_pack"
+        },
+        {
+          "id": "us_arm",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "asm"
+        },
+        {
+          "id": "us_aim_7p",
+          "category": "weapon",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "us_aim_9m",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "us_aim_7p"
+          ]
+        },
+        {
+          "id": "us_aim_120b",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "us_aim_9m"
+          ]
+        },
+        {
+          "id": "M60_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "M60_new_gun",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "M60_belt_pack"
+          ]
+        },
+        {
+          "id": "us_agm_62_2_erdl",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "M60_new_gun"
+        },
+        {
+          "id": "us_agm154_jsow",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_agm_62_2_erdl"
+        },
+        {
+          "id": "us_jdam",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "us_gbu54b",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "us_gbu_laser"
+          ],
+          "prev": "us_jdam"
+        },
+        {
+          "id": "us_agm_65f",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "us_gbu54b"
+        },
+        {
+          "id": "us_agm_84h",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "us_agm_65f"
+          ]
+        },
+        {
+          "id": "gr_litening_pod",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "us_gbu_laser",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "gr_litening_pod"
+          ],
+          "prev": "us_jdam"
+        },
+        {
+          "id": "us_apkws",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "us_gbu_laser"
+          ]
+        },
+        {
+          "id": "us_agm_65e",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "us_apkws"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "su_15tm",
+      "mods": [
+        {
+          "id": "new_compressor_jet",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "hydravlic_power",
+          "category": "lth",
+          "tier": 2,
+          "requires": [],
+          "prev": "new_compressor_jet"
+        },
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "hydravlic_power"
+        },
+        {
+          "id": "hp_105_jet",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "cd_98"
+        },
+        {
+          "id": "f_4c_CdMin_Fuse",
+          "category": "armor",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "armor",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "f_4c_g_suit",
+          "category": "armor",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "armor",
+          "tier": 4,
+          "requires": []
+        },
+        {
+          "id": "mig_21_ub16",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "mig_21_ub32",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "mig_21_ub16"
+          ]
+        },
+        {
+          "id": "il_28sh_s24",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "mig_21_ub32"
+          ]
+        },
+        {
+          "id": "air_extinguisher",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "il_28sh_s24"
+        },
+        {
+          "id": "ns23_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "ns23_new_gun",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "ns23_belt_pack"
+          ]
+        },
+        {
+          "id": "su_r_98mt",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "ns23_new_gun"
+        },
+        {
+          "id": "su_r_98mr",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "su_r_98mt"
+          ]
+        },
+        {
+          "id": "zb_500",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "su_17_ofab_100",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [],
+          "prev": "zb_500"
+        },
+        {
+          "id": "mi_24_fab_250",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "su_17_ofab_100"
+          ]
+        },
+        {
+          "id": "mi_24_fab_500",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "mi_24_fab_250"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fulmar_mk2",
+      "mods": [
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "CdMin_Fuse"
+        },
+        {
+          "id": "new_engine_injection",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "hp_105"
+        },
+        {
+          "id": "air_extinguisher",
+          "category": "armor",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "CdMin_Fuse",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "armor",
+          "tier": 4,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "armor",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "hp_105",
+          "category": "lth",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "new_radiator",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "bmg303_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "bmg303_new_gun",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "bmg303_belt_pack"
+          ]
+        },
+        {
+          "id": "halker_sbc",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "halker_mbc",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "halker_sbc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "firefly_mk1_thailand",
+      "mods": [
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "CdMin_Fuse"
+        },
+        {
+          "id": "CdMin_Fuse",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "armor",
+          "tier": 4,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "armor",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "hp_105",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "new_compressor"
+        },
+        {
+          "id": "new_radiator",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "new_compressor",
+          "category": "lth",
+          "tier": 2,
+          "requires": [],
+          "prev": "new_radiator"
+        },
+        {
+          "id": "new_engine_injection",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "hp_105"
+        },
+        {
+          "id": "hispano_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "hispano_mk2_new_gun",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "hispano_belt_pack"
+          ]
+        },
+        {
+          "id": "hispano_mk_2_narrow_chamber_new_gun",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "hispano_mk2_new_gun"
+          ]
+        },
+        {
+          "id": "hispano_mk_2_1943_new_gun",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "hispano_mk_2_narrow_chamber_new_gun"
+          ]
+        },
+        {
+          "id": "halker_sbc",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "halker_mbc",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "halker_sbc"
+          ]
+        },
+        {
+          "id": "halker_lbc",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "halker_mbc"
+          ]
+        },
+        {
+          "id": "halker_rc",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "halker_lbc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b_33_indonesia",
+      "mods": [
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "CdMin_Fuse"
+        },
+        {
+          "id": "CdMin_Fuse",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "armor",
+          "tier": 4,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "armor",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "hp_105",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "new_compressor"
+        },
+        {
+          "id": "new_radiator",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "new_compressor",
+          "category": "lth",
+          "tier": 2,
+          "requires": [],
+          "prev": "new_radiator"
+        },
+        {
+          "id": "new_engine_injection",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "hp_105"
+        },
+        {
+          "id": "ns23_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "ns23_new_gun",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "ns23_belt_pack"
+          ]
+        },
+        {
+          "id": "shvak_turret_belt_pack",
+          "category": "weapon",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "b20_turret_new_gun",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "shvak_turret_belt_pack"
+          ]
+        },
+        {
+          "id": "ro_82_mod",
+          "category": "weapon",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "ro_132_mod",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "ro_82_mod"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5d",
+      "mods": [
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "CdMin_Fuse"
+        },
+        {
+          "id": "CdMin_Fuse",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "armor",
+          "tier": 4,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "armor",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "hp_105_jet",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "new_compressor_jet"
+        },
+        {
+          "id": "g_suit",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "cd_98"
+        },
+        {
+          "id": "hydravlic_power",
+          "category": "lth",
+          "tier": 2,
+          "requires": [],
+          "prev": "CdMin_Fuse"
+        },
+        {
+          "id": "new_compressor_jet",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "countermeasures_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "ns23_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "ns23_new_gun",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "ns23_belt_pack"
+          ]
+        },
+        {
+          "id": "air_extinguisher",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "ns23_new_gun"
+        },
+        {
+          "id": "cn_q5_type_250",
+          "category": "weapon",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "cn_q5_type_500",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "cn_q5_type_250"
+          ]
+        },
+        {
+          "id": "cn_q5_hf6",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "q_5b_type130",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "cn_q5_hf6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "saab_jas39_pre_serie",
+      "mods": [
+        {
+          "id": "new_compressor_jet",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "hydravlic_power",
+          "category": "lth",
+          "tier": 2,
+          "requires": [],
+          "prev": "new_compressor_jet"
+        },
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "hydravlic_power"
+        },
+        {
+          "id": "hp_105_jet",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "cd_98"
+        },
+        {
+          "id": "f_4c_CdMin_Fuse",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "lth",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "lth",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "countermeasures_belt_pack",
+          "category": "armor",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "uk_ltc_bol",
+          "category": "armor",
+          "tier": 2,
+          "requires": [],
+          "prev": "countermeasures_belt_pack"
+        },
+        {
+          "id": "f_4c_g_suit",
+          "category": "armor",
+          "tier": 3,
+          "requires": [],
+          "prev": "uk_ltc_bol"
+        },
+        {
+          "id": "air_extinguisher",
+          "category": "armor",
+          "tier": 4,
+          "requires": [],
+          "prev": "f_4c_g_suit"
+        },
+        {
+          "id": "akan_85_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": [],
+          "prev": "asm"
+        },
+        {
+          "id": "akan_85_new_gun",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "akan_85_belt_pack"
+          ]
+        },
+        {
+          "id": "swd_rb75",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "akan_85_new_gun"
+        },
+        {
+          "id": "swd_rb75t",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "swd_rb75"
+          ]
+        },
+        {
+          "id": "swd_rb74",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "swe_rb71",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "swd_rb74"
+          ]
+        },
+        {
+          "id": "swd_rb74m",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "swe_rb71"
+          ]
+        },
+        {
+          "id": "swd_rb99",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "swd_rb74m"
+          ]
+        },
+        {
+          "id": "gr_litening_pod",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "us_gbu_laser",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "gr_litening_pod"
+          ]
+        },
+        {
+          "id": "asm",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        }
+      ]
+    },
+    {
+      "id": "f_15ia",
+      "mods": [
+        {
+          "id": "new_compressor_jet",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "f_4c_g_suit",
+          "category": "lth",
+          "tier": 2,
+          "requires": [],
+          "prev": "new_compressor_jet"
+        },
+        {
+          "id": "cd_98",
+          "category": "lth",
+          "tier": 3,
+          "requires": [],
+          "prev": "f_4c_g_suit"
+        },
+        {
+          "id": "hp_105_jet",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "cd_98"
+        },
+        {
+          "id": "f_4c_CdMin_Fuse",
+          "category": "lth",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "structure_str",
+          "category": "lth",
+          "tier": 2,
+          "requires": []
+        },
+        {
+          "id": "new_cover",
+          "category": "lth",
+          "tier": 3,
+          "requires": []
+        },
+        {
+          "id": "air_extinguisher",
+          "category": "lth",
+          "tier": 4,
+          "requires": [],
+          "prev": "new_cover"
+        },
+        {
+          "id": "countermeasures_belt_pack",
+          "category": "armor",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "asm",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [],
+          "prev": "countermeasures_belt_pack"
+        },
+        {
+          "id": "us_agm_84h",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "asm"
+        },
+        {
+          "id": "us_arm",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_agm_84h"
+        },
+        {
+          "id": "M60_belt_pack",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "M60_new_gun",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "M60_belt_pack"
+          ]
+        },
+        {
+          "id": "us_agm_65",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "M60_new_gun"
+        },
+        {
+          "id": "us_agm_130",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_agm_65"
+        },
+        {
+          "id": "us_aim_9m",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "il_derby",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "us_aim_9m"
+          ]
+        },
+        {
+          "id": "us_aim_120b_c",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "il_derby"
+          ]
+        },
+        {
+          "id": "us_aim_120d",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [
+            "us_aim_120b_c"
+          ]
+        },
+        {
+          "id": "gr_litening_iii_pod",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "us_gbu_laser",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "gr_litening_iii_pod"
+          ]
+        },
+        {
+          "id": "us_apkws",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [
+            "us_gbu_laser"
+          ]
+        },
+        {
+          "id": "us_agm154_jsow",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_apkws"
+        },
+        {
+          "id": "us_jdam",
+          "category": "weapon",
+          "tier": 1,
+          "requires": []
+        },
+        {
+          "id": "us_ljdam",
+          "category": "weapon",
+          "tier": 2,
+          "requires": [
+            "us_gbu_laser"
+          ]
+        },
+        {
+          "id": "us_gbu_15v1",
+          "category": "weapon",
+          "tier": 3,
+          "requires": [],
+          "prev": "us_ljdam"
+        },
+        {
+          "id": "il_spice",
+          "category": "weapon",
+          "tier": 4,
+          "requires": [],
+          "prev": "us_gbu_15v1"
+        }
+      ]
+    }
+  ]
+}

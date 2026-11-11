@@ -90,6 +90,28 @@ test('layout is compact, stable and rejects unresolved predecessors and cycles',
   assert.throws(()=>build(bad),/absent/);
 });
 
+test('layout inherits the branch category without inventing research prerequisites', () => {
+  const mods = [
+    {id:'flares',category:'armor',tier:1,requires:[]},
+    {id:'asm',category:'weapon',tier:2,requires:[],prev:'flares'},
+    {id:'missile',category:'weapon',tier:4,requires:[],prev:'asm'},
+  ];
+  assert.deepEqual(layout(mods,['armor','weapon']),[1,0]);
+  assert(mods.every(m => m.category === 'armor' && m.column === 0));
+  assert(mods.every(m => m.requires.length === 0));
+});
+
+test('same-tier branches occupy the right and left of their parent', () => {
+  const mods = [
+    {id:'root',category:'weapon',tier:1,requires:[]},
+    {id:'right',category:'weapon',tier:1,requires:['root']},
+    {id:'left',category:'weapon',tier:1,requires:['root']},
+    {id:'child',category:'weapon',tier:3,requires:['right']},
+  ];
+  assert.deepEqual(layout(mods,['weapon']),[3]);
+  assert.deepEqual(mods.map(m=>m.column),[1,2,0,2]);
+});
+
 test('Bf bomb planning includes its exact dependencies and tier gates', () => {
   const data=normalize(build(fixture.units[0]));
   const result=planner.plan(data,['Bf-109F-4_SC500'],[],{},{airCombat:false});
