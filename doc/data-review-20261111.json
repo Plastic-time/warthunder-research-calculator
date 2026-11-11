@@ -1,0 +1,7498 @@
+{
+  "checkedAt": "2026-11-11T09:06:08.784Z",
+  "candidate": {
+    "version": "2.61.0.9",
+    "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+    "channel": "dev per latest maintainer declaration; live not verified"
+  },
+  "applied": false,
+  "sources": [
+    {
+      "label": "candidate",
+      "name": "rank",
+      "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/char.vromfs.bin_u/config/rank.blkx",
+      "bytes": 71494,
+      "sha256": "34a1c500f5e47705fa0bb2163f3162d11bd6869385136ea9b95791010e115b08"
+    },
+    {
+      "label": "candidate",
+      "name": "shop",
+      "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/char.vromfs.bin_u/config/shop.blkx",
+      "bytes": 383147,
+      "sha256": "043758ca32acebe02a7933b6f7865b82f2c9b0d7d62c85e6c79f595e04ebbad7"
+    },
+    {
+      "label": "candidate",
+      "name": "wpcost",
+      "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 33397439,
+      "sha256": "583e9d8302fec17b94771667998cb9a619814a9a35ecbaf6ad8240834dc4db10"
+    },
+    {
+      "label": "previous",
+      "name": "rank",
+      "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/af0cce561a73704e30c1df66eff06209bcc3f035/char.vromfs.bin_u/config/rank.blkx",
+      "bytes": 71494,
+      "sha256": "34a1c500f5e47705fa0bb2163f3162d11bd6869385136ea9b95791010e115b08"
+    },
+    {
+      "label": "previous",
+      "name": "shop",
+      "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/af0cce561a73704e30c1df66eff06209bcc3f035/char.vromfs.bin_u/config/shop.blkx",
+      "bytes": 378559,
+      "sha256": "e85bcd9c1d29c15545f1cdd6316fb6e1551a5157709f38d628e03cbf5a56c731"
+    },
+    {
+      "label": "previous",
+      "name": "wpcost",
+      "commit": "501af3e34af2cb82d65140297e1b994b444c4b88",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/501af3e34af2cb82d65140297e1b994b444c4b88/char.vromfs.bin_u/config/wpcost.blkx",
+      "bytes": 32212188,
+      "sha256": "d269b1df680d76ff544025d0ba5b9642812a8f39e86b69bb4ca837563aef2b3a"
+    }
+  ],
+  "costChanges": [
+    {
+      "id": "germ_embt",
+      "title": "◄EMBT",
+      "ordinary": true,
+      "before": {
+        "rp": 400000,
+        "sl": 1080000
+      },
+      "after": {
+        "rp": 410000,
+        "sl": 1100000
+      }
+    },
+    {
+      "id": "germ_leopard_2a5_pso",
+      "title": "Leopard 2 PSO",
+      "ordinary": true,
+      "before": {
+        "rp": 410000,
+        "sl": 1100000
+      },
+      "after": {
+        "rp": 400000,
+        "sl": 1080000
+      }
+    },
+    {
+      "id": "germ_leopard_2a7v",
+      "title": "Leopard 2A7V",
+      "ordinary": true,
+      "before": {
+        "rp": 420000,
+        "sl": 1120000
+      },
+      "after": {
+        "rp": 410000,
+        "sl": 1100000
+      }
+    },
+    {
+      "id": "fr_amx_30_dca",
+      "title": "AMX-30 S DCA",
+      "ordinary": true,
+      "before": {
+        "rp": 135000,
+        "sl": 380000
+      },
+      "after": {
+        "rp": 160000,
+        "sl": 450000
+      }
+    },
+    {
+      "id": "jp_cruiser_tone",
+      "title": "IJN Tone",
+      "ordinary": true,
+      "before": {
+        "rp": 90000,
+        "sl": 280000
+      },
+      "after": {
+        "rp": 110000,
+        "sl": 340000
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "germ_embt",
+      "before": "germ_leopard_2k",
+      "after": "germ_leopard_2a5_pso"
+    },
+    {
+      "id": "germ_leopard_2a5_pso",
+      "before": "germ_leopard_2a5",
+      "after": "germ_leopard_2k"
+    },
+    {
+      "id": "germ_leopard_2a7v",
+      "before": "germ_leopard_2a5_pso",
+      "after": "germ_leopard_2a5"
+    },
+    {
+      "id": "it_fiat_cm52",
+      "before": null,
+      "after": "it_as_42_metropolitana"
+    }
+  ],
+  "modifications": [
+    {
+      "id": "germ_embt",
+      "changes": [
+        {
+          "path": "/modifications/tank_tool_kit/reqExp",
+          "before": 6000,
+          "after": 6300
+        },
+        {
+          "path": "/modifications/tank_tool_kit/value",
+          "before": 31000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/tank_tool_kit/openCostGold",
+          "before": 440,
+          "after": 460
+        },
+        {
+          "path": "/modifications/manual_extinguisher/reqExp",
+          "before": 5100,
+          "after": 5400
+        },
+        {
+          "path": "/modifications/manual_extinguisher/value",
+          "before": 26000,
+          "after": 28000
+        },
+        {
+          "path": "/modifications/manual_extinguisher/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/new_tank_tracks/reqExp",
+          "before": 20000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/new_tank_tracks/value",
+          "before": 31000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/new_tank_tracks/openCostGold",
+          "before": 440,
+          "after": 460
+        },
+        {
+          "path": "/modifications/new_tank_suspension/reqExp",
+          "before": 17000,
+          "after": 18000
+        },
+        {
+          "path": "/modifications/new_tank_suspension/value",
+          "before": 26000,
+          "after": 28000
+        },
+        {
+          "path": "/modifications/new_tank_suspension/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/new_tank_filter/reqExp",
+          "before": 15000,
+          "after": 16000
+        },
+        {
+          "path": "/modifications/new_tank_filter/value",
+          "before": 23000,
+          "after": 24000
+        },
+        {
+          "path": "/modifications/new_tank_filter/openCostGold",
+          "before": 330,
+          "after": 350
+        },
+        {
+          "path": "/modifications/new_tank_brakes/reqExp",
+          "before": 17000,
+          "after": 18000
+        },
+        {
+          "path": "/modifications/new_tank_brakes/value",
+          "before": 26000,
+          "after": 28000
+        },
+        {
+          "path": "/modifications/new_tank_brakes/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/new_tank_transmission/openCostGold",
+          "before": 380,
+          "after": 370
+        },
+        {
+          "path": "/modifications/new_tank_engine/openCostGold",
+          "before": 380,
+          "after": 370
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/reqExp",
+          "before": 20000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/value",
+          "before": 31000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/openCostGold",
+          "before": 440,
+          "after": 460
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/reqExp",
+          "before": 15000,
+          "after": 16000
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/value",
+          "before": 23000,
+          "after": 24000
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/openCostGold",
+          "before": 330,
+          "after": 350
+        },
+        {
+          "path": "/modifications/art_support/openCostGold",
+          "before": 380,
+          "after": 370
+        },
+        {
+          "path": "/modifications/tank_new_gun/reqExp",
+          "before": 17000,
+          "after": 18000
+        },
+        {
+          "path": "/modifications/tank_new_gun/value",
+          "before": 26000,
+          "after": 28000
+        },
+        {
+          "path": "/modifications/tank_new_gun/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/tank_medical_kit/reqExp",
+          "before": 15000,
+          "after": 16000
+        },
+        {
+          "path": "/modifications/tank_medical_kit/value",
+          "before": 23000,
+          "after": 24000
+        },
+        {
+          "path": "/modifications/tank_medical_kit/openCostGold",
+          "before": 330,
+          "after": 350
+        },
+        {
+          "path": "/modifications/120mm_NATO_APDS_FS_ammo_pack/openCostGold",
+          "before": 380,
+          "after": 370
+        },
+        {
+          "path": "/modifications/modern_tank_laser_rangefinder/reqExp",
+          "before": 15000,
+          "after": 16000
+        },
+        {
+          "path": "/modifications/modern_tank_laser_rangefinder/value",
+          "before": 23000,
+          "after": 24000
+        },
+        {
+          "path": "/modifications/modern_tank_laser_rangefinder/openCostGold",
+          "before": 330,
+          "after": 350
+        },
+        {
+          "path": "/modifications/night_vision_system/openCostGold",
+          "before": 380,
+          "after": 370
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/reqExp",
+          "before": 15000,
+          "after": 16000
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/value",
+          "before": 23000,
+          "after": 24000
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/openCostGold",
+          "before": 330,
+          "after": 350
+        },
+        {
+          "path": "/modifications/mine_protection_improvement/openCostGold",
+          "before": 380,
+          "after": 370
+        },
+        {
+          "path": "/modifications/premExpMul/costGold",
+          "before": 3100,
+          "after": 3200
+        }
+      ]
+    },
+    {
+      "id": "germ_leopard_2a5_pso",
+      "changes": [
+        {
+          "path": "/modifications/tank_tool_kit/reqExp",
+          "before": 6300,
+          "after": 6000
+        },
+        {
+          "path": "/modifications/tank_tool_kit/value",
+          "before": 32000,
+          "after": 31000
+        },
+        {
+          "path": "/modifications/tank_tool_kit/openCostGold",
+          "before": 480,
+          "after": 470
+        },
+        {
+          "path": "/modifications/new_tank_tracks/reqExp",
+          "before": 21000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/new_tank_tracks/value",
+          "before": 32000,
+          "after": 31000
+        },
+        {
+          "path": "/modifications/new_tank_tracks/openCostGold",
+          "before": 480,
+          "after": 470
+        },
+        {
+          "path": "/modifications/new_tank_filter/reqExp",
+          "before": 16000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/new_tank_filter/value",
+          "before": 24000,
+          "after": 23000
+        },
+        {
+          "path": "/modifications/new_tank_filter/openCostGold",
+          "before": 370,
+          "after": 350
+        },
+        {
+          "path": "/modifications/new_tank_transmission/openCostGold",
+          "before": 460,
+          "after": 470
+        },
+        {
+          "path": "/modifications/new_tank_engine/openCostGold",
+          "before": 460,
+          "after": 470
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/reqExp",
+          "before": 21000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/value",
+          "before": 32000,
+          "after": 31000
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/openCostGold",
+          "before": 480,
+          "after": 470
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/reqExp",
+          "before": 16000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/value",
+          "before": 24000,
+          "after": 23000
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/openCostGold",
+          "before": 370,
+          "after": 350
+        },
+        {
+          "path": "/modifications/art_support/openCostGold",
+          "before": 460,
+          "after": 470
+        },
+        {
+          "path": "/modifications/tank_medical_kit/reqExp",
+          "before": 16000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/tank_medical_kit/value",
+          "before": 24000,
+          "after": 23000
+        },
+        {
+          "path": "/modifications/tank_medical_kit/openCostGold",
+          "before": 370,
+          "after": 350
+        },
+        {
+          "path": "/modifications/120mm_DM_APDS_FS_ammo_pack/openCostGold",
+          "before": 460,
+          "after": 470
+        },
+        {
+          "path": "/modifications/modern_tank_laser_rangefinder/openCostGold",
+          "before": 460,
+          "after": 470
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/reqExp",
+          "before": 16000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/value",
+          "before": 24000,
+          "after": 23000
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/openCostGold",
+          "before": 370,
+          "after": 350
+        },
+        {
+          "path": "/modifications/night_vision_system/reqExp",
+          "before": 16000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/night_vision_system/value",
+          "before": 24000,
+          "after": 23000
+        },
+        {
+          "path": "/modifications/night_vision_system/openCostGold",
+          "before": 370,
+          "after": 350
+        },
+        {
+          "path": "/modifications/premExpMul/costGold",
+          "before": 3200,
+          "after": 3100
+        }
+      ]
+    },
+    {
+      "id": "germ_leopard_2a7v",
+      "changes": [
+        {
+          "path": "/modifications/tank_tool_kit/reqExp",
+          "before": 6600,
+          "after": 6300
+        },
+        {
+          "path": "/modifications/tank_tool_kit/value",
+          "before": 34000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/tank_tool_kit/openCostGold",
+          "before": 490,
+          "after": 480
+        },
+        {
+          "path": "/modifications/manual_extinguisher/reqExp",
+          "before": 4500,
+          "after": 4200
+        },
+        {
+          "path": "/modifications/manual_extinguisher/value",
+          "before": 23000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/manual_extinguisher/openCostGold",
+          "before": 340,
+          "after": 320
+        },
+        {
+          "path": "/modifications/new_tank_tracks/reqExp",
+          "before": 22000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/new_tank_tracks/value",
+          "before": 34000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/new_tank_tracks/openCostGold",
+          "before": 490,
+          "after": 480
+        },
+        {
+          "path": "/modifications/new_tank_suspension/reqExp",
+          "before": 15000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/new_tank_suspension/value",
+          "before": 23000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/new_tank_suspension/openCostGold",
+          "before": 340,
+          "after": 320
+        },
+        {
+          "path": "/modifications/new_tank_filter/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/new_tank_brakes/reqExp",
+          "before": 15000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/new_tank_brakes/value",
+          "before": 23000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/new_tank_brakes/openCostGold",
+          "before": 340,
+          "after": 320
+        },
+        {
+          "path": "/modifications/new_tank_transmission/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/new_tank_engine/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/reqExp",
+          "before": 22000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/value",
+          "before": 34000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/openCostGold",
+          "before": 490,
+          "after": 480
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/art_support/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/tank_new_gun/reqExp",
+          "before": 15000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/tank_new_gun/value",
+          "before": 23000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/tank_new_gun/openCostGold",
+          "before": 340,
+          "after": 320
+        },
+        {
+          "path": "/modifications/tank_medical_kit/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/120mm_DM_HE_FS_ammo_pack/reqExp",
+          "before": 15000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/120mm_DM_HE_FS_ammo_pack/value",
+          "before": 23000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/120mm_DM_HE_FS_ammo_pack/openCostGold",
+          "before": 340,
+          "after": 320
+        },
+        {
+          "path": "/modifications/120mm_DM_APDS_FS_ammo_pack/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/modern_tank_laser_rangefinder/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/night_vision_system/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/mine_protection_improvement/openCostGold",
+          "before": 380,
+          "after": 390
+        },
+        {
+          "path": "/modifications/premExpMul/costGold",
+          "before": 3300,
+          "after": 3200
+        }
+      ]
+    },
+    {
+      "id": "ussr_bmd_4m",
+      "changes": [
+        {
+          "path": "/modifications/30mm_2a42_APDS/maxCount",
+          "before": 9,
+          "after": 10
+        }
+      ]
+    },
+    {
+      "id": "uk_falcon",
+      "changes": [
+        {
+          "path": "/modifications/30mm_hs_831_HE/maxCount",
+          "before": 10,
+          "after": 9
+        },
+        {
+          "path": "/modifications/30mm_hs_831_APHEI/maxCount",
+          "before": 10,
+          "after": 9
+        }
+      ]
+    },
+    {
+      "id": "cn_cm_34",
+      "changes": [
+        {
+          "path": "/modifications/30mm_173_HEI/value",
+          "before": 160,
+          "after": 125
+        },
+        {
+          "path": "/modifications/30mm_173_HEI/maxCount",
+          "before": 23,
+          "after": 30
+        },
+        {
+          "path": "/modifications/30mm_173_HEI/ammoCount",
+          "before": 90,
+          "after": 70
+        },
+        {
+          "path": "/modifications/30mm_173_APDS_FS/value",
+          "before": 260,
+          "after": 210
+        },
+        {
+          "path": "/modifications/30mm_173_APDS_FS/maxCount",
+          "before": 23,
+          "after": 30
+        },
+        {
+          "path": "/modifications/30mm_173_APDS_FS/ammoCount",
+          "before": 90,
+          "after": 70
+        }
+      ]
+    },
+    {
+      "id": "fr_amx_30_dca",
+      "changes": [
+        {
+          "path": "/modifications/tank_tool_kit/reqExp",
+          "before": 1800,
+          "after": 2100
+        },
+        {
+          "path": "/modifications/tank_tool_kit/value",
+          "before": 9600,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/tank_tool_kit/openCostGold",
+          "before": 210,
+          "after": 320
+        },
+        {
+          "path": "/modifications/manual_extinguisher/reqExp",
+          "before": 1600,
+          "after": 1900
+        },
+        {
+          "path": "/modifications/manual_extinguisher/value",
+          "before": 8600,
+          "after": 10000
+        },
+        {
+          "path": "/modifications/manual_extinguisher/openCostGold",
+          "before": 190,
+          "after": 280
+        },
+        {
+          "path": "/modifications/new_tank_tracks/reqExp",
+          "before": 6000,
+          "after": 7100
+        },
+        {
+          "path": "/modifications/new_tank_tracks/value",
+          "before": 9600,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/new_tank_tracks/openCostGold",
+          "before": 210,
+          "after": 320
+        },
+        {
+          "path": "/modifications/new_tank_suspension/reqExp",
+          "before": 5400,
+          "after": 6400
+        },
+        {
+          "path": "/modifications/new_tank_suspension/value",
+          "before": 8600,
+          "after": 10000
+        },
+        {
+          "path": "/modifications/new_tank_suspension/openCostGold",
+          "before": 190,
+          "after": 280
+        },
+        {
+          "path": "/modifications/new_tank_filter/reqExp",
+          "before": 7500,
+          "after": 8800
+        },
+        {
+          "path": "/modifications/new_tank_filter/value",
+          "before": 12000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/new_tank_filter/openCostGold",
+          "before": 270,
+          "after": 390
+        },
+        {
+          "path": "/modifications/new_tank_brakes/reqExp",
+          "before": 5400,
+          "after": 6400
+        },
+        {
+          "path": "/modifications/new_tank_brakes/value",
+          "before": 8600,
+          "after": 10000
+        },
+        {
+          "path": "/modifications/new_tank_brakes/openCostGold",
+          "before": 190,
+          "after": 280
+        },
+        {
+          "path": "/modifications/new_tank_transmission/reqExp",
+          "before": 9800,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/new_tank_transmission/value",
+          "before": 16000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/new_tank_transmission/openCostGold",
+          "before": 350,
+          "after": 530
+        },
+        {
+          "path": "/modifications/new_tank_engine/reqExp",
+          "before": 9800,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/new_tank_engine/value",
+          "before": 16000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/new_tank_engine/openCostGold",
+          "before": 350,
+          "after": 530
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/reqExp",
+          "before": 6000,
+          "after": 7100
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/value",
+          "before": 9600,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/new_tank_horizontal_aiming/openCostGold",
+          "before": 210,
+          "after": 320
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/reqExp",
+          "before": 7500,
+          "after": 8800
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/value",
+          "before": 12000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/new_tank_vertical_aiming/openCostGold",
+          "before": 270,
+          "after": 390
+        },
+        {
+          "path": "/modifications/art_support/reqExp",
+          "before": 9800,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/art_support/value",
+          "before": 16000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/art_support/openCostGold",
+          "before": 350,
+          "after": 530
+        },
+        {
+          "path": "/modifications/tank_new_gun/reqExp",
+          "before": 5400,
+          "after": 6400
+        },
+        {
+          "path": "/modifications/tank_new_gun/value",
+          "before": 8600,
+          "after": 10000
+        },
+        {
+          "path": "/modifications/tank_new_gun/openCostGold",
+          "before": 190,
+          "after": 280
+        },
+        {
+          "path": "/modifications/tank_medical_kit/reqExp",
+          "before": 7500,
+          "after": 8800
+        },
+        {
+          "path": "/modifications/tank_medical_kit/value",
+          "before": 12000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/tank_medical_kit/openCostGold",
+          "before": 270,
+          "after": 390
+        },
+        {
+          "path": "/modifications/modern_tank_laser_rangefinder/reqExp",
+          "before": 9800,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/modern_tank_laser_rangefinder/value",
+          "before": 16000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/modern_tank_laser_rangefinder/openCostGold",
+          "before": 350,
+          "after": 530
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/reqExp",
+          "before": 7500,
+          "after": 8800
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/value",
+          "before": 12000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/tank_smoke_screen_system_mod/openCostGold",
+          "before": 270,
+          "after": 390
+        },
+        {
+          "path": "/modifications/30mm_hs_831_APHEI/value",
+          "before": 1300,
+          "after": 1400
+        },
+        {
+          "path": "/modifications/30mm_hs_831_HE_ammo_pack/reqExp",
+          "before": 6000,
+          "after": 7100
+        },
+        {
+          "path": "/modifications/30mm_hs_831_HE_ammo_pack/value",
+          "before": 9600,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/30mm_hs_831_HE_ammo_pack/openCostGold",
+          "before": 210,
+          "after": 320
+        },
+        {
+          "path": "/modifications/30mm_hs_831_APHEI_ammo_pack/reqExp",
+          "before": 5400,
+          "after": 6400
+        },
+        {
+          "path": "/modifications/30mm_hs_831_APHEI_ammo_pack/value",
+          "before": 8600,
+          "after": 10000
+        },
+        {
+          "path": "/modifications/30mm_hs_831_APHEI_ammo_pack/openCostGold",
+          "before": 190,
+          "after": 280
+        },
+        {
+          "path": "/modifications/premExpMul/costGold",
+          "before": 2300,
+          "after": 2400
+        }
+      ]
+    },
+    {
+      "id": "sw_cv_90_mk4",
+      "changes": [
+        {
+          "path": "/modifications/30mm_173_HEI/maxCount",
+          "before": 14,
+          "after": 15
+        },
+        {
+          "path": "/modifications/30mm_173_APDS_FS/maxCount",
+          "before": 14,
+          "after": 15
+        }
+      ]
+    },
+    {
+      "id": "a-20g",
+      "changes": [
+        {
+          "path": "/modifications/CdMin_Fuse/reqExp",
+          "before": 560,
+          "after": 420
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/value",
+          "before": 630,
+          "after": 470
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 90,
+          "after": 80
+        },
+        {
+          "path": "/modifications/structure_str/reqExp",
+          "before": 630,
+          "after": 470
+        },
+        {
+          "path": "/modifications/structure_str/value",
+          "before": 710,
+          "after": 530
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 105,
+          "after": 90
+        },
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 85,
+          "after": 100
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 150,
+          "after": 170
+        },
+        {
+          "path": "/modifications/new_radiator/reqExp",
+          "before": 560,
+          "after": 420
+        },
+        {
+          "path": "/modifications/new_radiator/value",
+          "before": 630,
+          "after": 470
+        },
+        {
+          "path": "/modifications/new_radiator/openCostGold",
+          "before": 90,
+          "after": 80
+        },
+        {
+          "path": "/modifications/new_compressor/reqExp",
+          "before": 630,
+          "after": 470
+        },
+        {
+          "path": "/modifications/new_compressor/value",
+          "before": 710,
+          "after": 530
+        },
+        {
+          "path": "/modifications/new_compressor/openCostGold",
+          "before": 105,
+          "after": 90
+        },
+        {
+          "path": "/modifications/hp_105/openCostGold",
+          "before": 85,
+          "after": 100
+        },
+        {
+          "path": "/modifications/new_engine_injection/openCostGold",
+          "before": 150,
+          "after": 170
+        },
+        {
+          "path": "/modifications/bmg50_belt_pack/reqExp",
+          "before": 560,
+          "after": 420
+        },
+        {
+          "path": "/modifications/bmg50_belt_pack/value",
+          "before": 630,
+          "after": 470
+        },
+        {
+          "path": "/modifications/bmg50_belt_pack/openCostGold",
+          "before": 90,
+          "after": 80
+        },
+        {
+          "path": "/modifications/bmg50_new_gun/reqExp",
+          "before": 630,
+          "after": 470
+        },
+        {
+          "path": "/modifications/bmg50_new_gun/value",
+          "before": 710,
+          "after": 530
+        },
+        {
+          "path": "/modifications/bmg50_new_gun/openCostGold",
+          "before": 105,
+          "after": 90
+        },
+        {
+          "path": "/modifications/bmg50_turret_belt_pack/openCostGold",
+          "before": 85,
+          "after": 100
+        },
+        {
+          "path": "/modifications/bmg50_turret_new_gun/openCostGold",
+          "before": 150,
+          "after": 170
+        },
+        {
+          "path": "/modifications/bazooka_pylon/openCostGold",
+          "before": 85,
+          "after": 100
+        },
+        {
+          "path": "/modifications/b-25_sbc",
+          "before": null,
+          "after": {
+            "tier": 1,
+            "reqExp": 420,
+            "value": 470,
+            "costGold": 0,
+            "openCostGold": 80
+          }
+        },
+        {
+          "path": "/modifications/b-25_mbc",
+          "before": null,
+          "after": {
+            "reqModification": "b-25_sbc",
+            "tier": 2,
+            "reqExp": 470,
+            "value": 530,
+            "costGold": 0,
+            "openCostGold": 90
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier2",
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "f3h-2",
+      "changes": [
+        {
+          "path": "/modifications/us_aim_7c/addMrank",
+          "before": null,
+          "after": 1
+        }
+      ]
+    },
+    {
+      "id": "a_10a_early",
+      "changes": [
+        {
+          "path": "/modifications/us_agm_65b/addMrank",
+          "before": null,
+          "after": 4
+        },
+        {
+          "path": "/modifications/us_agm_65b/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        },
+        {
+          "path": "/modifications/us_gbu_8/addMrank",
+          "before": null,
+          "after": 4
+        },
+        {
+          "path": "/modifications/us_gbu_8/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        },
+        {
+          "path": "/modifications/us_aim_9l/addMrank",
+          "before": null,
+          "after": 4
+        },
+        {
+          "path": "/modifications/us_aim_9l/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        }
+      ]
+    },
+    {
+      "id": "f_14b",
+      "changes": [
+        {
+          "path": "/modifications/M60_air_targets/prevModification",
+          "before": "f_4c_g_suit",
+          "after": null
+        }
+      ]
+    },
+    {
+      "id": "f_14d_vf_11",
+      "changes": [
+        {
+          "path": "/modifications/M60_air_targets/prevModification",
+          "before": "f_4c_g_suit",
+          "after": null
+        }
+      ]
+    },
+    {
+      "id": "f_15e",
+      "changes": [
+        {
+          "path": "/modifications/us_agm_130/tutorialMissionWeapon",
+          "before": "f_15e_agm_130",
+          "after": "f_15e_agm_130_tutorial"
+        }
+      ]
+    },
+    {
+      "id": "f_14d",
+      "changes": [
+        {
+          "path": "/modifications/M60_air_targets/prevModification",
+          "before": "f_4c_g_suit",
+          "after": null
+        }
+      ]
+    },
+    {
+      "id": "hs-129b-2_romania",
+      "changes": [
+        {
+          "path": "/modifications/bk37_light_targets",
+          "before": null,
+          "after": {
+            "reqModification": "bk37_belt_pack",
+            "tier": 0,
+            "value": 35,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 12
+          }
+        },
+        {
+          "path": "/modifications/bk37_ground_targets",
+          "before": null,
+          "after": {
+            "reqModification": "bk37_belt_pack",
+            "tier": 0,
+            "value": 35,
+            "costGold": 0,
+            "spawnCostMul": 1.33,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "ta-152h-1",
+      "changes": [
+        {
+          "path": "/modifications/cd_98/repairCostCoef",
+          "before": 0.049,
+          "after": 0.05
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/repairCostCoefArcade",
+          "before": null,
+          "after": 0.007
+        },
+        {
+          "path": "/modifications/new_cover/repairCostCoefArcade",
+          "before": 0.043,
+          "after": 0.044
+        },
+        {
+          "path": "/modifications/structure_str/repairCostCoef",
+          "before": 0.043,
+          "after": 0.044
+        },
+        {
+          "path": "/modifications/structure_str/repairCostCoefArcade",
+          "before": 0.044,
+          "after": 0.045
+        },
+        {
+          "path": "/modifications/hp_105/repairCostCoef",
+          "before": 0.03,
+          "after": 0.049
+        },
+        {
+          "path": "/modifications/hp_105/repairCostCoefArcade",
+          "before": 0.031,
+          "after": 0.05
+        },
+        {
+          "path": "/modifications/new_compressor/repairCostCoef",
+          "before": 0.034,
+          "after": 0.035
+        },
+        {
+          "path": "/modifications/new_compressor/repairCostCoefArcade",
+          "before": 0.035,
+          "after": 0.036
+        },
+        {
+          "path": "/modifications/new_engine_injection/repairCostCoef",
+          "before": 0.016,
+          "after": 0.017
+        },
+        {
+          "path": "/modifications/mg15120_new_gun/repairCostCoefArcade",
+          "before": null,
+          "after": 0.015
+        },
+        {
+          "path": "/modifications/mk108_new_gun/repairCostCoefArcade",
+          "before": null,
+          "after": 0.02
+        }
+      ]
+    },
+    {
+      "id": "f-5e_switzerland",
+      "changes": [
+        {
+          "path": "/modifications/new_compressor_jet/openCostGold",
+          "before": 270,
+          "after": 310
+        },
+        {
+          "path": "/modifications/hydravlic_power/reqExp",
+          "before": 8800,
+          "after": 7300
+        },
+        {
+          "path": "/modifications/hydravlic_power/value",
+          "before": 14000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/hydravlic_power/openCostGold",
+          "before": 420,
+          "after": 400
+        },
+        {
+          "path": "/modifications/cd_98/reqExp",
+          "before": 16000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/cd_98/value",
+          "before": 25000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 770,
+          "after": 660
+        },
+        {
+          "path": "/modifications/hp_105_jet/reqExp",
+          "before": 13000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/hp_105_jet/value",
+          "before": 20000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/hp_105_jet/openCostGold",
+          "before": 630,
+          "after": 610
+        },
+        {
+          "path": "/modifications/f_4c_CdMin_Fuse/openCostGold",
+          "before": 270,
+          "after": 310
+        },
+        {
+          "path": "/modifications/structure_str/reqExp",
+          "before": 8800,
+          "after": 7300
+        },
+        {
+          "path": "/modifications/structure_str/value",
+          "before": 14000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 420,
+          "after": 400
+        },
+        {
+          "path": "/modifications/new_cover/reqExp",
+          "before": 13000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/new_cover/value",
+          "before": 20000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 630,
+          "after": 610
+        },
+        {
+          "path": "/modifications/countermeasures_belt_pack/openCostGold",
+          "before": 270,
+          "after": 310
+        },
+        {
+          "path": "/modifications/f_4c_g_suit/reqExp",
+          "before": 8800,
+          "after": 7300
+        },
+        {
+          "path": "/modifications/f_4c_g_suit/value",
+          "before": 14000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/f_4c_g_suit/openCostGold",
+          "before": 420,
+          "after": 400
+        },
+        {
+          "path": "/modifications/t_160_belt_pack/openCostGold",
+          "before": 270,
+          "after": 310
+        },
+        {
+          "path": "/modifications/t_160_new_gun/tier",
+          "before": 1,
+          "after": 2
+        },
+        {
+          "path": "/modifications/t_160_new_gun/reqExp",
+          "before": 5600,
+          "after": 7300
+        },
+        {
+          "path": "/modifications/t_160_new_gun/value",
+          "before": 8800,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/t_160_new_gun/openCostGold",
+          "before": 270,
+          "after": 400
+        },
+        {
+          "path": "/modifications/us_2_75_in_ffar_lau_3a/prevModification",
+          "before": "t_160_new_gun",
+          "after": null
+        },
+        {
+          "path": "/modifications/us_2_75_in_ffar_lau_3a/tier",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "path": "/modifications/us_2_75_in_ffar_lau_3a/reqExp",
+          "before": 8800,
+          "after": 5600
+        },
+        {
+          "path": "/modifications/us_2_75_in_ffar_lau_3a/value",
+          "before": 14000,
+          "after": 8800
+        },
+        {
+          "path": "/modifications/us_2_75_in_ffar_lau_3a/openCostGold",
+          "before": 420,
+          "after": 310
+        },
+        {
+          "path": "/modifications/f4c_zuni/tier",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "path": "/modifications/f4c_zuni/reqExp",
+          "before": 16000,
+          "after": 7300
+        },
+        {
+          "path": "/modifications/f4c_zuni/value",
+          "before": 25000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/f4c_zuni/openCostGold",
+          "before": 770,
+          "after": 400
+        },
+        {
+          "path": "/modifications/us_agm_65b/tier",
+          "before": 4,
+          "after": 3
+        },
+        {
+          "path": "/modifications/us_agm_65b/reqExp",
+          "before": 13000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/us_agm_65b/value",
+          "before": 20000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/us_agm_65b/openCostGold",
+          "before": 630,
+          "after": 660
+        },
+        {
+          "path": "/modifications/us_500lb_mk82/openCostGold",
+          "before": 270,
+          "after": 310
+        },
+        {
+          "path": "/modifications/us_750lb_m117/reqExp",
+          "before": 8800,
+          "after": 7300
+        },
+        {
+          "path": "/modifications/us_750lb_m117/value",
+          "before": 14000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/us_750lb_m117/openCostGold",
+          "before": 420,
+          "after": 400
+        },
+        {
+          "path": "/modifications/us_1000lb_mk83/reqExp",
+          "before": 16000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/us_1000lb_mk83/value",
+          "before": 25000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/us_1000lb_mk83/openCostGold",
+          "before": 770,
+          "after": 660
+        },
+        {
+          "path": "/modifications/us_2000lb_mk84/reqExp",
+          "before": 13000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/us_2000lb_mk84/value",
+          "before": 20000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/us_2000lb_mk84/openCostGold",
+          "before": 630,
+          "after": 610
+        },
+        {
+          "path": "/modifications/us_blu_1/openCostGold",
+          "before": 270,
+          "after": 310
+        },
+        {
+          "path": "/modifications/sws_flz_lwf_63_80/tier",
+          "before": 4,
+          "after": 3
+        },
+        {
+          "path": "/modifications/sws_flz_lwf_63_80/reqExp",
+          "before": 13000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/sws_flz_lwf_63_80/value",
+          "before": 20000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/sws_flz_lwf_63_80/openCostGold",
+          "before": 630,
+          "after": 660
+        },
+        {
+          "path": "/modifications/us_agm_65d",
+          "before": null,
+          "after": {
+            "reqModification": "f4c_zuni",
+            "addMrank": 2,
+            "tier": 4,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610,
+            "tutorialMission": "aircraft_atgm_ir_tft",
+            "tutorialMissionWeapon": "f_5e_switzerland_agm_65d"
+          }
+        },
+        {
+          "path": "/modifications/us_agm_65g",
+          "before": null,
+          "after": {
+            "reqModification": "us_agm_65d",
+            "addMrank": 2,
+            "tier": 4,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610,
+            "tutorialMission": "aircraft_atgm_ir_tft",
+            "tutorialMissionWeapon": "f_5e_switzerland_agm_65g"
+          }
+        },
+        {
+          "path": "/modifications/sws_flz_lwf_63_90",
+          "before": null,
+          "after": {
+            "reqModification": "sws_flz_lwf_63_80",
+            "addMrank": 1,
+            "tier": 4,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "f_5e_switzerland_flz_lwf_63_90"
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier2",
+          "before": 2,
+          "after": 3
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 2,
+          "after": 3
+        }
+      ]
+    },
+    {
+      "id": "lagg-i-301",
+      "changes": [
+        {
+          "path": "/modifications/LaGG_dz-40",
+          "before": null,
+          "after": {
+            "tier": 3,
+            "value": 0,
+            "costGold": 0
+          }
+        },
+        {
+          "path": "/modifications/LaGG_ro-82",
+          "before": null,
+          "after": {
+            "prevModification": "LaGG_dz-40",
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "a_20g_30_ussr",
+      "changes": [
+        {
+          "path": "/modifications/us_500lb_anm64a1",
+          "before": {
+            "reqModification": "su_fab_250",
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/su_45_36_an_torpedo/prevModification",
+          "before": "us_500lb_anm64a1",
+          "after": null
+        }
+      ]
+    },
+    {
+      "id": "j_22m1a",
+      "changes": [
+        {
+          "path": "/modifications/rs_fab_pgb/addMrank",
+          "before": null,
+          "after": 4
+        },
+        {
+          "path": "/modifications/kosava_3_tm/addMrank",
+          "before": null,
+          "after": 7
+        },
+        {
+          "path": "/modifications/rs_grom/addMrank",
+          "before": null,
+          "after": 4
+        },
+        {
+          "path": "/modifications/rs_e_24_a1/addMrank",
+          "before": null,
+          "after": 4
+        },
+        {
+          "path": "/modifications/rs_m16d/addMrank",
+          "before": null,
+          "after": 6
+        },
+        {
+          "path": "/modifications/rs_vrvz_240/addMrank",
+          "before": null,
+          "after": 6
+        },
+        {
+          "path": "/modifications/us_agm_65b/addMrank",
+          "before": null,
+          "after": 6
+        },
+        {
+          "path": "/modifications/rs_grom_b/addMrank",
+          "before": null,
+          "after": 6
+        }
+      ]
+    },
+    {
+      "id": "su_25tm",
+      "changes": [
+        {
+          "path": "/modifications/su_mercury_pod",
+          "before": {
+            "prevModification": "countermeasures_belt_pack",
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/air_extinguisher/prevModification",
+          "before": "su_mercury_pod",
+          "after": "su_hod_pod"
+        },
+        {
+          "path": "/modifications/su_arm/addMrank",
+          "before": null,
+          "after": 1
+        },
+        {
+          "path": "/modifications/il_28sh_s24",
+          "before": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/su_17_s25",
+          "before": {
+            "reqModification": "il_28sh_s24",
+            "tier": 2,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_atgm_laser_container_tft",
+            "tutorialMissionWeapon": "su_25tm_s_25l"
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/mi_28_C13",
+          "before": {
+            "reqModification": "su_17_s25",
+            "tier": 3,
+            "value": 0,
+            "costGold": 0
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/mig_29_r_73/prevModification",
+          "before": "mi_28_C13",
+          "after": null
+        },
+        {
+          "path": "/modifications/mig_29_r_73/tier",
+          "before": 4,
+          "after": 1
+        },
+        {
+          "path": "/modifications/zb_500",
+          "before": {
+            "tier": 1,
+            "value": 0,
+            "costGold": 0
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/mi_24_fab_250",
+          "before": {
+            "prevModification": "zb_500",
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/mi_24_fab_500",
+          "before": {
+            "reqModification": "mi_24_fab_250",
+            "tier": 3,
+            "value": 0,
+            "costGold": 0
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/mig_27_kab_500/reqModification",
+          "before": "mi_24_fab_500",
+          "after": null
+        },
+        {
+          "path": "/modifications/mig_27_kab_500/prevModification",
+          "before": null,
+          "after": "su_27sm_r_27t_r_27et"
+        },
+        {
+          "path": "/modifications/su_hod_pod",
+          "before": null,
+          "after": {
+            "prevModification": "countermeasures_belt_pack",
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          }
+        },
+        {
+          "path": "/modifications/mig_29_r_27r",
+          "before": null,
+          "after": {
+            "reqModification": "mig_29_r_73",
+            "addMrank": 1,
+            "tier": 2,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "su_25tm_r_27r"
+          }
+        },
+        {
+          "path": "/modifications/mig_29_r_27t",
+          "before": null,
+          "after": {
+            "reqModification": "mig_29_r_27r",
+            "addMrank": 1,
+            "tier": 3,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "su_25tm_r_27t"
+          }
+        },
+        {
+          "path": "/modifications/yak_141_r_77",
+          "before": null,
+          "after": {
+            "reqModification": "mig_29_r_27t",
+            "addMrank": 4,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_aam_arh",
+            "tutorialMissionWeapon": "su_25tm_r_77"
+          }
+        },
+        {
+          "path": "/modifications/su_27sm_r_27r_r_27er",
+          "before": null,
+          "after": {
+            "reqModification": "mig_29_r_27r",
+            "addMrank": 1,
+            "tier": 2,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "su_25tm_r_27er"
+          }
+        },
+        {
+          "path": "/modifications/su_27sm_r_27t_r_27et",
+          "before": null,
+          "after": {
+            "reqModification": "mig_29_r_27t",
+            "addMrank": 1,
+            "tier": 3,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "su_25tm_r_27et"
+          }
+        }
+      ]
+    },
+    {
+      "id": "yak_141",
+      "changes": [
+        {
+          "path": "/modifications/mi_24_r_60m",
+          "before": {
+            "tier": 1,
+            "reqExp": 6900,
+            "value": 11000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "yak_141_4x_r_60m"
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/mig_29_r_27r/reqModification",
+          "before": "mi_24_r_60m",
+          "after": null
+        },
+        {
+          "path": "/modifications/mig_29_r_27r/tier",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "path": "/modifications/mig_29_r_27r/reqExp",
+          "before": 7700,
+          "after": 6900
+        },
+        {
+          "path": "/modifications/mig_29_r_27r/value",
+          "before": 12000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/mig_29_r_27r/openCostGold",
+          "before": 410,
+          "after": 370
+        },
+        {
+          "path": "/modifications/mig_29_r_73/tier",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "path": "/modifications/mig_29_r_73/reqExp",
+          "before": 12000,
+          "after": 7700
+        },
+        {
+          "path": "/modifications/mig_29_r_73/value",
+          "before": 18000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/mig_29_r_73/openCostGold",
+          "before": 640,
+          "after": 410
+        },
+        {
+          "path": "/modifications/mig_29_r_27t/tier",
+          "before": 4,
+          "after": 3
+        },
+        {
+          "path": "/modifications/mig_29_r_27t/reqExp",
+          "before": 13000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/mig_29_r_27t/value",
+          "before": 20000,
+          "after": 18000
+        },
+        {
+          "path": "/modifications/mig_29_r_27t/openCostGold",
+          "before": 690,
+          "after": 640
+        },
+        {
+          "path": "/modifications/yak_141_r_77",
+          "before": null,
+          "after": {
+            "reqModification": "mig_29_r_27t",
+            "addMrank": 2,
+            "tier": 4,
+            "reqExp": 13000,
+            "value": 20000,
+            "costGold": 0,
+            "openCostGold": 690,
+            "tutorialMission": "aircraft_aam_arh",
+            "tutorialMissionWeapon": "yak_141_4x_r_77"
+          }
+        }
+      ]
+    },
+    {
+      "id": "su_25sm3",
+      "changes": [
+        {
+          "path": "/modifications/su_25_x38mt/addMrank",
+          "before": null,
+          "after": 3
+        },
+        {
+          "path": "/modifications/su_25_x38ml/addMrank",
+          "before": null,
+          "after": 3
+        }
+      ]
+    },
+    {
+      "id": "hurricanemkii",
+      "changes": [
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 95,
+          "after": 100
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 75,
+          "after": 80
+        },
+        {
+          "path": "/modifications/new_cover/reqExp",
+          "before": 750,
+          "after": 560
+        },
+        {
+          "path": "/modifications/new_cover/value",
+          "before": 730,
+          "after": 550
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 120,
+          "after": 95
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 85,
+          "after": 90
+        },
+        {
+          "path": "/modifications/hp_105/openCostGold",
+          "before": 95,
+          "after": 100
+        },
+        {
+          "path": "/modifications/new_radiator/openCostGold",
+          "before": 75,
+          "after": 80
+        },
+        {
+          "path": "/modifications/new_compressor/openCostGold",
+          "before": 85,
+          "after": 90
+        },
+        {
+          "path": "/modifications/new_engine_injection/reqExp",
+          "before": 750,
+          "after": 560
+        },
+        {
+          "path": "/modifications/new_engine_injection/value",
+          "before": 730,
+          "after": 550
+        },
+        {
+          "path": "/modifications/new_engine_injection/openCostGold",
+          "before": 120,
+          "after": 95
+        },
+        {
+          "path": "/modifications/bmg303_belt_pack/openCostGold",
+          "before": 75,
+          "after": 80
+        },
+        {
+          "path": "/modifications/bmg303_new_gun/openCostGold",
+          "before": 85,
+          "after": 90
+        },
+        {
+          "path": "/modifications/halker_sbc/openCostGold",
+          "before": 95,
+          "after": 100
+        },
+        {
+          "path": "/modifications/halker_rc/reqExp",
+          "before": 750,
+          "after": 560
+        },
+        {
+          "path": "/modifications/halker_rc/value",
+          "before": 730,
+          "after": 550
+        },
+        {
+          "path": "/modifications/halker_rc/openCostGold",
+          "before": 120,
+          "after": 95
+        },
+        {
+          "path": "/modifications/halker_mbc",
+          "before": null,
+          "after": {
+            "reqModification": "halker_sbc",
+            "tier": 4,
+            "reqExp": 560,
+            "value": 550,
+            "costGold": 0,
+            "openCostGold": 95
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "harrier_gr1",
+      "changes": [
+        {
+          "path": "/modifications/us_aim_9g",
+          "before": null,
+          "after": {
+            "prevModification": "us_500lb_mk77_mod4",
+            "tier": 4,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "harrier_gr3_rocket_aim9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "buccaneer_s2b",
+      "changes": [
+        {
+          "path": "/modifications/fr_aj_168/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/us_aim_9l/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/us_arm/addMrank",
+          "before": null,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "mig-21_bison",
+      "changes": [
+        {
+          "path": "/modifications/mig_29_r_73e/tier",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "path": "/modifications/mig_29_r_27r1/tier",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "path": "/modifications/mig_29_r_27t1/tier",
+          "before": 4,
+          "after": 3
+        },
+        {
+          "path": "/modifications/mig_21_bison_r_77e",
+          "before": null,
+          "after": {
+            "reqModification": "mig_29_r_27t1",
+            "addMrank": 3,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_aam_arh",
+            "tutorialMissionWeapon": "mig_21_bison_r_77"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b6n1",
+      "changes": [
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 110,
+          "after": 115
+        },
+        {
+          "path": "/modifications/structure_str/reqExp",
+          "before": 330,
+          "after": 270
+        },
+        {
+          "path": "/modifications/structure_str/value",
+          "before": 250,
+          "after": 200
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 75,
+          "after": 65
+        },
+        {
+          "path": "/modifications/new_compressor/reqExp",
+          "before": 330,
+          "after": 270
+        },
+        {
+          "path": "/modifications/new_compressor/value",
+          "before": 250,
+          "after": 200
+        },
+        {
+          "path": "/modifications/new_compressor/openCostGold",
+          "before": 75,
+          "after": 65
+        },
+        {
+          "path": "/modifications/new_engine_injection/openCostGold",
+          "before": 110,
+          "after": 115
+        },
+        {
+          "path": "/modifications/type92_turret_belt_pack/reqExp",
+          "before": 330,
+          "after": 270
+        },
+        {
+          "path": "/modifications/type92_turret_belt_pack/value",
+          "before": 250,
+          "after": 200
+        },
+        {
+          "path": "/modifications/type92_turret_belt_pack/openCostGold",
+          "before": 75,
+          "after": 65
+        },
+        {
+          "path": "/modifications/type92_turret_new_gun/openCostGold",
+          "before": 110,
+          "after": 115
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/reqExp",
+          "before": 330,
+          "after": 270
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/value",
+          "before": 250,
+          "after": 200
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/openCostGold",
+          "before": 75,
+          "after": 65
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/reqModification",
+          "before": "improved_torpedo_mod",
+          "after": null
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/tier",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/reqExp",
+          "before": 300,
+          "after": 270
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/value",
+          "before": 230,
+          "after": 200
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/openCostGold",
+          "before": 70,
+          "after": 65
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/reqModification",
+          "before": "b5n2_12in_mod30",
+          "after": "13in_mod35"
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/openCostGold",
+          "before": 110,
+          "after": 115
+        },
+        {
+          "path": "/modifications/13in_mod35",
+          "before": null,
+          "after": {
+            "reqModification": "b5n2_12in_mod30",
+            "tier": 3,
+            "reqExp": 300,
+            "value": 230,
+            "costGold": 0,
+            "openCostGold": 70
+          }
+        }
+      ]
+    },
+    {
+      "id": "b6n2",
+      "changes": [
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 85,
+          "after": 90
+        },
+        {
+          "path": "/modifications/air_extinguisher/openCostGold",
+          "before": 85,
+          "after": 90
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 90,
+          "after": 100
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 110,
+          "after": 120
+        },
+        {
+          "path": "/modifications/structure_str/reqExp",
+          "before": 390,
+          "after": 310
+        },
+        {
+          "path": "/modifications/structure_str/value",
+          "before": 380,
+          "after": 300
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 80,
+          "after": 65
+        },
+        {
+          "path": "/modifications/hp_105/openCostGold",
+          "before": 85,
+          "after": 90
+        },
+        {
+          "path": "/modifications/new_radiator/openCostGold",
+          "before": 90,
+          "after": 100
+        },
+        {
+          "path": "/modifications/new_compressor/reqExp",
+          "before": 390,
+          "after": 310
+        },
+        {
+          "path": "/modifications/new_compressor/value",
+          "before": 380,
+          "after": 300
+        },
+        {
+          "path": "/modifications/new_compressor/openCostGold",
+          "before": 80,
+          "after": 65
+        },
+        {
+          "path": "/modifications/new_engine_injection/openCostGold",
+          "before": 110,
+          "after": 120
+        },
+        {
+          "path": "/modifications/type92_turret_belt_pack/reqExp",
+          "before": 390,
+          "after": 310
+        },
+        {
+          "path": "/modifications/type92_turret_belt_pack/value",
+          "before": 380,
+          "after": 300
+        },
+        {
+          "path": "/modifications/type92_turret_belt_pack/openCostGold",
+          "before": 80,
+          "after": 65
+        },
+        {
+          "path": "/modifications/type92_turret_new_gun/openCostGold",
+          "before": 110,
+          "after": 120
+        },
+        {
+          "path": "/modifications/b5n2_17-34in_mod45/openCostGold",
+          "before": 90,
+          "after": 100
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/reqExp",
+          "before": 390,
+          "after": 310
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/value",
+          "before": 380,
+          "after": 300
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/openCostGold",
+          "before": 80,
+          "after": 65
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/reqModification",
+          "before": "improved_torpedo_mod",
+          "after": null
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/tier",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/reqExp",
+          "before": 430,
+          "after": 310
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/value",
+          "before": 420,
+          "after": 300
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/openCostGold",
+          "before": 85,
+          "after": 65
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/reqModification",
+          "before": "b5n2_12in_mod30",
+          "after": "13in_mod35"
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/openCostGold",
+          "before": 110,
+          "after": 120
+        },
+        {
+          "path": "/modifications/13in_mod35",
+          "before": null,
+          "after": {
+            "reqModification": "b5n2_12in_mod30",
+            "tier": 3,
+            "reqExp": 430,
+            "value": 420,
+            "costGold": 0,
+            "openCostGold": 90
+          }
+        }
+      ]
+    },
+    {
+      "id": "b6n2a",
+      "changes": [
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 90,
+          "after": 95
+        },
+        {
+          "path": "/modifications/air_extinguisher/openCostGold",
+          "before": 90,
+          "after": 95
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 90,
+          "after": 95
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 145,
+          "after": 155
+        },
+        {
+          "path": "/modifications/structure_str/reqExp",
+          "before": 470,
+          "after": 380
+        },
+        {
+          "path": "/modifications/structure_str/value",
+          "before": 530,
+          "after": 430
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 100,
+          "after": 85
+        },
+        {
+          "path": "/modifications/hp_105/openCostGold",
+          "before": 90,
+          "after": 95
+        },
+        {
+          "path": "/modifications/new_radiator/openCostGold",
+          "before": 90,
+          "after": 95
+        },
+        {
+          "path": "/modifications/new_compressor/reqExp",
+          "before": 470,
+          "after": 380
+        },
+        {
+          "path": "/modifications/new_compressor/value",
+          "before": 530,
+          "after": 430
+        },
+        {
+          "path": "/modifications/new_compressor/openCostGold",
+          "before": 100,
+          "after": 85
+        },
+        {
+          "path": "/modifications/new_engine_injection/openCostGold",
+          "before": 145,
+          "after": 155
+        },
+        {
+          "path": "/modifications/mg_turret_belt_pack/openCostGold",
+          "before": 90,
+          "after": 95
+        },
+        {
+          "path": "/modifications/mg15_turret_new_gun/openCostGold",
+          "before": 90,
+          "after": 95
+        },
+        {
+          "path": "/modifications/type2_turret_belt_pack/reqExp",
+          "before": 470,
+          "after": 380
+        },
+        {
+          "path": "/modifications/type2_turret_belt_pack/value",
+          "before": 530,
+          "after": 430
+        },
+        {
+          "path": "/modifications/type2_turret_belt_pack/openCostGold",
+          "before": 100,
+          "after": 85
+        },
+        {
+          "path": "/modifications/type2_turret_new_gun/openCostGold",
+          "before": 145,
+          "after": 155
+        },
+        {
+          "path": "/modifications/b5n2_17-34in_mod45/openCostGold",
+          "before": 90,
+          "after": 95
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/reqExp",
+          "before": 470,
+          "after": 380
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/value",
+          "before": 530,
+          "after": 430
+        },
+        {
+          "path": "/modifications/improved_torpedo_mod/openCostGold",
+          "before": 100,
+          "after": 85
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/reqModification",
+          "before": "improved_torpedo_mod",
+          "after": null
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/tier",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/reqExp",
+          "before": 420,
+          "after": 380
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/value",
+          "before": 470,
+          "after": 430
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/openCostGold",
+          "before": 90,
+          "after": 85
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/reqModification",
+          "before": "b5n2_12in_mod30",
+          "after": "13in_mod35"
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/openCostGold",
+          "before": 145,
+          "after": 155
+        },
+        {
+          "path": "/modifications/13in_mod35",
+          "before": null,
+          "after": {
+            "reqModification": "b5n2_12in_mod30",
+            "tier": 3,
+            "reqExp": 420,
+            "value": 470,
+            "costGold": 0,
+            "openCostGold": 95
+          }
+        }
+      ]
+    },
+    {
+      "id": "h8k2",
+      "changes": [
+        {
+          "path": "/modifications/cd_98/repairCostCoef",
+          "before": 0.049,
+          "after": 0.053
+        },
+        {
+          "path": "/modifications/cd_98/reqExp",
+          "before": 700,
+          "after": 530
+        },
+        {
+          "path": "/modifications/cd_98/value",
+          "before": 790,
+          "after": 600
+        },
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 125,
+          "after": 100
+        },
+        {
+          "path": "/modifications/cd_98/repairCostCoefArcade",
+          "before": 0.051,
+          "after": 0.055
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/repairCostCoef",
+          "before": 0.006,
+          "after": 0.007
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 75,
+          "after": 80
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/repairCostCoefArcade",
+          "before": 0.007,
+          "after": null
+        },
+        {
+          "path": "/modifications/new_cover/repairCostCoef",
+          "before": 0.042,
+          "after": 0.045
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 120,
+          "after": 130
+        },
+        {
+          "path": "/modifications/new_cover/repairCostCoefArcade",
+          "before": 0.043,
+          "after": 0.046
+        },
+        {
+          "path": "/modifications/structure_str/repairCostCoef",
+          "before": 0.043,
+          "after": 0.046
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 110,
+          "after": 120
+        },
+        {
+          "path": "/modifications/structure_str/repairCostCoefArcade",
+          "before": 0.044,
+          "after": 0.048
+        },
+        {
+          "path": "/modifications/type92_turret_belt_pack/openCostGold",
+          "before": 75,
+          "after": 80
+        },
+        {
+          "path": "/modifications/type92_turret_new_gun/repairCostCoef",
+          "before": 0.009,
+          "after": 0.01
+        },
+        {
+          "path": "/modifications/type92_turret_new_gun/openCostGold",
+          "before": 110,
+          "after": 120
+        },
+        {
+          "path": "/modifications/type99_turret_belt_pack/reqExp",
+          "before": 700,
+          "after": 530
+        },
+        {
+          "path": "/modifications/type99_turret_belt_pack/value",
+          "before": 790,
+          "after": 600
+        },
+        {
+          "path": "/modifications/type99_turret_belt_pack/openCostGold",
+          "before": 125,
+          "after": 100
+        },
+        {
+          "path": "/modifications/type99_turret_new_gun/repairCostCoef",
+          "before": 0.014,
+          "after": 0.015
+        },
+        {
+          "path": "/modifications/type99_turret_new_gun/openCostGold",
+          "before": 120,
+          "after": 130
+        },
+        {
+          "path": "/modifications/hp_105/repairCostCoef",
+          "before": 0.048,
+          "after": 0.052
+        },
+        {
+          "path": "/modifications/hp_105/reqExp",
+          "before": 700,
+          "after": 530
+        },
+        {
+          "path": "/modifications/hp_105/value",
+          "before": 790,
+          "after": 600
+        },
+        {
+          "path": "/modifications/hp_105/openCostGold",
+          "before": 125,
+          "after": 100
+        },
+        {
+          "path": "/modifications/hp_105/repairCostCoefArcade",
+          "before": 0.05,
+          "after": 0.053
+        },
+        {
+          "path": "/modifications/new_radiator/openCostGold",
+          "before": 75,
+          "after": 80
+        },
+        {
+          "path": "/modifications/new_radiator/repairCostCoefArcade",
+          "before": null,
+          "after": 0.006
+        },
+        {
+          "path": "/modifications/new_compressor/repairCostCoef",
+          "before": 0.034,
+          "after": 0.037
+        },
+        {
+          "path": "/modifications/new_compressor/openCostGold",
+          "before": 110,
+          "after": 120
+        },
+        {
+          "path": "/modifications/new_compressor/repairCostCoefArcade",
+          "before": 0.035,
+          "after": 0.038
+        },
+        {
+          "path": "/modifications/new_engine_injection/repairCostCoef",
+          "before": 0.016,
+          "after": 0.018
+        },
+        {
+          "path": "/modifications/new_engine_injection/repairCostCoefArcade",
+          "before": 0.047,
+          "after": 0.05
+        },
+        {
+          "path": "/modifications/new_engine_injection/openCostGold",
+          "before": 120,
+          "after": 130
+        },
+        {
+          "path": "/modifications/h6k_12in_mod30/openCostGold",
+          "before": 75,
+          "after": 80
+        },
+        {
+          "path": "/modifications/h6k_14in_mod35/openCostGold",
+          "before": 120,
+          "after": 130
+        },
+        {
+          "path": "/modifications/air_extinguisher",
+          "before": null,
+          "after": {
+            "tier": 3,
+            "repairCostCoef": 0.072,
+            "image": "!#ui/gameuiskin#engine_extinguisher.avif",
+            "reqExp": 530,
+            "value": 600,
+            "costGold": 0,
+            "openCostGold": 100,
+            "repairCostCoefArcade": 0.074
+          }
+        }
+      ]
+    },
+    {
+      "id": "h8k3",
+      "changes": [
+        {
+          "path": "/modifications/air_extinguisher",
+          "before": null,
+          "after": {
+            "tier": 3,
+            "image": "!#ui/gameuiskin#engine_extinguisher.avif",
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b7a2",
+      "changes": [
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 175,
+          "after": 190
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 140,
+          "after": 150
+        },
+        {
+          "path": "/modifications/new_cover/reqExp",
+          "before": 3200,
+          "after": 2400
+        },
+        {
+          "path": "/modifications/new_cover/value",
+          "before": 6300,
+          "after": 4700
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 300,
+          "after": 240
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 155,
+          "after": 170
+        },
+        {
+          "path": "/modifications/hp_105/openCostGold",
+          "before": 175,
+          "after": 190
+        },
+        {
+          "path": "/modifications/new_radiator/openCostGold",
+          "before": 140,
+          "after": 150
+        },
+        {
+          "path": "/modifications/new_compressor/openCostGold",
+          "before": 155,
+          "after": 170
+        },
+        {
+          "path": "/modifications/new_engine_injection/reqExp",
+          "before": 3200,
+          "after": 2400
+        },
+        {
+          "path": "/modifications/new_engine_injection/value",
+          "before": 6300,
+          "after": 4700
+        },
+        {
+          "path": "/modifications/new_engine_injection/openCostGold",
+          "before": 300,
+          "after": 240
+        },
+        {
+          "path": "/modifications/type2_turret_belt_pack/openCostGold",
+          "before": 140,
+          "after": 150
+        },
+        {
+          "path": "/modifications/type2_turret_new_gun/openCostGold",
+          "before": 155,
+          "after": 170
+        },
+        {
+          "path": "/modifications/type99mk2_belt_pack/openCostGold",
+          "before": 175,
+          "after": 190
+        },
+        {
+          "path": "/modifications/type99mk2_new_gun/reqExp",
+          "before": 3200,
+          "after": 2400
+        },
+        {
+          "path": "/modifications/type99mk2_new_gun/value",
+          "before": 6300,
+          "after": 4700
+        },
+        {
+          "path": "/modifications/type99mk2_new_gun/openCostGold",
+          "before": 300,
+          "after": 240
+        },
+        {
+          "path": "/modifications/b5n2_17-34in_mod45/openCostGold",
+          "before": 140,
+          "after": 150
+        },
+        {
+          "path": "/modifications/b5n2_12in_mod30/openCostGold",
+          "before": 155,
+          "after": 170
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/reqModification",
+          "before": "b5n2_12in_mod30",
+          "after": "14in_mod30"
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/tier",
+          "before": 3,
+          "after": 4
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/reqExp",
+          "before": 1900,
+          "after": 2400
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/value",
+          "before": 3700,
+          "after": 4700
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/openCostGold",
+          "before": 175,
+          "after": 240
+        },
+        {
+          "path": "/modifications/14in_mod30",
+          "before": null,
+          "after": {
+            "reqModification": "b5n2_12in_mod30",
+            "tier": 3,
+            "reqExp": 1900,
+            "value": 3700,
+            "costGold": 0,
+            "openCostGold": 190
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "b7a2_homare_23",
+      "changes": [
+        {
+          "path": "/modifications/b5n2_14in_mod35/reqModification",
+          "before": "b5n2_12in_mod30",
+          "after": "14in_mod30"
+        },
+        {
+          "path": "/modifications/b5n2_14in_mod35/tier",
+          "before": 3,
+          "after": 4
+        },
+        {
+          "path": "/modifications/14in_mod30",
+          "before": null,
+          "after": {
+            "reqModification": "b5n2_12in_mod30",
+            "tier": 3,
+            "value": 0,
+            "costGold": 0
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "f1",
+      "changes": [
+        {
+          "path": "/modifications/new_compressor_jet/reqExp",
+          "before": 5700,
+          "after": 4800
+        },
+        {
+          "path": "/modifications/new_compressor_jet/value",
+          "before": 9100,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/new_compressor_jet/openCostGold",
+          "before": 260,
+          "after": 230
+        },
+        {
+          "path": "/modifications/hydravlic_power/openCostGold",
+          "before": 370,
+          "after": 390
+        },
+        {
+          "path": "/modifications/cd_98/reqExp",
+          "before": 12000,
+          "after": 9000
+        },
+        {
+          "path": "/modifications/cd_98/value",
+          "before": 19000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 540,
+          "after": 430
+        },
+        {
+          "path": "/modifications/hp_105_jet/reqExp",
+          "before": 12000,
+          "after": 16000
+        },
+        {
+          "path": "/modifications/hp_105_jet/value",
+          "before": 19000,
+          "after": 25000
+        },
+        {
+          "path": "/modifications/hp_105_jet/openCostGold",
+          "before": 540,
+          "after": 770
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/reqExp",
+          "before": 5700,
+          "after": 4800
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/value",
+          "before": 9100,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 260,
+          "after": 230
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 370,
+          "after": 390
+        },
+        {
+          "path": "/modifications/g_suit/reqExp",
+          "before": 12000,
+          "after": 9000
+        },
+        {
+          "path": "/modifications/g_suit/value",
+          "before": 19000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/g_suit/openCostGold",
+          "before": 540,
+          "after": 430
+        },
+        {
+          "path": "/modifications/new_cover/reqExp",
+          "before": 12000,
+          "after": 16000
+        },
+        {
+          "path": "/modifications/new_cover/value",
+          "before": 19000,
+          "after": 25000
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 540,
+          "after": 770
+        },
+        {
+          "path": "/modifications/M60_belt_pack/reqExp",
+          "before": 5700,
+          "after": 4800
+        },
+        {
+          "path": "/modifications/M60_belt_pack/value",
+          "before": 9100,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/M60_belt_pack/openCostGold",
+          "before": 260,
+          "after": 230
+        },
+        {
+          "path": "/modifications/M60_new_gun/reqExp",
+          "before": 12000,
+          "after": 9000
+        },
+        {
+          "path": "/modifications/M60_new_gun/value",
+          "before": 19000,
+          "after": 14000
+        },
+        {
+          "path": "/modifications/M60_new_gun/openCostGold",
+          "before": 540,
+          "after": 430
+        },
+        {
+          "path": "/modifications/us_500lb_m82/tier",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "path": "/modifications/us_500lb_m82/reqExp",
+          "before": 8100,
+          "after": 4800
+        },
+        {
+          "path": "/modifications/us_500lb_m82/value",
+          "before": 13000,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/us_500lb_m82/openCostGold",
+          "before": 370,
+          "after": 230
+        },
+        {
+          "path": "/modifications/jp_750lb_jm117/tier",
+          "before": 4,
+          "after": 2
+        },
+        {
+          "path": "/modifications/jp_750lb_jm117/reqExp",
+          "before": 12000,
+          "after": 8100
+        },
+        {
+          "path": "/modifications/jp_750lb_jm117/value",
+          "before": 19000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/jp_750lb_jm117/openCostGold",
+          "before": 540,
+          "after": 390
+        },
+        {
+          "path": "/modifications/t2_rl4_zuni/reqExp",
+          "before": 5700,
+          "after": 4800
+        },
+        {
+          "path": "/modifications/t2_rl4_zuni/value",
+          "before": 9100,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/t2_rl4_zuni/openCostGold",
+          "before": 260,
+          "after": 230
+        },
+        {
+          "path": "/modifications/jp_jlau_3a/openCostGold",
+          "before": 370,
+          "after": 390
+        },
+        {
+          "path": "/modifications/us_aim_9e/reqExp",
+          "before": 5700,
+          "after": 4800
+        },
+        {
+          "path": "/modifications/us_aim_9e/value",
+          "before": 9100,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/us_aim_9e/openCostGold",
+          "before": 260,
+          "after": 230
+        },
+        {
+          "path": "/modifications/us_aim_9p/reqExp",
+          "before": 12000,
+          "after": 16000
+        },
+        {
+          "path": "/modifications/us_aim_9p/value",
+          "before": 19000,
+          "after": 25000
+        },
+        {
+          "path": "/modifications/us_aim_9p/openCostGold",
+          "before": 540,
+          "after": 770
+        },
+        {
+          "path": "/modifications/jp_gcs_1",
+          "before": null,
+          "after": {
+            "prevModification": "jp_750lb_jm117",
+            "tier": 3,
+            "reqExp": 9000,
+            "value": 14000,
+            "costGold": 0,
+            "openCostGold": 430
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 2,
+          "after": 1
+        }
+      ]
+    },
+    {
+      "id": "f-4ej_kai",
+      "changes": [
+        {
+          "path": "/modifications/new_compressor_jet/openCostGold",
+          "before": 340,
+          "after": 370
+        },
+        {
+          "path": "/modifications/hydravlic_power/reqExp",
+          "before": 14000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/hydravlic_power/value",
+          "before": 22000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/hydravlic_power/openCostGold",
+          "before": 600,
+          "after": 510
+        },
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 510,
+          "after": 560
+        },
+        {
+          "path": "/modifications/hp_105_jet/reqExp",
+          "before": 16000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/hp_105_jet/value",
+          "before": 25000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/hp_105_jet/openCostGold",
+          "before": 680,
+          "after": 610
+        },
+        {
+          "path": "/modifications/f_4c_CdMin_Fuse/openCostGold",
+          "before": 340,
+          "after": 370
+        },
+        {
+          "path": "/modifications/structure_str/reqExp",
+          "before": 14000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/structure_str/value",
+          "before": 22000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 600,
+          "after": 510
+        },
+        {
+          "path": "/modifications/f_4c_g_suit/openCostGold",
+          "before": 510,
+          "after": 560
+        },
+        {
+          "path": "/modifications/new_cover/reqExp",
+          "before": 16000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/new_cover/value",
+          "before": 25000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 680,
+          "after": 610
+        },
+        {
+          "path": "/modifications/M60_belt_pack/openCostGold",
+          "before": 340,
+          "after": 370
+        },
+        {
+          "path": "/modifications/M60_new_gun/openCostGold",
+          "before": 510,
+          "after": 560
+        },
+        {
+          "path": "/modifications/f4c_suu_23a/reqExp",
+          "before": 16000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/f4c_suu_23a/value",
+          "before": 25000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/f4c_suu_23a/openCostGold",
+          "before": 680,
+          "after": 610
+        },
+        {
+          "path": "/modifications/us_500lb_mk82/openCostGold",
+          "before": 340,
+          "after": 370
+        },
+        {
+          "path": "/modifications/jp_750lb_jm117/tier",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "path": "/modifications/jp_750lb_jm117/reqExp",
+          "before": 12000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/jp_750lb_jm117/value",
+          "before": 18000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/countermeasures_belt_pack/openCostGold",
+          "before": 340,
+          "after": 370
+        },
+        {
+          "path": "/modifications/jp_jlau_3a/reqExp",
+          "before": 14000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/jp_jlau_3a/value",
+          "before": 22000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/jp_jlau_3a/openCostGold",
+          "before": 600,
+          "after": 510
+        },
+        {
+          "path": "/modifications/f4c_zuni/reqExp",
+          "before": 16000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/f4c_zuni/value",
+          "before": 25000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/f4c_zuni/openCostGold",
+          "before": 680,
+          "after": 610
+        },
+        {
+          "path": "/modifications/us_aim_9p/openCostGold",
+          "before": 340,
+          "after": 370
+        },
+        {
+          "path": "/modifications/us_aim_7e/reqExp",
+          "before": 14000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/us_aim_7e/value",
+          "before": 22000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/us_aim_7e/openCostGold",
+          "before": 600,
+          "after": 510
+        },
+        {
+          "path": "/modifications/us_aim_7m/openCostGold",
+          "before": 510,
+          "after": 560
+        },
+        {
+          "path": "/modifications/us_aim_9l/reqExp",
+          "before": 16000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/us_aim_9l/value",
+          "before": 25000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/us_aim_9l/openCostGold",
+          "before": 680,
+          "after": 610
+        },
+        {
+          "path": "/modifications/jp_gcs_1",
+          "before": null,
+          "after": {
+            "prevModification": "us_500lb_mk82",
+            "tier": 3,
+            "reqExp": 12000,
+            "value": 18000,
+            "costGold": 0,
+            "openCostGold": 560
+          }
+        },
+        {
+          "path": "/modifications/asm",
+          "before": null,
+          "after": {
+            "prevModification": "jp_gcs_1",
+            "tier": 4,
+            "reqExp": 13000,
+            "value": 20000,
+            "costGold": 0,
+            "openCostGold": 610,
+            "tutorialMission": "aircraft_atgm_ir_tft",
+            "tutorialMissionWeapon": "f_4ej_kai_asm2"
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 2,
+          "after": 3
+        }
+      ]
+    },
+    {
+      "id": "f_2a",
+      "changes": [
+        {
+          "path": "/modifications/new_compressor_jet/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/hydravlic_power/reqExp",
+          "before": 11000,
+          "after": 9600
+        },
+        {
+          "path": "/modifications/hydravlic_power/value",
+          "before": 17000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/hydravlic_power/openCostGold",
+          "before": 390,
+          "after": 360
+        },
+        {
+          "path": "/modifications/cd_98/reqExp",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/cd_98/value",
+          "before": 23000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 530,
+          "after": 450
+        },
+        {
+          "path": "/modifications/hp_105_jet/reqExp",
+          "before": 32000,
+          "after": 49000
+        },
+        {
+          "path": "/modifications/hp_105_jet/value",
+          "before": 49000,
+          "after": 76000
+        },
+        {
+          "path": "/modifications/hp_105_jet/openCostGold",
+          "before": 1100,
+          "after": 1800
+        },
+        {
+          "path": "/modifications/f_4c_CdMin_Fuse/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/structure_str/reqExp",
+          "before": 11000,
+          "after": 9600
+        },
+        {
+          "path": "/modifications/structure_str/value",
+          "before": 17000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 390,
+          "after": 360
+        },
+        {
+          "path": "/modifications/new_cover/reqExp",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/new_cover/value",
+          "before": 23000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 530,
+          "after": 450
+        },
+        {
+          "path": "/modifications/countermeasures_belt_pack/modClass",
+          "before": "armor",
+          "after": null
+        },
+        {
+          "path": "/modifications/countermeasures_belt_pack/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/f_4c_g_suit/reqExp",
+          "before": 11000,
+          "after": 9600
+        },
+        {
+          "path": "/modifications/f_4c_g_suit/value",
+          "before": 17000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/f_4c_g_suit/openCostGold",
+          "before": 390,
+          "after": 360
+        },
+        {
+          "path": "/modifications/us_jdam/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/M60_belt_pack/prevModification",
+          "before": "us_jdam",
+          "after": "countermeasures_belt_pack"
+        },
+        {
+          "path": "/modifications/M60_belt_pack/reqExp",
+          "before": 11000,
+          "after": 9600
+        },
+        {
+          "path": "/modifications/M60_belt_pack/value",
+          "before": 17000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/M60_belt_pack/openCostGold",
+          "before": 390,
+          "after": 360
+        },
+        {
+          "path": "/modifications/M60_new_gun/reqExp",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/M60_new_gun/value",
+          "before": 23000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/M60_new_gun/openCostGold",
+          "before": 530,
+          "after": 450
+        },
+        {
+          "path": "/modifications/asm/prevModification",
+          "before": "M60_new_gun",
+          "after": "jp_gcs_1"
+        },
+        {
+          "path": "/modifications/asm/tier",
+          "before": 4,
+          "after": 3
+        },
+        {
+          "path": "/modifications/asm/reqExp",
+          "before": 32000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/asm/value",
+          "before": 49000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/asm/openCostGold",
+          "before": 1100,
+          "after": 450
+        },
+        {
+          "path": "/modifications/us_aim_9l/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/us_aim_7m/reqExp",
+          "before": 11000,
+          "after": 9600
+        },
+        {
+          "path": "/modifications/us_aim_7m/value",
+          "before": 17000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/us_aim_7m/openCostGold",
+          "before": 390,
+          "after": 360
+        },
+        {
+          "path": "/modifications/us_aim_9m/reqExp",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/us_aim_9m/value",
+          "before": 23000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/us_aim_9m/openCostGold",
+          "before": 530,
+          "after": 450
+        },
+        {
+          "path": "/modifications/jp_aam4/reqExp",
+          "before": 32000,
+          "after": 49000
+        },
+        {
+          "path": "/modifications/jp_aam4/value",
+          "before": 49000,
+          "after": 76000
+        },
+        {
+          "path": "/modifications/jp_aam4/openCostGold",
+          "before": 1100,
+          "after": 1800
+        },
+        {
+          "path": "/modifications/sniper_atp_pod/openCostGold",
+          "before": 360,
+          "after": 370
+        },
+        {
+          "path": "/modifications/us_ljdam/reqExp",
+          "before": 11000,
+          "after": 9600
+        },
+        {
+          "path": "/modifications/us_ljdam/value",
+          "before": 17000,
+          "after": 15000
+        },
+        {
+          "path": "/modifications/us_ljdam/openCostGold",
+          "before": 390,
+          "after": 360
+        },
+        {
+          "path": "/modifications/jp_aam3/reqExp",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/jp_aam3/value",
+          "before": 23000,
+          "after": 19000
+        },
+        {
+          "path": "/modifications/jp_aam3/openCostGold",
+          "before": 530,
+          "after": 450
+        },
+        {
+          "path": "/modifications/jp_gcs_1",
+          "before": null,
+          "after": {
+            "prevModification": "us_jdam",
+            "tier": 2,
+            "reqExp": 9600,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 360
+          }
+        }
+      ]
+    },
+    {
+      "id": "f_2a_adtw",
+      "changes": [
+        {
+          "path": "/modifications/countermeasures_belt_pack/modClass",
+          "before": "armor",
+          "after": null
+        },
+        {
+          "path": "/modifications/M60_belt_pack/tier",
+          "before": 1,
+          "after": 2
+        },
+        {
+          "path": "/modifications/M60_belt_pack/prevModification",
+          "before": null,
+          "after": "countermeasures_belt_pack"
+        },
+        {
+          "path": "/modifications/M60_new_gun/tier",
+          "before": 2,
+          "after": 3
+        },
+        {
+          "path": "/modifications/asm/prevModification",
+          "before": "M60_new_gun",
+          "after": "jp_gcs_1"
+        },
+        {
+          "path": "/modifications/j_aaq_2_pod/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/j_aaq_2_pod/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        },
+        {
+          "path": "/modifications/us_jdam/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/us_jdam/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        },
+        {
+          "path": "/modifications/jp_gcs_1",
+          "before": null,
+          "after": {
+            "tier": 2,
+            "value": 0,
+            "costGold": 0
+          }
+        },
+        {
+          "path": "/modifications/jp_aam4",
+          "before": null,
+          "after": {
+            "reqModification": "jp_aam3",
+            "prevModification": "asm",
+            "addMrank": 3,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0,
+            "tutorialMission": "aircraft_aam_arh",
+            "tutorialMissionWeapon": "f_2a_adtw_aam_4"
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier3",
+          "before": 2,
+          "after": 3
+        }
+      ]
+    },
+    {
+      "id": "q_5a",
+      "changes": [
+        {
+          "path": "/modifications/countermeasures_launcher_chaff_large",
+          "before": {
+            "reqModification": "countermeasures_belt_pack",
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/countermeasures_launcher_chaff",
+          "before": null,
+          "after": {
+            "reqModification": "countermeasures_belt_pack",
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q_5l",
+      "changes": [
+        {
+          "path": "/modifications/countermeasures_launcher_chaff_large",
+          "before": {
+            "reqModification": "countermeasures_belt_pack",
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/countermeasures_launcher_chaff",
+          "before": null,
+          "after": {
+            "reqModification": "countermeasures_belt_pack",
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "a_5c",
+      "changes": [
+        {
+          "path": "/modifications/countermeasures_launcher_chaff_large",
+          "before": {
+            "reqModification": "countermeasures_belt_pack",
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/countermeasures_launcher_chaff",
+          "before": null,
+          "after": {
+            "reqModification": "countermeasures_belt_pack",
+            "tier": 0,
+            "value": 0,
+            "costGold": 0,
+            "ammoCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "hs-129b-2_romania_italy",
+      "changes": [
+        {
+          "path": "/modifications/bk37_light_targets",
+          "before": null,
+          "after": {
+            "reqModification": "bk37_belt_pack",
+            "tier": 0,
+            "value": 30,
+            "costGold": 0,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 12
+          }
+        },
+        {
+          "path": "/modifications/bk37_ground_targets",
+          "before": null,
+          "after": {
+            "reqModification": "bk37_belt_pack",
+            "tier": 0,
+            "value": 30,
+            "costGold": 0,
+            "spawnCostMul": 1.33,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "se_203",
+      "changes": [
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 270,
+          "after": 280
+        },
+        {
+          "path": "/modifications/structure_str/repairCostCoef",
+          "before": 0.046,
+          "after": 0.049
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 390,
+          "after": 420
+        },
+        {
+          "path": "/modifications/cd_98/repairCostCoef",
+          "before": 0.053,
+          "after": 0.056
+        },
+        {
+          "path": "/modifications/cd_98/reqExp",
+          "before": 4600,
+          "after": 3800
+        },
+        {
+          "path": "/modifications/cd_98/value",
+          "before": 7400,
+          "after": 6100
+        },
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 270,
+          "after": 230
+        },
+        {
+          "path": "/modifications/new_cover/repairCostCoef",
+          "before": 0.045,
+          "after": 0.048
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 430,
+          "after": 450
+        },
+        {
+          "path": "/modifications/new_compressor_jet/repairCostCoef",
+          "before": 0.037,
+          "after": 0.039
+        },
+        {
+          "path": "/modifications/new_compressor_jet/openCostGold",
+          "before": 270,
+          "after": 280
+        },
+        {
+          "path": "/modifications/hydravlic_power/repairCostCoef",
+          "before": 0.011,
+          "after": 0.012
+        },
+        {
+          "path": "/modifications/hydravlic_power/openCostGold",
+          "before": 390,
+          "after": 420
+        },
+        {
+          "path": "/modifications/hp_105_jet/repairCostCoef",
+          "before": 0.079,
+          "after": 0.084
+        },
+        {
+          "path": "/modifications/hp_105_jet/reqExp",
+          "before": 4600,
+          "after": 3800
+        },
+        {
+          "path": "/modifications/hp_105_jet/value",
+          "before": 7400,
+          "after": 6100
+        },
+        {
+          "path": "/modifications/hp_105_jet/openCostGold",
+          "before": 270,
+          "after": 230
+        },
+        {
+          "path": "/modifications/air_extinguisher/repairCostCoef",
+          "before": 0.072,
+          "after": 0.076
+        },
+        {
+          "path": "/modifications/air_extinguisher/openCostGold",
+          "before": 430,
+          "after": 450
+        },
+        {
+          "path": "/modifications/air_extinguisher/prevModification",
+          "before": null,
+          "after": "g_suit"
+        },
+        {
+          "path": "/modifications/hispano_belt_pack/openCostGold",
+          "before": 270,
+          "after": 280
+        },
+        {
+          "path": "/modifications/hispano_mk5_new_gun/repairCostCoef",
+          "before": 0.015,
+          "after": 0.016
+        },
+        {
+          "path": "/modifications/hispano_mk5_new_gun/reqExp",
+          "before": 4600,
+          "after": 3800
+        },
+        {
+          "path": "/modifications/hispano_mk5_new_gun/value",
+          "before": 7400,
+          "after": 6100
+        },
+        {
+          "path": "/modifications/hispano_mk5_new_gun/openCostGold",
+          "before": 270,
+          "after": 230
+        },
+        {
+          "path": "/modifications/fr_matra_t_10/openCostGold",
+          "before": 270,
+          "after": 280
+        },
+        {
+          "path": "/modifications/fr_matra_t_10_150/openCostGold",
+          "before": 390,
+          "after": 420
+        },
+        {
+          "path": "/modifications/fr_matra_sneb/reqExp",
+          "before": 4600,
+          "after": 3800
+        },
+        {
+          "path": "/modifications/fr_matra_sneb/value",
+          "before": 7400,
+          "after": 6100
+        },
+        {
+          "path": "/modifications/fr_matra_sneb/openCostGold",
+          "before": 270,
+          "after": 230
+        },
+        {
+          "path": "/modifications/nord_as_20/openCostGold",
+          "before": 430,
+          "after": 450
+        },
+        {
+          "path": "/modifications/nord_aa_20/reqExp",
+          "before": 4600,
+          "after": 3800
+        },
+        {
+          "path": "/modifications/nord_aa_20/value",
+          "before": 7400,
+          "after": 6100
+        },
+        {
+          "path": "/modifications/nord_aa_20/openCostGold",
+          "before": 270,
+          "after": 230
+        },
+        {
+          "path": "/modifications/fr_matra_r_511/openCostGold",
+          "before": 430,
+          "after": 450
+        },
+        {
+          "path": "/modifications/g_suit",
+          "before": null,
+          "after": {
+            "tier": 3,
+            "modClass": "armor",
+            "repairCostCoef": 0.055,
+            "reqExp": 3800,
+            "value": 6100,
+            "costGold": 0,
+            "openCostGold": 230
+          }
+        },
+        {
+          "path": "/modifications/hispano_air_targets",
+          "before": null,
+          "after": {
+            "reqModification": "hispano_belt_pack",
+            "tier": 0,
+            "value": 140,
+            "costGold": 0,
+            "maxCount": 80,
+            "validIfBought": true,
+            "ammoCount": 150
+          }
+        }
+      ]
+    },
+    {
+      "id": "morko_morane",
+      "changes": [
+        {
+          "path": "/modifications/mg151_stealth",
+          "before": null,
+          "after": {
+            "reqModification": "mg15120_belt_pack",
+            "tier": 0,
+            "value": 25,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 30,
+            "validIfBought": true,
+            "ammoCount": 120
+          }
+        }
+      ]
+    },
+    {
+      "id": "saab_j32b",
+      "changes": [
+        {
+          "path": "/modifications/CdMin_Fuse/reqExp",
+          "before": 16000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/value",
+          "before": 25000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/CdMin_Fuse/openCostGold",
+          "before": 520,
+          "after": 450
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 390,
+          "after": 490
+        },
+        {
+          "path": "/modifications/cd_98/reqExp",
+          "before": 9900,
+          "after": 7900
+        },
+        {
+          "path": "/modifications/cd_98/value",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/new_cover/reqExp",
+          "before": 17000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/new_cover/value",
+          "before": 27000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 550,
+          "after": 530
+        },
+        {
+          "path": "/modifications/new_compressor_jet/openCostGold",
+          "before": 390,
+          "after": 490
+        },
+        {
+          "path": "/modifications/hp_105_jet/reqExp",
+          "before": 9900,
+          "after": 7900
+        },
+        {
+          "path": "/modifications/hp_105_jet/value",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/g_suit/reqExp",
+          "before": 9900,
+          "after": 7900
+        },
+        {
+          "path": "/modifications/g_suit/value",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/air_extinguisher/reqExp",
+          "before": 17000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/air_extinguisher/value",
+          "before": 27000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/air_extinguisher/openCostGold",
+          "before": 550,
+          "after": 530
+        },
+        {
+          "path": "/modifications/aden_belt_pack/reqExp",
+          "before": 16000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/aden_belt_pack/value",
+          "before": 25000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/aden_belt_pack/openCostGold",
+          "before": 520,
+          "after": 450
+        },
+        {
+          "path": "/modifications/aden_new_gun/reqExp",
+          "before": 9900,
+          "after": 7900
+        },
+        {
+          "path": "/modifications/aden_new_gun/value",
+          "before": 15000,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/swe_m57b/tier",
+          "before": 2,
+          "after": 1
+        },
+        {
+          "path": "/modifications/swe_m57b/reqExp",
+          "before": 12000,
+          "after": 11000
+        },
+        {
+          "path": "/modifications/swe_m57b/value",
+          "before": 19000,
+          "after": 17000
+        },
+        {
+          "path": "/modifications/swe_m57b/openCostGold",
+          "before": 390,
+          "after": 450
+        },
+        {
+          "path": "/modifications/swe_rb24/reqModification",
+          "before": "swe_m57b",
+          "after": null
+        },
+        {
+          "path": "/modifications/swe_rb24/reqExp",
+          "before": 17000,
+          "after": 13000
+        },
+        {
+          "path": "/modifications/swe_rb24/value",
+          "before": 27000,
+          "after": 20000
+        },
+        {
+          "path": "/modifications/swe_rb24/openCostGold",
+          "before": 550,
+          "after": 530
+        },
+        {
+          "path": "/modifications/swe_rb24/prevModification",
+          "before": null,
+          "after": "aden_new_gun"
+        },
+        {
+          "path": "/modifications/swd_j29_145mm_m49a",
+          "before": null,
+          "after": {
+            "reqModification": "swe_m57b",
+            "tier": 2,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 490
+          }
+        },
+        {
+          "path": "/modifications/swd_j29_150mm_m51",
+          "before": null,
+          "after": {
+            "reqModification": "swd_j29_145mm_m49a",
+            "tier": 3,
+            "reqExp": 7900,
+            "value": 12000,
+            "costGold": 0,
+            "openCostGold": 320
+          }
+        },
+        {
+          "path": "/modifications/swd_j29_180mm_m49",
+          "before": null,
+          "after": {
+            "reqModification": "swd_j29_150mm_m51",
+            "tier": 4,
+            "reqExp": 13000,
+            "value": 20000,
+            "costGold": 0,
+            "openCostGold": 530
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier3",
+          "before": 2,
+          "after": 3
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "saab_f35_wdns",
+      "changes": [
+        {
+          "path": "/modifications/us_aim_9b",
+          "before": {
+            "tier": 1,
+            "reqExp": 8700,
+            "value": 14000,
+            "costGold": 0,
+            "openCostGold": 380,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "saab_f35_wdns_aim_9b"
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/us_2_75_in_ffar_lau_3a/prevModification",
+          "before": "us_aim_9b",
+          "after": "us_aim_9n"
+        },
+        {
+          "path": "/modifications/us_aim_9n",
+          "before": null,
+          "after": {
+            "addMrank": 2,
+            "tier": 1,
+            "reqExp": 8700,
+            "value": 14000,
+            "costGold": 0,
+            "openCostGold": 380,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "saab_f35_wdns_aim_9n"
+          }
+        }
+      ]
+    },
+    {
+      "id": "saab_jas39a",
+      "changes": [
+        {
+          "path": "/modifications/new_compressor_jet/openCostGold",
+          "before": 320,
+          "after": 330
+        },
+        {
+          "path": "/modifications/hydravlic_power/openCostGold",
+          "before": 420,
+          "after": 440
+        },
+        {
+          "path": "/modifications/cd_98/openCostGold",
+          "before": 550,
+          "after": 580
+        },
+        {
+          "path": "/modifications/hp_105_jet/reqExp",
+          "before": 29000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/hp_105_jet/value",
+          "before": 45000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/hp_105_jet/openCostGold",
+          "before": 1200,
+          "after": 940
+        },
+        {
+          "path": "/modifications/f_4c_CdMin_Fuse/openCostGold",
+          "before": 320,
+          "after": 330
+        },
+        {
+          "path": "/modifications/structure_str/openCostGold",
+          "before": 420,
+          "after": 440
+        },
+        {
+          "path": "/modifications/new_cover/openCostGold",
+          "before": 550,
+          "after": 580
+        },
+        {
+          "path": "/modifications/countermeasures_belt_pack/openCostGold",
+          "before": 320,
+          "after": 330
+        },
+        {
+          "path": "/modifications/uk_ltc_bol/openCostGold",
+          "before": 420,
+          "after": 440
+        },
+        {
+          "path": "/modifications/f_4c_g_suit/openCostGold",
+          "before": 550,
+          "after": 580
+        },
+        {
+          "path": "/modifications/air_extinguisher/reqExp",
+          "before": 29000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/air_extinguisher/value",
+          "before": 45000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/air_extinguisher/openCostGold",
+          "before": 1200,
+          "after": 940
+        },
+        {
+          "path": "/modifications/akan_85_belt_pack/openCostGold",
+          "before": 320,
+          "after": 330
+        },
+        {
+          "path": "/modifications/akan_85_new_gun/openCostGold",
+          "before": 420,
+          "after": 440
+        },
+        {
+          "path": "/modifications/swd_rb75/openCostGold",
+          "before": 550,
+          "after": 580
+        },
+        {
+          "path": "/modifications/swd_rb75t/reqExp",
+          "before": 29000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/swd_rb75t/value",
+          "before": 45000,
+          "after": 32000
+        },
+        {
+          "path": "/modifications/swd_rb75t/openCostGold",
+          "before": 1200,
+          "after": 940
+        },
+        {
+          "path": "/modifications/swd_rb74/openCostGold",
+          "before": 320,
+          "after": 330
+        },
+        {
+          "path": "/modifications/swe_rb71/openCostGold",
+          "before": 420,
+          "after": 440
+        },
+        {
+          "path": "/modifications/swd_rb74m/openCostGold",
+          "before": 550,
+          "after": 580
+        },
+        {
+          "path": "/modifications/gr_litening_pod/openCostGold",
+          "before": 320,
+          "after": 330
+        },
+        {
+          "path": "/modifications/us_gbu_laser/openCostGold",
+          "before": 420,
+          "after": 440
+        },
+        {
+          "path": "/modifications/asm/openCostGold",
+          "before": 320,
+          "after": 330
+        },
+        {
+          "path": "/modifications/swd_rb99",
+          "before": null,
+          "after": {
+            "reqModification": "swd_rb74m",
+            "addMrank": 2,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "reqExp": 21000,
+            "value": 32000,
+            "costGold": 0,
+            "openCostGold": 940,
+            "tutorialMission": "aircraft_aam_arh",
+            "tutorialMissionWeapon": "saab_jas39a_rockets_rb_99"
+          }
+        },
+        {
+          "path": "/needBuyToOpenNextInTier4",
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "ah_1w",
+      "changes": [
+        {
+          "path": "/modifications/ah_1_AGM_114_8/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/ah_1_AGM_114_16/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/us_apkws/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/us_aim_9l/addMrank",
+          "before": null,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "ah_64e",
+      "changes": [
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_flak_jacket/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          }
+        },
+        {
+          "path": "/modifications/atgm_spike_nlos_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_nlos",
+            "addMrank": 1,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "h145m",
+      "changes": [
+        {
+          "path": "/modifications/atgm_spike_x4_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_x4",
+            "addMrank": 2,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiger_uht",
+      "changes": [
+        {
+          "path": "/modifications/tiger_atgw3/addMrank",
+          "before": null,
+          "after": 7
+        }
+      ]
+    },
+    {
+      "id": "mi_8amtsh_vn",
+      "changes": [
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "tier": 2,
+            "modClass": "armor",
+            "repairCostCoef": 0.133,
+            "reqExp": 14000,
+            "value": 21000,
+            "costGold": 0,
+            "openCostGold": 400,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_night_vision_system/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "tier": 2,
+            "modClass": "armor",
+            "repairCostCoef": 0.133,
+            "reqExp": 14000,
+            "value": 21000,
+            "costGold": 0,
+            "openCostGold": 400,
+            "deactivationIsAllowed": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "mi_28nm",
+      "changes": [
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "tier": 1,
+            "repairCostCoef": 0.138,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 320,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_night_vision_system/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/su_lmur_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "su_lmur",
+            "addMrank": 1,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "tier": 1,
+            "repairCostCoef": 0.138,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 320,
+            "deactivationIsAllowed": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "ka_52",
+      "changes": [
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "reqModification": "heli_screen_exhaust_device",
+            "tier": 2,
+            "repairCostCoef": 0.166,
+            "reqExp": 11000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 340,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_night_vision_system/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "reqModification": "heli_screen_exhaust_device",
+            "tier": 2,
+            "repairCostCoef": 0.166,
+            "reqExp": 11000,
+            "value": 16000,
+            "costGold": 0,
+            "openCostGold": 340,
+            "deactivationIsAllowed": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "mi_35p",
+      "changes": [
+        {
+          "path": "/modifications/ka_9K121/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/ka_9K121/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        }
+      ]
+    },
+    {
+      "id": "lynx_ah_mk1",
+      "changes": [
+        {
+          "path": "/modifications/ah_1_AGM_114_8/addMrank",
+          "before": null,
+          "after": 3
+        },
+        {
+          "path": "/modifications/ah_1_AGM_114_16/addMrank",
+          "before": null,
+          "after": 3
+        },
+        {
+          "path": "/modifications/stinger_aam/addMrank",
+          "before": null,
+          "after": 1
+        }
+      ]
+    },
+    {
+      "id": "g_lynx",
+      "changes": [
+        {
+          "path": "/modifications/ah_1_AGM_114_8/addMrank",
+          "before": null,
+          "after": 3
+        },
+        {
+          "path": "/modifications/ah_1_AGM_114_8/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        },
+        {
+          "path": "/modifications/stinger_aam/addMrank",
+          "before": null,
+          "after": 1
+        },
+        {
+          "path": "/modifications/stinger_aam/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        }
+      ]
+    },
+    {
+      "id": "ah_64e_britain",
+      "changes": [
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_flak_jacket/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          }
+        },
+        {
+          "path": "/modifications/atgm_spike_nlos_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_nlos",
+            "addMrank": 1,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "aw_159",
+      "changes": [
+        {
+          "path": "/modifications/atgm_spike_nlos/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/atgm_spike_nlos_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_nlos",
+            "addMrank": 5,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ah_64e_indonesia",
+      "changes": [
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_flak_jacket/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          }
+        },
+        {
+          "path": "/modifications/atgm_spike_nlos_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_nlos",
+            "addMrank": 1,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "z_9w",
+      "changes": [
+        {
+          "path": "/modifications/cn_ty_90/addMrank",
+          "before": null,
+          "after": 3
+        },
+        {
+          "path": "/modifications/ns23_stealth",
+          "before": null,
+          "after": {
+            "reqModification": "ns23_belt_pack",
+            "tier": 0,
+            "value": 490,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 240
+          }
+        }
+      ]
+    },
+    {
+      "id": "z_9wa",
+      "changes": [
+        {
+          "path": "/modifications/cn_akd_9/addMrank",
+          "before": null,
+          "after": 3
+        },
+        {
+          "path": "/modifications/cn_ty_90/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/ns23_stealth",
+          "before": null,
+          "after": {
+            "reqModification": "ns23_belt_pack",
+            "tier": 0,
+            "value": 500,
+            "costGold": 0,
+            "hasTracer": false,
+            "maxCount": 40,
+            "validIfBought": true,
+            "ammoCount": 240
+          }
+        }
+      ]
+    },
+    {
+      "id": "z_19",
+      "changes": [
+        {
+          "path": "/modifications/cn_ty_90/addMrank",
+          "before": null,
+          "after": 4
+        }
+      ]
+    },
+    {
+      "id": "ah_1w_china",
+      "changes": [
+        {
+          "path": "/modifications/ah_1_AGM_114_8/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/ah_1_AGM_114_16/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/us_apkws/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/us_aim_9l/addMrank",
+          "before": null,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "z_19e",
+      "changes": [
+        {
+          "path": "/modifications/cn_ty_90/addMrank",
+          "before": null,
+          "after": 4
+        },
+        {
+          "path": "/modifications/cn_ty_90/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        }
+      ]
+    },
+    {
+      "id": "z_10me",
+      "changes": [
+        {
+          "path": "/modifications/cn_ba_11/reqModification",
+          "before": "cn_cm_502kg",
+          "after": "cn_cm_502kg_mitl"
+        },
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "tier": 1,
+            "repairCostCoef": 0.139,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 290,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_night_vision_system/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/cn_cm_502kg_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "cn_cm_502kg",
+            "addMrank": 1,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 3,
+            "value": 0,
+            "costGold": 0
+          }
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "tier": 1,
+            "repairCostCoef": 0.139,
+            "reqExp": 10000,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 290,
+            "deactivationIsAllowed": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "ah_64e_china",
+      "changes": [
+        {
+          "path": "/modifications/new_compressor_heli/repairCostCoef",
+          "before": 0.047,
+          "after": 0.041
+        },
+        {
+          "path": "/modifications/cd_98_main_rotor/repairCostCoef",
+          "before": 0.064,
+          "after": 0.056
+        },
+        {
+          "path": "/modifications/hp_105_jet/repairCostCoef",
+          "before": 0.097,
+          "after": 0.086
+        },
+        {
+          "path": "/modifications/new_heli_cover/repairCostCoef",
+          "before": 0.084,
+          "after": 0.074
+        },
+        {
+          "path": "/modifications/heli_structure/repairCostCoef",
+          "before": 0.045,
+          "after": 0.04
+        },
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_flak_jacket/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/air_extinguisher/repairCostCoef",
+          "before": 0.089,
+          "after": 0.078
+        },
+        {
+          "path": "/modifications/aden_new_gun/repairCostCoef",
+          "before": 0.025,
+          "after": 0.022
+        },
+        {
+          "path": "/modifications/heli_night_vision_system/repairCostCoef",
+          "before": 0.089,
+          "after": 0.078
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "tier": 1,
+            "modClass": "armor",
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370
+          }
+        },
+        {
+          "path": "/modifications/atgm_spike_nlos_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_nlos",
+            "addMrank": 1,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a_129_a",
+      "changes": [
+        {
+          "path": "/modifications/ah_1_AGM_114_8/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/ah_1_AGM_114_8/isEnabledByDefaultForAddMrank",
+          "before": null,
+          "after": false
+        }
+      ]
+    },
+    {
+      "id": "a_129_cbt",
+      "changes": [
+        {
+          "path": "/modifications/ah_1_AGM_114_8/addMrank",
+          "before": null,
+          "after": 3
+        },
+        {
+          "path": "/modifications/ah_1_AGM_114_16/addMrank",
+          "before": null,
+          "after": 3
+        }
+      ]
+    },
+    {
+      "id": "a_129_d",
+      "changes": [
+        {
+          "path": "/modifications/atgm_spike_x2/addMrank",
+          "before": null,
+          "after": 5
+        },
+        {
+          "path": "/modifications/atgm_spike_x4/addMrank",
+          "before": null,
+          "after": 5
+        },
+        {
+          "path": "/modifications/atgm_spike_x4_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_x4",
+            "addMrank": 7,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ah_64e_netherlands",
+      "changes": [
+        {
+          "path": "/modifications/maw_countermeasures_launcher_chaff/reqModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large",
+          "before": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          },
+          "after": null
+        },
+        {
+          "path": "/modifications/heli_flak_jacket/prevModification",
+          "before": "MAW_system_heli_false_thermal_targets_large",
+          "after": "MAW_system_heli_false_thermal_targets_large_dircm"
+        },
+        {
+          "path": "/modifications/MAW_system_heli_false_thermal_targets_large_dircm",
+          "before": null,
+          "after": {
+            "tier": 1,
+            "modClass": "armor",
+            "repairCostCoef": 0.138,
+            "reqExp": 15000,
+            "value": 22000,
+            "costGold": 0,
+            "openCostGold": 370,
+            "deactivationIsAllowed": true
+          }
+        },
+        {
+          "path": "/modifications/atgm_spike_nlos_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_nlos",
+            "addMrank": 1,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiger_had_france",
+      "changes": [
+        {
+          "path": "/modifications/ah_1_AGM_114_8/addMrank",
+          "before": null,
+          "after": 2
+        },
+        {
+          "path": "/modifications/ah_1_AGM_114_16/addMrank",
+          "before": null,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "id": "tiger_hac_france",
+      "changes": [
+        {
+          "path": "/modifications/tiger_trigat_lr/addMrank",
+          "before": null,
+          "after": 7
+        }
+      ]
+    },
+    {
+      "id": "tiger_had_block2_france",
+      "changes": [
+        {
+          "path": "/modifications/atgm_spike_x4_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_x4",
+            "addMrank": 2,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ah_64d_i_saraph",
+      "changes": [
+        {
+          "path": "/modifications/atgm_spike_nlos_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_nlos",
+            "addMrank": 2,
+            "isEnabledByDefaultForAddMrank": false,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ah_60_iaf",
+      "changes": [
+        {
+          "path": "/modifications/atgm_spike_x2/addMrank",
+          "before": null,
+          "after": 5
+        },
+        {
+          "path": "/modifications/atgm_spike_x4/addMrank",
+          "before": null,
+          "after": 5
+        },
+        {
+          "path": "/modifications/atgm_spike_x4_mitl",
+          "before": null,
+          "after": {
+            "reqModification": "atgm_spike_x4",
+            "addMrank": 7,
+            "tier": 4,
+            "value": 0,
+            "costGold": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "jp_cruiser_tone",
+      "changes": [
+        {
+          "path": "/modifications/ship_tool_kit/reqExp",
+          "before": 3400,
+          "after": 4400
+        },
+        {
+          "path": "/modifications/ship_tool_kit/value",
+          "before": 5900,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/ship_tool_kit/openCostGold",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/modifications/manual_ship_extinguisher/reqExp",
+          "before": 3800,
+          "after": 4900
+        },
+        {
+          "path": "/modifications/manual_ship_extinguisher/value",
+          "before": 6500,
+          "after": 8400
+        },
+        {
+          "path": "/modifications/manual_ship_extinguisher/openCostGold",
+          "before": 240,
+          "after": 250
+        },
+        {
+          "path": "/modifications/new_ship_pumps/reqExp",
+          "before": 9100,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/new_ship_pumps/value",
+          "before": 16000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/new_ship_pumps/openCostGold",
+          "before": 560,
+          "after": 610
+        },
+        {
+          "path": "/modifications/new_main_caliber_turrets/reqExp",
+          "before": 4200,
+          "after": 5400
+        },
+        {
+          "path": "/modifications/new_main_caliber_turrets/value",
+          "before": 7200,
+          "after": 9300
+        },
+        {
+          "path": "/modifications/new_main_caliber_turrets/openCostGold",
+          "before": 260,
+          "after": 280
+        },
+        {
+          "path": "/modifications/new_aux_caliber_turrets/reqExp",
+          "before": 3800,
+          "after": 4900
+        },
+        {
+          "path": "/modifications/new_aux_caliber_turrets/value",
+          "before": 6500,
+          "after": 8400
+        },
+        {
+          "path": "/modifications/new_aux_caliber_turrets/openCostGold",
+          "before": 240,
+          "after": 250
+        },
+        {
+          "path": "/modifications/ship_rangefinder/reqExp",
+          "before": 4200,
+          "after": 5400
+        },
+        {
+          "path": "/modifications/ship_rangefinder/value",
+          "before": 7200,
+          "after": 9300
+        },
+        {
+          "path": "/modifications/ship_rangefinder/openCostGold",
+          "before": 260,
+          "after": 280
+        },
+        {
+          "path": "/modifications/new_ship_hull/reqExp",
+          "before": 3400,
+          "after": 4400
+        },
+        {
+          "path": "/modifications/new_ship_hull/value",
+          "before": 5900,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/new_ship_hull/openCostGold",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/modifications/new_ship_rudder/reqExp",
+          "before": 3800,
+          "after": 4900
+        },
+        {
+          "path": "/modifications/new_ship_rudder/value",
+          "before": 6500,
+          "after": 8400
+        },
+        {
+          "path": "/modifications/new_ship_rudder/openCostGold",
+          "before": 240,
+          "after": 250
+        },
+        {
+          "path": "/modifications/new_ship_screw/reqExp",
+          "before": 4200,
+          "after": 5400
+        },
+        {
+          "path": "/modifications/new_ship_screw/value",
+          "before": 7200,
+          "after": 9300
+        },
+        {
+          "path": "/modifications/new_ship_screw/openCostGold",
+          "before": 260,
+          "after": 280
+        },
+        {
+          "path": "/modifications/new_ship_engine/reqExp",
+          "before": 9100,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/new_ship_engine/value",
+          "before": 16000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/new_ship_engine/openCostGold",
+          "before": 560,
+          "after": 610
+        },
+        {
+          "path": "/modifications/ship_smoke_screen_system_mod/reqExp",
+          "before": 3800,
+          "after": 4900
+        },
+        {
+          "path": "/modifications/ship_smoke_screen_system_mod/value",
+          "before": 6500,
+          "after": 8400
+        },
+        {
+          "path": "/modifications/ship_smoke_screen_system_mod/openCostGold",
+          "before": 240,
+          "after": 250
+        },
+        {
+          "path": "/modifications/ship_anti_fragmentation_protection/reqExp",
+          "before": 4200,
+          "after": 5400
+        },
+        {
+          "path": "/modifications/ship_anti_fragmentation_protection/value",
+          "before": 7200,
+          "after": 9300
+        },
+        {
+          "path": "/modifications/ship_anti_fragmentation_protection/openCostGold",
+          "before": 260,
+          "after": 280
+        },
+        {
+          "path": "/modifications/ship_ammo_wetting/reqExp",
+          "before": 9100,
+          "after": 12000
+        },
+        {
+          "path": "/modifications/ship_ammo_wetting/value",
+          "before": 16000,
+          "after": 21000
+        },
+        {
+          "path": "/modifications/ship_ammo_wetting/openCostGold",
+          "before": 560,
+          "after": 610
+        },
+        {
+          "path": "/modifications/ship_venting/reqExp",
+          "before": 4200,
+          "after": 5400
+        },
+        {
+          "path": "/modifications/ship_venting/value",
+          "before": 7200,
+          "after": 9300
+        },
+        {
+          "path": "/modifications/ship_venting/openCostGold",
+          "before": 260,
+          "after": 280
+        },
+        {
+          "path": "/modifications/200mm_jp_type88_navy_apc_ammo_pack/reqExp",
+          "before": 3400,
+          "after": 4400
+        },
+        {
+          "path": "/modifications/200mm_jp_type88_navy_apc_ammo_pack/value",
+          "before": 5900,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/200mm_jp_type88_navy_apc_ammo_pack/openCostGold",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/modifications/200mm_jp_type0_aa_distant_fuse_navy_he_ammo_pack/reqExp",
+          "before": 3400,
+          "after": 4400
+        },
+        {
+          "path": "/modifications/200mm_jp_type0_aa_distant_fuse_navy_he_ammo_pack/value",
+          "before": 5900,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/200mm_jp_type0_aa_distant_fuse_navy_he_ammo_pack/openCostGold",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/modifications/127mm_jp_type1_naval_aa_distant_fuse_he_ammo_pack/reqExp",
+          "before": 3800,
+          "after": 4900
+        },
+        {
+          "path": "/modifications/127mm_jp_type1_naval_aa_distant_fuse_he_ammo_pack/value",
+          "before": 6500,
+          "after": 8400
+        },
+        {
+          "path": "/modifications/127mm_jp_type1_naval_aa_distant_fuse_he_ammo_pack/openCostGold",
+          "before": 240,
+          "after": 250
+        },
+        {
+          "path": "/modifications/new_aa_caliber_turrets/reqExp",
+          "before": 3400,
+          "after": 4400
+        },
+        {
+          "path": "/modifications/new_aa_caliber_turrets/value",
+          "before": 5900,
+          "after": 7600
+        },
+        {
+          "path": "/modifications/new_aa_caliber_turrets/openCostGold",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/modifications/premExpMul/costGold",
+          "before": 1900,
+          "after": 2000
+        }
+      ]
+    }
+  ],
+  "battleRatings": [
+    {
+      "id": "germ_embt",
+      "fields": [
+        {
+          "field": "economicRank",
+          "before": 27,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "germ_leopard_2a5_pso",
+      "fields": [
+        {
+          "field": "economicRank",
+          "before": 28,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "germ_leopard_2a7v",
+      "fields": [
+        {
+          "field": "economicRank",
+          "before": 29,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "fr_amx_30_dca",
+      "fields": [
+        {
+          "field": "economicRank",
+          "before": 20,
+          "after": 21
+        }
+      ]
+    },
+    {
+      "id": "f3h-2",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 25,
+          "after": 24
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 25,
+          "after": 24
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 25,
+          "after": 24
+        },
+        {
+          "field": "economicRankTankHistorical",
+          "before": 23,
+          "after": 22
+        },
+        {
+          "field": "economicRankTankSimulation",
+          "before": 23,
+          "after": 22
+        }
+      ]
+    },
+    {
+      "id": "a_10a_early",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 27,
+          "after": 23
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 28,
+          "after": 24
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 29,
+          "after": 25
+        },
+        {
+          "field": "economicRankTankHistorical",
+          "before": 30,
+          "after": 26
+        },
+        {
+          "field": "economicRankTankSimulation",
+          "before": 28,
+          "after": 26
+        }
+      ]
+    },
+    {
+      "id": "yak-3u",
+      "fields": [
+        {
+          "field": "economicRankTankHistorical",
+          "before": 17,
+          "after": 16
+        }
+      ]
+    },
+    {
+      "id": "j_22m1a",
+      "fields": [
+        {
+          "field": "economicRankTankHistorical",
+          "before": 32,
+          "after": 25
+        },
+        {
+          "field": "economicRankTankSimulation",
+          "before": 30,
+          "after": 25
+        }
+      ]
+    },
+    {
+      "id": "su_25tm",
+      "fields": [
+        {
+          "field": "economicRankTankHistorical",
+          "before": 33,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "su_25sm3",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 34,
+          "after": 32
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 32,
+          "after": 29
+        },
+        {
+          "field": "economicRankTankHistorical",
+          "before": 36,
+          "after": 33
+        },
+        {
+          "field": "economicRankTankSimulation",
+          "before": 35,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "spitfire_mk18e",
+      "fields": [
+        {
+          "field": "economicRankTankHistorical",
+          "before": 17,
+          "after": 16
+        }
+      ]
+    },
+    {
+      "id": "hawk_t1a_early",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 20,
+          "after": 19
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 20,
+          "after": 19
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 20,
+          "after": 19
+        }
+      ]
+    },
+    {
+      "id": "hawk_t1a",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 20,
+          "after": 19
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 20,
+          "after": 19
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 20,
+          "after": 19
+        }
+      ]
+    },
+    {
+      "id": "buccaneer_s2b",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 26
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 29,
+          "after": 26
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 29,
+          "after": 26
+        },
+        {
+          "field": "economicRankTankHistorical",
+          "before": 32,
+          "after": 30
+        },
+        {
+          "field": "economicRankTankSimulation",
+          "before": 29,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "n1k2_j",
+      "fields": [
+        {
+          "field": "economicRankTankHistorical",
+          "before": 17,
+          "after": 16
+        }
+      ]
+    },
+    {
+      "id": "n1k2_jko",
+      "fields": [
+        {
+          "field": "economicRankTankHistorical",
+          "before": 17,
+          "after": 16
+        }
+      ]
+    },
+    {
+      "id": "f_2a_adtw",
+      "fields": [
+        {
+          "field": "economicRankTankHistorical",
+          "before": 35,
+          "after": 33
+        },
+        {
+          "field": "economicRankTankSimulation",
+          "before": 34,
+          "after": 33
+        }
+      ]
+    },
+    {
+      "id": "f_16a_block_20_mlu",
+      "fields": [
+        {
+          "field": "economicRankSimulation",
+          "before": 39,
+          "after": 38
+        }
+      ]
+    },
+    {
+      "id": "saab_f35_wdns",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 26
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 28,
+          "after": 26
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 28,
+          "after": 26
+        },
+        {
+          "field": "economicRankTankHistorical",
+          "before": 27,
+          "after": 25
+        },
+        {
+          "field": "economicRankTankSimulation",
+          "before": 28,
+          "after": 25
+        }
+      ]
+    },
+    {
+      "id": "ah_1g",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 20
+        }
+      ]
+    },
+    {
+      "id": "uh_1c",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 24,
+          "after": 25
+        }
+      ]
+    },
+    {
+      "id": "h_34",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 21,
+          "after": 23
+        }
+      ]
+    },
+    {
+      "id": "uh_1c_xm_30",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 24,
+          "after": 25
+        }
+      ]
+    },
+    {
+      "id": "ah_6m",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 29
+        }
+      ]
+    },
+    {
+      "id": "oh_58d",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "ah_64a",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "ah_1f",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "ah_1w",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 27,
+          "after": 28
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 30,
+          "after": 28
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 29,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "rah_66",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "ah_64a_greece_usa",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "ah_64a_peten",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "ah_56a",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "yah_64",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "mh_60l_dap",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "id": "ah_64d",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 33
+        }
+      ]
+    },
+    {
+      "id": "ah_64e",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 37
+        }
+      ]
+    },
+    {
+      "id": "ah_1z",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 34
+        }
+      ]
+    },
+    {
+      "id": "mi_8tb",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 24,
+          "after": 21
+        }
+      ]
+    },
+    {
+      "id": "sa_313b",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "mi_24d_german",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 25,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "h145m",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 27,
+          "after": 36
+        }
+      ]
+    },
+    {
+      "id": "tiger_uht",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 27,
+          "after": 29
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 36,
+          "after": 29
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 29,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "tiger_had_spain",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "id": "mi_8tv",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 24,
+          "after": 22
+        }
+      ]
+    },
+    {
+      "id": "mi_4av",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 22
+        }
+      ]
+    },
+    {
+      "id": "mi_24a",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 25,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "mi_24d",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 25,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "mi_35m",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "ka_29",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "ka_50",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "mi_8amtsh_vn",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "id": "mi_28n",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "id": "mi_28nm",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 37
+        }
+      ]
+    },
+    {
+      "id": "ka_52",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 34
+        }
+      ]
+    },
+    {
+      "id": "mi_35p",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 31
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 33,
+          "after": 31
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 29,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "id": "scout_ah_mk1",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "wasp_has_mk1",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 24,
+          "after": 25
+        }
+      ]
+    },
+    {
+      "id": "lynx_ah_mk1",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 28
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 31,
+          "after": 28
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 27,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "super_hind_mk3",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 29
+        }
+      ]
+    },
+    {
+      "id": "g_lynx",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 28
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 31,
+          "after": 28
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 27,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "ah_2_rooivalk",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 34
+        }
+      ]
+    },
+    {
+      "id": "ah_mk1",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 34
+        }
+      ]
+    },
+    {
+      "id": "ah_64e_britain",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 37
+        }
+      ]
+    },
+    {
+      "id": "aw_159",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 33
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 35,
+          "after": 33
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 29,
+          "after": 33
+        }
+      ]
+    },
+    {
+      "id": "uh_1b_japan",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 22,
+          "after": 20
+        }
+      ]
+    },
+    {
+      "id": "ah_1s_late",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "ah_1s",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "ah_64d_japan",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "ah_64e_indonesia",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 37
+        }
+      ]
+    },
+    {
+      "id": "ah_64d_lightweight_japan",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "z_11wa",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 26
+        }
+      ]
+    },
+    {
+      "id": "sa_342l_china",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 26
+        }
+      ]
+    },
+    {
+      "id": "z_9w",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 25,
+          "after": 26
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 29,
+          "after": 26
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 25,
+          "after": 26
+        }
+      ]
+    },
+    {
+      "id": "z_9wa",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 28
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 31,
+          "after": 28
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 26,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "z_19",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 30
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 34,
+          "after": 30
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 28,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "oh_58d_china",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "ah_1w_china",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 27,
+          "after": 28
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 30,
+          "after": 28
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 29,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "mi_35m_pakistan",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "z_19e",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 30
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 34,
+          "after": 30
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 28,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "z_10",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 34
+        }
+      ]
+    },
+    {
+      "id": "z_10me",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 37
+        }
+      ]
+    },
+    {
+      "id": "ah_64e_china",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 37
+        }
+      ]
+    },
+    {
+      "id": "z_10a",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 34
+        }
+      ]
+    },
+    {
+      "id": "mi_24d_hungary",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 25,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "a_109_eoa2",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "t_129_atak",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "a_129_a",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 28
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 30,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "a_129_cbt",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 28
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 31,
+          "after": 28
+        }
+      ]
+    },
+    {
+      "id": "a_129_d",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 31
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 36,
+          "after": 31
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 32,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "id": "h_34_france",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 22,
+          "after": 21
+        }
+      ]
+    },
+    {
+      "id": "sa_313b_france",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "sa_316b",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "iar_316b",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "sa_341f",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 24,
+          "after": 25
+        }
+      ]
+    },
+    {
+      "id": "sa_342m",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 25,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "tiger_hap_france",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 27,
+          "after": 29
+        }
+      ]
+    },
+    {
+      "id": "ah_64e_netherlands",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 37
+        }
+      ]
+    },
+    {
+      "id": "tiger_had_france",
+      "fields": [
+        {
+          "field": "economicRankHistorical",
+          "before": 31,
+          "after": 29
+        }
+      ]
+    },
+    {
+      "id": "tiger_hac_france",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 29
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 36,
+          "after": 29
+        },
+        {
+          "field": "economicRankSimulation",
+          "before": 32,
+          "after": 29
+        }
+      ]
+    },
+    {
+      "id": "tiger_had_block2_france",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 30,
+          "after": 36
+        }
+      ]
+    },
+    {
+      "id": "ah_64d_netherlands",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "hkp2",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 24
+        }
+      ]
+    },
+    {
+      "id": "hkp9a_cb3_fc",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "mi_28a_sweden",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 30
+        }
+      ]
+    },
+    {
+      "id": "ahs",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "ah_1g_iaf",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 20
+        }
+      ]
+    },
+    {
+      "id": "md_500_tow_late",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 23,
+          "after": 25
+        }
+      ]
+    },
+    {
+      "id": "ah_1q_iaf",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 24,
+          "after": 26
+        }
+      ]
+    },
+    {
+      "id": "ah_1f_iaf",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 26,
+          "after": 27
+        }
+      ]
+    },
+    {
+      "id": "ah_64a_iaf",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "ah_64a_peten_iaf",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 28,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "id": "ah_64d_i_saraph",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 36
+        }
+      ]
+    },
+    {
+      "id": "ah_60_iaf",
+      "fields": [
+        {
+          "field": "economicRankArcade",
+          "before": 29,
+          "after": 31
+        },
+        {
+          "field": "economicRankHistorical",
+          "before": 36,
+          "after": 31
+        }
+      ]
+    },
+    {
+      "id": "jp_cruiser_tone",
+      "fields": [
+        {
+          "field": "economicRank",
+          "before": 16,
+          "after": 17
+        }
+      ]
+    }
+  ],
+  "shopAdditions": [
+    {
+      "id": "us_m3a1_stuart_nvidia",
+      "rank": 1,
+      "showOnlyWhenBought": true,
+      "gift": "msi_notebook",
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "us_stingray_2",
+      "rank": 6,
+      "gift": "msi_notebook",
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "f_15ex",
+      "rank": 9,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "f2a-1_nvidia",
+      "rank": 1,
+      "showOnlyWhenBought": true,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "fa_18d_late",
+      "rank": 8,
+      "gift": "msi_notebook",
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "us_erie_class",
+      "rank": 2,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "germ_leopard_2a8",
+      "rank": 8,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "germ_battleship_pr_h39",
+      "rank": 7,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "germ_sub_type_7",
+      "rank": 2,
+      "showOnlyWhenBought": true,
+      "gift": "msi_notebook",
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "ussr_btr_90_2004",
+      "rank": 7,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "su_15tm",
+      "rank": 6,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "ussr_battleship_imperator_nikolai_pervyi",
+      "rank": 5,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "ussr_destroyer_vifor_class_lyogkiy",
+      "rank": 1,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "uk_olifant_optimering",
+      "rank": 6,
+      "gift": "msi_notebook",
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "fulmar_mk2",
+      "rank": 1,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "uk_cruiser_danae_class",
+      "rank": 3,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "uk_battleship_duke_of_york",
+      "rank": 6,
+      "gift": "msi_notebook",
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "jp_bmp_3f",
+      "rank": 6,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "firefly_mk1_thailand",
+      "rank": 3,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "b_33_indonesia",
+      "rank": 4,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "jp_cruiser_takao",
+      "rank": 5,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "cn_zbd_04",
+      "rank": 6,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "q_5d",
+      "rank": 6,
+      "gift": "msi_notebook",
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "it_lancia_flak38",
+      "rank": 2,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "it_v_4_straussler",
+      "rank": 1,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "aw_249_pre_serie",
+      "rank": 7,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "it_destroyer_audace",
+      "rank": 4,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "fr_prtl",
+      "rank": 6,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "fr_destroyer_le_hardi_class_le_hardi",
+      "rank": 3,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "fr_vc1",
+      "rank": 2,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "fr_l990_monitor",
+      "rank": 2,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "sw_leopard_2a8no",
+      "rank": 8,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "sw_pv_m39",
+      "rank": 1,
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "saab_jas39_pre_serie",
+      "rank": 8,
+      "gift": "msi_notebook",
+      "alreadyInCalculator": false
+    },
+    {
+      "id": "f_15ia",
+      "rank": 9,
+      "alreadyInCalculator": false
+    }
+  ],
+  "rankChanges": [],
+  "channelEvidence": {
+    "url": "https://gist.github.com/gszabi99/82ca19cd0170c5b29be2d68fa9b8fea4/684ac92c9266e0b35557fe3229bd25d8613c9fcc",
+    "regularLive": "2.59.0.100",
+    "dev": "2.61.0.9",
+    "status": "Regular live revision not found in recent version history"
+  },
+  "limitations": [
+    "Candidate review only; no production data applied.",
+    "BR comparison starts at 2.59.0.93 and includes corrections already shipped in v1.0.31.",
+    "Shop candidates are not confirmed released or researchable vehicles; inherited acquisition flags are unverified.",
+    "Modification differences include internal fields, not only costs."
+  ]
+}
