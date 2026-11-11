@@ -16,7 +16,11 @@ const output = path.join(root, 'logs/battle-ratings');
 async function run() {
   fs.mkdirSync(output, { recursive: true });
   let legacy = true, requests = 0;
-  const oldTree = tree => legacy === 'correction' ? restoreCorrection(tree) : restoreTree(restoreCosts(tree));
+  const historical = require('./aircraft-addition-snapshot.cjs');
+  const oldTree = value => {
+    const tree = historical.restoreTree(value);
+    return legacy === 'correction' ? restoreCorrection(tree) : restoreTree(restoreCosts(tree));
+  };
   const app = express();
   app.get('/api/tree/:country/:type', (req, res, next) => {
     requests++;
@@ -27,7 +31,7 @@ async function run() {
   });
   app.use('/pages/database', (req, res, next) => {
     if (req.path === '/manifest.json') {
-      const value = structuredClone(manifest);
+      const value = legacy ? historical.restoreManifest(manifest) : structuredClone(manifest);
       if (legacy) {
         delete value.battleRatingCorrection;
         if (legacy === 'correction') {

@@ -13,7 +13,8 @@ const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'logs/vehicle-cost-update');
 const file = 'database/japan/japan_aviation.json';
 const tree = require('../docs/' + file);
-const legacyTree = restoreCosts(restoreCorrection(tree));
+const historical = require('./aircraft-addition-snapshot.cjs');
+const legacyTree = restoreCosts(restoreCorrection(historical.restoreTree(tree)));
 assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(legacyTree, null, 2) + '\n').digest('hex'), evidence.trees[file]);
 
 async function run() {
@@ -23,7 +24,7 @@ async function run() {
   app.get('/api/tree/japan/aviation', (req, res, next) => legacy
     ? res.set('Cache-Control', 'no-store').json({ success: true, data: legacyTree }) : next());
   app.get('/pages/database/manifest.json', (req, res) => {
-    const value = structuredClone(manifest);
+    const value = legacy ? historical.restoreManifest(manifest) : structuredClone(manifest);
     if (legacy) {
       delete value.vehicleCosts;
       delete value.battleRatingCorrection;
