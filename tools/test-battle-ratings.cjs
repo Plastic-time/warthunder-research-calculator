@@ -85,7 +85,7 @@ test('all reviewed snapshots differ only in BR fields and runtime mirrors remain
     const bytes = fs.readFileSync(path.join(root, 'docs', entry.path));
     assert(bytes.equals(fs.readFileSync(path.join(root, entry.path))));
     assert.equal(hash(bytes), entry.sha256);
-    const tree = restoreCorrection(restoreCosts(JSON.parse(bytes))), type = path.basename(entry.path, '.json').split('_').slice(1).join('_');
+    const tree = restoreCorrection(restoreCosts(require('./aircraft-addition-snapshot.cjs').restoreTree(JSON.parse(bytes)))), type = path.basename(entry.path, '.json').split('_').slice(1).join('_');
     if (evidence.trees[entry.path]) {
       const previous = restoreTree(tree, evidence);
       assert.equal(hash(JSON.stringify(previous, null, 2) + '\n'), evidence.trees[entry.path], 'No non-BR changes: ' + entry.path);

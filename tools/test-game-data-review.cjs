@@ -34,8 +34,8 @@ test('J35A has verified regular GE pricing without changing its research costs o
 });
 
 test('historical J35A review remains unchanged outside the later explicit game additions', () => {
-  const report = read('docs/roster-audit.json');
-  assert.deepEqual(report, read('public/roster-audit.json'));
+  const report = require('./aircraft-addition-snapshot.cjs').restoreRoster(read('docs/roster-audit.json'));
+  assert.deepEqual(report, require('./aircraft-addition-snapshot.cjs').restoreRoster(read('public/roster-audit.json')));
   const unit = report.trees['sweden/aviation'].units.saab_j35a;
   assert.equal(unit.category, 'premium-golden-eagles');
   assert.deepEqual(unit.acquisition, corrections.saab_j35a);
@@ -74,11 +74,12 @@ test('partial review checkpoints do not promote the full snapshot or import hidd
 test('October 28 review leaves the supported roster, costs and modification snapshots intact', () => {
   for (const [file, expected] of Object.entries(latestReview.unchangedSnapshots)) {
     let bytes = fs.readFileSync(path.join(root, file));
+    if (file === 'docs/roster-audit.json') bytes = Buffer.from(JSON.stringify(require('./aircraft-addition-snapshot.cjs').restoreRoster(JSON.parse(bytes))) + '\n');
     if (file.endsWith('/modifications/catalog.json')) {
-      bytes = Buffer.from(JSON.stringify(require('./apply-modification-update.cjs').restoreCatalog(JSON.parse(bytes))) + '\n');
+      bytes = Buffer.from(JSON.stringify(require('./apply-modification-update.cjs').restoreCatalog(require('./aircraft-addition-snapshot.cjs').restoreCatalog(JSON.parse(bytes)))) + '\n');
     }
     if (file === 'docs/database/manifest.json') {
-      const manifest = JSON.parse(bytes), br = read('config/battle-rating-update.json');
+      const manifest = require('./aircraft-addition-snapshot.cjs').restoreManifest(JSON.parse(bytes)), br = read('config/battle-rating-update.json');
       delete manifest.battleRatingCorrection;
       const costs = read('config/vehicle-cost-update.json');
       assert.equal(manifest.vehicleCosts.commit, costs.commit);

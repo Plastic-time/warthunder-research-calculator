@@ -33,11 +33,11 @@ test('all 50 trees retain every field outside seven reviewed BR corrections', ()
     const bytes = fs.readFileSync(path.join(root, file.path));
     assert(bytes.equals(fs.readFileSync(path.join(root, 'docs', file.path))));
     assert.equal(hash(bytes), file.sha256);
-    const current = JSON.parse(bytes), previous = restoreCorrection(current);
+    const current = require('./aircraft-addition-snapshot.cjs').restoreTree(JSON.parse(bytes)), previous = restoreCorrection(current);
     assert.equal(hash(JSON.stringify(previous, null, 2) + '\n'), evidence.trees[file.path], file.path);
     const type = path.basename(file.path, '.json').split('_').slice(1).join('_');
     assert.deepEqual(patchTree(previous, type, evidence), current);
-    if (hash(bytes) !== evidence.trees[file.path]) trees++;
+    if (hash(JSON.stringify(current, null, 2) + '\n') !== evidence.trees[file.path]) trees++;
     for (const [id, aircraft] of wikiUnits(current)) if (evidence.units[id]) {
       found++;
       assert.deepEqual(aircraft.game_battle_ratings, ratings(evidence.units[id].ranks, type));
@@ -46,6 +46,9 @@ test('all 50 trees retain every field outside seven reviewed BR corrections', ()
     file.sha256 = evidence.trees[file.path];
   }
   assert.equal(found, 7); assert.equal(defaults, 2); assert.equal(trees, 4);
+  Object.assign(manifest, require('./aircraft-addition-snapshot.cjs').restoreManifest(manifest));
+  delete manifest.eaglesShadowAircraft;
+  for (const file of manifest.files) file.sha256 = evidence.trees[file.path];
   delete manifest.battleRatingCorrection;
   assert.equal(hash(JSON.stringify(manifest, null, 2) + '\n'), evidence.manifestSha256);
 });

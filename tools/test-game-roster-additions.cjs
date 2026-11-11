@@ -45,7 +45,7 @@ test('game-only additions use pinned evidence and explicit reward availability, 
     assert.equal(crypto.createHash('sha256').update(JSON.stringify(previous, null, 2) + '\n').digest('hex'),
       read('docs/roster-audit.json').trees[c.country + '/' + c.type].wikiSha256, 'All previous vehicle fields and placement must remain unchanged');
   }
-  assert.equal(read('config/data-version.json').vehicleCount, 3238);
+  assert.equal(read('config/data-version.json').vehicleCount, 3247);
   assert.equal(read('config/data-version.json').gameVersion, '2.59.0.17');
 });
 

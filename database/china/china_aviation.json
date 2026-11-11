@@ -3191,6 +3191,60 @@
             "sha256": "b9d5183dd6e0254b957de120ad1b6ea3b647addcbec528bb03384d64a52859e7"
           }
         }
+      ],
+      [
+        {
+          "type": "single",
+          "title": "Q-5D",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/q_5d.png",
+          "br": "10.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "q_5d",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "VI",
+          "research_country": "China",
+          "main_role": "Strike aircraft",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.3"
+              },
+              "tank": {
+                "AB": "10.0",
+                "RB": "9.0",
+                "SB": "9.0"
+              },
+              "ship": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.9",
+            "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "config/eagles-shadow-aircraft.json",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "pack",
+              "url": "https://warthunder.com/en/game/changelog/current/1915"
+            },
+            "cost_policy": "pack-excluded-from-ordinary-research"
+          }
+        }
       ]
     ],
     "selected": [],

@@ -4,42 +4,55 @@
   "scope": "vehicle-research-and-purchase-costs",
   "gameDataCommit": "510a793c2bdb01c51475118199c7b66b72935ff1",
   "treeCount": 50,
-  "vehicleCount": 3238,
+  "vehicleCount": 3247,
   "directCostPairCount": 2212,
   "wikiUnpricedVehicleCount": 156,
   "modificationsSnapshotChanged": false,
   "latestReview": {
-    "gameVersion": "2.59.0.94",
-    "gameDataCommit": "2423f3099e2a5ec3f31efdce87b9f4380ea761ec",
-    "scope": "partial-battle-rating-correction",
+    "gameVersion": "2.61.0.9",
+    "gameDataCommit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+    "scope": "partial-aircraft-additions",
     "fullSnapshotUpgrade": false,
-    "provenance": "doc/battle-rating-correction-20261030.md"
+    "provenance": "config/eagles-shadow-aircraft.json"
   },
   "latestCorrection": {
     "gameVersion": "2.59.0.50",
     "gameDataCommit": "a5fef60f211c742c48183cf195dab8f603931196",
     "scope": "reviewed-modification-update",
-    "vehicleIds": ["f_86em_greece", "mig_23m", "ussr_object_416"],
+    "vehicleIds": [
+      "f_86em_greece",
+      "mig_23m",
+      "ussr_object_416"
+    ],
     "vehicleTotals": {
-      "f_86em_greece": [145800, 226000],
-      "mig_23m": [197800, 311600],
-      "ussr_object_416": [88600, 147600]
+      "f_86em_greece": [
+        145800,
+        226000
+      ],
+      "mig_23m": [
+        197800,
+        311600
+      ],
+      "ussr_object_416": [
+        88600,
+        147600
+      ]
     },
     "fullSnapshotUpgrade": false,
     "provenance": "doc/release-v1.0.23.md"
   },
   "previousCorrections": [
     {
-    "gameVersion": "2.59.0.38",
-    "gameDataCommit": "359efba49b035374b225ee6327e889b2a46aaa6b",
-    "scope": "modification-costs-tiers-and-unlock-counts",
-    "vehicleIds": [
-      "f4u-7"
-    ],
-    "researchPoints": 47800,
-    "silverLions": 86900,
-    "fullSnapshotUpgrade": false,
-    "provenance": "doc/release-v1.0.19.md"
+      "gameVersion": "2.59.0.38",
+      "gameDataCommit": "359efba49b035374b225ee6327e889b2a46aaa6b",
+      "scope": "modification-costs-tiers-and-unlock-counts",
+      "vehicleIds": [
+        "f4u-7"
+      ],
+      "researchPoints": 47800,
+      "silverLions": 86900,
+      "fullSnapshotUpgrade": false,
+      "provenance": "doc/release-v1.0.19.md"
     },
     {
       "gameVersion": "2.59.0.34",
@@ -64,6 +77,23 @@
       "germ_s_700_s_706"
     ],
     "provenance": "config/game-roster-additions.json",
+    "fullSnapshotUpgrade": false
+  },
+  "aircraftAddition": {
+    "version": "2.61.0.9",
+    "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+    "ids": [
+      "f_15ex",
+      "fa_18d_late",
+      "su_15tm",
+      "fulmar_mk2",
+      "firefly_mk1_thailand",
+      "b_33_indonesia",
+      "q_5d",
+      "saab_jas39_pre_serie",
+      "f_15ia"
+    ],
+    "provenance": "config/eagles-shadow-aircraft.json",
     "fullSnapshotUpgrade": false
   }
 }

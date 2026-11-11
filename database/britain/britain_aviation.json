@@ -511,6 +511,53 @@
           "details": true,
           "rp": 7000,
           "sp": 8400
+        },
+        {
+          "type": "single",
+          "title": "Fulmar Mk.II",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fulmar_mk2.png",
+          "br": "1.7",
+          "rp": 5900,
+          "sp": 6300,
+          "data_unit_id": "fulmar_mk2",
+          "required_unit_id": "blenheim_mkiv",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "I",
+          "research_country": "Great Britain",
+          "main_role": "Fighter",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "1.7",
+                "RB": "1.7",
+                "SB": "1.7"
+              },
+              "tank": {
+                "AB": "1.7",
+                "RB": "1.7",
+                "SB": "1.7"
+              },
+              "ship": {
+                "AB": "1.7",
+                "RB": "1.7",
+                "SB": "1.7"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.9",
+            "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "config/eagles-shadow-aircraft.json",
+            "modification_status": "verified-game-data"
+          }
         }
       ],
       [

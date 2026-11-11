@@ -7911,6 +7911,53 @@
           "details": true,
           "rp": 266000,
           "sp": 1010000
+        },
+        {
+          "type": "single",
+          "title": "Su-15TM",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/su_15tm.png",
+          "br": "9.7",
+          "rp": 190000,
+          "sp": 530000,
+          "data_unit_id": "su_15tm",
+          "required_unit_id": "su-7b",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "VI",
+          "research_country": "USSR",
+          "main_role": "Fighter",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              },
+              "tank": {
+                "AB": "9.7",
+                "RB": "9.0",
+                "SB": "9.0"
+              },
+              "ship": {
+                "AB": "9.7",
+                "RB": "9.7",
+                "SB": "9.7"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.9",
+            "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "config/eagles-shadow-aircraft.json",
+            "modification_status": "verified-game-data"
+          }
         }
       ],
       [

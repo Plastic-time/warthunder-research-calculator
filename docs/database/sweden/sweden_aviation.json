@@ -4221,7 +4221,61 @@
           }
         }
       ],
-      []
+      [],
+      [
+        {
+          "type": "single",
+          "title": "JAS39-5",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/saab_jas39_pre_serie.png",
+          "br": "13.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "saab_jas39_pre_serie",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "VIII",
+          "research_country": "Sweden",
+          "main_role": "Fighter",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              },
+              "tank": {
+                "AB": "13.0",
+                "RB": "12.3",
+                "SB": "12.0"
+              },
+              "ship": {
+                "AB": "13.0",
+                "RB": "13.0",
+                "SB": "13.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.9",
+            "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "config/eagles-shadow-aircraft.json",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "pack",
+              "url": "https://warthunder.com/en/game/changelog/current/1915"
+            },
+            "cost_policy": "pack-excluded-from-ordinary-research"
+          }
+        }
+      ]
     ],
     "selected": [],
     "unlock_quantity": null,

@@ -41,7 +41,7 @@ assert.equal(docs.names.beaufighter_group.en, 'Beaufighter');
 assert.equal(docs.names.j_7d.zh, '歼-7D');
 assert.equal(docs.names.su_30mkk.zh, '␗苏-30MKK');
 assert(docs.translated > 2000);
-assert.equal(docs.count, 3636);
+assert.equal(docs.count, 3645);
 assert.equal(docs.sourceSha256, 'dcb65aaa40cbf3279b2e77140300b5750858fa3db6b5e6a77fedef882e146788');
 
 const modifications = read('docs/modification-names.json');
@@ -70,7 +70,7 @@ for (const [kind, payload] of [['vehicle', docs], ['modification', modifications
   for (const language of languages) {
     const coverage = payload.coverage.languages[language];
     assert.equal(coverage.source + coverage.englishFallback + coverage.existingFallback + coverage.idFallback, payload.count);
-    assert.equal(coverage.source, kind === 'vehicle' ? 3636 : 1320);
+    assert.equal(coverage.source, kind === 'vehicle' ? 3645 : 1320);
     assert.equal(coverage.englishFallback, 0);
     assert.equal(coverage.existingFallback, kind === 'vehicle' ? 0 : 507);
     assert.equal(coverage.idFallback, kind === 'vehicle' ? 0 : 84);
@@ -92,8 +92,9 @@ for (const chunk of Object.values(catalog.chunks)) {
       if (modifications.names[mod[0]]) modificationIds.add(mod[0]);
       else {
         const reviewed = require('./fixtures/modification-update-20261029.json');
-        assert(reviewed.vehicles[vehicle.i], 'Unreviewed vehicle-local name');
-        assert.deepEqual(vehicle.l?.[mod[0]], reviewed.additions[mod[0]]?.names);
+        const aircraft = require('../config/eagles-shadow-aircraft.json').units.find(c => c.id === vehicle.i);
+        assert(reviewed.vehicles[vehicle.i] || aircraft, 'Unreviewed vehicle-local name');
+        assert.deepEqual(vehicle.l?.[mod[0]], aircraft ? aircraft.modification.l[mod[0]] : reviewed.additions[mod[0]]?.names);
         assert.deepEqual(Object.keys(vehicle.l[mod[0]]).sort(), languages);
         for (const language of languages) assertDisplayName(vehicle.l[mod[0]][language], vehicle.i + ':' + mod[0]);
       }

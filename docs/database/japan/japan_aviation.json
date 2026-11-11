@@ -3026,6 +3026,53 @@
       [
         {
           "type": "single",
+          "title": "▄Firefly F Mk I",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/firefly_mk1_thailand.png",
+          "br": "3.3",
+          "rp": 18000,
+          "sp": 47000,
+          "data_unit_id": "firefly_mk1_thailand",
+          "required_unit_id": "d4y3",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "III",
+          "research_country": "Japan",
+          "main_role": "Strike aircraft",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "3.7",
+                "RB": "3.3",
+                "SB": "4.0"
+              },
+              "tank": {
+                "AB": "3.7",
+                "RB": "3.3",
+                "SB": "4.0"
+              },
+              "ship": {
+                "AB": "3.7",
+                "RB": "3.3",
+                "SB": "4.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.9",
+            "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "config/eagles-shadow-aircraft.json",
+            "modification_status": "verified-game-data"
+          }
+        },
+        {
+          "type": "single",
           "title": "P1Y1 mod. 11",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/p1y1_mod11.png",
           "br": "3.3",
@@ -4522,7 +4569,55 @@
           }
         }
       ],
-      [],
+      [
+        {
+          "type": "single",
+          "title": "◥B-33",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/b_33_indonesia.png",
+          "br": "5.0",
+          "rp": 63000,
+          "sp": 200000,
+          "data_unit_id": "b_33_indonesia",
+          "required_unit_id": "ki_93_1_ko",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "IV",
+          "research_country": "Japan",
+          "main_role": "Strike aircraft",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "5.0",
+                "RB": "5.0",
+                "SB": "5.3"
+              },
+              "tank": {
+                "AB": "5.0",
+                "RB": "5.0",
+                "SB": "5.3"
+              },
+              "ship": {
+                "AB": "5.0",
+                "RB": "5.0",
+                "SB": "5.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.9",
+            "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "config/eagles-shadow-aircraft.json",
+            "modification_status": "verified-game-data"
+          }
+        }
+      ],
       [
         {
           "type": "single",

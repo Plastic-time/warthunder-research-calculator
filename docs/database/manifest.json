@@ -4,8 +4,8 @@
   "verified_at": "2026-09-19T06:41:19.929Z",
   "battle_rating_mode": "RB",
   "tree_count": 50,
-  "unit_count": 3238,
-  "unique_units": 3238,
+  "unit_count": 3247,
+  "unique_units": 3247,
   "failures": [],
   "limitations": [
     "Wiki rank unlock counts are unavailable; the calculator retains the existing dict/unlock_quantity.js rules separately from this source snapshot.",
@@ -140,8 +140,8 @@
     },
     {
       "path": "database/usa/usa_aviation.json",
-      "units": 199,
-      "sha256": "625d73578ff5f6154513b3ef6f03a1d38c3f7c9d2cfa4d2979ad3c91ea5d0d2e",
+      "units": 201,
+      "sha256": "98ba7917051aa12c4d0149e130c262b98995b09f4da7911aea00c3499179984e",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "f_102a_late",
@@ -170,8 +170,8 @@
     },
     {
       "path": "database/ussr/ussr_aviation.json",
-      "units": 198,
-      "sha256": "0ce0859eaec191ed4371f21345f40546b6542f5b1710ff4d01275b17df7cad78",
+      "units": 199,
+      "sha256": "92f58d059ea21d664cfae278a1adac888fa3d99698193ffb236fdfaf94c533d3",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "mig_35"
@@ -180,8 +180,8 @@
     },
     {
       "path": "database/britain/britain_aviation.json",
-      "units": 164,
-      "sha256": "e2279b0ac44f062f0a203193071061c85ede3c8a39ab1023d502ca614e16a00d",
+      "units": 165,
+      "sha256": "1cc8caf4b03ded0d6b7637f59076bc96a8540b5242365168661b3df32bca63a1",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "hawk_t1a_early",
@@ -192,8 +192,8 @@
     },
     {
       "path": "database/japan/japan_aviation.json",
-      "units": 140,
-      "sha256": "d6544f36ee3f9b5950621eb763bee6f51b02cdd574058c3104ef12b14c2ab3e2",
+      "units": 142,
+      "sha256": "baa86f58a231447efc92632fe991b69c60d2a28b70b035c6a4fe191fe88f6e82",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "ki_93_1_ko",
@@ -205,8 +205,8 @@
     },
     {
       "path": "database/china/china_aviation.json",
-      "units": 89,
-      "sha256": "3e368a1a328b17ea2ae24d6039a70cc6e5fb2b1ddad523836b8249c2fb14689e",
+      "units": 90,
+      "sha256": "488f5594e56052845515164fcb48c965289a2d4b130440a038d858675144cd4f",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "j_16"
@@ -235,8 +235,8 @@
     },
     {
       "path": "database/sweden/sweden_aviation.json",
-      "units": 75,
-      "sha256": "dc41b224a5340877cec85ca23509225eea8083f8e913d1eb6e6031c0e8f527da",
+      "units": 76,
+      "sha256": "88880b5e6acdb59b1c01b78243949bd9ebd9d6f4598b715da9048c8a35aaf42a",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "saab_j35j",
@@ -246,8 +246,8 @@
     },
     {
       "path": "database/israel/israel_aviation.json",
-      "units": 49,
-      "sha256": "254a303ee2f880beb61a4fefd434dc17d0582c29763432f871af5a6e3f9fee98",
+      "units": 50,
+      "sha256": "50a4f6b47c5f5ba32109ebfd96a5c33196bf20999ef5792d62c3acdec765270a",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "sb2c_5_greece",
@@ -1841,6 +1841,23 @@
     "commit": "2423f3099e2a5ec3f31efdce87b9f4380ea761ec",
     "scope": "changed-mode-specific-battle-ratings",
     "provenance": "config/battle-rating-correction.json",
+    "fullSnapshotUpgrade": false
+  },
+  "eaglesShadowAircraft": {
+    "version": "2.61.0.9",
+    "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+    "ids": [
+      "f_15ex",
+      "fa_18d_late",
+      "su_15tm",
+      "fulmar_mk2",
+      "firefly_mk1_thailand",
+      "b_33_indonesia",
+      "q_5d",
+      "saab_jas39_pre_serie",
+      "f_15ia"
+    ],
+    "provenance": "config/eagles-shadow-aircraft.json",
     "fullSnapshotUpgrade": false
   }
 }

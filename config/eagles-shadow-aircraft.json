@@ -1,0 +1,5425 @@
+{
+  "version": "2.61.0.9",
+  "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+  "official": "https://warthunder.com/en/game/changelog/current/1915",
+  "scope": "Nine officially announced aircraft; partial addition using pinned game configuration",
+  "sources": [
+    {
+      "local": "candidate-wpcost.json",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/char.vromfs.bin_u/config/wpcost.blkx",
+      "sha256": "583e9d8302fec17b94771667998cb9a619814a9a35ecbaf6ad8240834dc4db10"
+    },
+    {
+      "local": "candidate-shop.json",
+      "file": "char.vromfs.bin_u/config/shop.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/char.vromfs.bin_u/config/shop.blkx",
+      "sha256": "043758ca32acebe02a7933b6f7865b82f2c9b0d7d62c85e6c79f595e04ebbad7"
+    },
+    {
+      "local": "modifications.blkx",
+      "file": "char.vromfs.bin_u/config/modifications.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/char.vromfs.bin_u/config/modifications.blkx",
+      "sha256": "019d7763a0e608d08f738e9d60d8ec357204a426032fe49e43b151e1bce558f0"
+    },
+    {
+      "local": "units.csv",
+      "file": "lang.vromfs.bin_u/lang/units.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/lang.vromfs.bin_u/lang/units.csv",
+      "sha256": "514a334ff4c55864afa3badff6d600a6c99856dacb74262ca35d559c7bd255cb"
+    },
+    {
+      "local": "units_modifications.csv",
+      "file": "lang.vromfs.bin_u/lang/units_modifications.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/lang.vromfs.bin_u/lang/units_modifications.csv",
+      "sha256": "636fa7af70b68f19ff264695899f93bc8c88c31d0374d8f65414f526bf2b3ec9"
+    },
+    {
+      "local": "units_weaponry.csv",
+      "file": "lang.vromfs.bin_u/lang/units_weaponry.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/7897e5c17bfb66ed6582772f4bba3ab1db1de9f3/lang.vromfs.bin_u/lang/units_weaponry.csv",
+      "sha256": "07fbb203071ddf4091933de8434c6e92cf0d8cb76d66ba2514521d8ed069a40e"
+    }
+  ],
+  "units": [
+    {
+      "id": "f_15ex",
+      "country": "usa",
+      "names": {
+        "zh": "F-15EX",
+        "en": "F-15EX",
+        "ru": "F-15EX",
+        "de": "F-15EX",
+        "fr": "F-15EX",
+        "ja": "F-15EX",
+        "es": "F-15EX"
+      },
+      "nameKey": "f_15ex_shop",
+      "unit": {
+        "type": "single",
+        "title": "F-15EX",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/f_15ex.png",
+        "br": "15.0",
+        "rp": 400000,
+        "sp": 1080000,
+        "data_unit_id": "f_15ex",
+        "required_unit_id": "f_15e",
+        "selected": false,
+        "class_name": "",
+        "details": true,
+        "rank": "IX",
+        "research_country": "USA",
+        "main_role": "Strike aircraft",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": false,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "15.0",
+              "RB": "15.0",
+              "SB": "15.0"
+            },
+            "tank": {
+              "AB": "15.0",
+              "RB": "14.0",
+              "SB": "14.0"
+            },
+            "ship": {
+              "AB": "15.0",
+              "RB": "15.0",
+              "SB": "15.0"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data"
+        }
+      },
+      "modification": {
+        "i": "f_15ex",
+        "n": [
+          "F-15EX",
+          "F-15EX"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/f_15ex.png",
+        "r": [
+          1,
+          3,
+          4
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            6
+          ]
+        ],
+        "t": [
+          308600,
+          479000
+        ],
+        "l": {
+          "new_compressor_jet": {
+            "zh": "压缩机",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Neuer Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "f_4c_g_suit": {
+            "zh": "抗荷服",
+            "en": "G-suit",
+            "ru": "ППК",
+            "de": "Anti-G-Anzug",
+            "fr": "Combinaison anti-G",
+            "ja": "耐 G スーツ",
+            "es": "Traje antigravedad"
+          },
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "hp_105_jet": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neues Triebwerk",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "f_4c_CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Rumpfreparatur",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "air_extinguisher": {
+            "zh": "引擎灭火系统",
+            "en": "EFS",
+            "ru": "СПД",
+            "de": "FLS",
+            "fr": "SEM",
+            "ja": "EFS",
+            "es": "EFS"
+          },
+          "countermeasures_belt_pack": {
+            "zh": "热焰弹/干扰箔",
+            "en": "Flares/Chaff",
+            "ru": "ЛТЦ/ДО",
+            "de": "IR-Täuschkörper/Düppel",
+            "fr": "Leurres IR/paillettes",
+            "ja": "フレア/チャフ",
+            "es": "Bengalas/Chaff"
+          },
+          "asm": {
+            "zh": "反舰导弹",
+            "en": "ASM",
+            "ru": "ПКР",
+            "de": "ASM",
+            "fr": "ASM",
+            "ja": "ASM",
+            "es": "ASM"
+          },
+          "us_agm_84h": {
+            "zh": "SLAM-ER",
+            "en": "SLAM-ER",
+            "ru": "SLAM-ER",
+            "de": "AGM-84H",
+            "fr": "SLAM-ER",
+            "ja": "SLAM-ER",
+            "es": "SLAM-ER"
+          },
+          "us_arm": {
+            "zh": "反辐射导弹",
+            "en": "ARM",
+            "ru": "ПРР",
+            "de": "ARM",
+            "fr": "ARM",
+            "ja": "ARM",
+            "es": "ARM"
+          },
+          "M60_belt_pack": {
+            "zh": "20 毫米前射武器弹链",
+            "en": "Offensive 20 mm belts",
+            "ru": "Курсовые ленты 20 мм",
+            "de": "20-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 20 mm, armes offensives",
+            "ja": "20 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 20 mm"
+          },
+          "M60_new_gun": {
+            "zh": "20 毫米前射机炮翻新",
+            "en": "New 20 mm cannons",
+            "ru": "Новые 20-мм пушки",
+            "de": "Neue 20-mm-Kanonen",
+            "fr": "Nouveaux canons de 20 mm",
+            "ja": "新しい 20 mm 機関砲",
+            "es": "Nuevos cañones de 20 mm"
+          },
+          "us_agm_65": {
+            "zh": "AGM-65",
+            "en": "AGM-65",
+            "ru": "AGM-65",
+            "de": "AGM-65",
+            "fr": "AGM-65",
+            "ja": "AGM-65",
+            "es": "AGM-65"
+          },
+          "us_agm_130": {
+            "zh": "AGM-130",
+            "en": "AGM-130",
+            "ru": "AGM-130",
+            "de": "AGM-130",
+            "fr": "AGM-130",
+            "ja": "AGM-130",
+            "es": "AGM-130"
+          },
+          "us_aim_9m": {
+            "zh": "AIM-9M",
+            "en": "AIM-9M",
+            "ru": "AIM-9M",
+            "de": "AIM-9M",
+            "fr": "AIM-9M",
+            "ja": "AIM-9M",
+            "es": "AIM-9M"
+          },
+          "us_aim_120b_c": {
+            "zh": "AIM-120B/C",
+            "en": "AIM-120B/C",
+            "ru": "AIM-120B/C",
+            "de": "AIM-120B/C",
+            "fr": "AIM-120B/C",
+            "ja": "AIM-120B/C",
+            "es": "AIM-120B/C"
+          },
+          "us_aim_120d": {
+            "zh": "AIM-120D",
+            "en": "AIM-120D",
+            "ru": "AIM-120D",
+            "de": "AIM-120D",
+            "fr": "AIM-120D",
+            "ja": "AIM-120D",
+            "es": "AIM-120D"
+          },
+          "us_jdam": {
+            "zh": "JDAM",
+            "en": "JDAM",
+            "ru": "JDAM",
+            "de": "JDAM",
+            "fr": "JDAM",
+            "ja": "JDAM",
+            "es": "JDAM"
+          },
+          "us_ljdam": {
+            "zh": "LJDAM",
+            "en": "LJDAM",
+            "ru": "LJDAM",
+            "de": "LJDAM",
+            "fr": "LJDAM",
+            "ja": "LJDAM",
+            "es": "LJDAM"
+          },
+          "us_gbu_15v1": {
+            "zh": "GBU-15",
+            "en": "GBU-15",
+            "ru": "GBU-15",
+            "de": "GBU-15",
+            "fr": "GBU-15",
+            "ja": "GBU-15",
+            "es": "GBU-15"
+          },
+          "us_gbu_53": {
+            "zh": "GBU-53",
+            "en": "GBU-53",
+            "ru": "GBU-53",
+            "de": "GBU-53",
+            "fr": "GBU-53",
+            "ja": "GBU-53",
+            "es": "GBU-53"
+          },
+          "us_sniper_pod": {
+            "zh": "SNIPER ATP",
+            "en": "SNIPER ATP",
+            "ru": "SNIPER ATP",
+            "de": "SNIPER ATP",
+            "fr": "SNIPER ATP",
+            "ja": "SNIPER ATP",
+            "es": "SNIPER ATP"
+          },
+          "us_gbu_laser": {
+            "zh": "LGBU",
+            "en": "LGBU",
+            "ru": "LGBU",
+            "de": "LGBU",
+            "fr": "LGBU",
+            "ja": "LGBU",
+            "es": "LGBU"
+          },
+          "us_apkws": {
+            "zh": "APKWS II",
+            "en": "APKWS II",
+            "ru": "APKWS II",
+            "de": "APKWS II",
+            "fr": "APKWS II",
+            "ja": "APKWS II",
+            "es": "APKWS II"
+          },
+          "us_agm154_jsow": {
+            "zh": "AGM-154",
+            "en": "AGM-154",
+            "ru": "AGM-154",
+            "de": "AGM-154",
+            "fr": "AGM-154",
+            "ja": "AGM-154",
+            "es": "AGM-154"
+          }
+        },
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            8800,
+            14000,
+            420,
+            [],
+            0
+          ],
+          [
+            "f_4c_g_suit",
+            0,
+            2,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            12000,
+            18000,
+            570,
+            [],
+            1
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            11000,
+            17000,
+            520,
+            [],
+            2
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            14000,
+            22000,
+            670,
+            [],
+            3
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            0,
+            1,
+            1,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            8800,
+            14000,
+            420,
+            [],
+            4
+          ],
+          [
+            "structure_str",
+            0,
+            2,
+            1,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            12000,
+            18000,
+            570,
+            [],
+            5
+          ],
+          [
+            "new_cover",
+            0,
+            3,
+            1,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            11000,
+            17000,
+            520,
+            [],
+            6
+          ],
+          [
+            "air_extinguisher",
+            0,
+            4,
+            1,
+            "引擎灭火系统",
+            "EFS",
+            "jet_engine_extinguisher.png",
+            14000,
+            22000,
+            670,
+            [],
+            7
+          ],
+          [
+            "countermeasures_belt_pack",
+            1,
+            1,
+            0,
+            "热焰弹/干扰箔",
+            "Flares/Chaff",
+            "heli_false_thermal_targets.png",
+            8800,
+            14000,
+            420,
+            [],
+            8
+          ],
+          [
+            "asm",
+            2,
+            2,
+            0,
+            "反舰导弹",
+            "ASM",
+            "anti_radiation_type_a_missile.png",
+            12000,
+            18000,
+            570,
+            [],
+            9
+          ],
+          [
+            "us_agm_84h",
+            2,
+            3,
+            0,
+            "SLAM-ER",
+            "SLAM-ER",
+            "agm_lr_missile.png",
+            11000,
+            17000,
+            520,
+            [],
+            10
+          ],
+          [
+            "us_arm",
+            2,
+            4,
+            0,
+            "反辐射导弹",
+            "ARM",
+            "anti_radiation_type_b_missile.png",
+            14000,
+            22000,
+            670,
+            [],
+            11
+          ],
+          [
+            "M60_belt_pack",
+            2,
+            1,
+            1,
+            "20 毫米前射武器弹链",
+            "Offensive 20 mm belts",
+            "ammo.png",
+            8800,
+            14000,
+            420,
+            [],
+            12
+          ],
+          [
+            "M60_new_gun",
+            2,
+            2,
+            1,
+            "20 毫米前射机炮翻新",
+            "New 20 mm cannons",
+            "weapon.png",
+            12000,
+            18000,
+            570,
+            [
+              "M60_belt_pack"
+            ],
+            13
+          ],
+          [
+            "us_agm_65",
+            2,
+            3,
+            1,
+            "AGM-65",
+            "AGM-65",
+            "agm_middle_missile.png",
+            11000,
+            17000,
+            520,
+            [],
+            14
+          ],
+          [
+            "us_agm_130",
+            2,
+            4,
+            1,
+            "AGM-130",
+            "AGM-130",
+            "agm_middle_missile.png",
+            14000,
+            22000,
+            670,
+            [],
+            15
+          ],
+          [
+            "us_aim_9m",
+            2,
+            1,
+            2,
+            "AIM-9M",
+            "AIM-9M",
+            "air_to_air_missile.png",
+            8800,
+            14000,
+            420,
+            [],
+            16
+          ],
+          [
+            "us_aim_120b_c",
+            2,
+            3,
+            2,
+            "AIM-120B/C",
+            "AIM-120B/C",
+            "air_to_air_type_b_midrange_missile.png",
+            11000,
+            17000,
+            520,
+            [
+              "us_aim_9m"
+            ],
+            17
+          ],
+          [
+            "us_aim_120d",
+            2,
+            4,
+            2,
+            "AIM-120D",
+            "AIM-120D",
+            "air_to_air_type_b_midrange_missile.png",
+            14000,
+            22000,
+            670,
+            [
+              "us_aim_120b_c"
+            ],
+            18
+          ],
+          [
+            "us_jdam",
+            2,
+            1,
+            5,
+            "JDAM",
+            "JDAM",
+            "bomb_jdam_01.png",
+            8800,
+            14000,
+            420,
+            [],
+            19
+          ],
+          [
+            "us_ljdam",
+            2,
+            2,
+            3,
+            "LJDAM",
+            "LJDAM",
+            "bomb_jdam_01.png",
+            12000,
+            18000,
+            570,
+            [
+              "us_gbu_laser"
+            ],
+            20
+          ],
+          [
+            "us_gbu_15v1",
+            2,
+            3,
+            3,
+            "GBU-15",
+            "GBU-15",
+            "optical_guided_bomb.png",
+            11000,
+            17000,
+            520,
+            [],
+            21
+          ],
+          [
+            "us_gbu_53",
+            2,
+            4,
+            3,
+            "GBU-53",
+            "GBU-53",
+            "bomb_glide_little.png",
+            14000,
+            22000,
+            670,
+            [],
+            22
+          ],
+          [
+            "us_sniper_pod",
+            2,
+            1,
+            4,
+            "SNIPER ATP",
+            "SNIPER ATP",
+            "thermal_sight.png",
+            8800,
+            14000,
+            420,
+            [],
+            23
+          ],
+          [
+            "us_gbu_laser",
+            2,
+            2,
+            4,
+            "LGBU",
+            "LGBU",
+            "laser_guided_bomb.png",
+            12000,
+            18000,
+            570,
+            [
+              "us_sniper_pod"
+            ],
+            24
+          ],
+          [
+            "us_apkws",
+            2,
+            3,
+            4,
+            "APKWS II",
+            "APKWS II",
+            "pilon_block_rocket.png",
+            11000,
+            17000,
+            520,
+            [
+              "us_gbu_laser"
+            ],
+            25
+          ],
+          [
+            "us_agm154_jsow",
+            2,
+            4,
+            4,
+            "AGM-154",
+            "AGM-154",
+            "bomb_glide_little.png",
+            14000,
+            22000,
+            670,
+            [],
+            26
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "explicit-unit-economy",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    },
+    {
+      "id": "fa_18d_late",
+      "country": "usa",
+      "names": {
+        "zh": "F/A-18D",
+        "en": "F/A-18D",
+        "ru": "F/A-18D",
+        "de": "F/A-18D",
+        "fr": "F/A-18D",
+        "ja": "F/A-18D",
+        "es": "F/A-18D"
+      },
+      "nameKey": "fa_18d_late_shop",
+      "unit": {
+        "type": "single",
+        "title": "F/A-18D",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fa_18d_late.png",
+        "br": "13.7",
+        "rp": 0,
+        "sp": 0,
+        "data_unit_id": "fa_18d_late",
+        "required_unit_id": "",
+        "selected": false,
+        "class_name": "prem",
+        "details": true,
+        "rank": "VIII",
+        "research_country": "USA",
+        "main_role": "Fighter",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": true,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "13.7",
+              "RB": "13.7",
+              "SB": "13.7"
+            },
+            "tank": {
+              "AB": "13.7",
+              "RB": "13.3",
+              "SB": "12.7"
+            },
+            "ship": {
+              "AB": "13.7",
+              "RB": "13.7",
+              "SB": "13.7"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data",
+          "acquisition": {
+            "type": "pack",
+            "url": "https://warthunder.com/en/game/changelog/current/1915"
+          },
+          "cost_policy": "pack-excluded-from-ordinary-research"
+        }
+      },
+      "modification": {
+        "i": "fa_18d_late",
+        "n": [
+          "F/A-18D",
+          "F/A-18D"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/fa_18d_late.png",
+        "r": [
+          1,
+          3,
+          3
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            5
+          ]
+        ],
+        "t": [
+          0,
+          0
+        ],
+        "l": {
+          "new_compressor_jet": {
+            "zh": "压缩机",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Neuer Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "f_4c_g_suit": {
+            "zh": "抗荷服",
+            "en": "G-suit",
+            "ru": "ППК",
+            "de": "Anti-G-Anzug",
+            "fr": "Combinaison anti-G",
+            "ja": "耐 G スーツ",
+            "es": "Traje antigravedad"
+          },
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "hp_105_jet": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neues Triebwerk",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "f_4c_CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Rumpfreparatur",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "air_extinguisher": {
+            "zh": "引擎灭火系统",
+            "en": "EFS",
+            "ru": "СПД",
+            "de": "FLS",
+            "fr": "SEM",
+            "ja": "EFS",
+            "es": "EFS"
+          },
+          "countermeasures_belt_pack": {
+            "zh": "热焰弹/干扰箔",
+            "en": "Flares/Chaff",
+            "ru": "ЛТЦ/ДО",
+            "de": "IR-Täuschkörper/Düppel",
+            "fr": "Leurres IR/paillettes",
+            "ja": "フレア/チャフ",
+            "es": "Bengalas/Chaff"
+          },
+          "asm": {
+            "zh": "反舰导弹",
+            "en": "ASM",
+            "ru": "ПКР",
+            "de": "ASM",
+            "fr": "ASM",
+            "ja": "ASM",
+            "es": "ASM"
+          },
+          "us_arm": {
+            "zh": "反辐射导弹",
+            "en": "ARM",
+            "ru": "ПРР",
+            "de": "ARM",
+            "fr": "ARM",
+            "ja": "ARM",
+            "es": "ARM"
+          },
+          "us_aim_7p": {
+            "zh": "AIM-7P",
+            "en": "AIM-7P",
+            "ru": "AIM-7P",
+            "de": "AIM-7P",
+            "fr": "AIM-7P",
+            "ja": "AIM-7P",
+            "es": "AIM-7P"
+          },
+          "us_aim_9m": {
+            "zh": "AIM-9M",
+            "en": "AIM-9M",
+            "ru": "AIM-9M",
+            "de": "AIM-9M",
+            "fr": "AIM-9M",
+            "ja": "AIM-9M",
+            "es": "AIM-9M"
+          },
+          "us_aim_120b": {
+            "zh": "AIM-120B",
+            "en": "AIM-120B",
+            "ru": "AIM-120B",
+            "de": "AIM-120B",
+            "fr": "AIM-120B",
+            "ja": "AIM-120B",
+            "es": "AIM-120B"
+          },
+          "M60_belt_pack": {
+            "zh": "20 毫米前射武器弹链",
+            "en": "Offensive 20 mm belts",
+            "ru": "Курсовые ленты 20 мм",
+            "de": "20-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 20 mm, armes offensives",
+            "ja": "20 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 20 mm"
+          },
+          "M60_new_gun": {
+            "zh": "20 毫米前射机炮翻新",
+            "en": "New 20 mm cannons",
+            "ru": "Новые 20-мм пушки",
+            "de": "Neue 20-mm-Kanonen",
+            "fr": "Nouveaux canons de 20 mm",
+            "ja": "新しい 20 mm 機関砲",
+            "es": "Nuevos cañones de 20 mm"
+          },
+          "us_agm_62_2_erdl": {
+            "zh": "AGM-62 ER/DL",
+            "en": "AGM-62 ER/DL",
+            "ru": "AGM-62 ER/DL",
+            "de": "AGM-62 ER/DL",
+            "fr": "AGM-62 ER/DL",
+            "ja": "AGM-62 ER/DL",
+            "es": "AGM-62 ER/DL"
+          },
+          "us_agm154_jsow": {
+            "zh": "AGM-154",
+            "en": "AGM-154",
+            "ru": "AGM-154",
+            "de": "AGM-154",
+            "fr": "AGM-154",
+            "ja": "AGM-154",
+            "es": "AGM-154"
+          },
+          "us_jdam": {
+            "zh": "JDAM",
+            "en": "JDAM",
+            "ru": "JDAM",
+            "de": "JDAM",
+            "fr": "JDAM",
+            "ja": "JDAM",
+            "es": "JDAM"
+          },
+          "us_gbu54b": {
+            "zh": "LJDAM",
+            "en": "LJDAM",
+            "ru": "LJDAM",
+            "de": "LJDAM",
+            "fr": "LJDAM",
+            "ja": "LJDAM",
+            "es": "LJDAM"
+          },
+          "us_agm_65f": {
+            "zh": "AGM-65F",
+            "en": "AGM-65F",
+            "ru": "AGM-65F",
+            "de": "AGM-65F",
+            "fr": "AGM-65F",
+            "ja": "AGM-65F",
+            "es": "AGM-65F"
+          },
+          "us_agm_84h": {
+            "zh": "SLAM-ER",
+            "en": "SLAM-ER",
+            "ru": "SLAM-ER",
+            "de": "AGM-84H",
+            "fr": "SLAM-ER",
+            "ja": "SLAM-ER",
+            "es": "SLAM-ER"
+          },
+          "gr_litening_pod": {
+            "zh": "LITENING II",
+            "en": "LITENING II",
+            "ru": "LITENING II",
+            "de": "LITENING II",
+            "fr": "LITENING II",
+            "ja": "ライトニング II",
+            "es": "LITENING II"
+          },
+          "us_gbu_laser": {
+            "zh": "LGBU",
+            "en": "LGBU",
+            "ru": "LGBU",
+            "de": "LGBU",
+            "fr": "LGBU",
+            "ja": "LGBU",
+            "es": "LGBU"
+          },
+          "us_apkws": {
+            "zh": "APKWS II",
+            "en": "APKWS II",
+            "ru": "APKWS II",
+            "de": "APKWS II",
+            "fr": "APKWS II",
+            "ja": "APKWS II",
+            "es": "APKWS II"
+          },
+          "us_agm_65e": {
+            "zh": "AGM-65E",
+            "en": "AGM-65E",
+            "ru": "AGM-65E",
+            "de": "AGM-65E",
+            "fr": "AGM-65E",
+            "ja": "AGM-65E",
+            "es": "AGM-65E"
+          }
+        },
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            0,
+            0,
+            0,
+            [],
+            0
+          ],
+          [
+            "f_4c_g_suit",
+            1,
+            2,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            0,
+            0,
+            0,
+            [],
+            1
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            0,
+            0,
+            0,
+            [],
+            2
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            0,
+            0,
+            0,
+            [],
+            3
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            0,
+            1,
+            1,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            0,
+            0,
+            0,
+            [],
+            4
+          ],
+          [
+            "structure_str",
+            0,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            0,
+            0,
+            0,
+            [],
+            5
+          ],
+          [
+            "new_cover",
+            0,
+            3,
+            1,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            0,
+            0,
+            0,
+            [],
+            6
+          ],
+          [
+            "air_extinguisher",
+            0,
+            4,
+            1,
+            "引擎灭火系统",
+            "EFS",
+            "jet_engine_extinguisher.png",
+            0,
+            0,
+            0,
+            [],
+            7
+          ],
+          [
+            "countermeasures_belt_pack",
+            2,
+            1,
+            0,
+            "热焰弹/干扰箔",
+            "Flares/Chaff",
+            "heli_false_thermal_targets.png",
+            0,
+            0,
+            0,
+            [],
+            8
+          ],
+          [
+            "asm",
+            2,
+            2,
+            0,
+            "反舰导弹",
+            "ASM",
+            "anti_radiation_type_a_missile.png",
+            0,
+            0,
+            0,
+            [],
+            9
+          ],
+          [
+            "us_arm",
+            2,
+            4,
+            0,
+            "反辐射导弹",
+            "ARM",
+            "anti_radiation_type_b_missile.png",
+            0,
+            0,
+            0,
+            [],
+            10
+          ],
+          [
+            "us_aim_7p",
+            2,
+            2,
+            1,
+            "AIM-7P",
+            "AIM-7P",
+            "air_to_air_midrange_missile.png",
+            0,
+            0,
+            0,
+            [],
+            11
+          ],
+          [
+            "us_aim_9m",
+            2,
+            3,
+            1,
+            "AIM-9M",
+            "AIM-9M",
+            "air_to_air_missile.png",
+            0,
+            0,
+            0,
+            [
+              "us_aim_7p"
+            ],
+            12
+          ],
+          [
+            "us_aim_120b",
+            2,
+            4,
+            1,
+            "AIM-120B",
+            "AIM-120B",
+            "air_to_air_type_b_midrange_missile.png",
+            0,
+            0,
+            0,
+            [
+              "us_aim_9m"
+            ],
+            13
+          ],
+          [
+            "M60_belt_pack",
+            2,
+            1,
+            2,
+            "20 毫米前射武器弹链",
+            "Offensive 20 mm belts",
+            "ammo.png",
+            0,
+            0,
+            0,
+            [],
+            14
+          ],
+          [
+            "M60_new_gun",
+            2,
+            2,
+            2,
+            "20 毫米前射机炮翻新",
+            "New 20 mm cannons",
+            "weapon.png",
+            0,
+            0,
+            0,
+            [
+              "M60_belt_pack"
+            ],
+            15
+          ],
+          [
+            "us_agm_62_2_erdl",
+            2,
+            3,
+            2,
+            "AGM-62 ER/DL",
+            "AGM-62 ER/DL",
+            "optical_guided_bomb.png",
+            0,
+            0,
+            0,
+            [],
+            16
+          ],
+          [
+            "us_agm154_jsow",
+            2,
+            4,
+            2,
+            "AGM-154",
+            "AGM-154",
+            "bomb_glide_little.png",
+            0,
+            0,
+            0,
+            [],
+            17
+          ],
+          [
+            "us_jdam",
+            2,
+            1,
+            3,
+            "JDAM",
+            "JDAM",
+            "bomb_jdam_01.png",
+            0,
+            0,
+            0,
+            [],
+            18
+          ],
+          [
+            "us_gbu54b",
+            2,
+            2,
+            3,
+            "LJDAM",
+            "LJDAM",
+            "bomb_jdam_01.png",
+            0,
+            0,
+            0,
+            [
+              "us_gbu_laser"
+            ],
+            19
+          ],
+          [
+            "us_agm_65f",
+            2,
+            3,
+            3,
+            "AGM-65F",
+            "AGM-65F",
+            "agm_middle_missile.png",
+            0,
+            0,
+            0,
+            [],
+            20
+          ],
+          [
+            "us_agm_84h",
+            2,
+            4,
+            3,
+            "SLAM-ER",
+            "SLAM-ER",
+            "agm_lr_missile.png",
+            0,
+            0,
+            0,
+            [
+              "us_agm_65f"
+            ],
+            21
+          ],
+          [
+            "gr_litening_pod",
+            2,
+            1,
+            4,
+            "LITENING II",
+            "LITENING II",
+            "thermal_sight.png",
+            0,
+            0,
+            0,
+            [],
+            22
+          ],
+          [
+            "us_gbu_laser",
+            2,
+            2,
+            4,
+            "LGBU",
+            "LGBU",
+            "laser_guided_bomb.png",
+            0,
+            0,
+            0,
+            [
+              "gr_litening_pod"
+            ],
+            23
+          ],
+          [
+            "us_apkws",
+            2,
+            3,
+            4,
+            "APKWS II",
+            "APKWS II",
+            "pilon_block_rocket.png",
+            0,
+            0,
+            0,
+            [
+              "us_gbu_laser"
+            ],
+            24
+          ],
+          [
+            "us_agm_65e",
+            2,
+            4,
+            4,
+            "AGM-65E",
+            "AGM-65E",
+            "agm_middle_missile.png",
+            0,
+            0,
+            0,
+            [
+              "us_apkws"
+            ],
+            25
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "official-premium-pre-unlocked",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    },
+    {
+      "id": "su_15tm",
+      "country": "ussr",
+      "names": {
+        "zh": "苏-15TM",
+        "en": "Su-15TM",
+        "ru": "Су-15ТМ",
+        "de": "Su-15TM",
+        "fr": "Su-15TM",
+        "ja": "Su-15TM",
+        "es": "Su-15TM"
+      },
+      "nameKey": "su_15tm_shop",
+      "unit": {
+        "type": "single",
+        "title": "Su-15TM",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/su_15tm.png",
+        "br": "9.7",
+        "rp": 190000,
+        "sp": 530000,
+        "data_unit_id": "su_15tm",
+        "required_unit_id": "su-7b",
+        "selected": false,
+        "class_name": "",
+        "details": true,
+        "rank": "VI",
+        "research_country": "USSR",
+        "main_role": "Fighter",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": false,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "9.7",
+              "RB": "9.7",
+              "SB": "9.7"
+            },
+            "tank": {
+              "AB": "9.7",
+              "RB": "9.0",
+              "SB": "9.0"
+            },
+            "ship": {
+              "AB": "9.7",
+              "RB": "9.7",
+              "SB": "9.7"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data"
+        }
+      },
+      "modification": {
+        "i": "su_15tm",
+        "n": [
+          "苏-15TM",
+          "Su-15TM"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/su_15tm.png",
+        "r": [
+          1,
+          2,
+          3
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            1
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            3
+          ]
+        ],
+        "t": [
+          156500,
+          244000
+        ],
+        "l": {
+          "new_compressor_jet": {
+            "zh": "压缩机",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Neuer Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "hydravlic_power": {
+            "zh": "液压助力",
+            "en": "New boosters",
+            "ru": "Новые усилители",
+            "de": "Neue Hydraulik",
+            "fr": "Nouveaux boosters",
+            "ja": "新しい ブースター",
+            "es": "Nuevos propulsores"
+          },
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "hp_105_jet": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neues Triebwerk",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "f_4c_CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Rumpfreparatur",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "f_4c_g_suit": {
+            "zh": "抗荷服",
+            "en": "G-suit",
+            "ru": "ППК",
+            "de": "Anti-G-Anzug",
+            "fr": "Combinaison anti-G",
+            "ja": "耐 G スーツ",
+            "es": "Traje antigravedad"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "mig_21_ub16": {
+            "zh": "UB-16 挂架",
+            "en": "UB-16",
+            "ru": "УБ-16",
+            "de": "UB-16",
+            "fr": "UB-16",
+            "ja": "UB-16",
+            "es": "UB-16"
+          },
+          "mig_21_ub32": {
+            "zh": "UB-32 挂架",
+            "en": "UB-32",
+            "ru": "УБ-32",
+            "de": "UB-32",
+            "fr": "UB-32",
+            "ja": "UB-32",
+            "es": "UB-32"
+          },
+          "il_28sh_s24": {
+            "zh": "S-24",
+            "en": "S-24",
+            "ru": "С-24",
+            "de": "S-24",
+            "fr": "S-24",
+            "ja": "S-24",
+            "es": "S-24"
+          },
+          "air_extinguisher": {
+            "zh": "引擎灭火系统",
+            "en": "EFS",
+            "ru": "СПД",
+            "de": "FLS",
+            "fr": "SEM",
+            "ja": "EFS",
+            "es": "EFS"
+          },
+          "ns23_belt_pack": {
+            "zh": "23 毫米前射武器弹链",
+            "en": "Offensive 23 mm belts",
+            "ru": "Курсовые ленты 23 мм",
+            "de": "23-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 23 mm, armes offensives",
+            "ja": "23 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 23 mm"
+          },
+          "ns23_new_gun": {
+            "zh": "23 毫米前射机炮翻新",
+            "en": "New 23 mm cannons",
+            "ru": "Новые 23-мм пушки",
+            "de": "Neue 23-mm-Kanonen",
+            "fr": "Nouveaux canons de 23 mm",
+            "ja": "新しい 23 mm 機関砲",
+            "es": "Nuevos cañones de 23 mm"
+          },
+          "su_r_98mt": {
+            "zh": "R-98MT",
+            "en": "R-98MT",
+            "ru": "Р-98МТ",
+            "de": "R-98MT",
+            "fr": "R-98MT",
+            "ja": "R-98MT",
+            "es": "R-98MT"
+          },
+          "su_r_98mr": {
+            "zh": "R-98MR",
+            "en": "R-98MR",
+            "ru": "Р-98МР",
+            "de": "R-98MR",
+            "fr": "R-98MR",
+            "ja": "R-98MR",
+            "es": "R-98MR"
+          },
+          "zb_500": {
+            "zh": "ZB-500",
+            "en": "ZB-500",
+            "ru": "ЗБ-500",
+            "de": "ZB-500",
+            "fr": "ZB-500",
+            "ja": "ZB-500",
+            "es": "ZB-500"
+          },
+          "su_17_ofab_100": {
+            "zh": "OFAB-100",
+            "en": "OFAB-100",
+            "ru": "ОФАБ-100",
+            "de": "OFAB-100",
+            "fr": "OFAB-100",
+            "ja": "OFAB-100-120",
+            "es": "OFAB-100"
+          },
+          "mi_24_fab_250": {
+            "zh": "FAB-250",
+            "en": "FAB-250",
+            "ru": "ФАБ-250",
+            "de": "FAB-250",
+            "fr": "FAB-250",
+            "ja": "FAB-250",
+            "es": "FAB-250"
+          },
+          "mi_24_fab_500": {
+            "zh": "FAB-500",
+            "en": "FAB-500",
+            "ru": "ФАБ-500",
+            "de": "FAB-500",
+            "fr": "FAB-500",
+            "ja": "FAB-500",
+            "es": "FAB-500"
+          }
+        },
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            6300,
+            9800,
+            340,
+            [],
+            0
+          ],
+          [
+            "hydravlic_power",
+            0,
+            2,
+            0,
+            "液压助力",
+            "New boosters",
+            "booster.png",
+            7100,
+            11000,
+            380,
+            [],
+            1
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            7900,
+            12000,
+            430,
+            [],
+            2
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            10000,
+            16000,
+            540,
+            [],
+            3
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            1,
+            1,
+            0,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            6300,
+            9800,
+            340,
+            [],
+            4
+          ],
+          [
+            "structure_str",
+            1,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            7100,
+            11000,
+            380,
+            [],
+            5
+          ],
+          [
+            "f_4c_g_suit",
+            1,
+            3,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            7900,
+            12000,
+            430,
+            [],
+            6
+          ],
+          [
+            "new_cover",
+            1,
+            4,
+            0,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            10000,
+            16000,
+            540,
+            [],
+            7
+          ],
+          [
+            "mig_21_ub16",
+            2,
+            1,
+            0,
+            "UB-16 挂架",
+            "UB-16",
+            "pilon_block_rocket.png",
+            6300,
+            9800,
+            340,
+            [],
+            8
+          ],
+          [
+            "mig_21_ub32",
+            2,
+            2,
+            0,
+            "UB-32 挂架",
+            "UB-32",
+            "pilon_block_rocket.png",
+            7100,
+            11000,
+            380,
+            [
+              "mig_21_ub16"
+            ],
+            9
+          ],
+          [
+            "il_28sh_s24",
+            2,
+            3,
+            0,
+            "S-24",
+            "S-24",
+            "pilon_rocket.png",
+            7900,
+            12000,
+            430,
+            [
+              "mig_21_ub32"
+            ],
+            10
+          ],
+          [
+            "air_extinguisher",
+            2,
+            4,
+            0,
+            "引擎灭火系统",
+            "EFS",
+            "jet_engine_extinguisher.png",
+            10000,
+            16000,
+            540,
+            [],
+            11
+          ],
+          [
+            "ns23_belt_pack",
+            2,
+            1,
+            1,
+            "23 毫米前射武器弹链",
+            "Offensive 23 mm belts",
+            "ammo.png",
+            6300,
+            9800,
+            340,
+            [],
+            12
+          ],
+          [
+            "ns23_new_gun",
+            2,
+            2,
+            1,
+            "23 毫米前射机炮翻新",
+            "New 23 mm cannons",
+            "weapon.png",
+            7100,
+            11000,
+            380,
+            [
+              "ns23_belt_pack"
+            ],
+            13
+          ],
+          [
+            "su_r_98mt",
+            2,
+            3,
+            1,
+            "R-98MT",
+            "R-98MT",
+            "air_to_air_missile.png",
+            7900,
+            12000,
+            430,
+            [],
+            14
+          ],
+          [
+            "su_r_98mr",
+            2,
+            4,
+            1,
+            "R-98MR",
+            "R-98MR",
+            "air_to_air_missile.png",
+            10000,
+            16000,
+            540,
+            [
+              "su_r_98mt"
+            ],
+            15
+          ],
+          [
+            "zb_500",
+            2,
+            1,
+            2,
+            "ZB-500",
+            "ZB-500",
+            "napalm_fire_bomb.png",
+            6300,
+            9800,
+            340,
+            [],
+            16
+          ],
+          [
+            "su_17_ofab_100",
+            2,
+            2,
+            2,
+            "OFAB-100",
+            "OFAB-100",
+            "pilon_bomb.png",
+            7100,
+            11000,
+            380,
+            [],
+            17
+          ],
+          [
+            "mi_24_fab_250",
+            2,
+            3,
+            2,
+            "FAB-250",
+            "FAB-250",
+            "pilon_bomb.png",
+            7900,
+            12000,
+            430,
+            [
+              "su_17_ofab_100"
+            ],
+            18
+          ],
+          [
+            "mi_24_fab_500",
+            2,
+            4,
+            2,
+            "FAB-500",
+            "FAB-500",
+            "pilon_bomb.png",
+            10000,
+            16000,
+            540,
+            [
+              "mi_24_fab_250"
+            ],
+            19
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "explicit-unit-economy",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    },
+    {
+      "id": "fulmar_mk2",
+      "country": "britain",
+      "names": {
+        "zh": "管鼻燕 Mk.II",
+        "en": "Fulmar Mk.II",
+        "ru": "Fulmar Mk.II",
+        "de": "Fulmar Mk.II",
+        "fr": "Fulmar Mk II",
+        "ja": "フルマー Mk.II",
+        "es": "Fulmar Mk.II"
+      },
+      "nameKey": "fulmar_mk2_shop",
+      "unit": {
+        "type": "single",
+        "title": "Fulmar Mk.II",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fulmar_mk2.png",
+        "br": "1.7",
+        "rp": 5900,
+        "sp": 6300,
+        "data_unit_id": "fulmar_mk2",
+        "required_unit_id": "blenheim_mkiv",
+        "selected": false,
+        "class_name": "",
+        "details": true,
+        "rank": "I",
+        "research_country": "Great Britain",
+        "main_role": "Fighter",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": false,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "1.7",
+              "RB": "1.7",
+              "SB": "1.7"
+            },
+            "tank": {
+              "AB": "1.7",
+              "RB": "1.7",
+              "SB": "1.7"
+            },
+            "ship": {
+              "AB": "1.7",
+              "RB": "1.7",
+              "SB": "1.7"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data"
+        }
+      },
+      "modification": {
+        "i": "fulmar_mk2",
+        "n": [
+          "管鼻燕 Mk.II",
+          "Fulmar Mk.II"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/fulmar_mk2.png",
+        "r": [
+          1,
+          1,
+          3
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            2
+          ]
+        ],
+        "t": [
+          5940,
+          4510
+        ],
+        "l": {
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "new_engine_injection": {
+            "zh": "喷油系统",
+            "en": "Engine injection",
+            "ru": "Впрыск",
+            "de": "Neuer Einspritzer",
+            "fr": "Injection moteur",
+            "ja": "インジェクター 交換",
+            "es": "Motor a inyección"
+          },
+          "air_extinguisher": {
+            "zh": "引擎灭火系统",
+            "en": "EFS",
+            "ru": "СПД",
+            "de": "FLS",
+            "fr": "SEM",
+            "ja": "EFS",
+            "es": "EFS"
+          },
+          "CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Neuer Rumpf",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "hp_105": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neuer Motor",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "new_radiator": {
+            "zh": "散热器",
+            "en": "Radiator",
+            "ru": "Радиатор",
+            "de": "Neuer Kühler",
+            "fr": "Radiateur",
+            "ja": "ラジエーター",
+            "es": "Radiador"
+          },
+          "bmg303_belt_pack": {
+            "zh": "7.7 毫米前射武器弹链",
+            "en": "Offensive 7.7 mm belts",
+            "ru": "Курсовые ленты 7.7 мм",
+            "de": "7.7-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 7.7 mm, armes offensives",
+            "ja": "7.7 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 7.7 mm"
+          },
+          "bmg303_new_gun": {
+            "zh": "7.7 毫米前射机枪翻新",
+            "en": "New 7.7 mm MGs",
+            "ru": "Новые 7.7-мм пулемёты",
+            "de": "Neue 7.7-mm-MGs",
+            "fr": "Nouvelles mitrailleuses de 7.7 mm",
+            "ja": "新しい 7.7 mm 機関銃",
+            "es": "Nuevas ametralladoras de 7.7 mm"
+          },
+          "halker_sbc": {
+            "zh": "HSBC Mk II 挂架",
+            "en": "HSBC mk.2",
+            "ru": "HSBC mk.2",
+            "de": "HSBC mk.2",
+            "fr": "HSBC mk.2",
+            "ja": "HSBC mk.2",
+            "es": "HSBC mk.2"
+          },
+          "halker_mbc": {
+            "zh": "HMBC Mk II 挂架",
+            "en": "HMBC mk.2",
+            "ru": "HMBC mk.2",
+            "de": "HMBC mk.2",
+            "fr": "HMBC mk.2",
+            "ja": "HMBC mk.2",
+            "es": "HMBC mk.2"
+          }
+        },
+        "m": [
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            300,
+            230,
+            50,
+            [],
+            0
+          ],
+          [
+            "new_engine_injection",
+            0,
+            4,
+            1,
+            "喷油系统",
+            "Engine injection",
+            "metanol.png",
+            970,
+            730,
+            155,
+            [],
+            1
+          ],
+          [
+            "air_extinguisher",
+            1,
+            3,
+            0,
+            "引擎灭火系统",
+            "EFS",
+            "engine_extinguisher.png",
+            300,
+            230,
+            50,
+            [],
+            2
+          ],
+          [
+            "CdMin_Fuse",
+            0,
+            1,
+            0,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            300,
+            230,
+            50,
+            [],
+            3
+          ],
+          [
+            "new_cover",
+            1,
+            4,
+            0,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            970,
+            730,
+            155,
+            [],
+            4
+          ],
+          [
+            "structure_str",
+            1,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            1300,
+            980,
+            210,
+            [],
+            5
+          ],
+          [
+            "hp_105",
+            0,
+            3,
+            1,
+            "发动机",
+            "Engine",
+            "new_engine.png",
+            300,
+            230,
+            50,
+            [],
+            6
+          ],
+          [
+            "new_radiator",
+            0,
+            1,
+            1,
+            "散热器",
+            "Radiator",
+            "radiator.png",
+            300,
+            230,
+            50,
+            [],
+            7
+          ],
+          [
+            "bmg303_belt_pack",
+            2,
+            1,
+            0,
+            "7.7 毫米前射武器弹链",
+            "Offensive 7.7 mm belts",
+            "ammo.png",
+            300,
+            230,
+            50,
+            [],
+            8
+          ],
+          [
+            "bmg303_new_gun",
+            2,
+            3,
+            0,
+            "7.7 毫米前射机枪翻新",
+            "New 7.7 mm MGs",
+            "weapon.png",
+            300,
+            230,
+            50,
+            [
+              "bmg303_belt_pack"
+            ],
+            9
+          ],
+          [
+            "halker_sbc",
+            2,
+            1,
+            1,
+            "HSBC Mk II 挂架",
+            "HSBC mk.2",
+            "pilon_bomb.png",
+            300,
+            230,
+            50,
+            [],
+            10
+          ],
+          [
+            "halker_mbc",
+            2,
+            3,
+            1,
+            "HMBC Mk II 挂架",
+            "HMBC mk.2",
+            "pilon_bomb.png",
+            300,
+            230,
+            50,
+            [
+              "halker_sbc"
+            ],
+            11
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "explicit-unit-economy",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    },
+    {
+      "id": "firefly_mk1_thailand",
+      "country": "japan",
+      "names": {
+        "zh": "▄萤火虫 F Mk I",
+        "en": "▄Firefly F Mk I",
+        "ru": "▄Firefly F.Mk.I",
+        "de": "▄Firefly F Mk I",
+        "fr": "▄Firefly F Mk I",
+        "ja": "▄ファイアフライ F Mk I",
+        "es": "▄Firefly F Mk I"
+      },
+      "nameKey": "firefly_mk1_thailand_shop",
+      "unit": {
+        "type": "single",
+        "title": "▄Firefly F Mk I",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/firefly_mk1_thailand.png",
+        "br": "3.3",
+        "rp": 18000,
+        "sp": 47000,
+        "data_unit_id": "firefly_mk1_thailand",
+        "required_unit_id": "d4y3",
+        "selected": false,
+        "class_name": "",
+        "details": true,
+        "rank": "III",
+        "research_country": "Japan",
+        "main_role": "Strike aircraft",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": false,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "3.7",
+              "RB": "3.3",
+              "SB": "4.0"
+            },
+            "tank": {
+              "AB": "3.7",
+              "RB": "3.3",
+              "SB": "4.0"
+            },
+            "ship": {
+              "AB": "3.7",
+              "RB": "3.3",
+              "SB": "4.0"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data"
+        }
+      },
+      "modification": {
+        "i": "firefly_mk1_thailand",
+        "n": [
+          "▄萤火虫 F Mk I",
+          "▄Firefly F Mk I"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/firefly_mk1_thailand.png",
+        "r": [
+          1,
+          2,
+          2
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            2
+          ]
+        ],
+        "t": [
+          19560,
+          32000
+        ],
+        "l": {
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Neuer Rumpf",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "hp_105": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neuer Motor",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "new_radiator": {
+            "zh": "散热器",
+            "en": "Radiator",
+            "ru": "Радиатор",
+            "de": "Neuer Kühler",
+            "fr": "Radiateur",
+            "ja": "ラジエーター",
+            "es": "Radiador"
+          },
+          "new_compressor": {
+            "zh": "增压器",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "new_engine_injection": {
+            "zh": "喷油系统",
+            "en": "Engine injection",
+            "ru": "Впрыск",
+            "de": "Neuer Einspritzer",
+            "fr": "Injection moteur",
+            "ja": "インジェクター 交換",
+            "es": "Motor a inyección"
+          },
+          "hispano_belt_pack": {
+            "zh": "20 毫米前射武器弹链",
+            "en": "Offensive 20 mm belts",
+            "ru": "Курсовые ленты 20 мм",
+            "de": "20-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 20 mm, armes offensives",
+            "ja": "20 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 20 mm"
+          },
+          "hispano_mk2_new_gun": {
+            "zh": "20 毫米前射机炮翻新",
+            "en": "New 20 mm cannons",
+            "ru": "Новые 20-мм пушки",
+            "de": "Neue 20-mm-Kanonen",
+            "fr": "Nouveaux canons de 20 mm",
+            "ja": "新しい 20 mm 機関砲",
+            "es": "Nuevos cañones de 20 mm"
+          },
+          "hispano_mk_2_narrow_chamber_new_gun": {
+            "zh": "Mk II (1942)",
+            "en": "Mk.II year 1942",
+            "ru": "Мк.II обр. 1942.",
+            "de": "Mk.II (Jahr 1942)",
+            "fr": "Mk.II année 1942",
+            "ja": "Mk.II (1942 年)",
+            "es": "Mk.II año 1942"
+          },
+          "hispano_mk_2_1943_new_gun": {
+            "zh": "Mk II (1943)",
+            "en": "Mk.II year 1943",
+            "ru": "Мк.II обр. 1943.",
+            "de": "Mk.II (Jahr 1943)",
+            "fr": "Mk.II année 1943",
+            "ja": "Mk.II (1943 年)",
+            "es": "Mk.II año 1943"
+          },
+          "halker_sbc": {
+            "zh": "HSBC Mk II 挂架",
+            "en": "HSBC mk.2",
+            "ru": "HSBC mk.2",
+            "de": "HSBC mk.2",
+            "fr": "HSBC mk.2",
+            "ja": "HSBC mk.2",
+            "es": "HSBC mk.2"
+          },
+          "halker_mbc": {
+            "zh": "HMBC Mk II 挂架",
+            "en": "HMBC mk.2",
+            "ru": "HMBC mk.2",
+            "de": "HMBC mk.2",
+            "fr": "HMBC mk.2",
+            "ja": "HMBC mk.2",
+            "es": "HMBC mk.2"
+          },
+          "halker_lbc": {
+            "zh": "HLBC Mk III 挂架",
+            "en": "HLBC mk.2",
+            "ru": "HLBC mk.3",
+            "de": "HLBC mk.2",
+            "fr": "HLBC mk.2",
+            "ja": "HLBC mk.2",
+            "es": "HLBC mk.2"
+          },
+          "halker_rc": {
+            "zh": "HRC Mk VIII 挂架",
+            "en": "HRC mk.8",
+            "ru": "HRC mk.8",
+            "de": "HRC mk.8",
+            "fr": "HRC mk.8",
+            "ja": "HRC mk.8",
+            "es": "HRC mk.8"
+          }
+        },
+        "m": [
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            1200,
+            2000,
+            145,
+            [],
+            0
+          ],
+          [
+            "CdMin_Fuse",
+            0,
+            1,
+            0,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            990,
+            1600,
+            120,
+            [],
+            1
+          ],
+          [
+            "new_cover",
+            1,
+            4,
+            0,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            1600,
+            2600,
+            195,
+            [],
+            2
+          ],
+          [
+            "structure_str",
+            1,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            1100,
+            1800,
+            135,
+            [],
+            3
+          ],
+          [
+            "hp_105",
+            0,
+            3,
+            1,
+            "发动机",
+            "Engine",
+            "new_engine.png",
+            1200,
+            2000,
+            145,
+            [],
+            4
+          ],
+          [
+            "new_radiator",
+            0,
+            1,
+            1,
+            "散热器",
+            "Radiator",
+            "radiator.png",
+            990,
+            1600,
+            120,
+            [],
+            5
+          ],
+          [
+            "new_compressor",
+            0,
+            2,
+            1,
+            "增压器",
+            "Compressor",
+            "compressor.png",
+            1100,
+            1800,
+            135,
+            [],
+            6
+          ],
+          [
+            "new_engine_injection",
+            0,
+            4,
+            1,
+            "喷油系统",
+            "Engine injection",
+            "metanol.png",
+            1600,
+            2600,
+            195,
+            [],
+            7
+          ],
+          [
+            "hispano_belt_pack",
+            2,
+            1,
+            0,
+            "20 毫米前射武器弹链",
+            "Offensive 20 mm belts",
+            "ammo.png",
+            990,
+            1600,
+            120,
+            [],
+            8
+          ],
+          [
+            "hispano_mk2_new_gun",
+            2,
+            2,
+            0,
+            "20 毫米前射机炮翻新",
+            "New 20 mm cannons",
+            "weapon.png",
+            1100,
+            1800,
+            135,
+            [
+              "hispano_belt_pack"
+            ],
+            9
+          ],
+          [
+            "hispano_mk_2_narrow_chamber_new_gun",
+            2,
+            3,
+            0,
+            "Mk II (1942)",
+            "Mk.II year 1942",
+            "gun_camora_mod.png",
+            1200,
+            2000,
+            145,
+            [
+              "hispano_mk2_new_gun"
+            ],
+            10
+          ],
+          [
+            "hispano_mk_2_1943_new_gun",
+            2,
+            4,
+            0,
+            "Mk II (1943)",
+            "Mk.II year 1943",
+            "gun_camora_mod.png",
+            1600,
+            2600,
+            195,
+            [
+              "hispano_mk_2_narrow_chamber_new_gun"
+            ],
+            11
+          ],
+          [
+            "halker_sbc",
+            2,
+            1,
+            1,
+            "HSBC Mk II 挂架",
+            "HSBC mk.2",
+            "pilon_bomb.png",
+            990,
+            1600,
+            120,
+            [],
+            12
+          ],
+          [
+            "halker_mbc",
+            2,
+            2,
+            1,
+            "HMBC Mk II 挂架",
+            "HMBC mk.2",
+            "pilon_bomb.png",
+            1100,
+            1800,
+            135,
+            [
+              "halker_sbc"
+            ],
+            13
+          ],
+          [
+            "halker_lbc",
+            2,
+            3,
+            1,
+            "HLBC Mk III 挂架",
+            "HLBC mk.2",
+            "pilon_bomb.png",
+            1200,
+            2000,
+            145,
+            [
+              "halker_mbc"
+            ],
+            14
+          ],
+          [
+            "halker_rc",
+            2,
+            4,
+            1,
+            "HRC Mk VIII 挂架",
+            "HRC mk.8",
+            "pilon_rocket.png",
+            1600,
+            2600,
+            195,
+            [
+              "halker_lbc"
+            ],
+            15
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "explicit-unit-economy",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    },
+    {
+      "id": "b_33_indonesia",
+      "country": "japan",
+      "names": {
+        "zh": "◥B-33",
+        "en": "◥B-33",
+        "ru": "◥B-33",
+        "de": "◥B-33",
+        "fr": "◥B-33",
+        "ja": "◥B-33",
+        "es": "◥B-33"
+      },
+      "nameKey": "b_33_indonesia_shop",
+      "unit": {
+        "type": "single",
+        "title": "◥B-33",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/b_33_indonesia.png",
+        "br": "5.0",
+        "rp": 63000,
+        "sp": 200000,
+        "data_unit_id": "b_33_indonesia",
+        "required_unit_id": "ki_93_1_ko",
+        "selected": false,
+        "class_name": "",
+        "details": true,
+        "rank": "IV",
+        "research_country": "Japan",
+        "main_role": "Strike aircraft",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": false,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "5.0",
+              "RB": "5.0",
+              "SB": "5.3"
+            },
+            "tank": {
+              "AB": "5.0",
+              "RB": "5.0",
+              "SB": "5.3"
+            },
+            "ship": {
+              "AB": "5.0",
+              "RB": "5.0",
+              "SB": "5.3"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data"
+        }
+      },
+      "modification": {
+        "i": "b_33_indonesia",
+        "n": [
+          "◥B-33",
+          "◥B-33"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/b_33_indonesia.png",
+        "r": [
+          1,
+          1,
+          2
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            2
+          ]
+        ],
+        "t": [
+          52900,
+          91100
+        ],
+        "l": {
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Neuer Rumpf",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "hp_105": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neuer Motor",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "new_radiator": {
+            "zh": "散热器",
+            "en": "Radiator",
+            "ru": "Радиатор",
+            "de": "Neuer Kühler",
+            "fr": "Radiateur",
+            "ja": "ラジエーター",
+            "es": "Radiador"
+          },
+          "new_compressor": {
+            "zh": "增压器",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "new_engine_injection": {
+            "zh": "喷油系统",
+            "en": "Engine injection",
+            "ru": "Впрыск",
+            "de": "Neuer Einspritzer",
+            "fr": "Injection moteur",
+            "ja": "インジェクター 交換",
+            "es": "Motor a inyección"
+          },
+          "ns23_belt_pack": {
+            "zh": "23 毫米前射武器弹链",
+            "en": "Offensive 23 mm belts",
+            "ru": "Курсовые ленты 23 мм",
+            "de": "23-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 23 mm, armes offensives",
+            "ja": "23 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 23 mm"
+          },
+          "ns23_new_gun": {
+            "zh": "23 毫米前射机炮翻新",
+            "en": "New 23 mm cannons",
+            "ru": "Новые 23-мм пушки",
+            "de": "Neue 23-mm-Kanonen",
+            "fr": "Nouveaux canons de 23 mm",
+            "ja": "新しい 23 mm 機関砲",
+            "es": "Nuevos cañones de 23 mm"
+          },
+          "shvak_turret_belt_pack": {
+            "zh": "20 毫米自卫武器弹链",
+            "en": "Turret 20 mm belts",
+            "ru": "Турельные ленты 20 мм",
+            "de": "20-mm-Gurte (Kanzel)",
+            "fr": "Munitions de 20 mm pour tourelle",
+            "ja": "20 mm 銃座用 弾薬 ベルト",
+            "es": "Cinturón de la torreta de 20 mm"
+          },
+          "b20_turret_new_gun": {
+            "zh": "20 毫米自卫机炮翻新",
+            "en": "New 20 mm cannons (turret)",
+            "ru": "Новые 20-мм пушки (турель)",
+            "de": "Neue 20-mm-Kanonen (Kanzel)",
+            "fr": "Nouveaux canons de 20 mm (tourelle)",
+            "ja": "新しい 20 mm 機関砲",
+            "es": "Nuevos cañones de 20 mm (torreta)"
+          },
+          "ro_82_mod": {
+            "zh": "RO-82 挂架",
+            "en": "RO-82",
+            "ru": "РО-82",
+            "de": "RO-82",
+            "fr": "RO-82",
+            "ja": "RO-82",
+            "es": "RO-82"
+          },
+          "ro_132_mod": {
+            "zh": "RO-132 挂架",
+            "en": "RO-132",
+            "ru": "РО-132",
+            "de": "RO-132",
+            "fr": "RO-132",
+            "ja": "RO-132",
+            "es": "RO-132"
+          }
+        },
+        "m": [
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            3300,
+            5700,
+            220,
+            [],
+            0
+          ],
+          [
+            "CdMin_Fuse",
+            0,
+            1,
+            0,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            3500,
+            6000,
+            230,
+            [],
+            1
+          ],
+          [
+            "new_cover",
+            1,
+            4,
+            0,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            4300,
+            7400,
+            290,
+            [],
+            2
+          ],
+          [
+            "structure_str",
+            1,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            4000,
+            6900,
+            270,
+            [],
+            3
+          ],
+          [
+            "hp_105",
+            0,
+            3,
+            1,
+            "发动机",
+            "Engine",
+            "new_engine.png",
+            3300,
+            5700,
+            220,
+            [],
+            4
+          ],
+          [
+            "new_radiator",
+            0,
+            1,
+            1,
+            "散热器",
+            "Radiator",
+            "radiator.png",
+            3500,
+            6000,
+            230,
+            [],
+            5
+          ],
+          [
+            "new_compressor",
+            0,
+            2,
+            1,
+            "增压器",
+            "Compressor",
+            "compressor.png",
+            4000,
+            6900,
+            270,
+            [],
+            6
+          ],
+          [
+            "new_engine_injection",
+            0,
+            4,
+            1,
+            "喷油系统",
+            "Engine injection",
+            "metanol.png",
+            4300,
+            7400,
+            290,
+            [],
+            7
+          ],
+          [
+            "ns23_belt_pack",
+            2,
+            1,
+            0,
+            "23 毫米前射武器弹链",
+            "Offensive 23 mm belts",
+            "ammo.png",
+            3500,
+            6000,
+            230,
+            [],
+            8
+          ],
+          [
+            "ns23_new_gun",
+            2,
+            2,
+            0,
+            "23 毫米前射机炮翻新",
+            "New 23 mm cannons",
+            "weapon.png",
+            4000,
+            6900,
+            270,
+            [
+              "ns23_belt_pack"
+            ],
+            9
+          ],
+          [
+            "shvak_turret_belt_pack",
+            2,
+            3,
+            0,
+            "20 毫米自卫武器弹链",
+            "Turret 20 mm belts",
+            "ammo.png",
+            3300,
+            5700,
+            220,
+            [],
+            10
+          ],
+          [
+            "b20_turret_new_gun",
+            2,
+            4,
+            0,
+            "20 毫米自卫机炮翻新",
+            "New 20 mm cannons (turret)",
+            "turret_gun.png",
+            4300,
+            7400,
+            290,
+            [
+              "shvak_turret_belt_pack"
+            ],
+            11
+          ],
+          [
+            "ro_82_mod",
+            2,
+            3,
+            1,
+            "RO-82 挂架",
+            "RO-82",
+            "pilon_rocket.png",
+            3300,
+            5700,
+            220,
+            [],
+            12
+          ],
+          [
+            "ro_132_mod",
+            2,
+            4,
+            1,
+            "RO-132 挂架",
+            "RO-132",
+            "pilon_rocket.png",
+            4300,
+            7400,
+            290,
+            [
+              "ro_82_mod"
+            ],
+            13
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "explicit-unit-economy",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    },
+    {
+      "id": "q_5d",
+      "country": "china",
+      "names": {
+        "zh": "强-5D",
+        "en": "Q-5D",
+        "ru": "Q-5D",
+        "de": "Q-5D",
+        "fr": "Q-5D",
+        "ja": "Q-5D",
+        "es": "Q-5D"
+      },
+      "nameKey": "q_5d_shop",
+      "unit": {
+        "type": "single",
+        "title": "Q-5D",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/q_5d.png",
+        "br": "10.0",
+        "rp": 0,
+        "sp": 0,
+        "data_unit_id": "q_5d",
+        "required_unit_id": "",
+        "selected": false,
+        "class_name": "prem",
+        "details": true,
+        "rank": "VI",
+        "research_country": "China",
+        "main_role": "Strike aircraft",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": true,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "10.0",
+              "RB": "10.0",
+              "SB": "10.3"
+            },
+            "tank": {
+              "AB": "10.0",
+              "RB": "9.0",
+              "SB": "9.0"
+            },
+            "ship": {
+              "AB": "10.0",
+              "RB": "10.0",
+              "SB": "10.3"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data",
+          "acquisition": {
+            "type": "pack",
+            "url": "https://warthunder.com/en/game/changelog/current/1915"
+          },
+          "cost_policy": "pack-excluded-from-ordinary-research"
+        }
+      },
+      "modification": {
+        "i": "q_5d",
+        "n": [
+          "强-5D",
+          "Q-5D"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/q_5d.png",
+        "r": [
+          1,
+          1,
+          2
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            4
+          ]
+        ],
+        "t": [
+          0,
+          0
+        ],
+        "l": {
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Neuer Rumpf",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "hp_105_jet": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neues Triebwerk",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "g_suit": {
+            "zh": "抗荷服",
+            "en": "G-suit",
+            "ru": "ППК",
+            "de": "Anti-G-Anzug",
+            "fr": "Combinaison anti-G",
+            "ja": "耐 G スーツ",
+            "es": "Traje antigravedad"
+          },
+          "hydravlic_power": {
+            "zh": "液压助力",
+            "en": "New boosters",
+            "ru": "Новые усилители",
+            "de": "Neue Hydraulik",
+            "fr": "Nouveaux boosters",
+            "ja": "新しい ブースター",
+            "es": "Nuevos propulsores"
+          },
+          "new_compressor_jet": {
+            "zh": "压缩机",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Neuer Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "countermeasures_belt_pack": {
+            "zh": "热焰弹/干扰箔",
+            "en": "Flares/Chaff",
+            "ru": "ЛТЦ/ДО",
+            "de": "IR-Täuschkörper/Düppel",
+            "fr": "Leurres IR/paillettes",
+            "ja": "フレア/チャフ",
+            "es": "Bengalas/Chaff"
+          },
+          "ns23_belt_pack": {
+            "zh": "23 毫米前射武器弹链",
+            "en": "Offensive 23 mm belts",
+            "ru": "Курсовые ленты 23 мм",
+            "de": "23-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 23 mm, armes offensives",
+            "ja": "23 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 23 mm"
+          },
+          "ns23_new_gun": {
+            "zh": "23 毫米前射机炮翻新",
+            "en": "New 23 mm cannons",
+            "ru": "Новые 23-мм пушки",
+            "de": "Neue 23-mm-Kanonen",
+            "fr": "Nouveaux canons de 23 mm",
+            "ja": "新しい 23 mm 機関砲",
+            "es": "Nuevos cañones de 23 mm"
+          },
+          "air_extinguisher": {
+            "zh": "引擎灭火系统",
+            "en": "EFS",
+            "ru": "СПД",
+            "de": "FLS",
+            "fr": "SEM",
+            "ja": "EFS",
+            "es": "EFS"
+          },
+          "cn_q5_type_250": {
+            "zh": "250 型",
+            "en": "Type 250",
+            "ru": "Type 250",
+            "de": "Type 250",
+            "fr": "Type 250",
+            "ja": "タイプ 250",
+            "es": "Tipo 250"
+          },
+          "cn_q5_type_500": {
+            "zh": "500 型",
+            "en": "Type 500",
+            "ru": "Type 500",
+            "de": "Typ 500",
+            "fr": "Type 500",
+            "ja": "タイプ 500",
+            "es": "Tipo 500"
+          },
+          "cn_q5_hf6": {
+            "zh": "火发-6",
+            "en": "HF-6",
+            "ru": "HF-6",
+            "de": "HF-6",
+            "fr": "HF-6",
+            "ja": "HF-6",
+            "es": "HF-6"
+          },
+          "q_5b_type130": {
+            "zh": "火发-14",
+            "en": "HF-14",
+            "ru": "HF-14",
+            "de": "HF-14",
+            "fr": "HF-14",
+            "ja": "HF-14",
+            "es": "HF-14"
+          }
+        },
+        "m": [
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            0,
+            0,
+            0,
+            [],
+            0
+          ],
+          [
+            "CdMin_Fuse",
+            0,
+            1,
+            0,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            0,
+            0,
+            0,
+            [],
+            1
+          ],
+          [
+            "new_cover",
+            1,
+            4,
+            0,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            0,
+            0,
+            0,
+            [],
+            2
+          ],
+          [
+            "structure_str",
+            1,
+            2,
+            0,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            0,
+            0,
+            0,
+            [],
+            3
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            1,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            0,
+            0,
+            0,
+            [],
+            4
+          ],
+          [
+            "g_suit",
+            0,
+            4,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            0,
+            0,
+            0,
+            [],
+            5
+          ],
+          [
+            "hydravlic_power",
+            0,
+            2,
+            0,
+            "液压助力",
+            "New boosters",
+            "booster.png",
+            0,
+            0,
+            0,
+            [],
+            6
+          ],
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            1,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            0,
+            0,
+            0,
+            [],
+            7
+          ],
+          [
+            "countermeasures_belt_pack",
+            2,
+            1,
+            3,
+            "热焰弹/干扰箔",
+            "Flares/Chaff",
+            "heli_false_thermal_targets.png",
+            0,
+            0,
+            0,
+            [],
+            8
+          ],
+          [
+            "ns23_belt_pack",
+            2,
+            1,
+            0,
+            "23 毫米前射武器弹链",
+            "Offensive 23 mm belts",
+            "ammo.png",
+            0,
+            0,
+            0,
+            [],
+            9
+          ],
+          [
+            "ns23_new_gun",
+            2,
+            3,
+            0,
+            "23 毫米前射机炮翻新",
+            "New 23 mm cannons",
+            "weapon.png",
+            0,
+            0,
+            0,
+            [
+              "ns23_belt_pack"
+            ],
+            10
+          ],
+          [
+            "air_extinguisher",
+            2,
+            4,
+            0,
+            "引擎灭火系统",
+            "EFS",
+            "jet_engine_extinguisher.png",
+            0,
+            0,
+            0,
+            [],
+            11
+          ],
+          [
+            "cn_q5_type_250",
+            2,
+            2,
+            1,
+            "250 型",
+            "Type 250",
+            "pilon_bomb.png",
+            0,
+            0,
+            0,
+            [],
+            12
+          ],
+          [
+            "cn_q5_type_500",
+            2,
+            4,
+            1,
+            "500 型",
+            "Type 500",
+            "pilon_bomb.png",
+            0,
+            0,
+            0,
+            [
+              "cn_q5_type_250"
+            ],
+            13
+          ],
+          [
+            "cn_q5_hf6",
+            2,
+            1,
+            2,
+            "火发-6",
+            "HF-6",
+            "pilon_block_rocket.png",
+            0,
+            0,
+            0,
+            [],
+            14
+          ],
+          [
+            "q_5b_type130",
+            2,
+            3,
+            2,
+            "火发-14",
+            "HF-14",
+            "pilon_block_rocket_large.png",
+            0,
+            0,
+            0,
+            [
+              "cn_q5_hf6"
+            ],
+            15
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "official-premium-pre-unlocked",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    },
+    {
+      "id": "saab_jas39_pre_serie",
+      "country": "sweden",
+      "names": {
+        "zh": "JAS 39-5",
+        "en": "JAS39-5",
+        "ru": "JAS39-5",
+        "de": "JAS39-5",
+        "fr": "JAS39-5",
+        "ja": "JAS39-5",
+        "es": "JAS39-5"
+      },
+      "nameKey": "saab_jas39_pre_serie_shop",
+      "unit": {
+        "type": "single",
+        "title": "JAS39-5",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/saab_jas39_pre_serie.png",
+        "br": "13.0",
+        "rp": 0,
+        "sp": 0,
+        "data_unit_id": "saab_jas39_pre_serie",
+        "required_unit_id": "",
+        "selected": false,
+        "class_name": "prem",
+        "details": true,
+        "rank": "VIII",
+        "research_country": "Sweden",
+        "main_role": "Fighter",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": true,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "13.0",
+              "RB": "13.0",
+              "SB": "13.0"
+            },
+            "tank": {
+              "AB": "13.0",
+              "RB": "12.3",
+              "SB": "12.0"
+            },
+            "ship": {
+              "AB": "13.0",
+              "RB": "13.0",
+              "SB": "13.0"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data",
+          "acquisition": {
+            "type": "pack",
+            "url": "https://warthunder.com/en/game/changelog/current/1915"
+          },
+          "cost_policy": "pack-excluded-from-ordinary-research"
+        }
+      },
+      "modification": {
+        "i": "saab_jas39_pre_serie",
+        "n": [
+          "JAS 39-5",
+          "JAS39-5"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/saab_jas39_pre_serie.png",
+        "r": [
+          1,
+          3,
+          3
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            4
+          ]
+        ],
+        "t": [
+          0,
+          0
+        ],
+        "l": {
+          "new_compressor_jet": {
+            "zh": "压缩机",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Neuer Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "hydravlic_power": {
+            "zh": "液压助力",
+            "en": "New boosters",
+            "ru": "Новые усилители",
+            "de": "Neue Hydraulik",
+            "fr": "Nouveaux boosters",
+            "ja": "新しい ブースター",
+            "es": "Nuevos propulsores"
+          },
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "hp_105_jet": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neues Triebwerk",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "f_4c_CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Rumpfreparatur",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "countermeasures_belt_pack": {
+            "zh": "热焰弹/干扰箔",
+            "en": "Flares/Chaff",
+            "ru": "ЛТЦ/ДО",
+            "de": "IR-Täuschkörper/Düppel",
+            "fr": "Leurres IR/paillettes",
+            "ja": "フレア/チャフ",
+            "es": "Bengalas/Chaff"
+          },
+          "uk_ltc_bol": {
+            "zh": "BOL 热焰弹/干扰箔吊舱",
+            "en": "Flares/Chaff BOL",
+            "ru": "ЛТЦ/ДО BOL",
+            "de": "IR-Täuschkörper/Düppel BOL",
+            "fr": "BOL Leurres IR/paillettes",
+            "ja": "BOL フレア/チャフ",
+            "es": "Bengalas/Chaff BOL"
+          },
+          "f_4c_g_suit": {
+            "zh": "抗荷服",
+            "en": "G-suit",
+            "ru": "ППК",
+            "de": "Anti-G-Anzug",
+            "fr": "Combinaison anti-G",
+            "ja": "耐 G スーツ",
+            "es": "Traje antigravedad"
+          },
+          "air_extinguisher": {
+            "zh": "引擎灭火系统",
+            "en": "EFS",
+            "ru": "СПД",
+            "de": "FLS",
+            "fr": "SEM",
+            "ja": "EFS",
+            "es": "EFS"
+          },
+          "akan_85_belt_pack": {
+            "zh": "27 毫米前射武器弹链",
+            "en": "Offensive 27 mm belts",
+            "ru": "Курсовые ленты 27 мм",
+            "de": "27-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 27 mm, armes offensives",
+            "ja": "27 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 27 mm"
+          },
+          "akan_85_new_gun": {
+            "zh": "27 毫米前射机炮翻新",
+            "en": "New 27 mm cannons",
+            "ru": "Новые 27-мм пушки",
+            "de": "Neue 27-mm-Kanonen",
+            "fr": "Nouveaux canons de 27 mm",
+            "ja": "新しい 27 mm 機関砲",
+            "es": "Nuevos cañones de 27 mm"
+          },
+          "swd_rb75": {
+            "zh": "Rb 75",
+            "en": "RB75",
+            "ru": "RB75",
+            "de": "RB75",
+            "fr": "RB75",
+            "ja": "RB75",
+            "es": "RB75"
+          },
+          "swd_rb75t": {
+            "zh": "Rb 75T",
+            "en": "RB 75T",
+            "ru": "RB 75T",
+            "de": "RB 75T",
+            "fr": "RB 75T",
+            "ja": "RB 75T",
+            "es": "RB 75T"
+          },
+          "swd_rb74": {
+            "zh": "Rb 74",
+            "en": "RB 74",
+            "ru": "RB 74",
+            "de": "RB 74",
+            "fr": "RB 74",
+            "ja": "RB 74",
+            "es": "RB 74"
+          },
+          "swe_rb71": {
+            "zh": "Rb 71",
+            "en": "RB71",
+            "ru": "RB71",
+            "de": "RB71",
+            "fr": "RB71",
+            "ja": "RB71",
+            "es": "RB71"
+          },
+          "swd_rb74m": {
+            "zh": "RB 74(M)",
+            "en": "RB 74(M)",
+            "ru": "RB 74(M)",
+            "de": "RB 74(M)",
+            "fr": "RB 74(M)",
+            "ja": "RB 74(M)",
+            "es": "RB 74(M)"
+          },
+          "swd_rb99": {
+            "zh": "Rb 99",
+            "en": "RB 99",
+            "ru": "RB 99",
+            "de": "RB 99",
+            "fr": "RB 99",
+            "ja": "RB 99",
+            "es": "RB 99"
+          },
+          "gr_litening_pod": {
+            "zh": "LITENING II",
+            "en": "LITENING II",
+            "ru": "LITENING II",
+            "de": "LITENING II",
+            "fr": "LITENING II",
+            "ja": "ライトニング II",
+            "es": "LITENING II"
+          },
+          "us_gbu_laser": {
+            "zh": "LGBU",
+            "en": "LGBU",
+            "ru": "LGBU",
+            "de": "LGBU",
+            "fr": "LGBU",
+            "ja": "LGBU",
+            "es": "LGBU"
+          },
+          "asm": {
+            "zh": "反舰导弹",
+            "en": "ASM",
+            "ru": "ПКР",
+            "de": "ASM",
+            "fr": "ASM",
+            "ja": "ASM",
+            "es": "ASM"
+          }
+        },
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            0,
+            0,
+            0,
+            [],
+            0
+          ],
+          [
+            "hydravlic_power",
+            0,
+            2,
+            0,
+            "液压助力",
+            "New boosters",
+            "booster.png",
+            0,
+            0,
+            0,
+            [],
+            1
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            0,
+            0,
+            0,
+            [],
+            2
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            0,
+            0,
+            0,
+            [],
+            3
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            0,
+            1,
+            1,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            0,
+            0,
+            0,
+            [],
+            4
+          ],
+          [
+            "structure_str",
+            0,
+            2,
+            1,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            0,
+            0,
+            0,
+            [],
+            5
+          ],
+          [
+            "new_cover",
+            0,
+            3,
+            1,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            0,
+            0,
+            0,
+            [],
+            6
+          ],
+          [
+            "countermeasures_belt_pack",
+            1,
+            1,
+            0,
+            "热焰弹/干扰箔",
+            "Flares/Chaff",
+            "heli_false_thermal_targets.png",
+            0,
+            0,
+            0,
+            [],
+            7
+          ],
+          [
+            "uk_ltc_bol",
+            1,
+            2,
+            0,
+            "BOL 热焰弹/干扰箔吊舱",
+            "Flares/Chaff BOL",
+            "heli_false_thermal_targets.png",
+            0,
+            0,
+            0,
+            [],
+            8
+          ],
+          [
+            "f_4c_g_suit",
+            1,
+            3,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            0,
+            0,
+            0,
+            [],
+            9
+          ],
+          [
+            "air_extinguisher",
+            1,
+            4,
+            0,
+            "引擎灭火系统",
+            "EFS",
+            "jet_engine_extinguisher.png",
+            0,
+            0,
+            0,
+            [],
+            10
+          ],
+          [
+            "akan_85_belt_pack",
+            2,
+            1,
+            0,
+            "27 毫米前射武器弹链",
+            "Offensive 27 mm belts",
+            "ammo.png",
+            0,
+            0,
+            0,
+            [],
+            11
+          ],
+          [
+            "akan_85_new_gun",
+            2,
+            2,
+            0,
+            "27 毫米前射机炮翻新",
+            "New 27 mm cannons",
+            "weapon.png",
+            0,
+            0,
+            0,
+            [
+              "akan_85_belt_pack"
+            ],
+            12
+          ],
+          [
+            "swd_rb75",
+            2,
+            3,
+            0,
+            "Rb 75",
+            "RB75",
+            "agm_middle_missile.png",
+            0,
+            0,
+            0,
+            [],
+            13
+          ],
+          [
+            "swd_rb75t",
+            2,
+            4,
+            0,
+            "Rb 75T",
+            "RB 75T",
+            "agm_middle_missile.png",
+            0,
+            0,
+            0,
+            [
+              "swd_rb75"
+            ],
+            14
+          ],
+          [
+            "swd_rb74",
+            2,
+            1,
+            1,
+            "Rb 74",
+            "RB 74",
+            "air_to_air_missile.png",
+            0,
+            0,
+            0,
+            [],
+            15
+          ],
+          [
+            "swe_rb71",
+            2,
+            2,
+            1,
+            "Rb 71",
+            "RB71",
+            "air_to_air_midrange_missile.png",
+            0,
+            0,
+            0,
+            [
+              "swd_rb74"
+            ],
+            16
+          ],
+          [
+            "swd_rb74m",
+            2,
+            3,
+            1,
+            "RB 74(M)",
+            "RB 74(M)",
+            "air_to_air_missile.png",
+            0,
+            0,
+            0,
+            [
+              "swe_rb71"
+            ],
+            17
+          ],
+          [
+            "swd_rb99",
+            2,
+            4,
+            1,
+            "Rb 99",
+            "RB 99",
+            "air_to_air_midrange_missile.png",
+            0,
+            0,
+            0,
+            [
+              "swd_rb74m"
+            ],
+            18
+          ],
+          [
+            "gr_litening_pod",
+            2,
+            1,
+            2,
+            "LITENING II",
+            "LITENING II",
+            "thermal_sight.png",
+            0,
+            0,
+            0,
+            [],
+            19
+          ],
+          [
+            "us_gbu_laser",
+            2,
+            2,
+            2,
+            "LGBU",
+            "LGBU",
+            "laser_guided_bomb.png",
+            0,
+            0,
+            0,
+            [
+              "gr_litening_pod"
+            ],
+            20
+          ],
+          [
+            "asm",
+            2,
+            1,
+            3,
+            "反舰导弹",
+            "ASM",
+            "anti_radiation_type_a_missile.png",
+            0,
+            0,
+            0,
+            [],
+            21
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "official-premium-pre-unlocked",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    },
+    {
+      "id": "f_15ia",
+      "country": "israel",
+      "names": {
+        "zh": "F-15IA 雷霆 II",
+        "en": "F-15IA Ra’am II",
+        "ru": "F-15IA Ra’am II",
+        "de": "F-15IA Ra’am II",
+        "fr": "F-15IA Ra’am II",
+        "ja": "F-15IA ラーム II",
+        "es": "F-15IA Ra’am II"
+      },
+      "nameKey": "f_15ia_shop",
+      "unit": {
+        "type": "single",
+        "title": "F-15IA Ra’am II",
+        "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/f_15ia.png",
+        "br": "15.0",
+        "rp": 400000,
+        "sp": 1080000,
+        "data_unit_id": "f_15ia",
+        "required_unit_id": "f_15i_raam",
+        "selected": false,
+        "class_name": "",
+        "details": true,
+        "rank": "IX",
+        "research_country": "Israel",
+        "main_role": "Strike aircraft",
+        "is_component": false,
+        "component_of": null,
+        "is_premium": false,
+        "is_squadron": false,
+        "game_battle_ratings": {
+          "context": "air",
+          "by_battle": {
+            "air": {
+              "AB": "15.0",
+              "RB": "15.0",
+              "SB": "15.0"
+            },
+            "tank": {
+              "AB": "15.0",
+              "RB": "14.0",
+              "SB": "14.0"
+            },
+            "ship": {
+              "AB": "15.0",
+              "RB": "15.0",
+              "SB": "15.0"
+            }
+          }
+        },
+        "game_source": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "modification_status": "verified-game-data"
+        }
+      },
+      "modification": {
+        "i": "f_15ia",
+        "n": [
+          "F-15IA 雷霆 II",
+          "F-15IA Ra’am II"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/f_15ia.png",
+        "r": [
+          1,
+          3,
+          4
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器配置",
+            "Weaponry",
+            5
+          ]
+        ],
+        "t": [
+          305900,
+          476000
+        ],
+        "l": {
+          "new_compressor_jet": {
+            "zh": "压缩机",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Neuer Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          },
+          "f_4c_g_suit": {
+            "zh": "抗荷服",
+            "en": "G-suit",
+            "ru": "ППК",
+            "de": "Anti-G-Anzug",
+            "fr": "Combinaison anti-G",
+            "ja": "耐 G スーツ",
+            "es": "Traje antigravedad"
+          },
+          "cd_98": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          },
+          "hp_105_jet": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neues Triebwerk",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          },
+          "f_4c_CdMin_Fuse": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Rumpfreparatur",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          },
+          "structure_str": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          },
+          "new_cover": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          },
+          "air_extinguisher": {
+            "zh": "引擎灭火系统",
+            "en": "EFS",
+            "ru": "СПД",
+            "de": "FLS",
+            "fr": "SEM",
+            "ja": "EFS",
+            "es": "EFS"
+          },
+          "countermeasures_belt_pack": {
+            "zh": "热焰弹/干扰箔",
+            "en": "Flares/Chaff",
+            "ru": "ЛТЦ/ДО",
+            "de": "IR-Täuschkörper/Düppel",
+            "fr": "Leurres IR/paillettes",
+            "ja": "フレア/チャフ",
+            "es": "Bengalas/Chaff"
+          },
+          "asm": {
+            "zh": "反舰导弹",
+            "en": "ASM",
+            "ru": "ПКР",
+            "de": "ASM",
+            "fr": "ASM",
+            "ja": "ASM",
+            "es": "ASM"
+          },
+          "us_agm_84h": {
+            "zh": "SLAM-ER",
+            "en": "SLAM-ER",
+            "ru": "SLAM-ER",
+            "de": "AGM-84H",
+            "fr": "SLAM-ER",
+            "ja": "SLAM-ER",
+            "es": "SLAM-ER"
+          },
+          "us_arm": {
+            "zh": "反辐射导弹",
+            "en": "ARM",
+            "ru": "ПРР",
+            "de": "ARM",
+            "fr": "ARM",
+            "ja": "ARM",
+            "es": "ARM"
+          },
+          "M60_belt_pack": {
+            "zh": "20 毫米前射武器弹链",
+            "en": "Offensive 20 mm belts",
+            "ru": "Курсовые ленты 20 мм",
+            "de": "20-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 20 mm, armes offensives",
+            "ja": "20 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 20 mm"
+          },
+          "M60_new_gun": {
+            "zh": "20 毫米前射机炮翻新",
+            "en": "New 20 mm cannons",
+            "ru": "Новые 20-мм пушки",
+            "de": "Neue 20-mm-Kanonen",
+            "fr": "Nouveaux canons de 20 mm",
+            "ja": "新しい 20 mm 機関砲",
+            "es": "Nuevos cañones de 20 mm"
+          },
+          "us_agm_65": {
+            "zh": "AGM-65",
+            "en": "AGM-65",
+            "ru": "AGM-65",
+            "de": "AGM-65",
+            "fr": "AGM-65",
+            "ja": "AGM-65",
+            "es": "AGM-65"
+          },
+          "us_agm_130": {
+            "zh": "AGM-130",
+            "en": "AGM-130",
+            "ru": "AGM-130",
+            "de": "AGM-130",
+            "fr": "AGM-130",
+            "ja": "AGM-130",
+            "es": "AGM-130"
+          },
+          "us_aim_9m": {
+            "zh": "AIM-9M",
+            "en": "AIM-9M",
+            "ru": "AIM-9M",
+            "de": "AIM-9M",
+            "fr": "AIM-9M",
+            "ja": "AIM-9M",
+            "es": "AIM-9M"
+          },
+          "il_derby": {
+            "zh": "DERBY",
+            "en": "Derby",
+            "ru": "Derby",
+            "de": "Derby",
+            "fr": "Derby",
+            "ja": "ダービー",
+            "es": "Derby"
+          },
+          "us_aim_120b_c": {
+            "zh": "AIM-120B/C",
+            "en": "AIM-120B/C",
+            "ru": "AIM-120B/C",
+            "de": "AIM-120B/C",
+            "fr": "AIM-120B/C",
+            "ja": "AIM-120B/C",
+            "es": "AIM-120B/C"
+          },
+          "us_aim_120d": {
+            "zh": "AIM-120D",
+            "en": "AIM-120D",
+            "ru": "AIM-120D",
+            "de": "AIM-120D",
+            "fr": "AIM-120D",
+            "ja": "AIM-120D",
+            "es": "AIM-120D"
+          },
+          "gr_litening_iii_pod": {
+            "zh": "LITENING III",
+            "en": "LITENING III",
+            "ru": "LITENING III",
+            "de": "LITENING III",
+            "fr": "LITENING III",
+            "ja": "ライトニング III",
+            "es": "LITENING III"
+          },
+          "us_gbu_laser": {
+            "zh": "LGBU",
+            "en": "LGBU",
+            "ru": "LGBU",
+            "de": "LGBU",
+            "fr": "LGBU",
+            "ja": "LGBU",
+            "es": "LGBU"
+          },
+          "us_apkws": {
+            "zh": "APKWS II",
+            "en": "APKWS II",
+            "ru": "APKWS II",
+            "de": "APKWS II",
+            "fr": "APKWS II",
+            "ja": "APKWS II",
+            "es": "APKWS II"
+          },
+          "us_agm154_jsow": {
+            "zh": "AGM-154",
+            "en": "AGM-154",
+            "ru": "AGM-154",
+            "de": "AGM-154",
+            "fr": "AGM-154",
+            "ja": "AGM-154",
+            "es": "AGM-154"
+          },
+          "us_jdam": {
+            "zh": "JDAM",
+            "en": "JDAM",
+            "ru": "JDAM",
+            "de": "JDAM",
+            "fr": "JDAM",
+            "ja": "JDAM",
+            "es": "JDAM"
+          },
+          "us_ljdam": {
+            "zh": "LJDAM",
+            "en": "LJDAM",
+            "ru": "LJDAM",
+            "de": "LJDAM",
+            "fr": "LJDAM",
+            "ja": "LJDAM",
+            "es": "LJDAM"
+          },
+          "us_gbu_15v1": {
+            "zh": "GBU-15",
+            "en": "GBU-15",
+            "ru": "GBU-15",
+            "de": "GBU-15",
+            "fr": "GBU-15",
+            "ja": "GBU-15",
+            "es": "GBU-15"
+          },
+          "il_spice": {
+            "zh": "SPICE",
+            "en": "SPICE",
+            "ru": "SPICE",
+            "de": "SPICE",
+            "fr": "SPICE",
+            "ja": "SPICE",
+            "es": "SPICE"
+          }
+        },
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            8800,
+            14000,
+            430,
+            [],
+            0
+          ],
+          [
+            "f_4c_g_suit",
+            0,
+            2,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            9900,
+            15000,
+            490,
+            [],
+            1
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            11000,
+            17000,
+            540,
+            [],
+            2
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            14000,
+            22000,
+            690,
+            [],
+            3
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            0,
+            1,
+            1,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            8800,
+            14000,
+            430,
+            [],
+            4
+          ],
+          [
+            "structure_str",
+            0,
+            2,
+            1,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            9900,
+            15000,
+            490,
+            [],
+            5
+          ],
+          [
+            "new_cover",
+            0,
+            3,
+            1,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            11000,
+            17000,
+            540,
+            [],
+            6
+          ],
+          [
+            "air_extinguisher",
+            0,
+            4,
+            1,
+            "引擎灭火系统",
+            "EFS",
+            "jet_engine_extinguisher.png",
+            14000,
+            22000,
+            690,
+            [],
+            7
+          ],
+          [
+            "countermeasures_belt_pack",
+            1,
+            1,
+            0,
+            "热焰弹/干扰箔",
+            "Flares/Chaff",
+            "heli_false_thermal_targets.png",
+            8800,
+            14000,
+            430,
+            [],
+            8
+          ],
+          [
+            "asm",
+            2,
+            2,
+            0,
+            "反舰导弹",
+            "ASM",
+            "anti_radiation_type_a_missile.png",
+            9900,
+            15000,
+            490,
+            [],
+            9
+          ],
+          [
+            "us_agm_84h",
+            2,
+            3,
+            0,
+            "SLAM-ER",
+            "SLAM-ER",
+            "agm_lr_missile.png",
+            11000,
+            17000,
+            540,
+            [],
+            10
+          ],
+          [
+            "us_arm",
+            2,
+            4,
+            0,
+            "反辐射导弹",
+            "ARM",
+            "anti_radiation_type_b_missile.png",
+            14000,
+            22000,
+            690,
+            [],
+            11
+          ],
+          [
+            "M60_belt_pack",
+            2,
+            1,
+            1,
+            "20 毫米前射武器弹链",
+            "Offensive 20 mm belts",
+            "ammo.png",
+            8800,
+            14000,
+            430,
+            [],
+            12
+          ],
+          [
+            "M60_new_gun",
+            2,
+            2,
+            1,
+            "20 毫米前射机炮翻新",
+            "New 20 mm cannons",
+            "weapon.png",
+            9900,
+            15000,
+            490,
+            [
+              "M60_belt_pack"
+            ],
+            13
+          ],
+          [
+            "us_agm_65",
+            2,
+            3,
+            1,
+            "AGM-65",
+            "AGM-65",
+            "agm_middle_missile.png",
+            11000,
+            17000,
+            540,
+            [],
+            14
+          ],
+          [
+            "us_agm_130",
+            2,
+            4,
+            1,
+            "AGM-130",
+            "AGM-130",
+            "agm_middle_missile.png",
+            14000,
+            22000,
+            690,
+            [],
+            15
+          ],
+          [
+            "us_aim_9m",
+            2,
+            1,
+            2,
+            "AIM-9M",
+            "AIM-9M",
+            "air_to_air_missile.png",
+            8800,
+            14000,
+            430,
+            [],
+            16
+          ],
+          [
+            "il_derby",
+            2,
+            2,
+            2,
+            "DERBY",
+            "Derby",
+            "air_to_air_type_b_midrange_missile.png",
+            9900,
+            15000,
+            490,
+            [
+              "us_aim_9m"
+            ],
+            17
+          ],
+          [
+            "us_aim_120b_c",
+            2,
+            3,
+            2,
+            "AIM-120B/C",
+            "AIM-120B/C",
+            "air_to_air_type_b_midrange_missile.png",
+            11000,
+            17000,
+            540,
+            [
+              "il_derby"
+            ],
+            18
+          ],
+          [
+            "us_aim_120d",
+            2,
+            4,
+            2,
+            "AIM-120D",
+            "AIM-120D",
+            "air_to_air_type_b_midrange_missile.png",
+            14000,
+            22000,
+            690,
+            [
+              "us_aim_120b_c"
+            ],
+            19
+          ],
+          [
+            "gr_litening_iii_pod",
+            2,
+            1,
+            3,
+            "LITENING III",
+            "LITENING III",
+            "thermal_sight.png",
+            8800,
+            14000,
+            430,
+            [],
+            20
+          ],
+          [
+            "us_gbu_laser",
+            2,
+            2,
+            3,
+            "LGBU",
+            "LGBU",
+            "laser_guided_bomb.png",
+            9900,
+            15000,
+            490,
+            [
+              "gr_litening_iii_pod"
+            ],
+            21
+          ],
+          [
+            "us_apkws",
+            2,
+            3,
+            3,
+            "APKWS II",
+            "APKWS II",
+            "pilon_block_rocket.png",
+            11000,
+            17000,
+            540,
+            [
+              "us_gbu_laser"
+            ],
+            22
+          ],
+          [
+            "us_agm154_jsow",
+            2,
+            4,
+            3,
+            "AGM-154",
+            "AGM-154",
+            "bomb_glide_little.png",
+            14000,
+            22000,
+            690,
+            [],
+            23
+          ],
+          [
+            "us_jdam",
+            2,
+            1,
+            4,
+            "JDAM",
+            "JDAM",
+            "bomb_jdam_01.png",
+            8800,
+            14000,
+            430,
+            [],
+            24
+          ],
+          [
+            "us_ljdam",
+            2,
+            2,
+            4,
+            "LJDAM",
+            "LJDAM",
+            "bomb_jdam_01.png",
+            9900,
+            15000,
+            490,
+            [
+              "us_gbu_laser"
+            ],
+            25
+          ],
+          [
+            "us_gbu_15v1",
+            2,
+            3,
+            4,
+            "GBU-15",
+            "GBU-15",
+            "optical_guided_bomb.png",
+            11000,
+            17000,
+            540,
+            [],
+            26
+          ],
+          [
+            "il_spice",
+            2,
+            4,
+            4,
+            "SPICE",
+            "SPICE",
+            "optical_guided_bomb.png",
+            14000,
+            22000,
+            690,
+            [],
+            27
+          ]
+        ],
+        "gameSource": {
+          "version": "2.61.0.9",
+          "commit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
+          "provenance": "config/eagles-shadow-aircraft.json",
+          "costPolicy": "explicit-unit-economy",
+          "prerequisiteField": "reqModification"
+        }
+      }
+    }
+  ],
+  "previous": {
+    "catalogStats": {
+      "treeUnits": 3238,
+      "vehicles": 3228,
+      "modifications": 52477,
+      "chunks": 44
+    },
+    "chunks": {
+      "usa_aviation": {
+        "path": "database/modifications/usa_aviation.json",
+        "vehicles": 199,
+        "modifications": 3220,
+        "bytes": 579750,
+        "sha256": "6d49ef0c8d40e6c497f343d5ace5e9859961bc8d7bb0ece70f7de35c22b75985"
+      },
+      "ussr_aviation": {
+        "path": "database/modifications/ussr_aviation.json",
+        "vehicles": 198,
+        "modifications": 3071,
+        "bytes": 607494,
+        "sha256": "db830dadfa8778e676e1c6eb8c6a7578463ae08dcbc1c486ac6313aaa749138b"
+      },
+      "britain_aviation": {
+        "path": "database/modifications/britain_aviation.json",
+        "vehicles": 164,
+        "modifications": 2471,
+        "bytes": 444470,
+        "sha256": "983d4fae57924717a6d9a49a9d2e353595e3ddd3855999a4d2da31d611e0c3f8"
+      },
+      "japan_aviation": {
+        "path": "database/modifications/japan_aviation.json",
+        "vehicles": 140,
+        "modifications": 2077,
+        "bytes": 426708,
+        "sha256": "054da8de3af7eb1694b155b7404cf07fbb31cbedd1850ddac8daffb1c8c51ce9"
+      },
+      "china_aviation": {
+        "path": "database/modifications/china_aviation.json",
+        "vehicles": 89,
+        "modifications": 1395,
+        "bytes": 245841,
+        "sha256": "ea761a3b528cb69793b848ce29a47acdad49ac8dfecd838a8cebf3f766242112"
+      },
+      "sweden_aviation": {
+        "path": "database/modifications/sweden_aviation.json",
+        "vehicles": 75,
+        "modifications": 1141,
+        "bytes": 212010,
+        "sha256": "cd18af062ecb0962e2f9516afed48953dc9605427cc4b5cd5a80426953a22344"
+      },
+      "israel_aviation": {
+        "path": "database/modifications/israel_aviation.json",
+        "vehicles": 49,
+        "modifications": 924,
+        "bytes": 159967,
+        "sha256": "23f4005c8c13705885e9d50c11a26633ebc9fae77c5f786432f5da0d86bf272a"
+      }
+    },
+    "manifestFiles": [
+      {
+        "path": "database/usa/usa_aviation.json",
+        "units": 199,
+        "sha256": "625d73578ff5f6154513b3ef6f03a1d38c3f7c9d2cfa4d2979ad3c91ea5d0d2e",
+        "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
+        "added": [
+          "f_102a_late",
+          "f_101c",
+          "b_52h",
+          "f_14d_vf_11",
+          "f_14d",
+          "f_16xl"
+        ],
+        "removed": []
+      },
+      {
+        "path": "database/ussr/ussr_aviation.json",
+        "units": 198,
+        "sha256": "0ce0859eaec191ed4371f21345f40546b6542f5b1710ff4d01275b17df7cad78",
+        "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
+        "added": [
+          "mig_35"
+        ],
+        "removed": []
+      },
+      {
+        "path": "database/britain/britain_aviation.json",
+        "units": 164,
+        "sha256": "e2279b0ac44f062f0a203193071061c85ede3c8a39ab1023d502ca614e16a00d",
+        "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
+        "added": [
+          "hawk_t1a_early",
+          "hawk_t1a",
+          "ca_27_mk32_raaf"
+        ],
+        "removed": []
+      },
+      {
+        "path": "database/japan/japan_aviation.json",
+        "units": 140,
+        "sha256": "d6544f36ee3f9b5950621eb763bee6f51b02cdd574058c3104ef12b14c2ab3e2",
+        "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
+        "added": [
+          "ki_93_1_ko",
+          "b_26b_indonesia_kalong",
+          "ca_27_mk32_malaysia",
+          "a_4ptm_malaysia"
+        ],
+        "removed": []
+      },
+      {
+        "path": "database/china/china_aviation.json",
+        "units": 89,
+        "sha256": "3e368a1a328b17ea2ae24d6039a70cc6e5fb2b1ddad523836b8249c2fb14689e",
+        "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
+        "added": [
+          "j_16"
+        ],
+        "removed": []
+      },
+      {
+        "path": "database/sweden/sweden_aviation.json",
+        "units": 75,
+        "sha256": "dc41b224a5340877cec85ca23509225eea8083f8e913d1eb6e6031c0e8f527da",
+        "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
+        "added": [
+          "saab_j35j",
+          "saab_ajs37_early"
+        ],
+        "removed": []
+      },
+      {
+        "path": "database/israel/israel_aviation.json",
+        "units": 49,
+        "sha256": "254a303ee2f880beb61a4fefd434dc17d0582c29763432f871af5a6e3f9fee98",
+        "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
+        "added": [
+          "sb2c_5_greece",
+          "spitfire_lf_mk9c_cw_greece",
+          "f-84g_greece",
+          "f_102a_greece",
+          "f_86em_greece",
+          "a_7h_greece",
+          "mirage_f1cg_greece",
+          "a_7e_greece",
+          "mig_21_2000_iaf",
+          "f_4e_aup_greece",
+          "mirage_2000_5eg_mk2_greece",
+          "rafale_eg_greece"
+        ],
+        "removed": []
+      }
+    ]
+  }
+}

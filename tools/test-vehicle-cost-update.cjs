@@ -36,7 +36,7 @@ test('all 50 trees retain every field outside the three verified RP/SL correctio
     const bytes = fs.readFileSync(path.join(root, 'docs', file.path));
     assert(bytes.equals(fs.readFileSync(path.join(root, file.path))), file.path);
     assert.equal(hash(bytes), file.sha256);
-    const current = restoreCorrection(JSON.parse(bytes)), previous = restoreCosts(current);
+    const current = restoreCorrection(require('./aircraft-addition-snapshot.cjs').restoreTree(JSON.parse(bytes))), previous = restoreCosts(current);
     assert.equal(hash(JSON.stringify(previous, null, 2) + '\n'), evidence.trees[file.path], file.path);
     assert.deepEqual(patchCosts(previous), current);
     for (const [id, unit] of wikiUnits(current)) {
@@ -48,6 +48,9 @@ test('all 50 trees retain every field outside the three verified RP/SL correctio
     file.sha256 = evidence.trees[file.path];
   }
   delete manifest.vehicleCosts;
+  Object.assign(manifest, require('./aircraft-addition-snapshot.cjs').restoreManifest(manifest));
+  delete manifest.eaglesShadowAircraft;
+  for (const file of manifest.files) file.sha256 = evidence.trees[file.path];
   delete manifest.battleRatingCorrection;
   assert.equal(hash(JSON.stringify(manifest, null, 2) + '\n'), evidence.manifestSha256);
   assert.equal(changed, 3);
@@ -55,7 +58,7 @@ test('all 50 trees retain every field outside the three verified RP/SL correctio
 
 test('historical modification baseline and Wiki evidence remain verifiable after the separate modification update', () => {
   const bytes = fs.readFileSync(path.join(root, 'docs/database/modifications/catalog.json'));
-  const previous = require('./apply-modification-update.cjs').restoreCatalog(JSON.parse(bytes));
+  const previous = require('./apply-modification-update.cjs').restoreCatalog(require('./aircraft-addition-snapshot.cjs').restoreCatalog(JSON.parse(bytes)));
   assert.equal(hash(JSON.stringify(previous) + '\n'), evidence.modificationCatalogSha256);
   assert(bytes.equals(fs.readFileSync(path.join(root, 'public/database/modifications/catalog.json'))));
   for (const chunk of Object.values(JSON.parse(bytes).chunks)) {
