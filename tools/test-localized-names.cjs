@@ -93,8 +93,9 @@ for (const chunk of Object.values(catalog.chunks)) {
       else {
         const reviewed = require('./fixtures/modification-update-20261029.json');
         const aircraft = require('../config/eagles-shadow-aircraft.json').units.find(c => c.id === vehicle.i);
-        assert(reviewed.vehicles[vehicle.i] || aircraft, 'Unreviewed vehicle-local name');
-        assert.deepEqual(vehicle.l?.[mod[0]], aircraft ? aircraft.modification.l[mod[0]] : reviewed.additions[mod[0]]?.names);
+        const current = require('./fixtures/modification-update-20261113.json').vehicles[vehicle.i]?.entries.find(e=>e.id===mod[0]);
+        assert(reviewed.vehicles[vehicle.i] || aircraft || current, 'Unreviewed vehicle-local name');
+        assert.deepEqual(vehicle.l?.[mod[0]], current ? current.names : aircraft ? aircraft.modification.l[mod[0]] : reviewed.additions[mod[0]]?.names);
         assert.deepEqual(Object.keys(vehicle.l[mod[0]]).sort(), languages);
         for (const language of languages) assertDisplayName(vehicle.l[mod[0]][language], vehicle.i + ':' + mod[0]);
       }

@@ -77,7 +77,7 @@ test('every pre-existing aircraft and modification remains unchanged', () => {
     assert.equal(hash(JSON.stringify(tree, null, 2) + '\n'), previous.sha256, previous.path);
   }
   for (const previous of Object.values(fixture.previous.chunks)) {
-    const chunk = read('docs/' + previous.path);
+    const chunk = require('./apply-modification-update-20261113.cjs').restoreChunk(read('docs/' + previous.path));
     for (const c of fixture.units) if (chunk.v[c.id]) {
       assert.deepEqual(chunk.v[c.id], c.modification); delete chunk.v[c.id];
     }

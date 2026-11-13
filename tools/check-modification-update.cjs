@@ -22,7 +22,7 @@ async function main() {
   for (const prefix of ['', '/pages']) {
     app.get(prefix+'/database/modifications/catalog.json', (req,res) => res.set('Cache-Control','public, max-age=31536000').json(legacy?restoreCatalog(require('./aircraft-addition-snapshot.cjs').restoreCatalog(catalog)):catalog));
     for (const [file,current] of chunks) app.get(prefix+'/'+file, (req,res) => {
-      const value=structuredClone(current);
+      const value=legacy?require('./apply-modification-update-20261113.cjs').restoreChunk(current):structuredClone(current);
       if (legacy) for (const c of require('../config/eagles-shadow-aircraft.json').units) delete value.v[c.id];
       if(legacy) for(const [id,entry] of Object.entries(evidence.vehicles)) if(value.v[id])value.v[id]=entry.previous;
       res.set('Cache-Control','public, max-age=31536000').type('json').send(JSON.stringify(value)+'\n');
