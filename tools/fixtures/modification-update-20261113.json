@@ -1,0 +1,2001 @@
+{
+  "version": "2.61.0.16",
+  "commit": "91334c0fc1dbf1eccb2f7d881f466e77a4a67d8c",
+  "official": "https://warthunder.com/en/game/changelog/current/1916",
+  "sources": [
+    {
+      "local": "wpcost.json",
+      "file": "char.vromfs.bin_u/config/wpcost.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/91334c0fc1dbf1eccb2f7d881f466e77a4a67d8c/char.vromfs.bin_u/config/wpcost.blkx",
+      "sha256": "358adc47d144809cd6de34700b415f7ed6148d315c5406bda284b569bccd6379"
+    },
+    {
+      "local": "modifications.blkx",
+      "file": "char.vromfs.bin_u/config/modifications.blkx",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/91334c0fc1dbf1eccb2f7d881f466e77a4a67d8c/char.vromfs.bin_u/config/modifications.blkx",
+      "sha256": "019d7763a0e608d08f738e9d60d8ec357204a426032fe49e43b151e1bce558f0"
+    },
+    {
+      "local": "units_modifications.csv",
+      "file": "lang.vromfs.bin_u/lang/units_modifications.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/91334c0fc1dbf1eccb2f7d881f466e77a4a67d8c/lang.vromfs.bin_u/lang/units_modifications.csv",
+      "sha256": "38bec0fb4933d3e99ddda14fa8896ace5847f351a49edb32397e4bb74c9ce263"
+    },
+    {
+      "local": "units_weaponry.csv",
+      "file": "lang.vromfs.bin_u/lang/units_weaponry.csv",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/91334c0fc1dbf1eccb2f7d881f466e77a4a67d8c/lang.vromfs.bin_u/lang/units_weaponry.csv",
+      "sha256": "dc65f4b16744fb2c25bd12e36ca2cc5169e99feca30cc5d6f4064b4e185c5644"
+    },
+    {
+      "local": "modstree.nut",
+      "file": "gui.vromfs.bin_u/scripts/weaponry/modstree.nut",
+      "url": "https://raw.githubusercontent.com/gszabi99/War-Thunder-Datamine/91334c0fc1dbf1eccb2f7d881f466e77a4a67d8c/gui.vromfs.bin_u/scripts/weaponry/modstree.nut",
+      "sha256": "45538b641317a63a3d9925b8d9886742ca72e7041eec359f5f11fee3b1dd9918"
+    }
+  ],
+  "previousCount": 52658,
+  "previousChunks": {
+    "germany_aviation": {
+      "path": "database/modifications/germany_aviation.json",
+      "vehicles": 187,
+      "modifications": 2856,
+      "bytes": 614721,
+      "sha256": "51bb4adda33b0e806eaa70b5f2d2298beb2754d6ae476f4b0285492b2ae49609"
+    },
+    "sweden_aviation": {
+      "path": "database/modifications/sweden_aviation.json",
+      "vehicles": 76,
+      "modifications": 1163,
+      "bytes": 217890,
+      "sha256": "120f197b5332102670cb4f5e2cd83099af88792db7bc7c890f369a74e00c09fc"
+    }
+  },
+  "previousCorrections": {
+    "f-5e_switzerland": null,
+    "saab_jas39a": null
+  },
+  "vehicles": {
+    "f-5e_switzerland": {
+      "previous": {
+        "i": "f-5e_switzerland",
+        "n": [
+          "◌F-5E",
+          "◌F-5E"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/f-5e_switzerland.png",
+        "r": [
+          1,
+          2,
+          2
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器",
+            "Weaponry",
+            4
+          ]
+        ],
+        "t": [
+          196200,
+          306600
+        ],
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            5600,
+            8800,
+            270,
+            [],
+            0
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            0,
+            1,
+            1,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            5600,
+            8800,
+            270,
+            [],
+            1
+          ],
+          [
+            "hydravlic_power",
+            0,
+            2,
+            0,
+            "液压助力",
+            "New boosters",
+            "booster.png",
+            8800,
+            14000,
+            420,
+            [],
+            2
+          ],
+          [
+            "structure_str",
+            0,
+            2,
+            1,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            8800,
+            14000,
+            420,
+            [],
+            3
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            16000,
+            25000,
+            770,
+            [],
+            4
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            13000,
+            20000,
+            630,
+            [],
+            5
+          ],
+          [
+            "new_cover",
+            0,
+            4,
+            1,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            13000,
+            20000,
+            630,
+            [],
+            6
+          ],
+          [
+            "countermeasures_belt_pack",
+            1,
+            1,
+            0,
+            "热焰弹/干扰箔",
+            "Flares/Chaff",
+            "heli_false_thermal_targets.png",
+            5600,
+            8800,
+            270,
+            [],
+            7
+          ],
+          [
+            "f_4c_g_suit",
+            1,
+            2,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            8800,
+            14000,
+            420,
+            [],
+            8
+          ],
+          [
+            "t_160_belt_pack",
+            2,
+            1,
+            0,
+            "Offensive 20 mm belts",
+            "Offensive 20 mm belts",
+            "ammo.png",
+            5600,
+            8800,
+            270,
+            [],
+            9,
+            {
+              "b": [
+                "bullet_cannon_blue_yellow.png",
+                "bullet_cannon_red_blue_green.png",
+                "bullet_cannon_red_blue.png"
+              ],
+              "d": [],
+              "n": "Universal",
+              "w": "2 × 20 mm Flz Kan 76 cannon",
+              "r": 0.2,
+              "v": [
+                {
+                  "n": "Default",
+                  "b": [
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_red_blue_green.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Universal",
+                  "b": [
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_red_blue_green.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Air targets",
+                  "b": [
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_red_blue_green.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Armored targets",
+                  "b": [
+                    "bullet_cannon_red_blue_green.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Stealth",
+                  "b": [
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_blue_yellow.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                }
+              ]
+            }
+          ],
+          [
+            "t_160_new_gun",
+            2,
+            1,
+            1,
+            "New 20 mm cannons",
+            "New 20 mm cannons",
+            "weapon.png",
+            5600,
+            8800,
+            270,
+            [
+              "t_160_belt_pack"
+            ],
+            10
+          ],
+          [
+            "us_500lb_mk82",
+            2,
+            1,
+            2,
+            "Mk 82",
+            "Mk82",
+            "pilon_bomb.png",
+            5600,
+            8800,
+            270,
+            [],
+            11
+          ],
+          [
+            "us_blu_1",
+            2,
+            1,
+            3,
+            "BLU-1",
+            "BLU-1",
+            "napalm_fire_bomb.png",
+            5600,
+            8800,
+            270,
+            [],
+            12
+          ],
+          [
+            "us_2_75_in_ffar_lau_3a",
+            2,
+            2,
+            1,
+            "LAU-3/A",
+            "LAU-3/A",
+            "pilon_block_rocket.png",
+            8800,
+            14000,
+            420,
+            [],
+            13
+          ],
+          [
+            "us_750lb_m117",
+            2,
+            2,
+            2,
+            "M117",
+            "M117",
+            "pilon_bomb.png",
+            8800,
+            14000,
+            420,
+            [
+              "us_500lb_mk82"
+            ],
+            14
+          ],
+          [
+            "f4c_zuni",
+            2,
+            3,
+            1,
+            "LAU-10/A",
+            "LAU-10/A",
+            "pilon_block_rocket_large.png",
+            16000,
+            25000,
+            770,
+            [
+              "us_2_75_in_ffar_lau_3a"
+            ],
+            15
+          ],
+          [
+            "us_1000lb_mk83",
+            2,
+            3,
+            2,
+            "Mk 83",
+            "Mk83",
+            "pilon_bomb.png",
+            16000,
+            25000,
+            770,
+            [
+              "us_750lb_m117"
+            ],
+            16
+          ],
+          [
+            "us_agm_65b",
+            2,
+            4,
+            1,
+            "AGM-65B",
+            "AGM-65B",
+            "agm_middle_missile.png",
+            13000,
+            20000,
+            630,
+            [
+              "f4c_zuni"
+            ],
+            17
+          ],
+          [
+            "us_2000lb_mk84",
+            2,
+            4,
+            2,
+            "Mk 84",
+            "Mk84",
+            "pilon_bomb.png",
+            13000,
+            20000,
+            630,
+            [
+              "us_1000lb_mk83"
+            ],
+            18
+          ],
+          [
+            "sws_flz_lwf_63_80",
+            2,
+            4,
+            3,
+            "Flz Lwf 63/80",
+            "Flz Lwf 63/80",
+            "air_to_air_missile.png",
+            13000,
+            20000,
+            630,
+            [],
+            19
+          ]
+        ]
+      },
+      "tierRequirements": [
+        1,
+        3,
+        2,
+        3
+      ],
+      "entries": [
+        {
+          "id": "new_compressor_jet",
+          "cost": {
+            "tier": 1,
+            "repairCostCoef": 0.036,
+            "reqExp": 5600,
+            "value": 8800,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "global": {
+            "modClass": "lth",
+            "image": "!#ui/gameuiskin#jet_compressor.avif"
+          },
+          "names": {
+            "zh": "压缩机",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Neuer Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          }
+        },
+        {
+          "id": "hydravlic_power",
+          "cost": {
+            "prevModification": "new_compressor_jet",
+            "tier": 2,
+            "repairCostCoef": 0.02,
+            "reqExp": 7300,
+            "value": 11000,
+            "costGold": 0,
+            "openCostGold": 400
+          },
+          "global": {
+            "modClass": "lth",
+            "prevModification": "CdMin_Fuse",
+            "image": "!#ui/gameuiskin#booster.avif"
+          },
+          "names": {
+            "zh": "液压助力",
+            "en": "New boosters",
+            "ru": "Новые усилители",
+            "de": "Neue Hydraulik",
+            "fr": "Nouveaux boosters",
+            "ja": "新しい ブースター",
+            "es": "Nuevos propulsores"
+          }
+        },
+        {
+          "id": "cd_98",
+          "cost": {
+            "prevModification": "hydravlic_power",
+            "tier": 3,
+            "repairCostCoef": 0.053,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 660
+          },
+          "global": {
+            "modClass": "lth",
+            "prevModification": "CdMin_Fuse",
+            "image": "!#ui/gameuiskin#aerodinamic_wing.avif"
+          },
+          "names": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          }
+        },
+        {
+          "id": "hp_105_jet",
+          "cost": {
+            "prevModification": "cd_98",
+            "tier": 4,
+            "repairCostCoef": 0.078,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610
+          },
+          "global": {
+            "modClass": "lth",
+            "prevModification": "new_compressor_jet",
+            "image": "!#ui/gameuiskin#jet_engine.avif"
+          },
+          "names": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neues Triebwerk",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          }
+        },
+        {
+          "id": "f_4c_CdMin_Fuse",
+          "cost": {
+            "tier": 1,
+            "modClass": "lth",
+            "repairCostCoef": 0.007,
+            "reqExp": 5600,
+            "value": 8800,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#aerodinamic_fuse.avif"
+          },
+          "names": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Rumpfreparatur",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          }
+        },
+        {
+          "id": "structure_str",
+          "cost": {
+            "tier": 2,
+            "modClass": "lth",
+            "repairCostCoef": 0.046,
+            "reqExp": 7300,
+            "value": 11000,
+            "costGold": 0,
+            "openCostGold": 400
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#armor_frame.avif"
+          },
+          "names": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          }
+        },
+        {
+          "id": "new_cover",
+          "cost": {
+            "tier": 4,
+            "modClass": "lth",
+            "repairCostCoef": 0.045,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#armor_cover.avif"
+          },
+          "names": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          }
+        },
+        {
+          "id": "countermeasures_belt_pack",
+          "cost": {
+            "tier": 1,
+            "modClass": "armor",
+            "reqExp": 5600,
+            "value": 8800,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#heli_false_thermal_targets.avif"
+          },
+          "names": {
+            "zh": "热焰弹/干扰箔",
+            "en": "Flares/Chaff",
+            "ru": "ЛТЦ/ДО",
+            "de": "IR-Täuschkörper/Düppel",
+            "fr": "Leurres IR/paillettes",
+            "ja": "フレア/チャフ",
+            "es": "Bengalas/Chaff"
+          }
+        },
+        {
+          "id": "f_4c_g_suit",
+          "cost": {
+            "tier": 2,
+            "repairCostCoef": 0.051,
+            "reqExp": 7300,
+            "value": 11000,
+            "costGold": 0,
+            "openCostGold": 400
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#g_suit.avif"
+          },
+          "names": {
+            "zh": "抗荷服",
+            "en": "G-suit",
+            "ru": "ППК",
+            "de": "Anti-G-Anzug",
+            "fr": "Combinaison anti-G",
+            "ja": "耐 G スーツ",
+            "es": "Traje antigravedad"
+          }
+        },
+        {
+          "id": "us_2_75_in_ffar_lau_3a",
+          "cost": {
+            "tier": 1,
+            "reqExp": 5600,
+            "value": 8800,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_block_rocket.avif"
+          },
+          "names": {
+            "zh": "LAU-3/A",
+            "en": "LAU-3/A",
+            "ru": "LAU-3/A",
+            "de": "LAU-3/A",
+            "fr": "LAU-3/A",
+            "ja": "LAU-3/A",
+            "es": "LAU-3A"
+          }
+        },
+        {
+          "id": "f4c_zuni",
+          "cost": {
+            "reqModification": "us_2_75_in_ffar_lau_3a",
+            "tier": 2,
+            "reqExp": 7300,
+            "value": 11000,
+            "costGold": 0,
+            "openCostGold": 400
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_block_rocket_large.avif"
+          },
+          "names": {
+            "zh": "LAU-10/A",
+            "en": "LAU-10/A",
+            "ru": "LAU-10/A",
+            "de": "LAU-10/A",
+            "fr": "LAU-10/A",
+            "ja": "LAU-10/A",
+            "es": "LAU-10A"
+          }
+        },
+        {
+          "id": "us_agm_65b",
+          "cost": {
+            "prevModification": "f4c_zuni",
+            "tier": 3,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 660,
+            "tutorialMission": "aircraft_atgm_tv_tft",
+            "tutorialMissionWeapon": "f_5e_switzerland_agm_65b"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#agm_middle_missile.avif"
+          },
+          "names": {
+            "zh": "AGM-65B",
+            "en": "AGM-65B",
+            "ru": "AGM-65B",
+            "de": "AGM-65B",
+            "fr": "AGM-65B",
+            "ja": "AGM-65B",
+            "es": "AGM-65B"
+          }
+        },
+        {
+          "id": "us_agm_65d",
+          "cost": {
+            "reqModification": "us_agm_65b",
+            "addMrank": 2,
+            "tier": 4,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610,
+            "tutorialMission": "aircraft_atgm_ir_tft",
+            "tutorialMissionWeapon": "f_5e_switzerland_agm_65d"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#agm_middle_missile.avif"
+          },
+          "names": {
+            "zh": "AGM-65D",
+            "en": "AGM-65D",
+            "ru": "AGM-65D",
+            "de": "AGM-65D",
+            "fr": "AGM-65D",
+            "ja": "AGM-65D",
+            "es": "AGM-65D"
+          }
+        },
+        {
+          "id": "t_160_belt_pack",
+          "cost": {
+            "tier": 1,
+            "reqExp": 5600,
+            "value": 8800,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#ammo.avif"
+          },
+          "names": {
+            "zh": "20 毫米前射武器弹链",
+            "en": "Offensive 20 mm belts",
+            "ru": "Курсовые ленты 20 мм",
+            "de": "20-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 20 mm, armes offensives",
+            "ja": "20 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 20 mm"
+          }
+        },
+        {
+          "id": "t_160_new_gun",
+          "cost": {
+            "reqModification": "t_160_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.015,
+            "reqExp": 7300,
+            "value": 11000,
+            "costGold": 0,
+            "openCostGold": 400
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#weapon.avif"
+          },
+          "names": {
+            "zh": "20 毫米前射机炮翻新",
+            "en": "New 20 mm cannons",
+            "ru": "Новые 20-мм пушки",
+            "de": "Neue 20-mm-Kanonen",
+            "fr": "Nouveaux canons de 20 mm",
+            "ja": "新しい 20 mm 機関砲",
+            "es": "Nuevos cañones de 20 mm"
+          }
+        },
+        {
+          "id": "us_agm_65g",
+          "cost": {
+            "reqModification": "us_agm_65d",
+            "prevModification": "t_160_new_gun",
+            "addMrank": 2,
+            "tier": 4,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610,
+            "tutorialMission": "aircraft_atgm_ir_tft",
+            "tutorialMissionWeapon": "f_5e_switzerland_agm_65g"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#agm_middle_missile.avif"
+          },
+          "names": {
+            "zh": "AGM-65G",
+            "en": "AGM-65G",
+            "ru": "AGM-65G",
+            "de": "AGM-65G",
+            "fr": "AGM-65G",
+            "ja": "AGM-65G",
+            "es": "AGM-65G"
+          }
+        },
+        {
+          "id": "us_500lb_mk82",
+          "cost": {
+            "tier": 1,
+            "reqExp": 5600,
+            "value": 8800,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_bomb.avif"
+          },
+          "names": {
+            "zh": "Mk 82",
+            "en": "Mk82",
+            "ru": "Mk82",
+            "de": "Mk82",
+            "fr": "Mk82",
+            "ja": "Mk82",
+            "es": "Mk82"
+          }
+        },
+        {
+          "id": "us_750lb_m117",
+          "cost": {
+            "reqModification": "us_500lb_mk82",
+            "tier": 2,
+            "reqExp": 7300,
+            "value": 11000,
+            "costGold": 0,
+            "openCostGold": 400
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_bomb.avif"
+          },
+          "names": {
+            "zh": "M117",
+            "en": "M117",
+            "ru": "M117",
+            "de": "M117",
+            "fr": "M117",
+            "ja": "M117",
+            "es": "M117"
+          }
+        },
+        {
+          "id": "us_1000lb_mk83",
+          "cost": {
+            "reqModification": "us_750lb_m117",
+            "tier": 3,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 660
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_bomb.avif"
+          },
+          "names": {
+            "zh": "Mk 83",
+            "en": "Mk83",
+            "ru": "Mk83",
+            "de": "Mk83",
+            "fr": "Mk83",
+            "ja": "Mk83",
+            "es": "Mk83"
+          }
+        },
+        {
+          "id": "us_2000lb_mk84",
+          "cost": {
+            "reqModification": "us_1000lb_mk83",
+            "tier": 4,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#pilon_bomb.avif"
+          },
+          "names": {
+            "zh": "Mk 84",
+            "en": "Mk84",
+            "ru": "Mk84",
+            "de": "Mk84",
+            "fr": "Mk84",
+            "ja": "Mk84",
+            "es": "Mk84"
+          }
+        },
+        {
+          "id": "us_blu_1",
+          "cost": {
+            "tier": 1,
+            "reqExp": 5600,
+            "value": 8800,
+            "costGold": 0,
+            "openCostGold": 310
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#napalm_fire_bomb.avif"
+          },
+          "names": {
+            "zh": "BLU-1",
+            "en": "BLU-1",
+            "ru": "BLU-1",
+            "de": "BLU-1",
+            "fr": "BLU-1",
+            "ja": "BLU-1",
+            "es": "BLU-1"
+          }
+        },
+        {
+          "id": "sws_flz_lwf_63_80",
+          "cost": {
+            "prevModification": "us_blu_1",
+            "tier": 3,
+            "reqExp": 12000,
+            "value": 19000,
+            "costGold": 0,
+            "openCostGold": 660,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "f_5e_switzerland_flz_lwf_63_80"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#air_to_air_missile.avif"
+          },
+          "names": {
+            "zh": "Flz Lwf 63/80",
+            "en": "Flz Lwf 63/80",
+            "ru": "Flz Lwf 63/80",
+            "de": "Flz Lwf 63/80",
+            "fr": "Flz Lwf 63/80",
+            "ja": "Flz Lwf 63/80",
+            "es": "Flz Lwf 63/80"
+          }
+        },
+        {
+          "id": "sws_flz_lwf_63_90",
+          "cost": {
+            "reqModification": "sws_flz_lwf_63_80",
+            "addMrank": 1,
+            "tier": 4,
+            "reqExp": 11000,
+            "value": 17000,
+            "costGold": 0,
+            "openCostGold": 610,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "f_5e_switzerland_flz_lwf_63_90"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#air_to_air_missile.avif"
+          },
+          "names": {
+            "zh": "Flz Lwf 63/90",
+            "en": "Flz Lwf 63/90",
+            "ru": "Flz Lwf 63/90",
+            "de": "Flz Lwf 63/90",
+            "fr": "Flz Lwf 63/90",
+            "ja": "Flz Lwf 63/90",
+            "es": "Flz Lwf 63/90"
+          }
+        }
+      ]
+    },
+    "saab_jas39a": {
+      "previous": {
+        "i": "saab_jas39a",
+        "n": [
+          "JAS 39A",
+          "JAS39A"
+        ],
+        "v": "https://static.encyclopedia.warthunder.com/slots/saab_jas39a.png",
+        "r": [
+          1,
+          3,
+          3
+        ],
+        "c": [
+          [
+            "飞行性能",
+            "Flight performance",
+            2
+          ],
+          [
+            "生存能力",
+            "Survivability",
+            1
+          ],
+          [
+            "武器",
+            "Weaponry",
+            4
+          ]
+        ],
+        "t": [
+          263900,
+          409000
+        ],
+        "m": [
+          [
+            "new_compressor_jet",
+            0,
+            1,
+            0,
+            "压缩机",
+            "Compressor",
+            "jet_compressor.png",
+            7500,
+            12000,
+            320,
+            [],
+            0
+          ],
+          [
+            "f_4c_CdMin_Fuse",
+            0,
+            1,
+            1,
+            "维修机身",
+            "Fuselage repair",
+            "aerodinamic_fuse.png",
+            7500,
+            12000,
+            320,
+            [],
+            1
+          ],
+          [
+            "hydravlic_power",
+            0,
+            2,
+            0,
+            "液压助力",
+            "New boosters",
+            "booster.png",
+            9900,
+            15000,
+            420,
+            [],
+            2
+          ],
+          [
+            "structure_str",
+            0,
+            2,
+            1,
+            "机体翻新",
+            "Airframe",
+            "armor_frame.png",
+            9900,
+            15000,
+            420,
+            [],
+            3
+          ],
+          [
+            "cd_98",
+            0,
+            3,
+            0,
+            "维修机翼",
+            "Wings repair",
+            "aerodinamic_wing.png",
+            13000,
+            20000,
+            550,
+            [],
+            4
+          ],
+          [
+            "new_cover",
+            0,
+            3,
+            1,
+            "蒙皮",
+            "Cover",
+            "armor_cover.png",
+            13000,
+            20000,
+            550,
+            [],
+            5
+          ],
+          [
+            "hp_105_jet",
+            0,
+            4,
+            0,
+            "发动机",
+            "Engine",
+            "jet_engine.png",
+            29000,
+            45000,
+            1200,
+            [],
+            6
+          ],
+          [
+            "countermeasures_belt_pack",
+            1,
+            1,
+            0,
+            "热焰弹/干扰箔",
+            "Flares/Chaff",
+            "heli_false_thermal_targets.png",
+            7500,
+            12000,
+            320,
+            [],
+            7
+          ],
+          [
+            "uk_ltc_bol",
+            1,
+            2,
+            0,
+            "BOL 热焰弹/干扰箔吊舱",
+            "Flares/Chaff BOL",
+            "heli_false_thermal_targets.png",
+            9900,
+            15000,
+            420,
+            [],
+            8
+          ],
+          [
+            "f_4c_g_suit",
+            1,
+            3,
+            0,
+            "抗荷服",
+            "G-suit",
+            "g_suit.png",
+            13000,
+            20000,
+            550,
+            [],
+            9
+          ],
+          [
+            "air_extinguisher",
+            1,
+            4,
+            0,
+            "引擎灭火系统",
+            "EFS",
+            "jet_engine_extinguisher.png",
+            29000,
+            45000,
+            1200,
+            [],
+            10
+          ],
+          [
+            "swd_rb74",
+            2,
+            1,
+            0,
+            "Rb 74",
+            "RB 74",
+            "air_to_air_missile.png",
+            7500,
+            12000,
+            320,
+            [],
+            11
+          ],
+          [
+            "gr_litening_pod",
+            2,
+            1,
+            1,
+            "LITENING II",
+            "LITENING II",
+            "thermal_sight.png",
+            7500,
+            12000,
+            320,
+            [],
+            12
+          ],
+          [
+            "asm",
+            2,
+            1,
+            2,
+            "反舰导弹",
+            "ASM",
+            "anti_radiation_type_a_missile.png",
+            7500,
+            12000,
+            320,
+            [],
+            13
+          ],
+          [
+            "akan_85_belt_pack",
+            2,
+            1,
+            3,
+            "Offensive 27 mm belts",
+            "Offensive 27 mm belts",
+            "ammo.png",
+            7500,
+            12000,
+            320,
+            [],
+            14,
+            {
+              "b": [
+                "bullet_gun_red_green.png",
+                "bullet_cannon_red_blue.png",
+                "bullet_cannon_red.png",
+                "bullet_cannon_red_blue.png"
+              ],
+              "d": [],
+              "n": "Ground targets",
+              "w": "27 mm Akan m/85 cannon",
+              "r": 0.2,
+              "v": [
+                {
+                  "n": "Default",
+                  "b": [
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_red.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Ground targets",
+                  "b": [
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_red.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Armored targets",
+                  "b": [
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_red.png",
+                    "bullet_cannon_red.png",
+                    "bullet_cannon_red.png",
+                    "bullet_cannon_red_blue.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Air targets",
+                  "b": [
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_gun_red_green.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_gun_red_green.png"
+                  ],
+                  "d": []
+                },
+                {
+                  "n": "Stealth",
+                  "b": [
+                    "bullet_cannon_red_blue.png",
+                    "bullet_cannon_yellow.png",
+                    "bullet_cannon_red.png"
+                  ],
+                  "d": []
+                }
+              ]
+            }
+          ],
+          [
+            "swe_rb71",
+            2,
+            2,
+            0,
+            "Rb 71",
+            "RB71",
+            "air_to_air_midrange_missile.png",
+            9900,
+            15000,
+            420,
+            [
+              "swd_rb74"
+            ],
+            15
+          ],
+          [
+            "us_gbu_laser",
+            2,
+            2,
+            1,
+            "LGBU",
+            "LGBU",
+            "laser_guided_bomb.png",
+            9900,
+            15000,
+            420,
+            [
+              "gr_litening_pod"
+            ],
+            16
+          ],
+          [
+            "akan_85_new_gun",
+            2,
+            2,
+            3,
+            "New 27 mm cannons",
+            "New 27 mm cannons",
+            "weapon.png",
+            9900,
+            15000,
+            420,
+            [
+              "akan_85_belt_pack"
+            ],
+            17
+          ],
+          [
+            "swd_rb74m",
+            2,
+            3,
+            0,
+            "RB 74(M)",
+            "RB 74(M)",
+            "air_to_air_missile.png",
+            13000,
+            20000,
+            550,
+            [
+              "swe_rb71"
+            ],
+            18
+          ],
+          [
+            "swd_rb75",
+            2,
+            3,
+            3,
+            "Rb 75",
+            "RB75",
+            "agm_middle_missile.png",
+            13000,
+            20000,
+            550,
+            [],
+            19
+          ],
+          [
+            "swd_rb75t",
+            2,
+            4,
+            3,
+            "Rb 75T",
+            "RB 75T",
+            "agm_middle_missile.png",
+            29000,
+            45000,
+            1200,
+            [
+              "swd_rb75"
+            ],
+            20
+          ]
+        ]
+      },
+      "tierRequirements": [
+        1,
+        3,
+        3,
+        2
+      ],
+      "entries": [
+        {
+          "id": "new_compressor_jet",
+          "cost": {
+            "tier": 1,
+            "repairCostCoef": 0.041,
+            "reqExp": 7500,
+            "value": 12000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "global": {
+            "modClass": "lth",
+            "image": "!#ui/gameuiskin#jet_compressor.avif"
+          },
+          "names": {
+            "zh": "压缩机",
+            "en": "Compressor",
+            "ru": "Компрессор",
+            "de": "Neuer Kompressor",
+            "fr": "Compresseur",
+            "ja": "コンプレッサー",
+            "es": "Compresor"
+          }
+        },
+        {
+          "id": "hydravlic_power",
+          "cost": {
+            "prevModification": "new_compressor_jet",
+            "tier": 2,
+            "repairCostCoef": 0.057,
+            "reqExp": 9900,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 440
+          },
+          "global": {
+            "modClass": "lth",
+            "prevModification": "CdMin_Fuse",
+            "image": "!#ui/gameuiskin#booster.avif"
+          },
+          "names": {
+            "zh": "液压助力",
+            "en": "New boosters",
+            "ru": "Новые усилители",
+            "de": "Neue Hydraulik",
+            "fr": "Nouveaux boosters",
+            "ja": "新しい ブースター",
+            "es": "Nuevos propulsores"
+          }
+        },
+        {
+          "id": "cd_98",
+          "cost": {
+            "prevModification": "hydravlic_power",
+            "tier": 3,
+            "repairCostCoef": 0.059,
+            "reqExp": 13000,
+            "value": 20000,
+            "costGold": 0,
+            "openCostGold": 580
+          },
+          "global": {
+            "modClass": "lth",
+            "prevModification": "CdMin_Fuse",
+            "image": "!#ui/gameuiskin#aerodinamic_wing.avif"
+          },
+          "names": {
+            "zh": "维修机翼",
+            "en": "Wings repair",
+            "ru": "Обработка крыльев",
+            "de": "Neue Flügel",
+            "fr": "Réparation des ailes",
+            "ja": "主翼修理",
+            "es": "Reparación de alas"
+          }
+        },
+        {
+          "id": "hp_105_jet",
+          "cost": {
+            "prevModification": "cd_98",
+            "tier": 4,
+            "repairCostCoef": 0.088,
+            "reqExp": 21000,
+            "value": 32000,
+            "costGold": 0,
+            "openCostGold": 940
+          },
+          "global": {
+            "modClass": "lth",
+            "prevModification": "new_compressor_jet",
+            "image": "!#ui/gameuiskin#jet_engine.avif"
+          },
+          "names": {
+            "zh": "发动机",
+            "en": "Engine",
+            "ru": "Двигатель",
+            "de": "Neues Triebwerk",
+            "fr": "Moteur",
+            "ja": "エンジン",
+            "es": "Motor"
+          }
+        },
+        {
+          "id": "f_4c_CdMin_Fuse",
+          "cost": {
+            "tier": 1,
+            "modClass": "lth",
+            "repairCostCoef": 0.008,
+            "reqExp": 7500,
+            "value": 12000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#aerodinamic_fuse.avif"
+          },
+          "names": {
+            "zh": "维修机身",
+            "en": "Fuselage repair",
+            "ru": "Обработка фюзеляжа",
+            "de": "Rumpfreparatur",
+            "fr": "Réparation du fuselage",
+            "ja": "胴体修理",
+            "es": "Reparación del fuselaje"
+          }
+        },
+        {
+          "id": "structure_str",
+          "cost": {
+            "tier": 2,
+            "modClass": "lth",
+            "repairCostCoef": 0.051,
+            "reqExp": 9900,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 440
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#armor_frame.avif"
+          },
+          "names": {
+            "zh": "机体翻新",
+            "en": "Airframe",
+            "ru": "Каркас",
+            "de": "Neues Flugwerk",
+            "fr": "Cellule",
+            "ja": "機体",
+            "es": "Fuselaje"
+          }
+        },
+        {
+          "id": "new_cover",
+          "cost": {
+            "tier": 3,
+            "modClass": "lth",
+            "repairCostCoef": 0.05,
+            "reqExp": 13000,
+            "value": 20000,
+            "costGold": 0,
+            "openCostGold": 580
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#armor_cover.avif"
+          },
+          "names": {
+            "zh": "蒙皮",
+            "en": "Cover",
+            "ru": "Обшивка",
+            "de": "Neue Abdeckung",
+            "fr": "Revêtement",
+            "ja": "カバー 交換",
+            "es": "Cubierta"
+          }
+        },
+        {
+          "id": "countermeasures_belt_pack",
+          "cost": {
+            "tier": 1,
+            "modClass": "armor",
+            "reqExp": 7500,
+            "value": 12000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#heli_false_thermal_targets.avif"
+          },
+          "names": {
+            "zh": "热焰弹/干扰箔",
+            "en": "Flares/Chaff",
+            "ru": "ЛТЦ/ДО",
+            "de": "IR-Täuschkörper/Düppel",
+            "fr": "Leurres IR/paillettes",
+            "ja": "フレア/チャフ",
+            "es": "Bengalas/Chaff"
+          }
+        },
+        {
+          "id": "uk_ltc_bol",
+          "cost": {
+            "prevModification": "countermeasures_belt_pack",
+            "tier": 2,
+            "modClass": "armor",
+            "reqExp": 9900,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 440
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#heli_false_thermal_targets.avif"
+          },
+          "names": {
+            "zh": "BOL 热焰弹/干扰箔吊舱",
+            "en": "Flares/Chaff BOL",
+            "ru": "ЛТЦ/ДО BOL",
+            "de": "IR-Täuschkörper/Düppel BOL",
+            "fr": "BOL Leurres IR/paillettes",
+            "ja": "BOL フレア/チャフ",
+            "es": "Bengalas/Chaff BOL"
+          }
+        },
+        {
+          "id": "f_4c_g_suit",
+          "cost": {
+            "prevModification": "uk_ltc_bol",
+            "tier": 3,
+            "repairCostCoef": 0.057,
+            "reqExp": 13000,
+            "value": 20000,
+            "costGold": 0,
+            "openCostGold": 580
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#g_suit.avif"
+          },
+          "names": {
+            "zh": "抗荷服",
+            "en": "G-suit",
+            "ru": "ППК",
+            "de": "Anti-G-Anzug",
+            "fr": "Combinaison anti-G",
+            "ja": "耐 G スーツ",
+            "es": "Traje antigravedad"
+          }
+        },
+        {
+          "id": "air_extinguisher",
+          "cost": {
+            "prevModification": "f_4c_g_suit",
+            "tier": 4,
+            "repairCostCoef": 0.08,
+            "reqExp": 21000,
+            "value": 32000,
+            "costGold": 0,
+            "openCostGold": 940
+          },
+          "global": {
+            "modClass": "armor",
+            "image": "!#ui/gameuiskin#jet_engine_extinguisher.avif"
+          },
+          "names": {
+            "zh": "引擎灭火系统",
+            "en": "EFS",
+            "ru": "СПД",
+            "de": "FLS",
+            "fr": "SEM",
+            "ja": "EFS",
+            "es": "EFS"
+          }
+        },
+        {
+          "id": "akan_85_belt_pack",
+          "cost": {
+            "prevModification": "asm",
+            "tier": 1,
+            "reqExp": 7500,
+            "value": 12000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#ammo.avif"
+          },
+          "names": {
+            "zh": "27 毫米前射武器弹链",
+            "en": "Offensive 27 mm belts",
+            "ru": "Курсовые ленты 27 мм",
+            "de": "27-mm-Gurte (Offensiv)",
+            "fr": "Munitions de 27 mm, armes offensives",
+            "ja": "27 mm 弾薬 ベルト",
+            "es": "Cinturones ofensivos de 27 mm"
+          }
+        },
+        {
+          "id": "akan_85_new_gun",
+          "cost": {
+            "reqModification": "akan_85_belt_pack",
+            "tier": 2,
+            "repairCostCoef": 0.02,
+            "reqExp": 9900,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 440
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#weapon.avif"
+          },
+          "names": {
+            "zh": "27 毫米前射机炮翻新",
+            "en": "New 27 mm cannons",
+            "ru": "Новые 27-мм пушки",
+            "de": "Neue 27-mm-Kanonen",
+            "fr": "Nouveaux canons de 27 mm",
+            "ja": "新しい 27 mm 機関砲",
+            "es": "Nuevos cañones de 27 mm"
+          }
+        },
+        {
+          "id": "swd_rb75",
+          "cost": {
+            "prevModification": "akan_85_new_gun",
+            "tier": 3,
+            "reqExp": 13000,
+            "value": 20000,
+            "costGold": 0,
+            "openCostGold": 580,
+            "tutorialMission": "aircraft_atgm_tv_tft",
+            "tutorialMissionWeapon": "saab_jas39a_rockets_rb_75"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#agm_middle_missile.avif"
+          },
+          "names": {
+            "zh": "Rb 75",
+            "en": "RB75",
+            "ru": "RB75",
+            "de": "RB75",
+            "fr": "RB75",
+            "ja": "RB75",
+            "es": "RB75"
+          }
+        },
+        {
+          "id": "swd_rb75t",
+          "cost": {
+            "reqModification": "swd_rb75",
+            "tier": 4,
+            "reqExp": 21000,
+            "value": 32000,
+            "costGold": 0,
+            "openCostGold": 940,
+            "tutorialMission": "aircraft_atgm_tv_tft",
+            "tutorialMissionWeapon": "saab_jas39a_rockets_rb_75t"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#agm_middle_missile.avif"
+          },
+          "names": {
+            "zh": "Rb 75T",
+            "en": "RB 75T",
+            "ru": "RB 75T",
+            "de": "RB 75T",
+            "fr": "RB 75T",
+            "ja": "RB 75T",
+            "es": "RB 75T"
+          }
+        },
+        {
+          "id": "swd_rb74",
+          "cost": {
+            "tier": 1,
+            "reqExp": 7500,
+            "value": 12000,
+            "costGold": 0,
+            "openCostGold": 330,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "saab_jas39a_rockets_rb_74"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#air_to_air_missile.avif"
+          },
+          "names": {
+            "zh": "Rb 74",
+            "en": "RB 74",
+            "ru": "RB 74",
+            "de": "RB 74",
+            "fr": "RB 74",
+            "ja": "RB 74",
+            "es": "RB 74"
+          }
+        },
+        {
+          "id": "swe_rb71",
+          "cost": {
+            "reqModification": "swd_rb74",
+            "tier": 2,
+            "reqExp": 9900,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 440,
+            "tutorialMission": "aircraft_aam_sarh",
+            "tutorialMissionWeapon": "saab_jas39a_rockets_rb_71"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#air_to_air_midrange_missile.avif"
+          },
+          "names": {
+            "zh": "Rb 71",
+            "en": "RB71",
+            "ru": "RB71",
+            "de": "RB71",
+            "fr": "RB71",
+            "ja": "RB71",
+            "es": "RB71"
+          }
+        },
+        {
+          "id": "swd_rb74m",
+          "cost": {
+            "reqModification": "swe_rb71",
+            "tier": 3,
+            "reqExp": 13000,
+            "value": 20000,
+            "costGold": 0,
+            "openCostGold": 580,
+            "tutorialMission": "aircraft_aam_ir",
+            "tutorialMissionWeapon": "saab_jas39a_rockets_rb_74m"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#air_to_air_missile.avif"
+          },
+          "names": {
+            "zh": "RB 74(M)",
+            "en": "RB 74(M)",
+            "ru": "RB 74(M)",
+            "de": "RB 74(M)",
+            "fr": "RB 74(M)",
+            "ja": "RB 74(M)",
+            "es": "RB 74(M)"
+          }
+        },
+        {
+          "id": "swd_rb99",
+          "cost": {
+            "reqModification": "swd_rb74m",
+            "addMrank": 2,
+            "tier": 4,
+            "reqExp": 21000,
+            "value": 32000,
+            "costGold": 0,
+            "openCostGold": 940,
+            "tutorialMission": "aircraft_aam_arh",
+            "tutorialMissionWeapon": "saab_jas39a_rockets_rb_99"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#air_to_air_midrange_missile.avif"
+          },
+          "names": {
+            "zh": "Rb 99",
+            "en": "RB 99",
+            "ru": "RB 99",
+            "de": "RB 99",
+            "fr": "RB 99",
+            "ja": "RB 99",
+            "es": "RB 99"
+          }
+        },
+        {
+          "id": "gr_litening_pod",
+          "cost": {
+            "tier": 1,
+            "reqExp": 7500,
+            "value": 12000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#thermal_sight.avif"
+          },
+          "names": {
+            "zh": "LITENING II",
+            "en": "LITENING II",
+            "ru": "LITENING II",
+            "de": "LITENING II",
+            "fr": "LITENING II",
+            "ja": "ライトニング II",
+            "es": "LITENING II"
+          }
+        },
+        {
+          "id": "us_gbu_laser",
+          "cost": {
+            "reqModification": "gr_litening_pod",
+            "tier": 2,
+            "reqExp": 9900,
+            "value": 15000,
+            "costGold": 0,
+            "openCostGold": 440,
+            "tutorialMission": "aircraft_guided_bombs_laser_tft",
+            "tutorialMissionWeapon": "saab_jas39a_gbu_12"
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#laser_guided_bomb.avif"
+          },
+          "names": {
+            "zh": "LGBU",
+            "en": "LGBU",
+            "ru": "LGBU",
+            "de": "LGBU",
+            "fr": "LGBU",
+            "ja": "LGBU",
+            "es": "LGBU"
+          }
+        },
+        {
+          "id": "asm",
+          "cost": {
+            "tier": 1,
+            "reqExp": 7500,
+            "value": 12000,
+            "costGold": 0,
+            "openCostGold": 330
+          },
+          "global": {
+            "modClass": "weapon",
+            "image": "!#ui/gameuiskin#anti_radiation_type_a_missile.avif"
+          },
+          "names": {
+            "zh": "反舰导弹",
+            "en": "ASM",
+            "ru": "ПКР",
+            "de": "ASM",
+            "fr": "ASM",
+            "ja": "ASM",
+            "es": "ASM"
+          }
+        }
+      ]
+    }
+  }
+}

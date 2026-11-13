@@ -62,7 +62,7 @@ test('every untouched vehicle, chunk and historical correction is preserved byte
     assert(bytes.equals(fs.readFileSync(path.join(root,'public',meta.path))));
     assert.equal(sha(bytes),meta.sha256);
     assert.equal(bytes.length,meta.bytes);
-    const chunk=JSON.parse(bytes);
+    const chunk=require('./apply-modification-update-20261113.cjs').restoreChunk(JSON.parse(bytes));
     for (const c of require('../config/eagles-shadow-aircraft.json').units) if (chunk.v[c.id]) {
       assert.deepEqual(chunk.v[c.id], c.modification); delete chunk.v[c.id];
     }
@@ -70,7 +70,7 @@ test('every untouched vehicle, chunk and historical correction is preserved byte
     assert.equal(sha(JSON.stringify(chunk)+'\n'),evidence.previousChunks[key].sha256,key);
   }
   assert.equal(sha(JSON.stringify(restoreCatalog(require('./aircraft-addition-snapshot.cjs').restoreCatalog(catalog)))+'\n'),evidence.catalogSha256);
-  assert.equal(catalog.stats.modifications,evidence.previousModificationCount+3+181);
+  assert.equal(catalog.stats.modifications,evidence.previousModificationCount+3+181+4);
 });
 
 test('updater is deterministic and rejects changed baselines, unknown prices and missing prerequisites', () => {

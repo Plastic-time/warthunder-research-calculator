@@ -22,7 +22,7 @@ test('exact event variants rebuild from pinned fields; all previous vehicle modi
   for(const unit of fixture.units) {
     const key='germany_'+unit.type;
     for(const prefix of ['public','docs']) {
-      const chunk=read(prefix+'/database/modifications/'+key+'.json');
+      const chunk=require('./apply-modification-update-20261113.cjs').restoreChunk(read(prefix+'/database/modifications/'+key+'.json'));
       assert.deepEqual(chunk.v[unit.id],build(unit));
       delete chunk.v[unit.id];
       assert.equal(crypto.createHash('sha256').update(JSON.stringify(chunk.v)).digest('hex'),fixture.baselines[key]);

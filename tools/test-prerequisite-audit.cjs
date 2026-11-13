@@ -16,7 +16,7 @@ let vehicleCount = 0, modCount = 0, genuineEdges = 0, plannedTargets = 0;
 for (const [key, meta] of Object.entries(catalog.chunks)) {
   const chunk = JSON.parse(fs.readFileSync(path.join(root, 'public', meta.path)));
   // Compare the original audit against its snapshot, before the reviewed F4U-7 cost update.
-  const audited = structuredClone(chunk);
+  const audited = require('./apply-modification-update-20261113.cjs').restoreChunk(chunk);
   for (const c of require('../config/eagles-shadow-aircraft.json').units) if (audited.v[c.id]) {
     assert.deepEqual(audited.v[c.id], c.modification); delete audited.v[c.id];
   }
@@ -82,7 +82,7 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
   }
 }
 assert.equal(vehicleCount, proof.examinedVehicles + eventUnits.length + 9);
-assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0) + 3 + 181);
+assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0) + 3 + 181 + 4);
 for (const saved of proof.preserved) {
   const digest = crypto.createHash('sha256').update(JSON.stringify(vehicles.get(saved.id))).digest('hex');
   assert.equal(digest, saved.sha256, saved.id + ': user correction changed');

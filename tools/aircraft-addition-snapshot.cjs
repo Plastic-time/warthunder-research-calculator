@@ -14,7 +14,7 @@ function restoreTree(value) {
   return tree;
 }
 function restoreCatalog(value) {
-  const result = structuredClone(value);
+  const result = require('./apply-modification-update-20261113.cjs').restoreCatalog(value);
   if (!result.aircraftAddition) return result;
   delete result.aircraftAddition;
   for (const c of fixture.units) delete result.vehicles[c.id];
