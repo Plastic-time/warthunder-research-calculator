@@ -1,6 +1,8 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { createHash } = require('node:crypto');
+const { load } = require('cheerio');
 
 const repository = 'gszabi99/War-Thunder-Datamine';
 const root = path.resolve(__dirname, '..');
@@ -68,11 +70,50 @@ async function releaseChannels(reader, headVersion) {
   }
   // The filename describes the diff topic; its current-channel footer may name a newer build.
   assert(Object.values(channels).includes(headVersion), 'Repository head has no declared channel');
-  return { channels, channelEvidence: {
+  const maintainer = {
     type: 'datamine-maintainer-gist', revision, filename,
     url: `https://gist.github.com/gszabi99/${latest.id}/${revision}`,
     limitation: 'Maintainer channel declarations, not an official game availability guarantee.',
-  } };
+  };
+  const official = await officialRelease(reader);
+  if (compareVersions(official.version, channels['regular-live']) > 0) {
+    const declared = { ...channels };
+    channels['regular-live'] = official.version;
+    return { channels, channelEvidence: { ...official, maintainer: { ...maintainer, channels: declared } } };
+  }
+  return { channels, channelEvidence: { ...maintainer, official } };
+}
+
+function compareVersions(left, right) {
+  const a = left.split('.').map(Number);
+  const b = right.split('.').map(Number);
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i] - b[i];
+  return 0;
+}
+
+async function officialRelease(reader) {
+  const listingUrl = 'https://warthunder.com/en/game/changelog/';
+  const page = load(await reader(listingUrl, false));
+  const entries = [];
+  page('.widget').each((_, element) => {
+    const widget = page(element);
+    const match = /^Update (\d+\.\d+\.\d+\.\d+)$/.exec(widget.find('.widget__title').text().trim());
+    if (!match) return;
+    const url = new URL(widget.find('a[href]').first().attr('href'), listingUrl);
+    assert(url.origin === 'https://warthunder.com' && /^\/en\/game\/changelog\/current\/\d+$/.test(url.pathname)
+      && !url.search && !url.hash && !url.username && !url.password, 'Invalid official changelog URL');
+    entries.push({ version: match[1], url: url.href });
+  });
+  assert(entries.length, 'No official release announcement found');
+  // Pinned news can precede the newest patch in the listing.
+  entries.sort((a, b) => compareVersions(b.version, a.version));
+  const latest = entries[0];
+  const content = await reader(latest.url, false);
+  const article = load(content);
+  assert.equal(article('.content__title').length, 1, 'Missing or ambiguous official release title');
+  assert.equal(article('.content__title').text().trim(), `Update ${latest.version}`, 'Official release title mismatch');
+  return { type: 'official-changelog', ...latest, listingUrl,
+    sha256: createHash('sha256').update(content).digest('hex') };
 }
 
 async function regularLiveCommit(reader, head, headVersion, liveVersion) {
