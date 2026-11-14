@@ -78,6 +78,8 @@ Open the web app to start. No game account is required. On Windows, download the
 
 > v1.0.31 includes dependency security fixes, safer modification retries, BR corrections for seven aircraft, and update checker improvements. The launcher bundles .NET 10.0.14. The download does not receive later web updates automatically. Screenshots illustrate the interface.
 
+Launchers built from the current source use .NET 10.0.15. The v1.0.31 download above is still the original release.
+
 Select all, in Filters, toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
 
 Zero remaining RP does not mark a vehicle as owned or an upgrade as researched. Set those states separately. Silver Lion costs stay unchanged. Enter a whole number from 0 to the full RP cost. Blank input is not accepted.

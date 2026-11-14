@@ -20,6 +20,11 @@ function fixture(t, options = {}) {
     calls.push(url);
     const headVersion = options.headVersion || (options.dev ? '2.60.0.20' : '2.59.0.99');
     const filename = options.filename || `${headVersion}.md`;
+    const officialVersion = options.officialVersion || '2.59.0.99';
+    if (url === 'https://warthunder.com/en/game/changelog/') return options.officialListing ??
+      `<div class="widget"><a href="/en/game/changelog/current/1917"></a><div class="widget__title">Update ${officialVersion}</div></div>`;
+    if (url === 'https://warthunder.com/en/game/changelog/current/1917') return options.officialArticle ??
+      `<div class="content__title">Update ${officialVersion}</div>`;
     if (url.includes('/users/gszabi99/gists?')) return [{ id: gistId, files: { [filename]: {} } }];
     if (url.includes(`/gists/${gistId}`)) return {
       id: gistId, owner: { login: 'gszabi99' }, history: [{ version: sha(50) }],
@@ -66,6 +71,76 @@ test('critical files omitted from a truncated compare are checked at pinned scop
   assert(fs.readFileSync(path.join(f.root, 'config/data-review-checkpoints.json')).equals(before));
   const trees = f.calls.filter(url => url.includes('/git/trees/'));
   assert.equal(new Set(trees).size, trees.length);
+});
+
+test('official release overrides a stale live declaration and pins the released head', async t => {
+  const f = fixture(t, { dev: true, officialVersion: '2.60.0.20' });
+  const report = await checkDatamineUpdates(f);
+  assert.deepEqual(report.upstream, { channel: 'regular-live', version: '2.60.0.20', commit: sha(2) });
+  assert(report.repositoryHead.channels.includes('regular-live'));
+  assert.equal(report.channelEvidence.type, 'official-changelog');
+  assert.equal(report.channelEvidence.maintainer.channels['regular-live'], '2.59.0.99');
+  assert.equal(report.channelEvidence.url, 'https://warthunder.com/en/game/changelog/current/1917');
+  assert.match(report.channelEvidence.sha256, /^[a-f0-9]{64}$/);
+  assert(!f.calls.some(url => url.includes('/commits?')));
+});
+
+test('an older official announcement cannot downgrade the declared live version', async t => {
+  const report = await checkDatamineUpdates(fixture(t, { dev: true, officialVersion: '2.59.0.98' }));
+  assert.equal(report.upstream.version, '2.59.0.99');
+  assert.equal(report.channelEvidence.type, 'datamine-maintainer-gist');
+});
+
+test('official release between the stale live pin and dev head selects its own verified commit', async t => {
+  const f = fixture(t, { dev: true, officialVersion: '2.60.0.18' });
+  const read = async url => {
+    if (url.includes('/commits?')) return [{ sha: sha(3), commit: { message: '2.60.0.18' } }];
+    if (url.endsWith(`/${sha(3)}/version`)) return '2.60.0.18';
+    return f.read(url);
+  };
+  const report = await checkDatamineUpdates({ ...f, read });
+  assert.deepEqual(report.upstream, { channel: 'regular-live', version: '2.60.0.18', commit: sha(3) });
+  assert.deepEqual(report.repositoryHead.channels, ['dev']);
+  assert(report.compareUrl.endsWith(`...${sha(3)}`));
+});
+
+test('pinned older news does not hide the latest official patch', async t => {
+  const f = fixture(t, { dev: true, officialVersion: '2.60.0.20', officialListing:
+    '<div class="widget"><a href="/en/game/changelog/current/1915"></a><div class="widget__title">Update 2.59.0.99</div></div>' +
+    '<div class="widget"><a href="/en/game/changelog/current/1917"></a><div class="widget__title">Update 2.60.0.20</div></div>' });
+  const report = await checkDatamineUpdates(f);
+  assert.equal(report.upstream.commit, sha(2));
+  assert(!f.calls.some(url => url.endsWith('/1915')));
+});
+
+test('official release missing from pinned version history cannot fall back to dev head', async t => {
+  const f = fixture(t, { dev: true, officialVersion: '2.60.0.18', noLive: true });
+  await assert.rejects(checkDatamineUpdates(f), /Regular live revision not found/);
+  assert.equal(JSON.parse(fs.readFileSync(f.output)).status, 'failed');
+  assert(!f.calls.some(url => url.includes('/compare/')));
+});
+
+for (const [name, options] of Object.entries({
+  'missing release entries': { officialListing: '<html>Unavailable</html>' },
+  'external announcement link': { officialListing: '<div class="widget"><a href="https://example.com/en/game/changelog/current/1917"></a><div class="widget__title">Update 2.60.0.20</div></div>' },
+  'article version mismatch': { officialVersion: '2.60.0.20', officialArticle: '<div class="content__title">Update 2.60.0.19</div>' },
+  'development announcement': { officialVersion: '2.60.0.20', officialArticle: '<div class="content__title">Dev Server Update 2.60.0.20</div>' },
+})) test(`${name} cannot establish an official live release`, async t => {
+  const f = fixture(t, { dev: true, ...options });
+  await assert.rejects(checkDatamineUpdates(f), /official/i);
+  assert.equal(JSON.parse(fs.readFileSync(f.output)).status, 'failed');
+  assert(!f.calls.some(url => url.startsWith('https://example.com')));
+  assert(!f.calls.some(url => url.includes('/compare/')));
+});
+
+test('official endpoint failure invalidates a previous successful report', async t => {
+  const f = fixture(t);
+  await checkDatamineUpdates(f);
+  await assert.rejects(checkDatamineUpdates({ ...f, read: url => {
+    if (url.startsWith('https://warthunder.com/')) throw new Error('official source offline');
+    return f.read(url);
+  } }), /official source offline/);
+  assert.equal(JSON.parse(fs.readFileSync(f.output)).status, 'failed');
 });
 
 test('development head is informational; all review comparisons target regular live', async t => {
