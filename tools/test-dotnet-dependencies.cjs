@@ -58,6 +58,19 @@ test('NuGet inventory cannot downgrade coverage, omit lock/config or alter offic
   assert.throws(() => validateDotnet(entry, () => Buffer.from('<configuration />')), /source policy changed/);
 });
 
+test('SDK selection stays on stable .NET 10 and ships with source packages', () => {
+  const read = file => fs.readFileSync(path.join(root, file));
+  assert.deepEqual(JSON.parse(read('global.json')), { sdk: {
+    version: '10.0.100', rollForward: 'latestFeature', allowPrerelease: false,
+  } });
+  assert(fs.readFileSync(path.join(root, 'tools/package-release.ps1'), 'utf8').includes('"global.json"'));
+  for (const sdk of [
+    { version: '11.0.100', rollForward: 'latestFeature', allowPrerelease: false },
+    { version: '10.0.100', rollForward: 'latestMajor', allowPrerelease: false },
+    { version: '10.0.100', rollForward: 'latestFeature', allowPrerelease: true },
+  ]) assert.throws(() => validateDotnet(entry, file => file === 'global.json' ? Buffer.from(JSON.stringify({ sdk })) : read(file)), /SDK selection/);
+});
+
 test('evaluated .NET policy covers all severities, transitives, self-contained build and locked restore', () => {
   assert.equal(validatePolicy(policy()), '10.0.13');
   for (const key of ['NuGetAudit', 'NuGetAuditMode', 'NuGetAuditLevel', 'SelfContained', 'RestorePackagesWithLockFile', 'TargetFramework', 'RuntimeIdentifier']) {

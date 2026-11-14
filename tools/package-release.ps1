@@ -57,7 +57,7 @@ foreach ($name in @('CHANGELOG.md', 'README.md')) {
   if (Test-Path -LiteralPath $documentation) { Remove-Item -LiteralPath $documentation }
 }
 
-$sourceItems = @("config", "database", "dict", "doc", "docs", "public", "src", ".github", ".githooks", ".gitattributes", ".gitignore", "AGENTS.md", "main.js", "package.json", "package-lock.json", "README.md", "README.en.md")
+$sourceItems = @("config", "database", "dict", "doc", "docs", "public", "src", ".github", ".githooks", ".gitattributes", ".gitignore", "AGENTS.md", "global.json", "main.js", "package.json", "package-lock.json", "README.md", "README.en.md")
 foreach ($item in $sourceItems) {
   Copy-Item -LiteralPath (Join-Path $root $item) -Destination $sourceRoot -Recurse -Force
 }
