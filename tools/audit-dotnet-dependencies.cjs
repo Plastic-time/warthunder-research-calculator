@@ -12,11 +12,14 @@ function validateDotnet(entry, readFile) {
   assert.equal(entry.coverage, 'nuget-audit', `${entry.id}: NuGet projects cannot skip auditing`);
   assert(typeof entry.project === 'string' && entry.project.endsWith('.csproj') && entry.files.includes(entry.project), 'Register the audited C# project');
   assert.deepEqual([...entry.files].sort(), [entry.project, path.posix.join(path.posix.dirname(entry.project), 'packages.lock.json'),
-    path.posix.join(path.posix.dirname(entry.project), 'NuGet.Config')].sort(), 'Register project, lockfile and isolated NuGet.Config');
+    path.posix.join(path.posix.dirname(entry.project), 'NuGet.Config'), 'global.json'].sort(), 'Register project, lockfile, isolated NuGet.Config and global.json');
   // The small isolated policy must not inherit local sources or silently lose auditSources.
   const config = readFile(path.posix.join(path.posix.dirname(entry.project), 'NuGet.Config')).toString('utf8').replace(/\r\n/g, '\n');
   assert.equal(crypto.createHash('sha256').update(config).digest('hex'),
     'c4518faa4c3d5b632f2f93eec07260100c2f47eafbe556abfbc9cd4c3d13e2c0', 'NuGet source policy changed; review before updating its fingerprint');
+  assert.deepEqual(JSON.parse(readFile('global.json').toString('utf8')), {
+    sdk: { version: '10.0.100', rollForward: 'latestFeature', allowPrerelease: false },
+  }, 'SDK selection must stay on stable .NET 10');
   return { id: entry.id, project: entry.project };
 }
 

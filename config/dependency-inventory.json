@@ -18,7 +18,7 @@
       "kind": "nuget",
       "coverage": "nuget-audit",
       "project": "tools/launcher/WarThunderResearchLauncher.csproj",
-      "files": ["tools/launcher/WarThunderResearchLauncher.csproj", "tools/launcher/NuGet.Config", "tools/launcher/packages.lock.json"]
+      "files": ["tools/launcher/WarThunderResearchLauncher.csproj", "tools/launcher/NuGet.Config", "tools/launcher/packages.lock.json", "global.json"]
     },
     {
       "id": "github-actions",
