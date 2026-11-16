@@ -74,11 +74,9 @@ Search accepts names such as F15, F-15, and F 15 and shows the match count. On m
 
 **Backup and restore**: select the backup icon at the top right. On mobile, open More, then Backup and restore. Export a JSON file to save targets, owned marks, waypoints, RP progress, and modification records across all trees in this browser. Import shows a summary before confirmation. Only records in the file are replaced. Other plans stay unchanged. Files are processed locally and are not uploaded. This is a manual transfer, not automatic device sync.
 
-Open the web app to start. No game account is required. On Windows, download the [v1.0.31 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.31/WarThunderResearchCalculator-v1.0.31-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js or .NET installation is needed.
+Open the web app to start. No game account is required. On Windows, download the [v1.0.32 portable package](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.32/WarThunderResearchCalculator-v1.0.32-portable.zip). Extract it and run `WarThunderResearchCalculator.exe`. No separate Node.js or .NET installation is needed.
 
-> v1.0.31 includes dependency security fixes, safer modification retries, BR corrections for seven aircraft, and update checker improvements. The launcher bundles .NET 10.0.14. The download does not receive later web updates automatically. Screenshots illustrate the interface.
-
-Launchers built from the current source use .NET 10.0.15. The v1.0.31 download above is still the original release.
+> v1.0.32 includes nine aircraft such as the F-15EX, F-5E and JAS39A modification corrections, and live-channel detection fixes. It bundles Node.js 24.22.3 and .NET 10.0.15 security updates. The download does not receive later web updates automatically. Screenshots illustrate the interface.
 
 Select all, in Filters, toggles the current nation's regular research tree, including foldered vehicles. It keeps owned marks and research progress. Exported screenshots show original tree totals and the RP and Silver Lions still needed for your selection. Missing costs are clearly flagged.
 
@@ -96,7 +94,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - **Retained correction**: v1.0.19 updates F4U-7 modification costs, the cannon upgrade tier, and unlock counts using **2.59.0.38**. All modifications total **47,800 RP / 86,900 SL**.
 - **Retained correction**: v1.0.25 updates modifications for the Greek F-86E(M), MiG-23M, and Object 416 using **2.59.0.50**. See the [release notes](doc/release-v1.0.25.md#english) for costs and prerequisites. This is not a full data upgrade.
 - **Latest reviewed version**: **2.61.0.9**. Added nine aircraft, research costs, prerequisites and 181 modification nodes, including F-15EX, F-15IA, Su-15TM and three pack aircraft. Saved plans are preserved. This is a partial data update.
-- **Data updates in the v1.0.31 package**:
+- **Data updates in the v1.0.32 package**:
   - [BR update for 638 vehicles](doc/battle-rating-update-20261029.md) (Chinese)
   - [Vehicle cost update for three Japanese aircraft](doc/vehicle-cost-update-20261029.md) (Chinese)
   - [Modification update for six vehicles](doc/modification-update-20261029.md)
@@ -113,7 +111,7 @@ Browse ground vehicles, aircraft, helicopters, bluewater fleets, and coastal fle
 - [Online counter rules](doc/online-counter.md) (Chinese)
 - [Modification artwork sources](doc/ammunition-artwork.md) (Chinese)
 - [Vehicle snapshot manifest](docs/database/manifest.json) · [Modification audit](tools/modifications-audit.json)
-- [v1.0.31 notes](doc/release-v1.0.31.md) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.32 notes](doc/release-v1.0.32.md) · [All releases](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 

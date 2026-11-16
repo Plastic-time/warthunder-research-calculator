@@ -16,9 +16,9 @@
     }
   ],
   "node": {
-    "version": "24.22.1",
-    "sha256": "d702daa815eabbff763c7d3808e235cf031cf2ca70211b56847bc72f51e240e5",
-    "checksums": "https://nodejs.org/dist/v24.22.1/SHASUMS256.txt"
+    "version": "24.22.3",
+    "sha256": "86fc4785327db5f5c7558dc6156c543b433c313e813a222e088086222ab4afa6",
+    "checksums": "https://nodejs.org/dist/v24.22.3/SHASUMS256.txt"
   },
   "pathSha256": [
     "006f1131fd6e47287513358eac2a834a212ce9b5b18f104dd3b83fa8cb450dcc",

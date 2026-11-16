@@ -74,11 +74,9 @@
 
 **备份与恢复**：电脑端点击右上角的备份图标，手机端打开“更多 → 备份与恢复”。导出 JSON 文件可保存当前浏览器中所有科技树的目标、已拥有标记、途经点、RP 进度和配件记录。导入前会显示记录数量与覆盖数量，确认后只替换文件中包含的记录，其他计划保留。文件在本机处理，不上传服务器；这不是自动跨设备同步。
 
-网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.31 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.31/WarThunderResearchCalculator-v1.0.31-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js 或 .NET。
+网页版直接打开即可，无需游戏账号。Windows 用户下载 [v1.0.32 便携包](https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v1.0.32/WarThunderResearchCalculator-v1.0.32-portable.zip)，解压后运行 `WarThunderResearchCalculator.exe`，不需要另外安装 Node.js 或 .NET。
 
-> v1.0.31 包含依赖安全修复、配件重试保护、七架飞机的 BR 修正和更新检查器改进。启动器自带 .NET 10.0.14。下载包不会自动获得之后的网页更新。截图仅作界面示意。
-
-当前源码构建的启动器使用 .NET 10.0.15。上面的 v1.0.31 下载包仍为原发布版本。
+> v1.0.32 纳入 F-15EX 等九架飞机、F-5E 与 JAS39A 配件修正和正式服识别修复。自带 Node.js 24.22.3 与 .NET 10.0.15 安全更新。下载包不会自动获得之后的网页更新。截图仅作界面示意。
 
 “筛选”菜单中的“全选”可选择或取消当前国家、军种的常规研发载具，包含折叠载具，保留已拥有标记和研发进度。导出截图同时显示科技树原始总额与当前选择还需的 RP、银狮；缺失费用会单独提示。
 
@@ -96,7 +94,7 @@
 - **已保留修正**：v1.0.19 按 **2.59.0.38** 更新 F4U-7 的配件费用、机炮翻新层级和解锁数量。全部配件合计 **47,800 RP / 86,900 SL**。
 - **已保留修正**：v1.0.25 按 **2.59.0.50** 定向更新希腊 F-86E(M)、米格-23M 和 416 工程的配件。费用与前置的变化见[更新说明](doc/release-v1.0.25.md)。这不代表全量数据升级。
 - **最新核对版本**：**2.61.0.9**。补入 9 架新飞机、研发费用、前置关系和 181 个配件节点，包含 F-15EX、F-15IA、Su-15TM 及三款礼包机。已有计划保留，基础快照未整体升级。
-- **v1.0.31 便携包已包含的数据更新**：
+- **v1.0.32 便携包已包含的数据更新**：
   - [638 辆载具的 BR 更新](doc/battle-rating-update-20261029.md)
   - [三架日系飞机的载具费用更新](doc/vehicle-cost-update-20261029.md)
   - [六辆载具的配件更新](doc/modification-update-20261029.md)
@@ -113,7 +111,7 @@
 - [在线人数统计规则](doc/online-counter.md)
 - [配件图标来源](doc/ammunition-artwork.md)
 - [载具快照清单](docs/database/manifest.json) · [配件核对记录](tools/modifications-audit.json)
-- [v1.0.31 更新说明](doc/release-v1.0.31.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+- [v1.0.32 更新说明](doc/release-v1.0.32.md) · [全部版本](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 </details>
 
