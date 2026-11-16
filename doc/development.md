@@ -1,6 +1,6 @@
 # 本地运行与数据维护
 
-[返回项目首页](../README.md) · [English overview](../README.en.md)
+[返回中文介绍](../README.zh-CN.md) · [English overview](../README.md)
 
 ## 本地运行
 

@@ -67,7 +67,7 @@ for (const file of ['tree-search.js', 'tree-search.css', 'plan-storage.js', 'pla
   assert(fs.readFileSync(path.join(root, 'public', file)).equals(fs.readFileSync(path.join(root, 'docs', file))), `${file}: copies differ`);
 }
 assert(fs.readFileSync(path.join(root, 'public/assets/creator-avatar.jpg')).equals(fs.readFileSync(path.join(root, 'docs/assets/creator-avatar.jpg'))));
-for (const file of ['README.md', 'README.en.md']) {
+for (const file of ['README.md', 'README.zh-CN.md']) {
   const text = fs.readFileSync(path.join(root, file), 'utf8');
   const downloads = [...text.matchAll(/https:\/\/github\.com\/Plastic-time\/warthunder-research-calculator\/releases\/download\/[^)\s]+/g)].map(match => match[0]);
   assert.deepEqual(downloads, [`https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v${pkg.version}/WarThunderResearchCalculator-v${pkg.version}-portable.zip`]);
