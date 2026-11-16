@@ -1470,22 +1470,27 @@ function toggleUnit(id) {
 }
 
 async function refreshCurrentTree() {
+  const requestId = treeRequestId;
+  const { country, type } = state;
   discardBulkOwnedUndo();
   bulkOwnedDialog?.close();
   setStatus(tr("正在从官方 Wiki 更新当前树"));
   els.refreshDataButton.disabled = true;
   try {
     const session = await api("/api/session", { cache: "no-store" });
-    const result = await api(`/api/update/${state.country}/${state.type}`, {
+    if (requestId !== treeRequestId) return;
+    const result = await api(`/api/update/${country}/${type}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", "X-WT-Update-Token": session.token },
       body: JSON.stringify({ limit: 4 }),
     });
+    if (requestId !== treeRequestId) return;
     state.tree = result.data || [];
     flattenTree(state.tree);
-    setStatus(tr("已更新 {country} · {type}", { country: translateCountry(state.country), type: translateType(state.type) }));
+    setStatus(tr("已更新 {country} · {type}", { country: translateCountry(country), type: translateType(type) }));
     calculatePlan();
   } catch (err) {
+    if (requestId !== treeRequestId) return;
     setStatus(err.message);
   } finally {
     els.refreshDataButton.disabled = false;
