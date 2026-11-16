@@ -1,6 +1,6 @@
 # 网页更新日志
 
-[中文介绍](../README.md) · [English](#english) · [Windows 发布记录](https://github.com/Plastic-time/warthunder-research-calculator/releases)
+[中文介绍](../README.zh-CN.md) · [English](#english) · [Windows 发布记录](https://github.com/Plastic-time/warthunder-research-calculator/releases)
 
 这里单独记录下载版本之后的网页改动，不代表发布了新的 Windows 包。
 

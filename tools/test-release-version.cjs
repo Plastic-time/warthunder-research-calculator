@@ -28,7 +28,7 @@ test('package, lock, current release notes and README downloads share one versio
   for(const text of ['v'+version,'F-15EX','F-5E','JAS39A','24.22.3','.NET 10.0.15'])
     assert(notes.includes(text),text);
   const link='https://github.com/Plastic-time/warthunder-research-calculator/releases/download/v'+version+'/WarThunderResearchCalculator-v'+version+'-portable.zip';
-  for(const file of ['README.md','README.en.md']) {
+  for(const file of ['README.md','README.zh-CN.md']) {
     const text=read(file);
     assert(text.includes(link),file);
     assert(text.includes('(doc/release-v'+version+'.md)'),file);

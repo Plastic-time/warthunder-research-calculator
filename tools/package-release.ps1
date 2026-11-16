@@ -40,7 +40,7 @@ try {
   Pop-Location
 }
 
-$portableItems = @("config", "database", "dict", "public", "src", "node_modules", "main.js", "package.json", "package-lock.json", "README.md", "README.en.md", "node.exe")
+$portableItems = @("config", "database", "dict", "public", "src", "node_modules", "main.js", "package.json", "package-lock.json", "README.md", "README.zh-CN.md", "node.exe")
 foreach ($item in $portableItems) {
   if ($item -eq "node.exe") {
     $nodePath = (Get-Command node -ErrorAction Stop).Source
@@ -60,7 +60,7 @@ foreach ($name in @('CHANGELOG.md', 'README.md')) {
   if (Test-Path -LiteralPath $documentation) { Remove-Item -LiteralPath $documentation }
 }
 
-$sourceItems = @("config", "database", "dict", "doc", "docs", "public", "src", ".github", ".githooks", ".gitattributes", ".gitignore", "AGENTS.md", "global.json", "main.js", "package.json", "package-lock.json", "README.md", "README.en.md")
+$sourceItems = @("config", "database", "dict", "doc", "docs", "public", "src", ".github", ".githooks", ".gitattributes", ".gitignore", "AGENTS.md", "global.json", "main.js", "package.json", "package-lock.json", "README.md", "README.zh-CN.md")
 foreach ($item in $sourceItems) {
   Copy-Item -LiteralPath (Join-Path $root $item) -Destination $sourceRoot -Recurse -Force
 }

@@ -56,7 +56,7 @@ function protectedFiles() {
       for (const entry of fs.readdirSync(file).sort()) walk(relative + '/' + entry);
     } else files[relative] = hash(fs.readFileSync(file));
   }
-  for (const relative of ['database', 'docs', 'public', 'dict', 'src', 'config', '.github', 'main.js', 'README.md', 'package.json', 'package-lock.json']) walk(relative);
+  for (const relative of ['database', 'docs', 'public', 'dict', 'src', 'config', '.github', 'main.js', 'README.md', 'README.zh-CN.md', 'package.json', 'package-lock.json']) walk(relative);
   return files;
 }
 

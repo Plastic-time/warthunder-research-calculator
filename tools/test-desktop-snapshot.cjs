@@ -29,7 +29,7 @@ const compareVersion = (a, b) => {
 };
 for (const source of [version.gameVersion, correction.gameVersion, version.rosterAddition.version])
   assert(compareVersion(review.gameVersion, source) >= 0, 'Displayed review version must not lag published updates');
-for (const [file, label] of [['README.md', '最新核对版本'], ['README.en.md', 'Latest reviewed version']]) {
+for (const [file, label] of [['README.zh-CN.md', '最新核对版本'], ['README.md', 'Latest reviewed version']]) {
   const lines = fs.readFileSync(path.join(root, file), 'utf8').split(/\r?\n/);
   const current = lines.filter(line => line.startsWith(`- **${label}**`));
   assert.equal(current.length, 1, file + ': exactly one current review summary');
