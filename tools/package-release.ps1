@@ -11,6 +11,9 @@ foreach ($testDependency in @('playwright', 'playwright-core')) {
   }
 }
 
+node (Join-Path $PSScriptRoot 'check-packaged-node.cjs')
+if ($LASTEXITCODE -ne 0) { throw 'Packaged Node verification failed.' }
+
 if ([string]::IsNullOrWhiteSpace($Version)) {
   $package = Get-Content -Raw -LiteralPath (Join-Path $root "package.json") | ConvertFrom-Json
   $Version = $package.version
@@ -42,8 +45,8 @@ foreach ($item in $portableItems) {
   if ($item -eq "node.exe") {
     $nodePath = (Get-Command node -ErrorAction Stop).Source
     $runtimeVersion = (& $nodePath --version).TrimStart('v')
-    if ([version]$runtimeVersion -lt [version]'24.21.0' -or [version]$runtimeVersion -ge [version]'25.0.0') {
-      throw "Packaging requires current Node.js 24 LTS (at least 24.21.0)."
+    if ([version]$runtimeVersion -lt [version]'24.22.3' -or [version]$runtimeVersion -ge [version]'25.0.0') {
+      throw "Packaging requires current Node.js 24 LTS (at least 24.22.3)."
     }
     Copy-Item -LiteralPath $nodePath -Destination (Join-Path $portableRoot "node.exe") -Force
     continue
