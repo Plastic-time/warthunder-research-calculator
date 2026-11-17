@@ -33,7 +33,11 @@
     dialog.setAttribute('aria-labelledby', 'rosterHiddenTitle');
     renderHelp(dialog);
     dialog.addEventListener('click', event => {
-      if (event.target === dialog || event.target.closest('[data-roster-help-close]')) dialog.close();
+      if (event.target.closest('[data-roster-help-close]')) return dialog.close();
+      // Clicks on the dialog's own padding also target it, so only close for the backdrop.
+      if (event.target !== dialog) return;
+      const r = dialog.getBoundingClientRect();
+      if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();
     });
     document.body.append(dialog);
     return dialog;
