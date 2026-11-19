@@ -25,18 +25,18 @@ async function main() {
       await page.goto(`http://127.0.0.1:${server.address().port}/${mode === 'pages' ? 'pages/' : ''}`);
       await page.waitForFunction(() => state.units.length && !treeSelectionLoading);
       await page.evaluate(async () => {
-        els.countrySelect.value = 'china'; els.typeSelect.value = 'aviation';
+        els.countrySelect.value = 'usa'; els.typeSelect.value = 'aviation';
         await loadTree();
       });
       for (const kind of ['target', 'required', 'filler', 'owned', 'waypoint']) {
         await page.evaluate(kind => {
           els.clearButton.click();
           if (kind === 'required' || kind === 'filler') {
-            state.planResult = { selectedIds: ['j_16'], fillerIds: kind === 'filler' ? ['j_16'] : [] };
+            state.planResult = { selectedIds: ['f_15ex'], fillerIds: kind === 'filler' ? ['f_15ex'] : [] };
             calculatePlan();
-          } else toggleUnitMode('j_16', kind);
+          } else toggleUnitMode('f_15ex', kind);
         }, kind);
-        const tile = page.locator('.tree-canvas [data-unit-id="j_16"]');
+        const tile = page.locator('.tree-canvas [data-unit-id="f_15ex"]');
         await tile.locator(':scope > img').evaluate(img => img.decode());
         await tile.evaluate(tile => {
           const tree = els.treeContainer, r = tile.getBoundingClientRect(), t = tree.getBoundingClientRect();

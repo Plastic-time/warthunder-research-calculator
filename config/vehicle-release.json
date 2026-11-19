@@ -1,41 +1,45 @@
 {
   "schema": 1,
-  "major": "2.59",
-  "previousMajor": "2.57",
-  "name": "Sky Odyssey",
-  "date": "2026-09-16",
-  "announcement": "https://warthunder.com/en/game/changelog/current/1894",
+  "major": "2.61",
+  "previousMajor": "2.59",
+  "name": "Eagle's Shadow",
+  "date": "2026-11-11",
+  "announcement": "https://warthunder.com/en/game/changelog/current/1915",
   "repository": "https://github.com/gszabi99/War-Thunder-Datamine",
-  "previous": { "version": "2.57.1.132", "commit": "fe43b1bea2e9432c6ca62e6917d4ae67478db5fa", "shopSha256": "cad526da742725f4f976e100cb12977d899119c210cbb5ff2a9271765b73c868" },
-  "current": { "version": "2.59.0.17", "commit": "510a793c2bdb01c51475118199c7b66b72935ff1", "shopSha256": "3352d1f347d68c415dcd80939de59896ecdb73bcce2eae407db58f640b065eaa" },
+  "scope": "Reviewed additions present in the calculator",
+  "previous": {
+    "version": "2.59.0.92",
+    "commit": "af0cce561a73704e30c1df66eff06209bcc3f035",
+    "shopSha256": "e85bcd9c1d29c15545f1cdd6316fb6e1551a5157709f38d628e03cbf5a56c731"
+  },
+  "current": {
+    "version": "2.61.0.20",
+    "commit": "2def2e1cc42d1651a44c69ecd40dbe031e01aace",
+    "shopSha256": "043758ca32acebe02a7933b6f7865b82f2c9b0d7d62c85e6c79f595e04ebbad7"
+  },
   "trees": {
-    "usa/ground": ["us_m7"],
-    "germany/ground": ["germ_embt"],
-    "ussr/ground": ["ussr_t_44_kit_4rank", "ussr_is_2m_kit_4rank", "ussr_m53_59_kit_4rank", "ussr_object_416"],
-    "britain/ground": ["uk_arjun_mk1"],
-    "japan/ground": ["jp_harimau"],
-    "china/ground": ["cn_plz_45", "cn_fk_2000"],
-    "italy/ground": ["it_pzh_2000"],
-    "france/ground": ["fr_arl_44_mod", "fr_embt"],
-    "israel/ground": ["il_9a33bm3", "il_tor_m1", "il_leopard_2a6_hel"],
-    "usa/aviation": ["f_102a_late", "f_14d_vf_11"],
-    "germany/aviation": ["arado_234b_2_mt"],
-    "ussr/aviation": ["mig_35"],
-    "britain/aviation": ["hawk_t1a_early", "hawk_t1a", "ca_27_mk32_raaf"],
-    "japan/aviation": ["ki_93_1_ko", "b_26b_indonesia_kalong", "ca_27_mk32_malaysia", "a_4ptm_malaysia"],
-    "china/aviation": ["j_16"],
-    "france/aviation": ["se_203"],
-    "sweden/aviation": ["saab_j35j"],
-    "israel/aviation": ["sb2c_5_greece", "f-84g_greece", "f_102a_greece", "f_86em_greece", "a_7h_greece", "mirage_f1cg_greece", "a_7e_greece", "f_4e_aup_greece", "mirage_2000_5eg_mk2_greece", "rafale_eg_greece"],
-    "germany/helicopters": ["h145m"],
-    "britain/helicopters": ["aw_159"],
-    "usa/ships": ["us_destroyer_mahan_class"],
-    "britain/ships": ["uk_battleship_lion_class"],
-    "italy/ships": ["it_battleship_giulio_cesare"],
-    "france/ships": ["fr_cruiser_algerie_class"],
-    "germany/boats": ["germ_rboot_r310"],
-    "ussr/boats": ["ussr_fugas_t1_strela"],
-    "japan/boats": ["jp_type9_pt809"],
-    "france/boats": ["fr_lcm_monitor"]
+    "usa/aviation": [
+      "f_15ex",
+      "fa_18d_late"
+    ],
+    "ussr/aviation": [
+      "su_15tm"
+    ],
+    "britain/aviation": [
+      "fulmar_mk2"
+    ],
+    "japan/aviation": [
+      "firefly_mk1_thailand",
+      "b_33_indonesia"
+    ],
+    "china/aviation": [
+      "q_5d"
+    ],
+    "sweden/aviation": [
+      "saab_jas39_pre_serie"
+    ],
+    "israel/aviation": [
+      "f_15ia"
+    ]
   }
 }

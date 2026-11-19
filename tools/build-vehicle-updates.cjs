@@ -6,7 +6,9 @@ function buildVehicleUpdates(root = path.resolve(__dirname, '..')) {
   const version = JSON.parse(fs.readFileSync(path.join(root, 'config/data-version.json'), 'utf8'));
   const release = JSON.parse(fs.readFileSync(path.join(root, 'config/vehicle-release.json'), 'utf8'));
   // Never carry the previous major update's badges into an unreviewed new one.
-  const reviewed = version.gameVersion.split('.').slice(0, 2).join('.') === release.major;
+  const latestVersion = [version.gameVersion, version.latestReview?.gameVersion]
+    .filter(Boolean).sort((a, b) => b.localeCompare(a, 'en', { numeric: true }))[0];
+  const reviewed = latestVersion.split('.').slice(0, 2).join('.') === release.major;
   const trees = {};
   for (const entry of manifest.files) {
     const match = /^database\/([a-z]+)\/\1_([a-z]+)\.json$/.exec(entry.path);
