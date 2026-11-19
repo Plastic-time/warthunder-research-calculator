@@ -44,6 +44,10 @@ the `guizang-ppt-skill/SKILL.md` file under the user's local Codex skills direct
   Review configuration differences against official release announcements to
   exclude dev-server, unreleased, renamed and model-only changes. Maintain
   `config/vehicle-release.json`; a new major version requires a fresh review.
+  A partial import can advance `latestReview.gameVersion` while the full cost
+  snapshot stays on the previous major. Check the badge list on partial imports
+  too. Regenerate both web copies with `node tools/build-vehicle-updates.cjs`
+  and run `node tools/test-vehicle-updates.cjs` before committing.
 - For future data updates, use version-pinned game configuration as the primary
   authority for vehicle and modification RP, Silver Lions, tiers, unlock counts,
   prerequisites, and modification membership. Record the game version and source

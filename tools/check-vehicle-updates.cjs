@@ -21,21 +21,21 @@ async function checkVehicleUpdates({ evaluate, call, artifacts, suffix }) {
     return result.actual;
   };
   await evaluate("els.countrySelect.value='britain';els.typeSelect.value='aviation';loadTree()");
-  assert((await checkMarks()).includes('hawk_t1a_early'));
-  await evaluate("els.searchInput.value='hawk_t1a_early';els.searchInput.dispatchEvent(new Event('input'))");
+  assert((await checkMarks()).includes('fulmar_mk2'));
+  await evaluate("els.searchInput.value='fulmar_mk2';els.searchInput.dispatchEvent(new Event('input'))");
   await checkMarks();
   await evaluate("setLanguage('en')");
   assert.equal(await evaluate("document.querySelector('.unit-update-label').textContent"), 'NEW');
   await evaluate("setLanguage('zh')");
-  await evaluate("document.querySelector('[data-unit-id=hawk_t1a_early]').click()");
-  assert(await evaluate("document.querySelector('[data-unit-id=hawk_t1a_early]').classList.contains('planned')"));
+  await evaluate("document.querySelector('[data-unit-id=fulmar_mk2]').click()");
+  assert(await evaluate("document.querySelector('[data-unit-id=fulmar_mk2]').classList.contains('planned')"));
   await checkMarks();
-  await evaluate("document.querySelector('[data-unit-id=hawk_t1a_early]').click()");
+  await evaluate("document.querySelector('[data-unit-id=fulmar_mk2]').click()");
   await evaluate(`els.treeContainer.scrollTop=0;
-    els.treeContainer.scrollLeft += document.querySelector('[data-unit-id=hawk_t1a_early]').getBoundingClientRect().left - els.treeContainer.getBoundingClientRect().left - 104;
+    els.treeContainer.scrollLeft += document.querySelector('[data-unit-id=fulmar_mk2]').getBoundingClientRect().left - els.treeContainer.getBoundingClientRect().left - 104;
     WTTreeScroll.sync()`);
   assert(await evaluate(`(() => {
-    const card = document.querySelector('[data-unit-id=hawk_t1a_early]');
+    const card = document.querySelector('[data-unit-id=fulmar_mk2]');
     const badge = card.querySelector('.unit-update-label').getBoundingClientRect();
     const tile = card.getBoundingClientRect();
     const edge = card.querySelector('.unit-update-edge').getBoundingClientRect();
@@ -48,7 +48,14 @@ async function checkVehicleUpdates({ evaluate, call, artifacts, suffix }) {
   assert(!aviation.includes('b_52h'));
   assert(!aviation.includes('f_14d'));
   assert(!aviation.includes('f_16xl'));
+  assert(aviation.includes('f_15ex'));
+  assert(!aviation.includes('f_14d_vf_11'));
   if (suffix.startsWith('pages')) assert(await evaluate(`(() => {
+    // Exercise the folder indicator even in releases with no new folded aircraft.
+    const marks = WTVehicleUpdates.trees['usa/aviation'];
+    WTVehicleUpdates.trees['usa/aviation'] = [...marks, 'f_14d_vf_11'];
+    renderTree();
+    WTVehicleUpdates.trees['usa/aviation'] = marks;
     const unit = state.unitMap.get('f_14d_vf_11');
     if (!unit.parent_group_id) return document.querySelector('[data-unit-id="f_14d_vf_11"] .unit-update-label') !== null;
     return [...document.querySelectorAll('[data-folder-group]')].some(button =>
