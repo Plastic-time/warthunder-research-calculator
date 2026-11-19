@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 
 const sandbox = { window: {}, localStorage: { getItem: () => 'en', setItem() {} },
-  document: { documentElement: {}, addEventListener() {}, dispatchEvent() {}, querySelectorAll: () => [] },
+  document: { documentElement: { setAttribute() {}, removeAttribute() {} }, addEventListener() {}, dispatchEvent() {}, querySelectorAll: () => [] },
   CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options.detail; } },
 };
 for (const file of ['i18n.js', 'app-translations.js', 'static-translations.js', 'module-translations.js']) {
