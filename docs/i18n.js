@@ -47,5 +47,12 @@
     number(value) { return new Intl.NumberFormat(tags[locale]).format(value); },
   };
   document.documentElement.lang = tags[locale];
-  document.addEventListener('DOMContentLoaded', () => translate(), { once: true });
+  document.documentElement.setAttribute('data-ui-starting', '');
+  document.addEventListener('DOMContentLoaded', () => {
+    try {
+      translate();
+    } finally {
+      document.documentElement.removeAttribute('data-ui-starting');
+    }
+  }, { once: true });
 })();

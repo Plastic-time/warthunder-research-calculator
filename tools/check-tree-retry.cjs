@@ -61,13 +61,29 @@ async function main() {
         const failed = async () => { await retry.waitFor({ state: 'visible' }); await page.waitForFunction(() => !treeSelectionLoading && state.treeLoadError); };
         const ready = () => page.waitForFunction(() => !treeSelectionLoading && !state.treeLoadError && state.units.length > 0);
         const saved = () => page.evaluate(keys => Object.fromEntries(keys.map(key => [key, localStorage.getItem(key)])), Object.keys(records));
-        await page.goto(`http://127.0.0.1:${server.address().port}/${mode === 'pages' ? 'pages/' : ''}`, { waitUntil: 'domcontentloaded' });
+        const releaseHeader = Promise.withResolvers();
+        await page.route('**/header-layout.js?*', async route => {
+          await releaseHeader.promise;
+          await route.continue();
+        }, { times: 1 });
+        await page.goto(`http://127.0.0.1:${server.address().port}/${mode === 'pages' ? 'pages/' : ''}`, { waitUntil: 'commit' });
+        try {
+          await page.locator('#floatingBudget').waitFor({ state: 'attached' });
+          assert.equal(await page.locator('.topbar').isVisible(), false, 'Legacy header must stay hidden while layout code is loading');
+          assert.equal(await page.locator('#floatingBudget').isVisible(), false, 'Budget must stay hidden during startup');
+        } finally {
+          releaseHeader.resolve();
+        }
+        await page.waitForLoadState('domcontentloaded');
         await failed();
+        assert.equal(await page.locator('.topbar .brand-name').isVisible(), true, 'New header must show even if metadata fails');
+        assert.equal(await page.locator('.toolbar').isVisible(), false, 'Empty legacy filters must stay hidden until metadata is ready');
         assert.equal(requests, 0, 'Metadata failure must not start an unverified tree request');
         metadataFailed = false;
         await retry.click(); await failed();
         assert.equal(metadataRequests, 2);
         assert.equal(requests, 1);
+        assert.equal(await page.locator('.toolbar .country-trigger').isVisible(), true, 'Retry must reveal the new tree navigation');
         assert.deepEqual(await saved(), records);
         for (const locale of ['zh', 'en', 'ru', 'de', 'fr', 'ja', 'es']) {
           await page.evaluate(locale => { WTI18n.missing.clear(); setLanguage(locale); }, locale);

@@ -1,3 +1,5 @@
+/* The native filters are empty until metadata initializes the tree navigation. */
+.toolbar:has(#countrySelect:empty) { visibility: hidden; }
 .toolbar.has-tree-navigation { display: block; padding: 0; overflow: visible; }
 .tree-navigation { display: grid; grid-template-columns: 174px minmax(0, 1fr); gap: 20px; align-items: center; padding: 8px 20px 0; border-bottom: 1px solid var(--gray-6); }
 .country-trigger { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 42px; padding: 8px 12px; margin-bottom: 8px; border: 1px solid var(--gray-9); border-radius: 3px; background: var(--gray-4); color: var(--gray-13); font-size: var(--fs-md); font-weight: 600; }
