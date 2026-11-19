@@ -1002,7 +1002,7 @@ function renderListItem(unit, removable) {
       ${unit.vehicle_icon ? `<img src="${escapeHtml(unit.vehicle_icon)}" alt="">` : `<span></span>`}
       <div>
         <div class="list-title">${escapeHtml(displayTitle(unit))}</div>
-        <div class="list-meta">BR ${escapeHtml(unit.br || "-")} · RP ${formatCost(remainingUnitRp(unit))} · SL ${formatCost(unit.sp)}${role ? ` · ${escapeHtml(role)}` : ""}${routeLabel}</div>
+        <div class="list-meta">${escapeHtml(unitBattleRatingLabel(unit))} · RP ${formatCost(remainingUnitRp(unit))} · SL ${formatCost(unit.sp)}${role ? ` · ${escapeHtml(role)}` : ""}${routeLabel}</div>
       </div>
       ${removeButton}
     </div>
@@ -1027,6 +1027,14 @@ function getUnitCardStatus(id) {
   if (!selected) return null;
   if (state.planResult?.fillerIds.includes(id)) return { kind: "filler", label: "补足", detail: "等级补足", css: "filler-label" };
   return { kind: "required", label: "必经", detail: "必经路线", css: "required-label" };
+}
+
+function unitBattleRatingLabel(unit) {
+  const levels = window.WTCustomBattleRatings?.[unit.data_unit_id];
+  if (!levels) return "BR " + (unit.br || "-");
+  const mode = levels[0].air ? "air" : "ground";
+  const range = levels[0][mode] + "–" + levels[levels.length - 1][mode];
+  return tr(mode === "air" ? "空战 RB {br}" : "陆战 RB {br}", { br: range });
 }
 
 function renderUnit(unit, inFolder = false) {
@@ -1074,7 +1082,7 @@ function renderUnit(unit, inFolder = false) {
       <span>
         <span class="unit-title">${updateBadge}${escapeHtml(displayTitle(unit))}</span>
         <span class="unit-meta">
-          <span class="pill" data-unit-br>BR ${escapeHtml(unit.br || "-")}</span>
+          <span class="pill" data-unit-br>${escapeHtml(unitBattleRatingLabel(unit))}</span>
           ${role ? `<span class="pill role">${escapeHtml(role)}</span>` : ""}
           ${unit.game_source?.cost_policy === "reward-excluded-from-ordinary-research" ? `<span class="pill">${tr(unit.game_source.acquisition.type === "battle-pass" ? "战斗通行证奖励" : "Twitch 掉宝奖励")}</span>` : squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${cardCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${cardCost(unit.sp)}</span></span>`}
           ${window.RosterAudit?.badges(state.country, state.type, unit, displayTitle(unit)) || ""}

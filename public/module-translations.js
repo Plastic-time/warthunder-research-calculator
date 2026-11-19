@@ -2,6 +2,11 @@
   "use strict";
   // Load after the shared WTI18n runtime and before the auxiliary modules.
   window.WTI18n.register([
+    ["随 {name} 解锁","Unlocks with {name}","Открывается вместе с {name}","Wird mit {name} freigeschaltet","Débloqué avec {name}","{name} と同時に解放","Se desbloquea con {name}"],
+    ["分房权重预览","Battle rating preview","Предпросмотр БР","Kampfeinstufung ansehen","Aperçu de la cote de bataille","BR プレビュー","Vista previa del BR"],
+    ["陆战 RB {br}","Ground RB {br}","ТРБ {br}","Boden-RB {br}","RB terrestre {br}","陸戦 RB {br}","RB terrestre {br}"],
+    ["空战 RB {br}","Air RB {br}","АРБ {br}","Luft-RB {br}","RB aérienne {br}","空戦 RB {br}","RB aérea {br}"],
+    ["装备需要 {rating}","Requires {rating} to equip","Для установки требуется {rating}","Ausrüsten ab {rating}","Équipement disponible à partir de {rating}","装備には {rating} が必要","Se necesita {rating} para equipar"],
     ["正在载入配件…","Loading modifications…","Загрузка модификаций…","Modifikationen werden geladen…","Chargement des modifications…","改造データを読み込み中…","Cargando modificaciones…"],
     ["配件载入超时，请重试","Modifications timed out. Try again.","Время загрузки модификаций истекло. Повторите попытку.","Zeitüberschreitung beim Laden. Bitte erneut versuchen.","Le chargement a expiré. Réessayez.","改造データの読み込みがタイムアウトしました。再試行してください。","La carga ha tardado demasiado. Inténtalo de nuevo."],
     ["官方公告已确认购买方式","Purchase method confirmed by an official announcement","Способ покупки подтверждён официальным объявлением","Kaufmöglichkeit durch eine offizielle Ankündigung bestätigt","Mode d'achat confirmé par une annonce officielle","公式告知で購入方法を確認済み","Método de compra confirmado por un anuncio oficial"],

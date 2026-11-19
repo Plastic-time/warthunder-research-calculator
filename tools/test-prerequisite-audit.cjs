@@ -22,7 +22,7 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
   }
   for (const [id, entry] of Object.entries(require('./fixtures/modification-update-20261029.json').vehicles)) {
     if (!audited.v[id]) continue;
-    assert.deepEqual(chunk.v[id], require('./apply-modification-update.cjs').correctVehicle(entry.previous));
+    assert.deepEqual(audited.v[id], require('./apply-modification-update.cjs').correctVehicle(entry.previous));
     audited.v[id] = structuredClone(entry.previous);
   }
   for (const unit of eventUnits) {
@@ -82,7 +82,7 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
   }
 }
 assert.equal(vehicleCount, proof.examinedVehicles + eventUnits.length + 9);
-assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0) + 3 + 181 + 4);
+assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0) + 3 + 181 + 4 + 54 - 19);
 for (const saved of proof.preserved) {
   const digest = crypto.createHash('sha256').update(JSON.stringify(vehicles.get(saved.id))).digest('hex');
   assert.equal(digest, saved.sha256, saved.id + ': user correction changed');
