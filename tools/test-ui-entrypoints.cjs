@@ -38,6 +38,7 @@ for (const folder of ['public', 'docs']) {
   }
   for (const script of scripts.filter(src => !/^https?:/.test(src))) assert(fs.existsSync(path.join(root, folder, script)));
   const styles = $('link[rel="stylesheet"]').map((_, node) => $(node).attr('href').replace(/^\//, '').split('?')[0]).get();
+  assert.equal($('body link[rel="stylesheet"]').length, 0, `${folder}: stylesheets must load before the first paint`);
   assert(styles.includes('ui-dark.css'));
   assert(styles.includes('tree-navigation.css'));
   assert(styles.includes('header-layout.css'));

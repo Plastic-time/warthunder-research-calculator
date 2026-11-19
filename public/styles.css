@@ -167,6 +167,13 @@ button {
   cursor: pointer;
 }
 
+/* Wait for the startup scripts to build and translate the interface. */
+[data-ui-starting] .app-shell,
+[data-ui-starting] .floating-budget {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .app-shell {
   min-height: 100vh;
   display: flex;
