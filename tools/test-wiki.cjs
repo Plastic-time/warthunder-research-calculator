@@ -26,7 +26,7 @@ assert.throws(()=>parseWikiDetail(fixture({rp:'broken value'}),'test'));
 
 function appContext() {
   const context = vm.createContext({
-    document: { documentElement: {}, getElementById: () => ({}), addEventListener() {}, dispatchEvent() {}, querySelectorAll: () => [] },
+    document: { documentElement: { setAttribute() {}, removeAttribute() {} }, getElementById: () => ({}), addEventListener() {}, dispatchEvent() {}, querySelectorAll: () => [] },
     window: { matchMedia: () => ({ matches: false }) },
     localStorage: { getItem: () => null, setItem() {} },
     CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options.detail; } },

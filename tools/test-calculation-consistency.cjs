@@ -10,7 +10,7 @@ const root = path.resolve(__dirname, '..');
 
 function browserCalculator(folder) {
   const context = vm.createContext({
-    document: { documentElement: {}, getElementById: () => ({}), addEventListener() {}, dispatchEvent() {}, querySelectorAll: () => [] },
+    document: { documentElement: { setAttribute() {}, removeAttribute() {} }, getElementById: () => ({}), addEventListener() {}, dispatchEvent() {}, querySelectorAll: () => [] },
     window: { matchMedia: () => ({ matches: false }), ResearchProgress: progress },
     localStorage: { getItem: () => null, setItem() {} }, CustomEvent: class {}, console,
   });
