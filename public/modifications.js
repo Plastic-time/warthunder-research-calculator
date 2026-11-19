@@ -10,6 +10,9 @@
   const rpOutput = document.getElementById("modificationRp");
   const slOutput = document.getElementById("modificationSl");
   const status = document.getElementById("modificationStatus");
+  const brPanel = document.getElementById("modificationBattleRating");
+  const brSelect = brPanel.querySelector("select");
+  const previewLevels = new Map();
   const ui = { data: null, selected: new Set(), researched: new Set(), unlocked: new Set(), result: null, progressRp: Object.create(null), editProgress: false, airCombat: true };
   let catalog = null;
   let catalogPromise = null;
@@ -99,6 +102,7 @@
 
   function normalizeVehicle(raw, chunkKey) {
     const iconPrefix = "https://static.encyclopedia.warthunder.com/gui_skin/";
+    const paidIds = new Set(raw.m.filter(row => row[7] > 0 || row[8] > 0).map(row => row[0]));
     return {
       vehicleId: raw.i,
       branch: chunkKey.endsWith("_aviation") ? "aviation" : "other",
@@ -113,6 +117,9 @@
       mods: raw.m.map(mod => ({
         id: mod[0], category: String(mod[1]), tier: mod[2], column: mod[3],
         name: { zh: mod[4], en: mod[5] }, localizedNames: raw.l?.[mod[0]] || null,
+        autoUnlockWith: raw.autoUnlockWith?.[mod[0]] || (
+          mod[7] === 0 && mod[8] === 0 && mod[10].length === 1 && paidIds.has(mod[10][0]) ? mod[10][0] : null
+        ),
         icon: mod[6].startsWith("http") ? mod[6] : `${iconPrefix}${mod[6]}`,
         artwork: mod[12] || null,
         rp: mod[7], sl: mod[8], ge: mod[9], requires: mod[10], order: mod[11],
@@ -194,7 +201,8 @@
     if (ui.result) return ui.result.tierCounts;
     const counts = { 1: 0, 2: 0, 3: 0, 4: 0 };
     for (const mod of ui.data.mods) {
-      if (ui.unlocked.has(mod.id) || ui.researched.has(mod.id) || ui.selected.has(mod.id)) counts[mod.tier] += 1;
+      if (ui.unlocked.has(mod.id) || ui.researched.has(mod.id) || ui.selected.has(mod.id)
+        || (mod.autoUnlockWith && ui.selected.has(mod.autoUnlockWith))) counts[mod.tier] += 1;
     }
     return counts;
   }
@@ -277,10 +285,39 @@
     }
   }
 
+  function ratingText(level) {
+    const ground = t("陆战 RB {br}", { br: level.ground });
+    return level.air ? t("空战 RB {br}", { br: level.air }) + " · " + ground : ground;
+  }
+
+  function renderBattleRatings() {
+    const id = ui.data.vehicleId;
+    const levels = window.WTCustomBattleRatings[id];
+    brPanel.hidden = !levels;
+    const restricted = new Map();
+    if (!levels) return restricted;
+    const selected = previewLevels.get(id) || 0;
+    brPanel.querySelector("label").textContent = t("分房权重预览");
+    brSelect.replaceChildren(...levels.map((level, index) => new Option(ratingText(level), String(index))));
+    brSelect.value = String(selected);
+    for (const level of levels.slice(selected + 1)) {
+      for (const mod of level.mods) restricted.set(mod, level);
+    }
+    return restricted;
+  }
+
+  brSelect.addEventListener("change", () => {
+    if (dialog.dataset.loadState !== "ready") return;
+    previewLevels.set(ui.data.vehicleId, brSelect.selectedIndex);
+    render();
+  });
+
   function render() {
     if (dialog.dataset.loadState === "loading" || dialog.dataset.loadState === "error") { renderLoadState(); return; }
     if (!ui.data) return;
     const lang = language();
+    ui.unlocked = window.ModificationPlanner.unlockedIds(ui.data.mods, ui.researched);
+    const restricted = renderBattleRatings();
     title.textContent = t("配件研发 - {vehicle}", { vehicle: vehicleName() });
     vehicleImage.alt = vehicleName();
     const categoryOffsets = new Map();
@@ -320,11 +357,17 @@
       const englishName = usable(mod.localizedNames?.en) || (fallback.en ? mod.name.en : usable(names.en)) || mod.name.en;
       const name = usable(mod.localizedNames?.[lang]) || (fallback[lang] ? mod.name[lang] || mod.name.en : usable(names[lang])) || mod.name[lang] || englishName;
       const titleText = `${name} / ${englishName}\n${unlocked ? t("已解锁") : `${t("总计 {count} RP", { count: format(mod.rp) })} · ${format(mod.sl)} SL\n${t("剩余 {count} RP", { count: format(remainingRp) })}\n${t(ui.editProgress ? "研发进度" : "左键：目标 · 右键：已研发")}`}`;
+      const threshold = restricted.get(mod.id);
+      const reason = threshold ? t("装备需要 {rating}", { rating: ratingText(threshold) }) : "";
+      const parent = mod.autoUnlockWith && !unlocked && ui.data.mods.find(item => item.id === mod.autoUnlockWith);
+      const grant = parent ? t("随 {name} 解锁", { name: parent.localizedNames?.[lang] || localizedNames[parent.id]?.[lang] || parent.name[lang] || parent.name.en }) : "";
+      const thresholdLabel = (threshold ? `<small class="modification-br-lock">${escape(reason)}</small>` : "")
+        + (grant ? `<small class="modification-grant">${escape(grant)}</small>` : "");
       return `
-        <button class="modification-tile ${stateName}${isPlanned ? " is-planned" : ""}${invested ? " has-progress" : ""}" type="button"
-          data-mod-id="${escape(mod.id)}" style="grid-column:${column};grid-row:${mod.tier + 1}" title="${escape(titleText)}"${unlocked || (ui.editProgress && (mod.rp <= 0 || ui.researched.has(mod.id))) ? " disabled" : ""}>
+        <button class="modification-tile ${stateName}${isPlanned ? " is-planned" : ""}${invested ? " has-progress" : ""}${threshold ? " br-restricted" : ""}" type="button"
+          data-mod-id="${escape(mod.id)}" style="grid-column:${column};grid-row:${mod.tier + 1}" title="${escape(reason ? reason + "\n" + titleText : titleText)}"${unlocked || (ui.editProgress && (mod.rp <= 0 || ui.researched.has(mod.id))) ? " disabled" : ""}>
           ${renderIcon(mod)}
-          <span class="modification-tile-copy"><b>${escape(name)}</b><small>${unlocked ? `✓ ${escape(t("已解锁"))}` : `${format(remainingRp)} RP · ${format(mod.sl)} SL`}</small>${invested && !ui.researched.has(mod.id) ? `<small class="modification-rp-progress" title="${escape(t("总计 {count} RP", { count: format(mod.rp) }))}">${escape(t("剩余 {count} RP", { count: format(remainingRp) }))}</small>` : ""}</span>
+          <span class="modification-tile-copy"><b>${escape(name)}</b><small>${unlocked ? `✓ ${escape(t("已解锁"))}` : `${format(remainingRp)} RP · ${format(mod.sl)} SL`}</small>${thresholdLabel}${invested && !ui.researched.has(mod.id) ? `<small class="modification-rp-progress" title="${escape(t("总计 {count} RP", { count: format(mod.rp) }))}">${escape(t("剩余 {count} RP", { count: format(remainingRp) }))}</small>` : ""}</span>
           ${stateName && !unlocked ? `<span class="modification-state">${stateName === "researched" ? "✓ " : ""}${escape(stateLabel(mod))}</span>` : ""}
         </button>`;
     });
@@ -404,6 +447,7 @@
     vehicleImage.style.visibility = blocked ? "hidden" : "";
     dialog.querySelectorAll("[data-modification-action], [data-modification-mode], [data-modification-air-combat]").forEach(control => { control.disabled = blocked; });
     if (blocked) {
+      brPanel.hidden = true;
       rpOutput.textContent = slOutput.textContent = "—";
       renderLoadState();
     }
@@ -504,7 +548,7 @@
     if (!tile) return;
     event.preventDefault();
     const id = tile.dataset.modId;
-    if (ui.unlocked.has(id)) return;
+    if (ui.unlocked.has(id) || ui.data.mods.find(mod => mod.id === id)?.autoUnlockWith) return;
     dismissUndo();
     if (ui.researched.has(id)) ui.researched.delete(id);
     else { ui.researched.add(id); ui.selected.delete(id); }

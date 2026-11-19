@@ -9,7 +9,13 @@ const root = path.resolve(__dirname, '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file)));
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const catalog = read('docs/database/modifications/catalog.json');
-const vehicle = id => read('docs/' + catalog.chunks[catalog.vehicles[id]].path).v[id];
+const vehicle = id => {
+  const current = read('docs/' + catalog.chunks[catalog.vehicles[id]].path).v[id];
+  const later = require('./fixtures/modification-roster-261-previous.json').vehicles[id];
+  if (!later) return current;
+  assert.equal(sha(JSON.stringify(current) + '\n'), later.afterHash);
+  return later.before;
+};
 
 test('all six updated vehicles match explicit game costs, visible membership and real prerequisites', () => {
   for (const [id, entry] of Object.entries(evidence.vehicles)) {
@@ -70,7 +76,7 @@ test('every untouched vehicle, chunk and historical correction is preserved byte
     assert.equal(sha(JSON.stringify(chunk)+'\n'),evidence.previousChunks[key].sha256,key);
   }
   assert.equal(sha(JSON.stringify(restoreCatalog(require('./aircraft-addition-snapshot.cjs').restoreCatalog(catalog)))+'\n'),evidence.catalogSha256);
-  assert.equal(catalog.stats.modifications,evidence.previousModificationCount+3+181+4);
+  assert.equal(catalog.stats.modifications,evidence.previousModificationCount+3+181+4+54-19);
 });
 
 test('updater is deterministic and rejects changed baselines, unknown prices and missing prerequisites', () => {

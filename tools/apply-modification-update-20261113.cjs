@@ -41,6 +41,13 @@ function correctVehicle(vehicle) {
 }
 function restoreChunk(value) {
   const result = structuredClone(value);
+  const later = require('./fixtures/modification-roster-261-previous.json');
+  for (const [id, entry] of Object.entries(later.vehicles)) if (result.v[id]) {
+    const current = result.v[id];
+    if (JSON.stringify(current) === JSON.stringify(entry.before)) continue;
+    assert.equal(crypto.createHash('sha256').update(JSON.stringify(current)+'\n').digest('hex'), entry.afterHash, id);
+    result.v[id] = structuredClone(entry.before);
+  }
   for (const [id,entry] of Object.entries(fixture.vehicles)) if(result.v[id]) {
     assert.deepEqual(result.v[id],correctVehicle(entry.previous));
     result.v[id] = structuredClone(entry.previous);
@@ -49,6 +56,12 @@ function restoreChunk(value) {
 }
 function restoreCatalog(value) {
   const result = structuredClone(value);
+  if (result.modificationRosterReview) {
+    const later = require('./fixtures/modification-roster-261-previous.json');
+    Object.assign(result.chunks, later.chunks);
+    result.stats.modifications = later.count;
+    delete result.modificationRosterReview;
+  }
   for (const id of vehicleIds) {
     assert.deepEqual(result.corrections[id],correction);
     if(fixture.previousCorrections[id]) result.corrections[id]=fixture.previousCorrections[id];

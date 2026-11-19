@@ -142,6 +142,31 @@ async function run() {
           if (locale === 'en') await page.screenshot({ path: path.join(output, `${mode}-${width}-guide.png`) });
           await page.evaluate(() => document.getElementById('usageGuideDialog').close());
         }
+        await page.evaluate(async () => {
+          setLanguage('en');
+          els.countrySelect.value = 'china';
+          els.typeSelect.value = 'helicopters';
+          await loadTree();
+        });
+        assert.equal(await page.locator('[data-unit-id="z_9wa"] [data-unit-br]').innerText(), 'Ground RB 10.3–11.3');
+        await page.locator('[data-modifications-id="z_9wa"]').click();
+        const level = page.locator('#modificationBrLevel');
+        await level.waitFor();
+        assert.deepEqual(await level.locator('option').allTextContents(), ['Ground RB 10.3', 'Ground RB 11.0', 'Ground RB 11.3']);
+        const restricted = page.locator('.modification-tile.br-restricted');
+        assert.equal(await restricted.count(), 2);
+        await page.locator('[data-mod-id="cn_ty_90"]').click();
+        const budget = await page.locator('#modificationRp').textContent();
+        await level.selectOption('1');
+        assert.equal(await restricted.count(), 1);
+        assert.equal(await restricted.getAttribute('data-mod-id'), 'cn_akd_9');
+        await level.selectOption('2');
+        assert.equal(await restricted.count(), 0);
+        assert.equal(await page.locator('#modificationRp').textContent(), budget);
+        await page.evaluate(() => ModificationWorkbench.open('a_10a_early'));
+        assert.equal(await level.locator('option').first().textContent(), 'Air RB 9.0 · Ground RB 9.7');
+        await page.evaluate(() => ModificationWorkbench.open('j_16'));
+        assert(await level.isHidden());
         assert.deepEqual(errors, []);
         results.push({ mode, width, br, correctedAircraft: verified, warmCache: true, plansPreserved: true, locales: 7 });
       } finally { await context.close(); }

@@ -3,6 +3,7 @@ const crypto = require("node:crypto");
 const fs = require("node:fs");
 const path = require("node:path");
 const planner = require("../docs/modification-planner.js");
+require("./test-modification-roster-261.cjs");
 require("./test-modification-requirements.cjs");
 require("./test-air-combat-planning.cjs");
 require("./test-prerequisite-audit.cjs");
@@ -37,7 +38,7 @@ const publicCatalogPath = path.join(publicRoot, "catalog.json");
 assert.deepEqual(fs.readFileSync(docsCatalogPath), fs.readFileSync(publicCatalogPath), "Catalog copies differ");
 const catalog = readJson(docsCatalogPath);
 assert.equal(catalog.schema, 2);
-assert.deepEqual(catalog.stats, { treeUnits: 3247, vehicles: 3237, modifications: 52662, chunks: 44 });
+assert.deepEqual(catalog.stats, { treeUnits: 3247, vehicles: 3237, modifications: 52697, chunks: 44 });
 assert.equal(Object.keys(catalog.vehicles).length, catalog.stats.vehicles);
 assert.equal(Object.keys(catalog.chunks).length, catalog.stats.chunks);
 

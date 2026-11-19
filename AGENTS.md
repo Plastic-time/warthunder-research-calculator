@@ -54,6 +54,11 @@ the `guizang-ppt-skill/SKILL.md` file under the user's local Codex skills direct
   revision; do not treat a partial correction as a full snapshot upgrade.
 - Wiki is supplementary for names, images, and layout. Do not let Wiki costs,
   prerequisite edges, or obsolete modification entries override game data.
+- On game updates, audit every shipped modification tree against the pinned
+  live configuration with `node tools/audit-modification-membership.cjs <source-dir>`.
+  Reconcile missing and obsolete visible IDs before generating BR profiles.
+  Every BR restriction needs a real modification tile. Check free modules that
+  unlock with a parent separately from pre-unlocked premium modules.
 - Missing or conflicting game fields require review. Do not silently fill them
   from Wiki, interpret missing costs as zero, or expose internal-only prices as
   player purchase costs without verifying availability and currency semantics.

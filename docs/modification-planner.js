@@ -4,7 +4,15 @@
   else root.ModificationPlanner = api;
 })(typeof globalThis === "object" ? globalThis : this, function createModificationPlanner(progress) {
   function isAutomaticallyUnlocked(mod) {
-    return mod.rp === 0 && mod.sl === 0;
+    return mod.rp === 0 && mod.sl === 0 && !mod.autoUnlockWith;
+  }
+
+  function unlockedIds(mods, researched) {
+    const ids = new Set(mods.filter(isAutomaticallyUnlocked).map(mod => mod.id));
+    for (const mod of mods) {
+      if (mod.autoUnlockWith && (researched.has(mod.autoUnlockWith) || ids.has(mod.autoUnlockWith))) ids.add(mod.id);
+    }
+    return ids;
   }
 
   // Explicit module IDs, not translated warning-system names or artwork.
@@ -35,7 +43,7 @@
     const progressRp = progress.cleanMap(savedProgress);
     const remaining = mod => progress.remaining(mod.rp, progressRp[mod.id]);
     const byId = new Map(data.mods.map(mod => [mod.id, mod]));
-    const unlocked = new Set(data.mods.filter(isAutomaticallyUnlocked).map(mod => mod.id));
+    const unlocked = unlockedIds(data.mods, new Set(researchedIds));
     const selected = new Set(selectedIds.filter(id => byId.has(id) && !unlocked.has(id)));
     const manuallyResearched = new Set(researchedIds.filter(id => byId.has(id) && !unlocked.has(id)));
     const researched = new Set([...manuallyResearched, ...unlocked]);
@@ -58,7 +66,8 @@
     for (const id of selected) includeWithDependencies(id, "target");
 
     function countTier(tier, extra = new Set()) {
-      return data.mods.filter(mod => mod.tier === tier && (researched.has(mod.id) || included.has(mod.id) || extra.has(mod.id))).length;
+      return data.mods.filter(mod => mod.tier === tier && (researched.has(mod.id) || included.has(mod.id) || extra.has(mod.id)
+        || (mod.autoUnlockWith && (included.has(mod.autoUnlockWith) || extra.has(mod.autoUnlockWith))))).length;
     }
 
     function expansionFor(id) {
@@ -127,5 +136,5 @@
     };
   }
 
-  return { plan, isAutomaticallyUnlocked, countermeasureCandidates };
+  return { plan, isAutomaticallyUnlocked, unlockedIds, countermeasureCandidates };
 });
