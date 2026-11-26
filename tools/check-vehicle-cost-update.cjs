@@ -11,18 +11,25 @@ const evidence = require('../config/vehicle-cost-update.json');
 const manifest = require('../docs/database/manifest.json');
 const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'logs/vehicle-cost-update');
-const file = 'database/japan/japan_aviation.json';
-const tree = require('../docs/' + file);
 const historical = require('./aircraft-addition-snapshot.cjs');
-const legacyTree = restoreCosts(restoreCorrection(historical.restoreTree(tree)));
-assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(legacyTree, null, 2) + '\n').digest('hex'), evidence.trees[file]);
+const { createHash } = require('node:crypto');
 
 async function run() {
   fs.mkdirSync(output, { recursive: true });
   let legacy = true;
   const app = express();
-  app.get('/api/tree/japan/aviation', (req, res, next) => legacy
-    ? res.set('Cache-Control', 'no-store').json({ success: true, data: legacyTree }) : next());
+  for (const [file, expectedHash] of Object.entries(evidence.trees)) {
+    const current = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
+    const oldTree = restoreCosts(restoreCorrection(historical.restoreTree(JSON.parse(current))));
+    const oldBytes = JSON.stringify(oldTree, null, 2) + '\n';
+    assert.equal(createHash('sha256').update(oldBytes).digest('hex'), expectedHash, file);
+    app.get('/pages/' + file, (req, res) => res.set('Cache-Control', 'public, max-age=31536000')
+      .type('json').send(legacy ? oldBytes : current));
+    if (file === 'database/japan/japan_aviation.json') {
+      app.get('/api/tree/japan/aviation', (req, res, next) => legacy
+        ? res.set('Cache-Control', 'no-store').json({ success: true, data: oldTree }) : next());
+    }
+  }
   app.get('/pages/database/manifest.json', (req, res) => {
     const value = legacy ? historical.restoreManifest(manifest) : structuredClone(manifest);
     if (legacy) {
@@ -32,8 +39,6 @@ async function run() {
     }
     res.set('Cache-Control', 'public, max-age=31536000').json(value);
   });
-  app.get('/pages/' + file, (req, res) => res.set('Cache-Control', 'public, max-age=31536000')
-    .type('json').send(JSON.stringify(legacy ? legacyTree : tree, null, 2) + '\n'));
   app.use('/pages', express.static(path.join(root, 'docs')));
   app.use(require('../main'));
   const server = app.listen(0, '127.0.0.1'); await once(server, 'listening');
