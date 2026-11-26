@@ -69,13 +69,15 @@ async function releaseChannels(reader, headVersion) {
     channels[channel] = version;
   }
   // The filename describes the diff topic; its current-channel footer may name a newer build.
-  assert(Object.values(channels).includes(headVersion), 'Repository head has no declared channel');
   const maintainer = {
     type: 'datamine-maintainer-gist', revision, filename,
     url: `https://gist.github.com/gszabi99/${latest.id}/${revision}`,
     limitation: 'Maintainer channel declarations, not an official game availability guarantee.',
   };
   const official = await officialRelease(reader);
+  // Channel notes can lag master. An official release can still be pinned in its history.
+  assert(Object.values(channels).includes(headVersion) || compareVersions(official.version, channels['regular-live']) >= 0,
+    'Undeclared repository head and unconfirmed regular live version');
   if (compareVersions(official.version, channels['regular-live']) > 0) {
     const declared = { ...channels };
     channels['regular-live'] = official.version;

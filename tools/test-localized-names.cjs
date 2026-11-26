@@ -41,7 +41,7 @@ assert.equal(docs.names.beaufighter_group.en, 'Beaufighter');
 assert.equal(docs.names.j_7d.zh, '歼-7D');
 assert.equal(docs.names.su_30mkk.zh, '␗苏-30MKK');
 assert(docs.translated > 2000);
-assert.equal(docs.count, 3645);
+assert.equal(docs.count, 3678);
 assert.equal(docs.sourceSha256, 'dcb65aaa40cbf3279b2e77140300b5750858fa3db6b5e6a77fedef882e146788');
 
 const modifications = read('docs/modification-names.json');
@@ -70,7 +70,7 @@ for (const [kind, payload] of [['vehicle', docs], ['modification', modifications
   for (const language of languages) {
     const coverage = payload.coverage.languages[language];
     assert.equal(coverage.source + coverage.englishFallback + coverage.existingFallback + coverage.idFallback, payload.count);
-    assert.equal(coverage.source, kind === 'vehicle' ? 3645 : 1320);
+    assert.equal(coverage.source, kind === 'vehicle' ? 3678 : 1320);
     assert.equal(coverage.englishFallback, 0);
     assert.equal(coverage.existingFallback, kind === 'vehicle' ? 0 : 507);
     assert.equal(coverage.idFallback, kind === 'vehicle' ? 0 : 84);
@@ -94,8 +94,12 @@ for (const chunk of Object.values(catalog.chunks)) {
         const reviewed = require('./fixtures/modification-update-20261029.json');
         const aircraft = require('../config/eagles-shadow-aircraft.json').units.find(c => c.id === vehicle.i);
         const current = require('./fixtures/modification-update-20261113.json').vehicles[vehicle.i]?.entries.find(e=>e.id===mod[0]);
-        const later = require('./fixtures/modification-roster-261-previous.json').vehicles[vehicle.i];
-        if (later && !later.before.m.some(row => row[0] === mod[0])) {
+        const later = require('./fixtures/naval-modifications-26142-previous.json').vehicles[vehicle.i]
+          || require('./fixtures/modification-roster-261-previous.json').vehicles[vehicle.i];
+        if (catalog.rosterUpdate.ids.includes(vehicle.i)) {
+          assert.equal(vehicle.gameSource.commit, catalog.rosterUpdate.commit);
+          assert.deepEqual([vehicle.l[mod[0]].zh, vehicle.l[mod[0]].en], mod.slice(4, 6));
+        } else if (later && !later.before.m.some(row => row[0] === mod[0])) {
           assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(vehicle) + '\n').digest('hex'), later.afterHash);
         } else {
           assert(reviewed.vehicles[vehicle.i] || aircraft || current, 'Unreviewed vehicle-local name');

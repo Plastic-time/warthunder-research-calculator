@@ -851,10 +851,8 @@
         "germ_pzkpfw_V_ausf_a_panther": "germ_pzkpfw_V_ausf_d_panther",
         "germ_pzkpfw_V_ausf_g_panther": "germ_pzkpfw_V_ausf_a_panther",
         "germ_pzkpfw_V_ausf_f_panther": "germ_pzkpfw_V_ausf_g_panther",
-        "germ_leopard_I": "germ_pzkpfw_V_a_f_group",
-        "germ_leopard_1_late_group": "germ_leopard_I",
-        "germ_leopard_I_a1": "germ_leopard_I",
-        "germ_leopard_1a5": "germ_leopard_I_a1",
+        "germ_leopard_1_late_group": "germ_leopard_i",
+        "germ_leopard_1a5": "germ_leopard_i_a1",
         "germ_leopard_2a4": "germ_leopard_1_late_group",
         "germ_leopard_2_group": "germ_leopard_2a4",
         "germ_leopard_2a5": "germ_leopard_2a4",
@@ -986,7 +984,10 @@
         "germ_th_400": "germ_th_800_bismark",
         "germ_leopard_2av": "germ_th_400",
         "germ_leopard_2_pt14": "germ_leopard_2av",
-        "germ_leopard_2a4_pzbtl_123": "germ_leopard_2_pt14"
+        "germ_leopard_2a4_pzbtl_123": "germ_leopard_2_pt14",
+        "germ_leopard_2a8": "germ_leopard_2a7v",
+        "germ_leopard_i": "germ_pzkpfw_v_a_f_group",
+        "germ_leopard_i_a1": "germ_leopard_i"
       },
       "groups": {
         "germ_pzkpfw_38t_group": [
@@ -1322,7 +1323,7 @@
         "arado-196a-3": "he51b_2w",
         "bf-109c_1_promo": "arado-196a-3",
         "fw-189a-1": "bf-109c_1_promo",
-        "fokker_d7": "fw-189a-1",
+        "fokker_d7": "",
         "zeppelin": "fokker_d7",
         "wellington_mk1c_luftwaffe": "zeppelin",
         "he_112b_2": "wellington_mk1c_luftwaffe",
@@ -1575,7 +1576,8 @@
         "germ_battleship_baden": "germ_battleship_gneisenau_380mm",
         "germ_destroyer_class1939_t31": "",
         "germ_destroyer_class1936a_z25": "germ_destroyer_class1939_t31",
-        "germ_battlecruiser_mackensen_class": "germ_destroyer_class1936a_z25"
+        "germ_battlecruiser_mackensen_class": "germ_destroyer_class1936a_z25",
+        "germ_battleship_pr_h39": "germ_battleship_bismarck"
       },
       "groups": {
         "germ_cruiser_leipzig_nurnberg_group": [
@@ -1745,7 +1747,7 @@
         "ussr_btr_82at": "ussr_it_9p149_group",
         "ussr_object_775": "ussr_btr_82at",
         "ussr_9p157": "ussr_object_775",
-        "ussr_bmpt": "ussr_9p157",
+        "ussr_bmpt": "ussr_775_157_group",
         "ussr_gaz_4m": "",
         "ussr_gaz_dshk": "ussr_gaz_4m",
         "ussr_gaz_mm_72k": "ussr_gaz_dshk",
@@ -1847,7 +1849,8 @@
         "ussr_t_80u_yt_cup_2019": "ussr_t_72b3_arena",
         "ussr_t_80um2": "ussr_t_80u_yt_cup_2019",
         "ussr_t_80uk": "ussr_t_80um2",
-        "ussr_t_80u_race": "ussr_t_80uk"
+        "ussr_t_80u_race": "ussr_t_80uk",
+        "ussr_btr_90_2004": "ussr_object_775"
       },
       "groups": {
         "ussr_t_34_40_41_group": [
@@ -2419,7 +2422,8 @@
         "ussr_cruiser_omaha_class_murmansk": "ussr_destroyer_7y_stroyny",
         "ussr_destroyer_pr41_neustrashimy": "ussr_cruiser_omaha_class_murmansk",
         "ussr_cruiser_voroshilov": "ussr_destroyer_pr41_neustrashimy",
-        "ussr_cruiser_maxim_gorky": "ussr_cruiser_voroshilov"
+        "ussr_cruiser_maxim_gorky": "ussr_cruiser_voroshilov",
+        "ussr_battleship_imperator_nikolai_pervyi": "ussr_battleship_imperatritsa_mariya"
       },
       "groups": {
         "ussr_cruiser_chapaev_kutuzov_group": [
@@ -3122,7 +3126,7 @@
         "uk_battleship_rodney": "uk_battleship_centurion",
         "uk_battleship_prince_of_wales": "uk_battleship_rodney",
         "uk_destroyer_clemson_churchill": "",
-        "uk_minelayer_abdiel_class_abdiel": "uk_destroyer_clemson_churchill",
+        "uk_minelayer_abdiel_class_abdiel": "uk_egret_class",
         "uk_cruiser_enterprise_d52": "uk_minelayer_abdiel_class_abdiel",
         "uk_cruiser_hawkins": "uk_cruiser_enterprise_d52",
         "uk_cruiser_kent_norfolk_group": "uk_cruiser_hawkins",
@@ -3149,7 +3153,8 @@
         "uk_destroyer_clemson_montgomery_g95": "",
         "uk_destroyer_g_garland": "uk_destroyer_clemson_montgomery_g95",
         "uk_destroyer_battle_cadiz": "uk_destroyer_g_garland",
-        "uk_cruiser_tiger": "uk_destroyer_battle_cadiz"
+        "uk_cruiser_tiger": "uk_destroyer_battle_cadiz",
+        "uk_cruiser_danae_class": "uk_minelayer_abdiel_class_abdiel"
       },
       "groups": {
         "uk_destroyer_battle_group": [
@@ -3307,7 +3312,8 @@
         "jp_type_3_ka_chi": "",
         "jp_type_97_kai_td": "jp_type_3_ka_chi",
         "jp_type_81_tansam_launcher": "jp_type_97_kai_td",
-        "jp_type_03_chusam_launcher": "jp_type_81_tansam_launcher"
+        "jp_type_03_chusam_launcher": "jp_type_81_tansam_launcher",
+        "jp_bmp_3f": "jp_type_87_rcv"
       },
       "groups": {
         "jp_type_60_group": [
@@ -3685,7 +3691,8 @@
         "jp_destroyer_suzutsuki": "jp_destroyer_yuudachi",
         "jp_armoredcruiser_kurama": "jp_destroyer_suzutsuki",
         "jp_battlecruiser_haruna": "jp_armoredcruiser_kurama",
-        "jp_battleship_tosa": "jp_battlecruiser_haruna"
+        "jp_battleship_tosa": "jp_battlecruiser_haruna",
+        "jp_cruiser_takao": "jp_cruiser_haguro"
       },
       "groups": {
         "jp_cruiser_furutaka_aoba_group": [
@@ -3818,8 +3825,8 @@
         "cn_ptl_aft_group": "cn_cm_ptz_group",
         "cn_ptl_02": "cn_cm_ptz_group",
         "cn_hj_9": "cn_ptl_02",
-        "cn_cm_34": "cn_ptl_aft_group",
-        "cn_ztl_11": "cn_cm_34",
+        "cn_cm_34": "",
+        "cn_ztl_11": "cn_cm_zbd_group",
         "cn_zbd_04a": "cn_ztl_11",
         "cn_t_26_no531": "",
         "cn_m3a3_stuart_1st_ptg": "cn_t_26_no531",
@@ -3845,7 +3852,9 @@
         "cn_t_62": "cn_plz_83_130",
         "cn_ztz_96a_race": "cn_t_62",
         "cn_t_80ud_478be": "cn_ztz_96a_race",
-        "cn_al_khalid_1": "cn_t_80ud_478be"
+        "cn_al_khalid_1": "cn_t_80ud_478be",
+        "cn_cm_zbd_group": "cn_ptl_aft_group",
+        "cn_zbd_04": "cn_cm_34"
       },
       "groups": {
         "cn_m3_m5_stuart_group": [
@@ -4198,7 +4207,9 @@
         "it_fiat_6614_firos": "it_breda_52_autocannone",
         "it_aubl_74_60_70m": "it_fiat_6614_firos",
         "it_c13_tua": "it_aubl_74_60_70m",
-        "it_freccia_hitfist_ows": "it_c13_tua"
+        "it_freccia_hitfist_ows": "it_c13_tua",
+        "it_v_4_straussler": "it_39m_csaba",
+        "it_lancia_flak38": "it_fiat_cm52"
       },
       "groups": {
         "it_fiat_group": [
@@ -4471,7 +4482,8 @@
         "a_129_d": "a_129_cbt",
         "t_129_atak": "",
         "mi_24p_hungary": "t_129_atak",
-        "a_129_a": "mi_24p_hungary"
+        "a_129_a": "mi_24p_hungary",
+        "aw_249_pre_serie": "a_129_d"
       },
       "groups": {}
     },
@@ -4621,8 +4633,8 @@
         "fr_amx_13_dca_40": "fr_amx_vtt_dca",
         "fr_tpk_641_vpc": "fr_amx_13_dca_40",
         "fr_amx_10p": "fr_tpk_641_vpc",
-        "fr_amx_30_dca": "fr_amx_10p",
-        "fr_vab_santal": "fr_amx_30_dca",
+        "fr_amx_30_dca": "",
+        "fr_vab_santal": "fr_dca_prtl_group",
         "fr_amx_30_roland": "fr_vab_santal",
         "fr_crotale_ng": "fr_amx_30_roland",
         "fr_samp_t_fcs": "fr_crotale_ng",
@@ -4666,7 +4678,9 @@
         "fr_panhard_ebr_1963": "fr_m46_patton",
         "fr_amx_50_surblinde": "fr_panhard_ebr_1963",
         "fr_amx_50_1950": "fr_amx_50_surblinde",
-        "fr_samp_t_launcher": "fr_amx_50_1950"
+        "fr_samp_t_launcher": "fr_amx_50_1950",
+        "fr_dca_prtl_group": "fr_amx_10p",
+        "fr_prtl": "fr_amx_30_dca"
       },
       "groups": {
         "fr_hotchkiss_fcm_group": [
@@ -4962,7 +4976,8 @@
         "fr_cruiser_dugauy_class_dugauy_trouin": "fr_destroyer_le_fantasque_class_le_triomphant",
         "fr_cruiser_suffren_class_dupleix": "fr_cruiser_dugauy_class_dugauy_trouin",
         "fr_battleship_courbet_class_courbet": "fr_cruiser_suffren_class_dupleix",
-        "fr_battleship_strasbourg": "fr_battleship_courbet_class_courbet"
+        "fr_battleship_strasbourg": "fr_battleship_courbet_class_courbet",
+        "fr_destroyer_le_hardi_class_le_hardi": "fr_destroyer_mogador_class_mogador"
       },
       "groups": {}
     },
@@ -4992,7 +5007,8 @@
         "fr_arras_class_amiens": "fr_vtb9",
         "fr_marne_class_aisne": "fr_arras_class_amiens",
         "fr_vlt2": "fr_marne_class_aisne",
-        "fr_frigate_corse_class_corse": "fr_vlt2"
+        "fr_frigate_corse_class_corse": "fr_vlt2",
+        "fr_vc1": "fr_type40k_vedette"
       },
       "groups": {
         "fr_vtb_group": [
@@ -5109,7 +5125,8 @@
         "sw_k9_vidar": "sw_kv_1_1942_fin",
         "sw_bmp_2md": "sw_k9_vidar",
         "sw_patria_amv_ctcv_105": "sw_bmp_2md",
-        "sw_nasams_launcher": "sw_patria_amv_ctcv_105"
+        "sw_nasams_launcher": "sw_patria_amv_ctcv_105",
+        "sw_leopard_2a8no": "sw_strv_122b_plus"
       },
       "groups": {
         "sw_cv_90_ifv_group": [

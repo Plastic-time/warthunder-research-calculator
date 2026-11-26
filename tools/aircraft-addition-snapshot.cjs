@@ -1,8 +1,9 @@
 // Remove only the checked additions when comparing immutable historical snapshots.
 const assert = require('node:assert/strict');
 const fixture = require('../config/eagles-shadow-aircraft.json');
+const rosterUpdate = require('./roster-snapshot-26142.cjs');
 function restoreTree(value) {
-  const tree = structuredClone(value);
+  const tree = rosterUpdate.restoreTree(value);
   for (const rank of tree) for (const section of ['researchable_vehicles', 'premium_vehicles']) {
     if (!rank[section]) continue;
     rank[section] = rank[section].map(column => column.filter(unit => {
@@ -22,14 +23,14 @@ function restoreCatalog(value) {
   return result;
 }
 function restoreManifest(value) {
-  const result = structuredClone(value);
+  const result = rosterUpdate.restoreManifest(value);
   if (!result.eaglesShadowAircraft) return result;
   delete result.eaglesShadowAircraft; result.unit_count -= fixture.units.length; result.unique_units -= fixture.units.length;
   result.files = result.files.map(f => fixture.previous.manifestFiles.find(p => p.path === f.path) || f);
   return result;
 }
 function restoreRoster(value) {
-  const result = structuredClone(value);
+  const result = rosterUpdate.restoreRoster(value);
   for (const c of fixture.units) {
     const tree = result.trees[c.country + '/aviation'];
     if (!tree.units[c.id]) continue;

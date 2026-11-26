@@ -981,6 +981,62 @@
       [
         {
           "type": "single",
+          "title": "HMS Danae",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_cruiser_danae_class.png",
+          "br": "4.7",
+          "rp": 18000,
+          "sp": 55000,
+          "data_unit_id": "uk_cruiser_danae_class",
+          "required_unit_id": "uk_minelayer_abdiel_class_abdiel",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "III",
+          "research_country": "Great Britain",
+          "main_role": "Light cruiser",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/uk_cruiser_danae_class",
+            "rank": "III",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "4.7",
+              "RB": "4.7"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "4.7",
+                "RB": "4.7"
+              }
+            },
+            "research": "18,000",
+            "purchase": "55,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "4.7",
+                "RB": "4.7",
+                "SB": "4.7"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
+          }
+        },
+        {
+          "type": "single",
           "title": "HMS Enterprise",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_cruiser_enterprise_d52.png",
           "br": "5.0",
@@ -2411,7 +2467,68 @@
           }
         }
       ],
-      []
+      [
+        {
+          "type": "single",
+          "title": "HMS Duke of York",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_battleship_duke_of_york.png",
+          "br": "8.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "uk_battleship_duke_of_york",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "VI",
+          "research_country": "Great Britain",
+          "main_role": "Battleship",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/uk_battleship_duke_of_york",
+            "rank": "VI",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "8.0",
+              "RB": "8.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "8.0",
+                "RB": "8.0"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": "Premium vehicle"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "8.0",
+                "RB": "8.0",
+                "SB": "8.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/news/10323-meet-the-eagles-shadow-major-update-en",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "pack",
+              "url": "https://warthunder.com/en/news/10323-meet-the-eagles-shadow-major-update-en"
+            }
+          }
+        }
+      ]
     ],
     "selected": [],
     "unlock_quantity": null,

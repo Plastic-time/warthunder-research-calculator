@@ -486,6 +486,64 @@
               }
             }
           }
+        },
+        {
+          "type": "single",
+          "title": "AW249 Fenice",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/aw_249_pre_serie.png",
+          "br": "13.3",
+          "rp": 410000,
+          "sp": 1040000,
+          "data_unit_id": "aw_249_pre_serie",
+          "required_unit_id": "a_129_d",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "VII",
+          "research_country": "Italy",
+          "main_role": "Attack helicopter",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/aw_249_pre_serie",
+            "rank": "VII",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "13.3",
+              "RB": "13.3",
+              "SB": "11.7"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "11.7"
+              }
+            },
+            "research": "410,000",
+            "purchase": "1,040,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "11.7"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
+          }
         }
       ]
     ],

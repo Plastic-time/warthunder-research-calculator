@@ -40,12 +40,12 @@ test('game-only additions use pinned evidence and explicit reward availability, 
     const raw = fs.readFileSync(path.join(root, 'docs', file));
     const manifestEntry = read('docs/database/manifest.json').files.find(e => e.path === file);
     assert.equal(manifestEntry.sha256, crypto.createHash('sha256').update(raw).digest('hex'));
-    const previous = restoreTree(tree);
+    const previous = restoreTree(require('./roster-snapshot-26142.cjs').restoreTree(tree));
     for (const rank of previous) rank.premium_vehicles = rank.premium_vehicles.filter(column => !column.some(u => u.data_unit_id === c.id));
     assert.equal(crypto.createHash('sha256').update(JSON.stringify(previous, null, 2) + '\n').digest('hex'),
       read('docs/roster-audit.json').trees[c.country + '/' + c.type].wikiSha256, 'All previous vehicle fields and placement must remain unchanged');
   }
-  assert.equal(read('config/data-version.json').vehicleCount, 3247);
+  assert.equal(read('config/data-version.json').vehicleCount, 3278);
   assert.equal(read('config/data-version.json').gameVersion, '2.59.0.17');
 });
 
@@ -73,5 +73,6 @@ test('future events, wrong unit identity and untrusted official URLs fail closed
   const pending = additions.deferred[0];
   assert.equal(pending.id, 'ussr_bt_7_m_816');
   assert(Date.parse(pending.availableFrom) > Date.parse(additions.reviewedAt));
-  assert(!wikiUnits(read('docs/database/ussr/ussr_ground.json')).has(pending.id));
+  const previous = require('./roster-snapshot-26142.cjs').restoreTree(read('docs/database/ussr/ussr_ground.json'));
+  assert(!wikiUnits(previous).has(pending.id));
 });

@@ -4,8 +4,8 @@
   "verified_at": "2026-09-19T06:41:19.929Z",
   "battle_rating_mode": "RB",
   "tree_count": 50,
-  "unit_count": 3247,
-  "unique_units": 3247,
+  "unit_count": 3278,
+  "unique_units": 3278,
   "failures": [],
   "limitations": [
     "Wiki rank unlock counts are unavailable; the calculator retains the existing dict/unlock_quantity.js rules separately from this source snapshot.",
@@ -15,8 +15,8 @@
   "files": [
     {
       "path": "database/usa/usa_ground.json",
-      "units": 154,
-      "sha256": "878b0f701c94253f737c96a3fff3c7db5d5bfcb47e1baa0a6b6c86bd0685c6c7",
+      "units": 156,
+      "sha256": "313b4b60c582f17191d5319c2b3378bbf9ce419e580b6b835c1401058ea7f3fa",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "us_m7"
@@ -25,8 +25,8 @@
     },
     {
       "path": "database/germany/germany_ground.json",
-      "units": 179,
-      "sha256": "16868f252e07884e1d8beef0f24401f74bde2a558fac897915197e0927a4e039",
+      "units": 180,
+      "sha256": "dc0e8855ef4f8b5ef3b5e29e5444ba7ba8dc8dea9911fcc1c7edd6782f4ed195",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "germ_hummel",
@@ -40,8 +40,8 @@
     },
     {
       "path": "database/ussr/ussr_ground.json",
-      "units": 193,
-      "sha256": "acb19b3f5e2ecc676eab7246a29cb6d90e017766f2716cade4f691834f04a19c",
+      "units": 195,
+      "sha256": "473c10ee55eaa556b2817dc10bd1b60ad08e30f80c39d21894eada4e8b13d28e",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "ussr_t_44_kit_4rank",
@@ -54,8 +54,8 @@
     },
     {
       "path": "database/britain/britain_ground.json",
-      "units": 145,
-      "sha256": "a521c7a584459ebf07fa29f6adbeccc9ebded48b80191565d9d77023b5c4f8c6",
+      "units": 146,
+      "sha256": "f6cbcdd8c8db3062327095ac45ea0c7045865b0ac6cbd77859897e9799d6023c",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "uk_fv107_scimitar_mk2",
@@ -68,8 +68,8 @@
     },
     {
       "path": "database/japan/japan_ground.json",
-      "units": 87,
-      "sha256": "038f42355a421f4910396812ce7f405df02543f0a1c1d7b098fc92263caf1b4b",
+      "units": 88,
+      "sha256": "c21be1595f6f9f829f735182085c5fd8d5d7a8476ed384636b61cf95844b7f33",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "jp_harimau",
@@ -80,8 +80,8 @@
     },
     {
       "path": "database/china/china_ground.json",
-      "units": 99,
-      "sha256": "e68e1ca3708be223f6d466d67ef6ff3524fba1bd6c584c0fd3bc23e227e03970",
+      "units": 100,
+      "sha256": "4074de0414346894fc696920dfbe8cd1e5b4362d100d374cca84a9a69e29c3e5",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "cn_plz_45",
@@ -93,8 +93,8 @@
     },
     {
       "path": "database/italy/italy_ground.json",
-      "units": 108,
-      "sha256": "05eb2d815d0899d9e584cc61a25b89f1895d7fe1fc844bd9dfdcca95df67e2ee",
+      "units": 110,
+      "sha256": "b03b43b9b651c01943bfc40e5c3d730a2d7b13836ca523d1816cb2242a91c1c1",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "it_palmaria",
@@ -105,8 +105,8 @@
     },
     {
       "path": "database/france/france_ground.json",
-      "units": 107,
-      "sha256": "44207c0e7808033a61e3f718f09fa3717291e53aa51933b73216b845cdda29c9",
+      "units": 108,
+      "sha256": "b75b4a1db32bee0ba1a20860bbc02e3e3b0a2886733a8fdf2ad7faeb19f9d8a0",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "fr_arl_44_mod",
@@ -117,8 +117,8 @@
     },
     {
       "path": "database/sweden/sweden_ground.json",
-      "units": 96,
-      "sha256": "34e3d595dbc25610c33059b865f0d5bf7a5cbeaaf2ddcdf1896073edb63f0fe0",
+      "units": 99,
+      "sha256": "d3c4d1375695675bc05f0d4ca6227916904f306c5c7ae2ff32d00689a30de298",
       "tree_source_sha256": "331b0c504d2bbdec6174ce12b7c83d98ce1e35464bbaec35c97730fb699bee35",
       "added": [
         "sw_nomads"
@@ -140,8 +140,8 @@
     },
     {
       "path": "database/usa/usa_aviation.json",
-      "units": 201,
-      "sha256": "98ba7917051aa12c4d0149e130c262b98995b09f4da7911aea00c3499179984e",
+      "units": 202,
+      "sha256": "b711fd6f2c87dfe1957d6748e230782b52d8a76bd270304fb1ce2a96593101f9",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "f_102a_late",
@@ -155,8 +155,8 @@
     },
     {
       "path": "database/germany/germany_aviation.json",
-      "units": 187,
-      "sha256": "6af5a9f0f58aa333294a059b5babe4b32adc0aee0de57928de4058b813342816",
+      "units": 189,
+      "sha256": "04147547ad70983d937b0b59c810acf15f8d749696880fa5e9bf7a8acb4c1686",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "fw_189c_0",
@@ -171,7 +171,7 @@
     {
       "path": "database/ussr/ussr_aviation.json",
       "units": 199,
-      "sha256": "92f58d059ea21d664cfae278a1adac888fa3d99698193ffb236fdfaf94c533d3",
+      "sha256": "154d6fde006a27523bd3bdfe9b2086f87aacc46b9509459bbe19de8be7905024",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "mig_35"
@@ -225,8 +225,8 @@
     },
     {
       "path": "database/france/france_aviation.json",
-      "units": 113,
-      "sha256": "70b192e50ecf837014b68fbf4d2de79d4a0673876d41936f395c32faf00c1e17",
+      "units": 114,
+      "sha256": "0f736136d24496e1030735e2f46790839e6816ac329202d3841151a180b5e0d8",
       "tree_source_sha256": "94a627c1d5d0aa005d0ea07c0835062db6c9a91b77f43b8dcc56eed5406f4b99",
       "added": [
         "se_203"
@@ -320,8 +320,8 @@
     },
     {
       "path": "database/italy/italy_helicopters.json",
-      "units": 9,
-      "sha256": "2020ce189ee0a265677dc6e51ce542a10b403ba71eb561d6477e7994b90bd266",
+      "units": 10,
+      "sha256": "96fed0e8fa77bf9552648aba1fc616fb370f68e6a43687e4cd70d819a33aae5e",
       "tree_source_sha256": "add4e859794427b969aa615da05494132ebb9a5e1ad285e225c0cabed58f0d0d",
       "added": [],
       "removed": []
@@ -352,8 +352,8 @@
     },
     {
       "path": "database/usa/usa_ships.json",
-      "units": 56,
-      "sha256": "d0539e37c8ff48bc7e2ba29e40c7d1f374152d38c895604c77914abc3032e3fb",
+      "units": 57,
+      "sha256": "8b73220824f9bfb99d97bea079e95e698ea02eadb7d2eedd90abfb1e59ffe8ef",
       "tree_source_sha256": "68089cf4b12f9f785a5cbfb9544ccfcd6ad09ba165ee5c0ff304db363e243dda",
       "added": [
         "us_destroyer_mahan_class",
@@ -364,8 +364,8 @@
     },
     {
       "path": "database/germany/germany_ships.json",
-      "units": 46,
-      "sha256": "d415abeb3f66d5273af2a9d20ff6cff33de9a8560febb162f2969c4d0d39dcc1",
+      "units": 47,
+      "sha256": "2011cf1fa947f6702cb2b3bfb06148c98ed3d03630c05ec2387d317e29765506",
       "tree_source_sha256": "68089cf4b12f9f785a5cbfb9544ccfcd6ad09ba165ee5c0ff304db363e243dda",
       "added": [
         "germ_kanonenboot_k4_lorelei",
@@ -375,8 +375,8 @@
     },
     {
       "path": "database/ussr/ussr_ships.json",
-      "units": 44,
-      "sha256": "69aa3af716c78066cab37ffbbadbff1c709ea3255f921bf9dca56f14804bdff8",
+      "units": 46,
+      "sha256": "68993f6c81965409430ce7e9d200369c550efa1adcd3f7f1838acbc551677728",
       "tree_source_sha256": "68089cf4b12f9f785a5cbfb9544ccfcd6ad09ba165ee5c0ff304db363e243dda",
       "added": [
         "ussr_cruiser_chervona_ukraina",
@@ -386,8 +386,8 @@
     },
     {
       "path": "database/britain/britain_ships.json",
-      "units": 57,
-      "sha256": "efb1739ede5c810e7a1bb8da0b57a7370b35fea6829834a4b22533b11e07d3af",
+      "units": 59,
+      "sha256": "8ada0d3f7996d7f249acf80430df36e6a71e379625b3f73e0115fd5843b4f294",
       "tree_source_sha256": "68089cf4b12f9f785a5cbfb9544ccfcd6ad09ba165ee5c0ff304db363e243dda",
       "added": [
         "uk_egret_class",
@@ -397,8 +397,8 @@
     },
     {
       "path": "database/japan/japan_ships.json",
-      "units": 54,
-      "sha256": "9016c0a15c95ef5847e8fa575f7ef558c9093e905f683f3cbb5315d200e118e1",
+      "units": 55,
+      "sha256": "0814933e6aacf43318b753dfe3644320c624656f40404e4fda629ee9f6f07678",
       "tree_source_sha256": "68089cf4b12f9f785a5cbfb9544ccfcd6ad09ba165ee5c0ff304db363e243dda",
       "added": [
         "jp_destroyer_suzutsuki"
@@ -415,8 +415,8 @@
     },
     {
       "path": "database/italy/italy_ships.json",
-      "units": 37,
-      "sha256": "c046f4650f6ecfcfaced500ab4c5da29dc517173159f5b52dd271c15176ea34d",
+      "units": 38,
+      "sha256": "fddf33e47b065b1daadcddbc815abf3aa8cfb836c57ea01453dfe6dd9e9a918a",
       "tree_source_sha256": "68089cf4b12f9f785a5cbfb9544ccfcd6ad09ba165ee5c0ff304db363e243dda",
       "added": [
         "it_battleship_giulio_cesare"
@@ -425,8 +425,8 @@
     },
     {
       "path": "database/france/france_ships.json",
-      "units": 36,
-      "sha256": "9caf7a42ec8e4b1c254865cecb975389165442ed7f4e36081049ac7c6f127597",
+      "units": 37,
+      "sha256": "4f97af17881635902a9bae84a51fd06dc6d4c6aaf2ccc96309ca702fcb3fc686",
       "tree_source_sha256": "68089cf4b12f9f785a5cbfb9544ccfcd6ad09ba165ee5c0ff304db363e243dda",
       "added": [
         "fr_cruiser_algerie_class",
@@ -452,8 +452,8 @@
     },
     {
       "path": "database/usa/usa_boats.json",
-      "units": 35,
-      "sha256": "c48b849ca65de59bd9249d00836510722646a418518659f2f69ebfce2b228408",
+      "units": 36,
+      "sha256": "b3142223569d9407102b250da519734b516d544270a3483c82ef734995192b13",
       "tree_source_sha256": "0d0d322252922211a2167e630f6b1a2fd1bc6ed84cb045b6dd93d1990afbd9fe",
       "added": [],
       "removed": []
@@ -522,8 +522,8 @@
     },
     {
       "path": "database/france/france_boats.json",
-      "units": 26,
-      "sha256": "50581dfd89e80e09b4bb3f5b96098f0299bbcad4be54248718f47146710eea77",
+      "units": 28,
+      "sha256": "980009a3eef5cc3b1974a7f9cf4f07d20b9e22c80744f235c3c902d298bb08fd",
       "tree_source_sha256": "0d0d322252922211a2167e630f6b1a2fd1bc6ed84cb045b6dd93d1990afbd9fe",
       "added": [
         "fr_lcm_monitor",
@@ -1858,6 +1858,45 @@
       "f_15ia"
     ],
     "provenance": "config/eagles-shadow-aircraft.json",
+    "fullSnapshotUpgrade": false
+  },
+  "rosterUpdate": {
+    "version": "2.61.0.42",
+    "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+    "ids": [
+      "us_m3a1_stuart_nvidia",
+      "us_stingray_2",
+      "germ_leopard_2a8",
+      "ussr_bt_7_m_816",
+      "ussr_btr_90_2004",
+      "uk_olifant_optimering",
+      "jp_bmp_3f",
+      "cn_zbd_04",
+      "it_v_4_straussler",
+      "it_lancia_flak38",
+      "fr_prtl",
+      "sw_pv_m39",
+      "sw_patria_bmp_3",
+      "sw_leopard_2a8no",
+      "f2a-1_nvidia",
+      "fokker_d7",
+      "fw_190a_8_mistel",
+      "spad_13",
+      "aw_249_pre_serie",
+      "us_erie_class",
+      "germ_battleship_pr_h39",
+      "ussr_destroyer_vifor_class_lyogkiy",
+      "ussr_battleship_imperator_nikolai_pervyi",
+      "uk_cruiser_danae_class",
+      "uk_battleship_duke_of_york",
+      "jp_cruiser_takao",
+      "it_destroyer_audace",
+      "fr_destroyer_le_hardi_class_le_hardi",
+      "us_pce_842_class",
+      "fr_vc1",
+      "fr_l990_monitor"
+    ],
+    "provenance": "doc/game-data-2.61.0.42.md",
     "fullSnapshotUpgrade": false
   }
 }

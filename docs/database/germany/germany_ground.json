@@ -8365,6 +8365,64 @@
               }
             }
           }
+        },
+        {
+          "type": "single",
+          "title": "Leopard 2A8",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2a8.png",
+          "br": "13.3",
+          "rp": 420000,
+          "sp": 1120000,
+          "data_unit_id": "germ_leopard_2a8",
+          "required_unit_id": "germ_leopard_2a7v",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "VIII",
+          "research_country": "Germany",
+          "main_role": "Medium tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/germ_leopard_2a8",
+            "rank": "VIII",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "13.3",
+              "RB": "13.3",
+              "SB": "13.3"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            },
+            "research": "420,000",
+            "purchase": "1,120,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
+          }
         }
       ],
       [

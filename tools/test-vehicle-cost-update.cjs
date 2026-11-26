@@ -50,6 +50,7 @@ test('all 50 trees retain every field outside the three verified RP/SL correctio
   delete manifest.vehicleCosts;
   Object.assign(manifest, require('./aircraft-addition-snapshot.cjs').restoreManifest(manifest));
   delete manifest.eaglesShadowAircraft;
+  delete manifest.rosterUpdate;
   for (const file of manifest.files) file.sha256 = evidence.trees[file.path];
   delete manifest.battleRatingCorrection;
   assert.equal(hash(JSON.stringify(manifest, null, 2) + '\n'), evidence.manifestSha256);

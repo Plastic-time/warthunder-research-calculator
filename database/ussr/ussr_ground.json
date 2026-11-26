@@ -1005,6 +1005,70 @@
             "fetched_at": "2026-09-19T06:28:10.575Z",
             "sha256": "d3f5fc6ee326e8228e70305c207cf10fdac66967b27a4ebf89d53cd2e06df320"
           }
+        },
+        {
+          "type": "single",
+          "title": "◆BT-7M",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_bt_7_m_816.png",
+          "br": "2.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "ussr_bt_7_m_816",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "event",
+          "details": true,
+          "rank": "I",
+          "research_country": "USSR",
+          "main_role": "Light tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/ussr_bt_7_m_816",
+            "rank": "I",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "2.0",
+              "RB": "2.0",
+              "SB": "2.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "2.0",
+                "RB": "2.0",
+                "SB": "2.0"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "2.0",
+                "RB": "2.0",
+                "SB": "2.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/news/10275-esports-watch-the-2026-grand-finals-and-earn-tricolor-smoke-more-twitch-drops-en",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "event",
+              "channel": "twitch-drops",
+              "url": "https://warthunder.com/en/news/10275-esports-watch-the-2026-grand-finals-and-earn-tricolor-smoke-more-twitch-drops-en"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research"
+          }
         }
       ]
     ],
@@ -7799,6 +7863,64 @@
         }
       ],
       [
+        {
+          "type": "single",
+          "title": "BTR-90",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_btr_90_2004.png",
+          "br": "10.3",
+          "rp": 260000,
+          "sp": 710000,
+          "data_unit_id": "ussr_btr_90_2004",
+          "required_unit_id": "ussr_object_775",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "VII",
+          "research_country": "USSR",
+          "main_role": "Light tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/ussr_btr_90_2004",
+            "rank": "VII",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "10.3",
+              "RB": "10.3",
+              "SB": "10.3"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            },
+            "research": "260,000",
+            "purchase": "710,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.3",
+                "RB": "10.3",
+                "SB": "10.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
+          }
+        },
         {
           "type": "single",
           "title": "BMPT",

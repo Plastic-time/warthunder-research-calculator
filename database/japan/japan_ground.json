@@ -2796,6 +2796,64 @@
           "details": true,
           "rp": 254000,
           "sp": 970000
+        },
+        {
+          "type": "single",
+          "title": "BMP-3F",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_bmp_3f.png",
+          "br": "9.0",
+          "rp": 190000,
+          "sp": 520000,
+          "data_unit_id": "jp_bmp_3f",
+          "required_unit_id": "jp_type_87_rcv",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "VI",
+          "research_country": "Japan",
+          "main_role": "Light tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/jp_bmp_3f",
+            "rank": "VI",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "9.0",
+              "RB": "9.0",
+              "SB": "9.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "9.0"
+              }
+            },
+            "research": "190,000",
+            "purchase": "520,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.0",
+                "RB": "9.0",
+                "SB": "9.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
+          }
         }
       ],
       [

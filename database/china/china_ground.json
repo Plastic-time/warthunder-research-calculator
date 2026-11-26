@@ -3384,47 +3384,120 @@
           "sp": 1140000
         },
         {
-          "type": "single",
-          "title": "CM34",
-          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_cm_34.png",
-          "br": "9.3",
-          "rp": 220000,
-          "sp": 620000,
-          "data_unit_id": "cn_cm_34",
-          "required_unit_id": "cn_ptl_aft_group",
+          "type": "multiple",
+          "title": "CM34/ZBD04",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ptl_aft_group.png",
           "selected": false,
+          "br": "9.3",
+          "data_unit_id": "cn_cm_zbd_group",
+          "required_unit_id": "cn_ptl_aft_group",
           "class_name": "",
-          "details": true,
-          "rank": "VI",
-          "research_country": "China",
-          "main_role": "Light tank",
-          "is_component": false,
-          "component_of": null,
-          "is_premium": false,
-          "is_squadron": false,
-          "wiki": {
-            "url": "https://wiki.warthunder.com/unit/cn_cm_34",
-            "rank": "VI",
-            "battle_rating_context": "default",
-            "battle_ratings": {
-              "AB": "9.3",
-              "RB": "9.3",
-              "SB": "9.3"
-            },
-            "battle_ratings_by_battle": {
-              "default": {
-                "AB": "9.3",
-                "RB": "9.3",
-                "SB": "9.3"
+          "items": [
+            {
+              "type": "single",
+              "title": "CM34",
+              "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_cm_34.png",
+              "br": "9.3",
+              "rp": 220000,
+              "sp": 620000,
+              "data_unit_id": "cn_cm_34",
+              "required_unit_id": "",
+              "selected": false,
+              "class_name": "",
+              "details": true,
+              "rank": "VI",
+              "research_country": "China",
+              "main_role": "Light tank",
+              "is_component": false,
+              "component_of": null,
+              "is_premium": false,
+              "is_squadron": false,
+              "wiki": {
+                "url": "https://wiki.warthunder.com/unit/cn_cm_34",
+                "rank": "VI",
+                "battle_rating_context": "default",
+                "battle_ratings": {
+                  "AB": "9.3",
+                  "RB": "9.3",
+                  "SB": "9.3"
+                },
+                "battle_ratings_by_battle": {
+                  "default": {
+                    "AB": "9.3",
+                    "RB": "9.3",
+                    "SB": "9.3"
+                  }
+                },
+                "research": "220,000",
+                "purchase": "620,000",
+                "purchase_currency": "SL",
+                "status": null,
+                "fetched_at": "2026-09-19T06:28:53.152Z",
+                "sha256": "71f16d92d4ea3505ffe22005612008130b15f158f63fc86b28ccbb3147bcaf1d"
               }
             },
-            "research": "220,000",
-            "purchase": "620,000",
-            "purchase_currency": "SL",
-            "status": null,
-            "fetched_at": "2026-09-19T06:28:53.152Z",
-            "sha256": "71f16d92d4ea3505ffe22005612008130b15f158f63fc86b28ccbb3147bcaf1d"
-          }
+            {
+              "type": "single",
+              "title": "ZBD04",
+              "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_zbd_04.png",
+              "br": "9.3",
+              "rp": 110000,
+              "sp": 620000,
+              "data_unit_id": "cn_zbd_04",
+              "required_unit_id": "cn_cm_34",
+              "selected": false,
+              "class_name": "",
+              "details": true,
+              "rank": "VI",
+              "research_country": "China",
+              "main_role": "Light tank",
+              "is_component": false,
+              "component_of": null,
+              "is_premium": false,
+              "is_squadron": false,
+              "wiki": {
+                "url": "https://wiki.warthunder.com/unit/cn_zbd_04",
+                "rank": "VI",
+                "battle_rating_context": "default",
+                "battle_ratings": {
+                  "AB": "9.3",
+                  "RB": "9.3",
+                  "SB": "9.3"
+                },
+                "battle_ratings_by_battle": {
+                  "default": {
+                    "AB": "9.3",
+                    "RB": "9.3",
+                    "SB": "9.3"
+                  }
+                },
+                "research": "110,000",
+                "purchase": "620,000",
+                "purchase_currency": "SL",
+                "status": null
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "9.3",
+                    "RB": "9.3",
+                    "SB": "9.3"
+                  }
+                }
+              },
+              "game_source": {
+                "version": "2.61.0.42",
+                "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+                "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+                "provenance": "doc/game-data-2.61.0.42.md",
+                "modification_status": "verified-game-data"
+              }
+            }
+          ],
+          "details": true,
+          "rp": 330000,
+          "sp": 1240000
         }
       ]
     ],
@@ -3999,7 +4072,7 @@
           "rp": 260000,
           "sp": 710000,
           "data_unit_id": "cn_ztl_11",
-          "required_unit_id": "cn_cm_34",
+          "required_unit_id": "cn_cm_zbd_group",
           "selected": false,
           "class_name": "",
           "details": true,

@@ -9,7 +9,9 @@ const root = path.resolve(__dirname, '..');
 const release = JSON.parse(fs.readFileSync(path.join(root, 'config/vehicle-release.json'), 'utf8'));
 const marked = Object.values(release.trees).flat();
 const aircraft = require('../config/eagles-shadow-aircraft.json').units;
-assert.deepEqual([...marked].sort(), aircraft.map(unit => unit.id).sort());
+const additions = require('../docs/database/manifest.json').rosterUpdate.ids;
+const earlierRewards = new Set(['ussr_bt_7_m_816', 'sw_patria_bmp_3', 'fw_190a_8_mistel']);
+assert.deepEqual([...marked].sort(), [...aircraft.map(unit => unit.id), ...additions.filter(id => !earlierRewards.has(id))].sort());
 const readData = file => {
   const context = { window: {} };
   vm.runInNewContext(fs.readFileSync(file, 'utf8'), context);

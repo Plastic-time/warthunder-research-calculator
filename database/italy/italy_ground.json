@@ -541,6 +541,64 @@
             "fetched_at": "2026-09-19T06:29:03.157Z",
             "sha256": "5872f48a28c477cdddf56c1130707adbd3a697737419fe36f68e6b64a4622265"
           }
+        },
+        {
+          "type": "single",
+          "title": "V-4/40",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_v_4_straussler.png",
+          "br": "1.3",
+          "rp": 4000,
+          "sp": 2100,
+          "data_unit_id": "it_v_4_straussler",
+          "required_unit_id": "it_39m_csaba",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "I",
+          "research_country": "Italy",
+          "main_role": "Light tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/it_v_4_straussler",
+            "rank": "I",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "1.3",
+              "RB": "1.3",
+              "SB": "1.3"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "1.3",
+                "RB": "1.3",
+                "SB": "1.3"
+              }
+            },
+            "research": "4,000",
+            "purchase": "2,100",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "1.3",
+                "RB": "1.3",
+                "SB": "1.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
+          }
         }
       ]
     ],
@@ -962,6 +1020,64 @@
             "status": null,
             "fetched_at": "2026-09-19T06:29:06.497Z",
             "sha256": "8feab5756d1607fe7f1f65400fbfdaabe8ff3c50247519550c9fad4dc737d4b0"
+          }
+        },
+        {
+          "type": "single",
+          "title": "Lancia 3Ro (Flak.)",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_lancia_flak38.png",
+          "br": "3.0",
+          "rp": 11000,
+          "sp": 22000,
+          "data_unit_id": "it_lancia_flak38",
+          "required_unit_id": "it_fiat_cm52",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "II",
+          "research_country": "Italy",
+          "main_role": "SPAA",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/it_lancia_flak38",
+            "rank": "II",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "3.0",
+              "RB": "3.0",
+              "SB": "3.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "3.0",
+                "RB": "3.0",
+                "SB": "3.0"
+              }
+            },
+            "research": "11,000",
+            "purchase": "22,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "3.0",
+                "RB": "3.0",
+                "SB": "3.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
           }
         }
       ],

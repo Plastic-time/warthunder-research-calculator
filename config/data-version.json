@@ -4,16 +4,16 @@
   "scope": "vehicle-research-and-purchase-costs",
   "gameDataCommit": "510a793c2bdb01c51475118199c7b66b72935ff1",
   "treeCount": 50,
-  "vehicleCount": 3247,
+  "vehicleCount": 3278,
   "directCostPairCount": 2212,
   "wikiUnpricedVehicleCount": 156,
   "modificationsSnapshotChanged": false,
   "latestReview": {
-    "gameVersion": "2.61.0.9",
-    "gameDataCommit": "7897e5c17bfb66ed6582772f4bba3ab1db1de9f3",
-    "scope": "partial-aircraft-additions",
+    "gameVersion": "2.61.0.42",
+    "gameDataCommit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+    "scope": "partial-roster-modifications-and-battle-ratings",
     "fullSnapshotUpgrade": false,
-    "provenance": "config/eagles-shadow-aircraft.json"
+    "provenance": "doc/game-data-2.61.0.42.md"
   },
   "latestCorrection": {
     "gameVersion": "2.59.0.50",

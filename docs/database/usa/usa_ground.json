@@ -616,6 +616,70 @@
             "fetched_at": "2026-09-19T06:27:37.827Z",
             "sha256": "9f22fbb060eac2839b9703da8d8d25970de66fbcb987597458d0c3cd92a603ac"
           }
+        },
+        {
+          "type": "single",
+          "title": "M3A1 TD",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_m3a1_stuart_nvidia.png",
+          "br": "2.3",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "us_m3a1_stuart_nvidia",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "event",
+          "details": true,
+          "rank": "I",
+          "research_country": "USA",
+          "main_role": "Light tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/us_m3a1_stuart_nvidia",
+            "rank": "I",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "2.0",
+              "RB": "2.3",
+              "SB": "2.3"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "2.0",
+                "RB": "2.3",
+                "SB": "2.3"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "2.0",
+                "RB": "2.3",
+                "SB": "2.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://www.nvidia.com/en-us/geforce/news/dlss-4-5-eve-vanguard-assetto-corsa-rally-teardown-and-more/",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "event",
+              "channel": "geforce-reward",
+              "url": "https://www.nvidia.com/en-us/geforce/news/dlss-4-5-eve-vanguard-assetto-corsa-rally-teardown-and-more/"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research"
+          }
         }
       ],
       [
@@ -5468,6 +5532,68 @@
                 "RB": "9.7",
                 "SB": "9.7"
               }
+            }
+          }
+        },
+        {
+          "type": "single",
+          "title": "Stingray II",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_stingray_2.png",
+          "br": "10.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "us_stingray_2",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "VI",
+          "research_country": "USA",
+          "main_role": "Light tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/us_stingray_2",
+            "rank": "VI",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "10.0",
+              "RB": "10.0",
+              "SB": "10.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": "Premium vehicle"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "10.0",
+                "RB": "10.0",
+                "SB": "10.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/news/10323-meet-the-eagles-shadow-major-update-en",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "pack",
+              "url": "https://warthunder.com/en/news/10323-meet-the-eagles-shadow-major-update-en"
             }
           }
         }

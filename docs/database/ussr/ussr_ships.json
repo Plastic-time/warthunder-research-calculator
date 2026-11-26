@@ -213,6 +213,68 @@
             "fetched_at": "2026-09-19T06:32:22.800Z",
             "sha256": "c7586f7944ceb6495418fa7a676c4f1b2c0e6faeba42cf38ffad065316cc1a22"
           }
+        },
+        {
+          "type": "single",
+          "title": "Lyogkiy",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_destroyer_vifor_class_lyogkiy.png",
+          "br": "3.3",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "ussr_destroyer_vifor_class_lyogkiy",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "I",
+          "research_country": "USSR",
+          "main_role": "Destroyer",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/ussr_destroyer_vifor_class_lyogkiy",
+            "rank": "I",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "3.3",
+              "RB": "3.3"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "3.3",
+                "RB": "3.3"
+              }
+            },
+            "research": null,
+            "purchase": "400",
+            "purchase_currency": "GE",
+            "status": "Premium vehicle"
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "3.3",
+                "RB": "3.3",
+                "SB": "3.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://wiki.warthunder.com/unit/ussr_destroyer_vifor_class_lyogkiy",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "golden-eagles",
+              "price": 400,
+              "currency": "GE",
+              "url": "https://wiki.warthunder.com/unit/ussr_destroyer_vifor_class_lyogkiy"
+            }
+          }
         }
       ],
       []
@@ -1441,6 +1503,62 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:20.147Z",
             "sha256": "ee87a8eadfb82c8896c0a2a04d2c22a9bf4f2d86b2a703acdad47d349bb27328"
+          }
+        },
+        {
+          "type": "single",
+          "title": "Nikolay Perviy",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_battleship_imperator_nikolai_pervyi.png",
+          "br": "6.7",
+          "rp": 145000,
+          "sp": 440000,
+          "data_unit_id": "ussr_battleship_imperator_nikolai_pervyi",
+          "required_unit_id": "ussr_battleship_imperatritsa_mariya",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "V",
+          "research_country": "USSR",
+          "main_role": "Battleship",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/ussr_battleship_imperator_nikolai_pervyi",
+            "rank": "V",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "6.7",
+              "RB": "6.7"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "6.7",
+                "RB": "6.7"
+              }
+            },
+            "research": "145,000",
+            "purchase": "440,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "6.7",
+                "RB": "6.7",
+                "SB": "6.7"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
           }
         },
         {

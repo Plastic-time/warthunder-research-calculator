@@ -251,6 +251,81 @@
       ],
       [
         {
+          "type": "single",
+          "title": "SPAD S.XIII",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/spad_13.png",
+          "br": "1.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "spad_13",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "event",
+          "details": true,
+          "rank": "I",
+          "research_country": "France",
+          "main_role": "Fighter",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/spad_13",
+            "rank": "I",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "1.0",
+              "RB": "1.0",
+              "SB": "1.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "1.0",
+                "RB": "1.0",
+                "SB": "1.0"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "1.0",
+                "RB": "1.0",
+                "SB": "1.0"
+              },
+              "tank": {
+                "AB": "1.0",
+                "RB": "1.0",
+                "SB": "1.0"
+              },
+              "ship": {
+                "AB": "1.0",
+                "RB": "1.0",
+                "SB": "1.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/news/10318-event-the-great-war-returns-with-new-obtainable-aircraft-to-mark-november-11th-en",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "event",
+              "channel": "vehicle-event",
+              "url": "https://warthunder.com/en/news/10318-event-the-great-war-returns-with-new-obtainable-aircraft-to-mark-november-11th-en"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research"
+          },
+          "required_unit_id_explicit": true
+        },
+        {
           "type": "multiple",
           "title": "D.500",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/d_500_group.png",
@@ -349,7 +424,8 @@
           ],
           "details": true,
           "rp": 1500,
-          "sp": 700
+          "sp": 700,
+          "required_unit_id_explicit": true
         },
         {
           "type": "multiple",
