@@ -83,10 +83,26 @@ test('checkout token persistence, unsafe checkout, script interpolation and igno
 
 test('Pages write rights remain confined to the main-branch deployment job and environment', () => {
   for (const change of [w => w.permissions.pages = 'write', w => w.on.pull_request = {},
-    w => w.on.push.branches = ['*'], w => delete w.jobs.deploy.if, w => delete w.jobs.deploy.needs, w => delete w.jobs.deploy.environment,
+    w => w.on.push.branches = ['*'], w => delete w.jobs.deploy.if, w => delete w.jobs.deploy.needs,
+    w => w.jobs.deploy.needs = ['build'], w => w.jobs.deploy.needs = ['browser'], w => delete w.jobs.deploy.environment,
     w => w.jobs.deploy.permissions.contents = 'write', w => w.jobs.browser.uses = './.github/workflows/commit-privacy.yml']) {
     const f = fixture(); f.edit('.github/workflows/deploy-pages.yml', change); assert.throws(() => f.check());
   }
+});
+
+test('a failed Pages deployment can reuse the artifact from the successful build attempt', () => {
+  const { build, deploy } = parseYaml(read('.github/workflows/deploy-pages.yml')).jobs;
+  assert(build, 'Package the site in a separate build job');
+  assert.deepEqual(new Set(deploy.needs), new Set(['browser', 'build']));
+  assert.equal(build.outputs.attempt, '${{ github.run_attempt }}');
+  const uploads = job => job.steps.filter(step => step.uses?.startsWith('actions/upload-pages-artifact@'));
+  assert.equal(uploads(build).length, 1);
+  assert.equal(uploads(build)[0].with.name, 'github-pages-${{ github.run_attempt }}');
+  assert.equal(uploads(build)[0].with.path, 'docs');
+  assert.equal(uploads(build)[0].with['retention-days'], 30);
+  assert.equal(uploads(deploy).length, 0);
+  const publish = deploy.steps.find(step => step.uses?.startsWith('actions/deploy-pages@'));
+  assert.equal(publish.with.artifact_name, 'github-pages-${{ needs.build.outputs.attempt }}');
 });
 
 test('reusable workflows must be registered, same-commit, acyclic and cannot inherit secrets', () => {
