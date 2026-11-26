@@ -64,7 +64,7 @@ function validateWorkflows(entry, readFile) {
         assert.deepEqual(triggers.sort(), ['push', 'workflow_dispatch'], 'Deployment must not run on pull requests');
         assert.deepEqual(workflow.on.push?.branches, ['main'], 'Deployment must be restricted to main');
         assert.equal(job.if, "github.ref == 'refs/heads/main'", 'Manual deployment must also be restricted to main');
-        assert.equal(job.needs, 'browser', 'Deployment must wait for the audited browser workflow');
+        assert.deepEqual(new Set(job.needs), new Set(['browser', 'build']), 'Deployment must wait for browser checks and the site build');
         assert.equal(workflow.jobs.browser?.uses, './.github/workflows/browser-checks.yml', 'Pages must use the audited browser workflow');
         assert(!workflow.jobs.browser.if, 'Pages audit dependency cannot be skipped');
         assert.equal(job.environment?.name, 'github-pages', 'Use the Pages deployment environment');
