@@ -1,0 +1,1813 @@
+{
+  "ids": [
+    "us_m3a1_stuart_nvidia",
+    "us_stingray_2",
+    "germ_leopard_2a8",
+    "ussr_bt_7_m_816",
+    "ussr_btr_90_2004",
+    "uk_olifant_optimering",
+    "jp_bmp_3f",
+    "cn_zbd_04",
+    "it_v_4_straussler",
+    "it_lancia_flak38",
+    "fr_prtl",
+    "sw_pv_m39",
+    "sw_patria_bmp_3",
+    "sw_leopard_2a8no",
+    "f2a-1_nvidia",
+    "fokker_d7",
+    "fw_190a_8_mistel",
+    "spad_13",
+    "aw_249_pre_serie",
+    "us_erie_class",
+    "germ_battleship_pr_h39",
+    "ussr_destroyer_vifor_class_lyogkiy",
+    "ussr_battleship_imperator_nikolai_pervyi",
+    "uk_cruiser_danae_class",
+    "uk_battleship_duke_of_york",
+    "jp_cruiser_takao",
+    "it_destroyer_audace",
+    "fr_destroyer_le_hardi_class_le_hardi",
+    "us_pce_842_class",
+    "fr_vc1",
+    "fr_l990_monitor"
+  ],
+  "trees": [
+    {
+      "anchorId": "us_m3a1_stuart_nvidia",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "I",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "us_m2a4_1st_armor_div",
+              "us_lvt_a_4",
+              "us_m3a1_stuart_usmc"
+            ],
+            [
+              "us_lvt_a_1_trb",
+              "us_m8_greyhound"
+            ]
+          ]
+        },
+        {
+          "rank": "VI",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "us_m901_itv",
+              "us_m60a1_rise_mod",
+              "us_xm1_chrysler",
+              "us_xm1_gm"
+            ],
+            [
+              "us_efv_p1",
+              "us_merkava_mk_1",
+              "us_merkava_mk_2b_late",
+              "us_xm_8"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "germ_leopard_2a8",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "VIII",
+          "section": "researchable_vehicles",
+          "columns": [
+            [],
+            [
+              "germ_embt"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "Leopard 2 A5/A6",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_leopard_2_group.png",
+                "selected": false,
+                "br": "12.7-13.0",
+                "data_unit_id": "germ_leopard_2_group",
+                "required_unit_id": "germ_leopard_2a4",
+                "class_name": "",
+                "items": [
+                  "germ_leopard_2a5",
+                  "germ_leopard_2a6"
+                ],
+                "details": true,
+                "rp": 600000,
+                "sp": 2180000
+              },
+              "germ_leopard_2a5_pso",
+              "germ_leopard_2a7v"
+            ],
+            [
+              "germ_flarakrad",
+              {
+                "type": "multiple",
+                "title": "IRIS-T SLM",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/germ_iris_slm_fcs.png",
+                "selected": false,
+                "br": "13.3",
+                "data_unit_id": "germ_iris_slm_fcs",
+                "required_unit_id": "germ_flarakrad",
+                "class_name": "",
+                "items": [
+                  "germ_iris_slm_fcs",
+                  "germ_iris_slm_launcher"
+                ],
+                "details": true,
+                "rp": 410000,
+                "sp": 1100000
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "ussr_bt_7_m_816",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "I",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "ussr_t_26_1940_1st_gvtbr",
+              "ussr_bt_7_1937_td",
+              "ussr_t_35",
+              "ussr_su_57",
+              "ussr_pzkpfw_iii_ausf_j_l42"
+            ],
+            [
+              "ussr_t_26e",
+              "ussr_rbt_5",
+              "ussr_ba_11",
+              "ussr_bm_8_24"
+            ]
+          ]
+        },
+        {
+          "rank": "VII",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              {
+                "type": "multiple",
+                "title": "T-72B/72B(89)",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_72b_group.png",
+                "selected": false,
+                "br": "10.3",
+                "data_unit_id": "ussr_t_72b_group",
+                "required_unit_id": "ussr_t_72a",
+                "class_name": "",
+                "items": [
+                  "ussr_t_72b",
+                  "ussr_t_72b_1989"
+                ],
+                "details": true,
+                "rp": 410000,
+                "sp": 1540000
+              },
+              "ussr_t_90a",
+              "ussr_t_72b3_2011"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "T-64B/80B",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_t_64_t_80_group.png",
+                "selected": false,
+                "br": "10.3-11.0",
+                "data_unit_id": "ussr_t_64_t_80_group",
+                "required_unit_id": "ussr_t_64a_1971",
+                "class_name": "",
+                "items": [
+                  "ussr_t_64_b_1984",
+                  "ussr_t_80b"
+                ],
+                "details": true,
+                "rp": 410000,
+                "sp": 1540000
+              },
+              "ussr_t_80u"
+            ],
+            [
+              "ussr_2s25m"
+            ],
+            [
+              "ussr_bmpt"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "Osa/Strela",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ussr_9a33_35_group.png",
+                "selected": false,
+                "br": "10.7",
+                "data_unit_id": "ussr_9a33_35_group",
+                "required_unit_id": "ussr_zsu_23_4m4",
+                "class_name": "",
+                "items": [
+                  "ussr_9a33bm3",
+                  "ussr_9a35_m2"
+                ],
+                "details": true,
+                "rp": 410000,
+                "sp": 1540000
+              },
+              "ussr_zprk_2s6",
+              "ussr_tor_m1"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "uk_olifant_optimering",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "VI",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "uk_vijayanta",
+              "uk_khalid",
+              "uk_rooikat_105_td"
+            ],
+            [
+              "uk_fv107_scimitar_mk2",
+              "uk_centurion_shot_kal_d",
+              "uk_shir_2"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "jp_bmp_3f",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "VI",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              {
+                "type": "multiple",
+                "title": "Type 87/89",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_87_89_group.png",
+                "selected": false,
+                "br": "9.0-9.3",
+                "data_unit_id": "jp_type_87_89_group",
+                "required_unit_id": "jp_type_87_rcv_prot",
+                "class_name": "",
+                "items": [
+                  "jp_type_87_rcv",
+                  "jp_type_89"
+                ],
+                "details": true,
+                "rp": 254000,
+                "sp": 970000
+              }
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "Type 74 E/F",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/jp_type_74_group.png",
+                "selected": false,
+                "br": "9.0",
+                "data_unit_id": "jp_type_74_group",
+                "required_unit_id": "jp_type_74_stb_group",
+                "class_name": "",
+                "items": [
+                  "jp_type_74",
+                  "jp_type_74_f"
+                ],
+                "details": true,
+                "rp": 300000,
+                "sp": 1140000
+              }
+            ],
+            [
+              "jp_type_16_mcv_prot"
+            ],
+            [
+              "jp_type_87"
+            ],
+            [
+              "jp_btr_3e1",
+              "jp_m60a3_tts",
+              "jp_stingray"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "cn_zbd_04",
+      "fields": {
+        "single:cn_cm_34": {
+          "required_unit_id": "cn_ptl_aft_group"
+        },
+        "single:cn_ztl_11": {
+          "required_unit_id": "cn_cm_34"
+        }
+      },
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "VI",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "cn_m_41d",
+              "cn_m60a3_tts",
+              "cn_cm11"
+            ],
+            [
+              "cn_type_59d",
+              {
+                "type": "multiple",
+                "title": "ZTZ88 B/A",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ztz_88_group.png",
+                "selected": false,
+                "br": "9.0",
+                "data_unit_id": "cn_ztz_88_group",
+                "required_unit_id": "cn_type_59d",
+                "class_name": "",
+                "items": [
+                  "cn_ztz_88b",
+                  "cn_ztz_88a"
+                ],
+                "details": true,
+                "rp": 254000,
+                "sp": 970000
+              },
+              "cn_ztz_96"
+            ],
+            [
+              "cn_pgz_09",
+              "cn_pgz_04a"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "CM25/PTZ89",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_cm_ptz_group.png",
+                "selected": false,
+                "br": "8.7-9.0",
+                "data_unit_id": "cn_cm_ptz_group",
+                "required_unit_id": "cn_m113a1_tow",
+                "class_name": "",
+                "items": [
+                  "cn_cm_25",
+                  "cn_ptz_89"
+                ],
+                "details": true,
+                "rp": 254000,
+                "sp": 970000
+              },
+              {
+                "type": "multiple",
+                "title": "PTL02/AFT09",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/cn_ptl_aft_group.png",
+                "selected": false,
+                "br": "9.0-9.3",
+                "data_unit_id": "cn_ptl_aft_group",
+                "required_unit_id": "cn_cm_ptz_group",
+                "class_name": "",
+                "items": [
+                  "cn_ptl_02",
+                  "cn_hj_9"
+                ],
+                "details": true,
+                "rp": 300000,
+                "sp": 1140000
+              },
+              "cn_cm_34"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "it_v_4_straussler",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "I",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "it_ab_41",
+              "it_m11_39",
+              "it_as_42_47"
+            ],
+            [
+              "it_l6",
+              {
+                "type": "multiple",
+                "title": "M13/40 I/III",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_m13_40_group.png",
+                "selected": false,
+                "br": "1.7-2.0",
+                "data_unit_id": "it_m13_40_group",
+                "required_unit_id": "it_l6",
+                "class_name": "",
+                "items": [
+                  "it_m13_40_serie_1",
+                  "it_m13_40_serie_3"
+                ],
+                "details": true,
+                "rp": 4900,
+                "sp": 2800
+              },
+              "it_m14_41"
+            ],
+            [
+              "it_as_42_metropolitana"
+            ],
+            [
+              "it_l3_cc",
+              "it_semovente_l40",
+              "it_lancia3ro_100"
+            ],
+            [
+              "it_39m_csaba"
+            ]
+          ]
+        },
+        {
+          "rank": "II",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "it_ab_43",
+              "it_m3a3_stuart"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "M15/Pz.III",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_m15_pz_3_group.png",
+                "selected": false,
+                "br": "2.7-3.3",
+                "data_unit_id": "it_m15_pz_3_group",
+                "required_unit_id": "",
+                "class_name": "",
+                "items": [
+                  "it_m15_42",
+                  "it_pzkpfw_iii_ausf_n"
+                ],
+                "details": true,
+                "rp": 12500,
+                "sp": 26000
+              },
+              "it_p_40"
+            ],
+            [
+              "it_fiat_cm52"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "M41/M42",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_semovente_m41_group.png",
+                "selected": false,
+                "br": "2.0-2.3",
+                "data_unit_id": "it_semovente_m41_group",
+                "required_unit_id": "",
+                "class_name": "",
+                "items": [
+                  "it_semovente_m41_75_18",
+                  "it_semovente_m41_75_32",
+                  "it_semovente_m42_75_34"
+                ],
+                "details": true,
+                "rp": 18100,
+                "sp": 48000
+              },
+              {
+                "type": "multiple",
+                "title": "M43 105/75",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/it_semovente_m43_group.png",
+                "selected": false,
+                "br": "3.0-3.3",
+                "data_unit_id": "it_semovente_m43_105_75_group",
+                "required_unit_id": "it_semovente_m41_group",
+                "class_name": "",
+                "items": [
+                  "it_semovente_m43_105",
+                  "it_semovente_m43_75_34"
+                ],
+                "details": true,
+                "rp": 17900,
+                "sp": 54000
+              }
+            ],
+            [
+              "it_40m_turan_1",
+              "it_40_43m_zrinyi_2"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "fr_prtl",
+      "fields": {
+        "single:fr_amx_30_dca": {
+          "rp": 135000,
+          "sp": 380000,
+          "required_unit_id": "fr_amx_10p"
+        },
+        "single:fr_vab_santal": {
+          "required_unit_id": "fr_amx_30_dca"
+        }
+      },
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "VI",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              {
+                "type": "multiple",
+                "title": "MARS/AMX",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_mars_hot_group.png",
+                "selected": false,
+                "br": "8.3-8.7",
+                "data_unit_id": "fr_mars_hot_group",
+                "required_unit_id": "fr_marder_df_105",
+                "class_name": "",
+                "items": [
+                  "fr_mars_15",
+                  "fr_amx_13_hot"
+                ],
+                "details": true,
+                "rp": 216000,
+                "sp": 830000
+              },
+              {
+                "type": "multiple",
+                "title": "AMX/SK",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_sk_group.png",
+                "selected": false,
+                "br": "8.7-9.0",
+                "data_unit_id": "fr_amx_sk_group",
+                "required_unit_id": "fr_mars_hot_group",
+                "class_name": "",
+                "items": [
+                  "fr_amx_10rc",
+                  "fr_sk105_a2"
+                ],
+                "details": true,
+                "rp": 254000,
+                "sp": 970000
+              },
+              "fr_vbci"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "AMX-30 B2/BRENUS",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_30_group.png",
+                "selected": false,
+                "br": "8.7",
+                "data_unit_id": "fr_amx_30_group",
+                "required_unit_id": "fr_amx_30_1972",
+                "class_name": "",
+                "items": [
+                  "fr_amx_30_b2",
+                  "fr_amx_30_b2_brenus"
+                ],
+                "details": true,
+                "rp": 254000,
+                "sp": 970000
+              },
+              "fr_leopard_1a5be"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "AMX-32 105/120",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_32_group.png",
+                "selected": false,
+                "br": "9.3-9.7",
+                "data_unit_id": "fr_amx_32_group",
+                "required_unit_id": "fr_amx_50_surbaisse",
+                "class_name": "",
+                "items": [
+                  "fr_amx_32_105",
+                  "fr_amx_32"
+                ],
+                "details": true,
+                "rp": 300000,
+                "sp": 1140000
+              }
+            ],
+            [
+              "fr_amx_30_dca",
+              "fr_vab_santal"
+            ],
+            [
+              "fr_amx_30_acra",
+              "fr_vcac_mephisto"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "sw_pv_m39",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "I",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "sw_strv_m39",
+              "sw_vickers_mk_e_45"
+            ],
+            [
+              "sw_strv_m39_td",
+              "sw_pbil_m40"
+            ]
+          ]
+        },
+        {
+          "rank": "VI",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "sw_leopard_1a5no",
+              "sw_cv_9035_dk"
+            ],
+            [
+              "sw_bmp_2md"
+            ]
+          ]
+        },
+        {
+          "rank": "VIII",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "sw_cv_90120"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "Strv 122/122 PLSS",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_strv_122_group.png",
+                "selected": false,
+                "br": "13.3",
+                "data_unit_id": "sw_strv_122_group",
+                "required_unit_id": "sw_strv_121",
+                "class_name": "",
+                "items": [
+                  "sw_strv_122",
+                  "sw_strv_122b_plss"
+                ],
+                "details": true,
+                "rp": 600000,
+                "sp": 2180000
+              },
+              "sw_strv_122b_plus"
+            ],
+            [
+              "sw_crotale_ng",
+              {
+                "type": "multiple",
+                "title": "EldE 98/NOMADS",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_eldenhet_nomads_group.png",
+                "selected": false,
+                "br": "12.3",
+                "data_unit_id": "sw_eldenhet_nomads_group",
+                "required_unit_id": "sw_crotale_ng",
+                "class_name": "",
+                "items": [
+                  "sw_eldenhet_98",
+                  "sw_nomads"
+                ],
+                "details": true,
+                "rp": 620000,
+                "sp": 2220000
+              },
+              {
+                "type": "multiple",
+                "title": "NASAMS 3",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_nasams_fcs.png",
+                "selected": false,
+                "br": "13.0",
+                "data_unit_id": "sw_nasams_fcs",
+                "required_unit_id": "sw_eldenhet_nomads_group",
+                "class_name": "",
+                "items": [
+                  "sw_nasams_fcs",
+                  "sw_nasams_launcher"
+                ],
+                "details": true,
+                "rp": 420000,
+                "sp": 1120000
+              }
+            ],
+            [
+              "sw_cv_90_mk4"
+            ],
+            [
+              "sw_leopard_2a6nl"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "f2a-1_nvidia",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "I",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "f3f-2_galer",
+              "p-36c_rb",
+              "f2a-1_thach"
+            ],
+            [
+              "p-26a_34",
+              "p-36a_rasmussen",
+              "b_10b"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "fokker_d7",
+      "fields": {},
+      "removeFields": {
+        "single:bf-109b_2": [
+          "required_unit_id_explicit"
+        ]
+      },
+      "sections": [
+        {
+          "rank": "I",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "bf-109b_2",
+              "bf-109c_1"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "He 51",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/he-51_group.png",
+                "selected": false,
+                "br": "1.0",
+                "data_unit_id": "he51_group",
+                "required_unit_id": "",
+                "class_name": "",
+                "items": [
+                  "he51a1",
+                  "he51b1",
+                  "he51c1",
+                  "he51c1_late"
+                ],
+                "details": true,
+                "rp": null,
+                "sp": null
+              },
+              {
+                "type": "multiple",
+                "title": "He 112",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/he_112_group.png",
+                "selected": false,
+                "br": "1.3-2.0",
+                "data_unit_id": "he_112_group",
+                "required_unit_id": "he51_group",
+                "class_name": "",
+                "items": [
+                  "he_112v_5",
+                  "he_112a_0"
+                ],
+                "details": true,
+                "rp": 4900,
+                "sp": 2800
+              },
+              "he_100d_1"
+            ],
+            [
+              "do_17z_7",
+              {
+                "type": "multiple",
+                "title": "Do 217 J",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/do_217j_group.png",
+                "selected": false,
+                "br": "2.0-2.3",
+                "data_unit_id": "do_217j_group",
+                "required_unit_id": "do_17z_7",
+                "class_name": "",
+                "items": [
+                  "do_217j_1",
+                  "do_217j_2"
+                ],
+                "details": true,
+                "rp": 7000,
+                "sp": 8400
+              }
+            ],
+            [
+              "hs-123a-1",
+              {
+                "type": "multiple",
+                "title": "Ju 87 B/R",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ju-87br_group.png",
+                "selected": false,
+                "br": "1.0-1.3",
+                "data_unit_id": "ju-87br_group",
+                "required_unit_id": "hs-123a-1",
+                "class_name": "",
+                "items": [
+                  "ju-87b-2",
+                  "ju-87r-2"
+                ],
+                "details": true,
+                "rp": 7000,
+                "sp": 8400
+              },
+              {
+                "type": "multiple",
+                "title": "Ju 87 G",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ju-87g_group.png",
+                "selected": false,
+                "br": "1.3-1.7",
+                "data_unit_id": "ju-87g_group",
+                "required_unit_id": "ju-87br_group",
+                "class_name": "",
+                "items": [
+                  "ju-87g_1",
+                  "ju-87g_2"
+                ],
+                "details": true,
+                "rp": 9900,
+                "sp": 16300
+              }
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "Do 17",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/do_17_group.png",
+                "selected": false,
+                "br": "1.0-1.7",
+                "data_unit_id": "do_17_group",
+                "required_unit_id": "",
+                "class_name": "",
+                "items": [
+                  "do_17e_1",
+                  "do_17z_2"
+                ],
+                "details": true,
+                "rp": 4900,
+                "sp": 2800
+              },
+              {
+                "type": "multiple",
+                "title": "He 115/BV 138",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/he_111_bv_138_group.png",
+                "selected": false,
+                "br": "1.3-1.7",
+                "data_unit_id": "he_111_bv_138_group",
+                "required_unit_id": "do_17_group",
+                "class_name": "",
+                "items": [
+                  "he_115c_1",
+                  "bv-138c-1"
+                ],
+                "details": true,
+                "rp": 6000,
+                "sp": 4200
+              },
+              "he-111h-2"
+            ]
+          ]
+        },
+        {
+          "rank": "III",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "p-47d_16_re_germany",
+              "ta_154a_1",
+              "fw_190a_5_u14",
+              "bf-109g-2_romania"
+            ],
+            [
+              "hs-129b-2_romania",
+              "p-47d_luftwaffe",
+              "la-5fn_luftwaffe",
+              "bv-155b-1"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "spad_13",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "I",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              {
+                "type": "multiple",
+                "title": "D.371",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/d_371_group.png",
+                "selected": false,
+                "br": "1.0",
+                "data_unit_id": "d_371_group",
+                "required_unit_id": "",
+                "class_name": "",
+                "items": [
+                  "d_371",
+                  "d_373"
+                ],
+                "details": true,
+                "rp": 0,
+                "sp": 0
+              },
+              "caudron_cr714",
+              {
+                "type": "multiple",
+                "title": "M.S.405/406",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/ms_405_406_group.png",
+                "selected": false,
+                "br": "2.0",
+                "data_unit_id": "ms_405_406_group",
+                "required_unit_id": "caudron_cr714",
+                "class_name": "",
+                "items": [
+                  "ms_405c1",
+                  "ms_406c1"
+                ],
+                "details": true,
+                "rp": 7000,
+                "sp": 8400
+              }
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "D.500",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/d_500_group.png",
+                "selected": false,
+                "br": "1.0-1.3",
+                "data_unit_id": "d_500_group",
+                "required_unit_id": "",
+                "class_name": "",
+                "items": [
+                  "d_500",
+                  "d_501"
+                ],
+                "details": true,
+                "rp": 1500,
+                "sp": 700
+              },
+              {
+                "type": "multiple",
+                "title": "H-75",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/h-75_france_group.png",
+                "selected": false,
+                "br": "1.7-2.3",
+                "data_unit_id": "h-75_france_group",
+                "required_unit_id": "d_500_group",
+                "class_name": "",
+                "items": [
+                  "h-75a-1_france",
+                  "h-75a-4_france"
+                ],
+                "details": true,
+                "rp": 4900,
+                "sp": 2800
+              }
+            ],
+            [
+              "v_156_f",
+              "br_693_ab2"
+            ],
+            [
+              "potez_633",
+              "f_222_2",
+              {
+                "type": "multiple",
+                "title": "Martin 167/M.B.174A",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/maryland_group.png",
+                "selected": false,
+                "br": "2.0-2.7",
+                "data_unit_id": "maryland_group",
+                "required_unit_id": "f_222_2",
+                "class_name": "",
+                "items": [
+                  "maryland_mk1_france",
+                  "mb_174_a3"
+                ],
+                "details": true,
+                "rp": 8900,
+                "sp": 12600
+              }
+            ],
+            [
+              "gladiator_mk1_belgium",
+              "fokker_d21_netherlands"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "aw_249_pre_serie",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "VII",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "a_129_cbt",
+              "a_129_d"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "us_erie_class",
+      "fields": {},
+      "removeFields": {
+        "single:us_destroyer_sumner": [
+          "required_unit_id_explicit"
+        ]
+      },
+      "sections": [
+        {
+          "rank": "II",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "us_destroyer_mahan_class",
+              "us_destroyer_fletcher"
+            ],
+            [
+              "us_destroyer_gridley",
+              "us_destroyer_bagley_class_bagley",
+              "us_destroyer_mitscher"
+            ],
+            []
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "germ_battleship_pr_h39",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "VII",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "germ_battleship_bismarck"
+            ],
+            []
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "ussr_destroyer_vifor_class_lyogkiy",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "I",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "ussr_destroyer_kerch"
+            ],
+            []
+          ]
+        },
+        {
+          "rank": "V",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "ussr_battleship_poltava",
+              "ussr_battleship_parizhskaya_kommuna"
+            ],
+            [
+              "ussr_battleship_imperatritsa_mariya",
+              "ussr_battlecruiser_izmail"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "uk_cruiser_danae_class",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "III",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              {
+                "type": "multiple",
+                "title": "HMAS Tobruk/HMS Armada",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_destroyer_battle_group.png",
+                "selected": false,
+                "br": "4.7",
+                "data_unit_id": "uk_destroyer_battle_group",
+                "required_unit_id": "uk_destroyer_n_class",
+                "class_name": "",
+                "items": [
+                  "uk_destroyer_battle_2series",
+                  "uk_destroyer_battle_tobruk"
+                ],
+                "details": true,
+                "rp": 24200,
+                "sp": 93000
+              },
+              "uk_cruiser_arethusa"
+            ],
+            [
+              {
+                "type": "multiple",
+                "title": "HMS Diana/HMS Daring",
+                "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/uk_destroyer_daring_group.png",
+                "selected": false,
+                "br": "5.0",
+                "data_unit_id": "uk_destroyer_daring_group",
+                "required_unit_id": "uk_destroyer_k_class",
+                "class_name": "",
+                "items": [
+                  "uk_destroyer_daring_class_diana",
+                  "uk_destroyer_daring_class_daring"
+                ],
+                "details": true,
+                "rp": 29000,
+                "sp": 125000
+              }
+            ],
+            [
+              "uk_cruiser_enterprise_d52",
+              "uk_cruiser_hawkins"
+            ]
+          ]
+        },
+        {
+          "rank": "VI",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "uk_battleship_q_elizabet_class_barham",
+              "uk_battleship_nelson"
+            ],
+            []
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "jp_cruiser_takao",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "V",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "jp_cruiser_tone"
+            ],
+            [
+              "jp_cruiser_mogami_suzuya",
+              "jp_cruiser_mogami",
+              "jp_battleship_hyuga"
+            ],
+            [
+              "jp_battleship_settsu",
+              "jp_battlecruiser_hiei"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "it_destroyer_audace",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "IV",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "it_cruiser_montecuccoli",
+              "it_cruiser_eugenio_di_savoia"
+            ],
+            [
+              "it_cruiser_trento",
+              "it_cruiser_bolzano"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "fr_destroyer_le_hardi_class_le_hardi",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "III",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "fr_destroyer_le_fantasque_class_le_malin",
+              "fr_destroyer_mogador_class_mogador"
+            ],
+            [
+              "fr_cruiser_jeanne_darc",
+              "fr_cruiser_dugauy_class_primaguet"
+            ]
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "us_pce_842_class",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "IV",
+          "section": "premium_vehicles",
+          "columns": [
+            [
+              "us_pt811",
+              "us_ashville_class_douglas"
+            ],
+            []
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "fr_vc1",
+      "fields": {},
+      "removeFields": {},
+      "sections": [
+        {
+          "rank": "II",
+          "section": "researchable_vehicles",
+          "columns": [
+            [
+              "fr_type40k_vedette"
+            ],
+            [
+              "fr_mtb96_vosper",
+              "fr_flower_class_aconit"
+            ]
+          ]
+        },
+        {
+          "rank": "II",
+          "section": "premium_vehicles",
+          "columns": [
+            [],
+            []
+          ]
+        }
+      ],
+      "newRanks": []
+    },
+    {
+      "anchorId": "yak_130_early",
+      "fields": {
+        "single:yak_130_early": {
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "9.7",
+                "RB": "9.0",
+                "SB": "9.0"
+              },
+              "tank": {
+                "AB": "9.7",
+                "RB": "10.3",
+                "SB": "9.7"
+              },
+              "ship": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.0"
+              }
+            }
+          }
+        }
+      },
+      "removeFields": {},
+      "sections": [],
+      "newRanks": []
+    }
+  ],
+  "manifest": {
+    "database/usa/usa_ground.json": {
+      "units": 154,
+      "sha256": "878b0f701c94253f737c96a3fff3c7db5d5bfcb47e1baa0a6b6c86bd0685c6c7"
+    },
+    "database/germany/germany_ground.json": {
+      "units": 179,
+      "sha256": "16868f252e07884e1d8beef0f24401f74bde2a558fac897915197e0927a4e039"
+    },
+    "database/ussr/ussr_ground.json": {
+      "units": 193,
+      "sha256": "acb19b3f5e2ecc676eab7246a29cb6d90e017766f2716cade4f691834f04a19c"
+    },
+    "database/britain/britain_ground.json": {
+      "units": 145,
+      "sha256": "a521c7a584459ebf07fa29f6adbeccc9ebded48b80191565d9d77023b5c4f8c6"
+    },
+    "database/japan/japan_ground.json": {
+      "units": 87,
+      "sha256": "038f42355a421f4910396812ce7f405df02543f0a1c1d7b098fc92263caf1b4b"
+    },
+    "database/china/china_ground.json": {
+      "units": 99,
+      "sha256": "e68e1ca3708be223f6d466d67ef6ff3524fba1bd6c584c0fd3bc23e227e03970"
+    },
+    "database/italy/italy_ground.json": {
+      "units": 108,
+      "sha256": "05eb2d815d0899d9e584cc61a25b89f1895d7fe1fc844bd9dfdcca95df67e2ee"
+    },
+    "database/france/france_ground.json": {
+      "units": 107,
+      "sha256": "44207c0e7808033a61e3f718f09fa3717291e53aa51933b73216b845cdda29c9"
+    },
+    "database/sweden/sweden_ground.json": {
+      "units": 96,
+      "sha256": "34e3d595dbc25610c33059b865f0d5bf7a5cbeaaf2ddcdf1896073edb63f0fe0"
+    },
+    "database/usa/usa_aviation.json": {
+      "units": 201,
+      "sha256": "98ba7917051aa12c4d0149e130c262b98995b09f4da7911aea00c3499179984e"
+    },
+    "database/germany/germany_aviation.json": {
+      "units": 187,
+      "sha256": "6af5a9f0f58aa333294a059b5babe4b32adc0aee0de57928de4058b813342816"
+    },
+    "database/france/france_aviation.json": {
+      "units": 113,
+      "sha256": "70b192e50ecf837014b68fbf4d2de79d4a0673876d41936f395c32faf00c1e17"
+    },
+    "database/italy/italy_helicopters.json": {
+      "units": 9,
+      "sha256": "2020ce189ee0a265677dc6e51ce542a10b403ba71eb561d6477e7994b90bd266"
+    },
+    "database/usa/usa_ships.json": {
+      "units": 56,
+      "sha256": "d0539e37c8ff48bc7e2ba29e40c7d1f374152d38c895604c77914abc3032e3fb"
+    },
+    "database/germany/germany_ships.json": {
+      "units": 46,
+      "sha256": "d415abeb3f66d5273af2a9d20ff6cff33de9a8560febb162f2969c4d0d39dcc1"
+    },
+    "database/ussr/ussr_ships.json": {
+      "units": 44,
+      "sha256": "69aa3af716c78066cab37ffbbadbff1c709ea3255f921bf9dca56f14804bdff8"
+    },
+    "database/britain/britain_ships.json": {
+      "units": 57,
+      "sha256": "efb1739ede5c810e7a1bb8da0b57a7370b35fea6829834a4b22533b11e07d3af"
+    },
+    "database/japan/japan_ships.json": {
+      "units": 54,
+      "sha256": "9016c0a15c95ef5847e8fa575f7ef558c9093e905f683f3cbb5315d200e118e1"
+    },
+    "database/italy/italy_ships.json": {
+      "units": 37,
+      "sha256": "c046f4650f6ecfcfaced500ab4c5da29dc517173159f5b52dd271c15176ea34d"
+    },
+    "database/france/france_ships.json": {
+      "units": 36,
+      "sha256": "9caf7a42ec8e4b1c254865cecb975389165442ed7f4e36081049ac7c6f127597"
+    },
+    "database/usa/usa_boats.json": {
+      "units": 35,
+      "sha256": "c48b849ca65de59bd9249d00836510722646a418518659f2f69ebfce2b228408"
+    },
+    "database/france/france_boats.json": {
+      "units": 26,
+      "sha256": "50581dfd89e80e09b4bb3f5b96098f0299bbcad4be54248718f47146710eea77"
+    },
+    "database/ussr/ussr_aviation.json": {
+      "units": 199,
+      "sha256": "92f58d059ea21d664cfae278a1adac888fa3d99698193ffb236fdfaf94c533d3"
+    }
+  },
+  "audit": {
+    "usa/ground": {
+      "ids": [
+        "us_m3a1_stuart_nvidia",
+        "us_stingray_2"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "germany/ground": {
+      "ids": [
+        "germ_leopard_2a8"
+      ],
+      "gameOnlyCount": 1,
+      "candidates": []
+    },
+    "ussr/ground": {
+      "ids": [
+        "ussr_bt_7_m_816",
+        "ussr_btr_90_2004"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "britain/ground": {
+      "ids": [
+        "uk_olifant_optimering"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "japan/ground": {
+      "ids": [
+        "jp_bmp_3f"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "china/ground": {
+      "ids": [
+        "cn_zbd_04"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "italy/ground": {
+      "ids": [
+        "it_v_4_straussler",
+        "it_lancia_flak38"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "france/ground": {
+      "ids": [
+        "fr_prtl"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "sweden/ground": {
+      "ids": [
+        "sw_pv_m39",
+        "sw_patria_bmp_3",
+        "sw_leopard_2a8no"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "usa/aviation": {
+      "ids": [
+        "f2a-1_nvidia"
+      ],
+      "gameOnlyCount": 2,
+      "candidates": []
+    },
+    "germany/aviation": {
+      "ids": [
+        "fokker_d7",
+        "fw_190a_8_mistel"
+      ],
+      "gameOnlyCount": 1,
+      "candidates": [
+        [
+          0,
+          {
+            "id": "fokker_d7",
+            "rank": 1,
+            "showOnlyWhenBought": true
+          }
+        ]
+      ]
+    },
+    "france/aviation": {
+      "ids": [
+        "spad_13"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "italy/helicopters": {
+      "ids": [
+        "aw_249_pre_serie"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "usa/ships": {
+      "ids": [
+        "us_erie_class"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "germany/ships": {
+      "ids": [
+        "germ_battleship_pr_h39"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "ussr/ships": {
+      "ids": [
+        "ussr_destroyer_vifor_class_lyogkiy",
+        "ussr_battleship_imperator_nikolai_pervyi"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "britain/ships": {
+      "ids": [
+        "uk_cruiser_danae_class",
+        "uk_battleship_duke_of_york"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "japan/ships": {
+      "ids": [
+        "jp_cruiser_takao"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "italy/ships": {
+      "ids": [
+        "it_destroyer_audace"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "france/ships": {
+      "ids": [
+        "fr_destroyer_le_hardi_class_le_hardi"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "usa/boats": {
+      "ids": [
+        "us_pce_842_class"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    },
+    "france/boats": {
+      "ids": [
+        "fr_vc1",
+        "fr_l990_monitor"
+      ],
+      "gameOnlyCount": null,
+      "candidates": []
+    }
+  },
+  "acquisitionCounts": {
+    "golden-eagles": 368,
+    "pack": 99,
+    "special": 313
+  },
+  "chunks": {
+    "usa_ground": {
+      "path": "database/modifications/usa_ground.json",
+      "vehicles": 152,
+      "modifications": 2557,
+      "bytes": 329718,
+      "sha256": "d1ba8621a1aff40e5cc45e58c56fbd204fa72b089fb41cee783b64a7588e18ea"
+    },
+    "germany_ground": {
+      "path": "database/modifications/germany_ground.json",
+      "vehicles": 178,
+      "modifications": 2940,
+      "bytes": 390763,
+      "sha256": "c5c4972b7672c1287656ef83ea1bf65a213d38dd5798ec1853258bf9bffc42aa"
+    },
+    "ussr_ground": {
+      "path": "database/modifications/ussr_ground.json",
+      "vehicles": 192,
+      "modifications": 3146,
+      "bytes": 410629,
+      "sha256": "c6f2f687b52494c69a135ac6ade0088f805892a3fcccc504a78819457172a512"
+    },
+    "britain_ground": {
+      "path": "database/modifications/britain_ground.json",
+      "vehicles": 144,
+      "modifications": 2419,
+      "bytes": 317241,
+      "sha256": "60bf061550ef946c57fe1aa2b5bc4023e280fc6b09bb70d158bf2af49b39e4ce"
+    },
+    "japan_ground": {
+      "path": "database/modifications/japan_ground.json",
+      "vehicles": 85,
+      "modifications": 1359,
+      "bytes": 174988,
+      "sha256": "49fcc7c8f3c0453cf03c234aeebb7a0fd6ba8cd474f5eb1cb446e838668eb853"
+    },
+    "china_ground": {
+      "path": "database/modifications/china_ground.json",
+      "vehicles": 99,
+      "modifications": 1688,
+      "bytes": 219782,
+      "sha256": "b2aef775863b904acb4795395fff8ab4f9334e8321388e28e602f9821e860a55"
+    },
+    "italy_ground": {
+      "path": "database/modifications/italy_ground.json",
+      "vehicles": 107,
+      "modifications": 1741,
+      "bytes": 226557,
+      "sha256": "cf4e7a568082d251b64b933a76b02147a8973399a0a18d185a5fd79b64559581"
+    },
+    "france_ground": {
+      "path": "database/modifications/france_ground.json",
+      "vehicles": 106,
+      "modifications": 1658,
+      "bytes": 206127,
+      "sha256": "923bfd084f585230feb837da6cd79c5ee8a88c4db460cb70215efed415427f28"
+    },
+    "sweden_ground": {
+      "path": "database/modifications/sweden_ground.json",
+      "vehicles": 95,
+      "modifications": 1565,
+      "bytes": 203837,
+      "sha256": "04944d321c43e439bbdb282837662e0cdad3ee8e0984902e940b6d97704043d5"
+    },
+    "usa_aviation": {
+      "path": "database/modifications/usa_aviation.json",
+      "vehicles": 201,
+      "modifications": 3275,
+      "bytes": 593529,
+      "sha256": "92b5b4a011abbb0c0811c828395e183409c79f1c04d65db527cca007f993f38d"
+    },
+    "germany_aviation": {
+      "path": "database/modifications/germany_aviation.json",
+      "vehicles": 187,
+      "modifications": 2859,
+      "bytes": 618924,
+      "sha256": "da766c6145d5107e87325769429bee9df06885c645525a6e3975056cd92ee587"
+    },
+    "france_aviation": {
+      "path": "database/modifications/france_aviation.json",
+      "vehicles": 113,
+      "modifications": 1757,
+      "bytes": 327216,
+      "sha256": "6a95bacbbf4dcbaa3f7e7699b16bf7f1059b9db874faedbf9c8534a48e311569"
+    },
+    "italy_helicopters": {
+      "path": "database/modifications/italy_helicopters.json",
+      "vehicles": 9,
+      "modifications": 162,
+      "bytes": 31814,
+      "sha256": "b9f86c34cbfd67025e68eeb2b1cde0bfed52c8c4362ccb1066f8dc7c0a3a15c2"
+    },
+    "usa_ships": {
+      "path": "database/modifications/usa_ships.json",
+      "vehicles": 56,
+      "modifications": 1087,
+      "bytes": 164239,
+      "sha256": "67cdb87ce949618a7eec91f941448c7284907eafc4a1f3395f5fe2605e99aa4f"
+    },
+    "germany_ships": {
+      "path": "database/modifications/germany_ships.json",
+      "vehicles": 46,
+      "modifications": 887,
+      "bytes": 135974,
+      "sha256": "d7cb490fb4edb75be64eff2898d1299bbd699ac407f6a3e5d770003be776fe23"
+    },
+    "ussr_ships": {
+      "path": "database/modifications/ussr_ships.json",
+      "vehicles": 44,
+      "modifications": 870,
+      "bytes": 130837,
+      "sha256": "f820f15bfe93bdbf6049b0abd0e0831814be15936f7596e573d8f31586a1d7b1"
+    },
+    "britain_ships": {
+      "path": "database/modifications/britain_ships.json",
+      "vehicles": 57,
+      "modifications": 1117,
+      "bytes": 165447,
+      "sha256": "3a71737e88305e871fe12e8fa05d0d48b8ba39de64eb10c7a12988baeddd0fd6"
+    },
+    "japan_ships": {
+      "path": "database/modifications/japan_ships.json",
+      "vehicles": 54,
+      "modifications": 995,
+      "bytes": 149920,
+      "sha256": "24045cb75f505e0610dfbf392f869b869ccd6df4ecab31afb1b84ba0691f0795"
+    },
+    "italy_ships": {
+      "path": "database/modifications/italy_ships.json",
+      "vehicles": 37,
+      "modifications": 701,
+      "bytes": 105979,
+      "sha256": "0b1ace2a7bea1ec53108b78d647a6d4dc33936e672c9b179a2d7828dfb8289fc"
+    },
+    "france_ships": {
+      "path": "database/modifications/france_ships.json",
+      "vehicles": 36,
+      "modifications": 667,
+      "bytes": 100496,
+      "sha256": "ea97a596ca0f2f271eac84f7ba1f16c5676d1d0c2b595bfb42a54eeef0e1ae2c"
+    },
+    "usa_boats": {
+      "path": "database/modifications/usa_boats.json",
+      "vehicles": 35,
+      "modifications": 563,
+      "bytes": 94329,
+      "sha256": "34efd3e7af5dd4ca6836b7f164e706893223a3a588e66a364ee2831ab71636b9"
+    },
+    "france_boats": {
+      "path": "database/modifications/france_boats.json",
+      "vehicles": 26,
+      "modifications": 394,
+      "bytes": 62804,
+      "sha256": "a426d19368eb27f880b41bb4ee1823f53232d927f29a5fbcb85fd520fbff5cb6"
+    }
+  },
+  "catalogStats": {
+    "treeUnits": 3247,
+    "vehicles": 3237,
+    "modifications": 52750,
+    "chunks": 44
+  }
+}

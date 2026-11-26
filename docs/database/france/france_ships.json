@@ -690,6 +690,62 @@
             "fetched_at": "2026-09-19T06:32:43.170Z",
             "sha256": "62453306baf256dd25ad3ec8ade5f17bb6b27a5ea7c45246bf6aad86fb4f69ed"
           }
+        },
+        {
+          "type": "single",
+          "title": "Le Hardi",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_destroyer_le_hardi_class_le_hardi.png",
+          "br": "5.0",
+          "rp": 25000,
+          "sp": 87000,
+          "data_unit_id": "fr_destroyer_le_hardi_class_le_hardi",
+          "required_unit_id": "fr_destroyer_mogador_class_mogador",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "III",
+          "research_country": "France",
+          "main_role": "Destroyer",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/fr_destroyer_le_hardi_class_le_hardi",
+            "rank": "III",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "5.0",
+              "RB": "5.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "5.0",
+                "RB": "5.0"
+              }
+            },
+            "research": "25,000",
+            "purchase": "87,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "5.0",
+                "RB": "5.0",
+                "SB": "5.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
+          }
         }
       ],
       [

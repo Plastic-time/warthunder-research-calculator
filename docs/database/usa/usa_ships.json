@@ -393,7 +393,65 @@
           }
         }
       ],
-      []
+      [
+        {
+          "type": "single",
+          "title": "Erie",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/us_erie_class.png",
+          "br": "4.3",
+          "rp": 13000,
+          "sp": 31000,
+          "data_unit_id": "us_erie_class",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "II",
+          "research_country": "USA",
+          "main_role": "Destroyer",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/us_erie_class",
+            "rank": "II",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "4.3",
+              "RB": "4.3"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "4.3",
+                "RB": "4.3"
+              }
+            },
+            "research": "13,000",
+            "purchase": "31,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "ship",
+            "by_battle": {
+              "ship": {
+                "AB": "4.3",
+                "RB": "4.3",
+                "SB": "4.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
+          },
+          "required_unit_id_explicit": true
+        }
+      ]
     ],
     "premium_vehicles": [
       [
@@ -717,7 +775,8 @@
             "status": null,
             "fetched_at": "2026-09-19T06:32:14.802Z",
             "sha256": "54a6e780181dcd00f4593f69c95668ced630fd4c7bdebc75071d4d6bc0882cee"
-          }
+          },
+          "required_unit_id_explicit": true
         },
         {
           "type": "single",

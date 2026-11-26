@@ -62,7 +62,8 @@ test('partial review checkpoints do not promote the full snapshot or import hidd
   }
   assert.equal(read('config/data-version.json').gameVersion, '2.59.0.17');
   const ids = new Set(Object.values(read('docs/roster-audit.json').trees).flatMap(tree => Object.keys(tree.units)));
-  for (const entry of fixture.deferredRosterEntries) assert.equal(ids.has(entry.id), additions.units.some(c => c.id === entry.id));
+  for (const entry of fixture.deferredRosterEntries) assert.equal(ids.has(entry.id), additions.units.some(c => c.id === entry.id)
+    || read('docs/database/manifest.json').rosterUpdate.ids.includes(entry.id));
   assert.equal(fixture.sources.length, 6);
   for (const source of fixture.sources) {
     assert.equal(source.commit, (source.label === 'baseline' ? fixture.baseline : fixture.upstream).commit);
@@ -92,8 +93,8 @@ test('October 28 review leaves the supported roster, costs and modification snap
     }
     assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), expected);
   }
-  const ids = new Set(Object.values(read('docs/roster-audit.json').trees).flatMap(tree => Object.keys(tree.units)));
-  const mods = read('docs/database/modifications/catalog.json').vehicles;
+  const ids = new Set(Object.values(require('./roster-snapshot-26142.cjs').restoreRoster(read('docs/roster-audit.json')).trees).flatMap(tree => Object.keys(tree.units)));
+  const mods = require('./roster-snapshot-26142.cjs').restoreCatalog(read('docs/database/modifications/catalog.json')).vehicles;
   for (const id of Object.keys(latestReview.changedUnits)) {
     assert(!ids.has(id));
     assert(!Object.hasOwn(mods, id));

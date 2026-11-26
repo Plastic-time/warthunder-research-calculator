@@ -1201,6 +1201,90 @@
             "fetched_at": "2026-09-19T06:29:43.346Z",
             "sha256": "cea299f1934f536f21aafca857f273389b89936bc13bd8fd5a66b9e58a4d9dd1"
           }
+        },
+        {
+          "type": "single",
+          "title": "F2A-1 TD",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/f2a-1_nvidia.png",
+          "br": "2.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "f2a-1_nvidia",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "event",
+          "details": true,
+          "rank": "I",
+          "research_country": "USA",
+          "main_role": "Fighter",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/f2a-1_nvidia",
+            "rank": "I",
+            "battle_rating_context": "air",
+            "battle_ratings": {
+              "AB": "2.0",
+              "RB": "2.0",
+              "SB": "2.0"
+            },
+            "battle_ratings_by_battle": {
+              "air": {
+                "AB": "2.0",
+                "RB": "2.0",
+                "SB": "2.0"
+              },
+              "tank": {
+                "AB": "—",
+                "RB": "2.3",
+                "SB": "2.3"
+              },
+              "ship": {
+                "AB": "2.0",
+                "RB": "2.0",
+                "SB": "—"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "2.0",
+                "RB": "2.0",
+                "SB": "2.0"
+              },
+              "tank": {
+                "AB": "2.0",
+                "RB": "2.3",
+                "SB": "2.3"
+              },
+              "ship": {
+                "AB": "2.0",
+                "RB": "2.0",
+                "SB": "2.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://www.nvidia.com/en-us/geforce/news/dlss-4-5-eve-vanguard-assetto-corsa-rally-teardown-and-more/",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "event",
+              "channel": "geforce-reward",
+              "url": "https://www.nvidia.com/en-us/geforce/news/dlss-4-5-eve-vanguard-assetto-corsa-rally-teardown-and-more/"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research"
+          }
         }
       ]
     ],

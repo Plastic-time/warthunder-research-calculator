@@ -40,27 +40,34 @@ function correctVehicle(vehicle) {
   return result;
 }
 function restoreChunk(value) {
-  const result = structuredClone(value);
-  const later = require('./fixtures/modification-roster-261-previous.json');
-  for (const [id, entry] of Object.entries(later.vehicles)) if (result.v[id]) {
-    const current = result.v[id];
-    if (JSON.stringify(current) === JSON.stringify(entry.before)) continue;
-    assert.equal(crypto.createHash('sha256').update(JSON.stringify(current)+'\n').digest('hex'), entry.afterHash, id);
-    result.v[id] = structuredClone(entry.before);
-  }
+  const result = require('./roster-snapshot-26142.cjs').restoreChunk(value);
+  for (const later of [
+    require('./fixtures/naval-modifications-26142-previous.json'),
+    require('./fixtures/modification-roster-261-previous.json'),
+  ]) restoreReviewedVehicles(result, later);
   for (const [id,entry] of Object.entries(fixture.vehicles)) if(result.v[id]) {
     assert.deepEqual(result.v[id],correctVehicle(entry.previous));
     result.v[id] = structuredClone(entry.previous);
   }
   return result;
 }
+function restoreReviewedVehicles(chunk, review) {
+  for (const [id, entry] of Object.entries(review.vehicles)) if (chunk.v[id]) {
+    const current = chunk.v[id];
+    if (JSON.stringify(current) === JSON.stringify(entry.before)) continue;
+    assert.equal(crypto.createHash('sha256').update(JSON.stringify(current)+'\n').digest('hex'), entry.afterHash, id);
+    chunk.v[id] = structuredClone(entry.before);
+  }
+}
 function restoreCatalog(value) {
-  const result = structuredClone(value);
-  if (result.modificationRosterReview) {
-    const later = require('./fixtures/modification-roster-261-previous.json');
+  const result = require('./roster-snapshot-26142.cjs').restoreCatalog(value);
+  for (const [key, later] of [
+    ['navalModificationReview', require('./fixtures/naval-modifications-26142-previous.json')],
+    ['modificationRosterReview', require('./fixtures/modification-roster-261-previous.json')],
+  ]) if (result[key]) {
     Object.assign(result.chunks, later.chunks);
     result.stats.modifications = later.count;
-    delete result.modificationRosterReview;
+    delete result[key];
   }
   for (const id of vehicleIds) {
     assert.deepEqual(result.corrections[id],correction);

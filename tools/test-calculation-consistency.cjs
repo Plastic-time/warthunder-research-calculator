@@ -18,7 +18,7 @@ function browserCalculator(folder) {
     vm.runInContext(fs.readFileSync(path.join(root, folder, file), 'utf8'), context);
   }
   const code = fs.readFileSync(path.join(root, folder, 'app.js'), 'utf8').replace(/\binit\(\);\s*$/, '');
-  vm.runInContext(code + '\nrenderTree=()=>{};renderSummary=()=>{};globalThis.calc={state,flattenTree,calculatePlan,isInitialUnlockedUnit,remainingUnitRp,formatCost};', context);
+  vm.runInContext(code + '\nrenderTree=()=>{};renderSummary=()=>{};globalThis.calc={state,flattenTree,getDependencyIds,calculatePlan,isInitialUnlockedUnit,remainingUnitRp,formatCost};', context);
   return context.calc;
 }
 
@@ -44,12 +44,47 @@ test('calculation API and both browser versions agree without database writes', 
   await once(server, 'listening');
   t.after(async () => { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); });
   const base = `http://127.0.0.1:${server.address().port}`;
+  // The next prerequisite in the shop has not taken effect yet. A rendered neighbour
+  // or an older desktop dependency override must not introduce an extra purchase.
+  for (const [country, type, id, required] of [
+    ['usa', 'ships', 'us_destroyer_sumner', ''],
+    ['usa', 'ships', 'us_erie_class', ''],
+    ['italy', 'ships', 'it_destroyer_audace', ''],
+    ['ussr', 'ground', 'ussr_bmpt', 'ussr_775_157_group'],
+    ['france', 'ground', 'fr_vab_santal', 'fr_dca_prtl_group'],
+    ['china', 'ground', 'cn_ztl_11', 'cn_cm_zbd_group'],
+  ]) {
+    const response = await fetch(`${base}/api/tree/${country}/${type}/flat`);
+    assert.equal((await response.json()).units.find(unit => unit.data_unit_id === id).required_unit_id, required, id);
+    for (const folder of ['docs', 'public']) {
+      const calc = browserCalculator(folder);
+      calc.flattenTree(require(`../docs/database/${country}/${country}_${type}.json`));
+      assert.equal(calc.state.unitMap.get(id).required_unit_id, required, folder + '/' + id);
+    }
+  }
   const calculate = async (country, type, body) => {
     const response = await fetch(`${base}/api/calculate/${country}/${type}`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
     });
     return { status: response.status, data: await response.json() };
   };
+  await t.test('every new target has the same prerequisite budget in the service and on Pages', async () => {
+    const calc = browserCalculator('docs');
+    const catalog = require('../docs/database/modifications/catalog.json');
+    for (const id of catalog.rosterUpdate.ids) {
+      const [country, type] = catalog.vehicles[id].split('_');
+      calc.flattenTree(require(`../docs/database/${country}/${country}_${type}.json`));
+      const route = Array.from(calc.getDependencyIds(id)).filter(key => !calc.state.initialUnlocked.has(key));
+      const { status, data } = await calculate(country, type, { targetId: id, dependencyMode: 'dependencies', folderMode: 'first' });
+      assert.equal(status, 200);
+      assert.deepEqual(data.missing.map(unit => unit.data_unit_id).sort(), [...route].sort(), id);
+      for (const [field, total] of [['rp', 'total_rp'], ['sp', 'total_sp']]) {
+        assert.equal(data[total], route.reduce((sum, key) => sum + (calc.state.unitMap.get(key)[field] || 0), 0), id);
+      }
+      if (id === 'uk_cruiser_danae_class') assert(route.includes('uk_egret_class'));
+      if (id === 'germ_leopard_2a8') assert(route.includes('germ_leopard_i'));
+    }
+  });
   const stuart = 'us_m3_stuart';
 
   await t.test('remaining RP is clamped, full cost retained, SL and ownership unchanged', async () => {

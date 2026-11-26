@@ -81,8 +81,8 @@ for (const [key, meta] of Object.entries(catalog.chunks)) {
     }
   }
 }
-assert.equal(vehicleCount, proof.examinedVehicles + eventUnits.length + 9);
-assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0) + 3 + 181 + 4 + 54 - 19);
+assert.equal(vehicleCount, proof.examinedVehicles + eventUnits.length + 9 + 31);
+assert.equal(modCount, proof.examinedMods + eventUnits.reduce((n, u) => n + buildEvent(u).m.length, 0) + 3 + 181 + 4 + 54 - 19 + 53 + 518);
 for (const saved of proof.preserved) {
   const digest = crypto.createHash('sha256').update(JSON.stringify(vehicles.get(saved.id))).digest('hex');
   assert.equal(digest, saved.sha256, saved.id + ': user correction changed');

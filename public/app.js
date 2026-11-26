@@ -399,7 +399,7 @@ function flattenTree(tree) {
       columns.forEach((column, columnIndex) => {
         let previousDependencyId = previousByColumn[sectionType][columnIndex] || "";
         column.forEach((item, rowIndex) => {
-          const inferredReqId = sectionType === "researchable" ? previousDependencyId : "";
+          const inferredReqId = sectionType === "researchable" && !item.required_unit_id_explicit ? previousDependencyId : "";
           if (item.type === "multiple") {
             const groupReqId = item.required_unit_id || inferredReqId;
             const groupMainChildId = getGroupMainChildId(item);
@@ -1065,10 +1065,14 @@ function renderUnit(unit, inFolder = false) {
   // The special column cannot be researched; show 0 like its gold neighbours.
   const cardCost = value => value == null && classes.includes("premium") ? "0" : formatCost(value);
 
+  const reward = unit.game_source?.acquisition;
+  const rewardName = { "battle-pass": "战斗通行证奖励", "twitch-drops": "Twitch 掉宝奖励" }[reward?.channel || reward?.type];
+  const rewardLabel = rewardName || (window.RosterAudit?.info?.(state.country, state.type, id)?.category === "event" ? "" : "活动载具");
+  const rewardBadge = rewardLabel ? `<span class="pill">${tr(rewardLabel)}</span>` : "";
   const officialUrl = unit.game_source?.official_url;
   const officialSource = typeof officialUrl === "string" && /^https:\/\/(?:warthunder\.com|forum\.warthunder\.com)\//.test(officialUrl);
   const sourceLabel = tr("查看官方活动来源");
-  const detailAction = officialSource
+  const detailAction = officialSource && (!unit.wiki?.url || unit.game_source?.cost_policy === "reward-excluded-from-ordinary-research")
     ? `<a class="unit-wiki-launch" data-game-source href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(sourceLabel)}" title="${escapeHtml(sourceLabel)}"><span class="wiki-bookmark"><img src="${escapeHtml(localAsset('assets/wiki/book-open.svg'))}" alt=""></span></a>`
     : `<button class="unit-wiki-launch" type="button" data-wiki-id="${escapeHtml(id)}" data-wiki-title="${escapeHtml(displayTitle(unit))}" aria-label="${escapeHtml(tr("查看 {name} Wiki 详情", { name: displayTitle(unit) }))}" title="${tr("Wiki 载具详情")}"><span class="wiki-bookmark"><img src="${escapeHtml(localAsset('assets/wiki/book-open.svg'))}" alt=""></span></button>`;
   const modificationButton = window.ModificationWorkbench?.hasVehicle(id)
@@ -1084,7 +1088,7 @@ function renderUnit(unit, inFolder = false) {
         <span class="unit-meta">
           <span class="pill" data-unit-br>${escapeHtml(unitBattleRatingLabel(unit))}</span>
           ${role ? `<span class="pill role">${escapeHtml(role)}</span>` : ""}
-          ${unit.game_source?.cost_policy === "reward-excluded-from-ordinary-research" ? `<span class="pill">${tr(unit.game_source.acquisition.type === "battle-pass" ? "战斗通行证奖励" : "Twitch 掉宝奖励")}</span>` : squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${cardCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${cardCost(unit.sp)}</span></span>`}
+          ${unit.game_source?.cost_policy === "reward-excluded-from-ordinary-research" ? rewardBadge : squadron ? `<span class="pill squadron-label">${tr("联队载具")}</span>` : `<span class="pill rp"><span class="unit-cost-label">RP</span> <span class="unit-cost-value">${cardCost(cardRp)}</span></span><span class="pill sp"><span class="unit-cost-label">SL</span> <span class="unit-cost-value">${cardCost(unit.sp)}</span></span>`}
           ${window.RosterAudit?.badges(state.country, state.type, unit, displayTitle(unit)) || ""}
           ${unitProgress(unit) && !state.owned.has(id) ? `<span class="pill unit-rp-progress" title="${tr("总计 {count} RP", { count: formatCost(unit.rp) })}">${tr("剩余 {count} RP", { count: formatNumber(remainingUnitRp(unit)) })}</span>` : ""}
           ${unlocked ? `<span class="pill unlocked">${tr("初始载具")}</span>` : ""}

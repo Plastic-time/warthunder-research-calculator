@@ -3903,57 +3903,130 @@
       ],
       [
         {
-          "type": "single",
-          "title": "AMX-30 S DCA",
-          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_30_dca.png",
-          "br": "8.3",
-          "rp": 135000,
-          "sp": 380000,
-          "data_unit_id": "fr_amx_30_dca",
-          "required_unit_id": "fr_amx_10p",
+          "type": "multiple",
+          "title": "AMX-30 S DCA/Cheetah PRTL",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_m44_55_group.png",
           "selected": false,
+          "br": "8.3-8.7",
+          "data_unit_id": "fr_dca_prtl_group",
+          "required_unit_id": "fr_amx_10p",
           "class_name": "",
-          "details": true,
-          "rank": "VI",
-          "research_country": "France",
-          "main_role": "SPAA",
-          "is_component": false,
-          "component_of": null,
-          "is_premium": false,
-          "is_squadron": false,
-          "wiki": {
-            "url": "https://wiki.warthunder.com/unit/fr_amx_30_dca",
-            "rank": "VI",
-            "battle_rating_context": "default",
-            "battle_ratings": {
-              "AB": "8.7",
-              "RB": "8.7",
-              "SB": "8.7"
-            },
-            "battle_ratings_by_battle": {
-              "default": {
-                "AB": "8.7",
-                "RB": "8.7",
-                "SB": "8.7"
+          "items": [
+            {
+              "type": "single",
+              "title": "AMX-30 S DCA",
+              "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_amx_30_dca.png",
+              "br": "8.3",
+              "rp": 160000,
+              "sp": 450000,
+              "data_unit_id": "fr_amx_30_dca",
+              "required_unit_id": "",
+              "selected": false,
+              "class_name": "",
+              "details": true,
+              "rank": "VI",
+              "research_country": "France",
+              "main_role": "SPAA",
+              "is_component": false,
+              "component_of": null,
+              "is_premium": false,
+              "is_squadron": false,
+              "wiki": {
+                "url": "https://wiki.warthunder.com/unit/fr_amx_30_dca",
+                "rank": "VI",
+                "battle_rating_context": "default",
+                "battle_ratings": {
+                  "AB": "8.7",
+                  "RB": "8.7",
+                  "SB": "8.7"
+                },
+                "battle_ratings_by_battle": {
+                  "default": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                },
+                "research": "135,000",
+                "purchase": "380,000",
+                "purchase_currency": "SL",
+                "status": null,
+                "fetched_at": "2026-09-19T06:29:16.730Z",
+                "sha256": "d7f11f66ad305d2757dbc250677aaebcf2e10349ffc06666004994e5794ce77c"
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.3",
+                    "RB": "8.3",
+                    "SB": "8.3"
+                  }
+                }
               }
             },
-            "research": "135,000",
-            "purchase": "380,000",
-            "purchase_currency": "SL",
-            "status": null,
-            "fetched_at": "2026-09-19T06:29:16.730Z",
-            "sha256": "d7f11f66ad305d2757dbc250677aaebcf2e10349ffc06666004994e5794ce77c"
-          },
-          "game_battle_ratings": {
-            "context": "tank",
-            "by_battle": {
-              "tank": {
-                "AB": "8.3",
-                "RB": "8.3",
-                "SB": "8.3"
+            {
+              "type": "single",
+              "title": "Cheetah PRTL",
+              "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fr_prtl.png",
+              "br": "8.7",
+              "rp": 94000,
+              "sp": 520000,
+              "data_unit_id": "fr_prtl",
+              "required_unit_id": "fr_amx_30_dca",
+              "selected": false,
+              "class_name": "",
+              "details": true,
+              "rank": "VI",
+              "research_country": "France",
+              "main_role": "SPAA",
+              "is_component": false,
+              "component_of": null,
+              "is_premium": false,
+              "is_squadron": false,
+              "wiki": {
+                "url": "https://wiki.warthunder.com/unit/fr_prtl",
+                "rank": "VI",
+                "battle_rating_context": "default",
+                "battle_ratings": {
+                  "AB": "8.7",
+                  "RB": "8.7",
+                  "SB": "8.7"
+                },
+                "battle_ratings_by_battle": {
+                  "default": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                },
+                "research": "94,000",
+                "purchase": "520,000",
+                "purchase_currency": "SL",
+                "status": null
+              },
+              "game_battle_ratings": {
+                "context": "tank",
+                "by_battle": {
+                  "tank": {
+                    "AB": "8.7",
+                    "RB": "8.7",
+                    "SB": "8.7"
+                  }
+                }
+              },
+              "game_source": {
+                "version": "2.61.0.42",
+                "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+                "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+                "provenance": "doc/game-data-2.61.0.42.md",
+                "modification_status": "verified-game-data"
               }
             }
-          }
+          ],
+          "details": true,
+          "rp": 254000,
+          "sp": 970000
         },
         {
           "type": "single",
@@ -3963,7 +4036,7 @@
           "rp": 220000,
           "sp": 620000,
           "data_unit_id": "fr_vab_santal",
-          "required_unit_id": "fr_amx_30_dca",
+          "required_unit_id": "fr_dca_prtl_group",
           "selected": false,
           "class_name": "",
           "details": true,

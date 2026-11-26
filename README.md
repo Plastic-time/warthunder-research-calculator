@@ -14,7 +14,7 @@
 
 <p align="center"><strong>English</strong> &nbsp; / &nbsp; <a href="README.zh-CN.md">简体中文</a></p>
 
-<p align="center"><sub>3,247 vehicles · 3,237 modification trees · 5 vehicle categories · 7 UI languages</sub></p>
+<p align="center"><sub>3,278 vehicles · 3,268 modification trees · 5 vehicle categories · 7 UI languages</sub></p>
 
 ## Quick Start
 
@@ -86,7 +86,7 @@ Want to unlock specific shells, missiles, or countermeasures without spading the
 ## Data & Limitations
 
 - **Fixed snapshot**: baseline vehicle costs come from game version **2.59.0.17** and do not sync live with the game. Future cost and prerequisite reviews rely on game configuration as the primary source, with the Wiki supplying names, images, and layout. Some legacy importers still draw from older sources, so the dataset is not yet 100% game-config sourced.
-- **Latest reviewed version**: **2.61.0.9**. Adds nine aircraft with research costs, prerequisites, and 181 modification nodes, including the F-15EX, F-15IA, Su-15TM, and three premium pack aircraft. Saved plans stay intact; this is a partial addition, not a full snapshot upgrade.
+- **Latest reviewed version**: **2.61.0.42**. Added 31 vehicles, reviewed their acquisition and prerequisites, updated naval modification costs, and refreshed variable battle ratings. The base snapshot remains separately versioned.
 - **Unknown is not free**: missing costs show as **Not provided**, never `0`. Rank unlock counts still use the project's own rules table. Verify every plan in-game before spending RP or Silver Lions.
 - **Plans stay in your browser**: selections, routes, and RP progress live only in this browser. Nothing is uploaded or synced across devices, and clearing site data deletes them. Vehicle images, Wiki pages, and the online counter require a network connection. The online counter estimates active browsers; if it goes down, calculations keep working.
 

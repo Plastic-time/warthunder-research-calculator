@@ -13,14 +13,15 @@
     "shopSha256": "e85bcd9c1d29c15545f1cdd6316fb6e1551a5157709f38d628e03cbf5a56c731"
   },
   "current": {
-    "version": "2.61.0.20",
-    "commit": "2def2e1cc42d1651a44c69ecd40dbe031e01aace",
-    "shopSha256": "043758ca32acebe02a7933b6f7865b82f2c9b0d7d62c85e6c79f595e04ebbad7"
+    "version": "2.61.0.42",
+    "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+    "shopSha256": "3e95395dd133c5459d637bc89b394fb0fb67e3867f5610323b9a36ebdaaf67c9"
   },
   "trees": {
     "usa/aviation": [
       "f_15ex",
-      "fa_18d_late"
+      "fa_18d_late",
+      "f2a-1_nvidia"
     ],
     "ussr/aviation": [
       "su_15tm"
@@ -40,6 +41,75 @@
     ],
     "israel/aviation": [
       "f_15ia"
+    ],
+    "usa/ground": [
+      "us_m3a1_stuart_nvidia",
+      "us_stingray_2"
+    ],
+    "germany/ground": [
+      "germ_leopard_2a8"
+    ],
+    "ussr/ground": [
+      "ussr_btr_90_2004"
+    ],
+    "britain/ground": [
+      "uk_olifant_optimering"
+    ],
+    "japan/ground": [
+      "jp_bmp_3f"
+    ],
+    "china/ground": [
+      "cn_zbd_04"
+    ],
+    "italy/ground": [
+      "it_v_4_straussler",
+      "it_lancia_flak38"
+    ],
+    "france/ground": [
+      "fr_prtl"
+    ],
+    "sweden/ground": [
+      "sw_pv_m39",
+      "sw_leopard_2a8no"
+    ],
+    "germany/aviation": [
+      "fokker_d7"
+    ],
+    "france/aviation": [
+      "spad_13"
+    ],
+    "italy/helicopters": [
+      "aw_249_pre_serie"
+    ],
+    "usa/ships": [
+      "us_erie_class"
+    ],
+    "germany/ships": [
+      "germ_battleship_pr_h39"
+    ],
+    "ussr/ships": [
+      "ussr_destroyer_vifor_class_lyogkiy",
+      "ussr_battleship_imperator_nikolai_pervyi"
+    ],
+    "britain/ships": [
+      "uk_cruiser_danae_class",
+      "uk_battleship_duke_of_york"
+    ],
+    "japan/ships": [
+      "jp_cruiser_takao"
+    ],
+    "italy/ships": [
+      "it_destroyer_audace"
+    ],
+    "france/ships": [
+      "fr_destroyer_le_hardi_class_le_hardi"
+    ],
+    "usa/boats": [
+      "us_pce_842_class"
+    ],
+    "france/boats": [
+      "fr_vc1",
+      "fr_l990_monitor"
     ]
   }
 }

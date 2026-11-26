@@ -5,6 +5,81 @@
       [
         {
           "type": "single",
+          "title": "Fokker D.VII",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fokker_d7.png",
+          "br": "1.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "fokker_d7",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "event",
+          "details": true,
+          "rank": "I",
+          "research_country": "Germany",
+          "main_role": "Fighter",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/fokker_d7",
+            "rank": "I",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "1.0",
+              "RB": "1.0",
+              "SB": "1.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "1.0",
+                "RB": "1.0",
+                "SB": "1.0"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "1.0",
+                "RB": "1.0",
+                "SB": "1.0"
+              },
+              "tank": {
+                "AB": "1.0",
+                "RB": "1.0",
+                "SB": "1.0"
+              },
+              "ship": {
+                "AB": "1.0",
+                "RB": "1.0",
+                "SB": "1.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/news/10318-event-the-great-war-returns-with-new-obtainable-aircraft-to-mark-november-11th-en",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "event",
+              "channel": "vehicle-event",
+              "url": "https://warthunder.com/en/news/10318-event-the-great-war-returns-with-new-obtainable-aircraft-to-mark-november-11th-en"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research"
+          },
+          "required_unit_id_explicit": true
+        },
+        {
+          "type": "single",
           "title": "Bf 109 B-1",
           "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/bf-109b_2.png",
           "br": "1.3",
@@ -44,7 +119,8 @@
             "status": null,
             "fetched_at": "2026-09-19T06:30:02.584Z",
             "sha256": "0a5c5abc78fa9a5fa8291d3fd0bcb4d11985dc531b60f8dfb6ba7530fb004bd5"
-          }
+          },
+          "required_unit_id_explicit": true
         },
         {
           "type": "single",
@@ -4806,6 +4882,80 @@
             "status": "Premium vehicle",
             "fetched_at": "2026-09-19T06:30:18.570Z",
             "sha256": "ecaef5b16043cb85fdb010c90bb0ca106cbedf8b2b9381e683ce280768ef0fc7"
+          }
+        },
+        {
+          "type": "single",
+          "title": "Mistel 2",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/fw_190a_8_mistel.png",
+          "br": "4.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "fw_190a_8_mistel",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "III",
+          "research_country": "Germany",
+          "main_role": "Bomber",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/fw_190a_8_mistel",
+            "rank": "III",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "4.0",
+              "RB": "4.0",
+              "SB": "4.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "4.0",
+                "RB": "4.0",
+                "SB": "4.0"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": "Premium vehicle"
+          },
+          "game_battle_ratings": {
+            "context": "air",
+            "by_battle": {
+              "air": {
+                "AB": "4.0",
+                "RB": "4.0",
+                "SB": "4.0"
+              },
+              "tank": {
+                "AB": "4.0",
+                "RB": "4.0",
+                "SB": "4.0"
+              },
+              "ship": {
+                "AB": "4.0",
+                "RB": "4.0",
+                "SB": "4.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/news/10282-event-dreams-come-true-mistel-2-en",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "event",
+              "channel": "vehicle-event",
+              "url": "https://warthunder.com/en/news/10282-event-dreams-come-true-mistel-2-en"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research"
           }
         },
         {

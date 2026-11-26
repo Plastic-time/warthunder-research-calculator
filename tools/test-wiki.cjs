@@ -52,9 +52,14 @@ for (const entry of manifest.files) {
   const content=fs.readFileSync(path.join(root,'docs',entry.path),'utf8');
   assert.equal(sha(content),entry.sha256,entry.path);
   const tree=JSON.parse(content);
-  calc.state.planned=new Set(); calc.flattenTree(tree);
-  legacy.calc.state.planned=new Set(); legacy.calc.flattenTree(tree);
+  const previous = require("./roster-snapshot-26142.cjs").restoreTree(tree);
+  calc.state.planned=new Set(); calc.flattenTree(previous);
+  legacy.calc.state.planned=new Set(); legacy.calc.flattenTree(previous);
   assert.equal(JSON.stringify(calc.state.units),JSON.stringify(legacy.calc.state.units),'Previous vehicle handling must be preserved');
+  for (const unit of calc.state.units) {
+    assert.deepEqual([...calc.getDependencyIds(unit.data_unit_id)],[...legacy.calc.getDependencyIds(unit.data_unit_id)],`${unit.data_unit_id}: previous prerequisite rules`);
+  }
+  calc.flattenTree(tree);
   assert.equal(calc.state.units.length,entry.units);
   const country=entry.path.split('/')[1];
   const type=entry.path.split('/')[2].slice(country.length+1,-5);
@@ -67,7 +72,6 @@ for (const entry of manifest.files) {
     if(unit.is_component) {components++;assert.equal(unit.rp,0);}
     if(unit.rp===null||unit.sp===null) {unknown++;assert(!calc.isInitialUnlockedUnit(unit));}
     if(unit.is_squadron||unit.is_premium) {assert.equal(unit.rp,0);assert.equal(unit.sp,0);}
-    assert.deepEqual([...calc.getDependencyIds(unit.data_unit_id)],[...legacy.calc.getDependencyIds(unit.data_unit_id)],`${unit.data_unit_id}: previous prerequisite rules`);
   }
 }
 assert.equal(total,manifest.unit_count);

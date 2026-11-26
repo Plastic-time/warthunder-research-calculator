@@ -1,8 +1,9 @@
-// Generated from War Thunder 2.61.0.26, Datamine f65dbd485f6b9eb1fb9f9c67cb6dd177650e9a27.
+// Generated from War Thunder 2.61.0.42, Datamine 4268c8d0acfeeb8ba175176fabce053ceb74702f.
 window.WTCustomBattleRatings = {
   "f3h-2": [{"ground":"8.3","air":"9.0","mods":[]},{"ground":"8.7","air":"9.3","mods":["us_aim_7c"]}],
   "a_10a_early": [{"ground":"9.7","air":"9.0","mods":[]},{"ground":"11.0","air":"10.3","mods":["us_agm_65b","us_gbu_8","us_aim_9l"]}],
   "f-5e_switzerland": [{"ground":"11.7","air":"11.0","mods":[]},{"ground":"12.0","air":"11.3","mods":["sws_flz_lwf_63_90"]},{"ground":"12.3","air":"11.7","mods":["us_agm_65d","us_agm_65g"]}],
+  "yak_130_early": [{"ground":"9.0","air":"9.0","mods":[]},{"ground":"10.3","air":"10.3","mods":["su_kab_tv"]}],
   "j_22m1a": [{"ground":"9.3","air":"9.0","mods":[]},{"ground":"10.7","air":"10.3","mods":["rs_fab_pgb","rs_grom","rs_e_24_a1"]},{"ground":"11.3","air":"11.0","mods":["rs_m16d","rs_vrvz_240","us_agm_65b","rs_grom_b"]},{"ground":"11.7","air":"11.3","mods":["kosava_3_tm"]}],
   "su_25tm": [{"ground":"11.7","air":"11.3","mods":[]},{"ground":"12.0","air":"11.7","mods":["su_arm","mig_29_r_27r","mig_29_r_27t","su_27sm_r_27r_r_27er","su_27sm_r_27t_r_27et"]},{"ground":"13.0","air":"12.7","mods":["yak_141_r_77"]}],
   "yak_141": [{"ground":"11.7","air":"12.7","mods":[]},{"ground":"12.3","air":"13.3","mods":["yak_141_r_77"]}],
@@ -39,5 +40,6 @@ window.WTCustomBattleRatings = {
   "tiger_had_block2_france": [{"ground":"13.0","mods":[]},{"ground":"13.7","mods":["atgm_spike_x4_mitl"]}],
   "ah_64d_i_saraph": [{"ground":"13.0","mods":[]},{"ground":"13.7","mods":["atgm_spike_nlos_mitl"]}],
   "ah_60_iaf": [{"ground":"11.3","mods":[]},{"ground":"13.0","mods":["atgm_spike_x2","atgm_spike_x4"]},{"ground":"13.7","mods":["atgm_spike_x4_mitl"]}],
-  "saab_jas39_pre_serie": [{"ground":"12.3","air":"13.0","mods":[]},{"ground":"13.0","air":"13.7","mods":["swd_rb99"]}]
+  "saab_jas39_pre_serie": [{"ground":"12.3","air":"13.0","mods":[]},{"ground":"13.0","air":"13.7","mods":["swd_rb99"]}],
+  "aw_249_pre_serie": [{"ground":"13.3","mods":[]},{"ground":"13.7","mods":["atgm_spike_x2","atgm_spike_x4_mitl"]}]
 };

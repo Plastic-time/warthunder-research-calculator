@@ -177,6 +177,14 @@ for (const filename of ['2.60.0.20.md', '2.60.0.20_Part_2.md', '2.60.0.20_Part_5
   });
 }
 
+test('an undeclared head leaves its channels empty and uses the independently confirmed live pin', async t => {
+  const f = fixture(t, { dev: true, stale: true });
+  const report = await checkDatamineUpdates(f);
+  assert.deepEqual(report.repositoryHead.channels, []);
+  assert.deepEqual(report.upstream, { channel: 'regular-live', version: '2.59.0.99', commit: sha(3) });
+  assert(report.compareUrl.endsWith('...' + sha(3)));
+});
+
 test('latest part takes precedence over older single-file notes; unrelated asset Gists are ignored', async t => {
   const f = fixture(t, { dev: true, headVersion: '2.60.0.21', filename: '2.60.0.20_Part_5.md' });
   const older = 'b'.repeat(32);
@@ -194,7 +202,6 @@ test('latest part takes precedence over older single-file notes; unrelated asset
 });
 
 for (const [name, mutate] of Object.entries({
-  'stale declarations': file => { file.content = 'Current dev version: 2.60.0.20\nCurrent regular live version: 2.59.0.99'; },
   'missing regular live': file => { file.content = 'Current dev version: 2.60.0.21'; },
   'conflicting regular live': file => { file.content += '\nCurrent regular live version: 2.60.0.21'; },
   'truncated part': file => { file.truncated = true; },
@@ -301,10 +308,9 @@ test('channel endpoint failures cannot reuse a successful report', async t => {
 });
 
 for (const [name, options] of Object.entries({
-  'stale channel announcement': { stale: true },
+  'undeclared head with no independent confirmation of the live version': { stale: true, officialVersion: '2.59.0.98' },
   'missing regular live': { channelText: 'Current dev version: 2.60.0.20' },
   'duplicate regular live': { channelText: 'Current dev version: 2.60.0.20\nCurrent regular live version: 2.59.0.99\nCurrent regular live version: 2.59.0.99' },
-  'unclassified head': { channelText: 'Current dev version: 2.60.0.19\nCurrent regular live version: 2.59.0.99' },
   'missing live commit': { noLive: true },
   'live commit version mismatch': { wrongLive: true },
   'diverged live history': { diverged: true },

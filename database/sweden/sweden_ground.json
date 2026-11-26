@@ -575,6 +575,70 @@
             "fetched_at": "2026-09-19T06:29:28.536Z",
             "sha256": "e0508c02ece48cd54f3b0529260ca5298e72fc8f6bdcb57f79fcc7a06c2b76b2"
           }
+        },
+        {
+          "type": "single",
+          "title": "Pbil m/39",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_pv_m39.png",
+          "br": "2.0",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "sw_pv_m39",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "prem",
+          "details": true,
+          "rank": "I",
+          "research_country": "Sweden",
+          "main_role": "Light tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": true,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/sw_pv_m39",
+            "rank": "I",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "2.0",
+              "RB": "2.0",
+              "SB": "2.0"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "2.0",
+                "RB": "2.0",
+                "SB": "2.0"
+              }
+            },
+            "research": null,
+            "purchase": "400",
+            "purchase_currency": "GE",
+            "status": "Premium vehicle"
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "2.0",
+                "RB": "2.0",
+                "SB": "2.0"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://wiki.warthunder.com/unit/sw_pv_m39",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "golden-eagles",
+              "price": 400,
+              "currency": "GE",
+              "url": "https://wiki.warthunder.com/unit/sw_pv_m39"
+            }
+          }
         }
       ]
     ],
@@ -3554,6 +3618,70 @@
             "fetched_at": "2026-09-19T06:29:24.982Z",
             "sha256": "eaea679cbd2b2f12f176be3575c9b8de795564521eec4740e83fa36708c85f8f"
           }
+        },
+        {
+          "type": "single",
+          "title": "AMV (BMP-3)",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_patria_bmp_3.png",
+          "br": "9.3",
+          "rp": 0,
+          "sp": 0,
+          "data_unit_id": "sw_patria_bmp_3",
+          "required_unit_id": "",
+          "selected": false,
+          "class_name": "event",
+          "details": true,
+          "rank": "VI",
+          "research_country": "Sweden",
+          "main_role": "Light tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/sw_patria_bmp_3",
+            "rank": "VI",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "9.3",
+              "RB": "9.3",
+              "SB": "9.3"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.3"
+              }
+            },
+            "research": null,
+            "purchase": null,
+            "purchase_currency": null,
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "9.3",
+                "RB": "9.3",
+                "SB": "9.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/news/10243-event-get-the-amv-bmp-3-in-the-desert-predator-event-en",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data",
+            "acquisition": {
+              "type": "event",
+              "channel": "vehicle-event",
+              "url": "https://warthunder.com/en/news/10243-event-get-the-amv-bmp-3-in-the-desert-predator-event-en"
+            },
+            "cost_policy": "reward-excluded-from-ordinary-research"
+          }
         }
       ]
     ],
@@ -4288,6 +4416,64 @@
                 "SB": "13.3"
               }
             }
+          }
+        },
+        {
+          "type": "single",
+          "title": "Leopard 2A8NO",
+          "vehicle_icon": "https://static.encyclopedia.warthunder.com/slots/sw_leopard_2a8no.png",
+          "br": "13.3",
+          "rp": 420000,
+          "sp": 1120000,
+          "data_unit_id": "sw_leopard_2a8no",
+          "required_unit_id": "sw_strv_122b_plus",
+          "selected": false,
+          "class_name": "",
+          "details": true,
+          "rank": "VIII",
+          "research_country": "Sweden",
+          "main_role": "Medium tank",
+          "is_component": false,
+          "component_of": null,
+          "is_premium": false,
+          "is_squadron": false,
+          "wiki": {
+            "url": "https://wiki.warthunder.com/unit/sw_leopard_2a8no",
+            "rank": "VIII",
+            "battle_rating_context": "default",
+            "battle_ratings": {
+              "AB": "13.3",
+              "RB": "13.3",
+              "SB": "13.3"
+            },
+            "battle_ratings_by_battle": {
+              "default": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            },
+            "research": "420,000",
+            "purchase": "1,120,000",
+            "purchase_currency": "SL",
+            "status": null
+          },
+          "game_battle_ratings": {
+            "context": "tank",
+            "by_battle": {
+              "tank": {
+                "AB": "13.3",
+                "RB": "13.3",
+                "SB": "13.3"
+              }
+            }
+          },
+          "game_source": {
+            "version": "2.61.0.42",
+            "commit": "4268c8d0acfeeb8ba175176fabce053ceb74702f",
+            "official_url": "https://warthunder.com/en/game/changelog/current/1915",
+            "provenance": "doc/game-data-2.61.0.42.md",
+            "modification_status": "verified-game-data"
           }
         }
       ],

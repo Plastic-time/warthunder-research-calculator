@@ -245,7 +245,7 @@ function flattenTree(tree) {
       columns.forEach((column, columnIndex) => {
         let previousDependencyId = previousByColumn[sectionType][columnIndex] || "";
         column.forEach((item, rowIndex) => {
-          const inferredReqId = sectionType === "researchable" ? previousDependencyId : "";
+          const inferredReqId = sectionType === "researchable" && !item.required_unit_id_explicit ? previousDependencyId : "";
           if (item.type === "multiple") {
             const groupReqId = item.required_unit_id || inferredReqId;
             const groupMainChildId = getGroupMainChildId(item);

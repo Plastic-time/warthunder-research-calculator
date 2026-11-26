@@ -76,7 +76,7 @@ test('every untouched vehicle, chunk and historical correction is preserved byte
     assert.equal(sha(JSON.stringify(chunk)+'\n'),evidence.previousChunks[key].sha256,key);
   }
   assert.equal(sha(JSON.stringify(restoreCatalog(require('./aircraft-addition-snapshot.cjs').restoreCatalog(catalog)))+'\n'),evidence.catalogSha256);
-  assert.equal(catalog.stats.modifications,evidence.previousModificationCount+3+181+4+54-19);
+  assert.equal(catalog.stats.modifications,evidence.previousModificationCount+3+181+4+54 - 19 + 53 + 518);
 });
 
 test('updater is deterministic and rejects changed baselines, unknown prices and missing prerequisites', () => {
